@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="ezonM,이존엠" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    
+    <title>ezonM</title>
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.multilevelpushmenu_red.css" />
+    
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.multilevelpushmenu.min.js"></script>
+    
+    <script src="js/slick.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="pushobj">
+        <ul class="nav nav-pills nav-stacked">
+            <li>
+                <a id="baseexpand" class="btn btn-lg btn-primary" href="javascript:;" role="button"><i class="fa fa-bars"></i></a>
+            </li>
+        </ul>
+    </div>
+    
+    <!--slide menu-->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times"></i>ezonM</h2>
+            <ul>
+                <li>
+                    <a href="ezonM.html"><i class="fa fa-question"></i>이존엠소개</a>
+                </li>
+                <li>
+                    <a href="template.html"><i class="fa fa-folder-open-o"></i>템플릿</a>
+                </li>
+                <li>
+                    <a href="responsive_web.html"><i class="fa fa-lightbulb-o"></i>반응형솔루션</a>
+                </li>
+                <li>
+                    <a href="portfolio.html"><i class="fa fa-television"></i>포트폴리오</a>
+                </li>
+                <li>
+                    <a href="prod_price.html"><i class="fa fa-krw"></i>제작비용</a>
+                </li>
+                <li>
+                    <a href="정기유지보수.html"><i class="fa fa-retweet"></i>유지보수서비스</a>
+                </li>
+                <li>
+                    <a href="additional_service2.html"><i class="fa fa-cogs"></i>부가서비스</a>
+                </li>
+                <li>
+                    <a href="견적상담.html"><i class="fa fa-commenting-o"></i>견적/상담</a>
+                </li>
+                <li>
+                    <a href="신청현황.html"><i class="fa fa-tasks"></i>신청현황</a>
+                </li>
+                <li>
+                    <a href="공지사항.html"><i class="fa fa-headphones"></i>고객센터</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-sign-in"></i>로그인</a><a href="javascript:;"><i class="fa fa-plus"></i>회원가입</a><a href="템플릿신청현황.html"><i class="fa fa-user"></i>마이페이지</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--//slide menu-->
+
+    <div class="container-fluid top_bg">
+        <div class="container np">
+            <div class="top_wrapper no-col col-md-12">
+                <div class="cs_tel"><i class="fa fa-phone"></i> 010-7660-8571</div>
+                <div class="top_language_wrapper">
+                    <div class="top_language">
+                        <select name="select" class="form-control">
+                            <option value="">언어선택</option>
+                            <option value="">한국어</option>
+                            <option value="">양어</option>
+                        </select>
+                    </div>
+                    <div class="top_social">
+                        <select name="select" class="form-control">
+                            <option value="">카카오톡</option>
+                            <option value="">네이버밴드</option>
+                            <option value="">페이스북</option>
+                            <option value="">트위터</option>
+                            <option value="">구글</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top_sitemap_wrapper">
+                    <ul class="top_sitemap1">
+                        <li><a href="javascript:;">로그인</a><span class="txt_bar">|</span></li>
+                        <li><a href="javascript:;">회원가입</a><span class="txt_bar">|</span></li>
+                        <li><a href="템플릿신청현황.html">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//top_wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//container-fluid-->
+
+    <div class="top_menu_2">
+        <div class="container">
+            <div class="navbar col-lg-12">
+                <a href="index.html" class="imgbox"><img src="images/header/logo.png" alt="" class="brand_img" /></a>
+                <div class="main_menu1">
+                    <ul>
+                        <li><a href="ezonM.html">이존엠소개</a></li>
+                        <li><a href="template.html">템플릿</a></li>
+                        <li><a href="responsive_web.html">반응형솔루션</a></li>
+                        <li><a href="portfolio.html">포트폴리오</a></li>
+                        <li><a href="prod_price.html">제작비용</a></li>
+                        <li><a href="정기유지보수.html">유지보수서비스</a></li>
+                        <li><a href="additional_service2.html">부가서비스</a></li>
+                        <li><a href="견적상담.html">견적/상담</a></li>
+                        <li><a href="신청현황.html">신청현황</a></li>
+                        <li><a href="공지사항.html">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--contents start-->
+    <div class="container-fluid ezonm np">
+        <div class="sub">
+            <div id="web_product" class="web_slide web_slide1">
+                <ul>
+                    <li style="background-image:url('images/contents/ezonm_img1.jpg');">
+                        <div class="container">
+                            <div class="flbox">
+                                <p class="txt01 hidden-sm hidden-xs">내 가게 우리회사와 우리지역의 볼거리, 먹거리,<br class="hidden-xs" />즐길거리를 홍보하고 싶으세요?</p>
+                                <p class="txt02"><strong>이존M</strong>은 사전제작된 템플릿을 선택해<br class="hidden-xs" /><strong class="color1"> 텍스트와 사진 몇장만</strong>으로 <strong>원하는 사이트를 </strong><br class="hidden-xs" />직접 만들 수 있습니다.</p>
+                                <button type="button" onclick="location='template.html'">디자인 보기</button>
+                                <button type="button" onclick="location='ezonTMS.html'">제작사례 보기</button>
+                            </div>
+                            <div class="frbox">
+                                <div class="imgbox"><img src="images/contents/main_slide_img3.png" alt="" /></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <span class="dotsset"></span>
+                <div class="btn_wrap btn_ezon">
+                    <a href="ezonM.html" class="submit">이존M이란?</a>
+                    <a href="ezonTMS.html" class="submit">이존TMS란?</a>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="my_tab">
+                    <ul>
+                        <li class="active first"><a href="javascript:;" class="searchAnchor">중소자영업계의 현실</a></li>
+                        <li><a href="javascript:;" class="searchAnchor">이존TMS탄생배경</a></li>
+                        <li><a href="javascript:;" class="searchAnchor">기대효과</a></li>
+                        <li><a href="javascript:;" class="searchAnchor">활용사례</a></li>
+                    </ul>
+                </div>
+
+                <div class="my_tab_content" style="display:block;">
+                    <div class="ezon1">
+                        <p class="title">전국 자영업자 수 5,452천명시대의 자화상!</p>
+                        <div class="table_layout3">
+                            <div class="card">
+                                <div class="card_inner"><img src="images/contents/ezon1_img1.png" alt=""/></div>
+                            </div><!--card-->
+                            <div class="card">
+                                <div class="card_inner">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <span class="br">경기는 좋지 않고, 같은 동네 같은 업종은 날로 늘고!</span>
+                                                주기적으로 광고지라도 안돌이면 <span class="color">매출은 곤두박질!</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span class="br">고위험 저수익!</span>
+                                                절반이 3년 內 망하는데... <span class="color">50대 자영업 급증!</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span class="br">소매나 요식업은 이미 <span class="color">시장포화 상태!</span></span>
+                                                프렌차이즈는 자재비로 다 나가고!
+                                            </p>
+                                        </li>
+                                        <li class="last">
+                                            <p>
+                                                <span class="br">홈페이지, 모바일, 소셜커머스, 쇼핑몰은 비용 탓에</span>
+                                                꿈도 못꾸고...
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--card-->
+                        </div><!--table_layout3-->
+                    </div><!--ezon1-->
+                </div><!--my_tab_content-->
+                <div class="my_tab_content">
+                    <div class="ezon2">
+                        <div class="title">
+                            <p class="txt1">비단 어제 오늘일 만이 아닌 중소상공인 및 지역업소의 <span>오랜 불황과 겁쳐 대형 프랜차이즈업계의 고급화</span></p>
+                            <p class="txt2">저가형 물량 공세속에 지역업소 운영이 어려운 상태라고 중.소상공인들은 입을 모으고 있다.</p>
+                        </div>
+                        <div class="table_layout4">
+                            <div class="card_l">
+                                <div class="card_inner">
+                                    <p class="head">이존비즈NTMS는 온라인/오프라인/모바일을 통합하여 시간과 장소, 공간의 제약을 극복하고 고객와 지역 업소간의 특화된
+                                        연결고리를 생성하여 보다 다양하고 풍부한 컨텐츠 및 서비스를 공유하는 확장성이 풍부한 신개념 멀티미디어솔루션이다.</p>
+                                    <div class="card_list">
+                                        <span class="nun">1.</span>
+                                        <p>
+                                            지역업소 및 중소상공인을 위한 홈페이지와 쇼핑몰, 소셜할인쿠폰, 모바일웹 기능까지 통합된 최첨단 멀티미디어 솔루
+                                            션을 통해 <span>매장홍보 및 고객실시간예약서비스, 실물상품판매, 할인티켓 및 무료쿠폰발행,SNS 실시간토크는 물론 매출
+                                            관리, 고객관리, 이존페이적립시스템 등이 가능</span>하며. 지역업소간의 연계마케팅이 가능하도록 WIN-WIN시스템을
+                                            지원하며, MISOSA포탈사이트 및 글로벌지역 포탈을 통한 광고마케팅까지 지원한다. <span>그동안 대형마트나 대기업에서만
+                                            사용해왔던 시스템을 넘어선 최첨단 시스템이다.</span>
+                                        </p>
+                                    </div><!--card_list-->
+                                    <div class="card_list">
+                                        <span class="nun">2.</span>
+                                        <p>
+                                            <span>중소상공인의 사업역역의 확장성을 고려</span>해 온라인사업 뿐만아니라 오프라인 매장으로 확대될 경우 추가제작비용 없이
+                                            모바일까지 연동이 가능하도록 구축되었으며, 그동안 별도로 관리해 왔던 매출관리 및 고객
+                                            관리 등 통합마케팅이 가능하다.
+                                        </p>
+                                    </div><!--card_list-->
+                                    <div class="card_list">
+                                        <span class="nun">3.</span>
+                                        <p>
+                                            요즈음 대세는 스마트폰을 이용한 모바일서비스이며 이존NTMS솔루션은 <span>지역업소 모바일웹을 통해 지도검색을 통한
+                                            지역업소찾기,실시간예약 쿠폰다운로드, 결제등의 기능이 탑재되어 온라인/오프라인/모바일 지역업소의 3가지 매장을
+                                            운영하는 효과</span>를 누릴 수 있다.
+                                        </p>
+                                    </div><!--card_list-->
+                                    <div class="card_list">
+                                        <span class="nun">4.</span>
+                                        <p>
+                                            <span>이존페이 멤버쉽서비스개념을 쿠폰마케팅에 접목</span>하여 업체간 제휴 및 이존페이가맹점을 통한 지역네트워크
+                                            상권형성으로 불황속에서도 고객유치는 물론 매출증대효과가 탁월하며, 다국적기업인 마이크로소프트사도 시행한다는
+                                            불황을 이길수 있는 파워마케팅, 쿠폰마케팅까지 다양한 마케팅을 할 수 있으며 한번 방문한 고객을 평생 고객으로
+                                            지역업소의 매출증대를 꾀할 수 있다.
+                                        </p>
+                                    </div><!--card_list-->
+                                    <div class="card_list">
+                                        <span class="nun">5.</span>
+                                        <p>
+                                            이존페이가맹점이 될 경우 지역업소의 쇼핑몰, 모바일웹, 오프라인매장을 통해 고객이 서비스 구매시 회원 구매
+                                            적립금의 일정적립을 캐시로 실시간으로 적립해주는 윈윈시스템을 구축할 수 있으며, 이 외에도 MISOSA가 운영중인
+                                            종합포탈 및 전문포탈, 글로벌지역포탈, 오픈마켓, 할인티켓몰 등에서 구매시에도 동일한 캐시백을 적립해준다.<br /><br />
+                                            또한 중소상공인 및 지역업소는 이존NTMS솔루션을 통해 언제든지 MISOSA가 운영중은 종합포탈 사이트에 입점 및 판
+                                            매를 원할 시 <span>전문지식이나 복잡한 절차없이 승인요청 한번만으로 판매 및 배송, 결제에 이르기까지 원스탑으로 할 수
+                                            있어 인건비 절감 및 매출증대</span>를 할 수 있다.
+                                        </p>
+                                    </div><!--card_list-->
+                                    <div class="card_list">
+                                        <span class="nun">6.</span>
+                                        <p>
+                                            이존페이가맹점은 해당지역의 창업지원센터를 통해 지역업소에 필요한 모든 서비스를 원스탑으로 지원받으실 수
+                                            있으며, 요청시 전문컨설턴트가 필요시 방문하여 모든 상담을 해결해 드립니다.
+                                        </p>
+                                    </div><!--card_list-->
+                                </div><!--card_inner-->
+                            </div><!--card_l-->
+                            <div class="card_r">
+                                <div class="card_inner type1">
+                                    <p class="h_title">홍보동영상</p>
+                                    <div class="myflexslider1">
+                                        <ul class="slides">
+                                            <li>
+                                                <div class="videoWrapper">
+                                                    <iframe src="https://www.youtube.com/embed/Z3w0OP28vWs?controls=2&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="videoWrapper">
+                                                    <iframe src="https://www.youtube.com/embed/Z3w0OP28vWs?controls=2&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <span class="dotsset"></span>
+                                    </div>
+                                    <p class="txt4">1등 학습법-학습방법</p>
+                                    <p class="txt5">
+                                        우리나는 공부는 매우 강조를 하면서 공부 방법을 알려주는 체계적인 안내나 교육은 없습니다.
+                                        다른 나라의 예로 들면 선진국의 경우 개개인의 학습법에 따라 공부방법을 알려주고 교육하
+                                    </p>
+                                </div><!--card_inner-->
+                                <div class="card_inner type2">
+                                    <p class="h_title">보도자료/언론</p>
+                                    <div class="myflexslider2">
+                                        <ul class="slides">
+                                            <li>
+                                                <p class="flex_txt1"><span>이존TMS</span></p>
+                                                <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                                <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                                <div class="tx_im">
+                                                    <div class="flex_im"><img src="images/contents/ezon2_img2.png" alt=""/></div>
+                                                    <div class="flex_tx">
+                                                        <p>
+                                                            [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                            주지 않는 진실들 보험사가 알려 주지 않는진
+                                                            실들 보험사가 알려 주지 않는 진실들 보험사
+                                                            가 알려 주지 않는 진실들 보험사가 알려주지
+                                                            않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                        </p>
+                                                        <span><a href="javascript:;">전체보기</a></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="flex_txt1"><span>이존TMS</span></p>
+                                                <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                                <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                                <div class="tx_im">
+                                                    <div class="flex_im"><img src="images/contents/ezon2_img2.png" alt=""/></div>
+                                                    <div class="flex_tx">
+                                                        <p>
+                                                            [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                            주지 않는 진실들 보험사가 알려 주지 않는진
+                                                            실들 보험사가 알려 주지 않는 진실들 보험사
+                                                            가 알려 주지 않는 진실들 보험사가 알려주지
+                                                            않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                        </p>
+                                                        <span><a href="javascript:;">전체보기</a></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="flex_txt1"><span>이존TMS</span></p>
+                                                <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                                <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                                <div class="tx_im">
+                                                    <div class="flex_im"><img src="images/contents/ezon2_img2.png" alt=""/></div>
+                                                    <div class="flex_tx">
+                                                        <p>
+                                                            [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                            주지 않는 진실들 보험사가 알려 주지 않는진
+                                                            실들 보험사가 알려 주지 않는 진실들 보험사
+                                                            가 알려 주지 않는 진실들 보험사가 알려주지
+                                                            않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                        </p>
+                                                        <span><a href="javascript:;">전체보기</a></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p class="flex_txt1"><span>이존TMS</span></p>
+                                                <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                                <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                                <div class="tx_im">
+                                                    <div class="flex_im"><img src="images/contents/ezon2_img2.png" alt=""/></div>
+                                                    <div class="flex_tx">
+                                                        <p>
+                                                            [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                            주지 않는 진실들 보험사가 알려 주지 않는진
+                                                            실들 보험사가 알려 주지 않는 진실들 보험사
+                                                            가 알려 주지 않는 진실들 보험사가 알려주지
+                                                            않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                            보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                        </p>
+                                                        <span><a href="javascript:;">전체보기</a></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul><!--slides-->
+                                        <span class="dotsset"></span>
+                                    </div>
+                                </div>
+                            </div><!--card_r-->
+                        </div><!--table_layout4-->
+                    </div><!--ezon2-->
+                </div><!--my_tab_content-->
+                <div class="my_tab_content">
+                    <div class="ezon3">
+                        <div class="head_bg_wrap">
+                            <div class="head_bg_l"><img src="images/contents/ezon3_l_img.png" alt=""/></div><!--head_bg_l-->
+                            <div class="head_bg_r"><img src="images/contents/ezon3_r_img.png" alt=""/></div><!--head_bg_r-->
+                            <div class="head_bg_com"><img src="images/contents/computer_img.png" alt=""/></div><!--head_bg_com-->
+                            <p class="txt1 textCen">이존NTMS 솔루션</p>
+                            <p class="txt2 textCen">(온라인/오프라인/모바일을 연동한 소셜네트워크 통합지원시스템)</p>
+                            <div class="solution_listText">
+                                <ul>
+                                    <li class="textCen type1"><span>지역업소</span> 무료등록</li>
+                                    <li class="textCen type2"><span>할인</span>쿠폰북</li>
+                                    <li class="textCen type3"><span>온/오프라인/</span>모바일판매</li>
+                                    <li class="textCen type4"><span>통합</span>마케팅웹</li>
+                                </ul>
+                            </div>
+                            <p class="txt3 textCen">지역업소 및 중소상공인을 위한 통합 최첨단 멀티미디어 솔루션!</p>
+                        </div><!--head_bg_wrap-->
+                        <div class="center_wrap">
+                            <div class="center_left">
+                                <ul>
+                                    <li>▷ 중소상공인들을 위한 임대형 통합시스템 개발/공급/운영</li>
+                                    <li>▷ 다양한 지역포털서비스 정보체계 구축</li>
+                                    <li>▷ 사업자 위주의 SNS서비스 제공 (찾아오는 서비스)</li>
+                                    <li>▷ 중소상공인들을 위한 원스탑 창업지원서비스 제공</li>
+                                    <li>▷ 국내 최초 최대 오픈마켓 소셜커머스, 무료할인쿠폰 제공</li>
+                                    <li>▷ 국내외 글로벌 지역종합포털 운영(98개국, 국내 3500개 지역)</li>
+                                </ul>
+                            </div><!--center_left-->
+                            <div class="center_logo"><img src="images/contents/ezonTMS_logo.png" alt=""/></div><!--center_logo-->
+                            <div class="center_right">
+                                <ul>
+                                    <li>▷ 캐시백 멤버쉽카드를 탑재한 오프라인 매장(포스연동) 및 온<span class="txt_line">라인 쇼핑몰 연동 : 통합시스템 자체 보유</span></li>
+                                    <li>▷ 동별 온라인/오프라인/모바일 연동 할인쿠폰북 발급</li>
+                                    <li>▷ 실질적인 지역중소상인 지원 시스템 구축</li>
+                                    <li>▷ 지역중소상공인들을 위한 온라인/모바일 매장홍보 무료등록</li>
+                                    <li>▷ 스마크폰 소액결제 시스템 구축</li>
+                                    <li>▷ 기존 중소상공인들이 꿈꿔왔던 스스템이 저가로 제공!</li>
+                                </ul>
+                            </div><!--center_right-->
+                        </div><!--center_wrap-->
+                        <div class="bot_wrap">
+                            <div class="bot_left">
+                                <div class="bot_list">
+                                    <div class="bot_im"><img src="images/contents/ezon3_bot_img1.png" alt=""/></div>
+                                    <div class="bot_tx">
+                                        <p class="tlt">다각적 마케팅 지원</p>
+                                        <p class="cont">이존코리아 글로벌정보화 포털과 우리지역 포털을 연계한 통합광고마케팅 지원</p>
+                                    </div>
+                                </div>
+                                <div class="bot_list">
+                                    <div class="bot_im"><img src="images/contents/ezon3_bot_img2.png" alt=""/></div>
+                                    <div class="bot_tx">
+                                        <p class="tlt">지역도 업소도 모바일 시대!</p>
+                                        <p class="cont">
+                                            온라인은 기본, 모바일을 통한 지도검색(업소찾기), 매장홍보/
+                                            모바일무료쿠폰/할인쿠폰북, 예약, 결제 등 온라인/오프라인/
+                                            모바일 3가지를 운영하는 효과
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--bot_left-->
+                            <div class="bot_right">
+                                <div class="bot_list">
+                                    <div class="bot_im"><img src="images/contents/ezon3_bot_img3.png" alt=""/></div>
+                                    <div class="bot_tx">
+                                        <p class="tlt">캐시백을 통한 고객 유입 확대!</p>
+                                        <p class="cont">
+                                            이존페이 멤버쉽 서비스 개념을 쿠폰마케팅에 접목, 업체간 제휴,
+                                            코라아캐시백 가맹점을 통해 지역고객 및 업주 네트워크 형성으로
+                                            매출 상승의 견인차 역할
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bot_list">
+                                    <div class="bot_im"><img src="images/contents/ezon3_bot_img4.png" alt=""/></div>
+                                    <div class="bot_tx">
+                                        <p class="tlt">캐시백을 통한 매장 활성화!</p>
+                                        <p class="cont">
+                                            특히 이존페이 가맹점이 될 경우 지역업소의 쇼핑몰 모바일웹,
+                                            오프라인 매장 이용시 실시간 적립(캐시)과 이존코리아종합포털,
+                                            10여개의 전문포털, 오픈마켓, 할인티켓몰 이용과 우리지역 포털
+                                            이용시에도 동일한 캐시백 적립!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--bot_right-->
+                        </div><!--bot_wrap-->
+                    </div><!--ezon3-->
+                </div><!--my_tab_content-->
+                <div class="my_tab_content">
+                    <div class="ezon4">
+                        <div class="table_layout5">
+                            <div class="card_l hiddencontents cardtab1 on">
+                                <div class="card_wrap">
+                                    <div class="card_img1"><img src="images/contents/ezon4_img1.png" alt=""/></div>
+                                    <div class="card_inner">
+                                        <p>창업 부럽지않습니다.</p>
+                                        <p>서울시/강남구 ㅣ 홍길동 컨설턴트</p>
+                                        <p>
+                                            상호협력적인 관계속에서 자유로운 시간과 보람있는 업
+                                            무로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상
+                                            호협력적인 관계속에서 자유로운 시간과 보람있는 업무
+                                            로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상호
+                                            협력적인 관계속에서 자유로운 시간과 보람있는 업무로
+                                            1인 창업 부럽지 않은 수입을 누리고 있습니다.상호협력
+                                            적인 관계속에서 자유로운 시간과 보람있는 업무로 1인
+                                            창업 부럽지 않은 수입을 누리고 있습니다.
+                                        </p>
+                                    </div><!--card_inner-->
+                                    <div class="solution_content">
+                                        <ul class="solution_func">
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content" style="display:block; ">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!--solution_content-->
+                                    <div class="blog_pagination">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="prev">
+                                                    <a href="javascript:;" aria-label="Previous">
+                                                        <span aria-hidden="true">◀</span>
+                                                    </a>
+                                                </li>
+                                                <li><a href="javascript:;">1</a></li>
+                                                <li><a href="javascript:;">2</a></li>
+                                                <li class="active"><a href="javascript:;">3</a></li>
+                                                <li><a href="javascript:;">4</a></li>
+                                                <li><a href="javascript:;">5</a></li>
+                                                <li class="next">
+                                                    <a href="javascript:;" aria-label="Next">
+                                                        <span aria-hidden="true">▶</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div><!--card_wrap-->
+                            </div><!--card_l-->
+                            <div class="card_l hiddencontents cardtab2">
+                                <div class="card_wrap">
+                                    <div class="card_img1"><img src="images/contents/ezon4_img3.png" alt=""/></div>
+                                    <div class="card_inner">
+                                        <p>창업 부럽지않습니다.</p>
+                                        <p>서울시/강남구 ㅣ 홍길동 컨설턴트</p>
+                                        <p>
+                                            상호협력적인 관계속에서 자유로운 시간과 보람있는 업
+                                            무로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상
+                                            호협력적인 관계속에서 자유로운 시간과 보람있는 업무
+                                            로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상호
+                                            협력적인 관계속에서 자유로운 시간과 보람있는 업무로
+                                            1인 창업 부럽지 않은 수입을 누리고 있습니다.상호협력
+                                            적인 관계속에서 자유로운 시간과 보람있는 업무로 1인
+                                            창업 부럽지 않은 수입을 누리고 있습니다.
+                                        </p>
+                                    </div><!--card_inner-->
+                                    <div class="solution_content">
+                                        <ul class="solution_func">
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content" style="display:block; ">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!--solution_content-->
+                                    <div class="blog_pagination">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="prev">
+                                                    <a href="javascript:;" aria-label="Previous">
+                                                        <span aria-hidden="true">◀</span>
+                                                    </a>
+                                                </li>
+                                                <li><a href="javascript:;">1</a></li>
+                                                <li><a href="javascript:;">2</a></li>
+                                                <li class="active"><a href="javascript:;">3</a></li>
+                                                <li><a href="javascript:;">4</a></li>
+                                                <li><a href="javascript:;">5</a></li>
+                                                <li class="next">
+                                                    <a href="javascript:;" aria-label="Next">
+                                                        <span aria-hidden="true">▶</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div><!--card_wrap-->
+                            </div><!--card_l-->
+                            <div class="card_l hiddencontents cardtab3">
+                                <div class="card_wrap">
+                                    <div class="card_img1"><img src="images/contents/ezon4_img3.png" alt=""/></div>
+                                    <div class="card_inner">
+                                        <p>창업 부럽지않습니다.</p>
+                                        <p>서울시/강남구 ㅣ 홍길동 컨설턴트</p>
+                                        <p>
+                                            상호협력적인 관계속에서 자유로운 시간과 보람있는 업
+                                            무로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상
+                                            호협력적인 관계속에서 자유로운 시간과 보람있는 업무
+                                            로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상호
+                                            협력적인 관계속에서 자유로운 시간과 보람있는 업무로
+                                            1인 창업 부럽지 않은 수입을 누리고 있습니다.상호협력
+                                            적인 관계속에서 자유로운 시간과 보람있는 업무로 1인
+                                            창업 부럽지 않은 수입을 누리고 있습니다.
+                                        </p>
+                                    </div><!--card_inner-->
+                                    <div class="solution_content">
+                                        <ul class="solution_func">
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content" style="display:block; ">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!--solution_content-->
+                                    <div class="blog_pagination">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="prev">
+                                                    <a href="javascript:;" aria-label="Previous">
+                                                        <span aria-hidden="true">◀</span>
+                                                    </a>
+                                                </li>
+                                                <li><a href="javascript:;">1</a></li>
+                                                <li><a href="javascript:;">2</a></li>
+                                                <li class="active"><a href="javascript:;">3</a></li>
+                                                <li><a href="javascript:;">4</a></li>
+                                                <li><a href="javascript:;">5</a></li>
+                                                <li class="next">
+                                                    <a href="javascript:;" aria-label="Next">
+                                                        <span aria-hidden="true">▶</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div><!--card_wrap-->
+                            </div><!--card_l-->
+                            <div class="card_l hiddencontents cardtab4">
+                                <div class="card_wrap">
+                                    <div class="card_img1"><img src="images/contents/ezon4_img1.png" alt=""/></div>
+                                    <div class="card_inner">
+                                        <p>창업 부럽지않습니다.</p>
+                                        <p>서울시/강남구 ㅣ 홍길동 컨설턴트</p>
+                                        <p>
+                                            상호협력적인 관계속에서 자유로운 시간과 보람있는 업
+                                            무로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상
+                                            호협력적인 관계속에서 자유로운 시간과 보람있는 업무
+                                            로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상호
+                                            협력적인 관계속에서 자유로운 시간과 보람있는 업무로
+                                            1인 창업 부럽지 않은 수입을 누리고 있습니다.상호협력
+                                            적인 관계속에서 자유로운 시간과 보람있는 업무로 1인
+                                            창업 부럽지 않은 수입을 누리고 있습니다.
+                                        </p>
+                                    </div><!--card_inner-->
+                                    <div class="solution_content">
+                                        <ul class="solution_func">
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content" style="display:block; ">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="func_list">
+                                                    <div class="list_wrap">
+                                                        <p class="head">
+                                                            <span>Q</span>자기소개 부탁드립니다.
+                                                        </p>
+                                                        <p class="content">
+                                                            <span class="answer">Q</span>
+                                                            저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                            컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!--solution_content-->
+                                    <div class="blog_pagination">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="prev">
+                                                    <a href="javascript:;" aria-label="Previous">
+                                                        <span aria-hidden="true">◀</span>
+                                                    </a>
+                                                </li>
+                                                <li><a href="javascript:;">1</a></li>
+                                                <li><a href="javascript:;">2</a></li>
+                                                <li class="active"><a href="javascript:;">3</a></li>
+                                                <li><a href="javascript:;">4</a></li>
+                                                <li><a href="javascript:;">5</a></li>
+                                                <li class="next">
+                                                    <a href="javascript:;" aria-label="Next">
+                                                        <span aria-hidden="true">▶</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div><!--card_wrap-->
+                            </div><!--card_l-->
+                            
+                            <ul class="card_r tabbox">
+                                <li class="card cardtab1 on">
+                                    <a href="javascript:commonTab('table_layout5','cardtab1');" class="card_inner2">
+                                        <img src="images/contents/ezon4_img2.png" alt=""/>
+                                        <div>
+                                            <p>홍길동 컨설턴트</p>
+                                            <p>서울시/강남구</p>
+                                        </div>
+                                    </a><!--card_inner2-->
+                                </li><!--card-->
+                                <li class="card">
+                                    <a href="javascript:commonTab('table_layout5','cardtab2');" class="card_inner2">
+                                        <img src="images/contents/ezon4_img3.png" alt=""/>
+                                        <div>
+                                            <p>홍길동 컨설턴트</p>
+                                            <p>서울시/강남구</p>
+                                        </div>
+                                    </a><!--card_inner2-->
+                                </li><!--card-->
+                                <li class="card">
+                                    <a href="javascript:commonTab('table_layout5','cardtab3');" class="card_inner2">
+                                        <img src="images/contents/ezon4_img3.png" alt=""/>
+                                        <div>
+                                            <p>홍길동 컨설턴트</p>
+                                            <p>서울시/강남구</p>
+                                        </div>
+                                    </a><!--card_inner2-->
+                                </li><!--card-->
+                                <li class="card">
+                                    <a href="javascript:commonTab('table_layout5','cardtab4');" class="card_inner2">
+                                        <img src="images/contents/ezon4_img2.png" alt=""/>
+                                        <div>
+                                            <p>홍길동 컨설턴트</p>
+                                            <p>서울시/강남구</p>
+                                        </div>
+                                    </a><!--card_inner2-->
+                                </li><!--card-->
+                            </ul><!--card_r-->
+                        </div><!--table_layout4-->
+                    </div><!--ezon4-->
+                </div><!--my_tab_content-->
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer>
+        <div class="bottom_lnb clearfix">
+            <ul>
+                <li><a href="company.html">회사소개</a></li>
+                <li><a href="통합약관.html">이용약관</a></li>
+                <li><a href="통합약관.html"><i>개인정보</i><i>취급방침</i></a></li>
+                <li><a href="통합약관.html"><i>이메일무단</i><i>수집거부</i></a></li>
+                <li><a href="활용가이드.html">이용안내</a></li>
+                <li><a href="공지사항.html">고객센터</a></li>
+                <li class="mobile-only"><a href="javascript:;">PC버전</a></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="footer_nav">
+            <div class="utill_wrap">
+                <div class="utill clearfix">
+                    <ul>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_facebook.png" alt="" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_instagram.png" alt="" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_kakaotalk.png" alt="" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_kakaostory.png" alt="" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_twitter.png" alt="" /></a></li>
+                        <li><a href="javascript:;" target="_blank"><img src="images/footer/icon_sns_yellowid.png" alt="" /></a></li>
+                    </ul>
+                    <span class="btnset"></span>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <h1><img src="images/footer/logo_bottom.png" alt="footer_logo" /></h1>
+                <address>
+                    <p>
+                        상호명 : 미소사CNS<span class="txt_bar">|</span>대표 : 이가연<span class="txt_bar">|</span>통신판매업신고번호 : 제2017-서울 영등포-0381호<span class="txt_bar">|</span>사업자등록번호 : 734-44-00223<br />
+                        사업자 소재지 : 경기도 성남시 분당구 수내1동 7-1, 4층(대덕글로리)<span class="txt_bar">|</span>대표번호 : 010-7660-8571 &nbsp;&nbsp; <br />
+                        개인정보관리책임자 : 송누리 jeh92500@empas.com
+                    </p>
+                    <p class="copy">
+                        Copyright ⓒ<b>MISOSA</b> . All rights reserved.
+                    </p>
+                </address>
+                <div class="foot_caution">
+                    <p>
+                        고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    </p>
+                    <button type="button">에스크로가입사실확인</button>
+                    <button type="button">사업자정보확인</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    
+    <span id="top_scroll">
+        <a href="javascript:scroll_top();"><i class="fa fa-angle-up" aria-hidden="true"></i>TOP</a>
+    </span>
+
+</body>
+</html>
