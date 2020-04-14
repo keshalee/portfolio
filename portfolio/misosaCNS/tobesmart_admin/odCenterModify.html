@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Office Cube</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- common js -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.selectBox.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+    
+    <div id="loading">
+        <div class="circle_wrap">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+            <div class="circle circle6"></div>
+            <div class="circle circle7"></div>
+            <div class="circle circle8"></div>
+            <div class="circle circle9"></div>
+            <div class="circle circle10"></div>
+            <div class="circle circle11"></div>
+            <div class="circle circle12"></div><p>요청중입니다. 잠시만 기다려주세요.</p>
+        </div>
+    </div>
+    
+    <section id="wrapper">
+        <!-- #header start -->
+        <header id="header">
+            <div class="sidebar-toggle"><i class="fa fa-bars"></i></div>
+            
+            <!-- .logo -->
+            <h1 class="logo"><a href=index.html><img src="images/logo.png" alt="logo" /></a><span class="pc-only">관리자 페이지</span></h1>
+            <!-- //.logo -->
+            
+            <div class="top-menu pull-right">
+                <p class="pc-only"> 안녕하세요 admin(관리자)</p>
+                <ul class="pc-only">
+                    <li><a href="javascript:;">홈</a></li>
+                    <li><a href="userInfo.html">나의정보</a></li>
+                    <li><a href="login.html" class="logout">로그아웃</a></li>
+                </ul>
+                <ul class="mobile-only">
+                    <li><a href="javascript:;"><i class="fa fa-home"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-user"></i></a></li>
+                    <li><a href="login.html" class="logout"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- //#header -->
+        
+        <!-- #sidebar -->
+        <nav id="sidebar" class="get-nicer on" data-accordion-group>
+            <ul class="accordion nice-wrapper" data-accordion>
+                <li>
+                    <p onclick="location.href='index.html'"><img src="images/icon_menu_01.png" alt="" />대쉬보드</p>
+                </li>
+                <li>
+                    <p onclick="location.href='viewNoticeList.html'"><img src="images/icon_menu_02.png" alt="" />공지사항</p>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_03.png" alt="" />좌석</p>
+                    <ul>
+                        <li><a href="odSeatStat.html">좌석현황</a></li>
+                        <li><a href="odSeatUseStatList.html">우선종료좌석</a></li>
+                        <li><a href="odSeatUseList.html">좌석이용내역</a></li>
+                        <li><a href="odSeatWaitStatList.html">좌석대기현황</a></li>
+                        <li><a href="odSeatWaitList.html">좌석대기내역</a></li>
+                        <li><a href="odKeyShareList.html">스마트키공유내역</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_04.png" alt="" />사물함</p>
+                    <ul>
+                        <li><a href="odLockerStat.html">사물함현황</a></li>
+                        <li><a href="odLockerUseStatList.html">우선종료사물함</a></li>
+                        <li><a href="odLockerUseList.html">사물함이용내역</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_05.png" alt="" />시간패키지</p>
+                    <ul>
+                        <li><a href="odPrepaidPurchaseList.html">구매내역</a></li>
+                        <li><a href="odPrepaidUseList.html">사용내역</a></li>
+                        <li><a href="odPrepaidSaveList.html">적립내역</a></li>
+                        <li><a href="odPrepaidSumList.html">잔여내역</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <p data-control><img src="images/icon_menu_06.png" alt="" />센터관리</p>
+                    <ul>
+                        <li><a href="config.html">알림설정</a></li>
+                        <li><a href="odRuleList.html">약관관리</a></li>
+                        <li class="on"><a href="odCenterList.html">센터정보</a></li>
+                        <li><a href="odSeatTypeList.html">좌석/사물함유형 관리</a></li>
+                        <li><a href="odSeatTypeUseList.html">좌석/사물함유형사용 관리</a></li>
+                        <li><a href="odSeatImgList.html">좌석/사물함이미지 관리</a></li>
+                        <li><a href="odSeatList.html">좌석배치 관리</a></li>
+                        <li><a href="odLockerList.html">사물함배치 관리</a></li>
+                        <li><a href="noticeList.html">공지사항 관리</a></li>
+                        <li><a href="userList.html">사용자 관리</a></li>
+                        <li><a href="odCenterManagerList.html">센터관리자 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_07.png" alt="" />정책관리</p>
+                    <ul>
+                        <li><a href="certPolicyUserList.html">인증배포 현황</a></li>
+                        <li><a href="certList.html">인증 관리</a></li>
+                        <li><a href="certSiteList.html">허용대상 관리</a></li>
+                        <li><a href="fidoAppidList.html">생체인증고급설정(FIDO)</a></li>
+                        <li><a href="userPolicyList.html">사용자정책 관리</a></li>
+                        <li><a href="userPolicyUserList.html">사용자별 정책리스트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_08.png" alt="" />로그</p>
+                    <ul>
+                        <li><a href="odSendList.html">메시지 발송내역</a></li>
+                        <li><a href="appLogEventList.html">이벤트 로그</a></li>
+                        <li><a href="appLogChangeList.html">변경 로그</a></li>
+                        <li><a href="agentLogCertList.html">인증사용 로그</a></li>
+                        <li><a href="agentLogExcuteList.html">클라이언트실행 로그</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_09.png" alt="" />통계</p>
+                    <ul>
+                        <li><a href="userPaySumStatList.html">매출내역</a></li>
+                        <li><a href="certUseStatMonthList.html">인증사용 통계</a></li>
+                        <li><a href="agentExcuteStatMonthList.html">클라이언트실행 통계</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p data-control><img src="images/icon_menu_10.png" alt="" />Admin</p>
+                    <ul>
+                        <li><a href="basicConfig.html">기본설정</a></li>
+                        <li><a href="agentVersionList.html">클라이언트버전 관리</a></li>
+                        <li><a href="agentQnaList.html">클라이언트 QNA</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="cs_box">
+                <div class="txtbox">
+                    <p class="title">투비스마트 고객센터</p>
+                    <p class="txt1">주말 및 공휴일은 휴무입니다.</p>
+                    <a href="tel:1544-4444">TEL.1544-4444</a>
+                </div>
+            </div>
+        </nav>
+        <!-- //#sidebar -->
+        
+        <!-- #contents -->
+        <div id="contents">
+            <section class="fluid-container">
+                <article class="page-bar">
+                    <i class="fa fa-home"></i> <a href="index.html">Home</a> <i class="fa fa-angle-right"></i> <a href="config.html">센터관리</a> <i class="fa fa-angle-right"></i> 센터정보 수정
+                </article>
+            </section>
+            <section class="container inner">
+                <div class="row nm">
+                    <div class="col-lg-12 np">
+                        <article id="modify_wrap" class="form-panel">
+                            <p class="section_title">센터정보</p>
+                            <form class="form-horizontal" method="" action="">
+                                <table class="table">
+                                    <tbody>
+                                        <tr class="form-group">
+                                            <th class="col-xs-4 col-sm-2"><label class="control-label"><span class="point">*</span> 센터</label></th>
+                                            <td class="col-xs-8 col-sm-10">
+                                                <select class="form-control">
+                                                    <option>분당 서판교센터</option>
+                                                    <option>수내센터</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 유형</label></th>
+                                            <td>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio1" /> 스터디카페
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio1" /> 프리미엄독서실
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 상태</label></th>
+                                            <td>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio2" /> 정상
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio2" /> 오픈예정
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio2" /> 잠금
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 전화번호</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="02-1234-5678" />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 휴대폰번호</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="010-1234-5678" />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 주소</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="주소" disabled />
+                                                <span class="btn btn-success btn-xs">주소검색</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 상세주소</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="401호" />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 소개글</label></th>
+                                            <td>
+                                                <textarea placeholder="내용"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label"><span class="point">*</span> 소개글 HTML여부</label></th>
+                                            <td>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio3" /> Y
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="radio3" /> N
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label">센터소개 이미지</label></th>
+                                            <td>
+                                                <div id="file_form">
+                                                    <div class="margin_b_5" id="file1">
+                                                        <input type="text" id="file_name_1" class="file_input_textbox" readonly >
+                                                        <div class="file_input_div">
+                                                            <span class="file_input_img_btn">첨부파일</span>
+                                                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('file_name_1').value = this.value" />
+                                                        </div>
+                                                        <a href="javascript:;" class="btn_addfile">+ 추가</a>
+                                                    </div>
+                                                    <div class="margin_b_5" id="file2">
+                                                        <input type="text" id="file_name_2" class="file_input_textbox" readonly >
+                                                        <div class="file_input_div">
+                                                            <span class="file_input_img_btn">첨부파일</span>
+
+                                                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('file_name_2').value = this.value" />
+                                                        </div>
+                                                        <a href="javascript:;" class="btn_removefile">- 삭제</a>
+                                                    </div>
+                                                    <div class="margin_b_5" id="file3">
+                                                        <input type="text" id="file_name_3" class="file_input_textbox" readonly >
+                                                        <div class="file_input_div">
+                                                            <span class="file_input_img_btn">첨부파일</span>
+                                                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('file_name_3').value = this.value" />
+                                                        </div>
+                                                        <a href="javascript:;" class="btn_removefile">- 삭제</a>
+                                                    </div>
+                                                    <div class="margin_b_5" id="file4">
+                                                        <input type="text" id="file_name_4" class="file_input_textbox" readonly >
+                                                        <div class="file_input_div">
+                                                            <span class="file_input_img_btn">첨부파일</span>
+                                                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('file_name_4').value = this.value" />
+                                                        </div>
+                                                        <a href="javascript:;" class="btn_removefile">- 삭제</a>
+                                                    </div>
+                                                    <div class="margin_b_5" id="file5">
+                                                        <input type="text" id="file_name_5" class="file_input_textbox" readonly >
+                                                        <div class="file_input_div">
+                                                            <span class="file_input_img_btn">첨부파일</span>
+                                                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('file_name_5').value = this.value" />
+                                                        </div>
+                                                        <a href="javascript:;" class="btn_removefile">- 삭제</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <p class="section_title">알림설정</p>
+                            <form class="form-horizontal" method="" action="">
+                                <table class="table">
+                                    <tbody>
+                                        <tr class="form-group">
+                                            <th class="col-xs-4 col-sm-2"><label class="control-label">마감전 알림설정</label></th>
+                                            <td class="col-xs-8 col-sm-10">
+                                                <input type="text" class="form-control" placeholder="%%님의 이용시간이 10분 남았습니다." />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label">좌석대기 알림설정</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="%%님의 %%번 좌석의 예약이 가능합니다." />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label">보호자알림 동의설정</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="%%님이 부모님 알림 서비스를 신청하였습니다. 동의하시겠습니까?" />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label">입실시 알림설정</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="%%님이 %%센터에 입실 하였습니다." />
+                                            </td>
+                                        </tr>
+                                        <tr class="form-group">
+                                            <th><label class="control-label">퇴실시 알림설정</label></th>
+                                            <td>
+                                                <input type="text" class="form-control" placeholder="%%님이 %%센터에 퇴실 하였습니다." />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <p class="section_title">CCTV설정</p>
+                            <form class="form-horizontal" method="" action="">
+                                <table class="table">
+                                    <tbody>
+                                        <tr class="form-group">
+                                            <th class="col-xs-4 col-sm-2"><label class="control-label">CCTV URL</label></th>
+                                            <td class="col-xs-8 col-sm-10">
+                                                <input type="text" class="form-control" placeholder="CCTV URL" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </article>
+                    </div>
+                    <div class="col-lg-12 np">
+                        <div class="btn-wrap">
+                            <button type="button" class="btn">수정</button>
+                            <button type="button" class="btn btn-back" onclick="history.back();">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <footer id="footer">
+                <div class="info">
+                    <p class="address">
+                        <span class="address1">본점 : 대전광역시 유성구 테크노2로 13-14</span><br class="mobile-only" />
+                        <span class="address2">연구소 : 경기도 성남시 분당구 황새울로 342번길 11, 801호</span>
+                    </p>
+                    <p class="contact">
+                        <span class="tel1">TEL : 1577-3119</span>
+                        <span class="fax">FAX : 031-701-4119</span><br class="mobile-only" />
+                        <span class="email">EMAIL : <a href="mailto:info@tobesmart.co.kr">info@tobesmart.co.kr</a></span>
+                    </p>
+                    <p class="copyright">Copyright 2018 (C) Studycube. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+</body>
+</html>
