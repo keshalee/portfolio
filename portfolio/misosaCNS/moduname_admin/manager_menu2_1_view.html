@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang = "ko" lang = "ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "Content-Type" content = "text/html;charset = utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />-->
+    <title>모두맘 검색 관리자</title>
+
+    <link rel="stylesheet" href="common/css/nanumfont/nanumfont.css"/>
+    <link rel="stylesheet" href="common/css/reset.css"/>
+    <link rel="stylesheet" href="common/css/jquery.dropdown.css"/>
+    <link rel="stylesheet" href="common/css/style.css"/>
+</head>
+<body>
+
+<div class="header_wrapper">
+    <img class="header_logo" src="images/header/header_logo.png" alt=""/>
+    <div class="header">
+        <div class="admin_login">
+            <span>admin</span>
+            <a href="#">홈페이지로 이동</a>
+            <a href="#">로그아웃</a>
+        </div>
+        <ul class="admin_menu">
+            <li><a href="manager_menu1_1.html">기본환경설정</a></li>
+            <li class="txt_bar1">|</li>
+            <li class="select"><a href="manager_menu2_1.html">회원관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu3_1.html">게시물관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu4_1.html">결제관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu5_1.html">사이트등록관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu6_1.html">사이트통계</a></li>
+        </ul>
+    </div>
+    <div class="header_border"></div>
+</div>
+
+<div class="menu_wrapper">
+    <div class="sub_logo">
+        <img src="images/header/menu_img2.png" alt="회원관리"/>
+    </div>
+    <ul class="menu">
+        <li class="menu_list active"><a href="manager_menu2_1.html" class="menu_title">회원관리</a>
+        <li class="menu_list"><a href="manager_menu2_2.html" class="menu_title">탈퇴회원</a>
+        <li class="menu_list"><a href="manager_menu2_3.html" class="menu_title">회원메일발송</a>
+        <li class="menu_list"><a href="manager_menu2_4.html" class="menu_title">전체SMS보내기</a>
+    </ul>
+</div>
+
+<div class="contents">
+    <div class="manage_titler_wrapper">
+        <p class="manage_title"><img src="images/menu_title/menu_title_2_1_2.png" alt="회원정보"/></p>
+    </div>
+    <table class="table_type2">
+        <tr>
+            <td class="table_type2_title" width="138">이름</td>
+            <td class="table_type2_content">
+                <input type="text" class="input_t9 width170" placeholder="홍길동"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">아이디</td>
+            <td class="table_type2_content">hongildong</td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">비밀번호 변경</td>
+            <td class="table_type2_content">
+                <input type="password" class="input_t9 width170"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">비밀번호 확인</td>
+            <td class="table_type2_content">
+                <input type="password" class="input_t9 width170"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">연락처</td>
+            <td class="table_type2_content">
+                <select name="" id="" class="select_t6 width60">
+                    <option value="">010</option>
+                    <option value="">011</option>
+                    <option value="">017</option>
+                    <option value="">018</option>
+                    <option value="">019</option>
+                </select>
+                <span class="mar_r_5 mar_l_5">-</span>
+                <input type="text" class="input_t9 width50"/>
+                <span class="mar_r_5 mar_l_5">-</span>
+                <input type="text" class="input_t9 width50"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">이메일</td>
+            <td class="table_type2_content">
+                <input type="text" class="input_t9 width120"/>
+                <span class="mar_l_5 mar_r_5">@</span>
+                <input type="text" class="input_t9 width110_2"/>
+                <span class="mar_r_5"></span>
+                <select name="" id="" class="select_t6 width110_2">
+                    <option value="">선택입력</option>
+                    <option value="">다음</option>
+                    <option value="">구글</option>
+                    <option value="">네이버</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title" width="138">SMS수신여부</td>
+            <td class="table_type2_content">
+                <input type="radio"/><span class="mar_l_5 mar_r_40">미사용</span>
+                <input type="radio"/><span class="mar_l_5">사용</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_type2_title last" width="138">이메일수신여부</td>
+            <td class="table_type2_content last">
+                <input type="radio"/><span class="mar_l_5 mar_r_40">미사용</span>
+                <input type="radio"/><span class="mar_l_5">사용</span>
+            </td>
+        </tr>
+    </table>
+
+    <div class="btn_save_wrapper">
+        <a class="btn_save_t1" href="#">저장</a>
+    </div>
+</div>
+
+<div class="footer">
+    <address>
+        ㈜ MISOSA 서울특별시 구로구 디지털로 33길 27 삼성IT밸리 1108호  Tel 1599-9254  Fax 0505-200-6505<br />
+        Copyright © ㈜ MISOSA All Rights Reserved
+    </address>
+</div>
+
+<script type="text/javascript" src="common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="common/js/tendina.js"></script>
+<script type="text/javascript" src="common/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</body>
+</html>

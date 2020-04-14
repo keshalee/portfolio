@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang = "ko" lang = "ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "Content-Type" content = "text/html;charset = utf-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title>모두맘 검색 관리자</title>
+
+    <link rel="stylesheet" href="../common/css/nanumfont/nanumfont.css"/>
+    <link rel="stylesheet" href="../common/css/reset.css"/>
+    <link rel="stylesheet" href="../common/css/jquery.dropdown.css"/>
+    <link rel="stylesheet" href="../common/css/style.css"/>
+</head>
+<body>
+
+<div class="popup_header">
+    <p>등록하기</p>
+    <a href="#" class="pop_close"><img src="../images/header/btn_pop_close.png" alt=""/></a>
+</div>
+
+<div class="popup_contents">
+    <table class="popup_table2 margin_t_30 margin_b_30">
+        <tr>
+            <td class="title_txt">업체분류명</td>
+            <td class="sub_txt">
+                <input type="text" class="input_t12 width180"/>
+                <a href="#" class="btn_search_t4">중복체크</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="title_txt">출력</td>
+            <td class="sub_txt">
+                <div style="display: inline-block;width: 80px;">
+                    <input type="radio"/><span class="mar_l_5">출력</span>
+                </div>
+                <div style="display: inline-block;width: 80px;">
+                    <input type="radio"/><span class="mar_l_5">미출력</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="title_txt last">클릭여부</td>
+            <td class="sub_txt last">
+                <div style="display: inline-block;width: 80px;">
+                    <input type="radio"/><span class="mar_l_5">클릭가능</span>
+                </div>
+                <div style="display: inline-block;width: 80px;">
+                    <input type="radio"/><span class="mar_l_5">클릭불가</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="btn_save_wrapper">
+    <a href="#" class="btn_save_t2">저장</a>
+    <a href="#" class="btn_save_t2 color_gray" onclick="window.close();return false;">닫기</a>
+</div>
+
+<script type="text/javascript" src="../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="../common/js/tendina.js"></script>
+<script type="text/javascript" src="../common/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="../common/js/common.js"></script>
+</body>
+</html>

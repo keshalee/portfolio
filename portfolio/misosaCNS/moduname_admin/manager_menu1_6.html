@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang = "ko" lang = "ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "Content-Type" content = "text/html;charset = utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />-->
+    <title>모두맘 검색 관리자</title>
+
+    <link rel="stylesheet" href="common/css/nanumfont/nanumfont.css"/>
+    <link rel="stylesheet" href="common/css/reset.css"/>
+    <link rel="stylesheet" href="common/css/jquery.dropdown.css"/>
+    <link rel="stylesheet" href="common/css/style.css"/>
+</head>
+<body>
+
+<div class="header_wrapper">
+    <img class="header_logo" src="images/header/header_logo.png" alt=""/>
+    <div class="header">
+        <div class="admin_login">
+            <span>admin</span>
+            <a href="#">홈페이지로 이동</a>
+            <a href="#">로그아웃</a>
+        </div>
+        <ul class="admin_menu">
+            <li class="select"><a href="manager_menu1_1.html">기본환경설정</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu2_1.html">회원관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu3_1.html">게시물관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu4_1.html">결제관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu5_1.html">사이트등록관리</a></li>
+            <li class="txt_bar1">|</li>
+            <li><a href="manager_menu6_1.html">사이트통계</a></li>
+        </ul>
+    </div>
+    <div class="header_border"></div>
+</div>
+
+<div class="menu_wrapper">
+    <div class="sub_logo">
+        <img src="images/header/menu_img1.png" alt="기본환경설정"/>
+    </div>
+    <ul class="menu">
+        <li class="menu_list"><a href="manager_menu1_1.html" class="menu_title">사이트기본환경설정</a>
+        <li class="menu_list"><a href="manager_menu1_2.html" class="menu_title">검색API출력설정</a>
+        <li class="menu_list"><a href="manager_menu1_3.html" class="menu_title">게시판관리</a>
+        <li class="menu_list"><a href="manager_menu1_4.html" class="menu_title">관리자설정</a>
+        <li class="menu_list"><a href="manager_menu1_5.html" class="menu_title">SMS환경설정</a>
+        <li class="menu_list active"><a href="manager_menu1_6.html" class="menu_title">메뉴설정</a>
+        <li class="menu_list"><a href="manager_menu1_7.html" class="menu_title">모바일웹설정</a>
+    </ul>
+</div>
+
+<div class="contents">
+    <div class="manage_titler_wrapper">
+        <p class="manage_title"><img src="images/menu_title/menu_title_1_6.png" alt="메뉴설정"/></p>
+    </div>
+    <div class="margin_b_20"><img src="images/menu_title/menu_title_1_6_2.png" alt="주메뉴설정"/></div>
+    <table class="table_type1">
+        <tr>
+            <th width="303">메뉴명</th>
+            <th width="303">게시판</th>
+            <th width="94">정렬번호</th>
+            <th width="100">삭제</th>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="통합검색"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="1"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="사이트"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="" selected>사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="2"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="웹문서"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="" selected>웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="3"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="뉴스"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="" selected>뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="4"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="이미지"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="" selected>이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="5"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="쇼핑"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="" selected>쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="6"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+    </table>
+    <div class="btn_save_wrapper txt_right padding0 margin_t_10">
+        <a class="btn_save_t1 type3" href="#">저장</a>
+        <a class="btn_save_t1 type3 color_gray" href="#">메뉴추가</a>
+    </div>
+
+    <div class="margin_b_20"><img src="images/menu_title/menu_title_1_6_3.png" alt="더보기 메뉴설정"/></div>
+    <table class="table_type1">
+        <tr>
+            <th width="303">메뉴명</th>
+            <th width="303">게시판</th>
+            <th width="94">정렬번호</th>
+            <th width="100">삭제</th>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="통합검색"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="1"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="사이트"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="" selected>사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="2"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="웹문서"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="" selected>웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="3"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="뉴스"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="" selected>뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="4"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="이미지"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="" selected>이미지검색결과</option>
+                    <option value="">쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="5"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input_t12 width265 padding40" placeholder="쇼핑"/></td>
+            <td>
+                <select name="" id="" class="select_t6 width265 padding40">
+                    <option value="">통합검색결과</option>
+                    <option value="">사이트검색결과</option>
+                    <option value="">웹문서검색결과</option>
+                    <option value="">뉴스검색결과</option>
+                    <option value="">이미지검색결과</option>
+                    <option value="" selected>쇼핑검색결과</option>
+                    <option value="">동영상검색결과</option>
+                    <option value="">커뮤니티검색결과</option>
+                    <option value="">우리동네검색결과</option>
+                    <option value="">게시판선택</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" class="input_t12 width50 txt_center" placeholder="6"/><span class="mar_l_5">번째</span>
+            </td>
+            <td>
+                <a class="vertical_btn width50 mar_r_5 color_gray" href="#">삭제</a>
+            </td>
+        </tr>
+    </table>
+    <div class="btn_save_wrapper txt_right padding0 margin_t_10">
+        <a class="btn_save_t1 type3" href="#">저장</a>
+        <a class="btn_save_t1 type3 color_gray" href="#">메뉴추가</a>
+    </div>
+</div>
+
+<div class="footer">
+    <address>
+        ㈜ MISOSA 서울특별시 구로구 디지털로 33길 27 삼성IT밸리 1108호  Tel 1599-9254  Fax 0505-200-6505<br />
+        Copyright © ㈜ MISOSA All Rights Reserved
+    </address>
+</div>
+
+<script type="text/javascript" src="common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="common/js/tendina.js"></script>
+<script type="text/javascript" src="common/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</body>
+</html>
