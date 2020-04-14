@@ -1,0 +1,2044 @@
+@charset "utf-8";
+@font-face {font-family:noto; src:url('font/NotoSansKR-Medium.eot'); src:local(※), url('font/NotoSansKR-Medium.woff') format('woff')} 
+@font-face {font-family:noto-light; src:url('font/NotoSansKR-Light.eot'); src:local(※), url('font/NotoSansKR-Light.woff') format('woff')} 
+@font-face{font-family:nm; src:url('font/NanumMyeongjo.eot'); src:local(※), url('font/NanumMyeongjo.woff') format('woff')} 
+
+
+/* style reset */
+* {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
+* {margin:0; padding:0; outline:0}
+
+body {width:100%; overflow-x:hidden; font-size:12px; color:#555; font-family:noto, Dotum, Arial}
+ul, ol, li {list-style:none}
+a {cursor:pointer; color:#555; text-decoration:none; font-size:12px; font-family:noto, Dotum, Arial}
+a:hover, a:focus, a:active {text-decoration:none; }
+em, address, i {font-style:normal}
+caption {visibility:hidden; width:0; height:0; overflow:hidden; font-size:0}
+hr {display:none}
+button {cursor:pointer; background:transparent; border:0; vertical-align:middle; font-family:noto, Dotum, Arial}
+pre {white-space:pre-line; word-break:break-all; font-family:noto, Dotum, Arial}
+img {border:0}
+input.txt {padding:0; background:#fff; border:0; border-radius:0; font-family:noto, Dotum, Arial}
+input.file {padding:0; background:#fff; border:0; border-radius:0; font-family:noto, Dotum, Arial}
+input.radio {vertical-align:middle}
+input.checkbox {vertical-align:middle}										 
+input::-ms-clear {display:none}
+input.txt::-webkit-input-placeholder {color:#999}
+input.txt:-moz-placeholder {color:#999}
+input.txt::-moz-placeholder {color:#999}
+input.txt:-ms-input-placeholder {color:#999}
+textarea::-webkit-input-placeholder {color:#999}
+textarea:-moz-placeholder {color:#999}
+textarea::-moz-placeholder {color:#999}
+textarea:-ms-input-placeholder {color:#999}
+textarea {overflow-x:hidden; overflow-y:auto; resize:none; background:#fff; font-family:noto, Dotum, Arial}
+img, input, button, select, textarea {vertical-align:middle}
+fieldset {margin:0; padding:0; border:0; background:0}
+fieldset legend {visibility:hidden; display:none; font-size:0; line-height:0}
+table {border-collapse:collapse}
+.hide {overflow:hidden; position:absolute; left:-1000%; top:0; width:1px; height:1px; font-size:0.1%; line-height:0.1%}
+.transparents-layer {position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; background:#000; opacity:0.6; filter:alpha(opacity="60")}
+a.blocklink {display:block; width:100%}
+a.blocklink:hover, a.blocklink:focus, a.blocklink:active {text-decoration:none} 
+.pc-only {display:block}
+.mobile-only {display:none}
+.nm { margin-left:0px !important; margin-right:0px !important; }
+.np { padding-left:0px; padding-right:0px; }
+p { margin:0; }
+
+/* slick slider */
+.slick-slider {position:relative; display:block; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.slick-list {position:relative; display:block; overflow:hidden; margin:0; padding:0}
+.slick-list.dragging {cursor:pointer; cursor:hand}
+.slick-slider .slick-track,.slick-slider .slick-list {-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}
+.slick-track {position:relative; top:0; left:0; display:block}
+.slick-track:before,.slick-track:after {display:table; content:''}
+.slick-track:after {clear:both}
+.slick-loading .slick-track {visibility:hidden}
+.slick-slide {display:none;float:left;height:100%;min-height:1px}
+[dir='rtl'] .slick-slide {float:right}
+.slick-slide img {display:block}
+.slick-slide.slick-loading img {display:none}
+.slick-slide.dragging img {pointer-events:none}
+.slick-initialized .slick-slide {display:block}
+.slick-loading .slick-slide {visibility:hidden}
+.slick-vertical .slick-slide {display:block; height:auto; border:1px solid transparent}
+.slick-arrow.slick-hidden {display:none}
+.slick-dots {position:absolute; display:block;width:100%;padding:0;list-style:none;text-align:center}
+.slick-dots li {position:relative;display:inline-block; height:14px;margin:0 5px 0 0;padding:0;cursor:pointer}
+.slick-dots li button {font-size:0;line-height:0;display:block; width:14px;height:14px; border-radius:7px; padding:0;cursor:pointer;color:transparent;border:0;background:#fff}
+.slick-dots li button:hover:before,.slick-dots li button:focus:before {opacity:1}
+.slick-dots li.slick-active button {background:#022e5b}
+
+/* Datepicker */
+.ui-datepicker {width:100%; height:auto; margin:0; padding:0; background:#fff; border:0}
+.ui-datepicker .ui-datepicker-header {position:relative; height:120px; padding:0; background:#958d61}
+.ui-icon {display:block; width:52px; height:52px; text-indent:-99999px; overflow:hidden}
+.ui-icon-circle-triangle-w {background:url('../images/icon_calendar_prev.png') 0 0 no-repeat}
+.ui-icon-circle-triangle-e {background:url('../images/icon_calendar_next_on.png') 0 0 no-repeat}
+.ui-datepicker .ui-datepicker-prev {position:absolute; top:40px; left:100px; width:52px; height:52px}
+.ui-datepicker .ui-datepicker-next {position:absolute; top:40px; right:100px; width:52px; height:52px}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {display:block; position:absolute; left:0; top:0; margin:0}
+.ui-datepicker .ui-datepicker-title {margin:0; line-height:120px; text-align:center; font-size:36px; color:#fff}
+.ui-datepicker .ui-datepicker-title span {color:#fff; font-size:36px}
+.ui-datepicker .ui-datepicker-title select {font-size:1em; margin:1px 0}
+.ui-datepicker select.ui-datepicker-month {width:49%}
+.ui-datepicker table {width:100%; border-collapse:collapse; margin:0 auto 0}
+.ui-datepicker table th {height:80px; padding:10px; text-align:center; background:#dbd6bb; border-left:1px solid #edead5; border:0; font-size:15px; color:#6f6531; font-weight:normal}
+.ui-datepicker table th span {font-size:15px; color:#6f6531}
+.ui-datepicker table tbody tr:first-child td {padding-top:10px}
+.ui-datepicker table td {width:14.28571428571429%; height:80px; padding:0; vertical-align:top; text-align:left; border-bottom:1px solid #edead5; border-left:1px solid #edead5; font-size:15px; color:#777; line-height:19px}
+.ui-datepicker table td a {font-size:15px}
+.ui-datepicker td a {display:block; width:18px; height:18px; text-align:center; color:#777; line-height:19px}
+.ui-datepicker td .schedulebox-layer {position:relative; width:100%; height:100%; padding:10px}
+.ui-datepicker td .schedulebox-layer ul {position:absolute; left:30%; top:55%; z-index:60; width:240px; min-height:90px; padding:15px 10px 10px 15px; background:#fff; cursor:default; box-shadow:2px 2px 1px rgba(203,203,203,0.8)}
+.ui-datepicker td .schedulebox-layer ul li {clear:both; overflow:hidden; margin:0 0 5px 0; color:#6d6d6d; font-size:12px; line-height:14px}
+.ui-datepicker td .schedulebox-layer ul li label {float:left; width:45px}
+.ui-datepicker td .schedulebox-layer ul li span {float:none; display:block; width:auto; overflow:hidden}
+.ui-datepicker td .schedulebox-layer ul .arr {position:absolute; top:-6px; left:20px; display:block; width:13px; height:6px; background:url('../images/bg_arr_01.png') no-repeat 0 0}
+.ui-datepicker td:hover {background:#958d61; color:#fff; cursor:pointer}
+.ui-datepicker td:hover div > a {background:#958d61; text-decoration:none; color:#fff}
+.ui-datepicker td.ui-datepicker-today {background:#958d61; color:#fff}
+.ui-datepicker td.ui-datepicker-today div > a {color:#fff}
+.ui-datepicker td.ui-datepicker-week-end div > a {color:#015cad}
+.ui-datepicker td.ui-datepicker-week-end:first-child div > a {color:#ed1212}
+.ui-datepicker td.ui-datepicker-week-end:first-child:hover div > a {color:#fff}
+.ui-datepicker td.ui-datepicker-today.ui-datepicker-week-end:first-child div > a.ui-state-active {color:#fff}
+.ui-datepicker-row-break {clear:both; width:100%; font-size:0}
+.ui-widget {font-family:verdana; font-size:1.1em}
+.ui-widget .ui-widget {font-size:1em}
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button {font-family:Arial,sans-serif; font-size:1em}
+.ui-widget-content a {color:#222}
+.ui-widget-header {height:120px; margin:0; border-bottom:0; border-radius:0 !important}
+.ui-widget-header .ui-datepicker-title {margin-top:0}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {content:""; display:table; border-collapse:collapse}
+.ui-helper-clearfix:after {clear:both}
+.ui-helper-clearfix {min-height:0} /* support:IE7 */
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl {border-top-left-radius:4px}
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {border-top-right-radius:4px}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {border-bottom-left-radius:4px}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br {border-bottom-right-radius:4px}
+
+.circle-progress {display:block; position:relative; width:80px; height:80px; text-align:center}
+.circle-progress strong {display:block; position:absolute; left:0; top:50%; width:80px; height:80px; margin-top:-40px; line-height:80px; text-align:center; color:#fff; font-size:18px; font-weight:bold}
+.circle-progress strong sub {margin-left:4px; font-size:14px}
+.circle-progress strong * {vertical-align:middle}
+.circle-progress canvas {vertical-align:top}
+
+
+
+/* font default settting */
+body.pc {font-family:noto, Dotum, Arial, sans-serif}
+body.pc a {font-family:noto, Dotum, Arial, sans-serif}
+body.pc input.txt {font-family:noto, Dotum, Arial, sans-serif}
+body.pc textarea {font-family:noto, Dotum, Arial, sans-serif}
+body.pc select {font-family:noto, Dotum, Arial, sans-serif}
+body.pc pre {font-family:noto, Dotum, Arial, sans-serif}
+body.pc ul, body.pc li, body.pc ol, body.pc span, body.pc p, body.pc div, body.pc td, body.pc tr, body.pc button, body.pc input, body.pc em, body.pc dl, body.pc dt, body.pc dd, body.pc textarea, body.pc select, body.pc i, body.pc a {font-family:noto}
+
+body.mac {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac a {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac input.txt {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac textarea {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac select {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac pre {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac ul, body.mac li, body.mac ol, body.mac span, body.mac p, body.mac div, body.mac td, body.mac tr, body.mac button, body.mac input, body.mac em, body.mac dl, body.mac dt, body.mac dd, body.mac textarea, body.mac select, body.mac i, body.mac a {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+body.mac strong, body.mac h1, body.mac h2, body.mac h3, body.mac h4, body.mac h5, body.mac h6, body.mac b {font-family:MS UI Gothic, Dotum, Arial, sans-serif}
+
+body.device {font-family:Dotum, Arial !important; font-size:14px}
+body.device a {font-family:Dotum, Arial !important; font-size:14px}
+body.device strong, body.device span {font-family:Dotum, Arial !important}
+body.device input.txt {font-family:Dotum, Arial !important; font-size:14px}
+body.device textarea {font-family:Dotum, Arial !important; font-size:14px}
+body.device select {font-family:Dotum, Arial !important; font-size:14px}
+body.device h2 {font-family:Dotum, Arial !important}
+
+#wrap {width:100%; min-width:1280px; opacity:0}
+.toparea {position:relative; z-index:30; height:206px}
+.toparea .innerbox {clear:both; position:relative; overflow:hidden; width:1280px; margin:0 auto}
+.toparea .topgnb {width:100%; height:45px; background:#035297}
+.toparea .topgnb .btn-allview {float:left; width:110px; height:45px}
+.toparea .topgnb .btn-allview button {width:110px; height:45px; text-align:center}
+.toparea .topgnb .btn-allview button em {display:inline-block; padding:0 0 0 26px; text-align:left; background:url('../images/icon_allview.png') no-repeat 0 50%; font-size:15px; font-weight:bold; color:#fff; font-family:noto-light}
+.toparea .topgnb ul.pc-only {float:right; height:45px}
+.toparea .topgnb ul.pc-only li {float:left; margin:0 15px; line-height:45px}
+.toparea .topgnb ul.pc-only li:first-child {margin:0 15px 0 0}
+.toparea .topgnb ul.pc-only li a {font-size:15px; color:#fff; line-height:45px; font-family:noto-light}
+.toparea .gnbbox {width:100%; height:44px; margin:0; border-bottom:1px solid #e1e1e1}
+.toparea ul.setting {float:left}
+.toparea ul.setting li {float:left; font-size:14px; color:#035297; line-height:44px}
+.toparea ul.setting li a {display:block; padding:0; font-size:14px; color:#035297}
+.toparea ul.setting li.startpage-set {margin-right:30px}
+.toparea .gnbbox ul.gnb {float:right}
+.toparea .gnbbox ul.gnb li {float:left; height:44px}
+.toparea .gnbbox ul.gnb li a {display:block; height:44px; padding:0; margin:0 15px; line-height:44px; color:#565656; font-size:14px; font-family:noto-light}
+.toparea .gnbbox .snsbox {float:right; margin:10px 0 0 0}
+.toparea .gnbbox .langchange {float:right; margin:10px 0 0 10px}
+.toparea .gnbbox .langchange select {height:24px; color:#666}
+.toparea .topmenubox {width:100%; height:75px; border-bottom:1px solid #d9d9d9}
+.toparea .topmenubox .innerbox {height:75px}
+.toparea .topmenubox h1 {float:left; width:200px; height:47px; margin:10px 0 0 0}
+.toparea .topmenubox h1 a {display:block; width:180px; height:47px}
+.toparea .topmenubox h1 a img { width:100%; }
+.toparea .topmenubox fieldset {float:left; position:relative; width:291px; height:37px; padding:0 80px 0 0; margin-top:18px; border:5px solid #555}
+
+.toparea .topmenubox fieldset p {float:left}
+.toparea .topmenubox fieldset p label {float:left; margin:0 5px 0 0; color:#44424d; line-height:32px; font-size:14px}
+.toparea .topmenubox fieldset p input.txt {width:100%; height:27px; padding:0 10px; font-family:noto-light}
+.toparea .topmenubox fieldset button {position:absolute; right:-5px; top:-5px; width:75px; height:37px; background:#555; color:#fff; font-size:14px; line-height:32px; font-family:noto-light}
+.toparea .topmenubox .major-menu > div {float:left; margin:0 3px}
+.toparea .topmenubox .major-menu > div .layer-innerbox {display:none}
+.toparea .topmenubox .major-menu a.holder {display:block; text-align:center; border:3px solid #555; border-radius:50%; color:#555; font-size:13px; font-weight:bold; text-decoration:none !important}
+.toparea .topmenubox .major-menu a.holder:hover, .toparea .topmenubox .major-menu a.holder:active {background:#555; border-color:#555; text-decoration:none; color:#fff}
+.toparea .topmenubox .major-menu a.holder:visited .major-menu a.holder:active {text-decoration:none}
+.toparea .topmenubox .major-menu .on a.holder {background:#555; border-color:#555; text-decoration:none; color:#fff}
+.toparea .topmenubox > .innerbox > ul {float:left; height:37px; margin-top:18px}
+.toparea .topmenubox > .innerbox > ul li {float:left; margin:0 14px 0 15px; line-height:37px}
+.toparea .topmenubox > .innerbox > ul li:first-child {margin-left:0}
+.toparea .topmenubox > .innerbox > ul li a {color:#565656; font-size:19px; font-family:noto-light; font-weight:bold}
+.toparea .topmenubox > .innerbox > ul li a:hover {border-bottom:2px solid #565656}
+.toparea .top-dashboardbox {clear:both; width:100%; height:43px; border-top:1px solid #f2f2f2; line-height:43px}
+.toparea .notice-linebox {float:left; position:relative; z-index:40; width:560px; height:30px; padding:8px 30px 0 125px}
+.toparea .notice-linebox h2 {position:absolute; left:0; top:0; height:25px; margin:0 20px 0 0; color:#555; font-size:15px; font-weight:normal; line-height:43px; font-family:noto; }
+.toparea .notice-linebox ul {float:left; position:relative; height:25px}
+.toparea .notice-linebox ul li {height:25px}
+.toparea .notice-linebox ul li a {display:block; height:25px; line-height:25px; color:#555; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; font-family:noto-light}
+.toparea .notice-linebox .slick-prev {position:absolute; right:0; top:12px; z-index:41; width:10px; height:9px; background:url('../images/icon_bottom_01.png') no-repeat 0 0; font-size:0; text-indent:-99999px}
+.toparea .notice-linebox .slick-next {position:absolute; right:0; top:2px; z-index:41; width:10px; height:10px; background:url('../images/icon_top_01.png') no-repeat 0 0; font-size:0; text-indent:-99999px}
+.toparea .popular-ranking {float:right; width:200px; height:19px; margin:10px 0 0 0}
+.toparea .popular-ranking ul {height:19px}
+.toparea .popular-ranking ul li {height:19px}
+.toparea .popular-ranking ul li label {float:left; margin:3px 7px 0 0; width:13px; height:13px; text-align:center; background:#22bdb5; color:#fff; font-weight:bold; line-height:13px; font-size:11px}
+.toparea .popular-ranking ul li p {float:none; overflow:hidden; height:19px; line-height:19px}
+.toparea .popular-ranking ul li p a {display:inline-block; max-width:150px; font-size:14px; color:#555; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; font-family:noto-light}
+.toparea .popular-ranking ul li p * {vertical-align:middle}
+.toparea .popular-ranking ul li p .up {display:inline-block; width:10px; height:12px; margin-top:-2px; margin-left:3px; background:url('../images/icon_rank_up.png') no-repeat 0 0; font-size:0; text-indent:-99999px}
+.toparea .popular-ranking ul li p .down {display:inline-block; width:10px; height:12px; margin-top:-2px; margin-left:3px; background:url('../images/icon_rank_down.png') no-repeat 0 0; font-size:0; text-indent:-99999px}
+.toparea .btn-alram {float:left; position:relative; width:30px; height:37px; margin:17px 0 0 10px}
+.toparea .btn-alram button {width:27px; height:30px; background:url('../images/icon_alram.png') no-repeat 0 100%; font-size:0}
+.toparea .btn-alram button em {position:absolute; right:5px; top:2px; min-width:14px; height:14px; padding:0 3px; background:#ff3022; border-radius:7px; line-height:14px; color:#fff; font-size:11px}
+
+.midarea {clear:both; overflow:hidden}
+.container {clear:both; overflow:hidden; width:100%}
+
+.bottomarea {clear:both; width:100%; height:auto; overflow:hidden; border-top:1px solid #e1e1e1}
+.bottomarea ul.bmenu {width:1280px; height:55px; margin:0 auto}
+.bottomarea ul.bmenu li {float:left; padding:0 30px 0 0; line-height:55px}
+.bottomarea ul.bmenu li a {font-size:14px; color:#777}
+.bottomarea .innerbox {clear:both; width:1280px; overflow:hidden; margin:0 auto}
+.bottomarea .copyright {position:relative; width:100%; overflow:hidden; margin:0; padding:33px 0; background:#383838; border-top:1px solid #575757}
+.bottomarea .copyright .flbox {float:left; width:426px; height:140px; padding:8px 0 0 0; font-size:13px; color:#999}
+.bottomarea .copyright .flbox h1 {margin:0 0 15px 0; width:180px }
+.bottomarea .copyright .flbox h1 img { width:100%; }
+.bottomarea .copyright .flbox p span {font-weight:bold; line-height:17px; font-family:noto-light}
+.bottomarea .copyright .fmbox {float:left; width:450px; height:140px; padding:0 0 0 60px; border-left:1px solid #4c4c4c; border-right: 1px solid #4c4c4c}
+.bottomarea .copyright .fmbox dl dt {font-size:15px; color:#787878; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .fmbox dl dt.mt25 {margin-top:25px}
+.bottomarea .copyright .fmbox dl dd {font-size:13px; color:#999; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .fmbox dl dd a {font-size:13px; color:#999; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .fmbox dl dd span {margin:0 5px 0 0; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .fmbox dl dd .mail {display:block}
+.bottomarea .copyright .frbox {float:none; overflow:hidden; width:auto; height:140px; padding:0 0 0 100px}
+.bottomarea .copyright .frbox p {overflow:hidden; margin:0 0 14px 0}
+.bottomarea .copyright .frbox p select {float:left; min-width:115px; height:33px; margin:0 0 0 5px; padding:0 0 0 8px; background-color:transparent; border:1px solid #505050; color:#808080; font-size:14px; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .frbox dl {clear:both; overflow:hidden}
+.bottomarea .copyright .frbox dl dt {padding-left:2px; font-size:21px; color:#787878; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .frbox dl dd strong {color:#266dbf; font-size:48px; font-weight:bold; line-height:52px; font-family:noto-light}
+.bottomarea .copyright .frbox dl dd strong a {color:#266dbf; font-size:48px; font-weight:bold; font-family:noto-light}
+.bottomarea .copyright .frbox dl dd strong a:hover, .bottomarea .copyright .frbox dl dd strong a:focus {text-decoration:none}
+.bottomarea .rights {height:95px; padding:30px 0 0 0; background:#fff}
+.bottomarea .rights p {float:left; width:950px}
+.bottomarea .rights p span {display:block; font-weight:bold; color:#999; line-height:20px; letter-spacing:-0.5px; font-size:13px; font-family:noto-light}
+.bottomarea .rights p span:first-child {font-size:14px}
+.bottomarea .rights .snsbox {float:right}
+.bottomarea .snsbox {margin-top:5px}
+.bottomarea .snsbox ul li {width:29px}
+.bottomarea .snsbox ul li a {width:24px; height:24px}
+.bottomarea .snsbox ul li a.sns-facebook {background:url('../images/icon_sns_facebook_03.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-twitter {background:url('../images/icon_sns_twitter_03.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-kakaostory {background:url('../images/icon_sns_kakaostory_03.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-kakaotalk {background:url('../images/icon_sns_kakaotalk.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-instagram {background:url('../images/icon_sns_instagram_03.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-naverblog {background:url('../images/icon_sns_blog_03.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-band {background:url('../images/icon_sns_band_02.png') no-repeat 0 0; background-size:24px}
+.bottomarea .snsbox ul li a.sns-googleblog {background:url('../images/icon_sns_google_02.png') no-repeat 0 0; background-size:24px}
+
+/* maincontents */
+.maincontents {position:relative; width:100%; overflow:hidden; margin:0 auto}
+.maincontents .mainvisual {width:100%; height:650px; margin:0 auto 50px}
+.maincontents .mainvisual .slick-prev {position:absolute; left:10%; top:200px; z-index:32; width:50px; height:60px; background:url('../images/icon_prev_02.png') no-repeat 50%; font-size:0}
+.maincontents .mainvisual .slick-next {position:absolute; right:10%; top:200px; z-index:32; width:50px; height:60px; background:url('../images/icon_next_02.png') no-repeat 50%; font-size:0}
+.maincontents .mainvisual .transparent-layer-s {position:absolute; left:0; top:0; z-index:35; width:100%; height:100%; background:#000; opacity:0.7; filter:alpha(opacity="70")}
+.maincontents .mainvisual ul.slick-slider {position:relative; width:100%; height:523px}
+.maincontents .mainvisual ul.slick-slider li {position:relative; width:100%; max-width:1280px; height:523px}
+.maincontents .mainvisual ul.slick-slider li.slick-active .transparent-layer-s {display:none}
+.maincontents .mainvisual dl {position:relative; width:100%; max-width:1280px; height:100%; margin:0 auto; overflow:hidden}
+.maincontents .mainvisual dl dt {position:absolute; left:0; top:0; z-index:31; width:100%; height:100%; text-align:center; text-align:center}
+.maincontents .mainvisual dl dt .pic {position:absolute; left:0; top:0; z-index:32; width:100%; height:100%} 
+.maincontents .mainvisual dl dt .pic img {width:100%; height:100%} 
+.maincontents .mainvisual dl dt strong {position:absolute; left:0; top:30%; z-index:33; display:block; width:100%; text-align:center; font-weight:normal; color:#fff; font-size:30px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis}
+.maincontents .mainvisual dl dd {position:absolute; left:0; top:40%; z-index:33; width:100%; text-align:center; overflow:hidden; cursor:pointer}
+.maincontents .mainvisual dl dd p {text-align:center; color:#43acff}
+.maincontents .mainvisual dl dd p sub {vertical-align:0; margin:0 0 0 3px; font-size:18px}
+.maincontents .mainvisual dl dd p strong {font-size:33px}
+.maincontents .mainvisual dl dd em {display:block; width:109px; height:95px; margin:45px auto 0; text-align:center; background:url('../images/bg_transparent_heart.png') no-repeat 0 0; color:#c48c12; line-height:92px}
+.maincontents .mainvisual dl dd em span {font-size:26px; font-weight:bold}
+.maincontents .mainvisual dl dd em sub {vertical-align:0; margin-left:2px; font-size:18px}
+.maincontents .funding-support {clear:both; width:100%; height:125px; background:url('../images/bg_titlevisual.jpg') repeat-x 0 0}
+.maincontents .funding-support .innerbox {width:1280px; height:125px; margin:0 auto}
+.maincontents .funding-support h3 {float:left; width:360px; margin-top:30px; font-weight:normal; color:#fff; font-size:36px; font-family:noto-light}
+.maincontents .funding-support h3 strong {font-weight:bold; font-family:noto-bold}
+.maincontents .funding-support ul {float:none; overflow:hidden; padding:15px 0}
+.maincontents .funding-support ul li {float:left; height:95px}
+.maincontents .funding-support ul li label {display:inline-block; height:40px; padding:8px 40px 0 0; color:#fff; font-size:23px}
+.maincontents .funding-support ul li sub {margin-left:3px; vertical-align:0; font-size:18px; color:#fff; font-family:noto-light}
+.maincontents .funding-support ul li.funding-member {width:230px}
+.maincontents .funding-support ul li.funding-member label {background:url('../images/icon_funding_01.png') no-repeat 100% 100%}
+.maincontents .funding-support ul li.funding-member p strong {color:#43acff; font-size:36px}
+.maincontents .funding-support ul li.funding-price {width:310px}
+.maincontents .funding-support ul li.funding-price label {background:url('../images/icon_funding_02.png') no-repeat 100% 100%}
+.maincontents .funding-support ul li.funding-price p strong {color:#fecb00; font-size:36px}
+.maincontents .funding-support ul li.project-start {float:none; overflow:hidden; padding-left:50px; text-align:left; background:url('../images/icon_funding_03.png') no-repeat 94% 50%; border-left:1px solid #fff}
+.maincontents .funding-support ul li.project-start label {display:block; padding:15px 0 0 0; font-weight:bold; color:#43acff; font-size:18px}
+.maincontents .funding-support ul li.project-start p a {color:#ffd74b; font-size:27px; font-weight:bold}
+.maincontents .recommend-project {clear:both; position:relative; width:1280px; height:570px; overflow:hidden; margin:0 auto 20px}
+.maincontents .recommend-project h3 {width:100%; height:75px !important; text-align:center; color:#363535; font-size:45px; font-weight:normal; font-family:noto-light}
+.maincontents .recommend-project ul.slick-slider {height:460px; overflow:hidden}
+.maincontents .slick-dots {position:absolute; left:0; bottom:0}
+.maincontents .slick-dots li {width:15px; height:12px}
+.maincontents .slick-dots li button {width:12px; height:12px; border:1px solid #d0d0d0}
+.maincontents .slick-dots li.slick-active button {background:#555; border:0}
+.maincontents .funding-process {clear:both; overflow:hidden; width:1280px; height:285px; padding:35px 190px; margin:0 auto; border:2px solid #555; border-radius:140px}
+.maincontents .funding-process h3 {width:100%; height:80px !important; text-align:center; color:#363535; font-size:45px; font-weight:normal; font-family:noto-light}
+.maincontents .funding-process ul {overflow:hidden}
+.maincontents .funding-process ul li {float:left; width:130px; height:122px; background:url('../images/icon_arr_05.png') no-repeat 94.5% 36px}
+.maincontents .funding-process ul li span {display:block; width:100px; height:122px; padding-top:105px; text-align:center; font-size:14px; color:#555; word-spacing:-1px}
+.maincontents .funding-process ul li.process-step1 {width:135px}
+.maincontents .funding-process ul li.process-step1 span {width:110px; background:url('../images/img_funding_01.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step2 span {width:110px; background:url('../images/img_funding_02.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step3 span {background:url('../images/img_funding_03.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step4 span {background:url('../images/img_funding_04.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step5 span {background:url('../images/img_funding_05.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step6 span {background:url('../images/img_funding_06.png') no-repeat 50% 0}
+.maincontents .funding-process ul li.process-step7 {width:94px; background:0}
+.maincontents .funding-process ul li.process-step7 span {background:url('../images/img_funding_07.png') no-repeat 50% 0}
+.maincontents .rewardlist {clear:both; overflow:hidden; width:1280px; margin:60px auto 70px}
+.maincontents .rewardlist h3 {width:100%; height:80px !important; text-align:center; color:#363535; font-size:45px; font-weight:normal; font-family:noto-light}
+.maincontents .rewardlist ul.slick-slider {height:460px; overflow:hidden}
+.maincontents .storylist {clear:both; overflow:hidden; width:1280px; margin:0 auto 70px}
+.maincontents .storylist h3 {width:100%; height:80px !important; text-align:center; color:#363535; font-size:45px; font-weight:normal; font-family:noto-light}
+.maincontents .storylist ul.slick-slider {height:475px; overflow:hidden}
+
+/* funding-reward */
+.funding-reward {clear:both; overflow:hidden}
+.funding-reward .mainvisual {position:relative; width:100%; height:550px; margin:0 auto 25px}
+.funding-reward .mainvisual .slick-prev {position:absolute; left:15%; top:200px; z-index:32; width:50px; height:60px; background:url('../images/icon_prev_02.png') no-repeat 50%; font-size:0}
+.funding-reward .mainvisual .slick-next {position:absolute; right:15%; top:200px; z-index:32; width:50px; height:60px; background:url('../images/icon_next_02.png') no-repeat 50%; font-size:0}
+.funding-reward .mainvisual .transparent-layer-s {position:absolute; left:0; top:0; z-index:35; width:100%; height:100%; background:#000; opacity:0.7; filter:alpha(opacity="70")}
+.funding-reward .mainvisual ul.slick-slider {position:relative; width:100%; height:550px}
+.funding-reward .mainvisual ul.slick-slider li {position:relative; width:100%; max-width:1040px; height:523px}
+.funding-reward .mainvisual ul.slick-slider li.slick-active .transparent-layer-s {display:none}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dt em {display:block}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dt span {display:block}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dt strong {display:block}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.info .badge {display:block}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status {background:url('../images/bg_rewardcolor.jpg') no-repeat 0 0}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status em {color:#fff}
+.funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status span {color:#fff}
+.funding-reward .mainvisual dl {position:relative; width:100%; max-width:1040px; height:550px; margin:0 auto; overflow:hidden}
+.funding-reward .mainvisual dl dt {position:absolute; left:0; top:0; width:100%; padding:35px 0 0 100px}
+.funding-reward .mainvisual dl dt em {display:none; position:absolute; left:0; top:0; width:90px; height:90px; padding:25px 0 0 0; text-align:center; background:#86cf00; font-size:17px; color:#fff; line-height:24px}
+.funding-reward .mainvisual dl dt em b {display:block; text-shadow:2px 2px 2px rgba(0,0,0,0.1); font-weight:normal; font-family:noto-light; letter-spacing:-0.5px}
+.funding-reward .mainvisual dl dt span {display:none; font-size:18px; font-family:noto-light; color:#fff}
+.funding-reward .mainvisual dl dt strong {display:none; font-size:23px; font-family:noto-light; color:#fff; font-weight:normal}
+.funding-reward .mainvisual dl dd.info .pic {width:100%; height:100%; font-size:0}
+.funding-reward .mainvisual dl dd.info .pic a {display:block; width:100%; height:100%}
+.funding-reward .mainvisual dl dd.info .pic img {display:block; width:100%; height:100%}
+.funding-reward .mainvisual dl dd.info .badge {display:none; position:absolute; right:30px; bottom:210px; width:115px; height:115px; padding:32px 30px; text-align:center; background:url('../images/bg_badge_01.png') no-repeat 0 0; color:#fff; font-size:24px; line-height:27px}
+.funding-reward .mainvisual dl dd.info .txt {display:block; position:absolute; left:0; bottom:139px; z-index:33; width:100%; height:48px; padding:0 25px; text-align:right; background:rgba(0,0,0,0.65); line-height:48px; font-size:28px; color:#fff; font-weight:normal; font-family:noto-light; cursor:pointer}
+.funding-reward .mainvisual dl dd.status {clear:both; position:absolute; left:0; bottom:0; z-index:33; width:100%; height:139px; padding:36px 26px; background:#fff; cursor:pointer}
+.funding-reward .mainvisual dl dd.status em {display:block; font-size:26px; font-family:noto-light; line-height:30px; color:#555}
+.funding-reward .mainvisual dl dd.status span {display:block; font-size:30px; font-family:noto-light; line-height:34px; color:#555}
+.funding-reward .mainvisual dl dd.status span strong {font-size:32px; font-family:noto-bold}
+.funding-reward .mainvisual dl dd.status span sub {vertical-align:0; margin-left:2px; font-size:16px}
+.funding-reward .mainvisual dl dd.status .left-orange {float:left}
+.funding-reward .mainvisual dl dd.status .left-green {float:right; text-align:right}
+.funding-reward .mainvisual dl dd.status .left-green em {font-size:17px}
+.funding-reward .mainvisual dl dd.status .left-green span {font-size:18px}
+.funding-reward .mainvisual ul.slick-dots {position:absolute; left:50%; bottom:155px; z-index:32; width:1040px; margin-left:-520px; padding-left:25px; text-align:left}
+.funding-reward .mainvisual ul.slick-dots li {width:18px; height:16px}
+.funding-reward .mainvisual ul.slick-dots li button {width:14px; height:14px; background:#fff}
+.funding-reward .mainvisual ul.slick-dots li.slick-active {width:20px}
+.funding-reward .mainvisual ul.slick-dots li.slick-active button {width:16px; height:16px; background:#000}
+.funding-reward .rewardlist {clear:both; width:1280px; margin:0 auto 100px; overflow:hidden}
+.funding-reward .rewardlist .listgroup {clear:both; overflow:hidden; margin:0 -5px 25px -5px}
+.funding-reward .rewardlist dl.rwbox {margin:0 5px 11px 5px}
+.funding-reward .rewardlist dl.rwbox:first-child {margin:0 5px 11px 5px}
+
+/* project-search */
+.project-search {clear:both; overflow:hidden}
+.project-search .mainvisual {position:relative; width:100%; height:470px; margin:0 auto; background:url('../images/bg_titlevisual_02.jpg') repeat-x 0 0}
+.project-search .mainvisual ul.slick-slider {width:1280px; height:413px; margin:0 auto}
+.project-search .mainvisual ul.slick-slider li.slick-slide {position:relative; height:413px}
+.project-search .mainvisual ul.slick-slider li .innerbox {float:left; width:1000px; height:263px}
+.project-search .mainvisual ul.slick-slider li ul.main-product {width:1000px; height:263px}
+.project-search .mainvisual ul.slick-slider li ul.main-product li {float:left; width:50%; height:263px}
+.project-search .mainvisual ul.slick-slider li ul.main-product li img {width:100%; height:263px}
+.project-search .mainvisual ul.slick-slider li dl.reward-product {float:none; overflow:hidden; height:413px; background:#ececec}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dt {height:50px; text-align:center; background:#3c94d9; line-height:50px; color:#fff}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dt * {vertical-align:middle}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dt em {margin-right:7px; font-size:21px; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dt strong {margin-right:2px; font-size:19px; color:#0063b2; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dt sub {font-size:16px; font-family:noto-light}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd {position:relative; height:360px}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd em.badge {position:absolute; right:15px; bottom:95px; width:95px; height:95px; text-align:center; background:#000; border-radius:50%; line-height:95px; color:#ffde97; font-size:16px}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd a.blocklink {text-align:center; color:#777; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd a.blocklink strong {display:block; font-size:16px; font-weight:normal; font-family:noto-light}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd a.blocklink span {display:block; font-size:17px; font-weight:normal; font-family:noto-light}
+.project-search .mainvisual ul.slick-slider li dl.reward-product dd a.blocklink span b {font-size:20px; font-family:noto-bold}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall {float:left; width:348px; height:153px}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt {position:relative; width:348px; height:113px; overflow:hidden}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt strong {position:absolute; left:10px; bottom:12px; font-size:12px}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt strong span {display:block; color:#fff; font-size:14px; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt strong em {display:block; color:#eccb7a; font-size:18px; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt .pic {display:block; height:113px; overflow:hidden}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dt .pic img {display:block; width:100%; height:auto; min-height:113px}
+.project-search .mainvisual ul.slick-slider li dl.recommend-mall dd {height:40px; padding:0 16px; background:#f7fafa; color:#555; word-spacing:2px; font-size:14px; line-height:40px}
+.project-search .mainvisual ul.slick-slider li h3 {position:absolute; left:0; top:100px; width:1000px; text-align:center}
+.project-search .mainvisual ul.slick-slider li h3 strong {display:block; font-size:19px; color:#fff; font-weight:normal; font-family:noto-light}
+.project-search .mainvisual ul.slick-slider li h3 span {display:block; margin-top:5px; font-family:nm; font-size:32px; color:#f9b03c; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li .statusbox {float:none; width:auto; overflow:hidden; padding:20px 30px 0 30px}
+.project-search .mainvisual ul.slick-slider li .statusbox .graph-during {float:left; width:105px}
+.project-search .mainvisual ul.slick-slider li .statusbox .graph-during > label {display:block; height:30px; padding-left:10px; color:#fff; font-weight:normal; font-size:14px}
+.project-search .mainvisual ul.slick-slider li .statusbox .graph-rate {float:left; width:105px}
+.project-search .mainvisual ul.slick-slider li .statusbox .graph-rate > label {display:block; height:30px; padding-left:10px; color:#fff; font-weight:normal; font-size:14px}
+.project-search .mainvisual ul.slick-slider li .statusbox .graph-rate strong {color:#faad38 !important}
+.project-search .mainvisual ul.slick-slider li .statusbox > .pull-right {float:right; min-width:182px; padding-top:10px}
+.project-search .mainvisual ul.slick-slider li .statusbox > .pull-right strong {float:left; color:#f9b03c; font-size:19px; font-weight:normal; line-height:30px}
+.project-search .mainvisual ul.slick-slider li .statusbox > .pull-right em {float:right; padding-top:5px; font-size:14px; color:#fff; line-height:25px}
+.project-search .mainvisual ul.slick-slider li .statusbox > .pull-right span {clear:both; overflow:hidden; display:block; width:182px}
+.project-search .mainvisual ul.slick-slider li .statusbox > .pull-right button {width:182px; height:48px; background:#3c94d9; color:#fff; font-size:17px; font-weight:normal}
+.project-search .mainvisual ul.slick-slider li .statusbox strong {display:block; color:#fff; font-size:18px}
+.project-search .mainvisual ul.slick-dots {position:absolute; left:50%; bottom:-30px; z-index:32; width:1280px; margin-left:-640px; text-align:center}
+.project-search .mainvisual ul.slick-dots li {width:12px; height:10px}
+.project-search .mainvisual ul.slick-dots li button {width:10px; height:10px; background:#999}
+.project-search .mainvisual ul.slick-dots li.slick-active button {background:#faad38}
+.project-search .sortbox {clear:both; overflow:hidden; width:1280px; height:80px; margin:0 auto 30px}
+.project-search .sortbox h3 {float:left; width:250px; padding:12px 0 0 0; margin:0 12px 0 0; color:#757575; font-size:25px; font-family:noto-light; font-weight:normal}
+.project-search .sortbox h3 strong {display:inline-block; margin-left:5px; padding:0 40px 0 0; background:url('../images/icon_arr_06.png') no-repeat 100% 50%; color:#3a8ed1; font-size:25px; font-weight:normal}
+.project-search .sortbox h3 strong a {color:#3a8ed1; font-size:25px; font-family:noto-bold}
+.project-search .sortbox ul.detail-conditions {float:none; position:relative; overflow:hidden; height:80px; background:url('../images/bg_line_01.jpg') repeat-x 0 35px}
+.project-search .sortbox ul.detail-conditions li {float:left; padding:0 14px 10px 13px; background:url('../images/bg_bar_03.png') no-repeat 0 3px}
+.project-search .sortbox ul.detail-conditions li p {display:none; clear:both; position:absolute; left:0; top:30px; width:800px; overflow:hidden; padding:20px 0 0 4px}
+.project-search .sortbox ul.detail-conditions li:first-child {padding-left:4px; background:0}
+.project-search .sortbox ul.detail-conditions li a.holder {display:inline-block; padding:0 18px 0 0; background:url('../images/icon_arr_07.png') no-repeat 100% 50%; color:#757575; font-size:16px; font-weight:normal; font-family:noto-light}
+.project-search .sortbox ul.detail-conditions li.on p {display:block}
+.project-search .sortbox ul.detail-conditions li.on a.holder {text-decoration:underline; font-weight:bold}
+.project-search .sortbox ul.detail-conditions li p span {float:left; margin:0 20px 0 0; font-family:noto-light; color:#757575; font-size:14px}
+.project-search .sortbox ul.detail-conditions li p * {vertical-align:middle; margin-right:2px}
+.project-search .recommend-project {clear:both; overflow:hidden; width:1280px; margin:0 auto 100px}
+.project-search .recommend-project .listgroup {clear:both; overflow:hidden; margin:0 -5px 25px -5px}
+.project-search .recommend-project dl.rcbox {margin:0 5px 11px 5px}
+.project-search .recommend-project dl.rcbox:first-child {margin:0 5px 11px 5px}
+
+/* start-contents */
+.start-contents .mainvisual {width:100%; height:550px; background:url('../images/bg_titlevisual_03.jpg') repeat-x 0 0}
+.start-contents .mainvisual .innerbox {position:relative; max-width:1520px; height:550px; margin:0 auto}
+.start-contents .mainvisual .innerbox .pic {position:absolute; left:0; top:0; width:100%; height:100%}
+.start-contents .mainvisual .innerbox .pic img {display:block; width:100%; height:100%}
+.start-contents .mainvisual .innerbox h3 {position:absolute; left:0; top:150px; width:100%; margin:0 0 30px 0; text-align:center}
+.start-contents .mainvisual .innerbox h3 strong {display:block; margin:0 0 20px 0; font-size:48px; color:#fff; font-weight:normal; font-family:noto-light; text-shadow:3px 3px 3px rgba(0,0,0,0.2)}
+.start-contents .mainvisual .innerbox h3 span {display:block; font-size:18px; color:#fff; font-weight:normal; font-family:noto-light}
+.start-contents .mainvisual ul.quickmenu {position:absolute; left:50%; top:320px; width:670px; height:140px; margin:0 0 0 -335px; padding:0 40px}
+.start-contents .mainvisual ul.quickmenu .slick-prev {position:absolute; left:0; top:0; width:40px; height:100px; background:url('../images/icon_prev_03.png') no-repeat 50%; font-size:0}
+.start-contents .mainvisual ul.quickmenu .slick-next {position:absolute; right:0; top:0; width:40px; height:100px; background:url('../images/icon_next_03.png') no-repeat 50%; font-size:0}
+.start-contents .mainvisual ul.quickmenu li {float:left; width:110px; height:140px}
+.start-contents .mainvisual ul.quickmenu li a {display:block; width:101px; height:140px; padding:115px 0 0 0; margin:0 auto; text-align:center; font-size:15px; color:#fff; font-family:noto-light}
+.start-contents .mainvisual ul.quickmenu li.slick-current a {color:#ffec11}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-1 a {background:url('../images/icon_circlequick_01_off.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-1.slick-current a {background:url('../images/icon_circlequick_01_on.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-2 a {background:url('../images/icon_circlequick_02_off.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-2.slick-current a {background:url('../images/icon_circlequick_02_on.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-3 a {background:url('../images/icon_circlequick_03_off.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-3.slick-current a {background:url('../images/icon_circlequick_03_on.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-4 a {background:url('../images/icon_circlequick_04_off.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-4.slick-current a {background:url('../images/icon_circlequick_04_on.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-5 a {background:url('../images/icon_circlequick_05_off.png') no-repeat 0 0}
+.start-contents .mainvisual ul.quickmenu li.quickmenu-5.slick-current a {background:url('../images/icon_circlequick_05_on.png') no-repeat 0 0}
+.start-contents .ceogreeting {width:100%; height:620px; padding:80px 0 0 0; background:#fef9f4}
+.start-contents .ceogreeting .innerbox {width:1280px; margin:0 auto; overflow:hidden}
+.start-contents .ceogreeting dl {float:left; width:810px; padding:0 90px 0 0; overflow:hidden}
+.start-contents .ceogreeting dl dt {height:110px; color:#363535; font-size:45px; font-family:noto-light; font-weight:bold}
+.start-contents .ceogreeting dl dd {color:#787878; font-size:17px; line-height:24px; font-family:noto-light}
+.start-contents .ceogreeting dl dd p {margin:0 0 20px 0; color:#787878; font-size:17px; line-height:24px; font-family:noto-light}
+.start-contents .ceogreeting dl dd .sign {display:block; margin-top:100px; font-size:21px; color:#363535}
+.start-contents .ceogreeting dl dd .sign strong {font-size:30px; font-family:noto-light}
+.start-contents .ceogreeting .picbox {float:left; width:470px; padding:35px 30px 0 30px}
+.start-contents .ceogreeting .picbox .slick-prev {position:absolute; left:-30px; top:195px; width:30px; height:30px; background:url('../images/icon_prev_04.png') no-repeat 50%; font-size:0; text-indent:-99999px}
+.start-contents .ceogreeting .picbox .slick-next {position:absolute; right:-30px; top:195px; width:30px; height:30px; background:url('../images/icon_next_04.png') no-repeat 50%; font-size:0; text-indent:-99999px}
+.start-contents .ceogreeting .picbox ul {width:407px; height:407px; padding:0}
+.start-contents .ceogreeting .picbox ul li {width:407px; height:407px}
+.start-contents .ceogreeting .picbox ul li .pic {display:block; width:407px; height:407px; border-radius:50%; font-size:0}
+.start-contents .ceogreeting .picbox ul li .pic img {width:100%; height:100%; border-radius:50%}
+.start-contents .keywords {clear:both; overflow:hidden; height:890px; padding:80px 0; background:#fff}
+.start-contents .keywords .innerbox {position:relative; width:1280px; height:890px; margin:0 auto}
+.start-contents .keywords .cellphone-img {position:absolute; left:50%; top:120px; width:360px; height:640px; margin:0 0 0 -180px}
+.start-contents .keywords h3 {height:120px !important; color:#363535; font-size:45px; font-family:noto-light}
+.start-contents .keywords dl {position:absolute; width:460px}
+.start-contents .keywords dl dt {height:80px; color:#00c6e2; font-size:45px; font-weight:bold}
+.start-contents .keywords dl dd {padding:0 0 0 112px}
+.start-contents .keywords dl dd strong {display:block; margin:0 0 10px 0; font-size:32px; line-height:36px; color:#363535}
+.start-contents .keywords dl dd p {color:#999; font-size:18px; line-height:25px; font-family:noto-light; font-weight:normal}
+.start-contents .keywords dl.upgrade {left:0; top:120px}
+.start-contents .keywords dl.upgrade dd {background:url('../images/icon_fundingkeyword_01.png') no-repeat 0 0}
+.start-contents .keywords dl.support {left:0; top:430px}
+.start-contents .keywords dl.support dd {background:url('../images/icon_fundingkeyword_02.png') no-repeat 0 0}
+.start-contents .keywords dl.connect {left:835px; top:120px}
+.start-contents .keywords dl.connect dd {background:url('../images/icon_fundingkeyword_03.png') no-repeat 0 0}
+.start-contents .keywords dl.rewards {left:835px; top:430px}
+.start-contents .keywords dl.rewards dd {background:url('../images/icon_fundingkeyword_04.png') no-repeat 0 0}
+.start-contents .supportfunding-process {clear:both; height:760px; padding:70px 0 0 0; background:#f6f6f6}
+.start-contents .supportfunding-process .innerbox {width:1280px; height:645px; margin:0 auto; overflow:hidden; background:url('../images/img_supportfunding.png') no-repeat 0 100%}
+.start-contents .supportfunding-process h3 {float:left; color:#363535; font-size:45px; font-weight:bold; font-family:noto-light}
+.start-contents .supportfunding-process h4 {float:right; color:#363535; font-size:32px; font-family:noto-light; font-weight:normal}
+.start-contents .supportfunding-process h4 span {color:#0466b2; font-family:noto-light}
+.start-contents .supportfunding-process ul {clear:both; overflow:hidden; height:568px; padding:0 0 0 545px}
+.start-contents .supportfunding-process ul li {float:left; width:240px; height:280px; margin:0 4px 4px 0; background:#fff; box-shadow:2px 2px 2px rgba(0,0,0,0.2)}
+.start-contents .supportfunding-process ul li.sf-process-1 dl dt {background:url('../images/icon_supportfunding_01.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li.sf-process-2 dl dt {background:url('../images/icon_supportfunding_02.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li.sf-process-3 dl dt {background:url('../images/icon_supportfunding_03.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li.sf-process-4 dl dt {background:url('../images/icon_supportfunding_04.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li.sf-process-5 dl dt {background:url('../images/icon_supportfunding_05.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li.sf-process-6 dl dt {background:url('../images/icon_supportfunding_06.png') no-repeat 50% 100%}
+.start-contents .supportfunding-process ul li dl {padding:25px 15px 0 15px}
+.start-contents .supportfunding-process ul li dl dt {height:110px; margin:0 0 15px 0; text-align:center; color:#363535; font-size:21px}
+.start-contents .supportfunding-process ul li dl dd {color:#999; font-family:noto-light; font-size:15px; line-height:20px}
+.start-contents .shopfunding-pr {clear:both; overflow:hidden; width:100%; height:740px; margin:0 0 50px 0; padding:70px 0 0 0; background:url('../images/img_funding_visual.jpg') no-repeat 50% 0}
+.start-contents .shopfunding-pr h3 {height:100px !important; color:#363535; font-size:45px; font-family:noto-light}
+.start-contents .shopfunding-pr ul.slick-slider {padding:0 60px}
+.start-contents .shopfunding-pr .innerbox {width:1280px; height:670px; margin:0 auto}
+.start-contents .shopfunding-pr .slick-prev {position:absolute; left:0; top:200px; width:40px; height:70px; background:url('../images/icon_prev_05.png') no-repeat 0 50%; font-size:0; text-indent:-99999px}
+.start-contents .shopfunding-pr .slick-next {position:absolute; right:0; top:200px; width:40px; height:70px; background:url('../images/icon_next_05.png') no-repeat 100% 50%; font-size:0; text-indent:-99999px}
+.start-contents .shopfunding-pr dl {width:98%; height:485px; margin:0 5px 5px 0; box-shadow:2px 2px 2px rgba(0,0,0,0.15)}
+.start-contents .shopfunding-pr dl dt {height:271px; overflow:hidden; border-bottom:1px solid #ccc}
+.start-contents .shopfunding-pr dl dt .pic {display:block; width:100%; height:270px; font-size:0}
+.start-contents .shopfunding-pr dl dt .pic img {width:100%; height:auto; min-height:270px}
+.start-contents .shopfunding-pr dl dd {height:214px; overflow:hidden; padding:15px 30px 25px 30px; text-align:center; background:#fff}
+.start-contents .shopfunding-pr dl dd a.blocklink {width:100%; margin:0 0 15px 0}
+.start-contents .shopfunding-pr dl dd a.blocklink strong {display:block; height:62px; margin:0 0 10px 0; overflow:hidden; text-align:center; color:#0465b2; font-size:25px; line-height:31px; font-weight:bold; font-family:noto-light}
+.start-contents .shopfunding-pr dl dd a.blocklink span {display:block; height:42px; overflow:hidden; text-align:left; color:#888; font-size:16px; font-family:noto-light; line-height:20px}
+
+/* funding-detailview */
+.funding-detailview {clear:both; overflow:hidden}
+.funding-detailview h3 {height:209px; padding:65px 0 0 0; text-align:center; background:url('../images/bg_titlevisual.jpg') repeat-x 0 0; color:#fff}
+.funding-detailview h3 span {display:block; margin:0 0 10px 0; font-size:18px; line-height:20px}
+.funding-detailview h3 strong {display:block; line-height:50px; font-size:45px}
+.funding-detailview h4 {height:55px; margin:0 0 25px 0; background:#f7f7f7; color:#555; font-size:17px; font-weight:normal}
+.funding-detailview h4 span {display:block; width:1280px; height:55px; margin:0 auto; line-height:55px}
+.funding-detailview .innerbox {clear:both; position:relative; overflow:hidden; width:1280px; margin:0 auto; padding:0 298px 0 0}
+.funding-detailview .innerbox .flbox {float:left; width:100%; padding:0 19px 0 0}
+.funding-detailview .innerbox .frbox {position:absolute; right:0; top:0; width:280px}
+.funding-detailview .funding-conditions {height:47px; margin:0 0 8px 0; background:#f2f4f5}
+.funding-detailview .funding-conditions ul {height:47px; overflow:hidden; padding:0 0 0 75px}
+.funding-detailview .funding-conditions ul li {float:left; height:47px; padding:0 0 0 32px; margin:0 35px 0 0; line-height:47px; font-size:15px}
+.funding-detailview .funding-conditions ul li a {font-size:15px}
+.funding-detailview .funding-conditions ul li.conditions-1 {background:url('../images/icon_conditions_01.png') no-repeat 0 45%}
+.funding-detailview .funding-conditions ul li.conditions-2 {background:url('../images/icon_conditions_02.png') no-repeat 0 45%}
+.funding-detailview .funding-conditions ul li.conditions-3 {padding-left:37px; background:url('../images/icon_conditions_03.png') no-repeat 0 45%}
+.funding-detailview .funding-conditions ul li.conditions-4 {padding-left:44px; background:url('../images/icon_conditions_04.png') no-repeat 0 45%}
+.funding-detailview .product-img p {margin:0 0 30px 0}
+.funding-detailview .product-img p img {width:100%}
+.funding-detailview .lastestboard {float:left; width:620px; overflow:hidden; margin:0 15px 50px 0}
+.funding-detailview .lastestboard h5 {height:50px; padding:0 20px; background:#f7f7f7; font-size:16px; font-weight:normal; line-height:50px}
+.funding-detailview .lastestboard h5 span {color:#ff0000}
+.funding-detailview .lastestboard .listgroup {clear:both; overflow:hidden; border-top:4px solid #0063b2}
+.funding-detailview .lastestboard dl {clear:both; overflow:hidden; border-bottom:1px solid #e1e1e1}
+.funding-detailview .lastestboard dl.active dt {border-bottom:1px solid #e1e1e1}
+.funding-detailview .lastestboard dl dt {position:relative; height:55px; padding:0 100px 0 0; line-height:55px}
+.funding-detailview .lastestboard dl dt label {float:left; width:35px; padding-left:2px; color:#454545; font-size:16px; font-weight:bold}
+.funding-detailview .lastestboard dl dt p {float:none; overflow:hidden; width:auto; color:#454545; font-size:16px; font-weight:bold}
+.funding-detailview .lastestboard dl dt p a {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; color:#454545; font-size:16px; font-weight:bold}
+.funding-detailview .lastestboard dl dt .date {position:absolute; right:0; top:0; width:95px; padding-right:2px; text-align:right; line-height:55px; font-size:14px; color:#787878}
+.funding-detailview .lastestboard dl dd {height:0; overflow:hidden; padding:0 20px}
+.funding-detailview .lastestboard dl dd .txtbox {margin:20px 0 45px 0; color:#999; font-size:16px; line-height:22px}
+.funding-detailview .lastestboard dl dd .cheerbox {clear:both; overflow:hidden; margin-bottom:10px}
+.funding-detailview .lastestboard dl dd .cheerbox .pic {float:left; width:82px; height:73px; padding-top:3px; font-size:0}
+.funding-detailview .lastestboard dl dd .cheerbox .pic img {width:67px; height:67px; border-radius:50%}
+.funding-detailview .lastestboard dl dd .cheerbox span {float:none; display:block; overflow:hidden; border:1px solid #cfcfcf}
+.funding-detailview .lastestboard dl dd .cheerbox span textarea {width:100%; height:73px; padding:12px; border:0; color:#666; font-size:14px; line-height:18px}
+.funding-detailview .lastestboard dl dd .cheerbox button {display:block; float:right; width:102px; height:31px; margin:5px 0 0 0; padding:2px 0 0 38px; text-align:left; background:#1fc5de url('../images/icon_cheerup.png') no-repeat 10px 50%; color:#fff; font-size:14px}
+.funding-detailview .locationbox {float:none; width:auto; overflow:hidden; margin:0 0 110px 0}
+.funding-detailview .locationbox dl dt {margin:0 0 7px 0}
+.funding-detailview .locationbox dl dt strong {display:block; margin:-3px 0 6px 0; color:#454545; font-size:17px}
+.funding-detailview .locationbox dl dt .pic {display:block; margin:0 0 5px 0; border:7px solid #ececec; font-size:0}
+.funding-detailview .locationbox dl dt .pic img {width:100%}
+.funding-detailview .locationbox dl dt .address {font-size:15px; color:#555}
+.funding-detailview .locationbox dl dd > strong {display:block; margin:0 0 5px 0; font-size:15px; color:#454545; font-weight:normal}
+.funding-detailview .locationbox dl dd ul {overflow:hidden}
+.funding-detailview .locationbox dl dd ul li {min-height:50px; padding:0 0 0 48px; margin:0 0 10px 0}
+.funding-detailview .locationbox dl dd ul li.car {background:url('../images/icon_car.png') no-repeat 0 0}
+.funding-detailview .locationbox dl dd ul li.subway {background:url('../images/icon_subway.png') no-repeat 0 0}
+.funding-detailview .locationbox dl dd ul li.bus {background:url('../images/icon_bus.png') no-repeat 0 0}
+.funding-detailview .locationbox dl dd ul li em {display:block; font-size:14px; color:#232323}
+.funding-detailview .locationbox dl dd ul li p {color:#898989; font-size:12px; line-height:15px}
+.funding-detailview .cheerup-listbox {clear:both; overflow:hidden}
+.funding-detailview .cheerup-listbox h5 {height:auto; padding:0 0 5px 0; margin:0 0 20px 0; background:none; border-bottom:4px solid #0063b2; font-size:18px; font-weight:normal}
+.funding-detailview .cheerup-listbox h5 strong {color:#00abf0}
+.funding-detailview .cheerup-listbox fieldset {overflow:hidden; padding:25px 25px 22px 25px; background:#f9f9f9; border:1px solid #ccc}
+.funding-detailview .cheerup-listbox fieldset .snsbox {display:block}
+.funding-detailview .cheerup-listbox fieldset p {position:relative; padding:0 81px 0 0; border:1px solid #ccc}
+.funding-detailview .cheerup-listbox fieldset p textarea {width:100%; height:75px; padding:12px; border:0; font-size:14px; line-height:18px}
+.funding-detailview .cheerup-listbox fieldset p button {position:absolute; right:0; top:0; width:81px; height:75px; background:#f1f1f1; border-left:1px solid #ccc; color:#555; font-size:14px}
+.funding-detailview .cheerup-listbox fieldset .string-count {display:block; width:100%; height:30px; text-align:right; line-height:30px; font-size:12px}
+.funding-detailview .cheerup-listbox fieldset .string-count strong {font-weight:normal; color:#ff0000}
+.funding-detailview .cheerlist {clear:both; overflow:hidden; margin:10px 0 100px 0}
+.funding-detailview .cheerlist dl {clear:both; overflow:hidden; padding:25px 0 15px 0; border-bottom:1px solid #ccc}
+.funding-detailview .cheerlist dl dt {position:relative; height:45px}
+.funding-detailview .cheerlist dl dt .pic {float:left; width:50px; margin:0}
+.funding-detailview .cheerlist dl dt .pic img {width:38px; height:38px; border-radius:50%}
+.funding-detailview .cheerlist dl dt p {display:block}
+.funding-detailview .cheerlist dl dt p em {display:block; padding:2px 0 3px 0; color:#333; font-size:14px; line-height:16px; font-weight:bold}
+.funding-detailview .cheerlist dl dt p span {display:block; color:#999; font-size:12px; line-height:14px; font-weight:bold}
+.funding-detailview .cheerlist dl dt .date {position:absolute; right:80px; top:0; color:#c8c8c8; font-size:11px}
+.funding-detailview .cheerlist dl dt .btnset {position:absolute; right:0; top:0}
+.funding-detailview .cheerlist dl dt .btnset a {display:inline-block; padding:0 8px 0 10px; background:url('../images/bg_bar_01.png') no-repeat 0 0; color:#c8c8c8; font-size:11px; line-height:14px}
+.funding-detailview .cheerlist dl dt .btnset a:first-child {padding-left:0; background:0}
+.funding-detailview .cheerlist dl dd {position:relative; overflow:hidden; padding:0 120px 0 50px}
+.funding-detailview .cheerlist dl dd p {margin:0 0 15px 0; color:#555; font-size:14px; font-weight:bold; line-height:19px}
+.funding-detailview .cheerlist dl dd .btn-replynum {min-width:74px; height:24px; text-align:left; padding:0 10px; background:#0063b2; color:#00a9eb; font-size:12px}
+.funding-detailview .cheerlist dl dd .btn-replynum span {margin:0 5px 0 0}
+.funding-detailview .cheerlist dl dd .btn-replynum strong {color:#fff; font-weight:bold; font-weight:normal}
+.funding-detailview .cheerlist dl dd .btnset {position:absolute; right:0; bottom:0}
+.funding-detailview .cheerlist dl dd .btnset button.btn-good {min-width:47px; height:25px; margin:0 3px 0 0; padding:0 8px 0 26px; text-align:left; background:url('../images/icon_good.png') no-repeat 6px 50%; border:1px solid #e1e1e1}
+.funding-detailview .cheerlist dl dd .btnset button.btn-good span {color:#ff0000; font-size:11px}
+.funding-detailview .cheerlist dl dd .btnset button.btn-bad {min-width:47px; height:25px; padding:0 8px 0 26px; text-align:left; background:url('../images/icon_bad.png') no-repeat 6px 50%; border:1px solid #e1e1e1}
+.funding-detailview .cheerlist dl dd .btnset button.btn-bad span {color:#555; font-weight:bold; font-size:11px}
+.funding-detailview .support-list {float:left; width:468px; overflow:hidden; margin:0 15px 0 0}
+.funding-detailview .support-list .listgroup {overflow:hidden}
+.funding-detailview .support-list h5 {height:50px; padding:0 20px; background:#f7f7f7; font-size:16px; font-weight:normal; line-height:50px}
+.funding-detailview .support-list h5 span {color:#ff0000}
+.funding-detailview .support-list dl {clear:both; overflow:hidden; padding:13px 0; border-bottom:1px solid #ddd}
+.funding-detailview .support-list dl dt {float:left; width:50px}
+.funding-detailview .support-list dl dt .pic {width:38px; height:38px}
+.funding-detailview .support-list dl dd {float:none; overflow:hidden}
+.funding-detailview .support-list dl dd strong {display:block; font-size:14px}
+.funding-detailview .support-list dl dd p {font-size:14px}
+.funding-detailview .support-list dl dd p b {font-weight:normal}
+.funding-detailview .support-list dl dd p em {margin:0 0 0 20px; color:#9f9f9f; font-size:12px}
+.funding-detailview .support-infobox {float:none; overflow:hidden; width:auto; margin:0 0 140px 0}
+.funding-detailview .support-infobox h5 {clear:both; overflow:hidden; margin:0 0 3px 0; font-size:18px}
+.funding-detailview .support-infobox ul.support-info {overflow:hidden; margin:0 0 45px 0; border-top:3px solid #00a9eb}
+.funding-detailview .support-infobox ul.support-info li {overflow:hidden; padding:3px 0 0 0; border-bottom:1px solid #ddd}
+.funding-detailview .support-infobox ul.support-info li label {float:left; width:100px; padding:0 0 0 30px; font-size:16px; line-height:36px}
+.funding-detailview .support-infobox ul.support-info li p {float:none; overflow:hidden; line-height:36px}
+.funding-detailview .support-infobox ul.support-info li p strong {font-size:23px; letter-spacing:1px}
+.funding-detailview .support-infobox ul.support-info li p sub {vertical-align:middle; font-size:14px}
+.funding-detailview .support-infobox ul.support-info li p em {margin-left:5px; font-size:18px; color:#ff0000; letter-spacing:1px}
+.funding-detailview .support-infobox ul.support-info li.goal-price label {background:url('../images/icon_sponser_01.png') no-repeat 0 50%}
+.funding-detailview .support-infobox ul.support-info li.goal-price strong {color:#0063b2}
+.funding-detailview .support-infobox ul.support-info li.status-price label {background:url('../images/icon_sponser_02.png') no-repeat 0 50%}
+.funding-detailview .support-infobox ul.support-info li.status-price strong {color:#4da74d}
+.funding-detailview .support-infobox ul.support-info li.sponser-number label {background:url('../images/icon_sponser_03.png') no-repeat 0 50%}
+.funding-detailview .support-infobox .graphbox {overflow:hidden}
+.funding-detailview .support-infobox .graphbox > div {float:left; position:relative; width:230px; height:204px; margin:0 0 0 20px; text-align:center; background:#fafafa; font-size:0}
+.funding-detailview .support-infobox .graphbox > div:first-child {margin:0}
+.funding-detailview .support-infobox .graphbox > div > ul {position:absolute; left:0; bottom:0; width:100%; text-align:center}
+.funding-detailview .support-infobox .graphbox > div > ul > li {position:relative; display:inline-block}
+.funding-detailview .support-infobox .graphbox > div > ul > li div {position:absolute; left:0; bottom:0; width:100%}
+.funding-detailview .support-infobox .graphbox > div > ul > li {text-align:center; color:#fff; font-size:13px}
+.funding-detailview .support-infobox .graphbox > div > ul > li p {padding-top:10px}
+.funding-detailview .support-infobox .graphbox > div > ul > li p span {display:block}
+.funding-detailview .support-infobox .graphbox > div > ul > li p strong {display:block}
+.funding-detailview .support-infobox .graphbox > div.graph-1 > ul > li {width:100px; margin:0}
+.funding-detailview .support-infobox .graphbox > div.graph-2 > ul > li {width:60px; margin:0 7px}
+.funding-detailview .support-infobox .graphbox > div.graph-3 > ul > li {width:50px; margin:0 5px}
+.funding-detailview .support-infobox .graphbox > div.graph-4 > ul > li {width:40px; margin:0 4px}
+.funding-detailview .support-infobox .graphbox > div.graph-4 > ul > li p {font-size:12px}
+.funding-detailview .support-infobox .graphbox > div.graph-5 > ul > li {width:36px; margin:0 2px}
+.funding-detailview .support-infobox .graphbox > div.graph-5 > ul > li p {font-size:12px; line-height:15px}
+.funding-detailview .support-infobox .graphbox > div > ul > li.short-line p {margin-top:-26px}
+.funding-detailview .support-infobox .graphbox > div > ul > li.short-line p span {color:#666}
+.funding-detailview dl.statusbox {position:relative; padding:0 0 61px 0; margin:0 0 8px 0}
+.funding-detailview dl.statusbox dt {position:relative; overflow:hidden; padding:35px 12px 15px 12px; margin:0; border-top:1px solid #ccc; border-left:1px solid #ccc; border-right:1px solid #ccc}
+.funding-detailview dl.statusbox dt .percent {display:block; color:#00a9eb; font-size:55px; font-weight:bold; line-height:60px}
+.funding-detailview dl.statusbox dt .percent sub {margin-left:3px; vertical-align:middle; font-size:32px}
+.funding-detailview dl.statusbox dt .d-day {position:absolute; right:12px; top:63px; display:block; min-width:49px; height:23px; padding:0 7px; text-align:center; background:#0063b2; color:#fff; font-size:14px; font-weight:bold; line-height:23px}
+.funding-detailview dl.statusbox dt .progress {position:relative; width:100%; height:9px; background:#f7f7f7}
+.funding-detailview dl.statusbox dt .progress span {position:absolute; left:0; top:0; height:9px; background:#00a9eb; font-size:0}
+.funding-detailview dl.statusbox dt .price strong {color:#0063b2; font-size:40px; letter-spacing:-0.5px}
+.funding-detailview dl.statusbox dt .price sub {margin-left:2px; vertical-align:middle; color:#888; font-size:14px}
+.funding-detailview dl.statusbox dt .goal-price strong {font-size:18px; color:#888}
+.funding-detailview dl.statusbox dt .goal-price sub {margin-left:2px; vertical-align:middle; color:#888; font-size:14px}
+.funding-detailview dl.statusbox dd {padding:0 12px 30px 12px; border-left:1px solid #ccc; border-right:1px solid #ccc}
+.funding-detailview dl.statusbox dd p {color:#888; font-size:13px; letter-spacing:-0.2px}
+.funding-detailview dl.statusbox dd p strong {color:#0063b2}
+.funding-detailview dl.statusbox dd p em {display:block; color:#555}
+.funding-detailview dl.statusbox dd button.btn-sponser {position:absolute; left:0; bottom:0; width:100%; height:61px; text-align:center; background:#0063b2}
+.funding-detailview dl.statusbox dd button.btn-sponser em {display:inline-block; padding:0 0 0 42px; background:url('../images/icon_project_support.png') no-repeat 0 50%; font-size:23px; font-weight:bold; color:#fff}
+.funding-detailview dl.supporters-info {overflow:hidden; border-top:1px solid #ccc}
+.funding-detailview dl.supporters-info dt {overflow:hidden; padding:30px 25px 0 25px; border-left: 1px solid #ccc; border-right: 1px solid #ccc}
+.funding-detailview dl.supporters-info dt .pic {float:left; width:80px}
+.funding-detailview dl.supporters-info dt .pic img {width:67px; height:67px; border-radius:50%}
+.funding-detailview dl.supporters-info dt strong {float:none; display:block; overflow:hidden; padding:15px 0 0 0; font-size:17px; line-height:20px}
+.funding-detailview dl.supporters-info dt strong em {display:block}
+.funding-detailview dl.supporters-info dd.contact {padding:20px 25px 17px 25px; overflow:hidden; border-bottom:1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc}
+.funding-detailview dl.supporters-info dd.contact p {margin:0 0 14px 0; color:#888; font-size:13px}
+.funding-detailview dl.supporters-info dd.contact ul li {margin:0 0 3px 0; padding:0 0 0 27px; color:#888; font-size:13px}
+.funding-detailview dl.supporters-info dd.contact ul li a {color:#888; font-size:13px}
+.funding-detailview dl.supporters-info dd.contact ul li.mail {background:url('../images/icon_supporters_01.png') no-repeat 0 2px}
+.funding-detailview dl.supporters-info dd.contact ul li.tel {background:url('../images/icon_supporters_02.png') no-repeat 0 2px}
+.funding-detailview dl.supporters-info dd.contact ul li.homepage {background:url('../images/icon_supporters_03.png') no-repeat 0 2px}
+.funding-detailview dl.supporters-info dd.contact ul li.txt {padding:2px 0 0 0}
+.funding-detailview dl.supporters-info dd.share {padding:5px 0}
+.funding-detailview dl.supporters-info dd.share .snsbox {margin-bottom:7px}
+.funding-detailview dl.supporters-info dd.share .snsbox > strong {display:block; margin:0 0 6px 0; color:#555; font-weight:normal; font-size:12px}
+.funding-detailview dl.supporters-info dd.share .snsbox ul li.btn-bookmark {width:40px; margin:0 0 0 10px}
+.funding-detailview dl.supporters-info dd.share .snsbox ul li:first-child {margin-left:56px}
+.funding-detailview dl.supporters-info dd.share .snsbox ul li.btn-bookmark button {width:40px; height:24px; margin:0; background:#fff; border:2px solid #f1bc0a; color:#727272; font-size:11px; font-weight:bold}
+.funding-detailview dl.supporters-info dd.share .btn-project-report {display:block; width:100%; height:60px; background:#ff0000}
+.funding-detailview dl.supporters-info dd.share .btn-project-report em {display:inline-block; padding:0 0 0 40px; text-align:left; background:url('../images/icon_report.png') no-repeat 0 50%; font-size:23px; font-weight:bold; color:#fff}
+.funding-detailview .price-rewardlist {overflow:hidden; margin:0 0 8px 0; padding:0 0 1px 0; border:1px solid #cdcdcd}
+.funding-detailview .price-rewardlist button.btn-reward-toggle {display:block; width:100%; height:55px; text-align:right; padding:0 20px; background:#fafafa; color:#717171}
+.funding-detailview .price-rewardlist button.btn-reward-toggle em {display:inline-block; padding:0 40px 0 0; background:url('../images/icon_arr_01.png') no-repeat 95% 50%; color:#717171}
+.funding-detailview .price-rewardlist button.btn-reward-toggle.close em {background:url('../images/icon_arr_02.png') no-repeat 95% 50%}
+.funding-detailview .price-rewardlist .listgroup {clear:both; overflow:hidden; border-top:1px solid #ccc}
+.funding-detailview .price-rewardlist .listgroup dl {overflow:hidden}
+.funding-detailview .price-rewardlist .listgroup dl dt {padding:5px 20px; border-bottom:1px solid #ccc}
+.funding-detailview .price-rewardlist .listgroup dl dt a {display:block; height:40px; background:url('../images/icon_arr_01.png') no-repeat 95% 50%; line-height:40px; font-size:14px}
+.funding-detailview .price-rewardlist .listgroup dl dt strong {font-size:18px; font-weight:bold; color:#35363b}
+.funding-detailview .price-rewardlist .listgroup dl dt sub {margin:0 0 0 2px; vertical-align:middle; font-size:14px; color:#555}
+.funding-detailview .price-rewardlist .listgroup dl dd {height:0; overflow:hidden; padding:0 20px}
+.funding-detailview .price-rewardlist .listgroup dl dd .pic {display:block; width:100%; margin:20px 0 0 0; border:1px solid #e1e1e1}
+.funding-detailview .price-rewardlist .listgroup dl dd .pic img {width:100%}
+.funding-detailview .price-rewardlist .listgroup dl dd .join-number {display:block; margin:0 0 7px 0; padding:7px 0; border-bottom:1px solid #ccc; line-height:16px}
+.funding-detailview .price-rewardlist .listgroup dl dd .join-number strong {color:#ff8947; font-size:13px}
+.funding-detailview .price-rewardlist .listgroup dl dd .join-number em {color:#555}
+.funding-detailview .price-rewardlist .listgroup dl dd .info {height:55px; overflow:hidden; margin:0 -20px; padding:0 20px 0 20px; padding-bottom:0; border-bottom:1px solid #ccc}
+.funding-detailview .price-rewardlist .listgroup dl dd .info strong {display:block; font-size:13px}
+.funding-detailview .price-rewardlist .listgroup dl dd .info em {display:block; font-size:12px; color:#999}
+.funding-detailview .relative-projectbox {clear:both; position:relative; overflow:hidden; padding:20px 20px 50px 20px; border:1px solid #ccc}
+.funding-detailview .relative-projectbox h5 {margin:0 0 8px 0; font-size:17px}
+.funding-detailview .relative-projectbox ul.slick-slider li.slick-slide {float:left}
+.funding-detailview .relative-projectbox dl {overflow:hidden}
+.funding-detailview .relative-projectbox dl dt {width:227px; height:125px; margin:0 0 10px 0}
+.funding-detailview .relative-projectbox dl dt .pic {display:block; font-size:0}
+.funding-detailview .relative-projectbox dl dt .pic img {width:100%}
+.funding-detailview .relative-projectbox dl dd {padding:0 3px; overflow:hidden}
+.funding-detailview .relative-projectbox dl dd strong {display:block; font-size:16px}
+.funding-detailview .relative-projectbox dl dd strong a {font-size:16px}
+.funding-detailview .relative-projectbox dl dd p {color:#888; line-height:15px; font-size:13px; font-weight:normal}
+.funding-detailview .relative-projectbox .paging-navi {position:absolute; left:50%; bottom:15px; width:78px; height:18px; margin:0 0 0 -35px; text-align:center}
+.funding-detailview .relative-projectbox .paging-navi span {display:inline-block; margin:0 8px; font-size:13px; color:#ccc; font-weight:bold}
+.funding-detailview .relative-projectbox .paging-navi span * {vertical-align:middle}
+.funding-detailview .relative-projectbox .paging-navi span strong {padding:0 8px 0 0; margin:0 3px 0 0; background:url('../images/bg_bar_02.png') no-repeat 100% 1px; font-size:13px; color:#ccc}
+.funding-detailview .relative-projectbox .paging-navi span em {font-size:13px; color:#ccc; font-weight:bold}
+.funding-detailview .relative-projectbox .slick-prev {position:absolute; left:0; top:1px; z-index:20; width:17px; height:17px; background:url('../images/icon_prev_01.png') no-repeat 0 0; text-indent:-99999px; font-size:0}
+.funding-detailview .relative-projectbox .slick-next {position:absolute; right:0; top:1px; z-index:20; width:17px; height:17px; background:url('../images/icon_next_01.png') no-repeat 0 0; text-indent:-99999px; font-size:0}
+
+
+/* common */
+fieldset.rp-searchbox {clear:both; position:relative; width:1280px; height:76px; margin:0 auto 15px; padding:10px 0; border-top:3px solid #999; border-bottom:1px solid #d5d5d5}
+fieldset.rp-searchbox ul {float:left; height:55px; margin:0 15px 0 0}
+fieldset.rp-searchbox ul li {float:left}
+fieldset.rp-searchbox ul li label {float:left; height:55px; margin:0 10px 0 0; padding:0 5px 0 54px; font-size:25px; color:#757575; line-height:55px; font-family:noto-light}
+fieldset.rp-searchbox ul li p {float:none; overflow:hidden; height:55px; padding-left:6px; background:url('../images/bg_bar_04.png') no-repeat 0 50%}
+fieldset.rp-searchbox ul li .optionbox {float:left; margin:10px 0 0 6px}
+fieldset.rp-searchbox ul li .optionbox select {width:116px; height:33px; border:1px solid #ccc; color:#666; font-size:16px}
+fieldset.rp-searchbox ul li.theme {width:290px}
+fieldset.rp-searchbox ul li.theme label {background:url('../images/icon_reward_01.png') no-repeat 0 0}
+fieldset.rp-searchbox ul li.local {width:530px}
+fieldset.rp-searchbox ul li.local label {padding:0 11px 0 45px; background:url('../images/icon_reward_02.png') no-repeat 0 0}
+fieldset.rp-searchbox ul li.reward {width:280px}
+fieldset.rp-searchbox ul li.reward label {background:url('../images/icon_reward_03.png') no-repeat 0 5px}
+fieldset.rp-searchbox button {float:right; height:47px; padding:0 30px; background:#242424}
+fieldset.rp-searchbox button em {display:block; padding:0 0 0 30px; background:url('../images/icon_searchdown.png') no-repeat 0 50%; color:#fff; font-size:18px; font-weight:normal; font-family:noto-light}
+
+dl.stbox {float:left; position:relative; width:311px; height:440px; margin:0 0 0 10px; border:1px solid #ccc}
+dl.stbox:first-child {margin:0}
+dl.stbox dt {position:relative; height:235px; overflow:hidden}
+dl.stbox dt label {position:absolute; left:-1px; top:-1px; display:block; width:55px; height:55px; text-align:center; background:#1fa9dc; font-size:14px; color:#fff; line-height:55px}
+dl.stbox dt .pic {display:block; font-size:0}
+dl.stbox dt .pic img {width:100%; min-height:235px; height:auto}
+dl.stbox dt span {display:block; position:absolute; left:0; bottom:0; width:100%; height:35px; padding:0 12px; background:rgba(0,0,0,0.8); color:#fff; line-height:35px; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis}
+dl.stbox dd.txt {overflow:hidden; padding:15px}
+dl.stbox dd.txt a strong {display:block; height:40px; overflow:hidden; color:#1fa9dc; font-weight:normal; font-family:noto-bold; font-size:16px; line-height:19px; letter-spacing:-1px}
+dl.stbox dd.txt a p {clear:both; overflow:hidden; margin:5px 0}
+dl.stbox dd.txt a p em {float:left; padding:0 12px; background:url('../images/bg_bar_05.png') no-repeat 0 50%; font-size:13px}
+dl.stbox dd.txt a p em:first-child {padding-left:0; background:0}
+dl.stbox dd.txt a span {display:block; height:58px; overflow:hidden; font-size:14px; line-height:19px; letter-spacing:-0.5px}
+dl.stbox dd.starscore {height:50px; border-top:1px solid #ccc}
+dl.stbox dd.starscore p {float:left; margin:10px 0 0 10px}
+dl.stbox dd.starscore strong {float:right; margin:10px 20px 0 0; font-weight:normal; font-size:14px}
+
+dl.rwbox {float:left; position:relative; width:311px; height:425px; margin:0 0 0 10px; border:1px solid #ccc}
+dl.rwbox:first-child {margin:0}
+dl.rwbox dt {position:relative; height:235px; overflow:hidden}
+dl.rwbox dt label {position:absolute; right:-1px; top:-1px; display:block; width:54px; height:65px; text-align:center; background:url('../images/bg_badge_03.png') no-repeat 0 0; font-size:14px; color:#fff; line-height:55px}
+dl.rwbox dt .pic {display:block; font-size:0}
+dl.rwbox dt .pic img {width:100%; min-height:235px; height:auto}
+dl.rwbox dt span {display:block; position:absolute; left:0; bottom:0; width:100%; height:35px; padding:0 12px; background:rgba(0,0,0,0.8); color:#fff; line-height:35px; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis}
+dl.rwbox dd.txt {overflow:hidden; padding:10px 10px 0 10px}
+dl.rwbox dd.txt .addr-ctg {height:30px; font-size:14px; color:#555; line-height:30px}
+dl.rwbox dd.txt .info {position:relative; padding:0 0 0 80px}
+dl.rwbox dd.txt .info strong {display:block; color:#555; font-weight:normal; font-size:15px}
+dl.rwbox dd.txt .info span {display:block; color:#4ea032; font-size:13px}
+dl.rwbox dd.txt .info em {display:inline-block; position:absolute; left:0; top:6px; width:72px; height:29px; text-align:center; color:#fff; line-height:29px; font-size:13px}
+dl.rwbox dd.txt .info em.badge-coupon {background:#ff0000}
+dl.rwbox dd.txt .info em.badge-sale {background:#f67c0f}
+dl.rwbox dd.txt .price {clear:both; height:50px; padding-left:4px; line-height:50px}
+dl.rwbox dd.txt .price strong {float:left; margin:0 25px 0 0; color:#ff0000; font-size:29px}
+dl.rwbox dd.txt .price strong sub {margin-left:2px; vertical-align:0; font-size:12px; font-weight:normal}
+dl.rwbox dd.txt .price s {float:left; margin:0 25px 0 0; color:#999; font-size:17px; font-weight:bold}
+dl.rwbox dd.txt .price em {float:left; margin:0 25px 0 0; color:#000; font-size:20px; font-weight:bold}
+dl.rwbox dd.txt .price em sub {margin-left:2px; vertical-align:0; font-size:13px; font-weight:normal}
+dl.rwbox dd.txt .buy-status {clear:both; display:block; height:50px; margin:0 -10px; padding:0 20px; border-top:1px solid #ccc; line-height:49px; color:#000; font-size:14px}
+dl.rwbox dd.txt .buy-status strong {margin-right:2px; font-size:19px}
+dl.rwbox dd.hover-contents {display:none; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); cursor:pointer; }
+dl.rwbox:hover dd.hover-contents {display:block; padding:30px 20px; text-align:left}
+dl.rwbox:hover dd.hover-contents .name {font-size:18px; color:#fff; font-weight:normal; font-family:noto-light}
+dl.rwbox:hover dd.hover-contents .name strong {color:#8ac65a; font-weight:normal; font-family:noto-light}
+dl.rwbox:hover dd.hover-contents .support-msg {margin:7px 0 30px 0; color:#fff; font-size:16px; line-height:22px; font-family:noto-light}
+dl.rwbox:hover dd.hover-contents .support-info {max-height:222px; padding:8px; background:rgba(50,118,25,0.8)}
+dl.rwbox:hover dd.hover-contents .support-info ul {clear:both; overflow:hidden; padding:15px 10px; border:1px solid rgba(255,255,255,0.3)}
+dl.rwbox:hover dd.hover-contents .support-info ul li {clear:both; overflow:hidden; margin:0 0 2px 0; color:#fff; line-height:22px}
+dl.rwbox:hover dd.hover-contents .support-info ul li label {float:left; margin-right:15px; font-family:noto-light; font-size:15px}
+dl.rwbox:hover dd.hover-contents .support-info ul li p {float:right; text-align:right; font-family:noto-light; font-size:15px}
+dl.rwbox:hover dd.hover-contents .support-info ul li p strong {margin-right:2px; font-family:noto-bold; font-size:20px}
+dl.rwbox:hover dd.hover-contents .support-info ul li.remain-time {margin-top:15px; border-top:1px solid rgba(255,255,255,0.3)}
+dl.rwbox:hover dd.hover-contents .support-info ul li.remain-time p {float:none; clear:both; padding:10px 0 0 0; text-align:right; font-size:15px; font-family:noto-light}
+dl.rwbox:hover dd.hover-contents .support-info ul li.remain-time p strong {font-size:27px; font-family:noto-bold}
+
+dl.rcbox {float:left; position:relative; width:311px; height:425px; margin:0 0 0 10px; border:1px solid #ccc}
+dl.rcbox:first-child {margin:0}
+dl.rcbox dt {height:204px; overflow:hidden}
+dl.rcbox dt label {position:absolute; left:-1px; top:-1px; display:block; width:58px; height:72px; text-align:center; background:url('../images/bg_badge_02.png') no-repeat 0 0; font-size:14px; color:#fff; line-height:62px}
+dl.rcbox dt .pic {display:block; font-size:0}
+dl.rcbox dt .pic img {width:100%; height:auto; min-height:204px}
+dl.rcbox dd.txt {overflow:hidden; padding:30px 20px}
+dl.rcbox dd.txt a.blocklink {margin:0 0 40px 0}
+dl.rcbox dd.txt a strong {display:block; width:100%; margin:0 0 3px 0; color:#43acff; font-size:18px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; font-weight:bold; font-family:noto-light}
+dl.rcbox dd.txt a span {display:block; height:55px; overflow:hidden; color:#555; font-size:14px; line-height:18px}
+dl.rcbox dd.txt .progressbox {width:auto; height:20px; font-size:0}
+dl.rcbox dd.txt .progressbox p {position:relative; height:13px; background:#cacaca}
+dl.rcbox dd.txt .progressbox p span {float:left; display:block; height:13px; background:#cacaca; font-size:0}
+dl.rcbox dd.txt .progressbox p span:first-child {background:#43acff}
+dl.rcbox dd.txt .progressbox p span:first-child em {border-left:1px solid #ccc}
+dl.rcbox dd.txt .progressbox p span em {display:block; width:auto; height:30px; margin:-18px -1px 0 0; text-align:center; border-right:1px solid #ccc; border-top:1px solid #ccc; font-size:12px; color:#555}
+dl.rcbox dd.txt .progressbox p span em b {margin:0 2px 0 0; color:#555; font-weight:bold}
+dl.rcbox dd.txt .info {clear:both; overflow:hidden; color:#898989; font-size:12px}
+dl.rcbox dd.txt .info span {float:left; margin:0 7px 0 0}
+dl.rcbox dd.txt .info .status-price {color:#43acff}
+dl.rcbox dd.txt .info .dday {float:right; font-weight:bold; font-size:13px}
+dl.rcbox dd.hover-contents {display:none; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); cursor:pointer; }
+dl.rcbox:hover dd.hover-contents {display:block; padding:20px; text-align:center}
+dl.rcbox:hover dd.hover-contents > label {display:inline-block; min-width:100px; height:30px; padding:0 20px; margin:0 auto 10px; text-align:center; border:1px solid #0667b4; line-height:30px; color:#0667b4; font-size:14px}
+dl.rcbox:hover dd.hover-contents > .addr-ctg {width:100%; margin:0 0 15px 0; text-align:center; font-size:14px; color:#fff; font-family:noto-light; word-spacing:4px}
+dl.rcbox:hover dd.hover-contents > .addr-ctg strong {color:#43acff}
+dl.rcbox:hover dd.hover-contents ul {overflow:hidden; padding:20px 30px; margin:0 0 10px; background:#3b8fd1}
+dl.rcbox:hover dd.hover-contents ul li {text-align:left; line-height:25px; font-size:15px; color:#fff; font-family:noto-light}
+dl.rcbox:hover dd.hover-contents ul li strong {margin:0 2px 0 5px; font-size:19px; font-family:noto-bold}
+dl.rcbox:hover dd.hover-contents .txt-reward {clear:both; width:100%; text-align:center}
+dl.rcbox:hover dd.hover-contents .txt-reward > strong {display:block; color:#fecb00; font-size:16px; font-family:noto-light}
+dl.rcbox:hover dd.hover-contents .txt-reward > span {display:block; color:#fff; font-size:14px; font-family:noto-light}
+dl.rcbox:hover dd.hover-contents .txt-reward > button {display:block; margin:7px auto 10px; padding:2px 15px}
+dl.rcbox:hover dd.hover-contents .tagwiki span {margin:0 1.5px}
+dl.rcbox:hover dd.hover-contents .tagwiki span a {font-size:11px}
+
+.starscore0 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_00.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+.starscore1 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_01.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+.starscore2 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_02.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+.starscore3 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_03.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+.starscore4 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_04.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+.starscore5 {display:block; width:100px; height:20px; padding:0 0 0 70px; background:url('../images/icon_starscore_05.png') no-repeat 0 50%; color:#e62015; font-size:13px; font-family:noto-light; line-height:22px}
+
+.tagwiki {clear:both; overflow:hidden}
+.tagwiki span {display:inline-block; height:26px; padding:0 8px; text-align:center; border:1px solid #fff; line-height:24px}
+.tagwiki span a {font-size:12px; color:#fff}
+.tagwiki span a:hover, .tagwiki span a:focus, .tagwiki span a:active {text-decoration:none}
+
+.bannerbox {clear:both; overflow:hidden; margin:30px 0}
+.bannerbox ul.bannerset {width:1270px; height:140px; margin:0 auto}
+.bannerbox ul.bannerset li {float:left; width:20%; height:72px; padding:0 3px}
+.bannerbox ul.bannerset li a {display:block}
+.bannerbox ul.bannerset li:first-child {padding-left:0}
+.bannerbox ul.bannerset li img {width:100%; height:72px; border:1px solid #ddd}
+.bannerbox ul.bannerset li span {display:block; width:100%; height:25px; padding-top:5px; text-align:center; font-size:15px; color:#666}
+
+.hiddencontents {display:none; clear:both; overflow:hidden}
+.hiddencontents.on {display:block}
+
+.snsbox ul {position:relative; height:30px; padding:0; overflow:hidden}
+.snsbox ul li {float:left; width:29px; height:24px}
+.snsbox ul li a {display:block; width:24px; height:24px; border-radius:50%; font-size:0; text-indent:-99999px}
+.snsbox ul li a.sns-facebook {background:url('../images/icon_sns_facebook.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-twitter {background:url('../images/icon_sns_twitter.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-kakaotalk {background:url('../images/icon_sns_kakaotalk.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-kakaostory {background:url('../images/icon_sns_kakaostory.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-instagram {background:url('../images/icon_sns_instagram.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-naverblog {background:url('../images/icon_sns_blog.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-googleblog {background:url('../images/icon_sns_google.png') no-repeat 0 0; background-size:24px}
+.snsbox ul li a.sns-band {background:url('../images/icon_sns_band.png') no-repeat 0 0; background-size:24px}
+
+.paging {clear:both; overflow:hidden; width:100%; margin:30px 0 0 0; text-align:center; font-size:0}
+.paging * {vertical-align:middle}
+.paging button {width:30px; height:30px; border:1px solid #dedede; font-size:0; text-indent:-99999px}
+.paging button:hover {border:1px solid #ccc}
+.paging button.btn-paging-prev {background:#fff url('../images/icon_paging_prev.png') no-repeat 50%}
+.paging button.btn-paging-prev:hover {background:#ddd url('../images/icon_paging_prev.png') no-repeat 50%}
+.paging button.btn-paging-next {background:#fff url('../images/icon_paging_next.png') no-repeat 50%}
+.paging button.btn-paging-next:hover {background:#ddd url('../images/icon_paging_next.png') no-repeat 50%}
+.paging span {display:inline-block; margin:0 5px 0 4px}
+.paging span a {display:inline-block; width:30px; height:30px; margin:0 3px 0 4px; text-align:center; border:1px solid #dedede; font-size:15px; color:#898989; line-height:30px}
+.paging span a.on {background:#ddd; border:1px solid #ccc; color:#333}
+.paging span a:hover {background:#ddd; border:1px solid #ccc; color:#333; text-decoration:none}
+
+.btncenter {clear:both; width:100%; text-align:center}
+.btn-blue {background:#0667b4; color:#fff}
+.btn-moreview {width:213px; height:60px; border:1px solid #ccc; color:#ff0000; font-size:16px}
+.btn-red {height:40px; padding:0 15px; background:#ff0000; color:#fff; font-size:16px}
+
+/* normal */
+.normal .pc-only {display:block}
+.normal .mobile-only {display:none}
+.normal .maincontents .mainvisual .slick-list {padding:0 20% !important}
+.normal .funding-reward .mainvisual .slick-list {padding:0 23% !important}
+
+/* smallbrowser */
+.smallbrowser #wrap {width:100%; min-width:1024px}
+.smallbrowser .toparea .innerbox {width:98%; min-width:1024px}
+.smallbrowser .toparea .topgnb .btn-allview {margin-right:20px}
+.smallbrowser .toparea .topgnb ul.pc-only {float:none; overflow:hidden; width:auto; text-align:center}
+.smallbrowser .toparea .topgnb ul.pc-only li {float:none; display:inline-block; font-size:0; margin:0 9px}
+.smallbrowser .toparea .topgnb ul.pc-only li:first-child {margin:0 0 0 10px}
+.smallbrowser .toparea .topgnb ul.pc-only li a {font-size:14px}
+.smallbrowser .toparea .topmenubox fieldset {width:270px; padding-right:65px; margin-left:20px}
+.smallbrowser .toparea .topmenubox fieldset button {width:55px}
+.smallbrowser .toparea .topmenubox h1 {width:200px}
+.smallbrowser .toparea .topmenubox > .innerbox > ul li {margin:0 10px}
+.smallbrowser .toparea .topmenubox > .innerbox > ul li a {font-size:17px}
+.smallbrowser .bottomarea ul.bmenu {width:95%; height:55px; margin:0 auto}
+.smallbrowser .bottomarea .innerbox {clear:both; width:95%; overflow:hidden; margin:0 auto}
+.smallbrowser .bottomarea .copyright .flbox {width:380px}
+.smallbrowser .bottomarea .copyright .fmbox {width:420px}
+.smallbrowser .bannerbox {width:95%; margin:0 auto}
+.smallbrowser .bannerbox ul.bannerset {width:100%}
+.smallbrowser .bannerbox ul.bannerset li {height:auto}
+.smallbrowser .bannerbox ul.bannerset li img {height:auto}
+.smallbrowser .maincontents .mainvisual {width:100%; height:650px; margin:0 auto 50px}
+.smallbrowser .maincontents .mainvisual .slick-prev {left:2%}
+.smallbrowser .maincontents .mainvisual .slick-next {right:2%}
+.normal.smallbrowser .maincontents .mainvisual .slick-list {padding:0 20% !important}
+.smallbrowser .maincontents .mainvisual ul.slick-slider {height:450px}
+.smallbrowser .maincontents .mainvisual ul.slick-slider li {max-width:1024px; height:450px}
+.smallbrowser .maincontents .mainvisual dl {max-width:1024px}
+.smallbrowser .maincontents .recommend-project {width:100%; height:auto}
+.smallbrowser .maincontents .recommend-project ul.slick-slider {height:1080px}
+.smallbrowser .maincontents .recommend-project ul.slick-dots {bottom:20px}
+.smallbrowser .maincontents .funding-process {width:95%; height:260px; padding:25px 50px}
+.smallbrowser .maincontents .funding-process ul {text-align:center}
+.smallbrowser .maincontents .funding-process ul li {float:none; display:inline-block}
+.smallbrowser .maincontents .funding-process h3 {height:60px; font-size:36px}
+.smallbrowser .maincontents .rewardlist {width:100%; margin-bottom:40px}
+.smallbrowser .maincontents .rewardlist ul.slick-slider {height:1080px}
+.smallbrowser .maincontents .rewardlist ul.slick-dots {bottom:20px}
+.smallbrowser .maincontents .storylist {width:100%; }
+.smallbrowser .maincontents .storylist ul.slick-slider {height:1080px}
+.smallbrowser .maincontents .storylist ul.slick-dots {bottom:20px}
+.smallbrowser .maincontents .funding-support {height:auto; overflow:hidden; background-repeat:repeat}
+.smallbrowser .maincontents .funding-support .innerbox {width:100%; height:auto}
+.smallbrowser .maincontents .funding-support h3 {float:none; width:360px; margin:0 auto; text-align:center; padding-top:15px; font-size:30px}
+.smallbrowser .maincontents .funding-support ul {float:none; overflow:hidden; height:auto; padding:15px 0; text-align:center}
+.smallbrowser .maincontents .funding-support ul li.funding-member {width:33%}
+.smallbrowser .maincontents .funding-support ul li.funding-member label {background:url('../images/icon_funding_01.png') no-repeat 100% 100%}
+.smallbrowser .maincontents .funding-support ul li.funding-member p strong {color:#43acff; font-size:36px}
+.smallbrowser .maincontents .funding-support ul li.funding-price {width:33%}
+.smallbrowser .maincontents .funding-support ul li.funding-price label {background:url('../images/icon_funding_02.png') no-repeat 100% 100%}
+.smallbrowser .maincontents .funding-support ul li.funding-price p strong {color:#fecb00; font-size:36px}
+.smallbrowser .maincontents .funding-support ul li.project-start {float:none; overflow:hidden; padding-left:50px; text-align:left; background:url('../images/icon_funding_03.png') no-repeat 94% 50%; border-left:1px solid #fff}
+.smallbrowser .maincontents .funding-support ul li.project-start label {display:block; padding:15px 0 0 0; font-weight:bold; color:#43acff; font-size:18px}
+.smallbrowser .maincontents .funding-support ul li.project-start p a {color:#ffd74b; font-size:27px; font-weight:bold}
+.smallbrowser dl.rcbox {width:45%; height:500px; margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.rcbox:first-child {margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.rcbox dt {height:270px}
+.smallbrowser dl.rcbox dt .pic img {width:100%; height:auto; min-height:270px}
+.smallbrowser dl.rwbox {width:45%; height:500px; margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.rwbox:first-child {margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.rwbox dt {height:270px}
+.smallbrowser dl.rwbox dt .pic img {width:100%; height:auto; min-height:270px}
+.smallbrowser dl.stbox {width:45%; height:480px; margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.stbox:first-child {margin:0 2.5% 15px 2.5%}
+.smallbrowser dl.stbox dt {height:270px}
+.smallbrowser dl.stbox dt .pic img {width:100%; height:auto; min-height:270px}
+.smallbrowser .funding-reward {clear:both; overflow:hidden}
+.smallbrowser .funding-reward .mainvisual {width:100%; height:560px; margin:0 auto 25px}
+.smallbrowser .funding-reward .mainvisual .slick-prev {left:5%}
+.smallbrowser .funding-reward .mainvisual .slick-next {right:5%}
+.normal.smallbrowser .funding-reward .mainvisual .slick-list {padding:0 15% !important}
+.smallbrowser .funding-reward .mainvisual ul.slick-slider {height:450px}
+.smallbrowser .funding-reward .mainvisual ul.slick-slider li {max-width:1024px; height:550px}
+.smallbrowser .funding-reward .mainvisual dl {max-width:1024px; height:550px}
+.smallbrowser .funding-reward .mainvisual dl dd.info {height:363px; overflow:hidden}
+.smallbrowser .funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status {background-size:100% 100%}
+.smallbrowser .funding-reward .rewardlist {width:95%; margin:0 auto 100px}
+.smallbrowser .funding-reward .rewardlist .listgroup {margin:0 -0.65% 30px -0.65%}
+.smallbrowser .funding-reward .rewardlist dl.rwbox {float:left; width:32%; margin:0 0.65% 11px 0.65%}
+.smallbrowser .funding-reward .rewardlist dl.rwbox:first-child {margin:0 0.65% 11px 0.65%}
+.smallbrowser .project-search .mainvisual ul.slick-slider {width:100%}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .innerbox {position:relative; width:75%}
+.smallbrowser .project-search .mainvisual ul.slick-slider li ul.main-product {width:100%}
+.smallbrowser .project-search .mainvisual ul.slick-slider li h3 {position:absolute; left:0; width:100%; text-align:center}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox {padding:20px 20px 0 20px}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox .graph-during {width:95px}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox .graph-rate {width:95px}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right {min-width:150px}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right strong {color:#f9b03c}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right color:#fff}
+.smallbrowser .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right button {display:block; width:100%}
+.smallbrowser .project-search .mainvisual ul.slick-dots {width:100%; margin-left:-640px; text-align:center}
+.smallbrowser .project-search .mainvisual ul.slick-dots li {width:12px; height:10px}
+.smallbrowser .project-search .mainvisual ul.slick-dots li button {width:10px; height:10px; background:#999}
+.smallbrowser .project-search .mainvisual ul.slick-dots li.slick-active button {background:#faad38}
+.smallbrowser .project-search .recommend-project {width:95%; margin:0 auto 100px}
+.smallbrowser .project-search .recommend-project .listgroup {margin:0 -0.65% 30px -0.65%}
+.smallbrowser .project-search dl.rcbox {float:left; width:32%; height:470px; margin:0 0.65% 11px 0.65%}
+.smallbrowser .project-search dl.rcbox:first-child {margin:0 0.65% 11px 0.65%}
+.smallbrowser .project-search dl.rcbox dt {height:250px}
+.smallbrowser .project-search dl.rcbox dt .pic img {width:100%; height:auto; min-height:250px}
+.smallbrowser .start-contents .mainvisual {width:100%; height:450px}
+.smallbrowser .start-contents .mainvisual .innerbox {max-width:100%; height:450px}
+.smallbrowser .start-contents .mainvisual .innerbox h3 {top:100px}
+.smallbrowser .start-contents .mainvisual .innerbox h3 strong {font-size:42px}
+.smallbrowser .start-contents .mainvisual .innerbox h3 span {font-size:17px}
+.smallbrowser .start-contents .mainvisual ul.quickmenu {top:270px}
+.smallbrowser .start-contents .ceogreeting {height:580px; padding:50px 0 0 0}
+.smallbrowser .start-contents .ceogreeting .innerbox {position:relative; width:95%; margin:0 auto; padding:0 500px 10px 0}
+.smallbrowser .start-contents .ceogreeting dl {width:100%; padding:0; overflow:hidden}
+.smallbrowser .start-contents .ceogreeting dl dt {height:100px; font-size:42px}
+.smallbrowser .start-contents .ceogreeting .picbox {float:none; position:absolute; right:0; top:0; width:470px; padding:35px 10px 0 30px}
+.smallbrowser .start-contents .ceogreeting .picbox ul {width:407px; height:407px; padding:0}
+.smallbrowser .start-contents .ceogreeting .picbox ul li {width:407px; height:407px}
+.smallbrowser .start-contents .ceogreeting .picbox ul li .pic {display:block; width:407px; height:407px; border-radius:50%; font-size:0}
+.smallbrowser .start-contents .keywords {height:820px; padding:50px 0}
+.smallbrowser .start-contents .keywords .innerbox {width:95%; height:820px; margin:0 auto}
+.smallbrowser .start-contents .keywords .cellphone-img {width:320px; height:640px; margin:0 0 0 -160px}
+.smallbrowser .start-contents .keywords .cellphone-img img {width:100%}
+.smallbrowser .start-contents .keywords h3 {height:120px !important; color:#363535; font-size:42px; font-family:noto-light}
+.smallbrowser .start-contents .keywords dl {position:absolute; width:420px}
+.smallbrowser .start-contents .keywords dl dt {height:70px; font-size:36px}
+.smallbrowser .start-contents .keywords dl dd {padding:0 0 0 95px}
+.smallbrowser .start-contents .keywords dl dd strong {font-size:28px; line-height:32px}
+.smallbrowser .start-contents .keywords dl dd p {color:#999; font-size:17px; line-height:23px}
+.smallbrowser .start-contents .keywords dl.upgrade {left:0; top:120px}
+.smallbrowser .start-contents .keywords dl.upgrade dd {background-size:80px auto}
+.smallbrowser .start-contents .keywords dl.support {left:0; top:400px}
+.smallbrowser .start-contents .keywords dl.support dd {background-size:80px auto}
+.smallbrowser .start-contents .keywords dl.connect {left:770px; top:120px}
+.smallbrowser .start-contents .keywords dl.connect dd {background-size:80px auto}
+.smallbrowser .start-contents .keywords dl.rewards {left:770px; top:400px}
+.smallbrowser .start-contents .keywords dl.rewards dd {background-size:80px auto}
+.smallbrowser .start-contents .supportfunding-process {height:720px; padding:50px 0 0 0}
+.smallbrowser .start-contents .supportfunding-process .innerbox {width:95%; height:600px; margin:0 auto; overflow:hidden; background-size:420px auto}
+.smallbrowser .start-contents .supportfunding-process h3 {font-size:42px}
+.smallbrowser .start-contents .supportfunding-process h4 {font-size:28px}
+.smallbrowser .start-contents .supportfunding-process ul {height:568px; padding:0 0 0 480px}
+.smallbrowser .start-contents .supportfunding-process ul li {width:32.5%; height:260px; margin:0 4px 0.3% 0; background:#fff; box-shadow:2px 2px 2px rgba(0,0,0,0.2)}
+.smallbrowser .start-contents .supportfunding-process ul li dl {padding:25px 12px 0 12px}
+.smallbrowser .start-contents .supportfunding-process ul li dl dt {font-size:20px}
+.smallbrowser .start-contents .supportfunding-process ul li dl dd {font-size:14px; line-height:19px}
+.smallbrowser .start-contents .shopfunding-pr {width:100%; height:650px; padding:50px 0 0 0}
+.smallbrowser .start-contents .shopfunding-pr h3 {height:85px !important; font-size:42px}
+.smallbrowser .start-contents .shopfunding-pr ul.slick-slider {padding:0 50px}
+.smallbrowser .start-contents .shopfunding-pr .innerbox {width:95%; height:640px; margin:0 auto}
+.smallbrowser .start-contents .shopfunding-pr .slick-prev {position:absolute; left:0; top:200px; width:40px; height:70px; background:url('../images/icon_prev_05.png') no-repeat 0 50%; font-size:0; text-indent:-99999px}
+.smallbrowser .start-contents .shopfunding-pr .slick-next {position:absolute; right:0; top:200px; width:40px; height:70px; background:url('../images/icon_next_05.png') no-repeat 100% 50%; font-size:0; text-indent:-99999px}
+.smallbrowser .start-contents .shopfunding-pr dl {height:420px}
+.smallbrowser .start-contents .shopfunding-pr dl dt {height:221px}
+.smallbrowser .start-contents .shopfunding-pr dl dt .pic {width:100%; height:220px; font-size:0}
+.smallbrowser .start-contents .shopfunding-pr dl dt .pic img {width:100%; height:auto; min-height:220px}
+.smallbrowser .start-contents .shopfunding-pr dl dd {height:214px}
+.smallbrowser .start-contents .shopfunding-pr dl dd a.blocklink {width:100%; margin:0 0 15px 0}
+.smallbrowser .start-contents .shopfunding-pr dl dd a.blocklink strong {height:54px; margin:0 0 10px 0; font-size:22px; line-height:26px}
+.smallbrowser .start-contents .shopfunding-pr dl dd a.blocklink span {height:40px; font-size:15px; line-height:19px}
+.smallbrowser fieldset.rp-searchbox {width:95%; height:76px}
+.smallbrowser fieldset.rp-searchbox ul li label {padding-left:37px; padding-right:3px; background-size:32px auto; background-position:0 50%; font-size:20px}
+.smallbrowser fieldset.rp-searchbox ul li .optionbox select {width:auto; max-width:100px; padding:0 10px 0 0; font-size:15px}
+.smallbrowser fieldset.rp-searchbox ul li.theme {width:auto; margin-right:15px}
+.smallbrowser fieldset.rp-searchbox ul li.local {width:auto; margin-right:15px}
+.smallbrowser fieldset.rp-searchbox ul li.reward {width:auto; margin-right:15px}
+.smallbrowser fieldset.rp-searchbox button {position:absolute; right:0; top:15px; width:130px; padding:0 0 0 25px; text-align:left}
+.smallbrowser fieldset.rp-searchbox button em {padding-left:24px; font-size:15px}
+
+
+/* tablet */
+.tablet .pc-only {display:none}
+.tablet .mobile-only {display:block}
+
+.tablet #wrap {min-width:720px}
+.tablet .toparea {height:221px; border-bottom:1px solid #e1e1e1}
+.tablet .toparea .innerbox {width:100%; margin:0}
+.tablet .toparea .topgnb {height:105px}
+.tablet .toparea .topgnb .innerbox {height:105px}
+.tablet .toparea .topgnb ul {float:none; position:absolute; z-index:20; left:0; top:55px; width:100%; height:50px; padding:0 30px; background:#0095da}
+.tablet .toparea .topgnb ul .slick-list {padding:0 60px !important}
+.tablet .toparea .topgnb ul .slick-prev {position:absolute; left:0; top:10px; width:30px; height:30px; background:url('../images/icon_menu_prev.png') no-repeat 50% 50%; font-size:0; text-indent:-99999px}
+.tablet .toparea .topgnb ul .slick-next {position:absolute; right:0; top:10px; width:30px; height:30px; background:url('../images/icon_menu_next.png') no-repeat 50% 50%; font-size:0; text-indent:-99999px}
+.tablet .toparea .topgnb ul li {height:50px; padding:0; margin:0 0 0 35px; line-height:50px}
+.tablet .toparea .topgnb ul li a {display:block; width:100%; height:50px; padding:0; margin:0; text-align:center; line-height:50px; color:#fff; font-size:15px}
+.tablet .toparea .topgnb .btn-allview {width:50%; height:55px}
+.tablet .toparea .topgnb .btn-allview button {width:100%; height:55px}
+.tablet .toparea .topgnb .btn-allview button em {font-size:17px}
+.tablet .toparea .topgnb .btn-majorservice {float:left; width:50%; height:55px}
+.tablet .toparea .topgnb .btn-majorservice button {width:100%; height:55px; background:#22bdb7; color:#fff; font-size:17px; font-weight:bold}
+.tablet .toparea .gnbbox {height:auto; overflow:hidden; padding:5px 0}
+.tablet .toparea .gnbbox ul.gnb {float:none; padding:0; line-height:auto}
+.tablet .toparea .gnbbox ul.gnb li {float:left; width:16.666666667%; height:35px; margin:0; text-align:center; line-height:35px}
+.tablet .toparea .gnbbox ul.gnb li a {height:35px; margin:0; line-height:35px}
+.tablet .toparea .topmenubox {height:54px; font-size:0; border:0}
+.tablet .toparea .topmenubox .innerbox {position:relative; height:54px; overflow:visible; font-size:0}
+.tablet .toparea .topmenubox h1 {width:20%; max-width:140px; height:35px; margin-left:20px; margin-right:20px}
+.tablet .toparea .topmenubox h1 a {width:100%; height:35px; line-height:35px}
+.tablet .toparea .topmenubox h1 img {width:100%}
+.tablet .toparea .topmenubox fieldset {position:absolute; left:50%; top:18px; margin:0 0 0 -145px; padding-right:60px}
+.tablet .toparea .topmenubox fieldset p input.txt {font-size:13px}
+.tablet .toparea .topmenubox fieldset button {width:60px; height:33px; right:-3px; top:-3px; font-size:13px}
+.tablet .toparea .topmenubox .major-menu {float:right; margin:16px 20px 0 0}
+.tablet .toparea .major-menu > div {margin:0 4px}
+.tablet .toparea .major-menu a.holder {width:40px; height:40px; margin:0; line-height:36px; font-size:13px}
+.tablet .toparea .major-menu .major-menu1 .layer-innerbox {position:absolute; left:50%; top:68px; z-index:101; width:95%; margin-left:-47.5%; padding:70px 20px 30px 20px; background:#fff; border:1px solid #ccc; border-radius:8px}
+.tablet .toparea .major-menu .major-menu1 ul.setting {position:absolute; left:20px; top:5px}
+.tablet .toparea .major-menu .major-menu1 ul.setting li {color:#555}
+.tablet .toparea .major-menu .major-menu1 ul.setting li a {color:#555}
+.tablet .toparea .major-menu .major-menu1 ul.setting li.startpage-set {margin-right:20px}
+.tablet .toparea .major-menu .major-menu1 ul.funding-submenu {width:100%; overflow:hidden}
+.tablet .toparea .major-menu .major-menu1 ul.funding-submenu li {float:none; height:34px; padding:2px 0 0 0; border-bottom:1px solid #ccc; line-height:34px}
+.tablet .toparea .major-menu .major-menu1 ul.funding-submenu li a {font-size:15px; color:#565656; font-weight:bold; line-height:30px}
+.tablet .toparea .major-menu .major-menu1 .btn-alram {float:none; position:absolute; right:12px; top:5px; margin:0}
+.tablet .toparea .major-menu .major-menu1 .popular-ranking {position:absolute; right:20px; top:35px; float:none; height:19px; overflow:hidden}
+.tablet .toparea .major-menu .major-menu1 .popular-ranking ul li a {font-size:13px}
+.tablet .toparea .major-menu .major-menu1 .popular-ranking ul li label {margin-right:4px}
+.tablet .toparea .major-menu .major-menu1 .popular-ranking ul li p .up {width:8px; height:10px; background-size:8px auto}
+.tablet .toparea .major-menu .major-menu1 .popular-ranking ul li p .down {width:8px; height:10px; background-size:8px auto}
+.tablet .toparea .major-menu .major-menu1 .notice-linebox {float:none; clear:both; width:auto; height:19px; padding:0 0 0 118px; margin:15px 0 0 0}
+.tablet .toparea .major-menu .major-menu1 .notice-linebox h2 {margin:0; padding-top:3px; font-size:14px}
+.tablet .toparea .major-menu .major-menu1 .notice-linebox ul {float:none; overflow:hidden; width:100%}
+.tablet .toparea .major-menu .major-menu1 .notice-linebox ul li {width:100% !important}
+.tablet .toparea .major-menu .major-menu1 .notice-linebox ul li a {display:block; width:98%; height:25px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; font-size:13px}
+.tablet .toparea .major-menu .major-menu2 .layer-innerbox {position:absolute; left:75%; top:78px; width:95%; z-index:101; margin-left:-37.5%; text-align:center; padding:0}
+.tablet .toparea .major-menu .major-menu2 .layer-innerbox .snsbox {float:none; text-align:center; font-size:0}
+.tablet .toparea .major-menu .major-menu2 .layer-innerbox .snsbox ul li {display:inline-block; float:none}
+.tablet .toparea .major-menu .major-menu3 .layer-innerbox {position:absolute; right:10px; top:60px; z-index:101; width:80px; overflow:hidden; background:#fff; border-radius:5px; border:1px solid #ccc}
+.tablet .toparea .major-menu .major-menu3 .layer-innerbox ul li {height:30px; padding:0; text-align:center; border-top:1px solid #e1e1e1; line-height:34px; color:#555}
+.tablet .toparea .major-menu .major-menu3 .layer-innerbox ul li:first-child {border:0}
+.tablet .toparea .major-menu .major-menu3 .layer-innerbox ul li a {display:block; height:34px; line-height:34px; color:#555; letter-spacing:1px; font-size:13px}
+.tablet .toparea .major-menu .major-menu3 .layer-innerbox ul li a:hover, .tablet .toparea .major-menu .major-menu3 .layer-innerbox ul li a:focus {background-color:#eee; text-decoration:none}
+.tablet .bottomarea {clear:both; width:100%; height:auto; overflow:hidden; border-top:0}
+.tablet .bottomarea ul.bmenu {width:100%; height:auto; margin:0}
+.tablet .bottomarea ul.bmenu li {width:16.66666667%; padding:0; text-align:center; border-top:1px solid #e1e1e1; line-height:35px}
+.tablet .bottomarea .innerbox {width:100%}
+.tablet .bottomarea .copyright {position:relative; width:100%; padding:15px 0 30px 0}
+.tablet .bottomarea .copyright .flbox {float:none; width:100%; height:auto; padding:8px 0 0 0; font-size:13px; color:#999}
+.tablet .bottomarea .copyright .flbox h1 {width:100%; margin:0 0 10px 0; text-align:center}
+.tablet .bottomarea .copyright .flbox h1 img {width:130px}
+.tablet .bottomarea .copyright .flbox p {text-align:center}
+.tablet .bottomarea .copyright .flbox p span {font-size:13px; line-height:16px}
+.tablet .bottomarea .copyright .fmbox {float:left; width:45%; height:auto; padding:20px 0 0 30px; margin:0 auto; border:0}
+.tablet .bottomarea .copyright .fmbox dl dt {font-size:13px}
+.tablet .bottomarea .copyright .fmbox dl dt.mt25 {margin-top:10px}
+.tablet .bottomarea .copyright .fmbox dl dd {font-size:12px}
+.tablet .bottomarea .copyright .fmbox dl dd a {font-size:12px}
+.tablet .bottomarea .copyright .fmbox dl dd span {margin:0 5px 0 0; font-weight:bold}
+.tablet .bottomarea .copyright .fmbox dl dd .mail {display:block}
+.tablet .bottomarea .copyright .frbox {float:right; width:40%; height:auto; padding:30px 0 0 0; margin:0}
+.tablet .bottomarea .copyright .frbox p {margin:0 0 10px 0; text-align:center}
+.tablet .bottomarea .copyright .frbox p select {float:none; display:inline-block; min-width:100px; height:30px; margin:0 0 0 5px; padding:0 0 0 5px; font-size:13px}
+.tablet .bottomarea .copyright .frbox dl {width:90%; margin:0 auto; text-align:center}
+.tablet .bottomarea .copyright .frbox dl * {vertical-align:middle}
+.tablet .bottomarea .copyright .frbox dl dt {float:none; display:inline-block; padding-left:0; margin-right:10px; font-size:16px; line-height:30px}
+.tablet .bottomarea .copyright .frbox dl dd {float:none; display:inline-block; overflow:hidden; width:auto}
+.tablet .bottomarea .copyright .frbox dl dd strong {font-size:28px; line-height:30px}
+.tablet .bottomarea .copyright .frbox dl dd strong a {font-size:28px; line-height:30px}
+.tablet .bottomarea .rights {position:relative; height:auto; padding:45px 20px 20px 20px}
+.tablet .bottomarea .rights p {float:none; width:auto; text-align:center}
+.tablet .bottomarea .rights p span {font-size:13px; line-height:18px; font-weight:normal}
+.tablet .bottomarea .rights p span:first-child {font-size:13px}
+.tablet .bottomarea .rights .snsbox {float:right}
+.tablet .bottomarea .snsbox {position:absolute; left:0; top:5px; width:100%; text-align:center; margin-top:5px}
+.tablet .bottomarea .snsbox ul {width:100%; text-align:center; font-size:0}
+.tablet .bottomarea .snsbox ul li {display:inline-block; float:none}
+.tablet .paging {margin:30px 0 0 0}
+.tablet .paging button {width:25px; height:25px}
+.tablet .paging span a {width:25px; height:25px; margin:0 3px; font-size:14px; line-height:25px}
+.tablet .bannerbox {width:95%; height:90px; margin:20px auto 50px}
+.tablet .bannerbox ul.bannerset {width:100%; height:90px; overflow:hidden}
+.tablet .bannerbox ul.bannerset li {width:33%; height:90px; padding:0 3px 5px 3px}
+.tablet .bannerbox ul.bannerset li:first-child {padding-left:0}
+.tablet .bannerbox ul.bannerset li span {font-size:14px}
+.tablet .bannerbox ul.bannerset li img {height:65px}
+.tablet .maincontents .mainvisual .slick-prev {left:1%}
+.tablet .maincontents .mainvisual .slick-next {right:1%}
+.tablet .maincontents .mainvisual {width:100%; height:650px; margin:0 auto 50px}
+.tablet .maincontents .mainvisual ul.slick-slider {height:400px}
+.tablet .maincontents .mainvisual ul.slick-slider li {max-width:1000px; height:400px}
+.tablet .maincontents .mainvisual dl {max-width:1000px}
+.tablet .maincontents .funding-support {height:auto; overflow:hidden; background:url('../images/bg_titlevisual_03.jpg') repeat-x}
+.tablet .maincontents .funding-support .innerbox {width:100%; height:auto}
+.tablet .maincontents .funding-support h3 {float:none; width:360px; margin:0 auto; text-align:center; padding-top:15px; font-size:30px}
+.tablet .maincontents .funding-support ul {float:none; overflow:hidden; height:auto; padding:15px 0; text-align:center}
+.tablet .maincontents .funding-support ul li.funding-member {width:50%}
+.tablet .maincontents .funding-support ul li.funding-member p strong {font-size:32px}
+.tablet .maincontents .funding-support ul li.funding-price {width:50%}
+.tablet .maincontents .funding-support ul li.funding-price p strong {font-size:32px}
+.tablet .maincontents .funding-support ul li.project-start {float:none; overflow:hidden; clear:both; padding-left:0; text-align:center; background-position:80% 50%; border-left:0; border-top:1px solid #fff}
+.tablet .maincontents .recommend-project {width:100%; height:auto}
+.tablet .maincontents .recommend-project h3 {font-size:40px}
+.tablet .maincontents .recommend-project ul.slick-slider {height:920px}
+.tablet .maincontents .recommend-project ul.slick-dots {bottom:20px}
+.tablet .maincontents .funding-process {width:95%; height:auto; padding:20px 40px}
+.tablet .maincontents .funding-process ul {text-align:center}
+.tablet .maincontents .funding-process ul li {float:left; width:25%; height:130px; background-position:95% 30px}
+.tablet .maincontents .funding-process ul li span {height:110px; padding-top:90px; margin:0 auto; background-size:80px 80px !important}
+.tablet .maincontents .funding-process h3 {height:60px; font-size:32px}
+.tablet .maincontents .rewardlist {width:100%; margin-bottom:40px}
+.tablet .maincontents .rewardlist ul.slick-slider {height:920px}
+.tablet .maincontents .rewardlist ul.slick-dots {bottom:20px}
+.tablet .maincontents .storylist {width:100%; }
+.tablet .maincontents .storylist ul.slick-slider {height:1080px}
+.tablet .maincontents .storylist ul.slick-dots {bottom:20px}
+.tablet dl.rcbox {width:45%; margin:0 2.5% 15px 2.5%}
+.tablet dl.rcbox:first-child {margin:0 2.5% 15px 2.5%}
+.tablet dl.rcbox dt {height:204px}
+.tablet dl.rcbox dt .pic img {width:100%; height:auto; min-height:204px}
+.tablet dl.rwbox {width:45%; margin:0 2.5% 15px 2.5%}
+.tablet dl.rwbox:first-child {margin:0 2.5% 15px 2.5%}
+.tablet dl.rwbox dt {height:204px}
+.tablet dl.rwbox dt .pic img {width:100%; height:auto; min-height:204px}
+.tablet dl.stbox {width:45%; height:480px; margin:0 2.5% 15px 2.5%}
+.tablet dl.stbox:first-child {margin:0 2.5% 15px 2.5%}
+.tablet dl.stbox dt {height:204px}
+.tablet dl.stbox dt .pic img {width:100%; height:auto; min-height:204px}
+.tablet .funding-reward {clear:both; overflow:hidden}
+.tablet .funding-reward .mainvisual {width:100%; height:480px; margin:0 auto 25px}
+.tablet .funding-reward .mainvisual .slick-prev {left:2%}
+.tablet .funding-reward .mainvisual .slick-next {right:2%}
+.tablet .funding-reward .mainvisual .slick-list {padding:0 10% !important}
+.tablet .funding-reward .mainvisual ul.slick-slider {height:400px}
+.tablet .funding-reward .mainvisual ul.slick-slider li {max-width:1024px; height:480px}
+.tablet .funding-reward .mainvisual dl {max-width:1024px; height:480px}
+.tablet .funding-reward .mainvisual dl dt {padding-top:25px}
+.tablet .funding-reward .mainvisual dl dt span {font-size:15px}
+.tablet .funding-reward .mainvisual dl dt em {width:80px; height:80px; font-size:15px}
+.tablet .funding-reward .mainvisual dl dt strong {font-size:20px}
+.tablet .funding-reward .mainvisual dl dd.info {height:363px; overflow:hidden}
+.tablet .funding-reward .mainvisual dl dd.info .txt {bottom:119px; height:40px; line-height:40px; font-size:20px}
+.tablet .funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status {background-color:#ff7725; background-position:30px 0; background-size:100% 100%}
+.tablet .funding-reward .mainvisual dl dd.status {height:119px; padding:20px}
+.tablet .funding-reward .mainvisual dl dd.status em {font-size:18px}
+.tablet .funding-reward .mainvisual dl dd.status span {font-size:28px}
+.tablet .funding-reward .mainvisual dl dd.info .badge {bottom:190px; width:90px; height:90px; padding:25px; background-size:100%; font-size:19px; line-height:23px}
+.tablet .funding-reward .rewardlist {width:95%; margin:0 auto 100px}
+.tablet .funding-reward .rewardlist .listgroup {margin:0 -1.5% 30px -1.5%}
+.tablet .funding-reward .rewardlist .listgroup dl.rwbox {width:47%; height:480px; margin:0 1.5% 15px 1.5%}
+.tablet .funding-reward .rewardlist .listgroup dl.rwbox:first-child {margin:0 1.5% 15px 1.5%}
+.tablet .funding-reward .rewardlist .listgroup dl.rwbox dt {height:290px}
+.tablet .funding-reward .rewardlist .listgroup dl.rwbox dt .pic {height:290px}
+.tablet .funding-reward .rewardlist .listgroup dl.rwbox dt .pic img {min-height:290px; height:auto}
+.tablet .project-search .mainvisual {height:590px; margin-bottom:30px}
+.tablet .project-search .mainvisual ul.slick-slider {position:relative; width:100%; height:590px}
+.tablet .project-search .mainvisual ul.slick-slider li {position:relative; height:590px}
+.tablet .project-search .mainvisual ul.slick-slider li .innerbox {position:relative; width:100%; height:410px; overflow:hidden}
+.tablet .project-search .mainvisual ul.slick-slider li ul.main-product {width:100%}
+.tablet .project-search .mainvisual ul.slick-slider li h3 {position:absolute; left:0; width:100%; text-align:center}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox {padding:20px 20px 0 20px}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox .graph-during {width:95px}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox .graph-rate {width:95px}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right {min-width:150px}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right strong {color:#f9b03c}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right color:#fff}
+.tablet .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right button {display:block; width:100%}
+.tablet .project-search .mainvisual ul.slick-dots {left:0; bottom:0; width:100%; margin-left:0; text-align:center}
+.tablet .project-search .mainvisual ul.slick-dots li {width:12px; height:10px}
+.tablet .project-search .mainvisual ul.slick-dots li button {width:10px; height:10px; background:#999}
+.tablet .project-search .mainvisual ul.slick-dots li.slick-active button {background:#faad38}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product {clear:both; width:100%; height:150px}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dt {float:left; width:25%; height:100%; padding-top:30px; line-height:30px}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dt em {display:block}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd {float:none; overflow:hidden; height:150px; padding:10px 0 0 10px}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd .pic {float:left; width:150px; height:150px; overflow:hidden; text-align:center}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd .pic img {width:140px; height:auto}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd p {float:none; overflow:hidden; text-align:left; padding-top:20px}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd p a.blocklink {text-align:left}
+.tablet .project-search .mainvisual ul.slick-slider li dl.reward-product dd em.badge {width:80px; height:80px; bottom:20px; line-height:80px}
+.tablet .project-search .recommend-project {width:95%; margin:0 auto 100px}
+.tablet .project-search .recommend-project .listgroup {margin:0 -1.5% 30px -1.5%}
+.tablet .project-search .recommend-project .listgroup dl.rcbox {width:47%; height:480px; margin:0 1.5% 15px 1.5%}
+.tablet .project-search .recommend-project .listgroup dl.rcbox:first-child {margin:0 1.5% 15px 1.5%}
+.tablet .project-search .recommend-project .listgroup dl.rcbox dt {height:250px}
+.tablet .project-search .recommend-project .listgroup dl.rcbox dt .pic {height:250px}
+.tablet .project-search .recommend-project .listgroup dl.rcbox dt .pic img {min-height:250px; height:auto}
+.tablet .project-search .sortbox {width:95%; height:80px; margin:0 auto 30px}
+.tablet .project-search .sortbox h3 {width:140px; margin-top:0; padding-top:0; font-size:20px}
+.tablet .project-search .sortbox h3 strong {font-size:22px}
+.tablet .project-search .sortbox h3 strong a {font-size:22px}
+.tablet .project-search .sortbox ul.detail-conditions li a.holder {font-size:15px}
+.tablet .project-search .sortbox ul.detail-conditions li p span {font-size:14px}
+.tablet .start-contents .mainvisual {width:100%; height:380px}
+.tablet .start-contents .mainvisual .innerbox {max-width:100%; height:380px}
+.tablet .start-contents .mainvisual .innerbox h3 {top:80px}
+.tablet .start-contents .mainvisual .innerbox h3 strong {margin:0; font-size:40px}
+.tablet .start-contents .mainvisual .innerbox h3 span {font-size:17px}
+.tablet .start-contents .mainvisual ul.quickmenu {width:500px; top:220px; margin-left:-250px}
+.tablet .start-contents .ceogreeting {height:auto; overflow:hidden; padding:40px 0}
+.tablet .start-contents .ceogreeting .innerbox {position:relative; width:95%; margin:0 auto; padding:0}
+.tablet .start-contents .ceogreeting dl {float:none; width:100%; padding:0; overflow:hidden}
+.tablet .start-contents .ceogreeting dl dt {height:80px; font-size:40px}
+.tablet .start-contents .ceogreeting dl dd .sign {margin-top:60px}
+.tablet .start-contents .ceogreeting .picbox {float:none; clear:none; width:360px; margin:0 auto; padding:35px 10px 0 30px}
+.tablet .start-contents .ceogreeting .picbox ul {width:360px; height:360px; padding:0}
+.tablet .start-contents .ceogreeting .picbox ul li {width:360px; height:360px}
+.tablet .start-contents .ceogreeting .picbox ul li .pic {display:block; width:360px; height:360px; border-radius:50%; font-size:0}
+.tablet .start-contents .keywords {height:auto; overflow:hidden; padding:40px 0}
+.tablet .start-contents .keywords .innerbox {width:95%; height:auto; margin:0 auto; padding:0 0 0 240px}
+.tablet .start-contents .keywords .cellphone-img {left:0; top:80px; width:200px; height:auto; margin:0}
+.tablet .start-contents .keywords .cellphone-img img {width:100%}
+.tablet .start-contents .keywords h3 {height:80px !important; margin-left:-240px; font-size:40px}
+.tablet .start-contents .keywords dl {position:static; left:0; top:0; width:100%; height:auto; margin:0 0 25px 0; overflow:hidden}
+.tablet .start-contents .keywords dl dt {height:55px; font-size:30px}
+.tablet .start-contents .keywords dl dd {padding:0 0 0 85px}
+.tablet .start-contents .keywords dl dd strong {font-size:22px; line-height:26px}
+.tablet .start-contents .keywords dl dd p {font-size:16px; line-height:20px}
+.tablet .start-contents .keywords dl.upgrade dd {background-size:70px auto}
+.tablet .start-contents .keywords dl.support dd {background-size:70px auto}
+.tablet .start-contents .keywords dl.connect dd {background-size:70px auto}
+.tablet .start-contents .keywords dl.rewards dd {background-size:70px auto}
+.tablet .start-contents .supportfunding-process {height:auto; overflow:hidden; padding:40px 0}
+.tablet .start-contents .supportfunding-process .innerbox {width:95%; height:auto; margin:0 auto; overflow:hidden; background-position:50% 80px; background-size:250px auto}
+.tablet .start-contents .supportfunding-process h3 {height:280px !important; font-size:40px}
+.tablet .start-contents .supportfunding-process h4 {float:none; clear:both; width:100%; height:40px; margin:0 0 10px 0; text-align:center; font-size:27px; line-height:40px}
+.tablet .start-contents .supportfunding-process .btnset {clear:both; display:block; text-align:center}
+.tablet .start-contents .supportfunding-process .slick-prev {width:50px; height:25px; margin:0 5px 0 0; background:#fff url('../images/icon_arr_09.png') no-repeat 50%; font-size:0}
+.tablet .start-contents .supportfunding-process .slick-next {width:50px; height:25px; background:#00c6e2 url('../images/icon_arr_08.png') no-repeat 50%; font-size:0}
+
+.tablet .start-contents .supportfunding-process ul {height:auto; overflow:hidden; padding:0}
+.tablet .start-contents .supportfunding-process ul li {width:48%; height:200px; margin:0 1% 15px 1%; background:#fff; box-shadow:2px 2px 2px rgba(0,0,0,0.2)}
+.tablet .start-contents .supportfunding-process ul li dl {padding:18px 12px 0 12px}
+.tablet .start-contents .supportfunding-process ul li dl dt {font-size:20px}
+.tablet .start-contents .supportfunding-process ul li dl dd {font-size:14px; line-height:19px}
+.tablet .start-contents .shopfunding-pr {width:100%; height:650px; padding:50px 0 0 0}
+.tablet .start-contents .shopfunding-pr h3 {height:85px !important; font-size:42px}
+.tablet .start-contents .shopfunding-pr ul.slick-slider {padding:0 50px}
+.tablet .start-contents .shopfunding-pr .innerbox {width:95%; height:640px; margin:0 auto}
+.tablet .start-contents .shopfunding-pr .slick-prev {position:absolute; left:0; top:200px; width:40px; height:70px; background:url('../images/icon_prev_05.png') no-repeat 0 50%; font-size:0; text-indent:-99999px}
+.tablet .start-contents .shopfunding-pr .slick-next {position:absolute; right:0; top:200px; width:40px; height:70px; background:url('../images/icon_next_05.png') no-repeat 100% 50%; font-size:0; text-indent:-99999px}
+.tablet .start-contents .shopfunding-pr dl {height:420px}
+.tablet .start-contents .shopfunding-pr dl dt {height:221px}
+.tablet .start-contents .shopfunding-pr dl dt .pic {display:block; width:100%; height:220px; font-size:0}
+.tablet .start-contents .shopfunding-pr dl dt .pic img {width:100%; height:auto; min-height:220px}
+.tablet .start-contents .shopfunding-pr dl dd {height:214px; overflow:hidden; padding:15px 30px 25px 30px}
+.tablet .start-contents .shopfunding-pr dl dd a.blocklink {width:100%; margin:0 0 15px 0}
+.tablet .start-contents .shopfunding-pr dl dd a.blocklink strong {height:54px; margin:0 0 10px 0; font-size:20px; line-height:26px}
+.tablet .start-contents .shopfunding-pr dl dd a.blocklink span {height:40px; font-size:15px; line-height:19px}
+.tablet fieldset.rp-searchbox {width:95%; height:auto; overflow:hidden; padding-top:0}
+.tablet fieldset.rp-searchbox ul {width:100%; height:auto; overflow:hidden; padding:0 0 20px 0}
+.tablet fieldset.rp-searchbox ul li {float:none; clear:both; overflow:hidden; width:100%; padding:10px; border-bottom:1px solid #ccc}
+.tablet fieldset.rp-searchbox ul li label {width:120px; font-size:20px}
+.tablet fieldset.rp-searchbox ul li .optionbox select {width:120px}
+.tablet fieldset.rp-searchbox button {position:static; right:none; top:none; float:none; display:block; width:150px; margin:20px auto 40px; padding:0 25px}
+.tablet .funding-detailview h3 {min-height:100px; height:auto; padding:30px 0 0 0; background-size:4px auto}
+.tablet .funding-detailview .innerbox {position:static}
+.tablet .funding-detailview h3 span {margin:0 0 6px 0; font-size:17px; line-height:19px; font-weight:normal}
+.tablet .funding-detailview h3 strong {line-height:26px; font-size:24px; font-weight:normal; letter-spacing:-0.5px}
+.tablet .funding-detailview h4 {height:45px; margin:0; font-size:16px}
+.tablet .funding-detailview h4 span {width:100%; height:45px; padding:0 10px; line-height:45px}
+.tablet .funding-detailview .innerbox {width:100%; margin:0; padding:0}
+.tablet .funding-detailview .innerbox .flbox {float:none; width:100%; padding:0}
+.tablet .funding-detailview .innerbox .frbox {position:absolute; right:-300px; top:0; z-index:101; width:300px; padding:15px; background:#fff; box-shadow:-3px 3px 3px rgba(0,0,0,0.2)}
+.tablet .funding-detailview .innerbox .frbox .btn-layerclose {position:absolute; top:35px; left:-50px; z-index:102px; width:50px; height:50px}
+.tablet .funding-detailview .innerbox .frbox .btn-layerclose button {width:50px; height:50px; padding:0 0 0 10px; background:#363636 url('../images/icon_arr_04.png') no-repeat 5px 50%; background-size:8px auto; line-height:16px; color:#fff}
+.tablet .funding-detailview .innerbox .frbox.active .btn-layerclose button {padding:0 10px 0 0; background:#363636 url('../images/icon_arr_03.png') no-repeat 38px 50%; background-size:8px auto}
+.tablet .funding-detailview.scrollFixed .innerbox .frbox .btn-layerclose {position:fixed !important; top:40px; z-index:102px}
+.tablet .funding-detailview .funding-conditions {height:auto; margin:0; background:#f2f4f5}
+.tablet .funding-detailview .funding-conditions ul {height:auto; overflow:hidden; padding:0; border-bottom:1px solid #ddd}
+.tablet .funding-detailview .funding-conditions ul li {float:left; width:50%; height:40px; padding:0 10px 0 42px; margin:0; border-top:1px solid #ddd; line-height:40px; font-size:14px}
+.tablet .funding-detailview .funding-conditions ul li a {font-size:14px}
+.tablet .funding-detailview .funding-conditions ul li.conditions-1 {background-position:10px 45%; background-size:auto 22px}
+.tablet .funding-detailview .funding-conditions ul li.conditions-2 {background-position:10px 45%; background-size:auto 22px}
+.tablet .funding-detailview .funding-conditions ul li.conditions-3 {background-position:5px 45%; background-size:auto 22px}
+.tablet .funding-detailview .funding-conditions ul li.conditions-4 {background-position:5px 45%; background-size:auto 22px}
+.tablet .funding-detailview .product-img p {margin:0 0 20px 0}
+.tablet .funding-detailview .lastestboard {float:none; width:95%; margin:0 auto 40px}
+.tablet .funding-detailview .lastestboard .listgroup {border-top-width:2px}
+.tablet .funding-detailview .lastestboard h5 {height:36px; padding:0 10px; line-height:36px; font-size:15px}
+.tablet .funding-detailview .lastestboard dl dt {height:45px; padding:0 85px 0 0; line-height:45px}
+.tablet .funding-detailview .lastestboard dl dt label {width:35px; text-align:center; font-size:14px}
+.tablet .funding-detailview .lastestboard dl dt p {font-size:14px}
+.tablet .funding-detailview .lastestboard dl dt p a {font-size:14px}
+.tablet .funding-detailview .lastestboard dl dt .date {width:80px; line-height:45px; font-size:13px}
+.tablet .funding-detailview .lastestboard dl dd {padding:0 10px}
+.tablet .funding-detailview .lastestboard dl dd .txtbox {margin:15px 0 25px 0; color:#999; font-size:14px; line-height:18px}
+.tablet .funding-detailview .lastestboard dl dd .cheerbox .pic {width:55px; height:45px}
+.tablet .funding-detailview .lastestboard dl dd .cheerbox .pic img {width:45px; height:45px}
+.tablet .funding-detailview .lastestboard dl dd .cheerbox span textarea {height:55px; padding:10px; font-size:14px; line-height:18px}
+.tablet .funding-detailview .lastestboard dl dd .cheerbox button {width:90px; height:30px; padding:0 0 0 30px; background-size:16px auto; font-size:13px}
+.tablet .funding-detailview .locationbox {width:95%; overflow:hidden; margin:0 auto 35px}
+.tablet .funding-detailview .locationbox dl dt {float:left; width:50%; margin-right:20px}
+.tablet .funding-detailview .locationbox dl dt strong {font-size:16px}
+.tablet .funding-detailview .locationbox dl dt .pic {display:block; margin:0 0 5px 0; border:4px solid #ececec}
+.tablet .funding-detailview .locationbox dl dt .pic img {width:100%}
+.tablet .funding-detailview .locationbox dl dt .address {font-size:15px; color:#555}
+.tablet .funding-detailview .locationbox dl dd {float:none; overflow:hidden; padding-top:25px}
+.tablet .funding-detailview .locationbox dl dd > strong {font-size:14px}
+.tablet .funding-detailview .locationbox dl dd ul li {min-height:40px; padding:0 0 0 40px}
+.tablet .funding-detailview .locationbox dl dd ul li.car {background-size:30px}
+.tablet .funding-detailview .locationbox dl dd ul li.subway {background-size:30px}
+.tablet .funding-detailview .locationbox dl dd ul li.bus {background-size:30px}
+.tablet .funding-detailview .locationbox dl dd ul li em {font-size:13px}
+.tablet .funding-detailview .cheerup-listbox {width:95%; margin:0 auto}
+.tablet .funding-detailview .cheerup-listbox h5 {margin:0 0 15px 0; border-bottom:2px solid #0063b2; font-size:16px}
+.tablet .funding-detailview .cheerup-listbox fieldset {padding:15px 15px 12px 15px}
+.tablet .funding-detailview .cheerup-listbox fieldset p {padding:0 51px 0 0}
+.tablet .funding-detailview .cheerup-listbox fieldset p textarea {height:55px; padding:10px}
+.tablet .funding-detailview .cheerup-listbox fieldset p button {width:51px; height:55px; font-size:13px}
+.tablet .funding-detailview .cheerlist {width:95%; margin:10px auto 40px}
+.tablet .funding-detailview .cheerlist dl {padding:15px 0 10px 0}
+.tablet .funding-detailview .cheerlist dl dt {height:40px}
+.tablet .funding-detailview .cheerlist dl dt .pic {width:40px}
+.tablet .funding-detailview .cheerlist dl dt .pic img {width:30px; height:30px}
+.tablet .funding-detailview .cheerlist dl dt p em {font-size:13px}
+.tablet .funding-detailview .cheerlist dl dt .date {right:80px; top:0; color:#c8c8c8; font-size:11px}
+.tablet .funding-detailview .cheerlist dl dt .btnset a {background-size:1px 15px; font-size:12px}
+.tablet .funding-detailview .cheerlist dl dd {padding:0 0 30px 40px}
+.tablet .funding-detailview .cheerlist dl dd p {font-size:13px; line-height:18px}
+.tablet .funding-detailview .cheerlist dl dd .btn-replynum {position:absolute; left:40px; bottom:5px}
+.tablet .funding-detailview .cheerlist dl dd .btnset {position:absolute; right:0; bottom:5px}
+.tablet .funding-detailview .support-list {float:none; width:95%; overflow:hidden; margin:0 auto}
+.tablet .funding-detailview .support-list h5 {height:36px; padding:0 10px; font-size:15px; line-height:36px}
+.tablet .funding-detailview .support-list h5 span {font-size:15px}
+.tablet .funding-detailview .support-list dl {padding:10px 0}
+.tablet .funding-detailview .support-list dl dt {width:40px}
+.tablet .funding-detailview .support-list dl dt .pic {width:30px; height:30px}
+.tablet .funding-detailview .support-list dl dt .pic img {width:30px; height:30px}
+.tablet .funding-detailview .support-list dl dd p em {margin:0 0 0 10px}
+.tablet .funding-detailview .support-infobox {width:95%; margin:30px auto; padding:30px 0 0 0}
+.tablet .funding-detailview .support-infobox h5 {width:95%; font-size:16px; font-weight:normal}
+.tablet .funding-detailview .support-infobox ul.support-info {margin:0 0 30px 0; border-top:2px solid #00a9eb}
+.tablet .funding-detailview .support-infobox ul.support-info li label {width:80px; padding:0 0 0 20px; font-size:14px; line-height:30px}
+.tablet .funding-detailview .support-infobox ul.support-info li p {line-height:30px}
+.tablet .funding-detailview .support-infobox ul.support-info li p strong {font-size:18px}
+.tablet .funding-detailview .support-infobox ul.support-info li p sub {font-size:13px}
+.tablet .funding-detailview .support-infobox ul.support-info li p em {margin-left:3px; font-size:15px}
+.tablet .funding-detailview .support-infobox ul.support-info li.goal-price label {background-size:16px auto}
+.tablet .funding-detailview .support-infobox ul.support-info li.status-price label {background-size:16px auto}
+.tablet .funding-detailview .support-infobox ul.support-info li.sponser-number label {background-size:16px auto}
+.tablet .funding-detailview .support-infobox .graphbox {width:100%; margin:0}
+.tablet .funding-detailview .support-infobox .graphbox > div {float:left; width:49%; height:204px; margin-left:1%}
+.tablet .funding-detailview .support-infobox .graphbox > div:first-child {margin-right:1%; margin-left:0}
+.tablet .funding-detailview dl.statusbox {padding:0 0 51px 0}
+.tablet .funding-detailview dl.statusbox dt {padding:20px 12px 10px 12px}
+.tablet .funding-detailview dl.statusbox dt .percent {font-size:35px; line-height:40px; font-weight:normal}
+.tablet .funding-detailview dl.statusbox dt .percent sub {font-size:20px}
+.tablet .funding-detailview dl.statusbox dt .d-day {top:32px; height:22px; padding:0 5px; font-size:13px; line-height:22px}
+.tablet .funding-detailview dl.statusbox dt .price strong {font-size:28px}
+.tablet .funding-detailview dl.statusbox dt .price sub {font-size:13px}
+.tablet .funding-detailview dl.statusbox dt .goal-price strong {font-size:16px}
+.tablet .funding-detailview dl.statusbox dt .goal-price sub {font-size:13px}
+.tablet .funding-detailview dl.statusbox dd {padding:0 12px 20px 12px}
+.tablet .funding-detailview dl.statusbox dd p {line-height:18px}
+.tablet .funding-detailview dl.statusbox dd button.btn-sponser {width:100%; height:50px}
+.tablet .funding-detailview dl.statusbox dd button.btn-sponser em {background-size:24px auto; font-size:20px}
+.tablet .funding-detailview dl.supporters-info dt {padding:20px 15px 0 15px}
+.tablet .funding-detailview dl.supporters-info dt .pic {width:60px}
+.tablet .funding-detailview dl.supporters-info dt .pic img {width:50px; height:50px}
+.tablet .funding-detailview dl.supporters-info dt strong {padding:10px 0 0 0; font-size:15px; line-height:18px}
+.tablet .funding-detailview dl.supporters-info dd.contact {padding:15px 15px 10px 15px}
+.tablet .funding-detailview dl.supporters-info dd.contact p {margin:0 0 10px 0}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li {margin:0 0 3px 0; padding:0 0 0 27px; color:#888; font-size:13px}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li a {color:#888; font-size:13px}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li.mail {background:url('../images/icon_supporters_01.png') no-repeat 0 2px}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li.tel {background:url('../images/icon_supporters_02.png') no-repeat 0 2px}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li.homepage {background:url('../images/icon_supporters_03.png') no-repeat 0 2px}
+.tablet .funding-detailview dl.supporters-info dd.contact ul li.txt {padding:2px 0 0 0}
+.tablet .funding-detailview dl.supporters-info dd.share {padding:5px 0}
+.tablet .funding-detailview dl.supporters-info dd.share .snsbox {margin-bottom:7px}
+.tablet .funding-detailview dl.supporters-info dd.share .snsbox > strong {display:block; margin:0 0 6px 0; color:#555; font-weight:normal; font-size:12px}
+.tablet .funding-detailview dl.supporters-info dd.share .snsbox ul li.btn-bookmark {width:40px; margin:0 0 0 10px}
+.tablet .funding-detailview dl.supporters-info dd.share .snsbox ul li:first-child {margin-left:40px}
+.tablet .funding-detailview dl.supporters-info dd.share .btn-project-report {height:50px}
+.tablet .funding-detailview dl.supporters-info dd.share .btn-project-report em {padding-left:30px; background-size:22px auto; font-size:20px}
+.tablet .funding-detailview .price-rewardlist button.btn-reward-toggle {height:40px}
+.tablet .funding-detailview .price-rewardlist .listgroup dl dt a {height:32px; line-height:32px}
+.tablet .funding-detailview .price-rewardlist .listgroup dl dt strong {font-size:16px}
+.tablet .funding-detailview .price-rewardlist .listgroup dl dt sub {font-size:13px}
+.tablet .funding-detailview .price-rewardlist .listgroup dl dd .pic {margin:15px 0 0 0}
+.tablet .funding-detailview .price-rewardlist .listgroup dl dd .pic img {width:100%}
+.tablet .funding-detailview .relative-projectbox {padding:12px 12px 50px 12px}
+.tablet .funding-detailview .relative-projectbox h5 {font-size:16px}
+.tablet .funding-detailview .relative-projectbox dl dt {width:100%; height:auto; margin:0 0 10px 0}
+.tablet .funding-detailview .relative-projectbox dl dd strong {font-size:15px}
+.tablet .funding-detailview .relative-projectbox dl dd strong a {font-size:15px}
+
+
+/* mobile */
+.mobile .pc-only {display:none !important}
+.mobile .mobile-only {display:block !important}
+.mobile #wrap {min-width:320px}
+.mobile .toparea {height:201px; border-bottom:1px solid #e1e1e1}
+.mobile .toparea .innerbox {width:100%; margin:0}
+.mobile .toparea .topgnb {height:85px}
+.mobile .toparea .topgnb .innerbox {height:85px}
+.mobile .toparea .topgnb ul {float:none; position:absolute; z-index:20; left:0; top:45px; width:100%; height:40px; padding:0 30px; background:#0095da}
+.mobile .toparea .topgnb ul .slick-list {padding:0 60px !important}
+.mobile .toparea .topgnb ul .slick-prev {position:absolute; left:10px; top:10px; width:20px; height:20px; background:url('../images/icon_menu_prev.png') no-repeat 50% 50%; background-size:8px auto; font-size:0; text-indent:-99999px}
+.mobile .toparea .topgnb ul .slick-next {position:absolute; right:10px; top:10px; width:20px; height:20px; background:url('../images/icon_menu_next.png') no-repeat 50% 50%; background-size:8px auto; font-size:0; text-indent:-99999px}
+.mobile .toparea .topgnb ul li {height:40px; padding:0; margin:0 0 0 35px; line-height:40px}
+.mobile .toparea .topgnb ul li a {display:block; width:100%; height:40px; padding:0; margin:0; text-align:center; line-height:40px; color:#fff; font-size:14px}
+.mobile .toparea .topgnb .btn-allview {width:50%; height:45px}
+.mobile .toparea .topgnb .btn-allview button {width:100%; height:45px}
+.mobile .toparea .topgnb .btn-allview button em {background:url('../images/icon_allview_m.png') no-repeat 0 50%; background-size:18px auto; font-size:16px}
+.mobile .toparea .topgnb .btn-majorservice {float:left; width:50%; height:45px}
+.mobile .toparea .topgnb .btn-majorservice button {width:100%; height:45px; background:#22bdb7; color:#fff; font-size:16px}
+.mobile .toparea .gnbbox {height:auto; overflow:hidden; padding:5px 0}
+.mobile .toparea .gnbbox ul.gnb {float:none; clear:both; padding-right:20px; line-height:auto}
+.mobile .toparea .gnbbox ul.gnb li {width:33.3%; height:25px; margin:0; text-align:center; line-height:25px}
+.mobile .toparea .gnbbox ul.gnb li a {height:25px; margin:0; line-height:25px}
+.mobile .toparea .topmenubox {height:54px; font-size:0; border:0}
+.mobile .toparea .topmenubox .innerbox {height:54px; overflow:visible; font-size:0}
+.mobile .toparea .topmenubox h1 {width:20%; max-width:100px; height:25px; margin-left:10px; margin-right:12px}
+.mobile .toparea .topmenubox h1 a {width:100%; height:25px; line-height:25px}
+.mobile .toparea .topmenubox h1 img {width:100%}
+.mobile .toparea .topmenubox fieldset {width:42%; max-width:190px; height:33px; margin-top:10px; padding-right:40px; border-width:3px}
+.mobile .toparea .topmenubox fieldset p input.txt {height:27px; padding:0 5px; font-size:13px}
+.mobile .toparea .topmenubox fieldset button {width:40px; height:33px; right:-3px; top:-3px; font-size:13px}
+.mobile .toparea .topmenubox .major-menu {float:right; margin:10px 3px 0 0}
+.mobile .toparea .major-menu > div {margin:0 1.5px}
+.mobile .toparea .major-menu a.holder {width:32px; height:32px; margin:0; line-height:26px; font-size:12px; font-weight:normal}
+.mobile .toparea .major-menu .major-menu1 .layer-innerbox {position:absolute; left:50%; top:50px; z-index:101; width:95%; margin-left:-47.5%; padding:70px 20px 30px 20px; background:#fff; border:1px solid #ccc; border-radius:8px}
+.mobile .toparea .major-menu .major-menu1 ul.setting {position:absolute; left:20px; top:5px}
+.mobile .toparea .major-menu .major-menu1 ul.setting li {color:#555}
+.mobile .toparea .major-menu .major-menu1 ul.setting li a {color:#555; font-size:13px}
+.mobile .toparea .major-menu .major-menu1 ul.setting li.startpage-set {margin-right:15px}
+.mobile .toparea .major-menu .major-menu1 ul.funding-submenu {width:100%; overflow:hidden}
+.mobile .toparea .major-menu .major-menu1 ul.funding-submenu li {float:none; height:34px; padding:2px 0 0 0; border-bottom:1px solid #ccc; line-height:34px}
+.mobile .toparea .major-menu .major-menu1 ul.funding-submenu li a {font-size:15px; color:#565656; font-weight:bold; line-height:30px}
+.mobile .toparea .major-menu .major-menu1 .btn-alram {float:none; position:absolute; right:12px; top:5px; margin:0}
+.mobile .toparea .major-menu .major-menu1 .btn-alram button {background-size:16px auto}
+.mobile .toparea .major-menu .major-menu1 .btn-alram button em {right:7px; top:7px; min-width:13px; height:13px; border-radius:6.5px; line-height:13px}
+.mobile .toparea .major-menu .major-menu1 .popular-ranking {position:absolute; right:20px; top:35px; float:none; height:19px; overflow:hidden}
+.mobile .toparea .major-menu .major-menu1 .popular-ranking ul li a {font-size:13px}
+.mobile .toparea .major-menu .major-menu1 .popular-ranking ul li label {margin-right:4px}
+.mobile .toparea .major-menu .major-menu1 .popular-ranking ul li p .up {width:8px; height:10px; background-size:8px auto}
+.mobile .toparea .major-menu .major-menu1 .popular-ranking ul li p .down {width:8px; height:10px; background-size:8px auto}
+.mobile .toparea .major-menu .major-menu1 .notice-linebox {float:none; clear:both; width:auto; height:19px; padding:0 0 0 118px; margin:15px 0 0 0}
+.mobile .toparea .major-menu .major-menu1 .notice-linebox h2 {margin:0; padding-top:3px; font-size:14px}
+.mobile .toparea .major-menu .major-menu1 .notice-linebox ul {float:none; overflow:hidden; width:100%}
+.mobile .toparea .major-menu .major-menu1 .notice-linebox ul li {width:100% !important}
+.mobile .toparea .major-menu .major-menu1 .notice-linebox ul li a {display:block; width:98%; height:25px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; font-size:13px}
+.mobile .toparea .major-menu .major-menu2 .layer-innerbox {position:absolute; left:65%; top:60px; width:95%; z-index:101; margin-left:-47.5%; text-align:center; padding:0}
+.mobile .toparea .major-menu .major-menu2 .layer-innerbox .snsbox {float:none; text-align:center; font-size:0}
+.mobile .toparea .major-menu .major-menu2 .layer-innerbox .snsbox ul li {display:inline-block; float:none}
+.mobile .toparea .major-menu .major-menu3 .layer-innerbox {position:absolute; right:10px; top:50px; z-index:101; width:70px; overflow:hidden; background:#fff; border-radius:5px; border:1px solid #ccc}
+.mobile .toparea .major-menu .major-menu3 .layer-innerbox ul li {height:30px; padding:0; text-align:center; border-top:1px solid #e1e1e1; line-height:30px; color:#555}
+.mobile .toparea .major-menu .major-menu3 .layer-innerbox ul li:first-child {border:0}
+.mobile .toparea .major-menu .major-menu3 .layer-innerbox ul li a {display:block; height:30px; line-height:30px; color:#555; letter-spacing:1px; font-size:13px}
+.mobile .toparea .major-menu .major-menu3 .layer-innerbox ul li a:hover, .mobile .toparea .major-menu .major-menu3 .layer-innerbox ul li a:focus {background-color:#eee; text-decoration:none}
+.mobile .bottomarea {clear:both; width:100%; height:auto; overflow:hidden; border-top:0}
+.mobile .bottomarea ul.bmenu {width:100%; height:auto; margin:0}
+.mobile .bottomarea ul.bmenu li {width:33.33333333%; padding:0; text-align:center; border-top:1px solid #e1e1e1; line-height:35px}
+.mobile .bottomarea .innerbox {width:100%}
+.mobile .bottomarea .copyright {position:relative; width:100%; padding:15px 0}
+.mobile .bottomarea .copyright .flbox {float:none; width:100%; height:auto; padding:8px 0 0 0; font-size:13px; color:#999}
+.mobile .bottomarea .copyright .flbox h1 {width:100%; margin:0 0 10px 0; text-align:center}
+.mobile .bottomarea .copyright .flbox h1 img {width:130px}
+.mobile .bottomarea .copyright .flbox p {text-align:center}
+.mobile .bottomarea .copyright .flbox p span {font-size:13px; line-height:16px}
+.mobile .bottomarea .copyright .fmbox {float:none; width:90%; height:auto; padding:20px 0 0 0; margin:0 auto; border:0}
+.mobile .bottomarea .copyright .fmbox dl dt {font-size:13px}
+.mobile .bottomarea .copyright .fmbox dl dt.mt25 {margin-top:10px}
+.mobile .bottomarea .copyright .fmbox dl dd {font-size:12px}
+.mobile .bottomarea .copyright .fmbox dl dd a {font-size:12px}
+.mobile .bottomarea .copyright .fmbox dl dd span {margin:0 5px 0 0; font-weight:bold}
+.mobile .bottomarea .copyright .fmbox dl dd .mail {display:block}
+.mobile .bottomarea .copyright .frbox {width:90%; height:auto; padding:0; margin:20px auto 25px}
+.mobile .bottomarea .copyright .frbox p {margin:0 0 10px 0; text-align:center}
+.mobile .bottomarea .copyright .frbox p select {float:none; display:inline-block; min-width:100px; height:30px; margin:0 0 0 5px; padding:0 0 0 5px; font-size:13px}
+.mobile .bottomarea .copyright .frbox dl {width:90%; margin:0 auto; text-align:center}
+.mobile .bottomarea .copyright .frbox dl * {vertical-align:middle}
+.mobile .bottomarea .copyright .frbox dl dt {float:none; display:inline-block; padding-left:0; margin-right:10px; font-size:16px; line-height:30px}
+.mobile .bottomarea .copyright .frbox dl dd {float:none; display:inline-block; overflow:hidden; width:auto}
+.mobile .bottomarea .copyright .frbox dl dd strong {font-size:28px; line-height:30px}
+.mobile .bottomarea .copyright .frbox dl dd strong a {font-size:28px; line-height:30px}
+.mobile .bottomarea .rights {position:relative; height:auto; padding:45px 20px 20px 20px}
+.mobile .bottomarea .rights p {float:none; width:auto; text-align:center}
+.mobile .bottomarea .rights p span {font-size:12px; line-height:17px; font-weight:normal}
+.mobile .bottomarea .rights p span:first-child {font-size:12px}
+.mobile .bottomarea .rights .snsbox {float:right}
+.mobile .bottomarea .snsbox {position:absolute; left:0; top:5px; width:100%; text-align:center; margin-top:5px}
+.mobile .bottomarea .snsbox ul {width:100%; text-align:center; font-size:0}
+.mobile .bottomarea .snsbox ul li {display:inline-block; float:none}
+.mobile .paging {margin:20px 0 0 0}
+.mobile .paging button {width:22px; height:22px}
+.mobile .paging button.btn-paging-prev {background-size:5px auto}
+.mobile .paging button.btn-paging-prev:hover {background-size:5px auto}
+.mobile .paging button.btn-paging-next {background-size:5px auto}
+.mobile .paging button.btn-paging-next:hover {background-size:5px auto}
+.mobile .paging span a {width:22px; height:22px; margin:0 2px 0 3px; font-size:13px; line-height:22px}
+.mobile .bannerbox {width:95%; height:90px; margin:20px auto 50px}
+.mobile .bannerbox ul.bannerset {width:100%; height:85px; overflow:hidden}
+.mobile .bannerbox ul.bannerset li {width:50%; height:85px; padding:0 3px 5px 3px}
+.mobile .bannerbox ul.bannerset li:first-child {padding-left:0}
+.mobile .bannerbox ul.bannerset li span {font-size:14px}
+.mobile .bannerbox ul.bannerset li img {height:55px}
+.mobile .maincontents .mainvisual {width:100%; height:620px; margin:0 auto 30px}
+.mobile .maincontents .mainvisual .slick-prev {left:0.7%; top:100px; width:30px; height:50px; background-size:20px auto}
+.mobile .maincontents .mainvisual .slick-next {right:0.7%; top:100px; width:30px; height:50px; background-size:20px auto}
+.mobile .maincontents .mainvisual ul.slick-slider {height:270px}
+.mobile .maincontents .mainvisual ul.slick-slider li {max-width:480px; height:270px}
+.mobile .maincontents .mainvisual dl {max-width:480px}
+.mobile .maincontents .mainvisual dl dt strong {top:20%; font-size:24px}
+.mobile .maincontents .mainvisual dl dd {top:32%}
+.mobile .maincontents .mainvisual dl dd em {width:90px; height:70px; margin:30px auto 0; background-size:90px auto; line-height:67px}
+.mobile .maincontents .mainvisual dl dd em span {font-size:24px}
+.mobile .maincontents .mainvisual dl dd em sub {font-size:14px}
+.mobile .maincontents .mainvisual dl dd p strong {font-size:30px}
+.mobile .maincontents .funding-support {height:auto; overflow:hidden; background:url('../images/bg_titlevisual_03.jpg') repeat; background-size:5px auto}
+.mobile .maincontents .funding-support .innerbox {width:100%; height:auto}
+.mobile .maincontents .funding-support h3 {float:none; width:360px; margin:0 auto; text-align:center; padding-top:15px; font-size:24px}
+.mobile .maincontents .funding-support ul {float:none; overflow:hidden; height:auto; padding:15px 0; text-align:center}
+.mobile .maincontents .funding-support ul li {height:auto; padding-bottom:10px}
+.mobile .maincontents .funding-support ul li label {height:30px; background-size:24px auto !important; line-height:30px; font-size:16px}
+.mobile .maincontents .funding-support ul li.funding-member {width:auto; float:none; border-top:1px solid rgba(255,255,255,0.5)}
+.mobile .maincontents .funding-support ul li.funding-member p strong {font-size:24px}
+.mobile .maincontents .funding-support ul li.funding-price {width:auto; float:none; border-top:1px solid rgba(255,255,255,0.5)}
+.mobile .maincontents .funding-support ul li.funding-price p strong {font-size:24px}
+.mobile .maincontents .funding-support ul li.project-start {float:none; overflow:hidden; clear:both; height:80px; padding-left:0; text-align:center; background-size:35px auto !important; background-position:88% 50%; border-left:0; border-top:1px solid rgba(255,255,255,0.5)}
+.mobile .maincontents .funding-support ul li.project-start label {margin:0 0 10px 0}
+.mobile .maincontents .funding-support ul li.project-start p a {font-size:24px}
+.mobile .maincontents .recommend-project {width:100%; height:auto}
+.mobile .maincontents .recommend-project h3 {height:70px; font-size:36px}
+.mobile .maincontents .recommend-project ul.slick-slider {height:1900px}
+.mobile .maincontents .recommend-project ul.slick-dots {bottom:20px}
+.mobile .maincontents .funding-process {width:95%; height:auto; padding:20px 30px 0 30px}
+.mobile .maincontents .funding-process ul {text-align:center}
+.mobile .maincontents .funding-process ul li {float:left; width:25%; height:130px; background-position:100% 22px !important; background-size:11px auto}
+.mobile .maincontents .funding-process ul li span {width:80px; height:110px; padding-top:75px; margin:0 auto; background-size:65px 65px !important; line-height:16px; font-size:13px}
+.mobile .maincontents .funding-process h3 {height:50px !important; font-size:24px}
+.mobile .maincontents .rewardlist {width:100%; margin-bottom:40px}
+.mobile .maincontents .rewardlist h3 {height:70px !important; font-size:36px}
+.mobile .maincontents .rewardlist ul.slick-slider {height:1900px}
+.mobile .maincontents .rewardlist ul.slick-dots {bottom:20px}
+.mobile .maincontents .storylist {width:100%}
+.mobile .maincontents .storylist h3 {height:70px !important; font-size:36px}
+.mobile .maincontents .storylist ul.slick-slider {height:1900px}
+.mobile .maincontents .storylist ul.slick-dots {bottom:20px}
+.mobile dl.rcbox {float:none; width:90%; height:451px; margin:0 auto 15px}
+.mobile dl.rcbox dt {height:250px}
+.mobile dl.rcbox dt label {width:40px; height:60px; background-size:40px auto; line-height:45px; font-size:13px}
+.mobile dl.rcbox dt .pic img {width:100%; height:auto; min-height:250px}
+.mobile dl.rcbox dd.txt {padding:20px 15px}
+.mobile dl.rcbox dd.txt a strong {font-size:15px}
+.mobile dl.rcbox dd.txt a span {font-size:13px; line-height:17px}
+.mobile dl.rwbox {float:none; width:90%; height:451px; margin:0 auto 15px}
+.mobile dl.rwbox dt {height:250px}
+.mobile dl.rwbox dt .pic img {width:100%; height:auto; min-height:250px}
+.mobile dl.rwbox dd.txt {padding:20px 15px}
+.mobile dl.stbox {float:none; width:90%; height:451px; margin:0 auto 15px}
+.mobile dl.stbox dt {height:250px}
+.mobile dl.stbox dt .pic img {width:100%; height:auto; min-height:250px}
+.mobile .funding-reward {clear:both; overflow:hidden}
+.mobile .funding-reward .mainvisual {width:100%; height:440px; margin:0 auto 25px}
+.mobile .funding-reward .mainvisual .slick-prev {left:0.5%}
+.mobile .funding-reward .mainvisual .slick-next {right:0.5%}
+.mobile .funding-reward .mainvisual .slick-list {padding:0 7% !important}
+.mobile .funding-reward .mainvisual ul.slick-slider {height:400px}
+.mobile .funding-reward .mainvisual ul.slick-slider li {max-width:100%; height:440px}
+.mobile .funding-reward .mainvisual dl {max-width:100%; height:440px; margin:0}
+.mobile .funding-reward .mainvisual dl dt {padding:25px 0 0 85px}
+.mobile .funding-reward .mainvisual dl dt span {font-size:14px}
+.mobile .funding-reward .mainvisual dl dt em {width:70px; height:70px; padding-top:15px; font-size:14px; line-height:20px}
+.mobile .funding-reward .mainvisual dl dt strong {font-size:17px}
+.mobile .funding-reward .mainvisual dl dd.info {height:300px; overflow:hidden}
+.mobile .funding-reward .mainvisual dl dd.info .txt {bottom:99px; height:41px; line-height:41px; font-size:17px}
+.mobile .funding-reward .mainvisual ul.slick-slider li.slick-active dl dd.status {background-color:#ff7725; background-position:30px 0; background-size:100% 100%}
+.mobile .funding-reward .mainvisual dl dd.status {height:99px; padding:15px}
+.mobile .funding-reward .mainvisual dl dd.status .left-orange em {width:70%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis}
+.mobile .funding-reward .mainvisual dl dd.status .left-green {float:none; overflow:hidden}
+.mobile .funding-reward .mainvisual dl dd.status .left-green em {font-size:14px; word-spacing:-0.5px}
+.mobile .funding-reward .mainvisual dl dd.status em {font-size:15px}
+.mobile .funding-reward .mainvisual dl dd.status span {font-size:21px}
+.mobile .funding-reward .mainvisual dl dd.status span strong {font-size:24px}
+.mobile .funding-reward .mainvisual dl dd.info .badge {bottom:160px; width:70px; height:70px; padding:17px; background-size:100%; font-size:16px; line-height:19px}
+.mobile .funding-reward .rewardlist {width:95%; margin:0 auto 100px}
+.mobile .funding-reward .rewardlist .listgroup {margin:0 0 30px 0}
+.mobile .funding-reward .rewardlist .listgroup dl.rwbox {width:100%; height:auto; margin:0 0 15px 0}
+.mobile .funding-reward .rewardlist .listgroup dl.rwbox dt {height:auto}
+.mobile .funding-reward .rewardlist .listgroup dl.rwbox dt .pic {height:auto}
+.mobile .funding-reward .rewardlist .listgroup dl.rwbox:first-child {margin:0 0 15px 0}
+.mobile .start-contents .mainvisual {width:100%; height:300px}
+.mobile .start-contents .mainvisual .innerbox {max-width:100%; height:300px}
+.mobile .start-contents .mainvisual .innerbox h3 {top:50px}
+.mobile .start-contents .mainvisual .innerbox h3 strong {margin:0; font-size:30px}
+.mobile .start-contents .mainvisual .innerbox h3 span {font-size:16px}
+.mobile .start-contents .mainvisual ul.quickmenu {width:70%; top:160px; margin-left:-35%}
+.mobile .start-contents .mainvisual ul.quickmenu li a {width:70px; height:120px; padding-top:80px; background-size:70px !important}
+.mobile .start-contents .mainvisual ul.quickmenu .slick-prev {width:30px; height:80px; background-size:25px auto}
+.mobile .start-contents .mainvisual ul.quickmenu .slick-next {width:30px; height:80px; background-size:25px auto}
+.mobile .start-contents .ceogreeting {height:auto; overflow:hidden; padding:40px 0}
+.mobile .start-contents .ceogreeting .innerbox {position:relative; width:95%; margin:0 auto; padding:0}
+.mobile .start-contents .ceogreeting dl {float:none; width:100%; padding:0; overflow:hidden}
+.mobile .start-contents .ceogreeting dl dt {height:70px; font-size:26px}
+.mobile .start-contents .ceogreeting dl dd .sign {margin-top:40px}
+.mobile .start-contents .ceogreeting dl dd p {font-size:15px; line-height:19px}
+.mobile .start-contents .ceogreeting .picbox {float:none; clear:none; width:250px; margin:0 auto; padding:35px 0 0 0}
+.mobile .start-contents .ceogreeting .picbox ul {width:250px; height:250px; padding:0}
+.mobile .start-contents .ceogreeting .picbox ul li {width:250px; height:250px}
+.mobile .start-contents .ceogreeting .picbox ul li .pic {width:250px; height:250px; border-radius:50%; font-size:0}
+.mobile .start-contents .ceogreeting .picbox .slick-prev {top:125px}
+.mobile .start-contents .ceogreeting .picbox .slick-next {top:125px}
+.mobile .start-contents .keywords {height:auto; overflow:hidden; padding:40px 0}
+.mobile .start-contents .keywords .innerbox {width:95%; height:auto; margin:0 auto; padding:0 0 0 170px}
+.mobile .start-contents .keywords .cellphone-img {left:0; top:70px; width:160px; height:auto; margin:0}
+.mobile .start-contents .keywords .cellphone-img img {width:100%}
+.mobile .start-contents .keywords h3 {height:70px !important; margin-left:-170px; font-size:30px}
+.mobile .start-contents .keywords dl {position:static; left:0; top:0; width:100%; height:auto; margin:0 0 25px 0; overflow:hidden}
+.mobile .start-contents .keywords dl dt {height:45px; font-size:22px}
+.mobile .start-contents .keywords dl dd {padding:0 0 0 60px}
+.mobile .start-contents .keywords dl dd strong {font-size:18px; line-height:22px}
+.mobile .start-contents .keywords dl dd p {font-size:14px; line-height:18px}
+.mobile .start-contents .keywords dl.upgrade dd {background-size:50px auto}
+.mobile .start-contents .keywords dl.support dd {background-size:50px auto}
+.mobile .start-contents .keywords dl.connect dd {background-size:50px auto}
+.mobile .start-contents .keywords dl.rewards dd {background-size:50px auto}
+.mobile .start-contents .keywords .btnset {clear:both; display:block; width:100%; text-align:center}
+.mobile .start-contents .keywords .btnset button {width:26px; height:26px; margin:0 5px; background-color:#00c6e2; background-repeat:no-repeat; background-position:50%; border-radius:50%; font-size:0; text-indent:-99999px}
+.mobile .start-contents .keywords .btnset button.slick-prev {background-image:url('../images/icon_prev_02.png'); background-size:8px 14px}
+.mobile .start-contents .keywords .btnset button.slick-next {background-image:url('../images/icon_next_02.png'); background-size:8px 14px}
+
+.mobile .start-contents .supportfunding-process {height:auto; overflow:hidden; padding:30px 0}
+.mobile .start-contents .supportfunding-process .innerbox {width:95%; height:auto; margin:0 auto; overflow:hidden; background-position:50% 80px; background-size:220px auto}
+.mobile .start-contents .supportfunding-process h3 {height:250px !important; font-size:30px}
+.mobile .start-contents .supportfunding-process h4 {float:none; clear:both; width:100%; height:40px; margin:0 0 10px 0; text-align:center; font-size:27px; line-height:40px}
+.mobile .start-contents .supportfunding-process .btnset {clear:both; display:block; text-align:center}
+.mobile .start-contents .supportfunding-process .slick-prev {width:50px; height:25px; margin:0 5px 0 0; background:#fff url('../images/icon_arr_09.png') no-repeat 50%; background-size:22px auto; font-size:0}
+.mobile .start-contents .supportfunding-process .slick-next {width:50px; height:25px; background:#00c6e2 url('../images/icon_arr_08.png') no-repeat 50%; background-size:22px auto; font-size:0}
+
+.mobile .start-contents .supportfunding-process ul {width:95%; height:auto; overflow:hidden; margin:0 auto 15px; padding:0}
+.mobile .start-contents .supportfunding-process ul li {width:auto; height:240px; margin:0 2px 10px 0; background:#fff; box-shadow:2px 2px 2px rgba(0,0,0,0.2)}
+.mobile .start-contents .supportfunding-process ul li dl {padding:18px 12px 0 12px} 
+.mobile .start-contents .supportfunding-process ul li dl dt {font-size:18px}
+.mobile .start-contents .supportfunding-process ul li dl dd {font-size:13px; line-height:18px}
+.mobile .start-contents .supportfunding-process ul li.sf-process-1 dl dt {}
+.mobile .start-contents .shopfunding-pr {width:100%; height:570px; padding:30px 0 0 0}
+.mobile .start-contents .shopfunding-pr h3 {height:70px !important; font-size:30px}
+.mobile .start-contents .shopfunding-pr ul.slick-slider {padding:0 50px}
+.mobile .start-contents .shopfunding-pr .innerbox {width:95%; height:640px; margin:0 auto}
+.mobile .start-contents .shopfunding-pr .slick-prev {width:30px; height:50px; background-size:20px auto}
+.mobile .start-contents .shopfunding-pr .slick-next {width:30px; height:50px; background-size:20px auto}
+.mobile .start-contents .shopfunding-pr dl {height:400px}
+.mobile .start-contents .shopfunding-pr dl dt {height:200px}
+.mobile .start-contents .shopfunding-pr dl dt .pic {display:block; width:100%; height:200px; font-size:0}
+.mobile .start-contents .shopfunding-pr dl dt .pic img {width:100%; height:auto; min-height:200px}
+.mobile .start-contents .shopfunding-pr dl dd {height:200px; overflow:hidden; padding:15px 30px 25px 30px}
+.mobile .start-contents .shopfunding-pr dl dd a.blocklink {width:100%; margin:0 0 15px 0}
+.mobile .start-contents .shopfunding-pr dl dd a.blocklink strong {height:54px; margin:0 0 10px 0; font-size:20px; line-height:26px}
+.mobile .start-contents .shopfunding-pr dl dd a.blocklink span {height:40px; font-size:15px; line-height:19px}
+.mobile .project-search .mainvisual {height:630px; margin-bottom:30px}
+.mobile .project-search .mainvisual ul.slick-slider {position:relative; width:100%; height:630px}
+.mobile .project-search .mainvisual ul.slick-slider li {position:relative; height:630px}
+.mobile .project-search .mainvisual ul.slick-slider li .innerbox {position:relative; width:100%; height:450px; overflow:hidden}
+.mobile .project-search .mainvisual ul.slick-slider li ul.main-product {width:100%; height:150px}
+.mobile .project-search .mainvisual ul.slick-slider li ul.main-product li {height:150px}
+.mobile .project-search .mainvisual ul.slick-slider li ul.main-product li img {width:100%; height:auto; min-height:150px}
+.mobile .project-search .mainvisual ul.slick-slider li h3 {position:absolute; left:0; top:50px; width:100%; text-align:center; z-index:30}
+.mobile .project-search .mainvisual ul.slick-slider li h3 span {font-size:22px}
+.mobile .project-search .mainvisual ul.slick-slider li h3 span i {display:block}
+.mobile .project-search .mainvisual ul.slick-slider li h3 strong {font-size:16px}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox {height:150px; padding:15px; overflow:hidden; background:url('../images/bg_titlevisual_02.jpg') repeat-x; background-size:5px 100%}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right button {width:100%; height:40px; margin-top:10px; font-size:15px}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox .graph-during {width:95px}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox .graph-rate {width:95px}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right {min-width:150px}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right strong {color:#f9b03c}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox > .pull-right {color:#fff}
+.mobile .project-search .mainvisual ul.slick-slider li dl.recommend-mall {float:none; width:100%}
+.mobile .project-search .mainvisual ul.slick-slider li dl.recommend-mall dt {width:100%; height:auto}
+.mobile .project-search .mainvisual ul.slick-slider li dl.recommend-mall dt .pic img {width:100%; height:auto}
+.mobile .project-search .mainvisual ul.slick-slider li .statusbox {clear:both}
+.mobile .project-search .mainvisual ul.slick-dots {left:0; bottom:0; width:100%; margin-left:0; text-align:center}
+.mobile .project-search .mainvisual ul.slick-dots li {width:12px; height:10px}
+.mobile .project-search .mainvisual ul.slick-dots li button {width:10px; height:10px; background:#999}
+.mobile .project-search .mainvisual ul.slick-dots li.slick-active button {background:#faad38}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product {clear:both; width:100%; height:150px}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dt {float:left; width:25%; height:100%; padding-top:30px; line-height:30px}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dt em {display:block; font-size:18px}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dt i {display:block}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd {float:none; overflow:hidden; height:150px; padding:10px 0 0 10px}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd .pic {float:left; width:150px; height:150px; overflow:hidden; text-align:center}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd .pic img {width:120px; height:auto}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd p {float:none; overflow:hidden; text-align:left; padding-top:20px}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd p a.blocklink {text-align:left}
+.mobile .project-search .mainvisual ul.slick-slider li dl.reward-product dd em.badge {width:60px; height:60px; bottom:10px; line-height:60px}
+.mobile .project-search .recommend-project {width:95%; margin:0 auto 100px}
+.mobile .project-search .recommend-project .listgroup {margin:0 -1.5% 30px -1.5%}
+.mobile .project-search .recommend-project .listgroup dl.rcbox {width:47%; height:480px; margin:0 1.5% 15px 1.5%}
+.mobile .project-search .recommend-project .listgroup dl.rcbox:first-child {margin:0 1.5% 15px 1.5%}
+.mobile .project-search .recommend-project .listgroup dl.rcbox dt {height:250px}
+.mobile .project-search .recommend-project .listgroup dl.rcbox dt .pic {height:250px}
+.mobile .project-search .recommend-project .listgroup dl.rcbox dt .pic img {min-height:250px; height:auto}
+.mobile .project-search .sortbox {width:95%; height:120px; margin:0 auto 30px}
+.mobile .project-search .sortbox h3 {float:none; width:100%; margin:0 0 15px 0; padding-top:0; text-align:center; font-size:20px}
+.mobile .project-search .sortbox h3 strong {background-size:25px; font-size:20px}
+.mobile .project-search .sortbox h3 strong a {font-size:20px}
+.mobile .project-search .sortbox ul.detail-conditions li a.holder {font-size:14px}
+.mobile .project-search .sortbox ul.detail-conditions li p span {margin-right:15px; font-size:13px}
+.mobile .project-search .recommend-project {width:95%; margin:0 auto 60px}
+.mobile .project-search .recommend-project .listgroup {margin:0 0 30px 0}
+.mobile .project-search .recommend-project .listgroup dl.rcbox {width:100%; height:auto; margin:0 0 15px 0}
+.mobile .project-search .recommend-project .listgroup dl.rcbox dt {height:auto}
+.mobile .project-search .recommend-project .listgroup dl.rcbox dt .pic {height:auto}
+.mobile .project-search .recommend-project .listgroup dl.rcbox:first-child {margin:0 0 15px 0}
+.mobile fieldset.rp-searchbox {width:95%; height:auto; overflow:hidden; padding-top:0}
+.mobile fieldset.rp-searchbox ul {width:100%; height:auto; overflow:hidden; padding:0 0 20px 0}
+.mobile fieldset.rp-searchbox ul li {float:none; clear:both; overflow:hidden; width:100%; padding:8px; border-bottom:1px solid #ccc}
+.mobile fieldset.rp-searchbox ul li label {width:80px; height:35px; padding:0 0 0 32px; font-size:16px; background-size:25px auto !important; background-position:0 50% !important; line-height:38px}
+.mobile fieldset.rp-searchbox ul li p {height:35px}
+.mobile fieldset.rp-searchbox ul li .optionbox {margin-top:3px}
+.mobile fieldset.rp-searchbox ul li .optionbox select {width:120px; height:30px; font-size:14px; font-weight:normal}
+.mobile fieldset.rp-searchbox button {position:static; right:none; top:none; float:none; display:block; width:150px; height:40px; margin:20px auto 40px; padding:0 25px; background-size:12px auto; font-size:15px}
+.mobile .funding-detailview h3 {min-height:100px; height:auto; padding:30px 0 0 0; background-size:4px auto}
+.mobile .funding-detailview .innerbox {position:static}
+.mobile .funding-detailview h3 span {margin:0 0 6px 0; font-size:15px; line-height:16px; font-weight:normal}
+.mobile .funding-detailview h3 strong {line-height:20px; font-size:18px; font-weight:normal; letter-spacing:-0.5px}
+.mobile .funding-detailview h4 {height:45px; margin:0; font-size:16px}
+.mobile .funding-detailview h4 span {width:100%; height:45px; padding:0 10px; line-height:45px}
+.mobile .funding-detailview .innerbox {width:100%; margin:0; padding:0}
+.mobile .funding-detailview .innerbox .flbox {float:none; width:100%; padding:0}
+.mobile .funding-detailview .innerbox .frbox {position:absolute; right:-250px; top:0; z-index:101; width:250px; padding:15px; background:#fff; box-shadow:-3px 3px 3px rgba(0,0,0,0.2)}
+.mobile .funding-detailview .innerbox .frbox .btn-layerclose {position:absolute; top:40px; left:-50px; z-index:102px; width:50px; height:50px}
+.mobile .funding-detailview .innerbox .frbox .btn-layerclose button {width:50px; height:50px; padding:0 0 0 10px; background:#363636 url('../images/icon_arr_04.png') no-repeat 5px 50%; background-size:8px auto; line-height:16px; color:#fff}
+.mobile .funding-detailview .innerbox .frbox.active .btn-layerclose button {padding:0 10px 0 0; background:#363636 url('../images/icon_arr_03.png') no-repeat 38px 50%; background-size:8px auto}
+.mobile .funding-detailview.scrollFixed .innerbox .frbox .btn-layerclose {position:fixed !important; top:40px; z-index:102px}
+.mobile .funding-detailview .funding-conditions {height:auto; margin:0; background:#f2f4f5}
+.mobile .funding-detailview .funding-conditions ul {height:auto; overflow:hidden; padding:0; border-bottom:1px solid #ddd}
+.mobile .funding-detailview .funding-conditions ul li {float:none; width:auto; height:auto; min-height:30px; padding:10px 10px 10px 42px; margin:0; border-top:1px solid #ddd; line-height:17px; font-size:14px}
+.mobile .funding-detailview .funding-conditions ul li a {font-size:14px}
+.mobile .funding-detailview .funding-conditions ul li.conditions-1 {background-position:10px 45%; background-size:auto 22px}
+.mobile .funding-detailview .funding-conditions ul li.conditions-2 {background-position:10px 45%; background-size:auto 22px}
+.mobile .funding-detailview .funding-conditions ul li.conditions-3 {background-position:5px 45%; background-size:auto 22px}
+.mobile .funding-detailview .funding-conditions ul li.conditions-4 {background-position:5px 45%; background-size:auto 22px}
+.mobile .funding-detailview .product-img p {margin:0 0 20px 0}
+.mobile .funding-detailview .lastestboard {float:none; width:95%; margin:0 auto 40px}
+.mobile .funding-detailview .lastestboard .listgroup {border-top-width:2px}
+.mobile .funding-detailview .lastestboard h5 {height:36px; padding:0 10px; line-height:36px; font-size:15px}
+.mobile .funding-detailview .lastestboard dl dt {height:45px; padding:0 85px 0 0; line-height:45px}
+.mobile .funding-detailview .lastestboard dl dt label {width:35px; text-align:center; font-size:14px}
+.mobile .funding-detailview .lastestboard dl dt p {font-size:14px}
+.mobile .funding-detailview .lastestboard dl dt p a {font-size:14px}
+.mobile .funding-detailview .lastestboard dl dt .date {width:80px; line-height:45px; font-size:13px}
+.mobile .funding-detailview .lastestboard dl dd {padding:0 10px}
+.mobile .funding-detailview .lastestboard dl dd .txtbox {margin:15px 0 25px 0; color:#999; font-size:14px; line-height:18px}
+.mobile .funding-detailview .lastestboard dl dd .cheerbox .pic {width:55px; height:45px}
+.mobile .funding-detailview .lastestboard dl dd .cheerbox .pic img {width:45px; height:45px}
+.mobile .funding-detailview .lastestboard dl dd .cheerbox span textarea {height:55px; padding:10px; font-size:14px; line-height:18px}
+.mobile .funding-detailview .lastestboard dl dd .cheerbox button {width:90px; height:30px; padding:0 0 0 30px; background-size:16px auto; font-size:13px}
+.mobile .funding-detailview .locationbox {width:95%; overflow:hidden; margin:0 auto 20px}
+.mobile .funding-detailview .locationbox dl dt strong {font-size:16px}
+.mobile .funding-detailview .locationbox dl dt .pic {display:block; margin:0 0 5px 0; border:4px solid #ececec}
+.mobile .funding-detailview .locationbox dl dt .pic img {width:100%}
+.mobile .funding-detailview .locationbox dl dt .address {font-size:15px; color:#555}
+.mobile .funding-detailview .locationbox dl dd > strong {font-size:14px}
+.mobile .funding-detailview .locationbox dl dd ul li {min-height:40px; padding:0 0 0 40px}
+.mobile .funding-detailview .locationbox dl dd ul li.car {background-size:30px}
+.mobile .funding-detailview .locationbox dl dd ul li.subway {background-size:30px}
+.mobile .funding-detailview .locationbox dl dd ul li.bus {background-size:30px}
+.mobile .funding-detailview .locationbox dl dd ul li em {font-size:13px}
+.mobile .funding-detailview .cheerup-listbox {width:95%; margin:0 auto}
+.mobile .funding-detailview .cheerup-listbox h5 {margin:0 0 15px 0; border-bottom:2px solid #0063b2; font-size:16px}
+.mobile .funding-detailview .cheerup-listbox fieldset {padding:15px 15px 12px 15px}
+.mobile .funding-detailview .cheerup-listbox fieldset p {padding:0 51px 0 0}
+.mobile .funding-detailview .cheerup-listbox fieldset p textarea {height:55px; padding:10px}
+.mobile .funding-detailview .cheerup-listbox fieldset p button {width:51px; height:55px; font-size:13px}
+.mobile .funding-detailview .cheerlist {width:95%; margin:10px auto 40px}
+.mobile .funding-detailview .cheerlist dl {padding:15px 0 10px 0}
+.mobile .funding-detailview .cheerlist dl dt {height:40px}
+.mobile .funding-detailview .cheerlist dl dt .pic {width:40px}
+.mobile .funding-detailview .cheerlist dl dt .pic img {width:30px; height:30px}
+.mobile .funding-detailview .cheerlist dl dt p em {font-size:13px}
+.mobile .funding-detailview .cheerlist dl dt .date {right:80px; top:0; color:#c8c8c8; font-size:11px}
+.mobile .funding-detailview .cheerlist dl dt .btnset a {background-size:1px 15px; font-size:12px}
+.mobile .funding-detailview .cheerlist dl dd {padding:0 0 30px 40px}
+.mobile .funding-detailview .cheerlist dl dd p {font-size:13px; line-height:18px}
+.mobile .funding-detailview .cheerlist dl dd .btn-replynum {position:absolute; left:40px; bottom:5px}
+.mobile .funding-detailview .cheerlist dl dd .btnset {position:absolute; right:0; bottom:5px}
+.mobile .funding-detailview .support-list {float:none; width:95%; overflow:hidden; margin:0 auto}
+.mobile .funding-detailview .support-list h5 {height:36px; padding:0 10px; font-size:15px; line-height:36px}
+.mobile .funding-detailview .support-list h5 span {font-size:15px}
+.mobile .funding-detailview .support-list dl {padding:10px 0}
+.mobile .funding-detailview .support-list dl dt {width:40px}
+.mobile .funding-detailview .support-list dl dt .pic {width:30px; height:30px}
+.mobile .funding-detailview .support-list dl dt .pic img {width:30px; height:30px}
+.mobile .funding-detailview .support-list dl dd p em {margin:0 0 0 10px}
+.mobile .funding-detailview .support-infobox {width:95%; margin:30px auto; padding:30px 0 0 0}
+.mobile .funding-detailview .support-infobox h5 {width:95%; font-size:16px; font-weight:normal}
+.mobile .funding-detailview .support-infobox ul.support-info {margin:0 0 30px 0; border-top:2px solid #00a9eb}
+.mobile .funding-detailview .support-infobox ul.support-info li label {width:80px; padding:0 0 0 20px; font-size:14px; line-height:30px}
+.mobile .funding-detailview .support-infobox ul.support-info li p {line-height:30px}
+.mobile .funding-detailview .support-infobox ul.support-info li p strong {font-size:18px}
+.mobile .funding-detailview .support-infobox ul.support-info li p sub {font-size:13px}
+.mobile .funding-detailview .support-infobox ul.support-info li p em {margin-left:3px; font-size:15px}
+.mobile .funding-detailview .support-infobox ul.support-info li.goal-price label {background-size:16px auto}
+.mobile .funding-detailview .support-infobox ul.support-info li.status-price label {background-size:16px auto}
+.mobile .funding-detailview .support-infobox ul.support-info li.sponser-number label {background-size:16px auto}
+.mobile .funding-detailview .support-infobox .graphbox {width:100%; margin:0}
+.mobile .funding-detailview .support-infobox .graphbox > div {float:none; width:100%; height:204px; margin:0 auto 15px}
+.mobile .funding-detailview .support-infobox .graphbox > div > ul > li p {padding-top:10px}
+.mobile .funding-detailview .support-infobox .graphbox > div > ul > li p span {display:block}
+.mobile .funding-detailview .support-infobox .graphbox > div > ul > li p strong {display:block}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-1 > ul > li {width:100px; margin:0}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-2 > ul > li {width:60px; margin:0 7px}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-3 > ul > li {width:50px; margin:0 5px}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-4 > ul > li {width:40px; margin:0 4px}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-4 > ul > li p {font-size:12px}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-5 > ul > li {width:36px; margin:0 2px}
+.mobile .funding-detailview .support-infobox .graphbox > div.graph-5 > ul > li p {font-size:12px; line-height:15px}
+.mobile .funding-detailview .support-infobox .graphbox > div > ul > li.short-line p {margin-top:-26px}
+.mobile .funding-detailview .support-infobox .graphbox > div > ul > li.short-line p span {color:#666}
+.mobile .funding-detailview dl.statusbox {padding:0 0 51px 0}
+.mobile .funding-detailview dl.statusbox dt {padding:20px 12px 10px 12px}
+.mobile .funding-detailview dl.statusbox dt .percent {font-size:35px; line-height:40px; font-weight:normal}
+.mobile .funding-detailview dl.statusbox dt .percent sub {font-size:20px}
+.mobile .funding-detailview dl.statusbox dt .d-day {top:32px; height:22px; padding:0 5px; font-size:13px; line-height:22px}
+.mobile .funding-detailview dl.statusbox dt .price strong {font-size:28px}
+.mobile .funding-detailview dl.statusbox dt .price sub {font-size:13px}
+.mobile .funding-detailview dl.statusbox dt .goal-price strong {font-size:16px}
+.mobile .funding-detailview dl.statusbox dt .goal-price sub {font-size:13px}
+.mobile .funding-detailview dl.statusbox dd {padding:0 12px 20px 12px}
+.mobile .funding-detailview dl.statusbox dd p {line-height:18px}
+.mobile .funding-detailview dl.statusbox dd button.btn-sponser {width:100%; height:50px}
+.mobile .funding-detailview dl.statusbox dd button.btn-sponser em {background-size:24px auto; font-size:20px}
+.mobile .funding-detailview dl.supporters-info dt {padding:20px 15px 0 15px}
+.mobile .funding-detailview dl.supporters-info dt .pic {width:60px}
+.mobile .funding-detailview dl.supporters-info dt .pic img {width:50px; height:50px}
+.mobile .funding-detailview dl.supporters-info dt strong {padding:10px 0 0 0; font-size:15px; line-height:18px}
+.mobile .funding-detailview dl.supporters-info dd.contact {padding:15px 15px 10px 15px}
+.mobile .funding-detailview dl.supporters-info dd.contact p {margin:0 0 10px 0; line-height:17px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li {margin:0 0 3px 0; padding:0 0 0 27px; color:#888; font-size:13px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li a {color:#888; font-size:13px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li.mail {background:url('../images/icon_supporters_01.png') no-repeat 0 2px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li.tel {background:url('../images/icon_supporters_02.png') no-repeat 0 2px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li.homepage {background:url('../images/icon_supporters_03.png') no-repeat 0 2px}
+.mobile .funding-detailview dl.supporters-info dd.contact ul li.txt {padding:2px 0 0 0}
+.mobile .funding-detailview dl.supporters-info dd.share {padding:5px 0}
+.mobile .funding-detailview dl.supporters-info dd.share .snsbox {margin-bottom:7px}
+.mobile .funding-detailview dl.supporters-info dd.share .snsbox > strong {display:block; margin:0 0 6px 0; color:#555; font-weight:normal; font-size:12px}
+.mobile .funding-detailview dl.supporters-info dd.share .snsbox ul li.btn-bookmark {width:40px; margin:0 0 0 6px}
+.mobile .funding-detailview dl.supporters-info dd.share .snsbox ul li:first-child {margin-left:0px}
+.mobile .funding-detailview dl.supporters-info dd.share .btn-project-report {height:50px}
+.mobile .funding-detailview dl.supporters-info dd.share .btn-project-report em {padding-left:30px; background-size:22px auto; font-size:20px}
+.mobile .funding-detailview .price-rewardlist button.btn-reward-toggle {height:40px}
+.mobile .funding-detailview .price-rewardlist .listgroup dl dt a {height:32px; line-height:32px}
+.mobile .funding-detailview .price-rewardlist .listgroup dl dt strong {font-size:16px}
+.mobile .funding-detailview .price-rewardlist .listgroup dl dt sub {font-size:13px}
+.mobile .funding-detailview .price-rewardlist .listgroup dl dd .pic {margin:15px 0 0 0}
+.mobile .funding-detailview .price-rewardlist .listgroup dl dd .pic img {width:100%}
+.mobile .funding-detailview .relative-projectbox {padding:12px 12px 50px 12px}
+.mobile .funding-detailview .relative-projectbox h5 {font-size:16px}
+.mobile .funding-detailview .relative-projectbox dl dt {width:100%; height:auto; margin:0 0 10px 0}
+.mobile .funding-detailview .relative-projectbox dl dd strong {font-size:15px}
+.mobile .funding-detailview .relative-projectbox dl dd strong a {font-size:15px}
+
+
+
+/* IE Exception */
+.ie .toparea .topgnb .btn-allview button em {padding-top:5px}
+.ie .toparea .topgnb ul li {padding-top:4px}
+.ie .toparea ul.setting li {padding-top:3px}
+.ie .toparea .gnbbox ul.gnb li {padding-top:3px}
+.ie .toparea .topmenubox fieldset p input.txt {padding-top:4px}
+.ie .toparea .topmenubox fieldset button {padding-top:3px}
+.ie .toparea .major-menu a.holder {padding-top:3px}
+.ie .toparea .btn-alram button em {padding-top:2px}
+.ie .toparea .popular-ranking ul li p a {padding-top:2px}
+.ie .toparea .popular-ranking ul li label {padding-top:2px}
+.ie .bottomarea ul.bmenu li {padding-top:4px}
+.ie .bottomarea .copyright .frbox dl {padding-top:15px}
+.ie .bottomarea .copyright .frbox dl dt {line-height:36px}
+.ie .bottomarea .copyright .frbox dl dd strong {line-height:36px}
+.ie .bottomarea .copyright .frbox dl dd strong a {line-height:36px}
+.ie .paging span a {line-height:35px}
+.ie .funding-detailview h4 span {padding-top:5px}
+.ie .funding-detailview .funding-conditions ul li {padding-top:3px}
+.ie .funding-detailview .lastestboard h5 {padding-top:4px}
+.ie .funding-detailview .lastestboard dl dt {padding-top:4px}
+.ie .funding-detailview .lastestboard dl dt .date {top:4px}
+.ie .funding-detailview .locationbox dl dt strong {margin-top:0}
+.ie .funding-detailview .cheerup-listbox fieldset p button {padding-top:5px}
+.ie .funding-detailview .cheerlist dl dd .btnset button.btn-good span {display:inline-block; padding-top:7px}
+.ie .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie .funding-detailview .cheerlist dl dd .btn-replynum {padding-top:4px}
+.ie .funding-detailview .cheerlist dl dt .btnset a {background-position:0 -4px; line-height:13px}
+.ie .funding-detailview .support-list h5 {padding-top:4px}
+.ie .funding-detailview .support-infobox ul.support-info li {padding-top:6px}
+.ie .funding-detailview dl.statusbox dt .d-day {padding-top:3px}
+.ie .funding-detailview dl.statusbox dd button.btn-sponser em {padding-top:5px}
+.ie .funding-detailview dl.supporters-info dd.share .btn-project-report em {padding-top:5px}
+.ie .funding-detailview dl.supporters-info dd.share .snsbox ul li.btn-bookmark button {padding-top:3px}
+.ie .funding-detailview .price-rewardlist button.btn-reward-toggle em {padding-top:3px}
+.ie .funding-detailview .relative-projectbox .paging-navi span {padding-top:2px}
+
+.ie.tablet .toparea .topgnb .btn-allview button em {padding-top:5px}
+.ie.tablet .toparea .topgnb .btn-majorservice button {padding-top:5px}
+.ie.tablet .toparea .topgnb ul li {padding-top:4px}
+.ie.tablet .toparea .gnbbox ul.gnb li {padding-top:3px}
+.ie.tablet .toparea .topmenubox fieldset p input.txt {padding-top:4px}
+.ie.tablet .toparea .topmenubox fieldset button {padding-top:3px}
+.ie.tablet .toparea .major-menu a.holder {padding-top:3px}
+.ie.tablet .bottomarea ul.bmenu li {padding-top:4px}
+.ie.tablet .bottomarea .copyright .frbox dl {padding-top:15px}
+.ie.tablet .bottomarea .copyright .frbox dl dt {line-height:36px}
+.ie.tablet .bottomarea .copyright .frbox dl dd strong {line-height:36px}
+.ie.tablet .bottomarea .copyright .frbox dl dd strong a {line-height:36px}
+.ie.tablet .paging span a {line-height:30px}
+.ie.tablet .funding-detailview h4 span {padding-top:5px}
+.ie.tablet .funding-detailview .funding-conditions ul li {padding-top:3px}
+.ie.tablet .funding-detailview .lastestboard h5 {padding-top:4px}
+.ie.tablet .funding-detailview .lastestboard dl dt {padding-top:4px}
+.ie.tablet .funding-detailview .lastestboard dl dt .date {top:4px}
+.ie.tablet .funding-detailview .locationbox dl dt strong {margin-top:0}
+.ie.tablet .funding-detailview .cheerup-listbox fieldset p button {padding-top:5px}
+.ie.tablet .funding-detailview .cheerlist dl dd .btnset button.btn-good span {display:inline-block; padding-top:7px}
+.ie.tablet .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie.tablet .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie.tablet .funding-detailview .cheerlist dl dd .btn-replynum {padding-top:4px}
+.ie.tablet .funding-detailview .cheerlist dl dt .btnset a {background-position:0 -4px; line-height:13px}
+.ie.tablet .funding-detailview .support-list h5 {padding-top:4px}
+.ie.tablet .funding-detailview .support-infobox ul.support-info li {padding-top:6px}
+
+.ie.mobile .toparea .topgnb .btn-allview button em {padding-top:5px}
+.ie.mobile .toparea .topgnb .btn-majorservice button {padding-top:5px}
+.ie.mobile .toparea .topgnb ul li {padding-top:3px}
+.ie.mobile .toparea .gnbbox ul.gnb li {padding-top:3px}
+.ie.mobile .toparea .topmenubox fieldset p input.txt {padding-top:4px}
+.ie.mobile .toparea .topmenubox fieldset button {padding-top:3px}
+.ie.mobile .toparea .major-menu a.holder {padding-top:3px}
+.ie.mobile .bottomarea ul.bmenu li {padding-top:4px}
+.ie.mobile .bottomarea .copyright .frbox dl {padding-top:15px}
+.ie.mobile .bottomarea .copyright .frbox dl dt {line-height:36px}
+.ie.mobile .bottomarea .copyright .frbox dl dd strong {line-height:36px}
+.ie.mobile .bottomarea .copyright .frbox dl dd strong a {line-height:36px}
+.ie.mobile .paging span a {line-height:26px}
+.ie.mobile .funding-detailview h4 span {padding-top:5px}
+.ie.mobile .funding-detailview .funding-conditions ul li {padding-top:13px}
+.ie.mobile .funding-detailview .lastestboard h5 {padding-top:4px}
+.ie.mobile .funding-detailview .lastestboard dl dt {padding-top:4px}
+.ie.mobile .funding-detailview .lastestboard dl dt .date {top:4px}
+.ie.mobile .funding-detailview .locationbox dl dt strong {margin-top:0}
+.ie.mobile .funding-detailview .cheerup-listbox fieldset p button {padding-top:5px}
+.ie.mobile .funding-detailview .cheerlist dl dd .btnset button.btn-good span {display:inline-block; padding-top:7px}
+.ie.mobile .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie.mobile .funding-detailview .cheerlist dl dd .btnset button.btn-bad span {display:inline-block; padding-top:7px}
+.ie.mobile .funding-detailview .cheerlist dl dd .btn-replynum {padding-top:4px}
+.ie.mobile .funding-detailview .cheerlist dl dt .btnset a {background-position:0 -4px; line-height:13px}
+.ie.mobile .funding-detailview .support-list h5 {padding-top:4px}
+.ie.mobile .funding-detailview .support-infobox ul.support-info li {padding-top:6px}
+
+

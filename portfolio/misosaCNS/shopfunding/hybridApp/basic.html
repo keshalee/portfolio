@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+	<meta charset="utf-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>E-ZON App</title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0" />
+	
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<!--[if lt IE 9]><script src="js/IE9.js"></script><![endif]-->     
+	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+</head>
+<body>
+	<div class="hide" id="sikpNav"><a href="#content">본문바로가기</a></div>
+	
+	<!--매인화면-->
+	<div id="headerwrap">
+		<header id="header">
+			<h2><a href="index.html"><img src="images/before.png" alt="" /></a>기본설정</h2>
+		</header>
+		
+	</div>
+	<script>
+	 	$(window).scroll(function(){
+		  var sticky = $('#headerwrap'),
+		      scroll = $(window).scrollTop();
+		
+		  if (scroll >= 100) sticky.addClass('fixed');
+		  else sticky.removeClass('fixed');
+		});
+		
+	</script>
+	
+	<script type="text/javascript" src="js/on-off-switch.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/on-off-switch.css"/>
+    <div class="basic_wrap">
+		<div class="basic">
+			<ul>
+				<li><h3>알림 (전체설정)</h3><span><input type="checkbox" id="on-off-switch" name="switch1" checked></span></li>
+				<li><h3>신규 콘텐츠 알림</h3><span><input type="checkbox" id="on-off-switch2" name="switch2"></span></li>
+				<li><h3>서비스알림/광고알림</h3><span><input type="checkbox" id="on-off-switch3" name="switch3"></span></li>
+			</ul>
+			<script type="text/javascript">
+			    new DG.OnOffSwitch({
+			        el: '#on-off-switch',
+			        textOn: 'ON',
+			        textOff: 'OFF',
+			    });
+			    new DG.OnOffSwitch({
+			        el: '#on-off-switch2',
+			        textOn: 'ON',
+			        textOff: 'OFF',
+			    });
+			    new DG.OnOffSwitch({
+			        el: '#on-off-switch3',
+			        textOn: 'ON',
+			        textOff: 'OFF',
+			    });
+			</script>
+		</div>
+		
+		<div class="basic_con">
+			<ul class="clearfix">
+				<li><a href="#"><img src="images/basic_con1.png" alt="" /><span>도움말과 피드백</span></a></li>
+				<li><a href="#"><img src="images/basic_con2.png" alt="" /><span>서비스약관</span></a></li>
+				<li class="last"><a href="#"><img src="images/basic_con3.png" alt="" /><span>회원탈퇴</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<footer id="footer" class="clearfix">
+		<ul>
+			<li><a href="basic.html"><img src="images/home.png" alt="home" /></a></li>
+			<li><a href="message.html"><img src="images/notice.png" alt="notice" /></a></li>
+			<li><a href="push.html"><img src="images/write.png" alt="write" /></a></li>
+		</ul>
+		<p><a href="#"><img src="images/more.png" alt="more"></a></p>
+	</footer>
+	
+	
+	
+	
+</body>
+</html>

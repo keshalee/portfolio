@@ -1,0 +1,65 @@
+.on-off-switch{
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    user-select:none;
+}
+
+.on-off-switch-track{
+    position:absolute;
+    z-index:1;
+    overflow:hidden;
+}
+
+/* Track for "on" state */
+.on-off-switch-track-on{
+	background:#558ed5;
+    position:absolute;
+    z-index:10;
+    overflow:hidden;
+}
+/* Track for "off" state */
+.on-off-switch-track-off{
+	background:#d2e2f5;
+    position:absolute;
+    z-index:1;
+}
+
+.on-off-switch-thumb{top:-1px;
+    position:absolute;
+    z-index:2;
+    overflow:hidden;
+}
+
+.on-off-switch-thumb-shadow{
+    opacity:0.5;
+    position:absolute;
+}
+
+
+.on-off-switch-thumb-color{
+     background-color:#beccdc;
+    position:absolute;
+}
+
+.on-off-switch-thumb-off{
+    position:absolute;
+}
+.on-off-switch-thumb-on{
+    z-index:10;
+}
+.on-off-switch-text{
+    width:100%;
+    position:absolute;
+    user-select:none;
+    font-size:12px;color:#fff;font-weight: 500;
+}
+
+.on-off-switch-text-on{
+    color:#FFF;
+    text-align:left;
+}
+.on-off-switch-text-off{
+    color:#fff;
+    text-align:right;
+}

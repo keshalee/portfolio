@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+	<meta charset="utf-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>E-ZON App</title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0" />
+	
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="css/psw.css" type="text/css"/>
+	<link href="css/dcalendar.picker.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="js/IE9.js"></script><![endif]-->     
+	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+</head>
+<body>
+	<div class="hide" id="sikpNav"><a href="#content">본문바로가기</a></div>
+	
+	<div class="push">
+		<a href="index.html" class="close">x</a>
+		<h2>Mobile PUSH 메세지</h2>
+		<div class="push_list">
+		<table>
+			<tr>
+				<th>발송상태</th>
+				<td>
+					<b>발송대기</b>
+					발송대기 상태에서만 내용을 등록/수정 할 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<th>발송OS 선택</th>
+				<td>
+					<select title="전체">
+						<option>전체</option>
+						<option>Android</option>
+						<option>IOS</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>발송타입</th>
+				<td>
+					<select title="전체">
+						<option>전체</option>
+						<option>Android</option>
+						<option>IOS</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td>
+					<select title="입력 필수">
+						<option>입력 필수</option>
+						<option>Android</option>
+						<option>IOS</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>연결URL(선택)</th>
+				<td><input type="text" name="url" id="url" placeholder="선택, 미입력시 메인화면"/></td>
+			</tr>
+			<tr>
+				<th>이미지(선택)</th>
+				<td>
+					<input type="file" name="push_file" value="" id="push_file"/>
+					<span>이미지사이즈 : 2,048*1,024 부터 512*256<br>이미지파일 : jpg, 1MB이하</span>
+				</td>
+			</tr>
+			<tr class="point">
+				<th>발송일(필수)</th>
+				<td>
+					<p><input class="form-control" id="demo" type="text"><a href="#"><img src="images/input_img.png" alt="" /></a></p>
+					<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+					<script src="js/dcalendar.picker.js"></script>
+					<script>
+					$('#demo').dcalendarpicker();
+					$('#calendar-demo').dcalendar(); //creates the calendar
+					</script>
+					<select title="00시">
+						<option>00시</option>
+						<option>1시</option>
+						<option>2시</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		</div>
+		<ul>
+			<li class="point"><a href="index.html">닫기</a></li>
+			<li><a href="#">등록</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

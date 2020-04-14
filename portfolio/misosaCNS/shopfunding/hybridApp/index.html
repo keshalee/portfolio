@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>E-ZON App</title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0" />
+	
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<!--[if lt IE 9]><script src="js/IE9.js"></script><![endif]-->     
+	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+	<script type="text/javascript" src="js/slick.js"></script>
+</head>
+<body>
+	<div class="hide" id="sikpNav"><a href="#content">본문바로가기</a></div>
+	
+	<!--매인화면-->
+	<div id="headerwrap">
+		<header id="header">
+			<h1><a href="index.html"><img src="images/logo.jpg" alt="" /></a></h1>
+			<ul>
+				<li class="search"><a href="#none"><img src="images/search.png" alt="search" /></a></li>
+				<li class="admin"><a href="#none"><img src="images/admin.png" alt="admin" /></a></li>
+			</ul>
+		</header>
+		
+		<div class="search_wrap">
+			<form>
+			<fieldset class="clearfix">
+				<legend class="hide">search</legend>
+				<p>
+					<input type="text" name="search_box" id="search_box" placeholder="검색어를 입력하세요."/>
+					<a href="#">▼</a>
+				</p>
+				<button>검색</button>
+			</fieldset>
+			</form>
+		</div>
+		
+		<div class="nav_wrap clearfix">
+			<nav id="nav">
+				<ul class="nav_user">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="join.html">회원가입</a></li>
+				</ul>
+				<ul class="nav">
+					<li><a href="mypage.html"><img src="images/nav1.png" alt="" />마이페이지</a></li>
+					<li><a href="cash.html"><img src="images/nav2.png" alt="" />캐시충전하기</a></li>
+					<li><a href="pay_list.html"><img src="images/nav3.png" alt="" />판매내역</a></li>
+					<li><a href="halp.html"><img src="images/nav4.png" alt="" />도움말과 피드백</a></li>
+					<li><a href="etc.html"><img src="images/nav5.png" alt="" />서비스약관</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+	</div>
+	<script>
+	 	$(window).scroll(function(){
+		  var sticky = $('#headerwrap'),
+		      scroll = $(window).scrollTop();
+		
+		  if (scroll >= 100) sticky.addClass('fixed');
+		  else sticky.removeClass('fixed');
+		});
+		 
+		 $(function() {
+		 	
+		 	$("#header li.search").click(function(){
+		 		
+		 		$(".search_wrap").slideToggle();
+		 		
+		 	})
+		 	
+		 	var isplay=false;
+		 	$("#header li.admin").click(function(){
+		 		
+		 		if(isplay == false){
+					$("#nav").animate({right:0},300);
+					$(".nav_wrap").fadeIn();
+					
+				}else{$("#nav").animate({right:-260},300);
+						$(".nav_wrap").fadeOut();
+				}
+				
+				isplay=!isplay
+		 		
+		 	})
+		 	
+		 })
+	</script>
+	
+	
+	<div class="main">
+		
+		<div class="main_img">
+			<h2>지역상점과 함께 성장합니다</h2>
+			<p>펀다를 통해 다양한 업종의<br />지역상점을 후원해 보세요</p>
+			
+			<div class="storebanner">
+				<ul>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+					<li><a href=""><img src="images/cafe.png" alt="" /></a></li>
+				</ul>
+				<span class="btnset"></span>
+			</div>
+		</div>
+		
+		<div class="main_title">
+			<h2>추천 프로젝트</h2>
+		</div>
+		<div class="main_list">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<dl class="img_box">
+							<dt><img src="images/main_list.jpg" alt="" /></dt>
+							<dd><img src="images/main_list_02.png" alt="" /></dd>
+						</dl>
+						<dl class="txt_box">
+							<dt>
+								<strong class="ellipsis point_blue">믿을만한 심리상담 전문가 투자하세요.</strong>
+								<span>엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다. 엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다.</span>
+							</dt>
+							<dd>
+								<span>12,000명</span><span>60%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+								</div>
+								<div class="caption">목표금액 : 2000만원&nbsp;&nbsp;<em class="point_blue">달성금액 : 2700만원</em>&nbsp;&nbsp;&nbsp;<b>D-90</b></div>
+							</dd>
+						</dl>
+					</a>
+					<div class="box_shadow">
+						<h6 class="food point_blue">맛집</h6>
+						<address>경기도 > 안양시 > 동안구 > <em class="point_blue">평촌동</em></address>
+						<p>
+							목표금액 : <em class="bold">4,500,000</em>원<br />
+							총 후원금액 : <em class="bold">1,050,000</em>원<br />
+							후원율 : <em class="bold">23.3</em>%<br />
+							총 후원자 수 : <em class="bold">6</em>명<br />
+							<em class="bold">82</em>일 <em class="bold">4</em>시간 남았습니다.
+						</p>
+						<b class="point_yellow">리워드</b>
+						<span>할인쿠폰 아이오페화장품 1개 지급</span>
+						<div class="point_box">50,000원 펀딩기준금액</div>
+						<a href="" class="hashtag">#심리상담</a><a href="" class="hashtag">#전문가</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<dl class="img_box">
+							<dt><img src="images/main_list.jpg" alt="" /></dt>
+							<dd><img src="images/main_list_02.png" alt="" /></dd>
+						</dl>
+						<dl class="txt_box">
+							<dt>
+								<strong class="ellipsis point_blue">믿을만한 심리상담 전문가 투자하세요.</strong>
+								<span>엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다. 엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다.</span>
+							</dt>
+							<dd>
+								<span>12,000명</span><span>60%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+								</div>
+								<div class="caption">목표금액 : 2000만원&nbsp;&nbsp;<em class="point_blue">달성금액 : 2700만원</em>&nbsp;&nbsp;&nbsp;<b>D-90</b></div>
+							</dd>
+						</dl>
+					</a>
+					<div class="box_shadow">
+						<h6 class="food point_blue">맛집</h6>
+						<address>경기도 > 안양시 > 동안구 > <em class="point_blue">평촌동</em></address>
+						<p>
+							목표금액 : <em class="bold">4,500,000</em>원<br />
+							총 후원금액 : <em class="bold">1,050,000</em>원<br />
+							후원율 : <em class="bold">23.3</em>%<br />
+							총 후원자 수 : <em class="bold">6</em>명<br />
+							<em class="bold">82</em>일 <em class="bold">4</em>시간 남았습니다.
+						</p>
+						<b class="point_yellow">리워드</b>
+						<span>할인쿠폰 아이오페화장품 1개 지급</span>
+						<div class="point_box">50,000원 펀딩기준금액</div>
+						<a href="" class="hashtag">#심리상담</a><a href="" class="hashtag">#전문가</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<dl class="img_box">
+							<dt><img src="images/main_list.jpg" alt="" /></dt>
+							<dd><img src="images/main_list_02.png" alt="" /></dd>
+						</dl>
+						<dl class="txt_box">
+							<dt>
+								<strong class="ellipsis point_blue">믿을만한 심리상담 전문가 투자하세요.</strong>
+								<span>엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다. 엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다.</span>
+							</dt>
+							<dd>
+								<span>12,000명</span><span>60%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+								</div>
+								<div class="caption">목표금액 : 2000만원&nbsp;&nbsp;<em class="point_blue">달성금액 : 2700만원</em>&nbsp;&nbsp;&nbsp;<b>D-90</b></div>
+							</dd>
+						</dl>
+					</a>
+					<div class="box_shadow">
+						<h6 class="food point_blue">맛집</h6>
+						<address>경기도 > 안양시 > 동안구 > <em class="point_blue">평촌동</em></address>
+						<p>
+							목표금액 : <em class="bold">4,500,000</em>원<br />
+							총 후원금액 : <em class="bold">1,050,000</em>원<br />
+							후원율 : <em class="bold">23.3</em>%<br />
+							총 후원자 수 : <em class="bold">6</em>명<br />
+							<em class="bold">82</em>일 <em class="bold">4</em>시간 남았습니다.
+						</p>
+						<b class="point_yellow">리워드</b>
+						<span>할인쿠폰 아이오페화장품 1개 지급</span>
+						<div class="point_box">50,000원 펀딩기준금액</div>
+						<a href="" class="hashtag">#심리상담</a><a href="" class="hashtag">#전문가</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<dl class="img_box">
+							<dt><img src="images/main_list.jpg" alt="" /></dt>
+							<dd><img src="images/main_list_02.png" alt="" /></dd>
+						</dl>
+						<dl class="txt_box">
+							<dt>
+								<strong class="ellipsis point_blue">믿을만한 심리상담 전문가 투자하세요.</strong>
+								<span>엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다. 엄선된 심리상담 전문가의 스토리 사례를 발간하고 이를 판매제공하는 심리상담 스토리 입니다.</span>
+							</dt>
+							<dd>
+								<span>12,000명</span><span>60%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+								</div>
+								<div class="caption">목표금액 : 2000만원&nbsp;&nbsp;<em class="point_blue">달성금액 : 2700만원</em>&nbsp;&nbsp;&nbsp;<b>D-90</b></div>
+							</dd>
+						</dl>
+					</a>
+					<div class="box_shadow">
+						<h6 class="food point_blue">맛집</h6>
+						<address>경기도 > 안양시 > 동안구 > <em class="point_blue">평촌동</em></address>
+						<p>
+							목표금액 : <em class="bold">4,500,000</em>원<br />
+							총 후원금액 : <em class="bold">1,050,000</em>원<br />
+							후원율 : <em class="bold">23.3</em>%<br />
+							총 후원자 수 : <em class="bold">6</em>명<br />
+							<em class="bold">82</em>일 <em class="bold">4</em>시간 남았습니다.
+						</p>
+						<b class="point_yellow">리워드</b>
+						<span>할인쿠폰 아이오페화장품 1개 지급</span>
+						<div class="point_box">50,000원 펀딩기준금액</div>
+						<a href="" class="hashtag">#심리상담</a><a href="" class="hashtag">#전문가</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script>
+			$(".main_list ul li").hover(function(){
+				$(this).find(".box_shadow").fadeIn("fast");
+			}, function(){
+				$(".box_shadow").fadeOut("fast");
+			});
+		</script>
+		
+	</div>
+	
+	<footer id="footer" class="clearfix">
+		<ul>
+			<li><a href="basic.html"><img src="images/home.png" alt="home" /></a></li>
+			<li><a href="message.html"><img src="images/notice.png" alt="notice" /></a></li>
+			<li><a href="push.html"><img src="images/write.png" alt="write" /></a></li>
+		</ul>
+		<p><a href="#"><img src="images/more.png" alt="more"></a></p>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		$(".storebanner > ul").slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			speed: 400,
+			dots: false,
+			arrows: true,	
+			appendArrows: $(".storebanner .btnset"),
+			autoplay: true,
+			autoplaySpeed: 5000,
+			touchMove: false
+		});
+	
+	</script>
+	
+</body>
+</html>
