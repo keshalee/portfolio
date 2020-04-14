@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>관리자</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-add.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="메뉴 숨기기/보이기"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>미소사 관리페이지</b> <span class="pc-only">www.admin.com</span></a>
+            <!--logo end-->
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="index.html">홈</a></li>
+                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="images/logo.png" alt="" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">미소사</h5>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-desktop"></i> -->
+                          <span>사이트정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="info.html">기본정보</a></li>
+                            <li><a href="addinfo.html">추가정보</a></li>
+                            <li><a href="type.html">타입변경</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-cogs"></i> -->
+                          <span>사이트설정</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="popup.html">팝업관리</a></li>
+                            <li><a href="menu.html">메뉴관리</a></li>
+                            <li><a href="logo.html">로고설정</a></li>
+                            <li><a href="footer.html">하단(푸터)설정</a></li>
+                            <li><a href="main_photo.html">메인 슬라이드</a></li>
+                            <li><a href="photo.html">소개용 이미지(3장)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-pencil-square-o"></i> -->
+                          <span>페이지관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="store.html">매장소개</a></li>
+                            <li><a href="location.html">오시는길</a></li>
+                            <li class='active'><a href="reservation_info.html">예약안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-tasks"></i> -->
+                          <span>게시판관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="boardcate.html">카테고리관리</a></li>
+                            <li><a href="gallery.html">매장/갤러리</a></li>
+                            <li><a href="menu_info.html">메뉴소개</a></li>
+                            <li><a href="cscenter.html">고객의소리</a></li>
+                            <li><a href="review.html">리뷰 & 평가</a></li>
+                            <li><a href="notice.html">공지/이벤트</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-book"></i> -->
+                          <span>예약관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="reservation.html">예약관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-info-circle"></i> -->
+                          <span>관리자정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="user.html">관리자정보</a></li>
+                            <li><a href="changeuserpwd.html">비밀번호변경</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+                <div class="side_center">
+                    <h4>이존M고객센터</h4>
+                    <button class="btn btn-icon" onclick="">실시간 상담<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <p><img src="images/icon_tel.png" alt="" /><span>1544-8571</span></p>
+                    <dl>
+                        <dt>평일</dt>
+                        <dd>오전 10:00 ~ 오후 05:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>주말</dt>
+                        <dd>오전 12:00 ~ 오후 01:00</dd>
+                    </dl>
+                    <dl>
+                        <dd class="holiday">주말 및 공휴일은 휴무입니다.</dd>
+                    </dl>
+                    <ul class="quick-menu">
+                        <li><a href="javascript:;">활용가이드</a></li>
+                        <li><a href="javascript:;">제안하기</a></li>
+                        <li><a href="javascript:;">교육일정</a></li>
+                        <li><a href="javascript:;">활용사례</a></li>
+                        <li><a href="javascript:;">공지사항</a></li>
+                        <li><a href="javascript:;">보도자료</a></li>
+                        <li><a href="javascript:;">홍보동영상</a></li>
+                        <li><a href="javascript:;">자료실</a></li>
+                        <li><a href="javascript:;">자주하는질문</a></li>
+                        <li><a href="javascript:;">묻고답하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+
+        <!-- contents -->
+
+        <!-- //contents -->
+
+
+        <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+        <div id="layerZipCode" style="display:none;position:fixed;overflow:hidden;z-index:3;-webkit-overflow-scrolling:touch;">
+            <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeZipCode()" alt="닫기 버튼">
+        </div>
+
+        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+        <script>
+            // 우편번호 찾기 화면을 넣을 element
+            var element_layer = document.getElementById('layerZipCode');
+
+            function openZipCode(fldCode, fldAddr, fldAddrAdd) {
+                layer_execZipCode(fldCode, fldAddr, fldAddrAdd);
+            }
+
+            function closeZipCode() {
+                // iframe을 넣은 element를 안보이게 한다.
+                element_layer.style.display = 'none';
+            }
+
+            function layer_execZipCode(fldCode, fldAddr, fldAddrAdd) {
+                new daum.Postcode({
+                    oncomplete: function(data) {
+                        // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                        // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                        // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                        var fullAddr = data.roadAddress; // 최종 주소 변수
+                        var extraAddr = ''; // 조합형 주소 변수
+
+                        if (fullAddr == '') fullAddr = data.address;
+                        data.addressType === 'R';
+
+                        // 기본 주소가 도로명 타입일때 조합한다.
+                        if (data.addressType === 'R') {
+                            //법정동명이 있을 경우 추가한다.
+                            if (data.bname !== '') {
+                                extraAddr += data.bname;
+                            }
+                            // 건물명이 있을 경우 추가한다.
+                            if (data.buildingName !== '') {
+                                extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                            }
+                            // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                            //fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                        }
+
+                        // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                        document.getElementById(fldCode).value = data.zonecode; //5자리 새우편번호 사용
+                        document.getElementById(fldAddr).value = fullAddr;
+                        document.getElementById(fldAddrAdd).value = (extraAddr !== '' ? '(' + extraAddr + ')' : '');
+
+                        // iframe을 넣은 element를 안보이게 한다.
+                        // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+                        element_layer.style.display = 'none';
+                    },
+                    width: '100%',
+                    height: '100%'
+                }).embed(element_layer);
+
+                // iframe을 넣은 element를 보이게 한다.
+                element_layer.style.display = 'block';
+
+                // iframe을 넣은 element의 위치를 화면의 가운데로 이동시킨다.
+                initLayerPosition();
+            }
+
+            // 브라우저의 크기 변경에 따라 레이어를 가운데로 이동시키고자 하실때에는
+            // resize이벤트나, orientationchange이벤트를 이용하여 값이 변경될때마다 아래 함수를 실행 시켜 주시거나,
+            // 직접 element_layer의 top,left값을 수정해 주시면 됩니다.
+            function initLayerPosition() {
+                var width = 320; //우편번호서비스가 들어갈 element의 width
+                var height = 460; //우편번호서비스가 들어갈 element의 height
+                var borderWidth = 2; //샘플에서 사용하는 border의 두께
+
+                // 위에서 선언한 값들을 실제 element에 넣는다.
+                element_layer.style.width = width + 'px';
+                element_layer.style.height = height + 'px';
+                element_layer.style.border = borderWidth + 'px solid';
+                // 실행되는 순간의 화면 너비와 높이 값을 가져와서 중앙에 뜰 수 있도록 위치를 계산한다.
+                element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width) / 2 - borderWidth) + 'px';
+                element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height) / 2 - borderWidth) + 'px';
+            }
+        </script>
+
+
+
+
+        <!--main content start-->
+        <section id="main-content">
+            <section class="page-bar">
+                <i class="fa fa-home"></i> <a href="index.html">Home</a> > 사이트정보 > 기본정보
+            </section>
+            <section class="wrapper">
+                <h3>사이트정보</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-square"></i> 기본정보</h4>
+                            <div class="alert alert-warning">
+                                <b>*</b> 사이트 URL의 2차도메인 변경은 불가합니다.<br />
+                                <b>*</b> 대표이미지는 카톡 보내기 및 SNS 공유 등에 대표이미지로 사용됩니다.<br />
+                                <b>*</b> 사이트 타입(템플릿) 변경은 사이트정보 >> 타입변경 메뉴에서 가능합니다.<br />
+                            </div>
+                            <form class="form-horizontal style-form" id="StoreInfoForm" name="StoreInfoForm" method="post" action="">
+                                <input type="hidden" id="mode" name="mode" />
+                                <input type="hidden" id="ori_img1" name="ori_img1" value="2016/2016-09-07/W201609072006183995KBK2L.jpg" />
+                                <input type="hidden" id="ori_qrcode" name="ori_qrcode" value="QR00016099A5ED3SF6WN" />
+                                <input type="hidden" id="ori_qrcodeimg" name="ori_qrcodeimg" value="2016\2016-09-07\QR00016099A5ED3SF6WN.png" />
+                                <input type="hidden" id="map_latitude" name="map_latitude" value="37.5645762" />
+                                <input type="hidden" id="map_longitude" name="map_longitude" value="127.0664094" />
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">사이트 URL</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-static"><input type="text" class="form-control w40ps inline-block" id="site_id" name="site_id" maxlength="20" value="domain" />.ezonglobal.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">업종1차 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control" id="frm_BizCate1" name="frm_BizCate1"><option>업종 1차</option></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">업종 2차 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control" id="frm_BizCate2" name="frm_BizCate2"><option>업종 2차</option></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">지역 <span class="color-red">*</span></label>
+                                    <div class="col-sm-10">
+                                        <!--select class="form-control" id="country" name="country">
+                                     <option value="1">국내</option>
+                                     <option value="2">국외</option>
+                                </!--select-->
+                                        <select class="form-control" id="frm_AreaCate1" name="frm_AreaCate1" title="시/도" style="margin-bottom:5px;">
+									<option>시도</option>
+								</select>
+                                        <select class="form-control" id="frm_AreaCate2" name="frm_AreaCate2" title="시/군/구" style="margin-bottom:5px;">
+									<option>시군,구</option>
+								</select>
+                                        <select class="form-control" id="frm_AreaCate3" name="frm_AreaCate3" title="읍/동/면">
+									<option>읍,면,동</option>
+								</select>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">업체명 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_name" name="frm_name" maxlength="20" value="미소사">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">대표전화번호 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_tel" name="frm_tel" maxlength="20" value="15886020">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">휴대전화번호 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_hphone" name="frm_hphone" maxlength="20" value="010-123-1234">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">이메일 <span class="color-red">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_email" name="frm_email" maxlength="20" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">우편번호/주소 <span class="color-red">*</span></label>
+                                    <div class="col-sm-10">
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="frm_zipcode" name="frm_zipcode" maxlength="7" value="" style="margin-bottom:5px;"/>
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="button" onclick="openZipCode('frm_zipcode', 'frm_address', 'frm_addressadd');" style="margin-bottom:5px;">
+                                                            찾기
+                                                        </button> 
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="frm_address" name="frm_address" maxlength="100" value="" style="margin-bottom:5px;" />
+                                        <input type="text" class="form-control" id="frm_addressadd" name="frm_addressadd" maxlength="100" value="" />
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">대표이미지 <span class="color-red">*</span></label>
+                                            <div class="col-sm-10">
+                                                <div class="fileBox">
+                                                    <input type="text" class="fileName">
+                                                    <label for="uploadBtn" class="btn btn_file">찾아보기</label>
+                                                    <input type="file" class="form-control" id="frm_img1" name="frm_img1">
+                                                </div>
+                                                <img src="images/logo.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="text-center col-xs-12">
+                                    <a class="btn btn-theme" href="javascript:void(0);" onclick="">저장</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- col-lg-12-->
+                </div>
+                <!-- /row -->
+
+
+            </section>
+            <!--/wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+
+        <!--main content end-->
+
+        <script type="text/javascript">
+            <!--
+
+            CategoryCodeSelect(null, "frm_BizCate1|frm_BizCate2", true, "::: 업종1차 :::|::: 업종2차 :::", "CT000001001010AAAAAA", "BIZ01");
+            AreaCodeSelect(null, "frm_AreaCate1|frm_AreaCate2|frm_AreaCate3", true, "::: 시도 :::|::: 시군구 :::|::: 읍면동 :::", "009011005", "");
+
+
+            $(document).ready(function() {
+
+
+                var countryVal = $('#country').val();
+
+                if (countryVal == "1") {
+                    //changeDomestic();
+                } else {
+                    //changeExternal();
+                }
+
+                function changeDomestic() {
+                    CateCodeList("AreaCate1,AreaCate2", true, '009011005', 'AREA01', countryVal);
+                    $('#AreaCate2').attr('style', '');
+                    $('#AreaCate3').attr('style', 'display:none;');
+                    $('.external').attr('style', 'display:none;');
+                    $('.domestic').attr('style', '');
+                }
+
+                function changeExternal() {
+                    CateCodeList("AreaCate1", true, '009011005', 'AREA01', countryVal);
+                    $('#AreaCate2').attr('style', 'display:none;');
+                    $('#AreaCate3').attr('style', 'display:none;');
+                    $('.domestic').attr('style', 'display:none;');
+                    $('.external').attr('style', '');
+                }
+
+                $("#country").change(function(e) {
+                    countryVal = $('#country').val();
+
+                    if (countryVal == "1") {
+                        changeDomestic();
+                    } else {
+                        changeExternal();
+                    }
+                });
+
+
+
+
+            });
+
+
+            //-->
+        </script>
+
+
+
+
+
+    </section>
+
+    <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+    <div id="layerPopupArea" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+        <i class="fa fa-times-circle" aria-hidden="true" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:0px;z-index:1;width: 30px;height:30px;font-size:30px;" onclick="close_Popup('layerPopupArea');"></i>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPopupArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modalPopupContent">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/AreaCodeGnb.js"></script>
+    <script type="text/javascript" src="js/CategoryCodeGnb.js"></script>
+
+
+    <script src="js/master.js"></script>
+
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://namuya1.ezonglobal.cominfo.html">
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--script for this page-->
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--custom switch-->
+    <script src="js/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="js/jquery.tagsinput.js"></script>
+    <!--custom datepicker-->
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="js/jquery.frmvalid.js"></script>
+    <script src="js/form-component.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>관리자</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-add.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+
+    <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+    <div id="login-page" class="login_wrapper">
+        <div class="container">
+            <form class="form-login" name="MemLoginForm" id="MemLoginForm" method="post" action="index.html">
+                <input type="hidden" name="mode" id="mode" />
+                <p class="login_title">관리자로그인</p>
+                <small style="font-size:12px; color:#fff;">관리자 계정이므로 일반인은 접근할 수 없습니다.</small>
+                <div class="login-wrap">
+                    <input type="text" class="form-control" name="login_id" id="login_id" placeholder="아이디" autofocus>
+                    <br>
+                    <input type="password" class="form-control" name="login_pwd" id="login_pwd" placeholder="패스워드">
+                    <br>
+                    <button class="btn btn-theme btn-block" onclick=""><i class="fa fa-lock"></i> 로그인</button>
+                </div>
+                <p class="login_txt">관리자 계정생성 및 아이디, 비밀번호 분실은 이존M 고객센터로 문의 바랍니다.<br />
+                    02-777-7777 / admin@aaa.com</p>
+            </form>
+        </div>
+    </div>
+    
+
+    <input type="hidden" id="returnUrl" name="returnUrl" value="index.html">
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/func.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("images/main_top_bg.jpg", {
+            speed: 500
+        });
+    </script>
+
+
+</body>
+
+</html>

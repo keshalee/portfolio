@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>관리자</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-add.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="메뉴 숨기기/보이기"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>미소사 관리페이지</b> <span class="pc-only">www.admin.com</span></a>
+            <!--logo end-->
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="index.html">홈</a></li>
+                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="images/logo.png" alt="" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">미소사</h5>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-desktop"></i> -->
+                          <span>사이트정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="info.html">기본정보</a></li>
+                            <li><a href="addinfo.html">추가정보</a></li>
+                            <li><a href="type.html">타입변경</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-cogs"></i> -->
+                          <span>사이트설정</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="popup.html">팝업관리</a></li>
+                            <li><a href="menu.html">메뉴관리</a></li>
+                            <li><a href="logo.html">로고설정</a></li>
+                            <li><a href="footer.html">하단(푸터)설정</a></li>
+                            <li><a href="main_photo.html">메인 슬라이드</a></li>
+                            <li><a href="photo.html">소개용 이미지(3장)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-pencil-square-o"></i> -->
+                          <span>페이지관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="store.html">매장소개</a></li>
+                            <li><a href="location.html">오시는길</a></li>
+                            <li class='active'><a href="reservation_info.html">예약안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-tasks"></i> -->
+                          <span>게시판관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="boardcate.html">카테고리관리</a></li>
+                            <li><a href="gallery.html">매장/갤러리</a></li>
+                            <li><a href="menu_info.html">메뉴소개</a></li>
+                            <li><a href="cscenter.html">고객의소리</a></li>
+                            <li><a href="review.html">리뷰 & 평가</a></li>
+                            <li><a href="notice.html">공지/이벤트</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-book"></i> -->
+                          <span>예약관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="reservation.html">예약관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-info-circle"></i> -->
+                          <span>관리자정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="user.html">관리자정보</a></li>
+                            <li><a href="changeuserpwd.html">비밀번호변경</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+                <div class="side_center">
+                    <h4>이존M고객센터</h4>
+                    <button class="btn btn-icon" onclick="">실시간 상담<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <p><img src="images/icon_tel.png" alt="" /><span>1544-8571</span></p>
+                    <dl>
+                        <dt>평일</dt>
+                        <dd>오전 10:00 ~ 오후 05:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>주말</dt>
+                        <dd>오전 12:00 ~ 오후 01:00</dd>
+                    </dl>
+                    <dl>
+                        <dd class="holiday">주말 및 공휴일은 휴무입니다.</dd>
+                    </dl>
+                    <ul class="quick-menu">
+                        <li><a href="javascript:;">활용가이드</a></li>
+                        <li><a href="javascript:;">제안하기</a></li>
+                        <li><a href="javascript:;">교육일정</a></li>
+                        <li><a href="javascript:;">활용사례</a></li>
+                        <li><a href="javascript:;">공지사항</a></li>
+                        <li><a href="javascript:;">보도자료</a></li>
+                        <li><a href="javascript:;">홍보동영상</a></li>
+                        <li><a href="javascript:;">자료실</a></li>
+                        <li><a href="javascript:;">자주하는질문</a></li>
+                        <li><a href="javascript:;">묻고답하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+        <section id="main-content">
+            <section class="page-bar">
+                <i class="fa fa-home"></i> <a href="index.html">Home</a> > 사이트정보 > 추가정보
+            </section>
+            <section class="wrapper">
+                <h3>사이트정보</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+
+                    <form class="form-horizontal style-form" id="StoreInfoMoreForm" name="StoreInfoMoreForm" method="post" action="">
+                        <input type="hidden" id="mode" name="mode" value="" />
+
+                        <div class="col-lg-12">
+                            <div class="form-panel">
+                                <h4 class="mb"><i class="fa fa-square"></i> 추가정보</h4>
+                                <div class="alert alert-warning">
+                                    <b>*</b> 업체 한줄 소개는 사이트 타이틀에 들어갑니다.<br />
+                                    <b>*</b> 동영상 유튜브 주소는 메인페이지에 노출되는 타입인 경우 반드시 입력해야합니다.<br />
+                                    <b>*</b> 컬럼 체크박스에 체크하면 해당 페이지에 노출됩니다.<br />
+                                    <b>*</b> 메타태그용 키워드와 설명은 네이버 노출, 페이스북공유 등에 필요한 정보입니다.<br />
+                                    <b>*</b> 메타태그용 키워드는 컴마(,)로 구분해주세요.
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">사이트 타이틀 <!--span class="color-red">*</!--span--></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_title" name="frm_title" maxlength="100" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">업체 한줄소개(100자이내) <!--span class="color-red">*</!--span--></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_desc" name="frm_desc" maxlength="200" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">동영상 유튜브 주소<!--span class="color-red">*</!--span--></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_movie_url" name="frm_movie_url" maxlength="100" value="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">팩스 <span class="addchkarea"><input type="checkbox" name="frm_fax_fl" id="frm_fax_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_fax" name="frm_fax" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">통신판매업번호 <span class="addchkarea"><input type="checkbox" name="frm_retailbizno_fl" id="frm_retailbizno_fl" value="Y"  /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_retailbizno" name="frm_retailbizno" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">위치 <span class="addchkarea"><input type="checkbox" name="frm_place_fl" id="frm_place_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_place" name="frm_place" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">주차 <span class="addchkarea"><input type="checkbox" name="frm_parking_fl" id="frm_parking_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_parking" name="frm_parking" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">영업시간 <span class="addchkarea"><input type="checkbox" name="frm_biz_hours_fl" id="frm_biz_hours_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_biz_hours" name="frm_biz_hours" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">휴무일 <span class="addchkarea"><input type="checkbox" name="frm_closed_fl" id="frm_closed_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_closed" name="frm_closed" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">좌석 <span class="addchkarea"><input type="checkbox" name="frm_seat_fl" id="frm_seat_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_seat" name="frm_seat" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">홈페이지 <span class="addchkarea"><input type="checkbox" name="frm_homepage_fl" id="frm_homepage_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_homepage" name="frm_homepage" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">찾아오시는길 <span class="addchkarea"><input type="checkbox" name="frm_lookup_fl" id="frm_lookup_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_lookup" name="frm_lookup" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">할인서비스 <span class="addchkarea"><input type="checkbox" name="frm_dc_service_fl" id="frm_dc_service_fl" value="Y" checked /></span></label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="frm_dc_service" name="frm_dc_service" maxlength="100" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+
+                                        <!--div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">적립율 </label>
+                                            <div class="col-sm-10">
+                                                현금 : <input type="text" class="form-control" id="frm_saving_money" name="frm_saving_money" value="0.00" />
+                                                카드 : <input type="text" class="form-control" id="frm_saving_card" name="frm_saving_card" value="0.00" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div-->
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">키워드(메타태그용, 컴마(,)로 구분) <!--span class="color-red">*</!--span--></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_meta_keyword" name="frm_meta_keyword" maxlength="100" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">설명(메타태그용) <!--span class="color-red">*</!--span--></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_meta_desc" name="frm_meta_desc" maxlength="200" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">네이버 웹마스터도구 소유확인 키</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_meta_key_naver" name="frm_meta_key_naver" maxlength="200" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">구글 소유확인 키</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="frm_meta_key_google" name="frm_meta_key_google" maxlength="200" value="">
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- col-lg-12-->
+
+                        <div class="col-lg-12">
+                            <div class="form-panel">
+                                <h4 class="mb"><i class="fa fa-square"></i> SNS 정보</h4>
+                                <div class="alert alert-warning">
+                                    <b>*</b> 소유하고 계신 SNS 계정 URL 정보를 입력하세요.<br />
+                                    <b>*</b> 컬럼 체크박스에 체크하면 사이트 하단 SNS 정보란에 노출됩니다.
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">트위터주소 <span class="addchkarea"><input type="checkbox" name="frm_twitter_link_fl" id="frm_twitter_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_twitter_link" name="frm_twitter_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">페이스북주소 <span class="addchkarea"><input type="checkbox" name="frm_facebook_link_fl" id="frm_facebook_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_facebook_link" name="frm_facebook_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">구글플러스주소 <span class="addchkarea"><input type="checkbox" name="frm_googleplus_link_fl" id="frm_googleplus_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_googleplus_link" name="frm_googleplus_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">인스타그램주소 <span class="addchkarea"><input type="checkbox" name="frm_instagram_link_fl" id="frm_instagram_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_instagram_link" name="frm_instagram_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div class="col-sm-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">링크드인주소 <span class="addchkarea"><input type="checkbox" name="frm_linkedin_link_fl" id="frm_linkedin_link_fl" value="Y"  /></span></label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="frm_linkedin_link" name="frm_linkedin_link" maxlength="100" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </!--div-->
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">네이버블로그주소 <span class="addchkarea"><input type="checkbox" name="frm_naverblog_link_fl" id="frm_naverblog_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_naverblog_link" name="frm_naverblog_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div class="col-sm-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">네이버카페주소 <span class="addchkarea"><input type="checkbox" name="frm_navercafe_link_fl" id="frm_navercafe_link_fl" value="Y"  /></span></label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="frm_navercafe_link" name="frm_navercafe_link" maxlength="100" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </!--div-->
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">밴드주소 <span class="addchkarea"><input type="checkbox" name="frm_naverband_link_fl" id="frm_naverband_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_naverband_link" name="frm_naverband_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div class="col-sm-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">다음블로그주소 <span class="addchkarea"><input type="checkbox" name="frm_daumblog_link_fl" id="frm_daumblog_link_fl" value="Y"  /></span></label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="frm_daumblog_link" name="frm_daumblog_link" maxlength="100" value="" />
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">다음카페주소 <span class="addchkarea"><input type="checkbox" name="frm_daumcafe_link_fl" id="frm_daumcafe_link_fl" value="Y"  /></span></label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="frm_daumcafe_link" name="frm_daumcafe_link" maxlength="100" value="" />
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div-->
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">카카오스토리주소 <span class="addchkarea"><input type="checkbox" name="frm_kakaostory_link_fl" id="frm_kakaostory_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_kakaostory_link" name="frm_kakaostory_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">옐로우아이디주소 <span class="addchkarea"><input type="checkbox" name="frm_kakaoyellowid_link_fl" id="frm_kakaoyellowid_link_fl" value="Y"  /></span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="frm_kakaoyellowid_link" name="frm_kakaoyellowid_link" maxlength="100" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="text-center col-xs-12">
+                                    <a class="btn btn-theme" href="javascript:void(0);" onclick="">저장</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- col-lg-12-->
+
+
+
+                    </form>
+
+                </div>
+                <!-- /row -->
+
+
+            </section>
+            <!--/wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+
+        <!--main content end-->
+
+
+
+
+
+    </section>
+
+    <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+    <div id="layerPopupArea" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+        <i class="fa fa-times-circle" aria-hidden="true" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:0px;z-index:1;width: 30px;height:30px;font-size:30px;" onclick="close_Popup('layerPopupArea');"></i>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPopupArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modalPopupContent">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/master.js"></script>
+
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://namuya1.ezonglobal.comaddinfo.html">
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--script for this page-->
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--custom switch-->
+    <script src="js/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="js/jquery.tagsinput.js"></script>
+    <!--custom datepicker-->
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="js/jquery.frmvalid.js"></script>
+    <script src="js/form-component.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+
+</body>
+
+</html>

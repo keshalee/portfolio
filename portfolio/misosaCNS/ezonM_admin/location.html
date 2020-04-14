@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>관리자</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-add.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="메뉴 숨기기/보이기"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>미소사 관리페이지</b> <span class="pc-only">www.admin.com</span></a>
+            <!--logo end-->
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="index.html">홈</a></li>
+                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="images/logo.png" alt="" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">미소사</h5>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-desktop"></i> -->
+                          <span>사이트정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="info.html">기본정보</a></li>
+                            <li><a href="addinfo.html">추가정보</a></li>
+                            <li><a href="type.html">타입변경</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-cogs"></i> -->
+                          <span>사이트설정</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="popup.html">팝업관리</a></li>
+                            <li><a href="menu.html">메뉴관리</a></li>
+                            <li><a href="logo.html">로고설정</a></li>
+                            <li><a href="footer.html">하단(푸터)설정</a></li>
+                            <li><a href="main_photo.html">메인 슬라이드</a></li>
+                            <li><a href="photo.html">소개용 이미지(3장)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-pencil-square-o"></i> -->
+                          <span>페이지관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="store.html">매장소개</a></li>
+                            <li><a href="location.html">오시는길</a></li>
+                            <li class='active'><a href="reservation_info.html">예약안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-tasks"></i> -->
+                          <span>게시판관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="boardcate.html">카테고리관리</a></li>
+                            <li><a href="gallery.html">매장/갤러리</a></li>
+                            <li><a href="menu_info.html">메뉴소개</a></li>
+                            <li><a href="cscenter.html">고객의소리</a></li>
+                            <li><a href="review.html">리뷰 & 평가</a></li>
+                            <li><a href="notice.html">공지/이벤트</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-book"></i> -->
+                          <span>예약관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="reservation.html">예약관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-info-circle"></i> -->
+                          <span>관리자정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="user.html">관리자정보</a></li>
+                            <li><a href="changeuserpwd.html">비밀번호변경</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+                <div class="side_center">
+                    <h4>이존M고객센터</h4>
+                    <button class="btn btn-icon" onclick="">실시간 상담<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <p><img src="images/icon_tel.png" alt="" /><span>1544-8571</span></p>
+                    <dl>
+                        <dt>평일</dt>
+                        <dd>오전 10:00 ~ 오후 05:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>주말</dt>
+                        <dd>오전 12:00 ~ 오후 01:00</dd>
+                    </dl>
+                    <dl>
+                        <dd class="holiday">주말 및 공휴일은 휴무입니다.</dd>
+                    </dl>
+                    <ul class="quick-menu">
+                        <li><a href="javascript:;">활용가이드</a></li>
+                        <li><a href="javascript:;">제안하기</a></li>
+                        <li><a href="javascript:;">교육일정</a></li>
+                        <li><a href="javascript:;">활용사례</a></li>
+                        <li><a href="javascript:;">공지사항</a></li>
+                        <li><a href="javascript:;">보도자료</a></li>
+                        <li><a href="javascript:;">홍보동영상</a></li>
+                        <li><a href="javascript:;">자료실</a></li>
+                        <li><a href="javascript:;">자주하는질문</a></li>
+                        <li><a href="javascript:;">묻고답하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+        <script src="ckeditor/ckeditor.js"></script>
+        
+        <!--main content start-->
+        <section id="main-content">
+            <section class="page-bar">
+                <i class="fa fa-home"></i> <a href="index.html">Home</a> > 페이지관리 > 오시는길
+            </section>
+            <section class="wrapper">
+                <h3>오시는길</h3>
+
+                <div class="row mt">
+
+
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <!--h4 class="mb"><i class="fa fa-square"></i> 상단 로고</!--h4-->
+                            <div class="alert alert-warning">
+                                <b>*</b> 공개여부를 확인해주세요.
+                            </div>
+
+
+
+                            <form class="form-horizontal style-form" id="PageSaveForm" name="PageSaveForm" method="post" action="">
+                                <input type="hidden" id="PageSaveForm_mode" name="mode" />
+                                <input type="hidden" id="did" name="did" value="DT000160908AAE3RX02N" />
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">페이지명 </label>
+                                    <div class="col-sm-10">
+                                        오시는길
+                                    </div>
+                                </div>
+                                <!--div class="form-group">
+                                <label class="col-sm-2 control-label">한줄설명(100자이내) </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="frm_title" name="frm_title" maxlength="200" value="오시는길 타이틀입니다.">
+                                </div>
+                            </!--div-->
+                                <!--div class="form-group">
+                                <label class="col-sm-2 control-label">이미지 </label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" id="frm_img1" name="frm_img1">
+                                                
+                                </div>
+                            </!--div-->
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">내용 <span class="color-red">*</span></label>
+                                    <div class="col-sm-10">
+                                        <textarea cols="80" id="contents" name="contents" rows="10"><p>교통편 : 버스 000번으로 장안평역 하차 도보 5분</p>
+
+<p>지하철 :장안평역 4번 출구 도보 2분</p>
+</textarea>
+                                        <script>
+                                            CKEDITOR.replace('contents', {
+                                                filebrowserImageUploadUrl: "/common/js/editor/ckeditor/upload/upload.ashx?skey=namuya1&ugubun=image"
+                                            });
+
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label use-label">공개여부</label>
+                                    <div class="col-sm-10">
+                                        <label class="checkbox-inline">
+						            <input type="radio" id="inlineCheckbox1" name="use_yn" value="Y" checked /> 공개
+						        </label>
+                                        <label class="checkbox-inline">
+						            <input type="radio" id="inlineCheckbox2" name="use_yn" value="N"  /> 비공개
+						        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-center col-xs-12">
+                                    <a class="btn btn-theme" href="javascript:void(0);" onclick="">저장</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- col-lg-12-->
+                </div>
+                <!-- /row -->
+
+
+            </section>
+            <!--/wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+
+        <!--main content end-->
+
+
+
+
+
+    </section>
+
+    <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+    <div id="layerPopupArea" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+        <i class="fa fa-times-circle" aria-hidden="true" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:0px;z-index:1;width: 30px;height:30px;font-size:30px;" onclick="close_Popup('layerPopupArea');"></i>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPopupArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modalPopupContent">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/master.js"></script>
+
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://namuya1.ezonglobal.comdata.html?did=DT000160908AAE3RX02N">
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--script for this page-->
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--custom switch-->
+    <script src="js/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="js/jquery.tagsinput.js"></script>
+    <!--custom datepicker-->
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="js/jquery.frmvalid.js"></script>
+    <script src="js/form-component.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>관리자</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-add.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="메뉴 숨기기/보이기"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>미소사 관리페이지</b> <span class="pc-only">www.admin.com</span></a>
+            <!--logo end-->
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="index.html">홈</a></li>
+                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="images/logo.png" alt="" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">미소사</h5>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-desktop"></i> -->
+                          <span>사이트정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="info.html">기본정보</a></li>
+                            <li><a href="addinfo.html">추가정보</a></li>
+                            <li class='active'><a href="type.html">타입변경</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-cogs"></i> -->
+                          <span>사이트설정</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="popup.html">팝업관리</a></li>
+                            <li><a href="menu.html">메뉴관리</a></li>
+                            <li><a href="logo.html">로고설정</a></li>
+                            <li><a href="footer.html">하단(푸터)설정</a></li>
+                            <li><a href="main_photo.html">메인 슬라이드</a></li>
+                            <li><a href="photo.html">소개용 이미지(3장)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-pencil-square-o"></i> -->
+                          <span>페이지관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>회사소개</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="store.html">회사개요</a></li>
+                                    <li><a href="">CEO인사말</a></li>
+                                    <li><a href="">경영철학과 이념</a></li>
+                                    <li><a href="">스텝소개</a></li>
+                                    <li><a href="">연혁</a></li>
+                                    <li><a href="">조직도</a></li>
+                                    <li><a href="">CI/BI</a></li>
+                                    <li><a href="">제휴문의</a></li>
+                                    <li><a href="">협력업체</a></li>
+                                    <li><a href="">지사안내</a></li>
+                                    <li><a href="location.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>사업소개</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="">사업분야</a></li>
+                                    <li><a href="">포트폴리오</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>제품소개</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="">A제품</a></li>
+                                    <li><a href="">B제품</a></li>
+                                    <li><a href="">C제품</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>인재채용</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="">채용안내</a></li>
+                                    <li><a href="">채용부분</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>홍보센터</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="">보도자료</a></li>
+                                    <li><a href="">홍보동영상</a></li>
+                                    <li><a href="">사회공헌</a></li>
+                                    <li><a href="">인증서</a></li>
+                                </ul>
+                            </li><li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>고객센터</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="faq.html">자주하는질문</a></li>
+                                    <li><a href="">묻고답하기</a></li>
+                                    <li><a href="">자료실</a></li>
+                                    <li><a href="review.html">이용후기</a></li>
+                                    <li><a href="">이벤트</a></li>
+                                    <li><a href="">행사일정표</a></li>
+                                    <li><a href="">사이트맵</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:void(0);">
+                                  <!-- <i class="fa fa-pencil-square-o"></i> -->
+                                  <span>예약하기</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="reservation_info.html">예약안내</a></li>
+                                    <li><a href="">신청하기</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-tasks"></i> -->
+                          <span>게시판관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="boardcate.html">카테고리관리</a></li>
+                            <li><a href="gallery.html">매장/갤러리</a></li>
+                            <li><a href="menu_info.html">메뉴소개</a></li>
+                            <li><a href="cscenter.html">고객의소리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-book"></i> -->
+                          <span>예약관리</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="reservation.html">예약관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                          <!-- <i class="fa fa-info-circle"></i> -->
+                          <span>관리자정보</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="user.html">관리자정보</a></li>
+                            <li><a href="changeuserpwd.html">비밀번호변경</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+                <div class="side_center">
+                    <h4>이존M고객센터</h4>
+                    <button class="btn btn-icon" onclick="">실시간 상담<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <p><img src="images/icon_tel.png" alt="" /><span>1544-8571</span></p>
+                    <dl>
+                        <dt>평일</dt>
+                        <dd>오전 10:00 ~ 오후 05:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>주말</dt>
+                        <dd>오전 12:00 ~ 오후 01:00</dd>
+                    </dl>
+                    <dl>
+                        <dd class="holiday">주말 및 공휴일은 휴무입니다.</dd>
+                    </dl>
+                    <ul class="quick-menu">
+                        <li><a href="javascript:;">활용가이드</a></li>
+                        <li><a href="javascript:;">제안하기</a></li>
+                        <li><a href="javascript:;">교육일정</a></li>
+                        <li><a href="javascript:;">활용사례</a></li>
+                        <li><a href="javascript:;">공지사항</a></li>
+                        <li><a href="javascript:;">보도자료</a></li>
+                        <li><a href="javascript:;">홍보동영상</a></li>
+                        <li><a href="javascript:;">자료실</a></li>
+                        <li><a href="javascript:;">자주하는질문</a></li>
+                        <li><a href="javascript:;">묻고답하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="page-bar">
+                <i class="fa fa-home"></i> <a href="index.html">Home</a> > 사이트정보 > 타입변경
+            </section>
+            <section class="wrapper">
+                <h3>타입변경</h3>
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-square"></i> 내가 설정한 타입</h4>
+                            <div class="alert alert-warning">
+                                <b>*</b> 아래에서 선택하시는 부분의 내용은 샘플타입만 선택하는 것이며 실제 사용여부와 내용수정은 페이지 관리와 게시판 관리에서 가능합니다.<br />
+                            </div>
+                            <div class="solution_list solution_list2">
+                                <div class="col-lg-4 col-md-4 col-sm-12 np">
+                                    <img src="images/solution_img1.jpg" alt="" style="width:100%;" />
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-12 mb">
+                                    <div class="solution_txt">
+                                        <p class="title"><a href="javascript:;">맛집분양템플렛 A-001</a></p>
+                                        <p class="content">
+                                            공용타입 / 추천업종 : <span>요식업</span><br />
+                                            시중가 : <span> 2,000,000원 상당 (이용기간내 무료제공)</span><br />
+                                            최초세팅비 : <span> 180,000원&lt; 최초1회 &gt; (이벤트가)</span><br />
+                                            변형타입 : 상단구조 및 상세타입 실시간 변경가능 <br />
+                                            월 호스팅비 : 월 15,000원 &lt;년선납 180,000원&gt; (이벤트가)<br />
+                                            구동환경 : 인터넷익스플로워 8이상<br />
+                                            특이사항 : 디자인 상세타입 변경가능, 기본 디자인무료제공범위(로고, 메인배너 수정, 카테고리1차, 2차, 푸터)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-lg-12-->
+                </div>
+                
+                <div class="row mt">
+                    <div class="text-center col-xs-12">
+                        <div class="alert alert-warning warning-type">
+                            타입변경 : 내가 선택하신 타입내 변경은 무료이며 실시간 반영됩니다.<br />
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel" id="radio1_gp">
+                            <h4 class="mb"><i class="fa fa-square"></i> 헤드디자인 선택</h4>
+                            <!-- Blog Panel -->
+                            <div class="radio_gp"> 
+                                <input name="radio1" type="radio" title="A타입" value="tab_a" id="label1" checked /><span class="radiospan"><label for="label1">A타입</label></span> 
+                                <input name="radio1" type="radio" title="B타입" value="tab_b" id="label2" /><span class="radiospan"><label for="label2">B타입</label></span>  
+                                <input name="radio1" type="radio" title="C타입" value="tab_c" id="label3" /><span class="radiospan"><label for="label3">C타입</label></span> 
+                                <input name="radio1" type="radio" title="D타입" value="tab_d" id="label4" /><span class="radiospan"><label for="label4">D타입</label></span> 
+                            </div>
+                            <div class="colorPicker">
+                                <span><img src="images/sub_line2.png" alt="" />헤드 배경색상 선택 : </span><input type="text" id="color-pic1" value="#333333" readonly>
+                            </div>
+                            <div class="check_content">
+                                <div class="col-sm-12 mb hiddencontents tab_a on">
+                                    <img src="images/top_img1.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_b">
+                                    <img src="images/top_img2.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_c">
+                                    <img src="images/top_img3.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_d">
+                                    <img src="images/top_img4.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                            </div>
+                            <div class="text-center col-xs-12">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">선택하기</a>
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col-lg-12 -->
+                    <script>
+                        $(document).ready(function(){
+                            $("input:radio[name=radio1]").click(function(){
+                                var tabName = $(this).attr("value");
+                                $("#radio1_gp").find("."+tabName).addClass("on").siblings().removeClass("on");
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel" id="radio2_gp">
+                            <h4 class="mb"><i class="fa fa-square"></i> 카테고리 나열형태 선택</h4>
+                            <!-- Blog Panel -->
+                            <div class="radio_gp"> 
+                                <input name="radio2" type="radio" title="A타입" value="tab_a" id="label5" checked /><span class="radiospan"><label for="label5">A타입</label></span> 
+                                <input name="radio2" type="radio" title="B타입" value="tab_b" id="label6" /><span class="radiospan"><label for="label6">B타입</label></span>  
+                                <input name="radio2" type="radio" title="C타입" value="tab_c" id="label7" /><span class="radiospan"><label for="label7">C타입</label></span> 
+                                <input name="radio2" type="radio" title="D타입" value="tab_d" id="label8" /><span class="radiospan"><label for="label8">D타입</label></span> 
+                            </div>
+                            <div class="check_content">
+                                <div class="col-sm-12 mb hiddencontents tab_a on">
+                                    <img src="images/c01.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_b">
+                                    <img src="images/c02.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_c">
+                                    <img src="images/c03.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_d">
+                                    <img src="images/c04-1.jpg" alt="" style="width:100%" />
+                                    <img src="images/c04-2.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                            </div>
+                            <div class="text-center col-xs-12">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">선택하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col-lg-12 -->
+                    <script>
+                        $(document).ready(function(){
+                            $("input:radio[name=radio2]").click(function(){
+                                var tabName = $(this).attr("value");
+                                $("#radio2_gp").find("."+tabName).addClass("on").siblings().removeClass("on");
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel" id="radio5_gp">
+                            <h4 class="mb"><i class="fa fa-square"></i> 상세페이지 유형 선택</h4>
+                            <!-- Blog Panel -->
+                            <div class="radio_gp"> 
+                                <input name="radio5" type="radio" title="A타입" value="tab_a" id="label12" checked /><span class="radiospan"><label for="label12">A타입</label></span> 
+                                <input name="radio5" type="radio" title="B타입" value="tab_b" id="label13" /><span class="radiospan"><label for="label13">B타입</label></span>  
+                                <input name="radio5" type="radio" title="C타입" value="tab_c" id="label14" /><span class="radiospan"><label for="label14">C타입</label></span> 
+                                <input name="radio5" type="radio" title="D타입" value="tab_d" id="label15" /><span class="radiospan"><label for="label15">D타입</label></span> 
+                            </div>
+                            <div class="check_content">
+                                <div class="col-sm-12 mb hiddencontents tab_a on">
+                                    <img src="images/c01.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_b">
+                                    <img src="images/c02.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_c">
+                                    <img src="images/c03.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_d">
+                                    <img src="images/c04-1.jpg" alt="" style="width:100%" />
+                                    <img src="images/c04-2.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                            </div>
+                            <div class="text-center col-xs-12">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">선택하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col-lg-12 -->
+                    <script>
+                        $(document).ready(function(){
+                            $("input:radio[name=radio5]").click(function(){
+                                var tabName = $(this).attr("value");
+                                $("#radio5_gp").find("."+tabName).addClass("on").siblings().removeClass("on");
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-square"></i> 상세페이지 선택</h4>
+                            <!-- Blog Panel -->
+                            <div id="select_gp" class="select_gp"> 
+                                <div class="sub_menu clearfix">
+                                    <div class="sub_all">
+                                        <ul class="clearfix">
+                                            <li class="menu_select"><a href="javascript:;">회사소개<i>∨</i></a><span>&gt;</span>
+                                                <ul class="select_list">
+                                                    <li><a href="javascript:;">회사소개</a></li>
+                                                    <li><a href="javascript:;">사업소개</a></li>
+                                                    <li><a href="javascript:;">제품소개</a></li>
+                                                    <li><a href="javascript:;">인재채용</a></li>
+                                                    <li><a href="javascript:;">홍보센터</a></li>
+                                                    <li><a href="javascript:;">고객센터</a></li>
+                                                    <li><a href="javascript:;">예약하기</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu_select"><a href="javascript:;">회사개요<i>∨</i></a>
+                                                <ul class="select_list">
+                                                    <li><a href="javascript:;">회사개요</a></li>
+                                                    <li><a href="javascript:;">CEO인사말</a></li>
+                                                    <li><a href="javascript:;">경영철학과 이념</a></li>
+                                                    <li><a href="javascript:;">스텝소개</a></li>
+                                                    <li><a href="javascript:;">연혁</a></li>
+                                                    <li><a href="javascript:;">조직도</a></li>
+                                                    <li><a href="javascript:;">CI/BI</a></li>
+                                                    <li><a href="javascript:;">제휴문의</a></li>
+                                                    <li><a href="javascript:;">협력업체</a></li>
+                                                    <li><a href="javascript:;">지사안내</a></li>
+                                                    <li><a href="javascript:;">찾아오시는길</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_content">
+                                <div class="col-lg-4 col-md-6 mb tab_a on">
+                                    <div class="imgbox">
+                                        <input name="radio3" type="radio" id="img1-1" checked />
+                                        <label for="img1-1"><img src="images/img1-1.jpg" alt="" style="width:100%" /></label>
+                                    </div>
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-lg-4 col-md-6 mb tab_b">
+                                    <div class="imgbox">
+                                        <input name="radio3" type="radio" id="img2-1" />
+                                        <label for="img2-1"><img src="images/img2-1.jpg" alt="" style="width:100%" /></label>
+                                    </div>
+                                </div>
+                                <!-- /col-md-12-->
+                            </div>
+                            <div class="text-center col-xs-12">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">선택하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col-lg-12 -->
+                    <script>
+                        $(document).ready(function(){
+                            sub_menu();
+                        });
+                        function sub_menu() {
+                            $(".select_list").hide();
+                            $(".menu_select").click(function(e){
+                                $(this).find(".select_list").slideToggle();
+                            });
+                        }
+                    </script>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel" id="radio4_gp">
+                            <h4 class="mb"><i class="fa fa-square"></i> 푸터디자인 선택</h4>
+                            <!-- Blog Panel -->
+                            <div class="radio_gp"> 
+                                <input name="radio4" type="radio" title="A타입" value="tab_a" id="label9" checked /><span class="radiospan"><label for="label9">A타입</label></span> 
+                                <input name="radio4" type="radio" title="B타입" value="tab_b" id="label10" /><span class="radiospan"><label for="label10">B타입</label></span>  
+                            </div>
+                            <div class="colorPicker">
+                                <span><img src="images/sub_line2.png" alt="" />푸터 배경색상 선택 : </span><input type="text" id="color-pic2" value="#333333" readonly>
+                            </div>
+                            <div class="check_content">
+                                <div class="col-sm-12 mb hiddencontents tab_a on">
+                                    <img src="images/f01.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                                <div class="col-sm-12 mb hiddencontents tab_b">
+                                    <img src="images/f02.jpg" alt="" style="width:100%" />
+                                </div>
+                                <!-- /col-md-12-->
+                            </div>
+                            <div class="text-center col-xs-12">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">선택하기</a>
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col-lg-12 -->
+                    <script>
+                        $(document).ready(function(){
+                            $("input:radio[name=radio4]").click(function(){
+                                var tabName = $(this).attr("value");
+                                $("#radio4_gp").find("."+tabName).addClass("on").siblings().removeClass("on");
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="text-center col-xs-12">
+                        <a class="btn btn-theme" href="javascript:void(0);" onclick="">미리보기</a>
+                        <a class="btn btn-theme" href="javascript:void(0);" onclick="">적용하기</a>
+                        <a class="btn btn-theme" href="javascript:void(0);" onclick="">취소하기</a>
+                    </div>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="text-center col-xs-12">
+                        <div class="alert alert-warning warning-type">
+                            부가서비스 : 서비스이용시 일정비용이 발생하며 선택사항입니다.<br />
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel solution_result">
+                            <h4 class="mb"><i class="fa fa-square"></i> 운영중인 템플렛을 동일업종의 다른 메인타입으로 변경</h4>
+                            <div class="alert alert-warning">
+                                <b>*</b> 운영중인 데이터는 자동으로 실시간 이전되나 이전시 최초 1회 55,000원 &lt;부가세포함&gt;의 세팅비가 청구됩니다.<br />
+                            </div>
+                            <!-- Blog Panel -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb">
+                                <div class="solution_list">
+                                    <img src="images/m04.jpg" alt=""/>
+                                    <div class="solution_txt">
+                                        <p class="title"><a href="javascript:;">맛집분양템플렛 A-001</a></p>
+                                        <p class="content">
+                                            공용타입 / 추천업종 : <span>요식업</span><br />
+                                            시중가 : <span> 2,000,000원 상당 (이용기간내 무료제공)</span><br />
+                                            최초세팅비 : <span> 180,000원&lt; 최초1회 &gt; (이벤트가)</span><br />
+                                            변형타입 : 상단구조 및 상세타입 실시간 변경가능 <br />
+                                            월 호스팅비 : 월 15,000원 &lt;년선납 180,000원&gt; (이벤트가)<br />
+                                            구동환경 : 인터넷익스플로워 8이상<br />
+                                            특이사항 : 디자인 상세타입 변경가능, 기본 디자인무료제공범위(로고, 메인배너 수정, 카테고리1차, 2차, 푸터)
+                                        </p>
+                                    </div>
+                                    <div class="solution_link">
+                                        <div class="link_go">
+                                            <a href="javascript:;">상세보기</a>
+                                        </div>
+                                        <div class="link_go">
+                                            <a href="javascript:;">신청하기</a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/mobile_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/tablet_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device last hidden-xs">
+                                            <a href="#"><img src="images/desktop_img.png" alt=""/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /col-md-4-->
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb">
+                                <div class="solution_list">
+                                    <img src="images/m04.jpg" alt=""/>
+                                    <div class="solution_txt">
+                                        <p class="title"><a href="javascript:;">맛집분양템플렛 A-001</a></p>
+                                        <p class="content">
+                                            공용타입 / 추천업종 : <span>요식업</span><br />
+                                            시중가 : <span> 2,000,000원 상당 (이용기간내 무료제공)</span><br />
+                                            최초세팅비 : <span> 180,000원&lt; 최초1회 &gt; (이벤트가)</span><br />
+                                            변형타입 : 상단구조 및 상세타입 실시간 변경가능 <br />
+                                            월 호스팅비 : 월 15,000원 &lt;년선납 180,000원&gt; (이벤트가)<br />
+                                            구동환경 : 인터넷익스플로워 8이상<br />
+                                            특이사항 : 디자인 상세타입 변경가능, 기본 디자인무료제공범위(로고, 메인배너 수정, 카테고리1차, 2차, 푸터)
+                                        </p>
+                                    </div>
+                                    <div class="solution_link">
+                                        <div class="link_go">
+                                            <a href="javascript:;">상세보기</a>
+                                        </div>
+                                        <div class="link_go">
+                                            <a href="javascript:;">신청하기</a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/mobile_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/tablet_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device last hidden-xs">
+                                            <a href="#"><img src="images/desktop_img.png" alt=""/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /col-md-4-->
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb">
+                                <div class="solution_list">
+                                    <img src="images/m04.jpg" alt=""/>
+                                    <div class="solution_txt">
+                                        <p class="title"><a href="javascript:;">맛집분양템플렛 A-001</a></p>
+                                        <p class="content">
+                                            공용타입 / 추천업종 : <span>요식업</span><br />
+                                            시중가 : <span> 2,000,000원 상당 (이용기간내 무료제공)</span><br />
+                                            최초세팅비 : <span> 180,000원&lt; 최초1회 &gt; (이벤트가)</span><br />
+                                            변형타입 : 상단구조 및 상세타입 실시간 변경가능 <br />
+                                            월 호스팅비 : 월 15,000원 &lt;년선납 180,000원&gt; (이벤트가)<br />
+                                            구동환경 : 인터넷익스플로워 8이상<br />
+                                            특이사항 : 디자인 상세타입 변경가능, 기본 디자인무료제공범위(로고, 메인배너 수정, 카테고리1차, 2차, 푸터)
+                                        </p>
+                                    </div>
+                                    <div class="solution_link">
+                                        <div class="link_go">
+                                            <a href="javascript:;">상세보기</a>
+                                        </div>
+                                        <div class="link_go">
+                                            <a href="javascript:;">신청하기</a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/mobile_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device hidden-xs">
+                                            <a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="images/tablet_img.png" alt=""/></a>
+                                        </div>
+                                        <div class="link_go device last hidden-xs">
+                                            <a href="#"><img src="images/desktop_img.png" alt=""/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center col-xs-12 mb btn-more">
+                                <a class="btn btn-theme" href="javascript:void(0);" onclick="">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-lg-12-->
+                    <script>
+                        $(".btn-more").click(function(){
+                            var clone = $(this).parent(".solution_result").find(".col-lg-4").clone();
+                            var btn_clone = $(this).clone();
+                            $(this).parent(".solution_result").append(clone);
+                            $(this).css({"display":"none"});
+                            $(this).parent(".solution_result").append(btn_clone);
+                            e.preventDefault();
+                        });
+                    </script>
+                </div>
+                <!-- /row -->
+                
+            </section>
+            <!--/wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+    </section>
+
+    <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+    <div id="layerPopupArea" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+        <i class="fa fa-times-circle" aria-hidden="true" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:0px;z-index:1;width: 30px;height:30px;font-size:30px;" onclick="close_Popup('layerPopupArea');"></i>
+    </div>
+
+    <!-- mobile device -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm mobileModal">
+            <div class="modal-content">
+                <iframe class="mobile_wrap" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- tablet device -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg tabletModal">
+            <div class="modal-content">
+                <iframe class="tablet_wrap" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(window).load(function(){
+
+            //image scale up
+            $(".size_up").click(function(){
+
+                //if window size is '992px' more...
+                if(parseInt($(window).width()) >= 992){
+                    var $cloneImg = $(this).parent().parent().prev('.port_im').clone();
+
+                    $cloneImg.addClass('cloneImg').css({
+                        position: 'relative',
+                        top: '15%',
+                        width: '900px'
+                    });
+
+                    $(".portfolio_img_view").addClass('portfolio_img_active').append($cloneImg);
+
+                }
+                else{
+                    alert('윈도우 사이즈가 992px 이상일 때만 동작합니다.');
+                }
+
+                return false;
+            });
+
+            $('body').click(function(){
+                $(".portfolio_img_view").removeClass('portfolio_img_active');
+                $(".cloneImg").remove();
+            });
+
+        });
+    </script>
+
+    <script src="js/master.js"></script>
+
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://namuya1.ezonglobal.comboard.html?bcid=BC000160908AAE3RX06N">
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--script for this page-->
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--custom switch-->
+    <script src="js/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="js/jquery.tagsinput.js"></script>
+    <!--custom datepicker-->
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.kr.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="js/jquery.frmvalid.js"></script>
+    <script src="js/form-component.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/colpickRmx.css" />
+    <script src="js/colpickRmx.js"></script>
+    <script>
+        jQuery(function() {
+            $('#color-pic1').newColpick({
+                layout: 'hex',
+                flat: false,
+                enableAlpha: false,
+                color: '333333',
+                onSubmit: function(ev) {
+                    $(ev.el).css('border-color', '#' + ev.hex);
+                    $(ev.el).val("#" + ev.hex);
+                    $(ev.el).hideColpick();
+                },
+                onHide: function(ev) {
+                    var color = $(ev.el).getColpickColor("hex", true);
+                    $(ev.el).setColpickColor(color, false);
+                }
+            });
+            $('#color-pic2').newColpick({
+                layout: 'hex',
+                flat: false,
+                enableAlpha: false,
+                color: '333333',
+                onSubmit: function(ev) {
+                    $(ev.el).css('border-color', '#' + ev.hex);
+                    $(ev.el).val("#" + ev.hex);
+                    $(ev.el).hideColpick();
+                },
+                onHide: function(ev) {
+                    var color = $(ev.el).getColpickColor("hex", true);
+                    $(ev.el).setColpickColor(color, false);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
