@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../../css/slick.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <script src="../include/header_ifm.js"></script>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <!-- S:side_wrap -->
+            <section class="side_wrap">
+                <!-- S:ticker_box -->
+                <script src="../include/left_ticker_box.js"></script>
+                <!-- E:ticker_box -->
+                
+                <!-- S:order_book_box -->
+                <script src="../include/left_orderbook_box.js"></script>
+                <!-- E:order_book_box -->
+                
+                <!-- S:balance_box -->
+                <script src="../include/left_balance_box.js"></script>
+                <!-- E:balance_box -->
+                
+                <!-- S:order_form_box -->
+                <script src="../include/left_orderform_box.js"></script>
+                <!-- E:order_form_box -->
+            </section>
+            <!-- E:side_wrap -->
+            
+            <!-- S:contents_wrap -->
+            <section class="contents_wrap">
+                <!-- S:coin_bar_box -->
+                <script src="../include/right_coinbar_box.js"></script>
+                <!-- E:coin_bar_box -->
+                
+                <!-- S:iframe contents -->
+                <article class="ifm_contents">
+                    <iframe src="exchange_ifm.html" scrolling="no" id="ifmCon" onload="setIframeHeight(this.id)"></iframe>
+                </article>
+                <!-- E:iframe contents -->
+            </section>
+            <!-- E:contents_wrap -->
+        </div>
+        <!-- E:container -->
+        
+        <!-- S:footer -->
+        <script src="../include/footer.js"></script>
+        <!-- E:footer -->
+    </div>
+    <!-- E:wrapper -->
+    
+    <!-- S:loginDialog -->
+    <script src="../include/loginDialog.js"></script>
+    <!-- E:loginDialog -->
+
+    <!-- S:joinDialog -->
+    <script src="../include/joinDialog.js"></script>
+    <!-- E:joinDialog -->
+    
+    <!-- S:findIdDialog -->
+    <script src="../include/findIdDialog.js"></script>
+    <!-- E:findIdDialog -->
+    
+    <!-- S:findPwDialog -->
+    <script src="../include/findPwDialog.js"></script>
+    <!-- E:findPwDialog -->
+</body>
+</html>

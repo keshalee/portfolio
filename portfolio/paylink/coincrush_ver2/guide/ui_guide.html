@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSH - UI guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../../css/slick.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    
+    <style>
+        #header { position:fixed; }
+        #header h1.logo { font-family:"Helvetica-Bold", sans-serif; font-size:24px; }
+        #container { overflow:inherit; } 
+        
+        .tabs { position:fixed; top:0; right:0; left:0; }
+        .tabs ul { overflow:hidden; margin-left:150px; }
+        .tabs ul li { float:left; width:200px; line-height:33px; background:url('../../images/common/bar01.png') no-repeat 100% 50%; text-align:center; }
+        .tabs ul li a { display:block; font-size:14px; color:#fff; opacity:0.3; }
+        .tabs ul li a.active { font-weight:600; opacity:1; }
+        
+        .list_box_wrap { padding:0 20px 20px 20px; min-width:1000px; background-color:#1b262d; }
+        .group_wrap > h2 { margin:0 0 10px 0; padding-top:60px; font-size:20px; }
+        .box_wrap > h3 { margin:0 -20px; padding:0 20px; height:30px; line-height:30px; background-color:rgba(255,255,255,0.1); font-size:15px; }
+        .box_wrap { padding:0 20px 0 20px; border:1px solid #ddd; }
+        .s_wrap { padding:10px 0 15px; }
+        .s_wrap + .h2_type { margin-top:15px; }
+        .s_wrap .dot_list li { padding-left:10px; position:relative; }
+        .s_wrap .dot_list li:before { content:''; display:block; position:absolute; top:50%; left:0; width:3px; height:3px; margin-top:-2px; border-radius:50%; background-color:#d9d9d9; }
+        .s_wrap .blt_list li { padding-left:10px; position:relative; }
+        .s_wrap ul li span { color:#f34a00; }
+        .s_wrap .dot_list li + li, .s_wrap .blt_list li + li, .s_wrap ol li + li { margin-top:5px; }
+        .s_wrap p { line-height:1.4; }
+        .s_wrap p + ol { margin-top:10px; }
+        .tb_view01 th { vertical-align:middle; }
+        
+        .prd_tab_menu .tabbox li { position:relative; }
+        .price_bar_wrap .price_data { margin:0 0 10px; }
+        .btn.btn_buy { width:170px; height:32px; line-height:32px; }
+        .btn.btn_sell { width:170px; height:32px; line-height:32px; }
+        
+        .tb_view01.icon_group td span { display:inline-block; vertical-align:top; margin-right:10px; text-align:center; }
+        
+        .btnTop { position:fixed; overflow:hidden; width:30px; height:30px; right:30px; bottom:30px; z-index:50; }
+        .btnTop a { display:block; width:30px; height:30px; background-color:#1b262d; line-height:30px; text-align:center; opacity:0.7; }
+        .btnTop a:hover { opacity:1; }
+        
+        .s_wrap { max-width:1080px; }
+        .s_wrap .sbt { margin-bottom:5px; color:#fff; }
+        .s_wrap .sbt ~ .sbt { margin-top:10px; }
+        .s_wrap.btn_view button { margin-right:20px; }
+        .s_wrap > .checkbox, .s_wrap > .radio { margin-right:15px; }
+        
+
+        .tb_write01 th { padding:10px 20px; font-size:12px; }
+        .tb_write01 td { padding:5px 20px; font-size:12px; }
+        /*
+        .tb_write01 td .form_group.small .ui-selectmenu-button.ui-button { width:120px; height:24px; line-height:26px; font-size:12px; }
+        .tb_write01 td input.form_control { height:22px; line-height:24px; font-size:12px; }
+*/
+        
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.btnTop').click(function(){
+                $('html, body').animate({scrollTop : 0},300);
+            });
+
+            redrawDotNav();
+            /* Scroll event handler */
+            $(window).bind('scroll',function(e){
+                redrawDotNav();
+            });
+
+            /* Next/prev and primary nav btn click handlers */
+            $('.tab_nav a.p01').click(function(){
+                $('html, body').animate({
+                    scrollTop:0
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p02').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group02').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p03').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group03').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p04').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group04').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p05').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group05').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p06').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group06').offset().top
+                }, 300);
+                return false;
+            });
+            $("#datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/icon_cal.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택"
+            });
+            $("#datepicker2").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/icon_cal.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택"
+            });
+            $("#datepicker3").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/icon_cal.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택"
+            });
+            
+            /* accordion */
+            var $accordionList =  $('.accordion_list dt a');
+            $accordionList.click(function(){
+                if($(this).parent().next().is(":hidden")){
+                    $accordionList.parent().next().hide();
+                    $accordionList.parent().removeClass("active");
+                    $(this).parent().next().show();
+                    $(this).parent().addClass("active");
+                }else if($(this).parent().next().is(":visible")){
+                    $(this).parent().next().hide();
+                    $(this).parent().removeClass("active");
+                }
+            });
+        });
+        /* Set navigation dots to an active state as the user scrolls */
+        function redrawDotNav(){
+            var section1Top =  0;
+            // The top of each section is offset by half the distance to the previous section.
+            var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+            var section3Top =  $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 4);
+            var section4Top =  $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 4);
+            var section5Top =  $('#group05').offset().top - (($('#group06').offset().top - $('#group05').offset().top) / 4);
+            var section6Top =  $('#group06').offset().top - (($(document).height() - $('#group06').offset().top) / 4);
+            $('.tabs a').removeClass('active');
+            
+            if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+                $('.tabs a.p01').addClass('active');
+            } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+                $('.tabs a.p02').addClass('active');
+            } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+                $('.tabs a.p03').addClass('active');
+            } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+                $('.tabs a.p04').addClass('active');
+            } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+                $('.tabs a.p05').addClass('active');
+            } else if ($(document).scrollTop() >= section6Top){
+                $('.tabs a.p06').addClass('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <header id="header">
+            <h1 class="logo">COINCRUSH</h1>
+            <div class="mobile-only">
+                <div class="nav_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="tabs">
+                <ul class="tab_nav">
+                    <li><a href="#group01" class="p01">H Tag</a></li>
+                    <li><a href="#group02" class="p02">Form Tag</a></li>
+                    <li><a href="#group03" class="p03">Text List</a></li>
+                    <li><a href="#group04" class="p04">Button</a></li>
+                    <li><a href="#group05" class="p05">Table</a></li>
+                    <li><a href="#group06" class="p06">UI</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <div class="list_box_wrap">
+                <div id="group01" class="group_wrap">
+                    <h2>H Tag</h2>
+                    <div class="box_wrap">
+                        <h3>H1</h3>
+                        <div class="s_wrap">
+                        </div>
+                        <h3>H2</h3>
+                        <div class="s_wrap">
+                            <h2 class="h2_type">페이지 타이틀</h2>
+                            <h2 class="h2_type line">페이지 타이틀 라인 있는 경우</h2>
+                        </div>
+                        <h3>H3</h3>
+                        <div class="s_wrap">
+                            <h3 class="h3_type">대 타이틀</h3>
+                            <h3 class="h3_type line">대 타이틀 라인 있는 경우</h3>
+                        </div>
+                        <h3>H4</h3>
+                        <div class="s_wrap">
+                            <h4 class="h4_type">중 타이틀</h4>
+                            <h4 class="h4_type line">중 타이틀 라인 있는 경우</h4>
+                        </div>
+                        <h3>H5</h3>
+                        <div class="s_wrap">
+                            <h5 class="h5_type">소 타이틀</h5>
+                            <h5 class="h5_type line">소 타이틀 라인 있는 경우</h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="group02" class="group_wrap">
+                    <h2>Form Tag</h2>
+                    <div class="box_wrap">
+                        <h3>Input</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">basic type</p>
+                            <input type="text" value="입력값" class="form_control">
+                            <p class="sbt">placeholder type</p>
+                            <input type="text" value="" placeholder="입력값" class="form_control">
+                            <p class="sbt">disabled type</p>
+                            <input type="text" value="입력값" class="form_control" disabled>
+                            <p class="sbt">datepicker</p>
+                            <span class="datepicker_box"><input type="text" name="" value="" placeholder="날짜선택" id="datepicker1" class="form_control"></span>
+                            <p class="sbt">timepicker</p>
+                            <span class="timepicker_box"><input type="text" name="" value="" placeholder="시간선택" id="timepicker" class="form_control"><img src="../../images/common/icon_clock.png" alt="시간선택" class="icon_coma i_time"/></span>
+                        </div>
+                        <h3>Select</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">small size type</p>
+                            <span class="form_group small">
+                                <select class="form_control select">
+                                    <option selected="selected">Slower</option>
+                                    <option>Slow</option>
+                                    <option >Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+                            </span>
+                            <p class="sbt">middle type</p>
+                            <div class="form_group middle">
+                                <select class="form_control select">
+                                    <option selected="selected">Slower</option>
+                                    <option>Slow</option>
+                                    <option >Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+                            </div>
+                            <p class="sbt">big type</p>
+                            <div class="form_group big">
+                                <select class="form_control select">
+                                    <option selected="selected">Slower</option>
+                                    <option>Slow</option>
+                                    <option >Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+                            </div>
+                            <p class="sbt">basic disabled</p>
+                            <div class="form_group middle">
+                                <select class="form_control select" disabled>
+                                    <option selected="selected">Slower</option>
+                                    <option>Slow</option>
+                                    <option >Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3>Radio</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">basic</p>
+                            <span class="form_group radio">
+                                <input type="radio" name="radio01" id="radio1" class="form_control" checked />
+                                <label for="radio1">선택</label>
+                            </span>
+                            <span class="form_group radio">
+                                <input type="radio" name="radio01" id="radio2" class="form_control" />
+                                <label for="radio2">미선택</label>
+                            </span>
+                            <span class="form_group radio">
+                                <input type="radio" name="radio02" id="radio3" class="form_control" disabled />
+                                <label for="radio3">비활성</label>
+                            </span>
+                            <span class="form_group radio">
+                                <input type="radio" name="radio02" id="radio4" class="form_control" checked disabled />
+                                <label for="radio4">선택비활성</label>
+                            </span>
+                            <p class="sbt">small type</p>
+                            <span class="form_group radio small">
+                                <input type="radio" name="radio03" id="radio5" class="form_control" checked />
+                                <label for="radio5">선택</label>
+                            </span>
+                            <span class="form_group radio small">
+                                <input type="radio" name="radio03" id="radio6" class="form_control" />
+                                <label for="radio6">미선택</label>
+                            </span>
+                            <span class="form_group radio small">
+                                <input type="radio" name="radio04" id="radio7" class="form_control" disabled />
+                                <label for="radio7">비활성</label>
+                            </span>
+                            <span class="form_group radio small">
+                                <input type="radio" name="radio04" id="radio8" class="form_control" checked disabled />
+                                <label for="radio8">선택비활성</label>
+                            </span>
+                            <p class="sbt">no label</p>
+                            <span class="form_group radio">
+                                <input type="radio" name="radio05" id="radio9" class="form_control" />
+                                <label for="radio9">선택</label>
+                            </span>
+                        </div>
+                        <h3>Checkbox</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">basic</p>
+                            <span class="form_group checkbox">
+                                <input type="checkbox" name="" id="checkbox1" checked>
+                                <label for="checkbox1">선택</label>
+                            </span>
+                            <span class="form_group checkbox">
+                                <input type="checkbox" name="" id="checkbox2">
+                                <label for="checkbox2">미선택</label>
+                            </span>
+                            <span class="form_group checkbox">
+                                <input type="checkbox" name="" id="checkbox3" disabled>
+                                <label for="checkbox3">비활성</label>
+                            </span>
+                            <span class="form_group checkbox">
+                                <input type="checkbox" name="" id="checkbox4" checked disabled>
+                                <label for="checkbox4">선택비활성</label>
+                            </span>
+                            <p class="sbt">round</p>
+                            <span class="form_group checkbox round">
+                                <input type="checkbox" name="" id="checkbox5" checked>
+                                <label for="checkbox5">선택</label>
+                            </span>
+                            <span class="form_group checkbox round">
+                                <input type="checkbox" name="" id="checkbox6">
+                                <label for="checkbox6">미선택</label>
+                            </span>
+                            <span class="form_group checkbox round">
+                                <input type="checkbox" name="" id="checkbox7" checked disabled>
+                                <label for="checkbox7">선택비활성</label>
+                            </span>
+                            <p class="sbt">small type</p>
+                            <span class="form_group checkbox small">
+                                <input type="checkbox" name="" id="checkbox8" checked>
+                                <label for="checkbox8">선택</label>
+                            </span>
+                            <span class="form_group checkbox small">
+                                <input type="checkbox" name="" id="checkbox9">
+                                <label for="checkbox9">미선택</label>
+                            </span>
+                            <span class="form_group checkbox small">
+                                <input type="checkbox" name="" id="checkbox10" disabled>
+                                <label for="checkbox10">비활성</label>
+                            </span>
+                            <span class="form_group checkbox small">
+                                <input type="checkbox" name="" id="checkbox11" checked disabled>
+                                <label for="checkbox11">선택비활성</label>
+                            </span>
+                            <p class="sbt">color type</p>
+                            <span class="form_group checkbox color black">
+                                <input type="checkbox" name="" id="checkbox12">
+                                <label for="checkbox12">black</label>
+                            </span>
+                            <span class="form_group checkbox color white">
+                                <input type="checkbox" name="" id="checkbox13">
+                                <label for="checkbox13">white</label>
+                            </span>
+                            <span class="form_group checkbox color red">
+                                <input type="checkbox" name="" id="checkbox15">
+                                <label for="checkbox15">red</label>
+                            </span>
+                            <span class="form_group checkbox color purple">
+                                <input type="checkbox" name="" id="checkbox16">
+                                <label for="checkbox16">purple</label>
+                            </span>
+                            <span class="form_group checkbox color gray">
+                                <input type="checkbox" name="" id="checkbox17">
+                                <label for="checkbox17">gray</label>
+                            </span>
+                            <span class="form_group checkbox color gold">
+                                <input type="checkbox" name="" id="checkbox18">
+                                <label for="checkbox18">gold</label>
+                            </span>
+                            <span class="form_group checkbox color silver">
+                                <input type="checkbox" name="" id="checkbox19">
+                                <label for="checkbox19">silver</label>
+                            </span>
+                            <span class="form_group checkbox color pink">
+                                <input type="checkbox" name="" id="checkbox20">
+                                <label for="checkbox20">pink</label>
+                            </span>
+                            <span class="form_group checkbox color navy">
+                                <input type="checkbox" name="" id="checkbox21">
+                                <label for="checkbox21">navy</label>
+                            </span>
+                            <span class="form_group checkbox color green">
+                                <input type="checkbox" name="" id="checkbox22">
+                                <label for="checkbox22">green</label>
+                            </span>
+                            <span class="form_group checkbox color brown">
+                                <input type="checkbox" name="" id="checkbox23">
+                                <label for="checkbox23">brown</label>
+                            </span>
+                            <span class="form_group checkbox color khaki">
+                                <input type="checkbox" name="" id="checkbox24">
+                                <label for="checkbox24">khaki</label>
+                            </span>
+                            <span class="form_group checkbox color yellow">
+                                <input type="checkbox" name="" id="checkbox25">
+                                <label for="checkbox25">yellow</label>
+                            </span>
+                            <span class="form_group checkbox color multi">
+                                <input type="checkbox" name="" id="checkbox26">
+                                <label for="checkbox26">multi</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="group03" class="group_wrap">
+                    <h2>Text List</h2>
+                    <div class="box_wrap">
+                        <h3>Dot List</h3>
+                        <div class="s_wrap">
+                            <ul class="dot_list">
+                                <li>문의하신 내용에 대한 답변은 답변 알림 수단 (e-mail, SMS, 전화) 또는  MYPAGE > 문의내역 에서 확인하실 수 있습니다.</li>
+                                <li>연락 받으실  휴대폰, E-mail 정보 변경은 마이페이지 > 나의 회원정보(기본 정보관리) 메뉴에서 가능합니다.</li>
+                            </ul>
+                        </div>
+                        <h3>Bullet List</h3>
+                        <div class="s_wrap">
+                            <ul class="blt_list">
+                                <li><strong>고객센터입니다. 무엇을 도와드릴까요?</strong></li>
+                                <li><strong>고객센터입니다. 무엇을 도와드릴까요?</strong></li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="group04" class="group_wrap">
+                    <h2>Button</h2>
+                    <div class="box_wrap">
+                        <h3>Big Button</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">basic</p>
+                            <button type="button" class="btn type1 big">TYPE1</button>
+                            <button type="button" class="btn type2 big">TYPE2</button>
+                            <button type="button" class="btn type3 big">TYPE3</button>
+                            <button type="button" class="btn type4 big">TYPE4</button>
+                            <button type="button" class="btn type5 big">TYPE5</button>
+                            <p class="sbt">disabled</p>
+                            <button type="button" class="btn type1 big" disabled>TYPE1</button>
+                            <button type="button" class="btn type2 big" disabled>TYPE2</button>
+                            <button type="button" class="btn type3 big" disabled>TYPE3</button>
+                            <button type="button" class="btn type4 big" disabled>TYPE4</button>
+                            <button type="button" class="btn type5 big" disabled>TYPE5</button>
+                        </div>
+                        <h3>Middle Button</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1">TYPE1</button>
+                            <button type="button" class="btn type2">TYPE2</button>
+                            <button type="button" class="btn type3">TYPE3</button>
+                            <button type="button" class="btn type4">TYPE4</button>
+                            <button type="button" class="btn type5">TYPE5</button>
+                        </div>
+                        <h3>Small Button</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 small">TYPE1</button>
+                            <button type="button" class="btn type2 small">TYPE2</button>
+                            <button type="button" class="btn type3 small">TYPE3</button>
+                            <button type="button" class="btn type4 small">TYPE4</button>
+                            <button type="button" class="btn type5 small">TYPE5</button>
+                        </div>
+                        <h3>XSmall Button</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 xsmall">TYPE1</button>
+                            <button type="button" class="btn type2 xsmall">TYPE2</button>
+                            <button type="button" class="btn type3 xsmall">TYPE3</button>
+                            <button type="button" class="btn type4 xsmall">TYPE4</button>
+                            <button type="button" class="btn type5 xsmall">TYPE5</button>
+                        </div>
+                        <h3>Icon Button</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="icon_com list01 margin_r_20">리스트형 보기</button>
+                            <button type="button" class="icon_com list01 active margin_r_20">리스트형 보기</button>
+                            <button type="button" class="icon_com list02 margin_r_20">카드형 보기</button>
+                            <button type="button" class="icon_com list02 active">카드형 보기</button>
+                        </div>
+                        <h3>Table Button</h3>
+                        <div class="s_wrap">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="group05" class="group_wrap">
+                    <h2>Table</h2>
+                    <div class="box_wrap">
+                        <h3>List</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">List Type1</p>
+                            <table class="tb_list02">
+                                <caption>인천공항 / 김포공항 출국시간 및 구매마감시간</caption>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col style="width:50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">1비트코인 캐시 당 가격</th>
+                                        <th scope="col">비트코인 캐시 수량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,082,300</td>
+                                        <td>15.91256814</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="sbt">List Type2 (caption)</p>
+                            <table class="tb_list02 type2">
+                                <caption>비트코인 (24시간 거래기준)</caption>
+                                <colgroup>
+                                    <col style="width:auto">
+                                    <col style="width:33.3%">
+                                    <col style="width:33.3%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">현재가 </th>
+                                        <th scope="col">변동(24시간)기준 </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>비트코인</th>
+                                        <td>4,351,256</td>
+                                        <td>10,500원 +10.51%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>비트코인</th>
+                                        <td>4,351,256</td>
+                                        <td>10,500원 +10.51%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="sbt">List Type3</p>
+                            <table class="tb_list02 type3">
+                                <caption>공인인증서가 있는 경우 안내</caption>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col style="width:50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">은행용 공인인증서를 갖고 계신 경우</th>
+                                        <th scope="col">증권용 공인인증서를 갖고 계신 경우</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="site_link">
+                                        <td><a href="javascript:void(0);" class="icon_coma i_blt"></a></td>
+                                        <td><a href="javascript:void(0);" class="icon_coma i_blt"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="sbt">List Type4</p>
+                            <table class="tb_list02 type4">
+                                <caption>회원등급 안내</caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:auto">
+                                    <col style="width:20%">
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">등급</th>
+                                        <th scope="col" rowspan="2">항목</th>
+                                        <th scope="col" rowspan="2">출금한도</th>
+                                        <th colspan="2">할인혜택</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bleft">원화</th>
+                                        <th scope="col" class="bleft">가상화폐</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            신분증(여권)보내기</td>
+                                        <td>50,000,000 KRW</td>
+                                        <td>무제한</td>
+                                        <td>무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td>300,000,000 KRW</td>
+                                        <td>무제한</td>
+                                        <td>무제한</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>Write</h3>
+                        <div class="s_wrap">
+                            <table class="tb_write01">
+                                <caption>write table guide</caption>                    
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">문의유형</th>
+                                        <td>
+                                            <div class="form_group small">
+                                                <select class="form_control select">
+                                                    <option selected="selected">문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이름</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" value="" placeholder="홍길동" class="form_control" style="width:170px;" disabled />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">e-mail</th>
+                                        <td>
+                                            <div class="form_group small">
+                                                <input type="text" value="" placeholder="입력값" class="form_control" style="width:170px;">
+                                                <span class="gap">@</span>
+                                                <input type="text" value="" placeholder="입력값" class="form_control" style="width:220px;">
+                                                <select class="form_control select" style="width:170px;">
+                                                    <option selected="selected">선택</option>
+                                                    <option>naver.com</option>
+                                                    <option>gmail.com</option>
+                                                    <option>nate.com</option>
+                                                    <option>yahoo.co.kr</option>
+                                                    <option>hanmail.net</option>
+                                                    <option>daum.net</option>
+                                                    <option>dreamwiz.com</option>
+                                                    <option>lycos.co.kr</option>
+                                                    <option>empas.com</option>
+                                                    <option>korea.com</option>
+                                                    <option>paran.com</option>
+                                                    <option>freechal.com</option>
+                                                    <option>hanmir.com</option>
+                                                    <option>hotmail.com</option>
+                                                    <option>직접입력</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">연락처</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" value="" placeholder="입력값" class="form_control">
+                                                <span class="gap">-</span>
+                                                <input type="text" value="" placeholder="입력값" class="form_control">
+                                                <span class="gap">-</span>
+                                                <input type="text" value="" placeholder="입력값" class="form_control">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">답변알림</th>
+                                        <td>
+                                            <div class="form_group radio small alarm_type">
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio10" class="form_control" checked />
+                                                    <label for="radio10">e-mail</label>
+                                                </span>
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio11" class="form_control" />
+                                                    <label for="radio11">sns</label>
+                                                </span>
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio12" class="form_control" />
+                                                    <label for="radio12">전화</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제목</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" value="" placeholder="입력값" class="form_control" style="width:100%;">
+                                            </div>
+                                        </td>                
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">내용</th>
+                                        <td>
+                                            <div class="form_group textarea_wrap">
+                                                <textarea placeholder="메세지를 작성해주세요" class="form_control"></textarea>
+                                                <span class="byte_txt"><em>0</em> / 500 Byte</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">파일첨부</th>
+                                        <td>
+                                            <div class="form_group file_sh">
+                                                <span class="file_name form_control"></span>
+                                                <input type="file" name="" class="form_control real_file" />
+                                                <button type="button" class="btn type4 small fake_file">파일선택</button>
+                                            </div>
+                                            <p class="info_file">* 최대 5MB /  jpg,gif 파일만 첨부 가능</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>View - table type</h3>
+                        <div class="s_wrap">
+                            <table class="tb_view01">
+                                <caption>caption...</caption>                    
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">무궁화꽃이피었습니다무궁화꽃이피었습니다</th>
+                                        <td>무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">222</th>
+                                        <td>bbbb</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>View - div type</h3>
+                        <div class="s_wrap">
+                            <div class="div_view">
+                                <div class="view_header">
+                                    <p class="title">개인정보를 변경하고 싶어요 </p>
+                                    <p class="day_count"><span class="day">2017.05.11</span><span class="count">조회수 : 18,014</span></p>
+                                </div>
+                                <div class="view_contents">
+                                    <p>[개인정보변경] * 이메일주소, 성명 : 변경불가능 * 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'
+                                    [개인정보변경] * 이메일주소, 성명 : 변경불가능 * 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'
+                                    [개인정보변경] * 이메일주소, 성명 : 변경불가능 * 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>View - panel type</h3>
+                        <div class="s_wrap">
+                            <div class="tb_panel">
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="icon_com q">질문</span><span class="tit ellipsis">인증메일이 오지않아요??</span><a href="javascript:void(0);" class="icon_com btn_d04 active"></a></div>
+                                    <div class="panel_content" style="display:block;">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>각종 인증메일은 가입시 입력하신 이메일로 전송되며, 확인이 되지 않을 경우 ‘스팸메일함’을 확인 해 주시기 바라며, 인증 메일이 10분 이상이 되어도 확인 되지 않을 경우 고객센터로 연락 주세요.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="icon_com q">질문</span><span class="tit ellipsis">개인정보변경을 하고 싶어요??</span><a href="javascript:void(0);" class="icon_com btn_d04"></a></div>
+                                    <div class="panel_content">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>[개인정보변경]<br />
+                            * 이메일주소, 성명 : 변경불가능<br />
+
+                            * 휴대폰번호변경<br />
+                            일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경]<br />
+                            간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tb_panel">
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="tit ellipsis">(공지)서버 접속 장애에 대한 사과말씀드립니다.</span><em class="date">2019.02.12</em><em class="view">245</em><a href="javascript:void(0);" class="icon_com btn_d04 active"></a></div>
+                                    <div class="panel_content" style="display:block;">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>각종 인증메일은 가입시 입력하신 이메일로 전송되며, 확인이 되지 않을 경우 ‘스팸메일함’을 확인 해 주시기 바라며, 인증 메일이 10분 이상이 되어도 확인 되지 않을 경우 고객센터로 연락 주세요.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="tit ellipsis">(안내)19.01.10 서비스 점검 안내</span><em class="date">2019.01.03</em><em class="view">245</em><a href="javascript:void(0);" class="icon_com btn_d04"></a></div>
+                                    <div class="panel_content">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>[개인정보변경]<br />
+                            * 이메일주소, 성명 : 변경불가능<br />
+
+                            * 휴대폰번호변경<br />
+                            일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경]<br />
+                            간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tb_panel">
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="tit ellipsis">(공지)서버 접속 장애에 대한 사과말씀드립니다.</span><em class="date">2019.02.12</em><em class="view">245</em><a href="javascript:void(0);" class="icon_com btn_d04 active"></a></div>
+                                    <div class="panel_content" style="display:block;">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>각종 인증메일은 가입시 입력하신 이메일로 전송되며, 확인이 되지 않을 경우 ‘스팸메일함’을 확인 해 주시기 바라며, 인증 메일이 10분 이상이 되어도 확인 되지 않을 경우 고객센터로 연락 주세요.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel_open">
+                                    <div class="panel_title" onclick="panelOpen(this);"><span class="tit ellipsis">(안내)19.01.10 서비스 점검 안내</span><em class="date">2019.01.03</em><em class="view">245</em><a href="javascript:void(0);" class="icon_com btn_d04"></a></div>
+                                    <div class="panel_content">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <span class="icon_comb re"></span><span class="icon_com a"></span><p>[개인정보변경]<br />
+                            * 이메일주소, 성명 : 변경불가능<br />
+
+                            * 휴대폰번호변경<br />
+                            일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경]<br />
+                            간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>매수/매도 table</h3>
+                        <div class="s_wrap">
+                            <table class="tb_view01">
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" style="vertical-align:middle;">가격</th>
+                                        <td>
+                                            <div class="price_bar_wrap">
+                                                <div class="price_data price_data1">
+                                                    <div id="priceBar1"></div>
+                                                </div>
+                                                <p class="prc_ipt">
+                                                    BTC <input type="text" id="priceStart1" name="" value="0" title="가격별 검색범위 시작 입력"> &nbsp;~ &nbsp;
+                                                    KRW <input type="text" id="priceEnd1" name="" value="100" title="가격별 검색범위 마지막 입력">
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">색상</th>
+                                        <td>
+                                            <button type="button" class="btn btn_buy cursor">매수</button>
+                                            <button type="button" class="btn btn_sell cursor">매도</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="group06" class="group_wrap" style="padding-bottom:100px">
+                    <h2>UI</h2>
+                    <div class="box_wrap">
+                        <h3>Tab1</h3>
+                        <div class="s_wrap">
+                            <div class="prd_tab_menu">
+                                <ul class="tabbox line">
+                                    <li class="tab1 active"><a href="javascript:commonTab('prd_tab_menu','tab1');">가상계좌</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('prd_tab_menu','tab2');">1회용 가상계좌</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('prd_tab_menu','tab3');">TOSS 결제</a></li>
+                                    <li class="tab4"><a href="javascript:commonTab('prd_tab_menu','tab4');">상품권 충전</a></li>
+                                    <li class="tab5"><a href="javascript:commonTab('prd_tab_menu','tab5');">KB 에스크로</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3>Tab2</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">basic type</p>
+                            <div class="basic_tab_type">
+                                <ul class="tabbox line clearfix">
+                                    <li class="tab1 active"><a href="javascript:commonTab('basic_tab_type','tab1');">TAB01</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('basic_tab_type','tab2');">TAB02</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('basic_tab_type','tab3');">탭명이 길어졌을 경우 양옆 패딩 20</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">basic type</p>
+                            <div class="tab_type type1">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                    <li><a href="javascript:void(0);">탭명이 길어졌을 경우 양옆 패딩 20</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">Full type(2개)</p>
+                            <div class="tab_type two">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">Full type(3개)</p>
+                            <div class="tab_type three">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                    <li><a href="javascript:void(0);">TAB03</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">Full type(4개)</p>
+                            <div class="tab_type four">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                    <li><a href="javascript:void(0);">TAB03</a></li>
+                                    <li><a href="javascript:void(0);">TAB04</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">Full type(5개)</p>
+                            <div class="tab_type five">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                    <li><a href="javascript:void(0);">TAB03</a></li>
+                                    <li><a href="javascript:void(0);">TAB04</a></li>
+                                    <li><a href="javascript:void(0);">TAB05</a></li>
+                                </ul>
+                            </div>
+                            <p class="sbt">Full type(6개)</p>
+                            <div class="tab_type six">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:void(0);">TAB01</a></li>
+                                    <li><a href="javascript:void(0);">TAB02</a></li>
+                                    <li><a href="javascript:void(0);">TAB03</a></li>
+                                    <li><a href="javascript:void(0);">TAB04</a></li>
+                                    <li><a href="javascript:void(0);">TAB05</a></li>
+                                    <li><a href="javascript:void(0);">TAB06</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3>Breadcrumb</h3>
+                        <div class="s_wrap">
+                            <div class="breadcrumb">
+                                <span class="home">Home</span>
+                                <span class="form_group small">
+                                    <select class="form_control select">
+                                        <option selected="selected">1차선택</option>
+                                    </select>
+                                    <select class="form_control select">
+                                        <option selected="selected">2차선택</option>
+                                    </select>
+                                    <select class="form_control select">
+                                        <option selected="selected">3차선택</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        <h3>Table sort</h3>
+                        <div class="s_wrap">
+                            <div class="tb_sort_wrap">
+                                <p class="sort_tit">총 <span>4건</span>검색결과가 있습니다.  </p>
+                                <div class="tb_sort">
+                                    <div class="form_group small" style="display:inline">
+                                        <select name="" id="" class="form_control select">
+                                            <option value="">최근 등록일순</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn small type4">전체보기</button>
+                                    <button type="button" class="btn small type2">글쓰기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>검색</h3>
+                        <div class="s_wrap">
+                            <p class="sbt">검색 type1</p>
+                            <div class="sh_wrap">
+                                <form action="">
+                                    <fieldset>
+                                        <legend>FAQ 검색</legend>
+                                        <label for="faqsh">항목명
+                                            <div class="tooltip_wrap">
+                                                <i class="icon_com i_help">도움말</i>
+                                                <div class="tooltip">
+                                                    <p>상품명, 모델명, 브랜드명, 상품번호검색을 통해서 <br>빠르게 검색이 가능합니다.</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <span class="form_group small">
+                                            <select class="form_control select">
+                                                <option selected="selected">전체</option>
+                                                <option>주문/결제</option>
+                                                <option>교환/환불/취소</option>
+                                                <option>상품/브랜드</option>
+                                                <option>회원</option>
+                                                <option>H.POINT</option>
+                                                <option>적립금/쿠폰</option>
+                                                <option>상품수령/인도장</option>
+                                                <option>모바일</option>
+                                                <option>기타</option>
+                                            </select>
+                                        </span>
+                                        <span class="form_group">
+                                            <input type="text" name="" placeholder="검색어를 입력해주세요." class="form_control">
+                                        </span>
+                                        
+                                        <button type="button" class="btn type2 small">검색</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <p class="sbt">검색 type2</p>
+                            <div class="sh_wrap type2">
+                                <form action="">
+                                    <fieldset>
+                                        <legend>기간별 조회</legend>
+                                        <dl>
+                                            <dt>기간별 조회</dt>
+                                            <dd>
+                                                <button type="button" class="btn type4 small active">1개월</button>
+                                                <button type="button" class="btn type4 small">3개월</button>
+                                                <button type="button" class="btn type4 small">6개월</button>
+                                                <button type="button" class="btn type4 small">12개월</button>
+                                            </dd>
+                                        </dl>
+                                        <div class="datepicker_wrap">
+                                            <span class="datepicker_box"><input type="text" name="" value="" placeholder="날짜선택" id="datepicker2" class="form_control"></span> ~ 
+                                            <span class="datepicker_box"><input type="text" name="" value="" placeholder="날짜선택" id="datepicker3" class="form_control"></span>
+                                            <button type="button" class="btn type2 small">조회</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <h3>accordion</h3>
+                        <div class="s_wrap">
+                            <div class="accordion_list">
+                                <dl>
+                                    <dt><a href="javascript:void(0);" class="icon_cua open">입/출금 수수료 (Deposit &amp; Withdrawal Fees)</a></dt>
+                                    <dd>
+                                        <table class="tb_list02">
+                                            <caption>입/출금 수수료 (Deposit &amp; Withdrawal Fees)</caption>
+                                            <colgroup>
+                                                <col style="width:50%">
+                                                <col style="width:50%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">입금 수수료 (Deposit Fee) </th>
+                                                    <th scope="col">출금 수수료 (Withdrawal Fee)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1,000	원</td>
+                                                    <td>0.0005	비트코인</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>1,000	원</td>
+                                                    <td>0.0005	비트코인</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1,000	원</td>
+                                                    <td>0.0005	비트코인</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>1,000	원</td>
+                                                    <td>0.0005	비트코인</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+
+                                </dl>
+                            </div>
+                        </div>
+                        <h3>icon</h3>
+                        <div class="s_wrap">
+                            <table class="tb_view01 icon_group">
+                                <caption>UI icon</caption>                    
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">로고</th>
+                                        <td>
+                                            <p class="sbt">로고1</p>
+                                            <a href="javascript:void(0);" class="icon_com l01">로고1</a><br />
+                                            <p class="sbt">로고2</p>
+                                            <a href="javascript:void(0);" class="icon_com l02">로고2</a><br />
+                                            <p class="sbt">로고3</p>
+                                            <a href="javascript:void(0);" class="icon_com l03">로고3</a><br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">close</th>
+                                        <td>
+                                            <span>
+                                                <p class="sbt">close 33*33</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x01">close1</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">close 30*30</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x02">close2</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">close 26*26</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x03">close3</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">close 24*24</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x04">close4</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">close 21*21</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x05">close5</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">close 19*19</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_x06">close6</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">arrow thin</th>
+                                        <td>
+                                            <p class="sbt">arrow 19*34</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_l01">arrow_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_d01">arrow_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_r01">arrow_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_u01">arrow_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 16*29</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_l02">arrow_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_d02">arrow_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_r02">arrow_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_u02">arrow_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 14*26</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_l03">arrow_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_d03">arrow_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_r03">arrow_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_u03">arrow_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 10*19</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_l04">arrow_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_d04">arrow_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_r04">arrow_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_u04">arrow_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 7*13</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_l05">arrow_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_d05">arrow_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_r05">arrow_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_u05">arrow_up</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">arrow bold</th>
+                                        <td>
+                                            <p class="sbt">arrow 8*13</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bl01">arrow_bold_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bd01">arrow_bold_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_br01">arrow_bold_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bu01">arrow_bold_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 6*10</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bl02">arrow_bold_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bd02">arrow_bold_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_br02">arrow_bold_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bu02">arrow_bold_up</a>
+                                            </span>
+                                            <p class="sbt">arrow 5*7</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bl03">arrow_bold_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bd03">arrow_bold_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_br03">arrow_bold_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_bu03">arrow_bold_up</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">arrow caret</th>
+                                        <td>
+                                            <p class="sbt">arrow 4*7</p>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_cl01">arrow_caret_left</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_cd01">arrow_caret_down</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_cr01">arrow_caret_right</a>
+                                            </span>
+                                            <span>
+                                                <a href="javascript:void(0);" class="icon_com btn_cu01">arrow_caret_up</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">paging</th>
+                                        <td>
+                                            <div class="paging">
+                                                <a href="javascript:void(0);" title="처음" class="icon_comb pprev"></a>
+                                                <a href="javascript:void(0);" title="이전" class="icon_comb prev"></a>
+                                                <a href="javascript:void(0);">1</a>
+                                                <a href="javascript:void(0);" class="active">2</a>
+                                                <a href="javascript:void(0);">3</a>
+                                                <a href="javascript:void(0);">4</a>
+                                                <a href="javascript:void(0);">5</a>
+                                                <a href="javascript:void(0);" title="다음" class="icon_comb next"></a>
+                                                <a href="javascript:void(0);" title="마지막" class="icon_comb nnext"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이전다음</th>
+                                        <td>
+                                            <div class="pn_wrap">
+                                                <ul>
+                                                    <li class="prev_wrap">
+                                                        <a href="javascript:void(0);" title="이전글" class="icon_comb prev_btn btn_btype01 btn_ppos"></a>
+                                                    </li>
+                                                    <li class="next_wrap">
+                                                        <a href="javascript:void(0);" title="다음글" class="icon_comb next_btn btn_btype01 btn_npos"></a>
+                                                    </li>
+                                                </ul>    
+                                            </div>
+                                            <div class="pn_wrap">
+                                                <ul>
+                                                    <li class="prev_wrap">
+                                                        <a href="javascript:void(0);" title="이전글" class="icon_comb prev_btn02 btn_btype02 btn_ppos"></a>
+                                                    </li>
+                                                    <li class="next_wrap">
+                                                        <a href="javascript:void(0);" title="다음글" class="icon_comb next_btn02 btn_btype02 btn_npos"></a>
+                                                    </li>
+                                                </ul>    
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">더보기</th>
+                                        <td>
+                                            <span>
+                                                <p class="sbt">25*25</p>
+                                                <a href="javascript:void(0);" class="icon_com more">더보기1</a>
+                                                <a href="javascript:void(0);" class="icon_com more active">더보기1</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">17*17</p>
+                                                <a href="javascript:void(0);" class="icon_com more02">더보기2</a>
+                                                <a href="javascript:void(0);" class="icon_com more02 active">더보기2</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">16*16 bold</p>
+                                                <a href="javascript:void(0);" class="icon_com more03">더보기3</a>
+                                                <a href="javascript:void(0);" class="icon_com more03 active">더보기3</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">검색</th>
+                                        <td>
+                                            <span>
+                                                <p class="sbt">20*20</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_sh01">검색1</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">16*16</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_sh02">검색2</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">12*12</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_sh03">검색3</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">on/off</th>
+                                        <td>
+                                            <div class="switch_wrap">
+                                                <div class="switch_track">
+                                                    <div class="switch_track_on">ON</div>
+                                                    <div class="switch_track_off">OFF</div>
+                                                    <div class="switch_ball"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">유의사항</th>
+                                        <td>
+                                            <div class="attention_wrap">
+                                                <p class="icon_comb attention">유의사항</p>
+                                                <ul class="dot_list">
+                                                    <li>KRW 송금대행 서비스는 비트코인을 통해 전 세계 어디에서나 국내 은행계좌로 원화를 송금할 수 있는 서비스 입니다.</li>
+                                                    <li>송금 서비스의 한도는 1일 100만원, 1달 1,000만원 입니다.</li>
+                                                    <li>신청하신 송금건의 취소는 비트코인 입금 확인되기 전까지만 가능합니다.</li>
+                                                    <li>모든 송금 서비스와 관련된 환불은 회원 계정으로 입금됩니다.</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">etc</th>
+                                        <td>
+                                            <span>
+                                                <p class="sbt">약관</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_c01">약관</a>
+                                            </span>
+                                            <span>
+                                                <p class="sbt">도움말</p>
+                                                <a href="javascript:void(0);" class="icon_com i_help">도움말</a>
+                                            </span>
+<!--
+                                            <span>
+                                                <p class="sbt">12*12</p>
+                                                <a href="javascript:void(0);" class="icon_com btn_sh03">검색3</a>
+                                            </span>
+-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnTop"><a href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a></div>
+        </div>
+        <!-- e:container -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>
