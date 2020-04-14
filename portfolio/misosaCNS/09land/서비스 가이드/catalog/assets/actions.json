@@ -1,0 +1,768 @@
+[	
+	{
+		"label": "링크 주소",
+		"name": "LinkUrl",
+		"properties": 
+		[
+			{
+				"label": "주소",
+				"name": "url",
+				"control":
+                {
+                    "type": "text",
+                    "placeholder":"클릭시 이동할 주소"
+                }
+			},
+            {
+                "label": "새창 열기",
+                "name": "openWindow",
+                "value": true,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                }
+            }
+		]
+	},
+	{
+		"label": "페이지 이동",
+		"name": "GotoPage",
+		"properties": 
+		[
+			{
+				"label": "페이지 번호",
+				"name": "pageNumber",
+				"control":
+                {
+                    "type": "text",
+                    "width": 120,
+                    "placeholder":"이동할 페이지 번호"
+                }
+			},
+            {
+                "label": "선택 페이지",
+                "name": "selectPage",
+                "value": "",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "없음",
+                            "value": ""
+                        },
+                        {
+                            "label": "첫 페이지",
+                            "value": "firstPage"
+                        },
+                        {
+                            "label": "이전 페이지",
+                            "value": "previouPage"
+                        },
+                        {
+                            "label": "다음 페이지",
+                            "value": "nextPage"
+                        },
+                        {
+                            "label": "마지막 페이지",
+                            "value": "lastPage"
+                        }
+                    ]
+                }
+            }
+		]
+	},
+	{
+		"label": "보이기/숨기기",
+		"name": "Visible",
+		"properties": 
+		[
+			{
+				"label": "선택 대상",
+				"name": "targets",
+				"control":
+                {
+                    "type": "object-picker",
+                    "placeholder": "대상을 선택하세요"
+                }
+			},
+            {
+                "label": "보이기/숨기기",
+                "name": "visible",
+                "value": "toggle",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "토글",
+                            "value": "toggle"
+                        },
+                        {
+                            "label": "보이기",
+                            "value": "visible"
+                        },
+                        {
+                            "label": "숨기기",
+                            "value": "hidden"
+                        }
+                    ]
+                }
+            }
+		]
+	},
+    { "divider": true },
+    { "title": "오디오 관련", "icon": "glyphicon glyphicon-volume-up" },
+    { "divider": true },
+	{
+		"label": "오디오 재생/정지 토글",
+		"name": "ToggleSound",
+		"properties": 
+		[
+			{
+				"label": "파일",
+				"name": "asset",
+				"control":
+                {
+                    "type": "file",
+                    "allowMultipleSelection": false,
+                    "assetType" : "audio",
+                    "placeholder":"선택 파일 없음"
+                }
+			},
+			{
+				"label": "주소",
+				"name": "url",
+				"control":
+                {
+                    "type": "text",
+                    "placeholder":"주소를 입력하세요"
+                }
+			}
+		]
+	},
+    {
+        "label": "오디오 재생",
+        "name": "PlaySound",
+        "properties": 
+        [
+            {
+                "label": "파일",
+                "name": "asset",
+                "control":
+                {
+                    "type": "file",
+                    "allowMultipleSelection": false,
+                    "assetType" : "audio",
+                    "placeholder":"선택 파일 없음"
+                }
+            },
+            {
+                "label": "주소",
+                "name": "url",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"주소를 입력하세요"
+                }
+            },
+            {
+                "label": "다시 재생",
+                "name": "replay",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "처음부터 다시 재생 합니다."
+            }
+        ]
+    },
+    {
+        "label": "오디오 정지",
+        "name": "StopSound",
+        "properties": 
+        [
+            {
+                "label": "오디오 선택",
+                "name": "assets",
+                "control":
+                {
+                    "type": "asset-picker",
+                    "assetType" : "audio",
+                    "allowMultipleSelection": true
+                }
+            },
+            {
+                "label": "재생시간 재 설정",
+                "name": "reset",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]                    
+                },
+                "tooltip": "재생시간 재 설정"
+            }
+        ]
+    },
+    {
+        "label": "오디오 전체 정지",
+        "name": "StopAllSound",
+        "properties": []
+    },
+    {
+        "label": "오디오 재생기 토글",
+        "name": "ToggleAudioPlayer",
+        "properties": 
+        [
+            {
+                "label": "대상",
+                "name": "targets",
+                "control":
+                {
+                    "type": "object-picker",
+                    "filter": { "data-view-type" : "AudioPlayer" },
+                    "placeholder": "오디오 재생기 대상을 선택하세요"
+                }
+            },
+            {
+                "label": "자동 재생",
+                "name": "autoplay",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    { "divider": true },
+    { "title": "팝업 관련", "icon": "fa fa-window-maximize" },
+    { "divider": true },
+	{
+		"label": "팝업 동영상",
+		"name": "PopupMovie",
+		"properties": 
+		[
+            {
+                "label": "플레이어 선택",
+                "name": "playerType",
+                "value": "default",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "기본",
+                            "value": "default"
+                        },
+                        {
+                            "label": "유튜브",
+                            "value": "youtube"
+                        }
+                    ]
+                }
+            },                
+            {
+                "label": "자동 재생",
+                "name": "autoplay",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                }
+            },            
+			{
+				"label": "파일",
+				"name": "asset",
+				"control":
+                {
+                    "type": "file",
+                    "allowMultipleSelection": false,
+                    "assetType" : "movie",
+                    "placeholder":"선택 파일 없음"
+                }
+			},
+			{
+				"label": "주소",
+				"name": "url",
+				"control":
+                {
+                    "type": "text",
+                    "placeholder":"주소를 입력하세요"
+                }
+			},
+            {
+                "label": "가로 크기",
+                "name": "width",
+                "value": 800,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 가로 크기"
+                }
+            },
+            {
+                "label": "세로 크기",
+                "name": "height",
+                "value": 520,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 세로 크기"
+                }
+            },
+            {
+                "label": "자동 맞춤",
+                "name": "extractFit",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "팝업 윈도우 비율을 유지한 상태로 화면크기에 자동으로 맞춤"
+            }
+		]
+	},
+    {
+        "label": "팝업 이미지",
+        "name": "PopupImage",
+        "properties": 
+        [
+            {
+                "label": "제목",
+                "name": "title",
+                "value": "",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"이미지에 대한 제목"
+                }
+            },
+            {
+                "label": "설명",
+                "name": "description",
+                "value": "",
+                "control":
+                {
+                    "type": "textarea",
+                    "placeholder":"이미지에 대한 자세한 내용을 입력하세요..."
+                },
+                "tooltip": "이미지에 대한 자세한 내용을 입력하세요..."
+            },
+            {
+                "label": "파일",
+                "name": "assets",
+                "control":
+                {
+                    "type": "file",
+                    "allowMultipleSelection": true,
+                    "assetType" : "image",
+                    "placeholder":"선택 파일 없음"
+                }
+            },
+            {
+                "label": "확대 기능",
+                "name": "zoomable",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용함",
+                            "value": true
+                        },
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        }
+                    ]
+                },
+                "tooltip": "이미지 확대/축소에 대한 사용여부를 설정합니다."
+            },
+            {
+                "label": "최대 확대 비율",
+                "name": "maxZoomRatio",
+                "value": 100,
+                "control":
+                {
+                    "type": "spinedit",
+                    "step": 1,
+                    "max": 500,
+                    "min": 100,
+                    "numberOfDecimals": 0,
+                    "unit": "%"
+                },
+                "tooltip": "설정 가능한 최대 확대 비율은 500% 입니다."
+            },
+            {
+                "label": "썸네일 이미지",
+                "name": "thumbnail",
+                "value": true,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용함",
+                            "value": true
+                        },
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "배경 색상",
+                "name": "backgroundColor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                },
+                "tooltip": "색상을 지정하지 않으면 기본 색상을 사용합니다."
+            },
+            {
+                "label": "툴바 색상",
+                "name": "toolbarColor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                },
+                "tooltip": "색상을 지정하지 않으면 기본 색상을 사용합니다."
+            },
+            {
+                "label": "이미지 번호",
+                "name": "number",
+                "value": true,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용함",
+                            "value": true
+                        },
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        }
+                    ]
+                },
+                "tooltip": "이미지가 여러장 일때 이미지 번호를 표시합니다."
+            }
+        ]
+    },
+    {
+        "label": "팝업 레이어",
+        "name": "PopupLayper",
+        "properties": 
+        [
+            {
+                "label": "페이지 주소",
+                "name": "url",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"http://"
+                }
+            },
+            {
+                "label": "웹문서 파일",
+                "name": "relativePath",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"프로젝트 폴더로부터 상대 경로를 입력합니다."
+                },
+                "tooltip": "프로젝트 폴더로부터 웹 문서가 있는 상대경로"
+            },
+            {
+                "label": "스크롤바",
+                "name": "scrollbarHidden",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "보이기",
+                            "value": false
+                        },
+                        {
+                            "label": "숨기기",
+                            "value": true
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "가로 크기",
+                "name": "width",
+                "value": 600,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 가로 크기"
+                }
+            },
+            {
+                "label": "세로 크기",
+                "name": "height",
+                "value": 800,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 세로 크기"
+                }
+            },
+            {
+                "label": "자동 맞춤",
+                "name": "extractFit",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "가로,세로 크기 비율을 유지한 상태로 화면크기에 자동으로 맞춤"
+            }
+        ]
+    },
+    {
+        "label": "팝업 플래시",
+        "name": "PopupFlash",
+        "properties": 
+        [
+            {
+                "label": "파일",
+                "name": "asset",
+                "control":
+                {
+                    "type": "file",
+                    "allowMultipleSelection": false,
+                    "assetType" : "flash",
+                    "placeholder":"선택 파일 없음"
+                }
+            },
+            {
+                "label": "주소",
+                "name": "url",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"주소를 입력하세요"
+                }
+            },
+            {
+                "label": "가로 크기",
+                "name": "width",
+                "value": 600,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 가로 크기"
+                }
+            },
+            {
+                "label": "세로 크기",
+                "name": "height",
+                "value": 800,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 세로 크기"
+                }
+            },
+            {
+                "label": "자동 맞춤",
+                "name": "extractFit",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "가로,세로 크기 비율을 유지한 상태로 화면크기에 자동으로 맞춤"
+            },
+            {
+                "label": "배경색상",
+                "name": "bgcolor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                }
+            }
+        ]
+    },
+	{
+		"label": "팝업 윈도우",
+		"name": "PopupWindow",
+		"properties": 
+		[
+			{
+				"label": "타이틀",
+				"name": "title",
+				"value": "TOAST 이북",
+				"control":
+                {
+                    "type": "text",
+                    "placeholder":"제목에 표시될 이름"
+                }
+			},
+			{
+				"label": "주소",
+				"name": "url",
+				"control":
+                {
+                    "type": "text",
+                    "placeholder":"주소 입력"
+                }
+			},
+            {
+                "label": "웹문서 파일",
+                "name": "relativePath",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"프로젝트 폴더로부터 상대 경로를 입력합니다."
+                },
+                "tooltip": "프로젝트 폴더로부터 웹 문서가 있는 상대경로"
+            },
+            {
+                "label": "가로 크기",
+                "name": "width",
+                "value": 600,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 가로 크기"
+                }
+            },
+            {
+                "label": "세로 크기",
+                "name": "height",
+                "value": 800,
+                "control":
+                {
+                    "type": "text",
+                    "width": 50,
+                    "required": true,
+                    "placeholder": "팝업 윈도우 세로 크기"
+                }
+            }
+		]
+	}    
+]

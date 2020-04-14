@@ -1,0 +1,66 @@
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;display: block;text-indent: -9999em;
+	position: absolute;
+	zoom: 1;
+	top: 30%;
+	width: 20px;height: 35px;
+}
+.owl-prev {background:url(../images/slide_left.png) center no-repeat;left: 10px;}
+.owl-next {background:url(../images/slide_right.png) center no-repeat;right: 10px;}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+}
+
+/* Styling Pagination*/
+
+.owl-pagination {position: absolute;bottom:18px;right:20px;}
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	padding: 5px;
+	width: 15px;
+	height: 15px;
+	margin:0 5px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #086590;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	background: #15bead;
+}
+
+@media screen and (max-width:495px) {
+	
+	.owl-theme .owl-controls .owl-buttons div{top:25%}
+	.owl-prev {left: 3px;}
+	.owl-next {right: 3px;}
+	.owl-pagination {bottom: 5px;right: 5px;}
+	
+	
+}
+
+
+
+
+
+

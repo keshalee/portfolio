@@ -1,0 +1,164 @@
+﻿
+/*사용하기전에  무조건 부모의  클래스를 하나 만들어준다음에 사용한다*/
+
+
+/*메인 컨텐츠를 중앙으로 센터정렬*/
+.main{margin:0 auto;}
+
+.bigtitle{font-size:22px;letter-spacing:-2px}/*큰제목*/
+.middletitle{margin-top:15px;margin-bottom:15px;font-size:14px}    /*중간제목*/
+.smalltitle{margin-top:15px;margin-bottom:15px;font-size:16px}     /*작은제목*/
+textarea{resize:none;}
+.np{padding-left:0px ;padding-right:0px;}  
+
+/*table th{width:25%}
+table td{width:auto}*/
+/*.email input{width:29%}
+.email select{width:29%}
+.tel input{width:29%}
+.tel select{width:29%}
+.file input{width:50%;float:left;}
+.file button{width:30%}
+.file  div{width:100%;margin-top: 10px;}*/
+/*.req:after{content:"*";vertical-align:sub; color:red;margin-left:5px;font-size:15px; font-weight:bold;}*/
+
+
+
+/*@media (min-width: 992px) {
+
+table th{width:10%;padding:10px;vertical-align:top}
+table td{width:auto;padding:10px;}
+table  tr{margin-bottom:20px;}
+table .nomal input ,select,textarea{width:40%}
+table .nomal  textarea{height:200px;}
+table .email input{width:10%}
+table .email select{width:10%}
+table .tel input{width:10%}
+table .tel select{width:10%}
+table .file input{width:30%;float:left;}
+table .file button{width:10%;border:solid 1px ;background:#FFF;padding:5px 10px;float:left;}
+table .file  div{width:100%;margin-top: 30px;font-size:12px; color:#555555}
+table .req:after{content:"*";vertical-align:sub; color:red;margin-left:5px;font-size:15px; font-weight:bold;}
+}*/
+
+
+/*.wrap{position: relative; padding: 10px  15px 10px 9%;}*/
+
+
+/*bx슬라이더 기본적인위치*/
+/*.bx-wrapper .bx-controls-direction a {top:50%}
+.bx-wrapper .bx-prev{left:0px}
+.bx-wrapper .bx-next{right:0px}*/
+
+
+/*테이블  너비정하기 기본적으론 아래를 사용*/
+table{width:100%}
+/*table .col1{width:25%}
+table .col2{width:75%}*/
+
+
+
+/*컨텐츠*/ 
+.item1{width:100% ;position:relative}
+
+/*컨텐츠 가 한로우에 2개일때*/
+.item2{width:100%;float:left;position:relative}
+
+/*컨텐츠 가 한로우에 3개일때*/
+.item3{width:100% ;float:left;position:relative}
+
+/*컨텐츠 가 한로우에 4개일때*/
+.item4{width:100%;float:left;position:relative}
+
+
+.item5{width:100%;float:left;position:relative}
+
+
+
+/*.tabs{position:relative;border:solid 1px #71777c; float:left;font-size:11px;padding:10px 0px;padding-right:0px;border-right:0px;font-weight:bold; text-align:center; cursor:pointer; }
+.tabon{border-bottom:1px solid #FFF !important;z-index:10}
+.tabmenu{padding-bottom:0px !important;}
+.linebb{width: 100%; border-bottom: 1px solid #71777c; position: relative; bottom: -32px;}
+.tablast{border-right:1px solid}*/
+
+/*.tab1{width:15%;color:#454545;}
+.tab2{width:15%;color:#454545;}
+.tab3{width:15%;color:#454545;}
+.tab4{width:14%;color:#454545;}
+.tab5{width:17%;color:#454545;}
+.tab6{width:21%;color:#454545;}*/
+
+  /*<div class="container tabmenu" >
+            <div class="tabs tabs1 tabon" >탭온</div>
+            <div class="tabs tabs2 " >탭1</div>
+            <div class="tabs tabs3 " >탭1</div>
+            <div class="tabs tabs4 " >탭1</div>
+            <div class="tabs tabs5 " >탭1</div>
+            <div class="tabs tabs6  tablast" >탭라시트</div>
+            <div class="linebb"></div>
+        </div>*/
+
+
+
+
+@media (min-width: 768px){
+
+.wrap{position: relative; padding: 50px 10.50972149238045%}
+
+.item1{width:100%}
+
+/*컨텐츠 가 한로우에 2개일때*/
+.item2{width:49%;margin-right:2%;float:left;}
+
+/*컨텐츠 가 한로우에 3개일때*/
+.item3{width:32% ;margin-right:2%;float:left;}
+
+/*컨텐츠 가 한로우에 4개일때*/
+.item4{width:24.25%;margin-right:1%;float:left;}
+
+
+/*컨텐츠 가 한로우에 5개일때*/
+.item5{width:19%;margin-right:1.25%;float:left;}
+
+
+
+/*가장 오른쪽 아이템 에 추가*/
+.itemlast{margin-right:0px;}
+
+
+
+
+}
+
+/*pc화면의 바디 사이즈*/
+@media (min-width: 992px){
+  .container{width:1170px }
+
+.item1{width:100%}
+
+/*컨텐츠 가 한로우에 2개일때*/
+.item2{width:49%;margin-right:2%;float:left;}
+
+/*컨텐츠 가 한로우에 3개일때*/
+.item3{width:32% ;margin-right:2%;float:left;}
+
+/*컨텐츠 가 한로우에 4개일때*/
+.item4{width:24.25%;margin-right:1%;float:left;}
+
+/*가장 오른쪽 아이템 에 추가*/
+.itemlast{margin-right:0px;}
+
+
+
+.wrap{    position: relative;
+    padding: 32px 0 32px 50px;}
+
+}
+
+
+
+
+.pagination a{color:#000 !important;}  /*페이저의 기본*/
+.pagination li.on a{background:#ecf3b3; color:#000 !important} /*현재선택된페이지*/
+
+a:hover{text-decoration:none;color:inherit;cursor:pointer}

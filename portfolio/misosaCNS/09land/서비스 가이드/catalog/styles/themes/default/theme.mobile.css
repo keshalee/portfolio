@@ -1,0 +1,117 @@
+.toast .navbar {
+  height: 44px !important;
+  min-height: 44px; }
+.toast .controls {
+  height: 44px !important;
+  line-height: 44px !important; }
+.toast .searchbar,
+.toast .search-navigatebar {
+  height: 44px !important; }
+.toast .navbar button,
+.toast .controls .start-menu {
+  zoom: 0.95 !important; }
+.toast .controls .start-menu .dropdown-menu {
+  zoom: 1.05; }
+.toast .btn-toolbar .navigate,
+.toast .searchbar .container,
+.toast .search-navigatebar .btn-list,
+.toast .controls .btn-group.pull-right {
+  zoom: 0.9; }
+.toast .btn-toolbar .navigate {
+  margin-top: -2px; }
+.searchbar .searchinput {
+  font-size: 16px !important; }
+.toast .navigate .btn.btn-pagelabel > .label-page,
+.toast .search-navigatebar .btn-pagelabel > .label {
+  font-size: 14px !important; }
+.toast .navbar .btn-toolbar .btn > .label {
+  display: none; }
+.toast .autoslide {
+  zoom: 0.85; }
+.navbar-default {
+  border-bottom: 1px solid #ccc; }
+.toast .controls {
+  border-top: 1px solid #ccc; }
+.toast .navbar .translucent,
+.toast .controls  .translucent {
+  background: #fff; }
+.toast.bookzoom-activate .navbar,
+.toast.bookzoom-activate .controls {
+  border: 0; }
+.playback {
+  width: 32px;
+  height: 32px;
+  bottom: 6px !important; }
+
+.btn-group.btn-share-group > .btn {
+  padding: 6px 5px; }
+.btn-group.btn-share-group .share-icon,
+.btn-group.btn-share-group .share-icon {
+  width: 35px;
+  height: 35px; }
+.share-modal-wrapper .modal-body .btn-group.btn-share-group > .btn {
+  padding: 6px 30px;
+  zoom: 0.9;
+  width: 25%; }
+.share-modal-wrapper .modal-body .btn-group.btn-share-group > .btn > span {
+  display: none; }
+button[command="sendKakaotalk"] { display: block; }
+
+.book section.present {
+  box-shadow: 0 0px 5px rgba(0,0,0,.3); }
+
+.zoom-bar {
+  height: 400px;
+  margin-top: -200px; }
+.zoom-bar [zoom-bar-fullscreen] {
+  display: none; }
+.zoom-bar .btn.btn-bottom {
+    top: 364px; }
+button[command="fullscreen"],
+button[command="toggleDoublePage"],
+button[command="firstPage"],
+button[command="lastPage"],
+button[command="print"],
+.start-menu li[command="search"],
+.start-menu li[command="toggleDoublePage"],
+.start-menu li[command="print"] {
+  display: none; }
+
+.toast .book-container {
+  top: 50px;
+  bottom: 50px; }
+.zoom-bar {  
+  right: 5px;
+  height: 328px;
+  margin-top: -164px; }
+.zoom-bar .btn.btn-bottom {
+  top: 294px; }
+.zoom-bar [data-scale-mode] {
+  display: none; }
+
+.jstree .jstree-anchor:active .jstree-wholerowex > .wholerowex-inner {
+  background: #dddddd; }
+.jstree-wholerowex {
+  z-index: -1;
+}
+
+@media (orientation: landscape) {
+  .toast:not(.bookzoom-activate) .book-container {
+    top: 0;
+    bottom: 0; }
+  .toast.has-book-bg:not(.bookzoom-activate) .book-container {
+    top: 10px;
+    bottom: 10px; }
+  .toast .navbar,
+  .toast .controls {
+    border: 0; }
+  .toast .navbar .translucent,
+  .toast .controls .translucent {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); }
+  .toast .btn-show-menubar {
+    display: block; }
+  button[command="firstPage"],
+  button[command="lastPage"] {
+    display: inline-block; }
+}

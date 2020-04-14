@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <!--<link href="css/mainmobile.css" rel="stylesheet" />
+    <link href="css/maintablet.css" rel="stylesheet" />
+    <link href="css/mainpc.css" rel="stylesheet" />-->
+    <link href="less/mainmobile.css" rel="stylesheet" />
+    <link href="less/maintablet.css" rel="stylesheet" />
+    <link href="less/mainpc.css" rel="stylesheet" />
+
+
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/new.css" rel="stylesheet" />
+    
+   
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.backgroundSize.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.dotdotdot.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <script>
+        $(document).ready(function () {
+            //백그라운드 랜덤이미지  url만 추가
+            /*
+            var bgimg = new Array(
+                  "Images/bg/ezonbg01.png",
+                  "Images/bg/ezonbg02.png",
+                  "Images/bg/ezonbg03.png");
+            var count = bgimg.length;
+            var result = Math.floor(Math.random() * count);
+            var choiceimg = bgimg[result];
+
+            $('.loginimg').css("background-image", " url("+choiceimg+")");
+            */
+        })
+    </script>
+</head>
+  
+<body>
+    <div class="loginimg"></div>
+    <div class="loginbg"></div>
+    <div class="container-fluid loginwrap">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 np wraptop">
+                    <a href="../main.html">공구랜드 바로가기</a> <a href="회원가입.html">회원가입</a>
+                </div>
+                <div class="col-xs-12 np wrapright">
+                    <div class="notice col-xs-12 np">
+                        <span>공지사항</span>
+                        <a>개인정보취급방침 및 이용약관이 변경됩개인정보취급방침 및 이용약관이 변경됩개인정보취급방침 및 이용약관이 변경됩</a>
+                    </div>
+                    <div class="col-xs-12  login">
+                        <div class="col-xs-12 np title">
+                            <span>SNS 로그인</span>
+                        </div>
+                        <div class="col-xs-12 np snslogin">
+                            <a> <img src="Images/common/login-fb.png" /></a>
+                            <a> <img src="Images/common/login-gg.png" /></a>
+                            <a> <img src="Images/common/login-kk.png" /></a>
+                            <a> <img src="Images/common/login-tw.png" /></a>
+                        </div>
+                        <div class="col-xs-12 elogin np">
+                            <span class="title">이메일 로그인</span>
+                            <input class="top" type="text" placeholder="이메일" />
+                            <input type="text" placeholder="비밀번호" />
+                            <span class="notice">
+                                가입된 이메일이 확인되었으나 다른 서비스<br class="hidden-xs" />
+                                계정 이거나 비밀번호가 틀려 로그인할 수 없습니다.
+                            </span>
+                            <table>
+                                <tr>
+                                    <td>갓차 이미지가들어가는자리</td>
+                                    <td class="col"><a><i class="fa fa-refresh"></i></a></td>
+                                </tr>
+                            </table>
+                            <input class="coldown" type="text" placeholder="위 글자를 입력하세요." />
+                            <a href="http://www.09land.com" class="loginbtn">로그인</a>
+                            <a href="비밀번호찾기메인.html" class="findbtn">나의 이메일 주소, 비밀번호 찾기</a>
+                        </div>
+
+
+                    </div>
+                    <div class="agree col-xs-12 np">
+                        <a href="이용약관.html" target="_blank">이용약관         </a>
+                        <a href="이용약관.html" target="_blank">개인정보취급방침 </a>
+                        <a href="회원가입방법.html" target="_blank" class="last">도움말과 피드백  </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">공구랜드</h4>
+                    </div>
+                    <div class="modal-body">
+                        출력메시지
+                        <div class="mbtn">
+                            <a class="confirm">확인</a>
+                            <a class="cancle" data-dismiss="modal">취소</a><br />
+                            <a class="yes">예</a> 
+                            <a class="no" data-dismiss="modal">아니오</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
+

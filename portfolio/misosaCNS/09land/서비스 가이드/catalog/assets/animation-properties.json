@@ -1,0 +1,135 @@
+[
+    {
+        "label": "대상",
+        "name": "targets",
+        "control":
+        {
+            "type": "object-picker",
+            "placeholder": "대상을 선택하세요"
+        },
+        "tooltip": "대상을 지정 하지 않으면 자기 자신이 대상으로 설정됩니다."
+    },
+    {
+        "label": "가속도",
+        "name": "easing",
+        "value": "ease-in-out",
+        "control":
+        {
+            "type": "select",
+            "valueList":
+            [   
+                {
+                    "label": "일정한 속도",
+                    "value": "linear"
+                },
+                {
+                    "label": "점점 빠르게",
+                    "value": "ease-in"
+                },
+                {
+                    "label": "점점 느리게",
+                    "value": "ease-out"
+                },
+                {
+                    "label": "점점 빨라지다가 느리게",
+                    "value": "ease-in-out"
+                },
+                {
+                    "label": "점점 느려지다가 빠르게",
+                    "value": "ease-out-in"
+                }
+            ]
+        }
+    },
+    {
+        "label": "지속 시간 선택",
+        "name": "namedDurations",
+        "value": "normal",
+        "control":
+        {
+            "type": "select",
+            "valueList":
+            [
+                {
+                    "label": "빠르게",
+                    "value": "fast"
+                },
+                {
+                    "label": "적당하게",
+                    "value": "normal"
+                },
+                {
+                    "label": "느리게",
+                    "value": "low"
+                }
+            ]
+        }
+    },
+    {
+        "label": "지속 시간",
+        "name": "duration",
+        "value": "800",
+        "control":
+        {
+            "type": "text",
+            "width": 80,
+            "unit": "<small>ms(1/1000)</small>"
+        },
+        "hidden": true
+    },
+    {
+        "label": "지속 시간 입력",
+        "name": "inputDuration",
+        "value": false,
+        "control":
+        {
+            "type": "checkbox",
+            "label": "사용함"
+        }
+    },
+    {
+        "label": "지연 시간",
+        "name": "delay",
+        "control":
+        {
+            "type": "text",
+            "width": 80,
+            "unit": "<small>ms(1/1000)</small>"
+        }
+    },
+    {
+        "label": "되돌리기",
+        "name": "reverse",
+        "value": false,
+        "control":
+        {
+            "type": "checkbox",
+            "label": "사용함"
+        },
+        "description": "되돌리기를 사용하면 애니메이션 완료 후 원래 상태로 되돌아갑니다."
+    },
+    {
+        "label": "재생 횟수",
+        "name": "count",
+        "value": 1,
+        "control":
+        {
+            "type": "spinedit",
+            "width": 55,
+            "step": 1,
+            "max": 5000,
+            "min": 1,
+            "numberOfDecimals": 0
+        }
+    },
+    {
+        "label": "반복 사용",
+        "name": "loop",
+        "value": false,
+        "control":
+        {
+            "type": "checkbox",
+            "label": "사용함"
+        }
+    }
+]

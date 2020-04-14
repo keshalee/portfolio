@@ -1,0 +1,9 @@
+
+/*사용하기전에  무조건 부모의  클래스를 하나 만들어준다음에 사용한다*/
+
+
+
+.nav_button .button1 {
+    padding-bottom: 0px;
+    padding-top: 20px;
+}

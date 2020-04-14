@@ -1,0 +1,142 @@
+[
+    {
+    	"label": "위치",
+        "name": "Position",
+    	"version": "1.0.0",
+    	"properties": 
+    	[
+            {
+                "label": "왼쪽",
+                "name": "left",
+                "control":
+                {
+                    "type": "text",
+                    "width": 55,
+                    "unit": "px"
+                },
+                "index": 1
+            },
+            {
+                "label": "상단",
+                "name": "top",
+                "control":
+                {
+                    "type": "text",
+                    "width": 55,
+                    "unit": "px"
+                },
+                "index": 2
+            }
+    	]
+    },
+    {
+        "label": "크기",
+        "name": "Size",
+        "version": "1.0.0",
+        "properties": 
+        [
+            {
+                "label": "크기<small>(px)</small>",
+                "group":[
+                    {
+                        "label": "가로",
+                        "name": "width",
+                        "control":
+                        {
+                            "type": "spinedit",
+                            "width": 55,
+                            "step": 1,
+                            "max": 10000,
+                            "min": 1,
+                            "numberOfDecimals": 0
+                        }
+                    },
+                    {
+                        "label": "세로",
+                        "name": "height",
+                        "control":
+                        {
+                            "type": "spinedit",
+                            "width": 55,
+                            "step": 1,
+                            "max": 10000,
+                            "min": 1,
+                            "numberOfDecimals": 0
+                        }
+                    }
+                ]                            
+            }
+        ]
+    },
+    {
+        "label": "불 투명도",
+        "name": "Opacity",
+        "version": "1.0.0",
+        "properties": 
+        [
+            {
+                "label": "불투명도",    
+                "name": "opacity",
+                "value": 100,
+                "control":
+                {
+                    "type": "spinedit",
+                    "step": 1,
+                    "max": 100,
+                    "min": 0,
+                    "numberOfDecimals": 0,
+                    "unit": "%"
+                }
+            }
+        ]
+    },
+    {
+        "label": "확대/축소",
+        "name": "Zoom",
+        "icon": "glyphicon glyphicon-zoom-in",
+        "version": "1.0.0",
+        "properties": 
+        [
+            {
+                "label": "확대 비율",
+                "name": "zoomScale",
+                "value": 100,
+                "control":
+                {
+                    "type": "spinedit",
+                    "step": 1,
+                    "max": 5000,
+                    "min": 0,
+                    "numberOfDecimals": 0,
+                    "unit": "%"
+                }
+            }
+        ]
+    },
+    {
+        "label": "회전",
+        "name": "Rotate",
+        "icon": "glyphicon glyphicon-repeat",
+        "version": "1.0.0",
+        "properties": 
+        [
+            {
+                "label": "각도",
+                "name": "angle",
+                "value": 100,
+                "control":
+                {
+                    "type": "text",
+                    "width": 55,
+                    "unit": "˚"
+                }
+            }
+        ]
+    },
+    { "divider": true },
+    {
+        "label": "효과 추가",
+        "name": "Effect",
+        "icon": "fa fa-plus"
+    }
+]

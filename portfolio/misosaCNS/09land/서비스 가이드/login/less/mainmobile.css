@@ -1,0 +1,765 @@
+﻿a {
+  color: inherit;
+}
+a:focus {
+  text-decoration: none;
+}
+/*슬라이더 초기화*/
+.bx-wrapper .bx-viewport {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  left: 0;
+}
+.onel {
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+.font16 {
+  font-size: 16px;
+}
+.font14 {
+  font-size: 14px;
+}
+.loginimg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.loginbg {
+  background: rgba(0, 0, 0, 0.55);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.loginwrap .wraptop {
+  text-align: right;
+  color: #FFF;
+}
+.loginwrap .wraptop a {
+  border: solid 1px #FFF;
+  color: #FFF;
+  padding: 2px 5px;
+  margin-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.loginwrap .wrapleft {
+  margin-top: 40px;
+}
+.loginwrap .wrapleft .logo {
+  width: 150px;
+}
+.loginwrap .wrapleft .logotext {
+  color: #ffffff;
+  font-size: 14px;
+  float: right;
+  position: relative;
+  top: 5px;
+}
+.loginwrap .wrapleft .logosubtext {
+  display: block;
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+.loginwrap .wrapleft .stotydesc {
+  display: block;
+  border: solid 1px #FFF;
+  border-radius: 5px;
+  text-align: center;
+  color: #FFF;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+.loginwrap .wrapleft .tomobile {
+  margin-top: 20px;
+  border: solid 1px #FFF;
+  border-radius: 5px;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.loginwrap .wrapleft .tomobile div {
+  text-align: center;
+}
+.loginwrap .wrapleft .tomobile div a {
+  color: #FFF;
+  border: solid 1px #FFF;
+  padding: 2px 5px;
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.loginwrap .wrapleft .tomobile div .top {
+  color: #FFF;
+  font-size: 14px;
+}
+.loginwrap .wrapleft .tomobile div .bottom {
+  color: #fff;
+  opacity: 0.6;
+  font-size: 14px;
+}
+.loginwrap .wrapright {
+  margin-top: 40px;
+}
+.loginwrap .wrapright .notice span {
+  background: #FFF;
+  color: #656565;
+  font-size: 14px;
+  padding: 4px 7px;
+  display: inline-block;
+  float: left;
+}
+.loginwrap .wrapright .notice a {
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  width: 70%;
+  color: #FFF;
+  float: left;
+  margin-left: 10px;
+  padding-top: 4px;
+}
+.loginwrap .wrapright .login {
+  border: solid 1px #FFF;
+  margin-top: 20px;
+}
+.loginwrap .wrapright .login > .title {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.loginwrap .wrapright .login > .title img {
+  width: 100px;
+}
+.loginwrap .wrapright .login > .title span {
+  color: #FFF;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: sub;
+}
+.loginwrap .wrapright .login .snslogin a {
+  width: 23%;
+  margin-right: 4px;
+  max-width: 84px;
+  display: block;
+  float: left;
+}
+.loginwrap .wrapright .login .snslogin a img {
+  width: 100%;
+}
+.loginwrap .wrapright .login .elogin .title {
+  font-size: 14px;
+  color: #FFF;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.loginwrap .wrapright .login .elogin input[type=text] {
+  width: 100%;
+  border: 0;
+  padding-left: 10px;
+  height: 40px;
+}
+.loginwrap .wrapright .login .elogin input[type=text].top {
+  border-bottom: solid 1px #e6e6e6;
+}
+.loginwrap .wrapright .login .elogin .notice {
+  color: #dc4a38;
+  font-size: 12px;
+  letter-spacing: -1px;
+  background: #FFF;
+  padding: 12px;
+  display: inline-block;
+  margin-top: 2px;
+  width: 100%;
+}
+.loginwrap .wrapright .login .elogin table {
+  margin-top: 15px;
+}
+.loginwrap .wrapright .login .elogin table td {
+  background: #FFF;
+  text-align: center;
+}
+.loginwrap .wrapright .login .elogin table td.col {
+  background: #96bf1a;
+  height: 40px;
+  width: 75px;
+  color: #FFF;
+  font-size: 25px;
+  vertical-align: middle;
+}
+.loginwrap .wrapright .login .elogin .coldown {
+  margin-top: 5px;
+}
+.loginwrap .wrapright .login .elogin a.loginbtn {
+  background: #96bf1a;
+  text-align: center;
+  color: #FFF;
+  font-size: 14px;
+  display: block;
+  padding: 10px;
+  margin-top: 15px;
+}
+.loginwrap .wrapright .login .elogin a.findbtn {
+  color: #FFF;
+  text-decoration: underline;
+  width: 210px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+.loginwrap .wrapright .agree {
+  margin-top: 13px;
+  text-align: center;
+}
+.loginwrap .wrapright .agree a {
+  width: 33%;
+  letter-spacing: -1px;
+  font-size: 12px;
+  margin-right: 10px;
+  color: #FFF;
+}
+.loginwrap .wrapright .agree a.last {
+  margin-right: 0;
+}
+.loginwrap .wrapbottom {
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  color: #FFF;
+  font-size: 12px;
+  letter-spacing: -1px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.loginwrap .wrapbottom .title {
+  font-size: 14px;
+  display: block;
+}
+.loginwrap .wrapbottom .item {
+  display: inline-block;
+  margin-top: 5px;
+}
+.loginwrap .wrapbottom .item span {
+  color: #c2c2c2;
+}
+.loginwrap .wrapbottom .item:before {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 1px;
+}
+.loginwrap .wrapbottom .item.first:before {
+  content: "";
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  bottom: 1px;
+}
+.loginwrap .wrapbottom .item.second:before {
+  content: "";
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  bottom: 1px;
+}
+.loginwrap #myModal .modal-content {
+  border-radius: 0;
+  border: solid 5px #96bf1a;
+}
+.loginwrap #myModal .modal-title {
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 20px;
+}
+.loginwrap #myModal .mbtn {
+  margin-top: 20px;
+  text-align: center;
+}
+.loginwrap #myModal .mbtn a {
+  color: #FFF;
+  padding: 12px 0;
+  display: inline-block;
+  width: 80px;
+}
+.loginwrap #myModal .mbtn .confirm {
+  background: #151515;
+  margin-right: 15px;
+}
+.loginwrap #myModal .mbtn .cancle {
+  background: #9b9b9b;
+}
+.loginwrap #myModal .mbtn .yes {
+  background: #96bf1a;
+  margin-right: 15px;
+}
+.loginwrap #myModal .mbtn .no {
+  background: #c0c0c0;
+}
+.joinwarp .wraptop {
+  text-align: right;
+  margin-top: 20px;
+}
+.joinwarp .wraptop a {
+  border: solid 1px #FFF;
+  color: #FFF;
+  padding: 2px 5px;
+  margin-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.joinwarp .wrapcenter {
+  margin-top: 40px;
+  color: #FFF;
+}
+.joinwarp .wrapcenter .title {
+  font-size: 22px;
+  display: block;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+.joinwarp .wrapcenter .desc {
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+}
+.joinwarp .wrapleft {
+  margin-top: 40px;
+}
+.joinwarp .wrapleft .title {
+  font-size: 14px;
+  color: #FFF;
+  display: block;
+  margin-bottom: 10px;
+}
+.joinwarp .wrapleft a {
+  color: #FFF;
+  display: block;
+  padding: 15px 0;
+  padding-left: 55px;
+  margin-top: 10px;
+}
+.joinwarp .wrapleft a.fb {
+  background-color: #3b5999;
+  background-image: url(../Images/common/join-fb.png);
+  background-repeat: no-repeat;
+}
+.joinwarp .wrapleft a.tw {
+  background-color: #5ea9dd;
+  background-image: url(../Images/common/join-tw.png);
+  background-repeat: no-repeat;
+}
+.joinwarp .wrapleft a.gg {
+  background-color: #db4a38;
+  background-image: url(../Images/common/join-gg.png);
+  background-repeat: no-repeat;
+}
+.joinwarp .wrapleft a.kk {
+  background-color: #fbe300;
+  background-image: url(../Images/common/join-kk.png);
+  background-repeat: no-repeat;
+}
+.joinwarp .wrapleft .desc {
+  color: #FFF;
+  font-size: 14px;
+  letter-spacing: -1px;
+  display: block;
+  margin-top: 20px;
+}
+.joinwarp .wrapleft .desc span {
+  text-decoration: underline;
+}
+.joinwarp .wrapright {
+  margin-top: 40px;
+}
+.joinwarp .wrapright .title {
+  font-size: 14px;
+  color: #FFF;
+  display: block;
+  margin-bottom: 10px;
+}
+.joinwarp .wrapright .name {
+  height: 40px;
+  display: block;
+  border: 0;
+  width: 100%;
+  padding-left: 20px;
+  border-bottom: solid 1px #e6e6e6;
+}
+.joinwarp .wrapright .pass {
+  height: 35px;
+  display: block;
+  border: 0;
+  width: 100%;
+  padding-left: 20px;
+}
+.joinwarp .wrapright .passdesc {
+  display: block;
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  padding-top: 5px;
+  padding-left: 20px;
+  background: #FFF;
+  font-size: 12px;
+  letter-spacing: -1px;
+  color: #a9a9b1;
+  border-bottom: solid 1px #e6e6e6;
+}
+.joinwarp .wrapright a {
+  background: #96bf1a;
+  display: block;
+  padding: 10px;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.joinwarp .wrapbottom {
+  margin-top: 40px;
+  color: #FFF;
+  padding-bottom: 40px;
+}
+.joinwarp .wrapbottom a {
+  border: solid 1px #FFF;
+  color: #FFF;
+  padding: 2px 5px;
+  margin-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.findwrap .logo {
+  margin-top: 60px;
+  text-align: center;
+  border-bottom: solid 1px #CCC;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+.findwrap .findbtn a {
+  display: block;
+  border-radius: 15px;
+  text-align: center;
+  border: solid 1px #a3a3a3;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+.findwrap .findpass {
+  border-bottom: solid 1px #cccccc ;
+  padding-bottom: 20px;
+}
+.findwrap .findpass .title {
+  font-size: 22px;
+  text-align: center;
+  display: block;
+  color: #4b4b4b;
+  font-family: 'Malgun Gothic';
+  font-weight: bold;
+}
+.findwrap .findpass input {
+  width: 100%;
+  padding-left: 20px;
+  border: solid 1px #aeaeae;
+  height: 42px;
+  margin-top: 20px;
+}
+.findwrap .findpass .setpass {
+  font-size: 17px;
+  font-family: NanumGothic;
+  color: #FFF;
+  border-radius: 15px;
+  background: #999999;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.findwrap .findpassdesc span {
+  color: #4c4c4c;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  margin-top: 20px;
+}
+.findwrap .findpassdesc a {
+  font-size: 17px;
+  font-family: NanumGothic;
+  color: #999999;
+  border-radius: 15px;
+  background: #FFF;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: 1px #999999 solid;
+}
+.navbar .navbar-brand {
+  height: auto;
+}
+.centerwarp .search {
+  margin-bottom: 40px;
+}
+.centerwarp .search > .centertext {
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.centerwarp .index {
+  text-align: center;
+}
+.centerwarp .index a {
+  border: solid 2px #FFF;
+  width: 48%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  float: left;
+  min-height: 120px;
+  position: relative;
+  border-radius: 5px;
+  margin-right: 4%;
+}
+.centerwarp .index a span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.centerwarp .index a.cr {
+  border-color: #ff715d;
+}
+.centerwarp .index a.cy {
+  border-color: #ffc600;
+}
+.centerwarp .index a.cb {
+  border-color: #22bdb6;
+}
+.centerwarp .index a.cg {
+  border-color: #96bf1a;
+}
+.centerwarp .index a.cbb {
+  border-color: #000;
+}
+.centerwarp .index a.cgg {
+  border-color: #27c088;
+}
+.centerwarp .catetitle {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.pageinfowrap .left {
+  margin-bottom: 40px;
+  color: #888;
+}
+.pageinfowrap .left span {
+  letter-spacing: -1px;
+}
+.pageinfowrap .left span:before {
+  content: '>';
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 1px;
+}
+.pageinfowrap .left span.home:before {
+  content: "";
+  margin-left: 0;
+  margin-right: 0;
+}
+.pageinfowrap .right {
+  text-align: right;
+  color: #888;
+}
+.articlewrap {
+  padding-bottom: 50px;
+}
+.articlewrap .tablemore td {
+  padding-top: 20px;
+}
+.articlewrap .tablemore .col1 {
+  text-align: center;
+}
+.articlewrap .tablemore .col2 {
+  width: 100px;
+  text-align: right;
+  padding-right: 15px;
+}
+.articlewrap .tablemore .fa {
+  margin-right: 10px;
+  position: relative;
+  bottom: 1px;
+}
+.articlewrap .bodot {
+  display: table;
+}
+.articlewrap .bodose {
+  display: table-cell;
+  width: 50%;
+}
+.articlewrap .bodose.left {
+  padding-right: 10px;
+}
+.articlewrap .bodose.right {
+  padding-left: 10px;
+}
+.articlewrap .bodots {
+  width: 100%;
+  padding: 5px;
+  border: solid 1px #d2d2d2;
+  color: #333333;
+}
+.articlewrap .bodose select {
+  width: 100%;
+  padding: 5px;
+  border: solid 1px #d2d2d2;
+  color: #333333;
+}
+.articlewrap .bodoinput {
+  display: table;
+  margin-top: 15px;
+}
+.articlewrap .bodoinput .bodoinputitem {
+  display: table-cell;
+}
+.articlewrap .bodoinput input {
+  width: 100%;
+  border: solid 1px #d2d2d2;
+  height: 30px;
+}
+.articlewrap .bodoinput .sbtn {
+  width: 80px;
+  text-align: center;
+  padding-left: 20px;
+}
+.articlewrap .bodoinput .sbtn a {
+  display: block;
+  background: #d03a2b;
+  color: #FFF;
+  padding: 5px;
+}
+.articlewrap .bodobody {
+  margin-top: 40px;
+  border-bottom: solid 1px #d9d9da;
+  margin-bottom: 10px;
+}
+.articlewrap .bodotitle {
+  color: #000;
+  font-size: 14px;
+  width: 67.5%;
+  display: inline-block;
+}
+.articlewrap .bodotitle span {
+  margin-left: 10px;
+  color: #555555;
+  vertical-align: text-bottom;
+}
+.articlewrap .bodosubtitle {
+  display: inline-block;
+  margin-top: 5px;
+  color: #770715;
+  font-weight: bold;
+  font-size: 14px;
+}
+.articlewrap .bodosubtitle span {
+  display: inline-block;
+  margin-left: 10px;
+  color: #f34c3c;
+  letter-spacing: -1px;
+  font-size: 13px;
+}
+.articlewrap .bodosubtitle span span {
+  color: #a8a8a8;
+  margin-left: 5px;
+}
+.articlewrap .bodosubtitle span span.done {
+  color: #000000;
+  font-weight: bold;
+}
+.articlewrap .moviet {
+  width: 50px;
+  margin-right: 10px;
+  vertical-align: text-top;
+}
+.articlewrap .ui-state-default span.ui-accordion-header-icon {
+  background-image: url(../Images/common/ab.png) !important;
+  background-position: initial !important;
+  background-repeat: no-repeat !important;
+  left: inherit !important;
+  right: 0.5em ;
+  width: 30px !important;
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.articlewrap .ui-accordion-header-active span.ui-accordion-header-icon {
+  background-image: url(../Images/common/ax.png) !important;
+  background-position: initial !important;
+  background-repeat: no-repeat !important;
+  left: inherit !important;
+  right: 0.5em;
+  width: 30px !important;
+}
+.articlewrap .ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-radius: 0;
+  border-color: #d9d9da;
+  border-left: 0;
+  border-right: 0;
+  background: none;
+  border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.articlewrap .ui-accordion-content {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: none;
+  padding: 10px 10px 10px 0 !important;
+  background: #eee;
+  padding-left: 10px !important;
+  padding-right: 10px;
+}
+.articlewrap .ui-accordion-content p {
+  color: #555555;
+}
+.articlewrap .ui-accordion .ui-accordion-header {
+  padding: 15px 10px 15px 0;
+  outline: none;
+  border-top: 0;
+  border-bottom: 1px solid #aaa;
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .centerwarp .index a.mlast {
+    margin-right: 0;
+  }
+}

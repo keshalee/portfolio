@@ -1,0 +1,455 @@
+/********************** responsive style ***********************/
+@media (min-width:1281px) and (max-width:1640px) { 
+/*	.header .innerdiv .langdiv { right:250px; }*/
+	
+	/* header */
+/*	.header .innerdiv .topmenu li a { padding:30px 15px; }*/
+	
+	/* main content */
+	.company-introbox .rightcontents .majorsite h2 { font-size:1.6em !important; }
+	.company-introbox .rightcontents .cscenter { zoom:0.85; }
+	
+	/* tabs */
+	.midarea .contentdiv .menudiv .tabs li { width:17%; margin-left:-1%; }
+	.midarea .contentdiv .menudiv .tabs li span { margin-left:-10%; }
+	.midarea .contentdiv .menudiv .tabs li span a { font-size:1.1em; font-weight:600; }
+	
+	/* footer */
+/*
+	.bottomarea .snsbox { right:3%; top:10px; width:auto; }
+	.bottomarea .innerbox .flbox { width:100%; }
+	.bottomarea .innerbox .footer-qrcode { display:none; }
+*/
+	
+	
+	
+}
+@media (min-width:1041px) and (max-width:1280px) { 
+	
+	/* header */
+/*
+	.header .innerdiv .topmenu li a { padding:30px 10px; }
+	.header .innerdiv .langdiv { display:none; }
+	.header .innerdiv .topsns { right:20px; }
+*/
+	
+	/* main content */
+	.company-introbox .leftcontents { width:100%; clear:both; float:none; }
+	.company-introbox .leftcontents .mainvisual { width:100%; }
+	.company-introbox .rightcontents .broadcast { height:400px !important; padding:50px 35px 0; }
+	.company-introbox .rightcontents .broadcast ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .majorsite { height:440px !important; padding:50px 35px 0;}
+	.company-introbox .rightcontents .majorsite h2 { font-size:2em; }
+	.company-introbox .rightcontents .majorsite > ul { height:auto}
+	.company-introbox .rightcontents .majorsite .slick-dots { bottom:0;}
+	.company-introbox .rightcontents .majorsite ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .leftcontents .serviceguide .specialpride li a img { width:40%; margin-left:-20%; }
+	.company-introbox .rightcontents .notice { height:280px; padding:30px 35px}
+	.company-introbox .rightcontents .faq { height:280px; padding:30px 35px}
+	.company-introbox .rightcontents .faq .faqlist { zoom:0.9}
+	.company-introbox .rightcontents .cscenter { height:280px; float:none; clear:both; overflow:hidden; width:auto; padding-top:30px; }
+	.company-introbox .rightcontents .cscenter dt { float:none; margin-right:30px}
+	.company-introbox .rightcontents .cscenter dt span:first-child { }
+	.company-introbox .rightcontents .cscenter dt strong { display:block; width:300px; height:auto}
+	.company-introbox .rightcontents .cscenter dd { float:none; }
+	.company-introbox .rightcontents .cscenter dd p:first-child { overflow:hidden; }
+	.company-introbox .rightcontents .cscenter dd p:nth-child(2) { line-height:1.2; }
+	
+	/* company */
+	.midarea .contentdiv .companytable .content .greeting { float:none; display:block; clear:both; width:100%; }
+	.midarea .contentdiv .companytable .content .history { float:none; display:block; clear:both; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history p { float:left; width:100%; text-align:left; }
+	
+	/* footer */
+/*
+	.bottomarea { height:auto; overflow:hidden; }
+	.bottomarea > ul { height:80px; padding-left:0px; width:100%; }
+	.bottomarea > ul > li { width:33.33%; height:40px; background:0; border:1px solid #dfdfdf; border-left:0; border-top:0; padding-top:5px; line-height:30px;  }
+	.bottomarea > ul > li a { text-align:center; padding:0; font-size:14px; font-family:noto;}
+	.bottomarea .snsbox { display:none; }
+	.bottomarea .innerbox { padding:0 10px 18px 10px; }
+	.bottomarea .innerbox .flbox { width:auto; float:none; padding:14px 0 0 0;  }
+	.bottomarea .innerbox .flbox h1 { width:100%; float:none; text-align:center; line-height:40px; font-weight:300; position:static; left:0; top:0; font-size:36px; margin:0 20px 10px 10px; }
+	.bottomarea .innerbox .flbox p { text-align:center; word-wrap:break-word; word-break:break-all; line-height:20px; font-size:13px !important; font-family:noto; font-weight:300; margin:0; padding:0; width:100%; }
+	.bottomarea .innerbox .flbox p span { display:inline-block; line-height:18px; }
+	.bottomarea .innerbox .flbox p span a { font-family:noto; }
+	.bottomarea .innerbox .footer-qrcode { display:none; }
+*/
+	
+	/* tabs */
+	.midarea .contentdiv .menudiv .tabs { margin:0; margin-left:2%; }
+	.midarea .contentdiv .menudiv .tabs li { width:16%; margin:0; padding:0; }
+	.midarea .contentdiv .menudiv .tabs li span { margin-left:-12%; }
+	.midarea .contentdiv .menudiv .tabs li:last-child span { padding:0 2px; }
+	.midarea .contentdiv .menudiv .tabs li span a { font-size:0.85em; font-weight:300; }
+	
+	
+	.tabs1 .bordertable tr th:first-child { display:none; }
+	.tabs1 .bordertable tr td:first-child { display:none; }
+	.tabs1 .bordertable tr th:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(4) { display:none; }
+	
+	
+}
+@media (min-width:721px) and (max-width:1040px) { 
+	
+	/* header */
+/*
+	.header { height:140px; }
+	.header .toplogo { width:30%; padding:0 10px; }
+	.header .innerdiv { width:70%; margin-left:30%; }
+	.header .innerdiv .langdiv { display:none; }
+	.header .innerdiv .topmenu { position:absolute; width:auto; height:50%; left:-40%; bottom:0; }
+	.header .innerdiv .topsns { right:80px; }
+	.header .innerdiv .topmenu li a { padding:20px 30px; }
+*/
+	
+	/* main content */
+	.sidebar { display:none; }
+	.contents { margin:0; padding-top:140px; }
+	.midarea .contentdiv { margin:0; padding:0 30px; }
+	.company-introbox .leftcontents { width:100%; clear:both; float:none; margin-bottom:15px; }
+	.company-introbox .leftcontents .mainvisual { width:100%; }
+	.company-introbox .rightcontents { }
+	.company-introbox .rightcontents .flbox { width:100%; }
+	.company-introbox .rightcontents .broadcast { width:50%; float:left; }
+	.company-introbox .rightcontents .broadcast ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .majorsite { width:50%; padding:30px 35px;  }
+	.company-introbox .rightcontents .majorsite > ul { height:auto}
+	.company-introbox .rightcontents .majorsite p span { display:none; }
+	.company-introbox .rightcontents .majorsite .slick-dots { bottom:0}
+	.company-introbox .rightcontents .majorsite ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .frbox { float:none; clear:both; }
+	.company-introbox .rightcontents .notice { float:left; width:50%; padding:30px 35px; height:260px;}
+	.company-introbox .rightcontents .faq { float:left; width:50%; padding:30px 35px; height:260px; }
+	.company-introbox .rightcontents .faq .faqlist { zoom:0.9}
+	.company-introbox .rightcontents .cscenter { height:auto; float:none; clear:both; overflow:hidden; width:auto; padding-top:30px; }
+	.company-introbox .rightcontents .cscenter dt { width:50%; overflow:hidden; float:left; }
+	.company-introbox .rightcontents .cscenter dt span:first-child { display:inline-block; float:left; width:45%; }
+	.company-introbox .rightcontents .cscenter dt strong { display:block; height:auto; float:left; padding-top:10px; width:53%; margin-left:2%; }
+	.company-introbox .rightcontents .cscenter dd { float:left; width:50%; margin:0; padding:0; }
+	.company-introbox .rightcontents .cscenter dd p:first-child { width:25%; overflow:hidden; margin-left:3%; }
+	.company-introbox .rightcontents .cscenter dd p:nth-child(2) { width:70%; line-height:1.2; margin-left:2%; }
+	
+	/* footer */
+/*
+	.bottomarea { height:auto; overflow:hidden; }
+	.bottomarea > ul { height:80px; padding-left:0px; width:100%; }
+	.bottomarea > ul > li { width:33.33%; height:40px; background:0; border:1px solid #dfdfdf; border-left:0; border-top:0; padding-top:5px; line-height:30px;  }
+	.bottomarea > ul > li a { text-align:center; padding:0; font-size:14px; font-family:noto;}
+	.bottomarea .snsbox { display:none; }
+	.bottomarea .innerbox { padding:0 10px 18px 10px; }
+	.bottomarea .innerbox .flbox { width:auto; float:none; padding:14px 0 0 0;  }
+	.bottomarea .innerbox .flbox h1 { width:100%; float:none; text-align:center; line-height:40px; font-weight:300; position:static; left:0; top:0; font-size:36px; margin:0 20px 10px 10px; }
+	.bottomarea .innerbox .flbox p { text-align:center; word-wrap:break-word; word-break:break-all; line-height:20px; font-size:13px !important; font-family:noto; font-weight:300; margin:0; padding:0; width:100%; }
+	.bottomarea .innerbox .flbox p span { display:inline-block; line-height:18px; }
+	.bottomarea .innerbox .flbox p span a { font-family:noto; }
+	.bottomarea .innerbox .footer-qrcode { display:none; }
+*/
+	
+	/* quick menu */
+	#sidebar_wrap { display:none; }
+	
+	.tabs1 .bordertable tr th:first-child { display:none; }
+	.tabs1 .bordertable tr td:first-child { display:none; }
+	.tabs1 .bordertable tr th:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(4) { display:none; }
+	
+	/* tabs */
+	.midarea .contentdiv .menudiv { margin-top:5%; }
+	.midarea .contentdiv .menudiv .tabs { margin:0;}
+	.midarea .contentdiv .menudiv .tabs li { width:33.33%; margin:0; padding:0; background:0; }
+	.midarea .contentdiv .menudiv .tabs li span { margin-left:-12%; }
+	.midarea .contentdiv .menudiv .tabs li span a { font-size:1.2em; font-weight:600; }
+	
+	/* company */
+	.midarea .contentdiv .companytable .content .greeting { float:none; display:block; clear:both; width:100%; }
+	.midarea .contentdiv .companytable .content .history { float:none; display:block; clear:both; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history p { float:left; width:100%; text-align:left; }
+	
+	/* community content */
+	.faq img { width:28px; margin-right:7px; }
+	
+}
+@media (min-width:480px) and (max-width:720px) { 
+	
+	/* header */
+/*
+	.header { height:140px; }
+	.header .toplogo { width:30%; padding:0 10px; }
+	.header .innerdiv { width:70%; margin-left:30%; }
+	.header .innerdiv .topmenu { position:absolute; width:auto; height:50%; left:0; bottom:0; margin-left:-35%; }
+	.header .innerdiv .topmenu li a { padding:20px 12px; font-size:1.2em; }
+	.header .innerdiv .langdiv { display:none; }
+	.header .innerdiv .topsns { margin-left:35%; }
+	.header .innerdiv .topsns a { display:inline-block; width:23px; }
+*/
+	
+	/* main content */
+	.sidebar { display:none; }
+	.contents { margin:0; padding-top:140px; }
+	.midarea .contentdiv { margin:0; padding:0 20px; }
+	.company-introbox .leftcontents { width:100%; clear:both; float:none; margin-bottom:15px; }
+	.company-introbox .leftcontents .mainvisual { width:100%; }
+	.company-introbox .rightcontents { width:100%; }
+	.company-introbox .rightcontents .flbox { width:100%; }
+	.company-introbox .rightcontents .broadcast { width:100%; float:left; }
+	.company-introbox .rightcontents .broadcast ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .majorsite { width:100%; padding:30px 35px;  }
+	.company-introbox .rightcontents .majorsite > ul { height:auto}
+	.company-introbox .rightcontents .majorsite p span { display:none; }
+	.company-introbox .rightcontents .majorsite .slick-dots { bottom:0}
+	.company-introbox .rightcontents .majorsite ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .frbox { float:none; clear:both; }
+	.company-introbox .rightcontents .notice { width:100%; padding:30px 35px; height:260px;}
+	.company-introbox .rightcontents .faq { float:none; width:100%; padding:30px 35px; height:260px; }
+	.company-introbox .rightcontents .faq .faqlist { zoom:0.9}
+	.company-introbox .rightcontents .cscenter { height:auto; float:none; clear:both; overflow:hidden; width:auto; padding-top:30px; }
+	.company-introbox .rightcontents .cscenter dt { width:150px; overflow:hidden; float:left; }
+	.company-introbox .rightcontents .cscenter dt span:first-child { display:block; float:none; background-size:80px auto; width:80px; height:40px; margin:0; padding:0; }
+	.company-introbox .rightcontents .cscenter dt strong a { display:inline-block; width:100%; max-width:441px; max-height:62px; padding-top:10px; margin:0 auto; background:0; font-family:noto-bold; color:#fff; font-size:30px; text-indent:0; text-align:left; }
+	.company-introbox .rightcontents .cscenter dd { float:right; width:220px; margin-left:10px; }
+	.company-introbox .rightcontents .cscenter dd p:first-child { float:left; width:22%; background-size:50px auto; background-position:center 40%; margin:0; padding:0; }
+	.company-introbox .rightcontents .cscenter dd p:nth-child(2) { float:right; width:75%; height:75px; margin-left:3%; }
+	.company-introbox .rightcontents .cscenter dd p span { font-size:13px !important; }
+	
+	/* footer */
+/*
+	.bottomarea { height:auto; overflow:hidden; }
+	.bottomarea > ul { height:80px; padding-left:0px; width:100%; }
+	.bottomarea > ul > li { width:33.33%; height:40px; background:0; border:1px solid #dfdfdf; border-left:0; border-top:0; padding-top:5px; line-height:30px;  }
+	.bottomarea > ul > li i { display:block; line-height:14px; }
+	.bottomarea > ul > li a { text-align:center; padding:0; font-size:0.85em; font-family:noto;}
+	.bottomarea .snsbox { display:none; }
+	.bottomarea .innerbox { padding:0 10px 18px 10px; }
+	.bottomarea .innerbox .flbox { width:auto; float:none; padding:14px 0 0 0;  }
+	.bottomarea .innerbox .flbox h1 { width:100%; float:none; text-align:center; line-height:40px; font-weight:300; position:static; left:0; top:0; font-size:30px; margin:0 20px 10px 10px; }
+	.bottomarea .innerbox .flbox p { text-align:center; word-wrap:break-word; word-break:break-all; line-height:20px; font-size:13px !important; font-family:noto; font-weight:300; margin:0; padding:0; width:100%; }
+	.bottomarea .innerbox .flbox p span { display:inline-block; line-height:18px; }
+	.bottomarea .innerbox .flbox p span a { font-family:noto; }
+	.bottomarea .innerbox .footer-qrcode { display:none; }
+*/
+	
+	/* quick menu */
+	#sidebar_wrap { display:none; }
+	
+	/* movie */
+	.midarea .contentdiv .vidlist li { float:left; width:45%; margin-right:5% !important; }
+	.midarea .contentdiv .vidlist li:nth-child(2), .midarea .contentdiv .vidlist li:nth-child(4), .midarea .contentdiv .vidlist li:nth-child(6), .midarea .contentdiv .vidlist li:nth-child(8) { margin-right:0; }
+	
+	/* photo */
+	.midarea .contentdiv .photolist .imglist li { float:left; width:45%; margin-right:5% !important; }
+	.midarea .contentdiv .photolist .imglist li:nth-child(3), .midarea .contentdiv .photolist .imglist li:nth-child(6), .midarea .contentdiv .photolist .imglist li:nth-child(9) { margin-right:0; }
+	
+	/* tabs */
+	.midarea .contentdiv .menudiv { margin-top:5%; }
+	.midarea .contentdiv .menudiv .tabs { margin:0; margin-left:0%; }
+	.midarea .contentdiv .menudiv .tabs li { width:50%; margin:0; padding:0; background:0; }
+	.midarea .contentdiv .menudiv .tabs li span { margin-left:-12%; }
+	.midarea .contentdiv .menudiv .tabs li span a { font-size:0.9em; font-weight:600; }
+	
+	.tabs1 .bordertable tr th:first-child { display:none; }
+	.tabs1 .bordertable tr td:first-child { display:none; }
+	.tabs1 .bordertable tr th:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(5) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(5) { display:none; }
+	
+	/* company */
+	.midarea .contentdiv .companytable .content .greeting { float:none; display:block; clear:both; width:100%; }
+	.midarea .contentdiv .companytable .content .history { float:none; display:block; clear:both; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history p { float:left; width:100%; text-align:left; }
+	
+	.midarea .contentdiv .companytable .content .greeting { float:none; display:block; clear:both; width:100%; }
+	.midarea .contentdiv .companytable .content .greeting h2 { font-size:36px; }
+	.midarea .contentdiv .companytable .content .greeting h3 { font-size:22px; }
+	.midarea .contentdiv .companytable .content .greeting p { font-size:14px; }
+	.midarea .contentdiv .companytable .content .greeting p.date { font-size:15px; }
+	.midarea .contentdiv .companytable .content .greeting span.ceo { font-size:1.4em; }
+	.midarea .contentdiv .companytable .content .greeting span.ceoname { font-size:2.8em; }
+	.midarea .contentdiv .companytable .content .history { float:none; display:block; clear:both; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history p { float:left; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history h2 { font-size:2.8em; }
+	.midarea .contentdiv .companytable .content .history p span.left { font-size:2.2em; }
+	.midarea .contentdiv .companytable .content .history p span.right em { font-size:14px; }
+	
+	.midarea .contentdiv .cscenter .inputtable th { width:30%; }
+	.midarea .contentdiv .cscenter .inputtable td { text-align:left; padding-left:15px; }
+	.midarea .contentdiv .cscenter .inputtable td input { width:120px; }
+	
+	/* community content */
+	.faq img { width:24px; margin-right:5px; }
+	.faq .q a { font-size:15px; }
+	.faq .a { font-size:15px; }
+	
+	
+}
+@media (max-width:480px) { 
+	
+	/* searchdiv */
+	.midarea .contentdiv .searchdiv { height:auto; overflow:hidden; width:auto; }
+	.midarea .contentdiv .searchdiv .boxleft { float:left; display:block; }
+	.midarea .contentdiv .searchdiv .boxright { float:left; display:block; margin:10px 0; }
+	
+	/* pagediv */
+	.midarea .contentdiv .pagediv { margin:30px auto; width:100%; }
+	.midarea .contentdiv .pagediv .pagination { height:25px; line-height:25px; }
+	.midarea .contentdiv .pagediv .pagination li { margin-left:1px; width:25px; height:25px; }
+	
+	/* header */
+/*
+	.header { height:120px; }
+	.header .toplogo { width:30%; padding:0 5px; }
+	.header .innerdiv { width:70%; margin-left:30%; }
+	.header .innerdiv .topmenu { position:absolute; width:auto; height:50%; left:-40%; bottom:10px; }
+	.header .innerdiv .topmenu li a { padding:20px 2px; font-size:1em; }
+	.header .innerdiv .langdiv { display:none; }
+	.header .innerdiv .topsns a { display:inline-block; width:23px; }
+*/
+	
+	/* main content */
+	.sidebar { display:none; }
+	.contents { margin:0; padding-top:120px; }
+	.midarea .contentdiv { margin:0; padding:0 10px; }
+	.company-introbox .leftcontents { width:100%; clear:both; float:none; margin-bottom:15px; }
+	.company-introbox .leftcontents .mainvisual { width:100%; }
+	.company-introbox .leftcontents .mainvisual .btnset { width:90%; top:75%; margin:0 auto; margin-left:5% }
+	.company-introbox .leftcontents .serviceguide .specialpride li p { font-size:0.9em; }
+	.company-introbox .leftcontents .serviceguide .slick-prev { width:18px; height:28px; }
+	.company-introbox .leftcontents .serviceguide .slick-next { width:18px; height:28px; }
+	.company-introbox .rightcontents { width:100%; }
+	.company-introbox .rightcontents .flbox { width:100%; }
+	.company-introbox .rightcontents .broadcast { width:100%; float:left; }
+	.company-introbox .rightcontents .broadcast ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .majorsite { width:100%; padding:30px 35px;  }
+	.company-introbox .rightcontents .majorsite > ul { height:auto}
+	.company-introbox .rightcontents .majorsite p span { display:none; }
+	.company-introbox .rightcontents .majorsite .slick-dots { bottom:0}
+	.company-introbox .rightcontents .majorsite ul li .pic { height:180px; overflow:hidden}
+	.company-introbox .rightcontents .frbox { float:none; clear:both; }
+	.company-introbox .rightcontents .notice { width:auto; padding:15px; height:auto; }
+	.company-introbox .rightcontents .notice dt { height:32px; font-size:18px; }
+	.company-introbox .rightcontents .notice dd li { padding-right:85px; background-size:2px; line-height:20px; }
+	.company-introbox .rightcontents .notice dd li a { font-size:14px !important; }
+	.company-introbox .rightcontents .notice dd li span.date { font-size:14px; }
+	.company-introbox .rightcontents .faq { float:none; width:auto; padding:15px; height:auto; }
+	.company-introbox .rightcontents .faq h2 { height:32px; font-size:18px; font-family:noto-bold;  }
+	.company-introbox .rightcontents .faq .faqlist { font-family:noto; }
+	.company-introbox .rightcontents .faq .faqlist dl { clear:both; overflow:hidden; margin:0 0 10px 0; font-family:noto; padding:0; }
+	.company-introbox .rightcontents .faq .faqlist dt { line-height:20px; font-size:16px !important; height:auto; color:#454545; margin:0 0 3px 0; }
+	.company-introbox .rightcontents .faq .faqlist dt a { font-size:16px; }
+	.company-introbox .rightcontents .faq .faqlist dd { font-size:13px; }
+	.company-introbox .rightcontents .cscenter { height:auto; float:none; clear:both; overflow:hidden; width:auto; padding:15px; }
+	.company-introbox .rightcontents .cscenter dt { width:150px; overflow:hidden; float:left; }
+	.company-introbox .rightcontents .cscenter dt span:first-child { display:block; float:none; background-size:80px auto; width:80px; height:40px;  }
+	.company-introbox .rightcontents .cscenter dt strong a { display:inline-block; width:100%; max-width:441px; max-height:62px; padding-top:10px; margin:0 auto; background:0; font-family:noto-bold; color:#fff; font-size:30px; text-indent:0; text-align:left; }
+	.company-introbox .rightcontents .cscenter dd { float:left; width:220px; margin:0 auto; }
+	.company-introbox .rightcontents .cscenter dd p:first-child { float:left; width:22%; background-size:50px auto; background-position:center 40%; margin:0; padding:0; }
+	.company-introbox .rightcontents .cscenter dd p:nth-child(2) { float:right; width:75%; height:75px; margin-left:3%; }
+	.company-introbox .rightcontents .cscenter dd p span { font-size:13px !important; }
+	
+	/* footer */
+/*
+	.bottomarea { height:auto; overflow:hidden }
+	.bottomarea > ul { height:80px; padding-left:0px; width:100%; }
+	.bottomarea > ul > li { width:33.33%; height:40px; background:0; border:1px solid #dfdfdf; border-left:0; border-top:0; padding-top:5px; line-height:30px;  }
+	.bottomarea > ul > li i { display:block; line-height:14px; }
+	.bottomarea > ul > li a { text-align:center; padding:0; font-size:0.85em; font-family:noto;}
+	.bottomarea .snsbox { display:none; }
+	.bottomarea .innerbox { padding:0 10px 18px 10px; }
+	.bottomarea .innerbox .flbox { width:auto; float:none; padding:14px 0 0 0;  }
+	.bottomarea .innerbox .flbox h1 { width:100%; float:none; text-align:center; line-height:40px; font-weight:300; position:static; left:0; top:0; font-size:30px; margin:0 20px 10px 10px; }
+	.bottomarea .innerbox .flbox p { text-align:center; word-wrap:break-word; word-break:break-all; line-height:20px; font-size:13px !important; font-family:noto; font-weight:300; margin:0; padding:0; width:100%; }
+	.bottomarea .innerbox .flbox p span { display:block; line-height:18px; }
+	.bottomarea .innerbox .flbox p span a { font-family:noto; }
+	.bottomarea .innerbox .footer-qrcode { display:none; }
+*/
+	
+	/* quick menu */
+	#sidebar_wrap { display:none; }
+	
+	/* movie */
+	.midarea .contentdiv .vidlist li { float:left; width:45%; margin-right:5% !important; }
+	.midarea .contentdiv .vidlist li:nth-child(2), .midarea .contentdiv .vidlist li:nth-child(4), .midarea .contentdiv .vidlist li:nth-child(6), .midarea .contentdiv .vidlist li:nth-child(8) { margin-right:0; }
+	
+	/* photo */
+	.midarea .contentdiv .photolist .imglist li { float:left; width:45%; margin-right:5% !important; }
+	.midarea .contentdiv .photolist .imglist li:nth-child(3), .midarea .contentdiv .photolist .imglist li:nth-child(6), .midarea .contentdiv .photolist .imglist li:nth-child(9) { margin-right:0; }
+	
+	/* tabs */
+	.midarea .contentdiv .menudiv { margin-top:5%; }
+	.midarea .contentdiv .menudiv .tabs { margin:0; margin-left:0%; }
+	.midarea .contentdiv .menudiv .tabs li { width:50%; margin:0; padding:0; background:0; }
+	.midarea .contentdiv .menudiv .tabs li span { margin-left:-12%; }
+	.midarea .contentdiv .menudiv .tabs li span a { font-size:0.9em; font-weight:600; }
+	
+	.tabs1 .bordertable tr th:first-child { display:none; }
+	.tabs1 .bordertable tr td:first-child { display:none; }
+	.tabs1 .bordertable tr th:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(2) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(4) { display:none; }
+	.tabs1 .bordertable tr th:nth-child(5) { display:none; }
+	.tabs1 .bordertable tr td:nth-child(5) { display:none; }
+	.tabs6 .tablediv .bordertable tr th:first-child { display:none; }
+	.tabs6 .tablediv .bordertable tr td:first-child { display:none; }
+	
+	.midarea .contentdiv .nobdtable tr th.imgbox { float:left; clear:both; }
+	.midarea .contentdiv .nobdtable tr th { width:100%; }
+	.midarea .contentdiv .nobdtable tr td.txtbox { float:left; clear:both; }
+	
+	/* company */
+	.midarea .contentdiv .companytable .inputtable { display:block; margin:0; padding:0; }
+	.midarea .contentdiv .companytable .inputtable thead { display:block; }
+	.midarea .contentdiv .companytable .inputtable tbody { display:block; }
+	.midarea .contentdiv .companytable .inputtable tr { display:block; width:100%; height:40px; line-height:40px; margin:0; padding:0; border:0; }
+	.midarea .contentdiv .companytable .inputtable th { display:inline-block; width:40%; float:left; margin:0; border:0; font-family:noto !important; font-size:13px !important; font-weight:600; padding-left:10px !important; }
+	.midarea .contentdiv .companytable .inputtable td { display:inline-block; width:60%; float:left; margin:0; padding:0; border:0; font-family:noto !important; font-size:12px !important; padding-left:5px !important; }
+
+	.midarea .contentdiv .companytable .content .greeting { float:none; display:block; clear:both; width:100%; }
+	.midarea .contentdiv .companytable .content .greeting h2 { font-size:36px; }
+	.midarea .contentdiv .companytable .content .greeting h3 { font-size:22px; }
+	.midarea .contentdiv .companytable .content .greeting p { font-size:14px; }
+	.midarea .contentdiv .companytable .content .greeting p.date { font-size:15px; }
+	.midarea .contentdiv .companytable .content .greeting span.ceo { font-size:1.4em; }
+	.midarea .contentdiv .companytable .content .greeting span.ceoname { font-size:2.8em; }
+	.midarea .contentdiv .companytable .content .history { float:none; display:block; clear:both; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history p { float:left; width:100%; text-align:left; }
+	.midarea .contentdiv .companytable .content .history h2 { font-size:2.8em; }
+	.midarea .contentdiv .companytable .content .history p span.left { font-size:2.2em; }
+	.midarea .contentdiv .companytable .content .history p span.right em { font-size:14px; }
+	
+	.midarea .contentdiv .tablediv .detailtable tr.title { width:100%;  height:40px; line-height:40px; margin:0; padding:0; }
+	.midarea .contentdiv .tablediv .detailtable tr.title td:first-child { width:75%; display:inline-block; font-size:13px; float:left; }
+	.midarea .contentdiv .tablediv .detailtable tr.title td:nth-child(2) { display:inline-block; width:15%; float:left; font-size:12px; }
+	.midarea .contentdiv .tablediv .detailtable tr.title td:nth-child(3) { display:inline-block; width:10%; float:left; font-size:12px; }
+	.midarea .contentdiv .tablediv .detailtable td.content { line-height:1.4; padding:0 10px; }
+	.midarea .contentdiv .tablediv .detailtable td.content iframe { padding:0 50px; width:100%; height:650px; }
+	.midarea .contentdiv .tablediv .snsbox { margin-right:0; }
+	.midarea .contentdiv .tablediv .inputtable tr { width:100%; height:30px; line-height:30px; }
+	.midarea .contentdiv .tablediv .inputtable tr td:first-child { width:30%; display:inline-block; height:30px; line-height:20px; }
+	.midarea .contentdiv .tablediv .inputtable tr td:nth-child(2) { width:70%; display:inline-block; height:30px; line-height:40px;}
+	.midarea .contentdiv .tablediv .inputtable tr td span { display:inline-block; height:40px; line-height:25px; }
+	.midarea .contentdiv .tablediv .inputtable tr td img { display:inline-block; vertical-align:top; }
+	
+	.midarea .contentdiv .cscenter .inputtable th { width:25%; }
+	.midarea .contentdiv .cscenter .inputtable td { text-align:left; padding-left:15px; }
+	.midarea .contentdiv .cscenter .inputtable td input { width:120px; }
+	
+	/* community content */
+	.faq img { width:24px; margin-right:5px; }
+	.faq .q a { font-size:14px; }
+	.faq .a { font-size:14px; }
+	
+	
+}
+
+
+
+/********************** //responsive style ***********************/

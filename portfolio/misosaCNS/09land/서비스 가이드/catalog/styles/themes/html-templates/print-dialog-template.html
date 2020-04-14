@@ -1,0 +1,44 @@
+<div class="print-modal">
+	<div class="print-dialog">
+		<div id="print-settings-container">
+			<header>
+				<h1>인쇄 관리자</h1>
+				<div id="print-header">
+					대상 페이지: <span class="current-page"></span>
+					<br>
+					<br>
+					<div class="pull-right">
+						<button class="btn btn-default btn-print">인쇄</button>
+						<button class="btn btn-default btn-cancel">취소</button>
+					</div>
+				</div>
+			</header>
+			
+			<div id="orientation-setting" class="container-fluid">
+				<div class="row">
+					<label class="col-sm-4 control-label">용지 방향</label>
+					<div class="col-sm-7">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default btn-orientation dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								세로 방향 <span class="caret"></span>
+							</button>
+							<ul id="orientation-menu" class="dropdown-menu" data-orientation="portrait">
+								<li data-orientation="portrait"><a class="dropdown-toggle"><span></span>세로 방향</a></li>
+								<li data-orientation="landscape"><a class="dropdown-toggle"><span></span>가로 방향</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				
+			</div>
+		</div>
+
+		<div id="print-document-container">
+			<div class="preloader preloader-md">
+				<span class="fa-spin"></span>
+			</div>
+		</div>
+	</div>
+</div>

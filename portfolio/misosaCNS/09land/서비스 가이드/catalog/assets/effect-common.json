@@ -1,0 +1,108 @@
+{
+    "label": "위치 변경",
+    "name": "Position",
+    "version": "1.0.0",
+    "properties": 
+    [
+        {
+            "label": "대상",
+            "name": "targets",
+            "control":
+            {
+                "type": "object-picker",
+                "placeholder": "대상을 선택하세요"
+            }
+        },
+        {
+            "label": "가속도",
+            "name": "easing",
+            "value": "ease-in-out",
+            "control":
+            {
+                "type": "select",
+                "valueList":
+                [   
+                    {
+                        "label": "일정한 속도",
+                        "value": "linear"
+                    },
+                    {
+                        "label": "점점 빠르게",
+                        "value": "ease-in"
+                    },
+                    {
+                        "label": "점점 느리게",
+                        "value": "ease-out"
+                    },
+                    {
+                        "label": "점점 빨라지다가 느리게",
+                        "value": "ease-in-out"
+                    },
+                    {
+                        "label": "점점 느려지다가 빠르게",
+                        "value": "ease-out-in"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "지속 시간",
+            "name": "duration",
+            "value": "700",
+            "control":
+            {
+                "type": "text",
+                "unit": "ms(1/1000)"
+            }
+        },
+        {
+            "label": "지연 시간",
+            "name": "delay",
+            "control":
+            {
+                "type": "text",
+                "placeholder": "ms(1/1000)"
+            }
+        },
+        {
+            "label": "원래 상태로 돌아가기",
+            "name": "reverse",
+            "value": false,
+            "control":
+            {
+                "type": "select",
+                "valueList":
+                [
+                    {
+                        "label": "사용함",
+                        "value": true
+                    },
+                    {
+                        "label": "사용하지 않음",
+                        "value": false
+                    }
+                ]
+            }
+        },
+        {
+            "label": "반복 사용",
+            "name": "loop",
+            "value": false,
+            "control":
+            {
+                "type": "select",
+                "valueList":
+                [
+                    {
+                        "label": "사용함",
+                        "value": true
+                    },
+                    {
+                        "label": "사용하지 않음",
+                        "value": false
+                    }
+                ]
+            }
+        }
+    ]
+}

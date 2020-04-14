@@ -1,0 +1,422 @@
+[	
+    {
+        "label": "위젯 액션",
+        "icon": "glyphicon glyphicon-link",
+        "index": 0,
+        "name": "WidgetAction",
+        "properties": 
+        [
+            {
+                "label": "위젯 선택",
+                "name": "widgetId",
+                "value": "none",
+                "control":
+                {
+                    "type": "widget-select"
+                }
+            },
+            {
+                "label": "위젯 액션 이름",
+                "name": "widgetActionName",
+                "value": "none",
+                "control":
+                {
+                    "type": "widget-actions"
+                }
+            },
+            {
+                "label": "위젯 액션 전달 값",
+                "name": "widgetActionParameter",
+                "control": {}
+            }
+        ]
+    },
+    {
+        "divider": true,
+        "index": 1
+    },
+    {
+        "divider": true
+    },
+    {
+        "label": "부분 확대 열기",
+        "name": "OpenPartialZoom",
+        "icon": "glyphicon glyphicon-zoom-in",
+        "properties": 
+        [
+            {
+                "label": "대상",
+                "name": "targets",
+                "control":
+                {
+                    "type": "object-picker",
+                    "allowMultipleSelection": false,
+                    "filter": { "data-view-type" : "PartialZoom" },
+                    "placeholder": "부분 확대 대상을 선택하세요"
+                }
+            }
+        ]
+    },
+	{
+        "label": "팝업 서브페이지 열기",
+        "name": "OpenPopupSubpage",
+        "icon": "glyphicon glyphicon-new-window",
+        "properties": 
+        [
+            {
+                "label": "상단 제목",
+                "name": "title",
+                "value": "",
+                "control":
+                {
+                    "type": "text",
+                    "placeholder":"제목에 표시될 이름"
+                }
+            },
+            {
+                "label": "서브페이지",
+                "name": "subpage",
+                "control":
+                {
+                    "type": "subpage-picker",
+                    "allowMultipleSelection": false,
+                    "placeholder": "팝업으로 띄울 서브페이지를 선택하세요"
+                }
+            },
+            {
+                "label": "드래그 이동",
+                "name": "draggable",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "상단을 드래그하여 이동할 수 있도록 설정합니다."
+            },
+            {
+                "label": "크기 조절",
+                "name": "resizable",
+                "value": false,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        },
+                        {
+                            "label": "사용함",
+                            "value": true
+                        }
+                    ]
+                },
+                "tooltip": "사용자가 크기를 조절할 수 있도록 설정합니다."
+            },
+            {
+                "label": "자동 종료",
+                "name": "autoClose",
+                "value": true,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용함",
+                            "value": true
+                        },
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        }
+                    ]
+                },
+                "tooltip": "페이지 전환시 자동 종료합니다."
+            },
+            {
+                "label": "모달 대화상자",
+                "name": "modal",
+                "value": true,
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "사용함",
+                            "value": true
+                        },
+                        {
+                            "label": "사용안함",
+                            "value": false
+                        }
+                    ]
+                },
+                "tooltip": "팝업 대화상자가 종료될 때까지 다른 모든 동작을 비활성화 합니다."
+            },
+            {
+                "label": "상단 배경색상",
+                "name": "headerBackgroundColor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                },
+                "tooltip": "색상을 지정하지 않으면 기본 색상을 사용합니다."
+            },
+            {
+                "label": "상단 텍스트색상",
+                "name": "titleTextColor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                },
+                "tooltip": "색상을 지정하지 않으면 기본 색상을 사용합니다."
+            },
+            {
+                "label": "본문 배경색상",
+                "name": "bodyBackgroundColor",
+                "value": "",
+                "control":
+                {
+                    "type": "color"
+                },
+                "tooltip": "색상을 지정하지 않으면 기본 색상을 사용합니다."
+            },
+            {
+                "label": "열릴때 위치",
+                "name": "position",
+                "value": "center",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "중앙",
+                            "value": "center"
+                        },
+                        {
+                            "label": "자동",
+                            "value": "auto"
+                        },
+                        {
+                            "label": "좌측상단",
+                            "value": "leftTop"
+                        },
+                        {
+                            "label": "좌측중앙",
+                            "value": "leftCenter"
+                        },
+                        {
+                            "label": "좌측하단",
+                            "value": "leftBottom"
+                        },
+                        {
+                            "label": "우측상단",
+                            "value": "rightTop"
+                        },
+                        {
+                            "label": "우측중앙",
+                            "value": "rightCenter"
+                        },
+                        {
+                            "label": "우측하단",
+                            "value": "rightBottom"
+                        },
+                        {
+                            "label": "중앙상단",
+                            "value": "centerTop"
+                        },
+                        {
+                            "label": "중앙하단",
+                            "value": "centerBottom"
+                        }
+                    ]
+                },
+                "tooltip": "팝업 대화상자가 열리때 위치를 설정합니다."
+            },
+            {
+                "label": "위치 기준",
+                "name": "positionTarget",
+                "value": "book",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "북 영역",
+                            "value": "book"
+                        },
+                        {
+                            "label": "윈도우",
+                            "value": "window"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "label": "팝업 서브페이지 닫기",
+        "name": "ClosePopupSubpage",
+        "icon": "glyphicon glyphicon-remove",
+        "properties": 
+        [
+            {
+                "label": "서브페이지",
+                "name": "subpage",
+                "control":
+                {
+                    "type": "subpage-picker",
+                    "allowMultipleSelection": false,
+                    "placeholder": "닫을 서브페이지를 선택하세요"
+                }
+            }
+        ]
+    },
+    {
+        "label": "상태 값 변경",
+        "name": "ChangeState",
+        "icon": "fa fa-pencil-square-o",
+        "properties": 
+        [
+            {
+                "label": "선택 대상",
+                "name": "targets",
+                "control":
+                {
+                    "type": "object-picker",
+                    "allowMultipleSelection": false,
+                    "placeholder": "대상을 선택하세요"
+                },
+                "tooltip": "대상을 지정 하지 않으면 자기 자신이 대상으로 설정됩니다."
+            },
+            {
+                "label": "상태 변경",
+                "name": "state",
+                "control":
+                {
+                    "type": "select"
+                }
+            }
+        ]
+    },
+    {
+        "label": "순서 바꾸기",
+        "name": "ChangeOrder",
+        "icon": "glyphicon glyphicon-sort",
+        "properties": 
+        [
+            {
+                "label": "선택 대상",
+                "name": "targets",
+                "control":
+                {
+                    "type": "object-picker",
+                    "placeholder": "대상을 선택하세요"
+                },
+                "tooltip": "대상을 지정 하지 않으면 자기 자신이 대상으로 설정됩니다."
+            },
+            {
+                "label": "순서",
+                "name": "order",
+                "value": "top",
+                "control":
+                {
+                    "type": "select",
+                    "valueList":
+                    [
+                        {
+                            "label": "상단",
+                            "value": "top"
+                        },
+                        {
+                            "label": "하단",
+                            "value": "bottom"
+                        },
+                        {
+                            "label": "원상태로",
+                            "value": "restore"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "label": "재 설정",
+        "name": "Reset",
+        "icon": "fa fa-undo",
+        "properties": 
+        [
+            {
+                "label": "선택 대상",
+                "name": "targets",
+                "control":
+                {
+                    "type": "object-picker",
+                    "placeholder": "대상을 선택하세요"
+                },
+                "description": "선택 대상의 속성 및 상태를 처음 상태로 설정합니다. 재생 중인 애니메이션이 있다면 정지합니다."
+            }
+        ]
+    },
+    {
+        "label": "드랍 결과 전달",
+        "name": "SendDropResult",
+        "event": { 
+            "fixed": true,
+            "type": "drop"
+        },
+        "properties": 
+        [
+            {
+                "label": "드랍 대상",
+                "name": "dropTargets",
+                "value": true,
+                "control":
+                {
+                  "type": "object-picker",
+                  "placeholder": "대상을 선택하세요"
+                }
+            },
+            {
+                "label": "드랍 결과",
+                "name": "dropResult",
+                "value": true,
+                "control":
+                {
+                  "type": "select",
+                  "valueList":
+                  [
+                      {
+                          "label": "성공",
+                          "value": true
+                      },
+                      {
+                          "label": "실패",
+                          "value": false
+                      }
+                  ]
+                },
+                "description": "드랍 대상이 되는 컨텐츠에 성공 및 실패에 대한 결과를 전달합니다. 대상 컨텐츠에서 드랍 결과에 따라 적절한 동작을 할 수 있습니다."
+            }
+        ]
+    }
+]

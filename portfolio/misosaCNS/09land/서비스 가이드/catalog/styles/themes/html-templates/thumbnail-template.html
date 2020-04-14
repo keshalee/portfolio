@@ -1,0 +1,18 @@
+<div class="toast-thumbnail">
+  <div class="xclose"><span></span></div>
+  <div class="container">
+    <div class="row">
+    <ul class="carousel">
+      {{#thumbs}}
+      <li class="item" style='width: {{width}}px; height: {{height}}px'>
+        <img src="{{url}}" width="100%" height="100%">
+        <div class="page-no">
+          <span class="badge label-primary">{{displayPageNumber}}</span>
+        </div>
+      </li>
+      {{/thumbs}}
+    </ul>
+    </div>
+  </div>
+</div>
+

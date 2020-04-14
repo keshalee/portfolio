@@ -1,0 +1,22 @@
+[
+    {
+        "id": "projectDefaultConfiguration"
+    },
+    {
+        "id": "collapses"
+    },
+    {
+        "id": "base.pref",
+        "showRuler": false,
+        "showGrid": false,
+        "snapPixel": "none",
+        "useSnapToElement": true,
+        "pageSize": {
+            "width": 595,
+            "height": 845
+        },
+        "pageMargin": 0,
+        "lastOpendPageFileDirectory": "C:/Users/Public/Pictures/Sample Pictures/",
+        "lastOpendProjectDirectory": "C:/Users/NW-Park/Documents/"
+    }
+]

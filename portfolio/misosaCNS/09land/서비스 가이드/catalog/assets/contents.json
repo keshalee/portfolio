@@ -1,0 +1,3765 @@
+{
+	"elements": 
+	{
+		"title": "요소",
+		"sections": 
+		{
+			"text":
+			{
+				"title": "텍스트",
+				"viewType": "Text",
+				"collection":
+				[
+					{
+						"name": "제목 1",
+						"thumbUrl": "assets/thumbs/text-h1.png",
+						"width": 400,
+						"height": 60,
+						"htmlText": "제목을 입력하세요",
+						"style": {
+							"fontFamily": "Nanum Gothic",
+							"fontWeight": "bold",
+							"fontSize": "36px"
+						}
+					},
+					{
+						"name": "제목 2",
+						"thumbUrl": "assets/thumbs/text-h2.png",
+						"width": 400,
+						"height": 46,
+						"htmlText": "제목을 입력하세요",
+						"style": {
+							"fontFamily": "Nanum Gothic",
+							"fontWeight": "bold",
+							"fontSize": "32px"
+						}
+					},
+					{
+						"name": "제목 3",
+						"thumbUrl": "assets/thumbs/text-h3.png",
+						"width": 300,
+						"height": 38,
+						"htmlText": "제목을 입력하세요",
+						"style": {
+							"fontFamily": "Nanum Gothic",
+							"fontWeight": "bold",
+							"fontSize": "24px"
+						}
+					},
+					{
+						"name": "리스트",
+						"thumbUrl": "assets/thumbs/text-list.png",
+						"width": 350,
+						"height": 56,
+						"htmlText": "<ul style='margin:0;'><li>리스트 항목</li><li>리스트 항목</li></ul>",
+						"style": {
+							"fontSize": "16px"
+						}
+					},
+					{
+						"name": "번호 리스트",
+						"thumbUrl": "assets/thumbs/text-order-list.png",
+						"width": 350,
+						"height": 56,
+						"htmlText": "<ol style='margin:0;'><li>리스트 항목</li><li>리스트 항목</li></ol>",
+						"style": {
+							"fontSize": "16px"
+						}
+					},
+					{
+						"name": "일반 텍스트",
+						"thumbUrl": "assets/thumbs/text.png",
+						"width": 300,
+						"height": 25,
+						"htmlText": "<div>편집을 하려면 더블 클릭하세요</div>",
+						"style": {
+							"fontSize": "16px"
+						}
+					}
+				]
+			},
+			"buttons":
+			{
+				"title": "버튼",
+				"viewType": "Button",
+				"collection":
+				[
+					{
+						"name": "기본 버튼",
+						"thumbUrl": "assets/thumbs/btn-default.png",
+						"width": 150,
+						"height": 50,
+						"htmlText": "Button",
+						"style": {
+			                "border": "1px solid #ccc",
+			                "borderRadius": "4px"
+			            }
+					},
+					{
+						"name": "파랑 버튼",
+						"thumbUrl": "assets/thumbs/btn-blue.png",
+						"width": 150,
+						"height": 50,
+						"htmlText": "Button",
+						"style": {
+			                "backgroundColor": "#4387f8",
+			                "color": "white",
+			                "border": "1px solid auto",
+			                "borderRadius": "4px"
+			            }
+					},
+					
+					{
+						"name": "원형 버튼",
+						"thumbUrl": "assets/thumbs/btn-circle.png",
+						"width": 100,
+						"height": 100,
+						"htmlText": "Button",
+						"style": {
+							"backgroundColor": "#5cb85c",
+			                "color": "white",
+			                "border": "0",
+							"borderRadius": "100%"
+						}
+					}
+				]
+			},
+			"images":
+			{
+				"title": "이미지",
+				"collection":
+				[
+					{
+						"name": "이미지",
+						"viewType": "Image",
+						"thumbUrl": "assets/thumbs/image.png",
+						"width": 128,
+						"height": 128
+					},
+					{
+						"name": "이미지 슬라이드",
+						"viewType": "ImageSlide",
+						"thumbUrl": "assets/thumbs/image-slide.png",
+						"preivewUrl": "assets/images/image-slide-preview.png",
+						"width": 512,
+						"height": 384
+					}
+				]
+			},
+			"link":
+			{
+				"title": "링크",
+				"viewType": "Link",
+				"collection":
+				[
+					{
+						"name": "박스형",
+						"thumbUrl": "assets/thumbs/link-box.png",
+						"width": 150,
+						"height": 50
+					},
+					{
+						"name": "원형",
+						"thumbUrl": "assets/thumbs/link-circle.png",
+						"width": 100,
+						"height": 100,
+						"style": {
+							"borderRadius": "100%"
+						}
+					}
+				]
+			},
+			"compoents":
+			{	
+				"title": "컴포넌트",
+				"collection":
+				[
+					{
+						"name": "오디오 재생",
+						"viewType": "AudioPlayer",
+						"thumbUrl": "assets/thumbs/sound-player.png",
+						"preivewUrl": "assets/images/sound-player-preview.png",
+						"width": 310,
+						"height": 54
+					},
+					{
+						"name": "동영상 재생",
+						"viewType": "MoviePlayer",
+						"thumbUrl": "assets/thumbs/movie-player.jpg",
+						"preivewUrl": "assets/images/movie-player-preview.jpg",
+						"width": 500,
+						"height": 294
+					},
+					{
+						"name": "유튜브 재생",
+						"viewType": "YoutubePlayer",
+						"thumbUrl": "assets/thumbs/youtube-player.jpg",
+						"width": 500,
+						"height": 294
+					},
+					{
+						"name": "외부 페이지",
+						"viewType": "IFrame",
+						"thumbUrl": "assets/thumbs/iframe.jpg",
+						"width": 500,
+						"height": 350
+					}
+				]
+			},
+			"shape":
+			{	
+				"title": "모양",
+				"viewType": "Shape",
+				"collection":
+				[
+					{
+						"name": "사각형",
+						"shapeType": "rect",
+						"thumbUrl": "assets/thumbs/shape-rect.png",
+						"thumbBackgroundSize": "auto",
+						"width": 80,
+						"height": 80,
+						"style": {
+							"backgroundColor": "#f9dd57"
+						}
+					},
+					{
+						"name": "둥근 사각형",
+						"shapeType": "round",
+						"thumbUrl": "assets/thumbs/shape-round.png",
+						"thumbBackgroundSize": "auto",
+						"width": 80,
+						"height": 80,
+						"style": {
+							"backgroundColor": "#3ad893",
+							"borderRadius": "25%"
+						}
+					},
+					{
+						"name": "원형",
+						"shapeType": "circle",
+						"thumbUrl": "assets/thumbs/shape-circle.png",
+						"thumbBackgroundSize": "auto",
+						"width": 80,
+						"height": 80,
+						"style": {
+							"backgroundColor": "#ff6f94",
+							"borderRadius": "100%"
+						}
+					},
+					{
+						"name": "가로선",
+						"viewType": "Line",
+						"direction": "horizon",
+						"thumbUrl": "assets/thumbs/horizon-line.png",
+						"width": 200,
+						"height": 40
+					},
+					{
+						"name": "세로선",
+						"viewType": "Line",
+						"direction": "vertical",
+						"thumbUrl": "assets/thumbs/vertical-line.png",
+						"width": 40,
+						"height": 200
+					}
+				]
+			}
+		}
+	},
+	"icons":
+	{
+		"title": "아이콘",
+		"sections": 
+		{
+			"Action":
+			{
+				"title": "Action",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "rotation",
+						"url": "assets/icons/action/svg/production/ic_3d_rotation_24px.svg"
+					},
+					{
+						"name": "accessibility",
+						"url": "assets/icons/action/svg/production/ic_accessibility_24px.svg"
+					},
+					{
+						"name": "account balance",
+						"url": "assets/icons/action/svg/production/ic_account_balance_24px.svg"
+					},
+					{
+						"name": "account balance wallet",
+						"url": "assets/icons/action/svg/production/ic_account_balance_wallet_24px.svg"
+					},
+					{
+						"name": "account box",
+						"url": "assets/icons/action/svg/production/ic_account_box_24px.svg"
+					},
+					{
+						"name": "account circle",
+						"url": "assets/icons/action/svg/production/ic_account_circle_24px.svg"
+					},
+					{
+						"name": "shopping cart",
+						"url": "assets/icons/action/svg/production/ic_add_shopping_cart_24px.svg"
+					},
+					{
+						"name": "alarm",
+						"url": "assets/icons/action/svg/production/ic_alarm_24px.svg"
+					},
+					{
+						"name": "alarm add",
+						"url": "assets/icons/action/svg/production/ic_alarm_add_24px.svg"
+					},
+					{
+						"name": "alarm off",
+						"url": "assets/icons/action/svg/production/ic_alarm_off_24px.svg"
+					},
+					{
+						"name": "alarm on",
+						"url": "assets/icons/action/svg/production/ic_alarm_on_24px.svg"
+					},
+					{
+						"name": "android",
+						"url": "assets/icons/action/svg/production/ic_android_24px.svg"
+					},
+					{
+						"name": "announcement",
+						"url": "assets/icons/action/svg/production/ic_announcement_24px.svg"
+					},
+					{
+						"name": "aspect ratio",
+						"url": "assets/icons/action/svg/production/ic_aspect_ratio_24px.svg"
+					},
+					{
+						"name": "assessment",
+						"url": "assets/icons/action/svg/production/ic_assessment_24px.svg"
+					},
+					{
+						"name": "assignment",
+						"url": "assets/icons/action/svg/production/ic_assignment_24px.svg"
+					},
+					{
+						"name": "assignment ind",
+						"url": "assets/icons/action/svg/production/ic_assignment_ind_24px.svg"
+					},
+					{
+						"name": "assignment late",
+						"url": "assets/icons/action/svg/production/ic_assignment_late_24px.svg"
+					},
+					{
+						"name": "assignment return",
+						"url": "assets/icons/action/svg/production/ic_assignment_return_24px.svg"
+					},
+					{
+						"name": "assignment returned",
+						"url": "assets/icons/action/svg/production/ic_assignment_returned_24px.svg"
+					},
+					{
+						"name": "assignment turned in",
+						"url": "assets/icons/action/svg/production/ic_assignment_turned_in_24px.svg"
+					},
+					{
+						"name": "autorenew",
+						"url": "assets/icons/action/svg/production/ic_autorenew_24px.svg"
+					},
+					{
+						"name": "backup",
+						"url": "assets/icons/action/svg/production/ic_backup_24px.svg"
+					},
+					{
+						"name": "book",
+						"url": "assets/icons/action/svg/production/ic_book_24px.svg"
+					},
+					{
+						"name": "bookmark",
+						"url": "assets/icons/action/svg/production/ic_bookmark_24px.svg"
+					},
+					{
+						"name": "bookmark border",
+						"url": "assets/icons/action/svg/production/ic_bookmark_border_24px.svg"
+					},
+					{
+						"name": "bug report",
+						"url": "assets/icons/action/svg/production/ic_bug_report_24px.svg"
+					},
+					{
+						"name": "build",
+						"url": "assets/icons/action/svg/production/ic_build_24px.svg"
+					},
+					{
+						"name": "cached",
+						"url": "assets/icons/action/svg/production/ic_cached_24px.svg"
+					},
+					{
+						"name": "camera enhance",
+						"url": "assets/icons/action/svg/production/ic_camera_enhance_24px.svg"
+					},
+					{
+						"name": "card giftcard",
+						"url": "assets/icons/action/svg/production/ic_card_giftcard_24px.svg"
+					},
+					{
+						"name": "card membership",
+						"url": "assets/icons/action/svg/production/ic_card_membership_24px.svg"
+					},
+					{
+						"name": "card travel",
+						"url": "assets/icons/action/svg/production/ic_card_travel_24px.svg"
+					},
+					{
+						"name": "change history",
+						"url": "assets/icons/action/svg/production/ic_change_history_24px.svg"
+					},
+					{
+						"name": "check circle",
+						"url": "assets/icons/action/svg/production/ic_check_circle_24px.svg"
+					},
+					{
+						"name": "chrome reader",
+						"url": "assets/icons/action/svg/production/ic_chrome_reader_mode_24px.svg"
+					},
+					{
+						"name": "class",
+						"url": "assets/icons/action/svg/production/ic_class_24px.svg"
+					},
+					{
+						"name": "code",
+						"url": "assets/icons/action/svg/production/ic_code_24px.svg"
+					},
+					{
+						"name": "credit card",
+						"url": "assets/icons/action/svg/production/ic_credit_card_24px.svg"
+					},
+					{
+						"name": "dashboard",
+						"url": "assets/icons/action/svg/production/ic_dashboard_24px.svg"
+					},
+					{
+						"name": "delete",
+						"url": "assets/icons/action/svg/production/ic_delete_24px.svg"
+					},
+					{
+						"name": "description",
+						"url": "assets/icons/action/svg/production/ic_description_24px.svg"
+					},
+					{
+						"name": "dns",
+						"url": "assets/icons/action/svg/production/ic_dns_24px.svg"
+					},
+					{
+						"name": "done",
+						"url": "assets/icons/action/svg/production/ic_done_24px.svg"
+					},
+					{
+						"name": "done all",
+						"url": "assets/icons/action/svg/production/ic_done_all_24px.svg"
+					},
+					{
+						"name": "eject",
+						"url": "assets/icons/action/svg/production/ic_eject_24px.svg"
+					},
+					{
+						"name": "event",
+						"url": "assets/icons/action/svg/production/ic_event_24px.svg"
+					},
+					{
+						"name": "event seat",
+						"url": "assets/icons/action/svg/production/ic_event_seat_24px.svg"
+					},
+					{
+						"name": "exit to app",
+						"url": "assets/icons/action/svg/production/ic_exit_to_app_24px.svg"
+					},
+					{
+						"name": "explore",
+						"url": "assets/icons/action/svg/production/ic_explore_24px.svg"
+					},
+					{
+						"name": "extension",
+						"url": "assets/icons/action/svg/production/ic_extension_24px.svg"
+					},
+					{
+						"name": "face",
+						"url": "assets/icons/action/svg/production/ic_face_24px.svg"
+					},
+					{
+						"name": "favorite",
+						"url": "assets/icons/action/svg/production/ic_favorite_24px.svg"
+					},
+					{
+						"name": "favorite border",
+						"url": "assets/icons/action/svg/production/ic_favorite_border_24px.svg"
+					},
+					{
+						"name": "feedback",
+						"url": "assets/icons/action/svg/production/ic_feedback_24px.svg"
+					},
+					{
+						"name": "find in page",
+						"url": "assets/icons/action/svg/production/ic_find_in_page_24px.svg"
+					},
+					{
+						"name": "find replace",
+						"url": "assets/icons/action/svg/production/ic_find_replace_24px.svg"
+					},
+					{
+						"name": "flight land",
+						"url": "assets/icons/action/svg/production/ic_flight_land_24px.svg"
+					},
+					{
+						"name": "flight takeoff",
+						"url": "assets/icons/action/svg/production/ic_flight_takeoff_24px.svg"
+					},
+					{
+						"name": "flip to back",
+						"url": "assets/icons/action/svg/production/ic_flip_to_back_24px.svg"
+					},
+					{
+						"name": "flip to front",
+						"url": "assets/icons/action/svg/production/ic_flip_to_front_24px.svg"
+					},
+					{
+						"name": "get app",
+						"url": "assets/icons/action/svg/production/ic_get_app_24px.svg"
+					},
+					{
+						"name": "gif",
+						"url": "assets/icons/action/svg/production/ic_gif_24px.svg"
+					},
+					{
+						"name": "grade",
+						"url": "assets/icons/action/svg/production/ic_grade_24px.svg"
+					},
+					{
+						"name": "group work",
+						"url": "assets/icons/action/svg/production/ic_group_work_24px.svg"
+					},
+					{
+						"name": "help",
+						"url": "assets/icons/action/svg/production/ic_help_24px.svg"
+					},
+					{
+						"name": "help outline",
+						"url": "assets/icons/action/svg/production/ic_help_outline_24px.svg"
+					},
+					{
+						"name": "highlight off",
+						"url": "assets/icons/action/svg/production/ic_highlight_off_24px.svg"
+					},
+					{
+						"name": "history",
+						"url": "assets/icons/action/svg/production/ic_history_24px.svg"
+					},
+					{
+						"name": "home",
+						"url": "assets/icons/action/svg/production/ic_home_24px.svg"
+					},
+					{
+						"name": "hourglass empty",
+						"url": "assets/icons/action/svg/production/ic_hourglass_empty_24px.svg"
+					},
+					{
+						"name": "hourglass full",
+						"url": "assets/icons/action/svg/production/ic_hourglass_full_24px.svg"
+					},
+					{
+						"name": "http",
+						"url": "assets/icons/action/svg/production/ic_http_24px.svg"
+					},
+					{
+						"name": "https",
+						"url": "assets/icons/action/svg/production/ic_https_24px.svg"
+					},
+					{
+						"name": "info",
+						"url": "assets/icons/action/svg/production/ic_info_24px.svg"
+					},
+					{
+						"name": "info outline",
+						"url": "assets/icons/action/svg/production/ic_info_outline_24px.svg"
+					},
+					{
+						"name": "input",
+						"url": "assets/icons/action/svg/production/ic_input_24px.svg"
+					},
+					{
+						"name": "invert colors",
+						"url": "assets/icons/action/svg/production/ic_invert_colors_24px.svg"
+					},
+					{
+						"name": "label",
+						"url": "assets/icons/action/svg/production/ic_label_24px.svg"
+					},
+					{
+						"name": "label outline",
+						"url": "assets/icons/action/svg/production/ic_label_outline_24px.svg"
+					},
+					{
+						"name": "language",
+						"url": "assets/icons/action/svg/production/ic_language_24px.svg"
+					},
+					{
+						"name": "launch",
+						"url": "assets/icons/action/svg/production/ic_launch_24px.svg"
+					},
+					{
+						"name": "list",
+						"url": "assets/icons/action/svg/production/ic_list_24px.svg"
+					},
+					{
+						"name": "lock",
+						"url": "assets/icons/action/svg/production/ic_lock_24px.svg"
+					},
+					{
+						"name": "lock open",
+						"url": "assets/icons/action/svg/production/ic_lock_open_24px.svg"
+					},
+					{
+						"name": "lock outline",
+						"url": "assets/icons/action/svg/production/ic_lock_outline_24px.svg"
+					},
+					{
+						"name": "loyalty",
+						"url": "assets/icons/action/svg/production/ic_loyalty_24px.svg"
+					},
+					{
+						"name": "markunread mailbox",
+						"url": "assets/icons/action/svg/production/ic_markunread_mailbox_24px.svg"
+					},
+					{
+						"name": "note add",
+						"url": "assets/icons/action/svg/production/ic_note_add_24px.svg"
+					},
+					{
+						"name": "offline pin",
+						"url": "assets/icons/action/svg/production/ic_offline_pin_24px.svg"
+					},
+					{
+						"name": "open in browser",
+						"url": "assets/icons/action/svg/production/ic_open_in_browser_24px.svg"
+					},
+					{
+						"name": "open in new",
+						"url": "assets/icons/action/svg/production/ic_open_in_new_24px.svg"
+					},
+					{
+						"name": "open with",
+						"url": "assets/icons/action/svg/production/ic_open_with_24px.svg"
+					},
+					{
+						"name": "pageview",
+						"url": "assets/icons/action/svg/production/ic_pageview_24px.svg"
+					},
+					{
+						"name": "payment",
+						"url": "assets/icons/action/svg/production/ic_payment_24px.svg"
+					},
+					{
+						"name": "perm camera mic",
+						"url": "assets/icons/action/svg/production/ic_perm_camera_mic_24px.svg"
+					},
+					{
+						"name": "perm contact calendar",
+						"url": "assets/icons/action/svg/production/ic_perm_contact_calendar_24px.svg"
+					},
+					{
+						"name": "perm data setting",
+						"url": "assets/icons/action/svg/production/ic_perm_data_setting_24px.svg"
+					},
+					{
+						"name": "perm device information",
+						"url": "assets/icons/action/svg/production/ic_perm_device_information_24px.svg"
+					},
+					{
+						"name": "perm identity",
+						"url": "assets/icons/action/svg/production/ic_perm_identity_24px.svg"
+					},
+					{
+						"name": "perm media",
+						"url": "assets/icons/action/svg/production/ic_perm_media_24px.svg"
+					},
+					{
+						"name": "perm phone msg",
+						"url": "assets/icons/action/svg/production/ic_perm_phone_msg_24px.svg"
+					},
+					{
+						"name": "perm scan wifi",
+						"url": "assets/icons/action/svg/production/ic_perm_scan_wifi_24px.svg"
+					},
+					{
+						"name": "picture in picture",
+						"url": "assets/icons/action/svg/production/ic_picture_in_picture_24px.svg"
+					},
+					{
+						"name": "play for work",
+						"url": "assets/icons/action/svg/production/ic_play_for_work_24px.svg"
+					},
+					{
+						"name": "polymer",
+						"url": "assets/icons/action/svg/production/ic_polymer_24px.svg"
+					},
+					{
+						"name": "power settings new",
+						"url": "assets/icons/action/svg/production/ic_power_settings_new_24px.svg"
+					},
+					{
+						"name": "print",
+						"url": "assets/icons/action/svg/production/ic_print_24px.svg"
+					},
+					{
+						"name": "query builder",
+						"url": "assets/icons/action/svg/production/ic_query_builder_24px.svg"
+					},
+					{
+						"name": "question answer",
+						"url": "assets/icons/action/svg/production/ic_question_answer_24px.svg"
+					},
+					{
+						"name": "receipt",
+						"url": "assets/icons/action/svg/production/ic_receipt_24px.svg"
+					},
+					{
+						"name": "redeem",
+						"url": "assets/icons/action/svg/production/ic_redeem_24px.svg"
+					},
+					{
+						"name": "reorder",
+						"url": "assets/icons/action/svg/production/ic_reorder_24px.svg"
+					},
+					{
+						"name": "report problem",
+						"url": "assets/icons/action/svg/production/ic_report_problem_24px.svg"
+					},
+					{
+						"name": "restore",
+						"url": "assets/icons/action/svg/production/ic_restore_24px.svg"
+					},
+					{
+						"name": "room",
+						"url": "assets/icons/action/svg/production/ic_room_24px.svg"
+					},
+					{
+						"name": "schedule",
+						"url": "assets/icons/action/svg/production/ic_schedule_24px.svg"
+					},
+					{
+						"name": "search",
+						"url": "assets/icons/action/svg/production/ic_search_24px.svg"
+					},
+					{
+						"name": "settings",
+						"url": "assets/icons/action/svg/production/ic_settings_24px.svg"
+					},
+					{
+						"name": "settings applications",
+						"url": "assets/icons/action/svg/production/ic_settings_applications_24px.svg"
+					},
+					{
+						"name": "settings backup restore",
+						"url": "assets/icons/action/svg/production/ic_settings_backup_restore_24px.svg"
+					},
+					{
+						"name": "settings bluetooth",
+						"url": "assets/icons/action/svg/production/ic_settings_bluetooth_24px.svg"
+					},
+					{
+						"name": "settings brightness",
+						"url": "assets/icons/action/svg/production/ic_settings_brightness_24px.svg"
+					},
+					{
+						"name": "settings cell",
+						"url": "assets/icons/action/svg/production/ic_settings_cell_24px.svg"
+					},
+					{
+						"name": "settings ethernet",
+						"url": "assets/icons/action/svg/production/ic_settings_ethernet_24px.svg"
+					},
+					{
+						"name": "settings input antenna",
+						"url": "assets/icons/action/svg/production/ic_settings_input_antenna_24px.svg"
+					},
+					{
+						"name": "settings input component",
+						"url": "assets/icons/action/svg/production/ic_settings_input_component_24px.svg"
+					},
+					{
+						"name": "settings input hdmi",
+						"url": "assets/icons/action/svg/production/ic_settings_input_hdmi_24px.svg"
+					},
+					{
+						"name": "settings input svideo",
+						"url": "assets/icons/action/svg/production/ic_settings_input_svideo_24px.svg"
+					},
+					{
+						"name": "settings overscan",
+						"url": "assets/icons/action/svg/production/ic_settings_overscan_24px.svg"
+					},
+					{
+						"name": "settings phone",
+						"url": "assets/icons/action/svg/production/ic_settings_phone_24px.svg"
+					},
+					{
+						"name": "settings power",
+						"url": "assets/icons/action/svg/production/ic_settings_power_24px.svg"
+					},
+					{
+						"name": "settings remote",
+						"url": "assets/icons/action/svg/production/ic_settings_remote_24px.svg"
+					},
+					{
+						"name": "settings voice",
+						"url": "assets/icons/action/svg/production/ic_settings_voice_24px.svg"
+					},
+					{
+						"name": "shop",
+						"url": "assets/icons/action/svg/production/ic_shop_24px.svg"
+					},
+					{
+						"name": "shop two",
+						"url": "assets/icons/action/svg/production/ic_shop_two_24px.svg"
+					},
+					{
+						"name": "shopping basket",
+						"url": "assets/icons/action/svg/production/ic_shopping_basket_24px.svg"
+					},
+					{
+						"name": "shopping cart",
+						"url": "assets/icons/action/svg/production/ic_shopping_cart_24px.svg"
+					},
+					{
+						"name": "shopping notes",
+						"url": "assets/icons/action/svg/production/ic_speaker_notes_24px.svg"
+					},
+					{
+						"name": "spellcheck",
+						"url": "assets/icons/action/svg/production/ic_spellcheck_24px.svg"
+					},
+					{
+						"name": "star rate",
+						"url": "assets/icons/action/svg/production/ic_star_rate_18px.svg"
+					},
+					{
+						"name": "stars",
+						"url": "assets/icons/action/svg/production/ic_stars_24px.svg"
+					},
+					{
+						"name": "store",
+						"url": "assets/icons/action/svg/production/ic_store_24px.svg"
+					},
+					{
+						"name": "subject",
+						"url": "assets/icons/action/svg/production/ic_subject_24px.svg"
+					},
+					{
+						"name": "supervisor account",
+						"url": "assets/icons/action/svg/production/ic_supervisor_account_24px.svg"
+					},
+					{
+						"name": "swap horiz",
+						"url": "assets/icons/action/svg/production/ic_swap_horiz_24px.svg"
+					},
+					{
+						"name": "swap vert",
+						"url": "assets/icons/action/svg/production/ic_swap_vert_24px.svg"
+					},
+					{
+						"name": "swap vertical circle",
+						"url": "assets/icons/action/svg/production/ic_swap_vertical_circle_24px.svg"
+					},
+					{
+						"name": "system update alt",
+						"url": "assets/icons/action/svg/production/ic_system_update_alt_24px.svg"
+					},
+					{
+						"name": "tab",
+						"url": "assets/icons/action/svg/production/ic_tab_24px.svg"
+					},
+					{
+						"name": "tab unselected",
+						"url": "assets/icons/action/svg/production/ic_tab_unselected_24px.svg"
+					},
+					{
+						"name": "theaters",
+						"url": "assets/icons/action/svg/production/ic_theaters_24px.svg"
+					},
+					{
+						"name": "thumb down",
+						"url": "assets/icons/action/svg/production/ic_thumb_down_24px.svg"
+					},
+					{
+						"name": "thumb up",
+						"url": "assets/icons/action/svg/production/ic_thumb_up_24px.svg"
+					},
+					{
+						"name": "thumbs up down",
+						"url": "assets/icons/action/svg/production/ic_thumbs_up_down_24px.svg"
+					},
+					{
+						"name": "toc",
+						"url": "assets/icons/action/svg/production/ic_toc_24px.svg"
+					},
+					{
+						"name": "today",
+						"url": "assets/icons/action/svg/production/ic_today_24px.svg"
+					},
+					{
+						"name": "toll",
+						"url": "assets/icons/action/svg/production/ic_toll_24px.svg"
+					},
+					{
+						"name": "track changes",
+						"url": "assets/icons/action/svg/production/ic_track_changes_24px.svg"
+					},
+					{
+						"name": "translate",
+						"url": "assets/icons/action/svg/production/ic_translate_24px.svg"
+					},
+					{
+						"name": "trending down",
+						"url": "assets/icons/action/svg/production/ic_trending_down_24px.svg"
+					},
+					{
+						"name": "trending flat",
+						"url": "assets/icons/action/svg/production/ic_trending_flat_24px.svg"
+					},
+					{
+						"name": "trending up",
+						"url": "assets/icons/action/svg/production/ic_trending_up_24px.svg"
+					},
+					{
+						"name": "turned in",
+						"url": "assets/icons/action/svg/production/ic_turned_in_24px.svg"
+					},
+					{
+						"name": "turned in not",
+						"url": "assets/icons/action/svg/production/ic_turned_in_not_24px.svg"
+					},
+					{
+						"name": "verified user",
+						"url": "assets/icons/action/svg/production/ic_verified_user_24px.svg"
+					},
+					{
+						"name": "view agenda",
+						"url": "assets/icons/action/svg/production/ic_view_agenda_24px.svg"
+					},
+					{
+						"name": "view array",
+						"url": "assets/icons/action/svg/production/ic_view_array_24px.svg"
+					},
+					{
+						"name": "view carousel",
+						"url": "assets/icons/action/svg/production/ic_view_carousel_24px.svg"
+					},
+					{
+						"name": "view column",
+						"url": "assets/icons/action/svg/production/ic_view_column_24px.svg"
+					},
+					{
+						"name": "view day",
+						"url": "assets/icons/action/svg/production/ic_view_day_24px.svg"
+					},
+					{
+						"name": "view headline",
+						"url": "assets/icons/action/svg/production/ic_view_headline_24px.svg"
+					},
+					{
+						"name": "view list",
+						"url": "assets/icons/action/svg/production/ic_view_list_24px.svg"
+					},
+					{
+						"name": "view module",
+						"url": "assets/icons/action/svg/production/ic_view_module_24px.svg"
+					},
+					{
+						"name": "view quilt",
+						"url": "assets/icons/action/svg/production/ic_view_quilt_24px.svg"
+					},
+					{
+						"name": "view stream",
+						"url": "assets/icons/action/svg/production/ic_view_stream_24px.svg"
+					},
+					{
+						"name": "view week",
+						"url": "assets/icons/action/svg/production/ic_view_week_24px.svg"
+					},
+					{
+						"name": "visibility",
+						"url": "assets/icons/action/svg/production/ic_visibility_24px.svg"
+					},
+					{
+						"name": "visibility off",
+						"url": "assets/icons/action/svg/production/ic_visibility_off_24px.svg"
+					},
+					{
+						"name": "work",
+						"url": "assets/icons/action/svg/production/ic_work_24px.svg"
+					},
+					{
+						"name": "youtube search",
+						"url": "assets/icons/action/svg/production/ic_youtube_searched_for_24px.svg"
+					},
+					{
+						"name": "zoom in",
+						"url": "assets/icons/action/svg/production/ic_zoom_in_24px.svg"
+					},
+					{
+						"name": "zoom out",
+						"url": "assets/icons/action/svg/production/ic_zoom_out_24px.svg"
+					}
+				]
+			},		
+			"Alert":
+			{
+				"title": "Alert",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "add alert",
+						"url": "assets/icons/alert/svg/production/ic_add_alert_24px.svg"
+					},
+					{
+						"name": "error",
+						"url": "assets/icons/alert/svg/production/ic_error_24px.svg"
+					},
+					{
+						"name": "error outline",
+						"url": "assets/icons/alert/svg/production/ic_error_outline_24px.svg"
+					},
+					{
+						"name": "warning",
+						"url": "assets/icons/alert/svg/production/ic_warning_24px.svg"
+					}
+				]
+			},
+			"AV":
+			{
+				"title": "AV",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "airplay",
+						"url": "assets/icons/av/svg/production/ic_airplay_24px.svg"
+					},
+					{
+						"name": "album",
+						"url": "assets/icons/av/svg/production/ic_album_24px.svg"
+					},
+					{
+						"name": "av timer",
+						"url": "assets/icons/av/svg/production/ic_av_timer_24px.svg"
+					},
+					{
+						"name": "closed caption",
+						"url": "assets/icons/av/svg/production/ic_closed_caption_24px.svg"
+					},
+					{
+						"name": "equalizer",
+						"url": "assets/icons/av/svg/production/ic_equalizer_24px.svg"
+					},
+					{
+						"name": "explicit",
+						"url": "assets/icons/av/svg/production/ic_explicit_24px.svg"
+					},
+					{
+						"name": "fast forward",
+						"url": "assets/icons/av/svg/production/ic_fast_forward_24px.svg"
+					},
+					{
+						"name": "fast rewind",
+						"url": "assets/icons/av/svg/production/ic_fast_rewind_24px.svg"
+					},
+					{
+						"name": "forward 5",
+						"url": "assets/icons/av/svg/production/ic_forward_5_24px.svg"
+					},
+					{
+						"name": "forward 10",
+						"url": "assets/icons/av/svg/production/ic_forward_10_24px.svg"
+					},
+					{
+						"name": "forward 30",
+						"url": "assets/icons/av/svg/production/ic_forward_30_24px.svg"
+					},
+					{
+						"name": "games",
+						"url": "assets/icons/av/svg/production/ic_games_24px.svg"
+					},
+					{
+						"name": "hd",
+						"url": "assets/icons/av/svg/production/ic_hd_24px.svg"
+					},
+					{
+						"name": "hearing",
+						"url": "assets/icons/av/svg/production/ic_hearing_24px.svg"
+					},
+					{
+						"name": "high quality",
+						"url": "assets/icons/av/svg/production/ic_high_quality_24px.svg"
+					},
+					{
+						"name": "library add",
+						"url": "assets/icons/av/svg/production/ic_library_add_24px.svg"
+					},
+					{
+						"name": "library books",
+						"url": "assets/icons/av/svg/production/ic_library_books_24px.svg"
+					},
+					{
+						"name": "library music",
+						"url": "assets/icons/av/svg/production/ic_library_music_24px.svg"
+					},
+					{
+						"name": "loop",
+						"url": "assets/icons/av/svg/production/ic_loop_24px.svg"
+					},
+					{
+						"name": "mic",
+						"url": "assets/icons/av/svg/production/ic_mic_24px.svg"
+					},
+					{
+						"name": "mic none",
+						"url": "assets/icons/av/svg/production/ic_mic_none_24px.svg"
+					},
+					{
+						"name": "mic off",
+						"url": "assets/icons/av/svg/production/ic_mic_off_24px.svg"
+					},
+					{
+						"name": "movie",
+						"url": "assets/icons/av/svg/production/ic_movie_24px.svg"
+					},
+					{
+						"name": "new releases",
+						"url": "assets/icons/av/svg/production/ic_new_releases_24px.svg"
+					},
+					{
+						"name": "not interested",
+						"url": "assets/icons/av/svg/production/ic_not_interested_24px.svg"
+					},
+					{
+						"name": "pause",
+						"url": "assets/icons/av/svg/production/ic_pause_24px.svg"
+					},
+					{
+						"name": "pause circle filled",
+						"url": "assets/icons/av/svg/production/ic_pause_circle_filled_24px.svg"
+					},
+					{
+						"name": "pause circle outline",
+						"url": "assets/icons/av/svg/production/ic_pause_circle_outline_24px.svg"
+					},
+					{
+						"name": "play arrow",
+						"url": "assets/icons/av/svg/production/ic_play_arrow_24px.svg"
+					},
+					{
+						"name": "play circle filled",
+						"url": "assets/icons/av/svg/production/ic_play_circle_filled_24px.svg"
+					},
+					{
+						"name": "play circle outline",
+						"url": "assets/icons/av/svg/production/ic_play_circle_outline_24px.svg"
+					},
+					{
+						"name": "playlist add",
+						"url": "assets/icons/av/svg/production/ic_playlist_add_24px.svg"
+					},
+					{
+						"name": "queue",
+						"url": "assets/icons/av/svg/production/ic_queue_24px.svg"
+					},
+					{
+						"name": "queue music",
+						"url": "assets/icons/av/svg/production/ic_queue_music_24px.svg"
+					},
+					{
+						"name": "radio",
+						"url": "assets/icons/av/svg/production/ic_radio_24px.svg"
+					},
+					{
+						"name": "recent actors",
+						"url": "assets/icons/av/svg/production/ic_recent_actors_24px.svg"
+					},
+					{
+						"name": "repeat",
+						"url": "assets/icons/av/svg/production/ic_repeat_24px.svg"
+					},
+					{
+						"name": "repeat one",
+						"url": "assets/icons/av/svg/production/ic_repeat_one_24px.svg"
+					},
+					{
+						"name": "replay",
+						"url": "assets/icons/av/svg/production/ic_replay_24px.svg"
+					},
+					{
+						"name": "replay 5",
+						"url": "assets/icons/av/svg/production/ic_replay_5_24px.svg"
+					},
+					{
+						"name": "replay 10",
+						"url": "assets/icons/av/svg/production/ic_replay_10_24px.svg"
+					},
+					{
+						"name": "replay 30",
+						"url": "assets/icons/av/svg/production/ic_replay_30_24px.svg"
+					},
+					{
+						"name": "shuffle",
+						"url": "assets/icons/av/svg/production/ic_shuffle_24px.svg"
+					},
+					{
+						"name": "skip next",
+						"url": "assets/icons/av/svg/production/ic_skip_next_24px.svg"
+					},
+					{
+						"name": "skip previous",
+						"url": "assets/icons/av/svg/production/ic_skip_previous_24px.svg"
+					},
+					{
+						"name": "snooze",
+						"url": "assets/icons/av/svg/production/ic_snooze_24px.svg"
+					},
+					{
+						"name": "sort by alpha",
+						"url": "assets/icons/av/svg/production/ic_sort_by_alpha_24px.svg"
+					},
+					{
+						"name": "stop",
+						"url": "assets/icons/av/svg/production/ic_stop_24px.svg"
+					},
+					{
+						"name": "subtitles",
+						"url": "assets/icons/av/svg/production/ic_subtitles_24px.svg"
+					},
+					{
+						"name": "surround sound",
+						"url": "assets/icons/av/svg/production/ic_surround_sound_24px.svg"
+					},
+					{
+						"name": "video library",
+						"url": "assets/icons/av/svg/production/ic_video_library_24px.svg"
+					},
+					{
+						"name": "videocam",
+						"url": "assets/icons/av/svg/production/ic_videocam_24px.svg"
+					},
+					{
+						"name": "videocam off",
+						"url": "assets/icons/av/svg/production/ic_videocam_off_24px.svg"
+					},
+					{
+						"name": "volume down",
+						"url": "assets/icons/av/svg/production/ic_volume_down_24px.svg"
+					},
+					{
+						"name": "volume mute",
+						"url": "assets/icons/av/svg/production/ic_volume_mute_24px.svg"
+					},
+					{
+						"name": "volume off",
+						"url": "assets/icons/av/svg/production/ic_volume_off_24px.svg"
+					},
+					{
+						"name": "volume up",
+						"url": "assets/icons/av/svg/production/ic_volume_up_24px.svg"
+					},
+					{
+						"name": "web",
+						"url": "assets/icons/av/svg/production/ic_web_24px.svg"
+					}
+				]
+			},
+			"Communication":
+			{
+				"title": "Communication",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "contact mail",
+						"url": "assets/icons/communication/svg/production/contact_mail_24px.svg"
+					},
+					{
+						"name": "business",
+						"url": "assets/icons/communication/svg/production/ic_business_24px.svg"
+					},
+					{
+						"name": "call",
+						"url": "assets/icons/communication/svg/production/ic_call_24px.svg"
+					},
+					{
+						"name": "call end",
+						"url": "assets/icons/communication/svg/production/ic_call_end_24px.svg"
+					},
+					{
+						"name": "call made",
+						"url": "assets/icons/communication/svg/production/ic_call_made_24px.svg"
+					},
+					{
+						"name": "call merge",
+						"url": "assets/icons/communication/svg/production/ic_call_merge_24px.svg"
+					},
+					{
+						"name": "call missed",
+						"url": "assets/icons/communication/svg/production/ic_call_missed_24px.svg"
+					},
+					{
+						"name": "call received",
+						"url": "assets/icons/communication/svg/production/ic_call_received_24px.svg"
+					},
+					{
+						"name": "call split",
+						"url": "assets/icons/communication/svg/production/ic_call_split_24px.svg"
+					},
+					{
+						"name": "chat",
+						"url": "assets/icons/communication/svg/production/ic_chat_24px.svg"
+					},
+					{
+						"name": "chat bubble",
+						"url": "assets/icons/communication/svg/production/ic_chat_bubble_24px.svg"
+					},
+					{
+						"name": "chat bubble outline",
+						"url": "assets/icons/communication/svg/production/ic_chat_bubble_outline_24px.svg"
+					},
+					{
+						"name": "clear all",
+						"url": "assets/icons/communication/svg/production/ic_clear_all_24px.svg"
+					},
+					{
+						"name": "comment",
+						"url": "assets/icons/communication/svg/production/ic_comment_24px.svg"
+					},
+					{
+						"name": "contact phone",
+						"url": "assets/icons/communication/svg/production/ic_contact_phone_24px.svg"
+					},
+					{
+						"name": "contacts",
+						"url": "assets/icons/communication/svg/production/ic_contacts_24px.svg"
+					},
+					{
+						"name": "dialer sip",
+						"url": "assets/icons/communication/svg/production/ic_dialer_sip_24px.svg"
+					},
+					{
+						"name": "dialpad",
+						"url": "assets/icons/communication/svg/production/ic_dialpad_24px.svg"
+					},
+					{
+						"name": "email",
+						"url": "assets/icons/communication/svg/production/ic_email_24px.svg"
+					},
+					{
+						"name": "forum",
+						"url": "assets/icons/communication/svg/production/ic_forum_24px.svg"
+					},
+					{
+						"name": "import export",
+						"url": "assets/icons/communication/svg/production/ic_import_export_24px.svg"
+					},
+					{
+						"name": "invert colors off",
+						"url": "assets/icons/communication/svg/production/ic_invert_colors_off_24px.svg"
+					},
+					{
+						"name": "live help",
+						"url": "assets/icons/communication/svg/production/ic_live_help_24px.svg"
+					},
+					{
+						"name": "location off",
+						"url": "assets/icons/communication/svg/production/ic_location_off_24px.svg"
+					},
+					{
+						"name": "location on",
+						"url": "assets/icons/communication/svg/production/ic_location_on_24px.svg"
+					},
+					{
+						"name": "message",
+						"url": "assets/icons/communication/svg/production/ic_message_24px.svg"
+					},
+					{
+						"name": "no sim",
+						"url": "assets/icons/communication/svg/production/ic_no_sim_24px.svg"
+					},
+					{
+						"name": "phone",
+						"url": "assets/icons/communication/svg/production/ic_phone_24px.svg"
+					},
+					{
+						"name": "phonelink erase",
+						"url": "assets/icons/communication/svg/production/ic_phonelink_erase_24px.svg"
+					},
+					{
+						"name": "phonelink lock",
+						"url": "assets/icons/communication/svg/production/ic_phonelink_lock_24px.svg"
+					},
+					{
+						"name": "phonelink ring",
+						"url": "assets/icons/communication/svg/production/ic_phonelink_ring_24px.svg"
+					},
+					{
+						"name": "phonelink setup",
+						"url": "assets/icons/communication/svg/production/ic_phonelink_setup_24px.svg"
+					},
+					{
+						"name": "portable wifi off",
+						"url": "assets/icons/communication/svg/production/ic_portable_wifi_off_24px.svg"
+					},
+					{
+						"name": "present to all",
+						"url": "assets/icons/communication/svg/production/ic_present_to_all_24px.svg"
+					},
+					{
+						"name": "ring volume",
+						"url": "assets/icons/communication/svg/production/ic_ring_volume_24px.svg"
+					},
+					{
+						"name": "speaker phone",
+						"url": "assets/icons/communication/svg/production/ic_speaker_phone_24px.svg"
+					},
+					{
+						"name": "stay current landscape",
+						"url": "assets/icons/communication/svg/production/ic_stay_current_landscape_24px.svg"
+					},
+					{
+						"name": "stay current portrait",
+						"url": "assets/icons/communication/svg/production/ic_stay_current_portrait_24px.svg"
+					},
+					{
+						"name": "stay primary landscape",
+						"url": "assets/icons/communication/svg/production/ic_stay_primary_landscape_24px.svg"
+					},
+					{
+						"name": "stay primary portrait",
+						"url": "assets/icons/communication/svg/production/ic_stay_primary_portrait_24px.svg"
+					},
+					{
+						"name": "swap calls",
+						"url": "assets/icons/communication/svg/production/ic_swap_calls_24px.svg"
+					},
+					{
+						"name": "textsms",
+						"url": "assets/icons/communication/svg/production/ic_textsms_24px.svg"
+					},
+					{
+						"name": "voicemail",
+						"url": "assets/icons/communication/svg/production/ic_voicemail_24px.svg"
+					},
+					{
+						"name": "vpn key",
+						"url": "assets/icons/communication/svg/production/ic_vpn_key_24px.svg"
+					}
+				]	
+			},
+			"Content":
+			{
+				"title": "Content",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "add",
+						"url": "assets/icons/content/svg/production/ic_add_24px.svg"
+					},
+					{
+						"name": "add box",
+						"url": "assets/icons/content/svg/production/ic_add_box_24px.svg"
+					},
+					{
+						"name": "add circle",
+						"url": "assets/icons/content/svg/production/ic_add_circle_24px.svg"
+					},
+					{
+						"name": "add circle outline",
+						"url": "assets/icons/content/svg/production/ic_add_circle_outline_24px.svg"
+					},
+					{
+						"name": "archive",
+						"url": "assets/icons/content/svg/production/ic_archive_24px.svg"
+					},
+					{
+						"name": "backspace",
+						"url": "assets/icons/content/svg/production/ic_backspace_24px.svg"
+					},
+					{
+						"name": "block",
+						"url": "assets/icons/content/svg/production/ic_block_24px.svg"
+					},
+					{
+						"name": "clear",
+						"url": "assets/icons/content/svg/production/ic_clear_24px.svg"
+					},
+					{
+						"name": "copy",
+						"url": "assets/icons/content/svg/production/ic_content_copy_24px.svg"
+					},
+					{
+						"name": "cut",
+						"url": "assets/icons/content/svg/production/ic_content_cut_24px.svg"
+					},
+					{
+						"name": "paste",
+						"url": "assets/icons/content/svg/production/ic_content_paste_24px.svg"
+					},
+					{
+						"name": "create",
+						"url": "assets/icons/content/svg/production/ic_create_24px.svg"
+					},
+					{
+						"name": "drafts",
+						"url": "assets/icons/content/svg/production/ic_drafts_24px.svg"
+					},
+					{
+						"name": "filter list",
+						"url": "assets/icons/content/svg/production/ic_filter_list_24px.svg"
+					},
+					{
+						"name": "flag",
+						"url": "assets/icons/content/svg/production/ic_flag_24px.svg"
+					},
+					{
+						"name": "font download",
+						"url": "assets/icons/content/svg/production/ic_font_download_24px.svg"
+					},
+					{
+						"name": "forward",
+						"url": "assets/icons/content/svg/production/ic_forward_24px.svg"
+					},
+					{
+						"name": "gesture",
+						"url": "assets/icons/content/svg/production/ic_gesture_24px.svg"
+					},
+					{
+						"name": "inbox",
+						"url": "assets/icons/content/svg/production/ic_inbox_24px.svg"
+					},
+					{
+						"name": "link",
+						"url": "assets/icons/content/svg/production/ic_link_24px.svg"
+					},
+					{
+						"name": "mail",
+						"url": "assets/icons/content/svg/production/ic_mail_24px.svg"
+					},
+					{
+						"name": "markunread",
+						"url": "assets/icons/content/svg/production/ic_markunread_24px.svg"
+					},
+					{
+						"name": "redo",
+						"url": "assets/icons/content/svg/production/ic_redo_24px.svg"
+					},
+					{
+						"name": "remove",
+						"url": "assets/icons/content/svg/production/ic_remove_24px.svg"
+					},
+					{
+						"name": "remove circle",
+						"url": "assets/icons/content/svg/production/ic_remove_circle_24px.svg"
+					},
+					{
+						"name": "remove circle outline",
+						"url": "assets/icons/content/svg/production/ic_remove_circle_outline_24px.svg"
+					},
+					{
+						"name": "reply",
+						"url": "assets/icons/content/svg/production/ic_reply_24px.svg"
+					},
+					{
+						"name": "reply all",
+						"url": "assets/icons/content/svg/production/ic_reply_all_24px.svg"
+					},
+					{
+						"name": "report",
+						"url": "assets/icons/content/svg/production/ic_report_24px.svg"
+					},
+					{
+						"name": "save",
+						"url": "assets/icons/content/svg/production/ic_save_24px.svg"
+					},
+					{
+						"name": "select all",
+						"url": "assets/icons/content/svg/production/ic_select_all_24px.svg"
+					},
+					{
+						"name": "send",
+						"url": "assets/icons/content/svg/production/ic_send_24px.svg"
+					},
+					{
+						"name": "sort",
+						"url": "assets/icons/content/svg/production/ic_sort_24px.svg"
+					},
+					{
+						"name": "text format",
+						"url": "assets/icons/content/svg/production/ic_text_format_24px.svg"
+					},
+					{
+						"name": "undo",
+						"url": "assets/icons/content/svg/production/ic_undo_24px.svg"
+					}
+				]	
+			},
+			"Device":
+			{
+				"title": "Device",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "access alarm",
+						"url": "assets/icons/device/svg/production/ic_access_alarm_24px.svg"
+					},
+					{
+						"name": "access time",
+						"url": "assets/icons/device/svg/production/ic_access_time_24px.svg"
+					},
+					{
+						"name": "add alarm",
+						"url": "assets/icons/device/svg/production/ic_add_alarm_24px.svg"
+					},
+					{
+						"name": "airplanemode active",
+						"url": "assets/icons/device/svg/production/ic_airplanemode_active_24px.svg"
+					},
+					{
+						"name": "airplanemode inactive",
+						"url": "assets/icons/device/svg/production/ic_airplanemode_inactive_24px.svg"
+					},
+					{
+						"name": "battery 20",
+						"url": "assets/icons/device/svg/production/ic_battery_20_24px.svg"
+					},
+					{
+						"name": "battery 30",
+						"url": "assets/icons/device/svg/production/ic_battery_30_24px.svg"
+					},
+					{
+						"name": "battery 50",
+						"url": "assets/icons/device/svg/production/ic_battery_50_24px.svg"
+					},
+					{
+						"name": "battery 60",
+						"url": "assets/icons/device/svg/production/ic_battery_60_24px.svg"
+					},
+					{
+						"name": "battery 80",
+						"url": "assets/icons/device/svg/production/ic_battery_80_24px.svg"
+					},
+					{
+						"name": "battery 90",
+						"url": "assets/icons/device/svg/production/ic_battery_90_24px.svg"
+					},
+					{
+						"name": "battery alert",
+						"url": "assets/icons/device/svg/production/ic_battery_alert_24px.svg"
+					},
+					{
+						"name": "battery full",
+						"url": "assets/icons/device/svg/production/ic_battery_full_24px.svg"
+					},
+					{
+						"name": "battery charging 20",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_20_24px.svg"
+					},
+					{
+						"name": "battery charging 30",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_30_24px.svg"
+					},
+					{
+						"name": "battery charging 50",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_50_24px.svg"
+					},
+					{
+						"name": "battery charging 60",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_60_24px.svg"
+					},
+					{
+						"name": "battery charging 80",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_80_24px.svg"
+					},
+					{
+						"name": "battery charging 90",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_90_24px.svg"
+					},
+					{
+						"name": "battery charging full",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_full_24px.svg"
+					},
+					{
+						"name": "battery charging full",
+						"url": "assets/icons/device/svg/production/ic_battery_charging_full_24px.svg"
+					},
+					{
+						"name": "battery std",
+						"url": "assets/icons/device/svg/production/ic_battery_std_24px.svg"
+					},
+					{
+						"name": "battery unknown",
+						"url": "assets/icons/device/svg/production/ic_battery_unknown_24px.svg"
+					},
+					{
+						"name": "bluetooth",
+						"url": "assets/icons/device/svg/production/ic_bluetooth_24px.svg"
+					},
+					{
+						"name": "bluetooth connected",
+						"url": "assets/icons/device/svg/production/ic_bluetooth_connected_24px.svg"
+					},
+					{
+						"name": "bluetooth disabled",
+						"url": "assets/icons/device/svg/production/ic_bluetooth_disabled_24px.svg"
+					},
+					{
+						"name": "bluetooth searching",
+						"url": "assets/icons/device/svg/production/ic_bluetooth_searching_24px.svg"
+					},
+					{
+						"name": "brightness auto",
+						"url": "assets/icons/device/svg/production/ic_brightness_auto_24px.svg"
+					},
+					{
+						"name": "brightness high",
+						"url": "assets/icons/device/svg/production/ic_brightness_high_24px.svg"
+					},
+					{
+						"name": "brightness low",
+						"url": "assets/icons/device/svg/production/ic_brightness_low_24px.svg"
+					},
+					{
+						"name": "brightness medium",
+						"url": "assets/icons/device/svg/production/ic_brightness_medium_24px.svg"
+					},
+					{
+						"name": "data_usage",
+						"url": "assets/icons/device/svg/production/ic_data_usage_24px.svg"
+					},
+					{
+						"name": "developer mode",
+						"url": "assets/icons/device/svg/production/ic_developer_mode_24px.svg"
+					},
+					{
+						"name": "devices",
+						"url": "assets/icons/device/svg/production/ic_devices_24px.svg"
+					},
+					{
+						"name": "dvr",
+						"url": "assets/icons/device/svg/production/ic_dvr_24px.svg"
+					},
+					{
+						"name": "gps fixed",
+						"url": "assets/icons/device/svg/production/ic_gps_fixed_24px.svg"
+					},
+					{
+						"name": "gps not fixed",
+						"url": "assets/icons/device/svg/production/ic_gps_not_fixed_24px.svg"
+					},
+					{
+						"name": "gps off",
+						"url": "assets/icons/device/svg/production/ic_gps_off_24px.svg"
+					},
+					{
+						"name": "graphic eq",
+						"url": "assets/icons/device/svg/production/ic_graphic_eq_24px.svg"
+					},
+					{
+						"name": "location disabled",
+						"url": "assets/icons/device/svg/production/ic_location_disabled_24px.svg"
+					},
+					{
+						"name": "location searching",
+						"url": "assets/icons/device/svg/production/ic_location_searching_24px.svg"
+					},
+					{
+						"name": "network cell",
+						"url": "assets/icons/device/svg/production/ic_network_cell_24px.svg"
+					},
+					{
+						"name": "network wifi",
+						"url": "assets/icons/device/svg/production/ic_network_wifi_24px.svg"
+					},
+					{
+						"name": "nfc",
+						"url": "assets/icons/device/svg/production/ic_nfc_24px.svg"
+					},
+					{
+						"name": "screen lock landscape",
+						"url": "assets/icons/device/svg/production/ic_screen_lock_landscape_24px.svg"
+					},
+					{
+						"name": "screen lock portrait",
+						"url": "assets/icons/device/svg/production/ic_screen_lock_portrait_24px.svg"
+					},
+					{
+						"name": "screen lock rotation",
+						"url": "assets/icons/device/svg/production/ic_screen_lock_rotation_24px.svg"
+					},
+					{
+						"name": "screen rotation",
+						"url": "assets/icons/device/svg/production/ic_screen_rotation_24px.svg"
+					},
+					{
+						"name": "sd storage",
+						"url": "assets/icons/device/svg/production/ic_sd_storage_24px.svg"
+					},
+					{
+						"name": "settings system daydream",
+						"url": "assets/icons/device/svg/production/ic_settings_system_daydream_24px.svg"
+					},
+					{
+						"name": "signal cellular 0 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_0_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular 1 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_1_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular 2 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_2_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular 3 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_3_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular 4 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_4_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular connected no internet 0 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_connected_no_internet_0_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular connected no internet 1 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_connected_no_internet_1_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular connected no internet 2 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_connected_no_internet_2_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular connected no internet 3 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_connected_no_internet_3_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular connected no internet 4 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_connected_no_internet_4_bar_24px.svg"
+					},
+					{
+						"name": "signal cellular no sim",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_no_sim_24px.svg"
+					},
+					{
+						"name": "signal cellular null",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_null_24px.svg"
+					},
+					{
+						"name": "signal cellular off",
+						"url": "assets/icons/device/svg/production/ic_signal_cellular_off_24px.svg"
+					},
+					{
+						"name": "signal wifi 0 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_0_bar_24px.svg"
+					},
+					{
+						"name": "signal wifi 1 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_1_bar_24px.svg"
+					},
+					{
+						"name": "signal wifi 1 bar lock",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_1_bar_lock_24px.svg"
+					},
+					{
+						"name": "signal wifi 2 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_2_bar_24px.svg"
+					},
+					{
+						"name": "signal wifi 2 bar lock",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_2_bar_lock_24px.svg"
+					},
+					{
+						"name": "signal wifi 3 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_3_bar_24px.svg"
+					},
+					{
+						"name": "signal wifi 3 bar lock",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_3_bar_lock_24px.svg"
+					},
+					{
+						"name": "signal wifi 4 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_4_bar_24px.svg"
+					},
+					{
+						"name": "signal wifi 4 bar lock",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_4_bar_lock_24px.svg"
+					},
+					{
+						"name": "signal wifi off",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_off_24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar 1 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_1_bar_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar 2 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_2_bar_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar 3 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_3_bar_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar 4 bar",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_4_bar_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar connected no internet",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_connected_no_internet_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar connected no internet 1",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_connected_no_internet_1_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar connected no internet 2",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_connected_no_internet_2_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar connected no internet 3",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_connected_no_internet_3_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar connected no internet 4",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_connected_no_internet_4_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar not connected",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_not_connected_26x24px.svg"
+					},
+					{
+						"name": "signal wifi statusbar null",
+						"url": "assets/icons/device/svg/production/ic_signal_wifi_statusbar_null_26x24px.svg"
+					},
+					{
+						"name": "storage",
+						"url": "assets/icons/device/svg/production/ic_storage_24px.svg"
+					},
+					{
+						"name": "usb",
+						"url": "assets/icons/device/svg/production/ic_usb_24px.svg"
+					},
+					{
+						"name": "wallpaper",
+						"url": "assets/icons/device/svg/production/ic_wallpaper_24px.svg"
+					},
+					{
+						"name": "widgets",
+						"url": "assets/icons/device/svg/production/ic_widgets_24px.svg"
+					},
+					{
+						"name": "wifi lock",
+						"url": "assets/icons/device/svg/production/ic_wifi_lock_24px.svg"
+					},
+					{
+						"name": "wifi tethering",
+						"url": "assets/icons/device/svg/production/ic_wifi_tethering_24px.svg"
+					}
+				]	
+
+			},
+			"Editor":
+			{
+				"title": "Editor",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "attach file",
+						"url": "assets/icons/editor/svg/production/ic_attach_file_24px.svg"
+					},
+					{
+						"name": "attach money",
+						"url": "assets/icons/editor/svg/production/ic_attach_money_24px.svg"
+					},
+					{
+						"name": "border all",
+						"url": "assets/icons/editor/svg/production/ic_border_all_24px.svg"
+					},
+					{
+						"name": "border bottom",
+						"url": "assets/icons/editor/svg/production/ic_border_bottom_24px.svg"
+					},
+					{
+						"name": "border clear",
+						"url": "assets/icons/editor/svg/production/ic_border_clear_24px.svg"
+					},
+					{
+						"name": "border color",
+						"url": "assets/icons/editor/svg/production/ic_border_color_24px.svg"
+					},
+					{
+						"name": "border horizontal",
+						"url": "assets/icons/editor/svg/production/ic_border_horizontal_24px.svg"
+					},
+					{
+						"name": "border inner",
+						"url": "assets/icons/editor/svg/production/ic_border_inner_24px.svg"
+					},
+					{
+						"name": "border left",
+						"url": "assets/icons/editor/svg/production/ic_border_left_24px.svg"
+					},
+					{
+						"name": "border outer",
+						"url": "assets/icons/editor/svg/production/ic_border_outer_24px.svg"
+					},
+					{
+						"name": "border right",
+						"url": "assets/icons/editor/svg/production/ic_border_right_24px.svg"
+					},
+					{
+						"name": "border style",
+						"url": "assets/icons/editor/svg/production/ic_border_style_24px.svg"
+					},
+					{
+						"name": "border top",
+						"url": "assets/icons/editor/svg/production/ic_border_top_24px.svg"
+					},
+					{
+						"name": "border vertical",
+						"url": "assets/icons/editor/svg/production/ic_border_vertical_24px.svg"
+					},
+					{
+						"name": "format align center",
+						"url": "assets/icons/editor/svg/production/ic_format_align_center_24px.svg"
+					},
+					{
+						"name": "format align justify",
+						"url": "assets/icons/editor/svg/production/ic_format_align_justify_24px.svg"
+					},
+					{
+						"name": "format align left",
+						"url": "assets/icons/editor/svg/production/ic_format_align_left_24px.svg"
+					},
+					{
+						"name": "format align right",
+						"url": "assets/icons/editor/svg/production/ic_format_align_right_24px.svg"
+					},
+					{
+						"name": "format bold",
+						"url": "assets/icons/editor/svg/production/ic_format_bold_24px.svg"
+					},
+					{
+						"name": "format clear",
+						"url": "assets/icons/editor/svg/production/ic_format_clear_24px.svg"
+					},
+					{
+						"name": "format color fill",
+						"url": "assets/icons/editor/svg/production/ic_format_color_fill_24px.svg"
+					},
+					{
+						"name": "format color reset",
+						"url": "assets/icons/editor/svg/production/ic_format_color_reset_24px.svg"
+					},
+					{
+						"name": "format color text",
+						"url": "assets/icons/editor/svg/production/ic_format_color_text_24px.svg"
+					},
+					{
+						"name": "format indent decrease",
+						"url": "assets/icons/editor/svg/production/ic_format_indent_decrease_24px.svg"
+					},
+					{
+						"name": "format indent increase",
+						"url": "assets/icons/editor/svg/production/ic_format_indent_increase_24px.svg"
+					},
+					{
+						"name": "format italic",
+						"url": "assets/icons/editor/svg/production/ic_format_italic_24px.svg"
+					},
+					{
+						"name": "format line spacing",
+						"url": "assets/icons/editor/svg/production/ic_format_line_spacing_24px.svg"
+					},
+					{
+						"name": "format list bulleted",
+						"url": "assets/icons/editor/svg/production/ic_format_list_bulleted_24px.svg"
+					},
+					{
+						"name": "format list numbered",
+						"url": "assets/icons/editor/svg/production/ic_format_list_numbered_24px.svg"
+					},
+					{
+						"name": "format paint",
+						"url": "assets/icons/editor/svg/production/ic_format_paint_24px.svg"
+					},
+					{
+						"name": "format quote",
+						"url": "assets/icons/editor/svg/production/ic_format_quote_24px.svg"
+					},
+					{
+						"name": "format size",
+						"url": "assets/icons/editor/svg/production/ic_format_size_24px.svg"
+					},
+					{
+						"name": "format strikethrough",
+						"url": "assets/icons/editor/svg/production/ic_format_strikethrough_24px.svg"
+					},
+					{
+						"name": "format textdirection l to r",
+						"url": "assets/icons/editor/svg/production/ic_format_textdirection_l_to_r_24px.svg"
+					},
+					{
+						"name": "format textdirection r to l",
+						"url": "assets/icons/editor/svg/production/ic_format_textdirection_r_to_l_24px.svg"
+					},
+					{
+						"name": "format underlined",
+						"url": "assets/icons/editor/svg/production/ic_format_underlined_24px.svg"
+					},
+					{
+						"name": "functions",
+						"url": "assets/icons/editor/svg/production/ic_functions_24px.svg"
+					},
+					{
+						"name": "insert chart",
+						"url": "assets/icons/editor/svg/production/ic_insert_chart_24px.svg"
+					},
+					{
+						"name": "insert comment",
+						"url": "assets/icons/editor/svg/production/ic_insert_comment_24px.svg"
+					},
+					{
+						"name": "insert drive file",
+						"url": "assets/icons/editor/svg/production/ic_insert_drive_file_24px.svg"
+					},
+					{
+						"name": "insert emoticon",
+						"url": "assets/icons/editor/svg/production/ic_insert_emoticon_24px.svg"
+					},
+					{
+						"name": "insert invitation",
+						"url": "assets/icons/editor/svg/production/ic_insert_invitation_24px.svg"
+					},
+					{
+						"name": "insert link",
+						"url": "assets/icons/editor/svg/production/ic_insert_link_24px.svg"
+					},
+					{
+						"name": "insert photo",
+						"url": "assets/icons/editor/svg/production/ic_insert_photo_24px.svg"
+					},
+					{
+						"name": "merge type",
+						"url": "assets/icons/editor/svg/production/ic_merge_type_24px.svg"
+					},
+					{
+						"name": "mode comment",
+						"url": "assets/icons/editor/svg/production/ic_mode_comment_24px.svg"
+					},
+					{
+						"name": "mode edit",
+						"url": "assets/icons/editor/svg/production/ic_mode_edit_24px.svg"
+					},
+					{
+						"name": "money off",
+						"url": "assets/icons/editor/svg/production/ic_money_off_24px.svg"
+					},
+					{
+						"name": "publish",
+						"url": "assets/icons/editor/svg/production/ic_publish_24px.svg"
+					},
+					{
+						"name": "space bar",
+						"url": "assets/icons/editor/svg/production/ic_space_bar_24px.svg"
+					},
+					{
+						"name": "strikethrough",
+						"url": "assets/icons/editor/svg/production/ic_strikethrough_s_24px.svg"
+					},
+					{
+						"name": "vertical align bottom",
+						"url": "assets/icons/editor/svg/production/ic_vertical_align_bottom_24px.svg"
+					},
+					{
+						"name": "vertical align center",
+						"url": "assets/icons/editor/svg/production/ic_vertical_align_center_24px.svg"
+					},
+					{
+						"name": "vertical align top",
+						"url": "assets/icons/editor/svg/production/ic_vertical_align_top_24px.svg"
+					},
+					{
+						"name": "wrap text",
+						"url": "assets/icons/editor/svg/production/ic_wrap_text_24px.svg"
+					}
+				]
+			},
+			"File":
+			{
+				"title": "File",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "attachment",
+						"url": "assets/icons/file/svg/production/ic_attachment_24px.svg"
+					},
+					{
+						"name": "cloud",
+						"url": "assets/icons/file/svg/production/ic_cloud_24px.svg"
+					},
+					{
+						"name": "cloud circle",
+						"url": "assets/icons/file/svg/production/ic_cloud_circle_24px.svg"
+					},
+					{
+						"name": "cloud done",
+						"url": "assets/icons/file/svg/production/ic_cloud_done_24px.svg"
+					},
+					{
+						"name": "cloud download",
+						"url": "assets/icons/file/svg/production/ic_cloud_download_24px.svg"
+					},
+					{
+						"name": "cloud off",
+						"url": "assets/icons/file/svg/production/ic_cloud_off_24px.svg"
+					},
+					{
+						"name": "cloud queue",
+						"url": "assets/icons/file/svg/production/ic_cloud_queue_24px.svg"
+					},
+					{
+						"name": "cloud upload",
+						"url": "assets/icons/file/svg/production/ic_cloud_upload_24px.svg"
+					},
+					{
+						"name": "file download",
+						"url": "assets/icons/file/svg/production/ic_file_download_24px.svg"
+					},
+					{
+						"name": "file upload",
+						"url": "assets/icons/file/svg/production/ic_file_upload_24px.svg"
+					},
+					{
+						"name": "folder",
+						"url": "assets/icons/file/svg/production/ic_folder_24px.svg"
+					},
+					{
+						"name": "folder open",
+						"url": "assets/icons/file/svg/production/ic_folder_open_24px.svg"
+					},
+					{
+						"name": "folder shared",
+						"url": "assets/icons/file/svg/production/ic_folder_shared_24px.svg"
+					}
+				]
+			},
+			"Hardware":
+			{
+				"title": "Hardware",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "cast",
+						"url": "assets/icons/hardware/svg/production/ic_cast_24px.svg"
+					},
+					{
+						"name": "cast connected",
+						"url": "assets/icons/hardware/svg/production/ic_cast_connected_24px.svg"
+					},
+					{
+						"name": "computer",
+						"url": "assets/icons/hardware/svg/production/ic_computer_24px.svg"
+					},
+					{
+						"name": "desktop mac",
+						"url": "assets/icons/hardware/svg/production/ic_desktop_mac_24px.svg"
+					},
+					{
+						"name": "desktop windows",
+						"url": "assets/icons/hardware/svg/production/ic_desktop_windows_24px.svg"
+					},
+					{
+						"name": "developer board",
+						"url": "assets/icons/hardware/svg/production/ic_developer_board_24px.svg"
+					},
+					{
+						"name": "device hub",
+						"url": "assets/icons/hardware/svg/production/ic_device_hub_24px.svg"
+					},
+					{
+						"name": "dock",
+						"url": "assets/icons/hardware/svg/production/ic_dock_24px.svg"
+					},
+					{
+						"name": "gamepad",
+						"url": "assets/icons/hardware/svg/production/ic_gamepad_24px.svg"
+					},
+					{
+						"name": "headset",
+						"url": "assets/icons/hardware/svg/production/ic_headset_24px.svg"
+					},
+					{
+						"name": "headset mic",
+						"url": "assets/icons/hardware/svg/production/ic_headset_mic_24px.svg"
+					},
+					{
+						"name": "keyboard",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_24px.svg"
+					},
+					{
+						"name": "keyboard arrow down",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg"
+					},
+					{
+						"name": "keyboard arrow left",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg"
+					},
+					{
+						"name": "keyboard arrow right",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg"
+					},
+					{
+						"name": "keyboard arrow up",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg"
+					},
+					{
+						"name": "keyboard backspace",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_backspace_24px.svg"
+					},
+					{
+						"name": "keyboard capslock",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_capslock_24px.svg"
+					},
+					{
+						"name": "keyboard hide",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_hide_24px.svg"
+					},
+					{
+						"name": "keyboard return",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_return_24px.svg"
+					},
+					{
+						"name": "keyboard tab",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_tab_24px.svg"
+					},
+					{
+						"name": "keyboard voice",
+						"url": "assets/icons/hardware/svg/production/ic_keyboard_voice_24px.svg"
+					},
+					{
+						"name": "laptop",
+						"url": "assets/icons/hardware/svg/production/ic_laptop_24px.svg"
+					},
+					{
+						"name": "laptop chromebook",
+						"url": "assets/icons/hardware/svg/production/ic_laptop_chromebook_24px.svg"
+					},
+					{
+						"name": "laptop mac",
+						"url": "assets/icons/hardware/svg/production/ic_laptop_mac_24px.svg"
+					},
+					{
+						"name": "laptop windows",
+						"url": "assets/icons/hardware/svg/production/ic_laptop_windows_24px.svg"
+					},
+					{
+						"name": "memory",
+						"url": "assets/icons/hardware/svg/production/ic_memory_24px.svg"
+					},
+					{
+						"name": "mouse",
+						"url": "assets/icons/hardware/svg/production/ic_mouse_24px.svg"
+					},
+					{
+						"name": "phone android",
+						"url": "assets/icons/hardware/svg/production/ic_phone_android_24px.svg"
+					},
+					{
+						"name": "phone iphone",
+						"url": "assets/icons/hardware/svg/production/ic_phone_iphone_24px.svg"
+					},
+					{
+						"name": "phonelink",
+						"url": "assets/icons/hardware/svg/production/ic_phonelink_24px.svg"
+					},
+					{
+						"name": "phonelink off",
+						"url": "assets/icons/hardware/svg/production/ic_phonelink_off_24px.svg"
+					},
+					{
+						"name": "power input",
+						"url": "assets/icons/hardware/svg/production/ic_power_input_24px.svg"
+					},
+					{
+						"name": "router",
+						"url": "assets/icons/hardware/svg/production/ic_router_24px.svg"
+					},
+					{
+						"name": "scanner",
+						"url": "assets/icons/hardware/svg/production/ic_scanner_24px.svg"
+					},
+					{
+						"name": "security",
+						"url": "assets/icons/hardware/svg/production/ic_security_24px.svg"
+					},
+					{
+						"name": "sim card",
+						"url": "assets/icons/hardware/svg/production/ic_sim_card_24px.svg"
+					},
+					{
+						"name": "smartphone",
+						"url": "assets/icons/hardware/svg/production/ic_smartphone_24px.svg"
+					},
+					{
+						"name": "speaker",
+						"url": "assets/icons/hardware/svg/production/ic_speaker_24px.svg"
+					},
+					{
+						"name": "speaker group",
+						"url": "assets/icons/hardware/svg/production/ic_speaker_group_24px.svg"
+					},
+					{
+						"name": "tablet",
+						"url": "assets/icons/hardware/svg/production/ic_tablet_24px.svg"
+					},
+					{
+						"name": "tablet android",
+						"url": "assets/icons/hardware/svg/production/ic_tablet_android_24px.svg"
+					},
+					{
+						"name": "tablet mac",
+						"url": "assets/icons/hardware/svg/production/ic_tablet_mac_24px.svg"
+					},
+					{
+						"name": "toys",
+						"url": "assets/icons/hardware/svg/production/ic_toys_24px.svg"
+					},
+					{
+						"name": "tv",
+						"url": "assets/icons/hardware/svg/production/ic_tv_24px.svg"
+					},
+					{
+						"name": "watch",
+						"url": "assets/icons/hardware/svg/production/ic_watch_24px.svg"
+					}
+				]
+			},
+			"Image":
+			{
+				"title": "Image",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "add to photos",
+						"url": "assets/icons/image/svg/production/ic_add_to_photos_24px.svg"
+					},
+					{
+						"name": "adjust",
+						"url": "assets/icons/image/svg/production/ic_adjust_24px.svg"
+					},
+					{
+						"name": "assistant",
+						"url": "assets/icons/image/svg/production/ic_assistant_24px.svg"
+					},
+					{
+						"name": "assistant photo",
+						"url": "assets/icons/image/svg/production/ic_assistant_photo_24px.svg"
+					},
+					{
+						"name": "audiotrack",
+						"url": "assets/icons/image/svg/production/ic_audiotrack_24px.svg"
+					},
+					{
+						"name": "blur circular",
+						"url": "assets/icons/image/svg/production/ic_blur_circular_24px.svg"
+					},
+					{
+						"name": "blur linear",
+						"url": "assets/icons/image/svg/production/ic_blur_linear_24px.svg"
+					},
+					{
+						"name": "blur off",
+						"url": "assets/icons/image/svg/production/ic_blur_off_24px.svg"
+					},
+					{
+						"name": "blur on",
+						"url": "assets/icons/image/svg/production/ic_blur_on_24px.svg"
+					},
+					{
+						"name": "brightness 1",
+						"url": "assets/icons/image/svg/production/ic_brightness_1_24px.svg"
+					},
+					{
+						"name": "brightness 2",
+						"url": "assets/icons/image/svg/production/ic_brightness_2_24px.svg"
+					},
+					{
+						"name": "brightness 3",
+						"url": "assets/icons/image/svg/production/ic_brightness_3_24px.svg"
+					},
+					{
+						"name": "brightness 4",
+						"url": "assets/icons/image/svg/production/ic_brightness_4_24px.svg"
+					},
+					{
+						"name": "brightness 5",
+						"url": "assets/icons/image/svg/production/ic_brightness_5_24px.svg"
+					},
+					{
+						"name": "brightness 6",
+						"url": "assets/icons/image/svg/production/ic_brightness_6_24px.svg"
+					},
+					{
+						"name": "brightness 7",
+						"url": "assets/icons/image/svg/production/ic_brightness_7_24px.svg"
+					},
+					{
+						"name": "broken image",
+						"url": "assets/icons/image/svg/production/ic_broken_image_24px.svg"
+					},
+					{
+						"name": "brush",
+						"url": "assets/icons/image/svg/production/ic_brush_24px.svg"
+					},
+					{
+						"name": "camera",
+						"url": "assets/icons/image/svg/production/ic_camera_24px.svg"
+					},
+					{
+						"name": "camera alt",
+						"url": "assets/icons/image/svg/production/ic_camera_alt_24px.svg"
+					},
+					{
+						"name": "camera front",
+						"url": "assets/icons/image/svg/production/ic_camera_front_24px.svg"
+					},
+					{
+						"name": "camera rear",
+						"url": "assets/icons/image/svg/production/ic_camera_rear_24px.svg"
+					},
+					{
+						"name": "camera roll",
+						"url": "assets/icons/image/svg/production/ic_camera_roll_24px.svg"
+					},
+					{
+						"name": "center focus strong",
+						"url": "assets/icons/image/svg/production/ic_center_focus_strong_24px.svg"
+					},
+					{
+						"name": "center focus weak",
+						"url": "assets/icons/image/svg/production/ic_center_focus_weak_24px.svg"
+					},
+					{
+						"name": "collections",
+						"url": "assets/icons/image/svg/production/ic_collections_24px.svg"
+					},
+					{
+						"name": "collections bookmark",
+						"url": "assets/icons/image/svg/production/ic_collections_bookmark_24px.svg"
+					},
+					{
+						"name": "color lens",
+						"url": "assets/icons/image/svg/production/ic_color_lens_24px.svg"
+					},
+					{
+						"name": "colorize",
+						"url": "assets/icons/image/svg/production/ic_colorize_24px.svg"
+					},
+					{
+						"name": "compare",
+						"url": "assets/icons/image/svg/production/ic_compare_24px.svg"
+					},
+					{
+						"name": "control point",
+						"url": "assets/icons/image/svg/production/ic_control_point_24px.svg"
+					},
+					{
+						"name": "control point duplicate",
+						"url": "assets/icons/image/svg/production/ic_control_point_duplicate_24px.svg"
+					},
+					{
+						"name": "crop",
+						"url": "assets/icons/image/svg/production/ic_crop_3_2_24px.svg"
+					},
+					{
+						"name": "crop",
+						"url": "assets/icons/image/svg/production/ic_crop_5_4_24px.svg"
+					},
+					{
+						"name": "crop",
+						"url": "assets/icons/image/svg/production/ic_crop_7_5_24px.svg"
+					},
+					{
+						"name": "crop",
+						"url": "assets/icons/image/svg/production/ic_crop_16_9_24px.svg"
+					},
+					{
+						"name": "crop",
+						"url": "assets/icons/image/svg/production/ic_crop_24px.svg"
+					},
+					{
+						"name": "crop din",
+						"url": "assets/icons/image/svg/production/ic_crop_din_24px.svg"
+					},
+					{
+						"name": "crop free",
+						"url": "assets/icons/image/svg/production/ic_crop_free_24px.svg"
+					},
+					{
+						"name": "crop landscape",
+						"url": "assets/icons/image/svg/production/ic_crop_landscape_24px.svg"
+					},
+					{
+						"name": "crop original",
+						"url": "assets/icons/image/svg/production/ic_crop_original_24px.svg"
+					},
+					{
+						"name": "crop portrait",
+						"url": "assets/icons/image/svg/production/ic_crop_portrait_24px.svg"
+					},
+					{
+						"name": "crop square",
+						"url": "assets/icons/image/svg/production/ic_crop_square_24px.svg"
+					},
+					{
+						"name": "dehaze",
+						"url": "assets/icons/image/svg/production/ic_dehaze_24px.svg"
+					},
+					{
+						"name": "details",
+						"url": "assets/icons/image/svg/production/ic_details_24px.svg"
+					},
+					{
+						"name": "edit",
+						"url": "assets/icons/image/svg/production/ic_edit_24px.svg"
+					},
+					{
+						"name": "exposure",
+						"url": "assets/icons/image/svg/production/ic_exposure_24px.svg"
+					},
+					{
+						"name": "exposure neg",
+						"url": "assets/icons/image/svg/production/ic_exposure_neg_1_24px.svg"
+					},
+					{
+						"name": "exposure neg",
+						"url": "assets/icons/image/svg/production/ic_exposure_neg_2_24px.svg"
+					},
+					{
+						"name": "exposure plus",
+						"url": "assets/icons/image/svg/production/ic_exposure_plus_1_24px.svg"
+					},
+					{
+						"name": "exposure plus",
+						"url": "assets/icons/image/svg/production/ic_exposure_plus_2_24px.svg"
+					},
+					{
+						"name": "exposure zero",
+						"url": "assets/icons/image/svg/production/ic_exposure_zero_24px.svg"
+					},
+					{
+						"name": "filter",
+						"url": "assets/icons/image/svg/production/ic_filter_24px.svg"
+					},
+					{
+						"name": "filter 1",
+						"url": "assets/icons/image/svg/production/ic_filter_1_24px.svg"
+					},
+					{
+						"name": "filter 2",
+						"url": "assets/icons/image/svg/production/ic_filter_2_24px.svg"
+					},
+					{
+						"name": "filter 3",
+						"url": "assets/icons/image/svg/production/ic_filter_3_24px.svg"
+					},
+					{
+						"name": "filter 4",
+						"url": "assets/icons/image/svg/production/ic_filter_4_24px.svg"
+					},
+					{
+						"name": "filter 5",
+						"url": "assets/icons/image/svg/production/ic_filter_5_24px.svg"
+					},
+					{
+						"name": "filter 6",
+						"url": "assets/icons/image/svg/production/ic_filter_6_24px.svg"
+					},
+					{
+						"name": "filter 7",
+						"url": "assets/icons/image/svg/production/ic_filter_7_24px.svg"
+					},
+					{
+						"name": "filter 8",
+						"url": "assets/icons/image/svg/production/ic_filter_8_24px.svg"
+					},
+					{
+						"name": "filter 9",
+						"url": "assets/icons/image/svg/production/ic_filter_9_24px.svg"
+					},
+					{
+						"name": "filter 9 plus",
+						"url": "assets/icons/image/svg/production/ic_filter_9_plus_24px.svg"
+					},
+					{
+						"name": "filter b and w",
+						"url": "assets/icons/image/svg/production/ic_filter_b_and_w_24px.svg"
+					},
+					{
+						"name": "filter center focus",
+						"url": "assets/icons/image/svg/production/ic_filter_center_focus_24px.svg"
+					},
+					{
+						"name": "filter drama",
+						"url": "assets/icons/image/svg/production/ic_filter_drama_24px.svg"
+					},
+					{
+						"name": "filter frames",
+						"url": "assets/icons/image/svg/production/ic_filter_frames_24px.svg"
+					},
+					{
+						"name": "filter hdr",
+						"url": "assets/icons/image/svg/production/ic_filter_hdr_24px.svg"
+					},
+					{
+						"name": "filter none",
+						"url": "assets/icons/image/svg/production/ic_filter_none_24px.svg"
+					},
+					{
+						"name": "filter tilt shift",
+						"url": "assets/icons/image/svg/production/ic_filter_tilt_shift_24px.svg"
+					},
+					{
+						"name": "filter vintage",
+						"url": "assets/icons/image/svg/production/ic_filter_vintage_24px.svg"
+					},
+					{
+						"name": "flare",
+						"url": "assets/icons/image/svg/production/ic_flare_24px.svg"
+					},
+					{
+						"name": "flash auto",
+						"url": "assets/icons/image/svg/production/ic_flash_auto_24px.svg"
+					},
+					{
+						"name": "flash off",
+						"url": "assets/icons/image/svg/production/ic_flash_off_24px.svg"
+					},
+					{
+						"name": "flash on",
+						"url": "assets/icons/image/svg/production/ic_flash_on_24px.svg"
+					},
+					{
+						"name": "flip",
+						"url": "assets/icons/image/svg/production/ic_flip_24px.svg"
+					},
+					{
+						"name": "gradient",
+						"url": "assets/icons/image/svg/production/ic_gradient_24px.svg"
+					},
+					{
+						"name": "grain",
+						"url": "assets/icons/image/svg/production/ic_grain_24px.svg"
+					},
+					{
+						"name": "grid off",
+						"url": "assets/icons/image/svg/production/ic_grid_off_24px.svg"
+					},
+					{
+						"name": "grid on",
+						"url": "assets/icons/image/svg/production/ic_grid_on_24px.svg"
+					},
+					{
+						"name": "hdr off",
+						"url": "assets/icons/image/svg/production/ic_hdr_off_24px.svg"
+					},
+					{
+						"name": "hdr on",
+						"url": "assets/icons/image/svg/production/ic_hdr_on_24px.svg"
+					},
+					{
+						"name": "hdr strong",
+						"url": "assets/icons/image/svg/production/ic_hdr_strong_24px.svg"
+					},
+					{
+						"name": "hdr weak",
+						"url": "assets/icons/image/svg/production/ic_hdr_weak_24px.svg"
+					},
+					{
+						"name": "healing",
+						"url": "assets/icons/image/svg/production/ic_healing_24px.svg"
+					},
+					{
+						"name": "image",
+						"url": "assets/icons/image/svg/production/ic_image_24px.svg"
+					},
+					{
+						"name": "image aspect ratio",
+						"url": "assets/icons/image/svg/production/ic_image_aspect_ratio_24px.svg"
+					},
+					{
+						"name": "iso",
+						"url": "assets/icons/image/svg/production/ic_iso_24px.svg"
+					},
+					{
+						"name": "landscape",
+						"url": "assets/icons/image/svg/production/ic_landscape_24px.svg"
+					},
+					{
+						"name": "leak add",
+						"url": "assets/icons/image/svg/production/ic_leak_add_24px.svg"
+					},
+					{
+						"name": "leak remove",
+						"url": "assets/icons/image/svg/production/ic_leak_remove_24px.svg"
+					},
+					{
+						"name": "lens",
+						"url": "assets/icons/image/svg/production/ic_lens_24px.svg"
+					},
+					{
+						"name": "looks",
+						"url": "assets/icons/image/svg/production/ic_looks_24px.svg"
+					},
+					{
+						"name": "looks 1",
+						"url": "assets/icons/image/svg/production/ic_looks_one_24px.svg"
+					},
+					{
+						"name": "looks 2",
+						"url": "assets/icons/image/svg/production/ic_looks_two_24px.svg"
+					},
+					{
+						"name": "looks 3",
+						"url": "assets/icons/image/svg/production/ic_looks_3_24px.svg"
+					},
+					{
+						"name": "looks 4",
+						"url": "assets/icons/image/svg/production/ic_looks_4_24px.svg"
+					},
+					{
+						"name": "looks 5",
+						"url": "assets/icons/image/svg/production/ic_looks_5_24px.svg"
+					},
+					{
+						"name": "looks 6",
+						"url": "assets/icons/image/svg/production/ic_looks_6_24px.svg"
+					},
+					{
+						"name": "loupe",
+						"url": "assets/icons/image/svg/production/ic_loupe_24px.svg"
+					},
+					{
+						"name": "monochrome photos",
+						"url": "assets/icons/image/svg/production/ic_monochrome_photos_24px.svg"
+					},
+					{
+						"name": "movie creation",
+						"url": "assets/icons/image/svg/production/ic_movie_creation_24px.svg"
+					},
+					{
+						"name": "music note",
+						"url": "assets/icons/image/svg/production/ic_music_note_24px.svg"
+					},
+					{
+						"name": "nature",
+						"url": "assets/icons/image/svg/production/ic_nature_24px.svg"
+					},
+					{
+						"name": "nature people",
+						"url": "assets/icons/image/svg/production/ic_nature_people_24px.svg"
+					},
+					{
+						"name": "navigate before",
+						"url": "assets/icons/image/svg/production/ic_navigate_before_24px.svg"
+					},
+					{
+						"name": "navigate next",
+						"url": "assets/icons/image/svg/production/ic_navigate_next_24px.svg"
+					},
+					{
+						"name": "palette",
+						"url": "assets/icons/image/svg/production/ic_palette_24px.svg"
+					},
+					{
+						"name": "panorama",
+						"url": "assets/icons/image/svg/production/ic_panorama_24px.svg"
+					},
+					{
+						"name": "panorama fish eye",
+						"url": "assets/icons/image/svg/production/ic_panorama_fish_eye_24px.svg"
+					},
+					{
+						"name": "panorama horizontal",
+						"url": "assets/icons/image/svg/production/ic_panorama_horizontal_24px.svg"
+					},
+					{
+						"name": "panorama vertical",
+						"url": "assets/icons/image/svg/production/ic_panorama_vertical_24px.svg"
+					},
+					{
+						"name": "panorama wide angle",
+						"url": "assets/icons/image/svg/production/ic_panorama_wide_angle_24px.svg"
+					},
+					{
+						"name": "photo",
+						"url": "assets/icons/image/svg/production/ic_photo_24px.svg"
+					},
+					{
+						"name": "photo album",
+						"url": "assets/icons/image/svg/production/ic_photo_album_24px.svg"
+					},
+					{
+						"name": "photo camera",
+						"url": "assets/icons/image/svg/production/ic_photo_camera_24px.svg"
+					},
+					{
+						"name": "photo library",
+						"url": "assets/icons/image/svg/production/ic_photo_library_24px.svg"
+					},
+					{
+						"name": "photo size select actual",
+						"url": "assets/icons/image/svg/production/ic_photo_size_select_actual_24px.svg"
+					},
+					{
+						"name": "photo size select large",
+						"url": "assets/icons/image/svg/production/ic_photo_size_select_large_24px.svg"
+					},
+					{
+						"name": "photo size select small",
+						"url": "assets/icons/image/svg/production/ic_photo_size_select_small_24px.svg"
+					},
+					{
+						"name": "picture as pdf",
+						"url": "assets/icons/image/svg/production/ic_picture_as_pdf_24px.svg"
+					},
+					{
+						"name": "portrait",
+						"url": "assets/icons/image/svg/production/ic_portrait_24px.svg"
+					},
+					{
+						"name": "remove red eye",
+						"url": "assets/icons/image/svg/production/ic_remove_red_eye_24px.svg"
+					},
+					{
+						"name": "rotate 90 degrees ccw",
+						"url": "assets/icons/image/svg/production/ic_rotate_90_degrees_ccw_24px.svg"
+					},
+					{
+						"name": "rotate left",
+						"url": "assets/icons/image/svg/production/ic_rotate_left_24px.svg"
+					},
+					{
+						"name": "rotate right",
+						"url": "assets/icons/image/svg/production/ic_rotate_right_24px.svg"
+					},
+					{
+						"name": "slideshow",
+						"url": "assets/icons/image/svg/production/ic_slideshow_24px.svg"
+					},
+					{
+						"name": "straighten",
+						"url": "assets/icons/image/svg/production/ic_straighten_24px.svg"
+					},
+					{
+						"name": "style",
+						"url": "assets/icons/image/svg/production/ic_style_24px.svg"
+					},
+					{
+						"name": "switch camera",
+						"url": "assets/icons/image/svg/production/ic_switch_camera_24px.svg"
+					},
+					{
+						"name": "switch video",
+						"url": "assets/icons/image/svg/production/ic_switch_video_24px.svg"
+					},
+					{
+						"name": "tag faces",
+						"url": "assets/icons/image/svg/production/ic_tag_faces_24px.svg"
+					},
+					{
+						"name": "texture",
+						"url": "assets/icons/image/svg/production/ic_texture_24px.svg"
+					},
+					{
+						"name": "timelapse",
+						"url": "assets/icons/image/svg/production/ic_timelapse_24px.svg"
+					},
+					{
+						"name": "timer",
+						"url": "assets/icons/image/svg/production/ic_timer_24px.svg"
+					},
+					{
+						"name": "timer 3",
+						"url": "assets/icons/image/svg/production/ic_timer_3_24px.svg"
+					},
+					{
+						"name": "timer 10",
+						"url": "assets/icons/image/svg/production/ic_timer_10_24px.svg"
+					},
+					{
+						"name": "timer off",
+						"url": "assets/icons/image/svg/production/ic_timer_off_24px.svg"
+					},
+					{
+						"name": "tonality",
+						"url": "assets/icons/image/svg/production/ic_tonality_24px.svg"
+					},
+					{
+						"name": "transform",
+						"url": "assets/icons/image/svg/production/ic_transform_24px.svg"
+					},
+					{
+						"name": "tune",
+						"url": "assets/icons/image/svg/production/ic_tune_24px.svg"
+					},
+					{
+						"name": "view comfy",
+						"url": "assets/icons/image/svg/production/ic_view_comfy_24px.svg"
+					},
+					{
+						"name": "view compact",
+						"url": "assets/icons/image/svg/production/ic_view_compact_24px.svg"
+					},
+					{
+						"name": "vignette",
+						"url": "assets/icons/image/svg/production/ic_vignette_24px.svg"
+					},
+					{
+						"name": "wb auto",
+						"url": "assets/icons/image/svg/production/ic_wb_auto_24px.svg"
+					},
+					{
+						"name": "wb cloudy",
+						"url": "assets/icons/image/svg/production/ic_wb_cloudy_24px.svg"
+					},
+					{
+						"name": "wb incandescent",
+						"url": "assets/icons/image/svg/production/ic_wb_incandescent_24px.svg"
+					},
+					{
+						"name": "wb iridescent",
+						"url": "assets/icons/image/svg/production/ic_wb_iridescent_24px.svg"
+					},
+					{
+						"name": "wb sunny",
+						"url": "assets/icons/image/svg/production/ic_wb_sunny_24px.svg"
+					}
+				]
+			},
+			"Maps":
+			{
+				"title": "Maps",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "beenhere",
+						"url": "assets/icons/maps/svg/production/ic_beenhere_24px.svg"
+					},
+					{
+						"name": "directions",
+						"url": "assets/icons/maps/svg/production/ic_directions_24px.svg"
+					},
+					{
+						"name": "bike",
+						"url": "assets/icons/maps/svg/production/ic_directions_bike_24px.svg"
+					},
+					{
+						"name": "boat",
+						"url": "assets/icons/maps/svg/production/ic_directions_boat_24px.svg"
+					},
+					{
+						"name": "bus",
+						"url": "assets/icons/maps/svg/production/ic_directions_bus_24px.svg"
+					},
+					{
+						"name": "car",
+						"url": "assets/icons/maps/svg/production/ic_directions_car_24px.svg"
+					},
+					{
+						"name": "railway",
+						"url": "assets/icons/maps/svg/production/ic_directions_railway_24px.svg"
+					},
+					{
+						"name": "run",
+						"url": "assets/icons/maps/svg/production/ic_directions_run_24px.svg"
+					},
+					{
+						"name": "subway",
+						"url": "assets/icons/maps/svg/production/ic_directions_subway_24px.svg"
+					},
+					{
+						"name": "walk",
+						"url": "assets/icons/maps/svg/production/ic_directions_walk_24px.svg"
+					},
+					{
+						"name": "flight",
+						"url": "assets/icons/maps/svg/production/ic_flight_24px.svg"
+					},
+					{
+						"name": "hotel",
+						"url": "assets/icons/maps/svg/production/ic_hotel_24px.svg"
+					},
+					{
+						"name": "layers",
+						"url": "assets/icons/maps/svg/production/ic_layers_24px.svg"
+					},
+					{
+						"name": "layers clear",
+						"url": "assets/icons/maps/svg/production/ic_layers_clear_24px.svg"
+					},
+					{
+						"name": "local activity",
+						"url": "assets/icons/maps/svg/production/ic_local_activity_24px.svg"
+					},
+					{
+						"name": "airport",
+						"url": "assets/icons/maps/svg/production/ic_local_airport_24px.svg"
+					},
+					{
+						"name": "atm",
+						"url": "assets/icons/maps/svg/production/ic_local_atm_24px.svg"
+					},
+					{
+						"name": "bar",
+						"url": "assets/icons/maps/svg/production/ic_local_bar_24px.svg"
+					},
+					{
+						"name": "cafe",
+						"url": "assets/icons/maps/svg/production/ic_local_cafe_24px.svg"
+					},
+					{
+						"name": "car wash",
+						"url": "assets/icons/maps/svg/production/ic_local_car_wash_24px.svg"
+					},
+					{
+						"name": "convenience store",
+						"url": "assets/icons/maps/svg/production/ic_local_convenience_store_24px.svg"
+					},
+					{
+						"name": "dining",
+						"url": "assets/icons/maps/svg/production/ic_local_dining_24px.svg"
+					},
+					{
+						"name": "drink",
+						"url": "assets/icons/maps/svg/production/ic_local_drink_24px.svg"
+					},
+					{
+						"name": "florist",
+						"url": "assets/icons/maps/svg/production/ic_local_florist_24px.svg"
+					},
+					{
+						"name": "gas station",
+						"url": "assets/icons/maps/svg/production/ic_local_gas_station_24px.svg"
+					},
+					{
+						"name": "grocery store",
+						"url": "assets/icons/maps/svg/production/ic_local_grocery_store_24px.svg"
+					},
+					{
+						"name": "hospital",
+						"url": "assets/icons/maps/svg/production/ic_local_hospital_24px.svg"
+					},
+					{
+						"name": "hotel",
+						"url": "assets/icons/maps/svg/production/ic_local_hotel_24px.svg"
+					},
+					{
+						"name": "laundry service",
+						"url": "assets/icons/maps/svg/production/ic_local_laundry_service_24px.svg"
+					},
+					{
+						"name": "library",
+						"url": "assets/icons/maps/svg/production/ic_local_library_24px.svg"
+					},
+					{
+						"name": "mall",
+						"url": "assets/icons/maps/svg/production/ic_local_mall_24px.svg"
+					},
+					{
+						"name": "movies",
+						"url": "assets/icons/maps/svg/production/ic_local_movies_24px.svg"
+					},
+					{
+						"name": "offer",
+						"url": "assets/icons/maps/svg/production/ic_local_offer_24px.svg"
+					},
+					{
+						"name": "parking",
+						"url": "assets/icons/maps/svg/production/ic_local_parking_24px.svg"
+					},
+					{
+						"name": "pharmacy",
+						"url": "assets/icons/maps/svg/production/ic_local_pharmacy_24px.svg"
+					},
+					{
+						"name": "phone",
+						"url": "assets/icons/maps/svg/production/ic_local_phone_24px.svg"
+					},
+					{
+						"name": "pizza",
+						"url": "assets/icons/maps/svg/production/ic_local_pizza_24px.svg"
+					},
+					{
+						"name": "play",
+						"url": "assets/icons/maps/svg/production/ic_local_play_24px.svg"
+					},
+					{
+						"name": "post office",
+						"url": "assets/icons/maps/svg/production/ic_local_post_office_24px.svg"
+					},
+					{
+						"name": "printshop",
+						"url": "assets/icons/maps/svg/production/ic_local_printshop_24px.svg"
+					},
+					{
+						"name": "see",
+						"url": "assets/icons/maps/svg/production/ic_local_see_24px.svg"
+					},
+					{
+						"name": "shipping",
+						"url": "assets/icons/maps/svg/production/ic_local_shipping_24px.svg"
+					},
+					{
+						"name": "taxi",
+						"url": "assets/icons/maps/svg/production/ic_local_taxi_24px.svg"
+					},
+					{
+						"name": "map",
+						"url": "assets/icons/maps/svg/production/ic_map_24px.svg"
+					},
+					{
+						"name": "my location",
+						"url": "assets/icons/maps/svg/production/ic_my_location_24px.svg"
+					},
+					{
+						"name": "navigation",
+						"url": "assets/icons/maps/svg/production/ic_navigation_24px.svg"
+					},
+					{
+						"name": "person pin",
+						"url": "assets/icons/maps/svg/production/ic_person_pin_24px.svg"
+					},
+					{
+						"name": "pin drop",
+						"url": "assets/icons/maps/svg/production/ic_pin_drop_24px.svg"
+					},
+					{
+						"name": "place",
+						"url": "assets/icons/maps/svg/production/ic_place_24px.svg"
+					},
+					{
+						"name": "rate review",
+						"url": "assets/icons/maps/svg/production/ic_rate_review_24px.svg"
+					},
+					{
+						"name": "restaurant menu",
+						"url": "assets/icons/maps/svg/production/ic_restaurant_menu_24px.svg"
+					},
+					{
+						"name": "satellite",
+						"url": "assets/icons/maps/svg/production/ic_satellite_24px.svg"
+					},
+					{
+						"name": "store mall directory",
+						"url": "assets/icons/maps/svg/production/ic_store_mall_directory_24px.svg"
+					},
+					{
+						"name": "terrain",
+						"url": "assets/icons/maps/svg/production/ic_terrain_24px.svg"
+					},
+					{
+						"name": "traffic",
+						"url": "assets/icons/maps/svg/production/ic_traffic_24px.svg"
+					}
+				]
+			},
+			"Navigation":
+			{
+				"title": "Navigation",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "apps",
+						"url": "assets/icons/navigation/svg/production/ic_apps_24px.svg"
+					},
+					{
+						"name": "arrow back",
+						"url": "assets/icons/navigation/svg/production/ic_arrow_back_24px.svg"
+					},
+					{
+						"name": "arrow drop down",
+						"url": "assets/icons/navigation/svg/production/ic_arrow_drop_down_24px.svg"
+					},
+					{
+						"name": "arrow drop down circle",
+						"url": "assets/icons/navigation/svg/production/ic_arrow_drop_down_circle_24px.svg"
+					},
+					{
+						"name": "arrow drop up",
+						"url": "assets/icons/navigation/svg/production/ic_arrow_drop_up_24px.svg"
+					},
+					{
+						"name": "arrow forward",
+						"url": "assets/icons/navigation/svg/production/ic_arrow_forward_24px.svg"
+					},
+					{
+						"name": "cancel",
+						"url": "assets/icons/navigation/svg/production/ic_cancel_24px.svg"
+					},
+					{
+						"name": "check",
+						"url": "assets/icons/navigation/svg/production/ic_check_24px.svg"
+					},
+					{
+						"name": "chevron left",
+						"url": "assets/icons/navigation/svg/production/ic_chevron_left_24px.svg"
+					},
+					{
+						"name": "chevron right",
+						"url": "assets/icons/navigation/svg/production/ic_chevron_right_24px.svg"
+					},
+					{
+						"name": "close",
+						"url": "assets/icons/navigation/svg/production/ic_close_24px.svg"
+					},
+					{
+						"name": "expand less",
+						"url": "assets/icons/navigation/svg/production/ic_expand_less_24px.svg"
+					},
+					{
+						"name": "expand more",
+						"url": "assets/icons/navigation/svg/production/ic_expand_more_24px.svg"
+					},
+					{
+						"name": "fullscreen",
+						"url": "assets/icons/navigation/svg/production/ic_fullscreen_24px.svg"
+					},
+					{
+						"name": "fullscreen exit",
+						"url": "assets/icons/navigation/svg/production/ic_fullscreen_exit_24px.svg"
+					},
+					{
+						"name": "menu",
+						"url": "assets/icons/navigation/svg/production/ic_menu_24px.svg"
+					},
+					{
+						"name": "more horiz",
+						"url": "assets/icons/navigation/svg/production/ic_more_horiz_24px.svg"
+					},
+					{
+						"name": "more vert",
+						"url": "assets/icons/navigation/svg/production/ic_more_vert_24px.svg"
+					},
+					{
+						"name": "refresh",
+						"url": "assets/icons/navigation/svg/production/ic_refresh_24px.svg"
+					},
+					{
+						"name": "unfold less",
+						"url": "assets/icons/navigation/svg/production/ic_unfold_less_24px.svg"
+					},
+					{
+						"name": "unfold more",
+						"url": "assets/icons/navigation/svg/production/ic_unfold_more_24px.svg"
+					},
+					{
+						"name": "unfold more",
+						"url": "assets/icons/navigation/svg/production/ic_unfold_more_24px.svg"
+					}
+				]
+
+			},
+			"Notification":
+			{
+				"title": "Notification",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "adb",
+						"url": "assets/icons/notification/svg/production/ic_adb_24px.svg"
+					},
+					{
+						"name": "airline seat flat",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_flat_24px.svg"
+					},
+					{
+						"name": "airline seat flat angled",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_flat_angled_24px.svg"
+					},
+					{
+						"name": "airline seat individual suite",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_individual_suite_24px.svg"
+					},
+					{
+						"name": "airline seat legroom extra",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_legroom_extra_24px.svg"
+					},
+					{
+						"name": "airline seat legroom normal",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_legroom_normal_24px.svg"
+					},
+					{
+						"name": "airline seat legroom reduced",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_legroom_reduced_24px.svg"
+					},
+					{
+						"name": "airline seat recline extra",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_recline_extra_24px.svg"
+					},
+					{
+						"name": "airline seat recline normal",
+						"url": "assets/icons/notification/svg/production/ic_airline_seat_recline_normal_24px.svg"
+					},
+					{
+						"name": "bluetooth audio",
+						"url": "assets/icons/notification/svg/production/ic_bluetooth_audio_24px.svg"
+					},
+					{
+						"name": "confirmation number",
+						"url": "assets/icons/notification/svg/production/ic_confirmation_number_24px.svg"
+					},
+					{
+						"name": "disc full",
+						"url": "assets/icons/notification/svg/production/ic_disc_full_24px.svg"
+					},
+					{
+						"name": "do not disturb",
+						"url": "assets/icons/notification/svg/production/ic_do_not_disturb_24px.svg"
+					},
+					{
+						"name": "do not disturb alt",
+						"url": "assets/icons/notification/svg/production/ic_do_not_disturb_alt_24px.svg"
+					},
+					{
+						"name": "drive eta",
+						"url": "assets/icons/notification/svg/production/ic_drive_eta_24px.svg"
+					},
+					{
+						"name": "event available",
+						"url": "assets/icons/notification/svg/production/ic_event_available_24px.svg"
+					},
+					{
+						"name": "event busy",
+						"url": "assets/icons/notification/svg/production/ic_event_busy_24px.svg"
+					},
+					{
+						"name": "event note",
+						"url": "assets/icons/notification/svg/production/ic_event_note_24px.svg"
+					},
+					{
+						"name": "folder special",
+						"url": "assets/icons/notification/svg/production/ic_folder_special_24px.svg"
+					},
+					{
+						"name": "live tv",
+						"url": "assets/icons/notification/svg/production/ic_live_tv_24px.svg"
+					},
+					{
+						"name": "mms",
+						"url": "assets/icons/notification/svg/production/ic_mms_24px.svg"
+					},
+					{
+						"name": "more",
+						"url": "assets/icons/notification/svg/production/ic_more_24px.svg"
+					},
+					{
+						"name": "network locked",
+						"url": "assets/icons/notification/svg/production/ic_network_locked_24px.svg"
+					},
+					{
+						"name": "ondemand video",
+						"url": "assets/icons/notification/svg/production/ic_ondemand_video_24px.svg"
+					},
+					{
+						"name": "personal video",
+						"url": "assets/icons/notification/svg/production/ic_personal_video_24px.svg"
+					},
+					{
+						"name": "phone bluetooth speaker",
+						"url": "assets/icons/notification/svg/production/ic_phone_bluetooth_speaker_24px.svg"
+					},
+					{
+						"name": "phone forwarded",
+						"url": "assets/icons/notification/svg/production/ic_phone_forwarded_24px.svg"
+					},
+					{
+						"name": "phone in talk",
+						"url": "assets/icons/notification/svg/production/ic_phone_in_talk_24px.svg"
+					},
+					{
+						"name": "phone locked",
+						"url": "assets/icons/notification/svg/production/ic_phone_locked_24px.svg"
+					},
+					{
+						"name": "phone missed",
+						"url": "assets/icons/notification/svg/production/ic_phone_missed_24px.svg"
+					},
+					{
+						"name": "phone paused",
+						"url": "assets/icons/notification/svg/production/ic_phone_paused_24px.svg"
+					},
+					{
+						"name": "power",
+						"url": "assets/icons/notification/svg/production/ic_power_24px.svg"
+					},
+					{
+						"name": "sd card",
+						"url": "assets/icons/notification/svg/production/ic_sd_card_24px.svg"
+					},
+					{
+						"name": "sim card alert",
+						"url": "assets/icons/notification/svg/production/ic_sim_card_alert_24px.svg"
+					},
+					{
+						"name": "sms",
+						"url": "assets/icons/notification/svg/production/ic_sms_24px.svg"
+					},
+					{
+						"name": "sms failed",
+						"url": "assets/icons/notification/svg/production/ic_sms_failed_24px.svg"
+					},
+					{
+						"name": "sync",
+						"url": "assets/icons/notification/svg/production/ic_sync_24px.svg"
+					},
+					{
+						"name": "sync disabled",
+						"url": "assets/icons/notification/svg/production/ic_sync_disabled_24px.svg"
+					},
+					{
+						"name": "sync problem",
+						"url": "assets/icons/notification/svg/production/ic_sync_problem_24px.svg"
+					},
+					{
+						"name": "system update",
+						"url": "assets/icons/notification/svg/production/ic_system_update_24px.svg"
+					},
+					{
+						"name": "tap and play",
+						"url": "assets/icons/notification/svg/production/ic_tap_and_play_24px.svg"
+					},
+					{
+						"name": "time to leave",
+						"url": "assets/icons/notification/svg/production/ic_time_to_leave_24px.svg"
+					},
+					{
+						"name": "vibration",
+						"url": "assets/icons/notification/svg/production/ic_vibration_24px.svg"
+					},
+					{
+						"name": "voice chat",
+						"url": "assets/icons/notification/svg/production/ic_voice_chat_24px.svg"
+					},
+					{
+						"name": "vpn lock",
+						"url": "assets/icons/notification/svg/production/ic_vpn_lock_24px.svg"
+					},
+					{
+						"name": "wc",
+						"url": "assets/icons/notification/svg/production/ic_wc_24px.svg"
+					},
+					{
+						"name": "wifi",
+						"url": "assets/icons/notification/svg/production/ic_wifi_24px.svg"
+					}
+				]
+			},
+			"Social":
+			{
+				"title": "Social",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "cake",
+						"url": "assets/icons/social/svg/production/ic_cake_24px.svg"
+					},
+					{
+						"name": "domain",
+						"url": "assets/icons/social/svg/production/ic_domain_24px.svg"
+					},
+					{
+						"name": "group",
+						"url": "assets/icons/social/svg/production/ic_group_24px.svg"
+					},
+					{
+						"name": "group add",
+						"url": "assets/icons/social/svg/production/ic_group_add_24px.svg"
+					},
+					{
+						"name": "location cit",
+						"url": "assets/icons/social/svg/production/ic_location_city_24px.svg"
+					},
+					{
+						"name": "mood",
+						"url": "assets/icons/social/svg/production/ic_mood_24px.svg"
+					},
+					{
+						"name": "mood bad",
+						"url": "assets/icons/social/svg/production/ic_mood_bad_24px.svg"
+					},
+					{
+						"name": "notifications",
+						"url": "assets/icons/social/svg/production/ic_notifications_24px.svg"
+					},
+					{
+						"name": "notifications active",
+						"url": "assets/icons/social/svg/production/ic_notifications_active_24px.svg"
+					},
+					{
+						"name": "notifications none",
+						"url": "assets/icons/social/svg/production/ic_notifications_none_24px.svg"
+					},
+					{
+						"name": "notifications off",
+						"url": "assets/icons/social/svg/production/ic_notifications_off_24px.svg"
+					},
+					{
+						"name": "notifications paused",
+						"url": "assets/icons/social/svg/production/ic_notifications_paused_24px.svg"
+					},
+					{
+						"name": "pages",
+						"url": "assets/icons/social/svg/production/ic_pages_24px.svg"
+					},
+					{
+						"name": "party mode",
+						"url": "assets/icons/social/svg/production/ic_party_mode_24px.svg"
+					},
+					{
+						"name": "people",
+						"url": "assets/icons/social/svg/production/ic_people_24px.svg"
+					},
+					{
+						"name": "people outline",
+						"url": "assets/icons/social/svg/production/ic_people_outline_24px.svg"
+					},
+					{
+						"name": "person",
+						"url": "assets/icons/social/svg/production/ic_person_24px.svg"
+					},
+					{
+						"name": "person add",
+						"url": "assets/icons/social/svg/production/ic_person_add_24px.svg"
+					},
+					{
+						"name": "person outline",
+						"url": "assets/icons/social/svg/production/ic_person_outline_24px.svg"
+					},
+					{
+						"name": "plus one",
+						"url": "assets/icons/social/svg/production/ic_plus_one_24px.svg"
+					},
+					{
+						"name": "poll",
+						"url": "assets/icons/social/svg/production/ic_poll_24px.svg"
+					},
+					{
+						"name": "public",
+						"url": "assets/icons/social/svg/production/ic_public_24px.svg"
+					},
+					{
+						"name": "school",
+						"url": "assets/icons/social/svg/production/ic_school_24px.svg"
+					},
+					{
+						"name": "share",
+						"url": "assets/icons/social/svg/production/ic_share_24px.svg"
+					},
+					{
+						"name": "whatshot",
+						"url": "assets/icons/social/svg/production/ic_whatshot_24px.svg"
+					}
+				]
+			},
+			"Toggle":
+			{
+				"title": "Toggle",
+				"viewType": "Icon",
+				"width": 64,
+				"height": 64,
+				"collection":
+				[
+					{
+						"name": "check box",
+						"url": "assets/icons/toggle/svg/production/ic_check_box_24px.svg"
+					},
+					{
+						"name": "check box outline blank",
+						"url": "assets/icons/toggle/svg/production/ic_check_box_outline_blank_24px.svg"
+					},
+					{
+						"name": "indeterminate check box",
+						"url": "assets/icons/toggle/svg/production/ic_indeterminate_check_box_24px.svg"
+					},
+					{
+						"name": "radio button checked",
+						"url": "assets/icons/toggle/svg/production/ic_radio_button_checked_24px.svg"
+					},
+					{
+						"name": "radio button unchecked",
+						"url": "assets/icons/toggle/svg/production/ic_radio_button_unchecked_24px.svg"
+					},
+					{
+						"name": "star",
+						"url": "assets/icons/toggle/svg/production/ic_star_24px.svg"
+					},
+					{
+						"name": "star border",
+						"url": "assets/icons/toggle/svg/production/ic_star_border_24px.svg"
+					},
+					{
+						"name": "star half",
+						"url": "assets/icons/toggle/svg/production/ic_star_half_24px.svg"
+					}
+				]
+			}
+		}
+	}
+ }

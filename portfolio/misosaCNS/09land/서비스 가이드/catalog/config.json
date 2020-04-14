@@ -1,0 +1,33 @@
+{
+    "app_title": "TOAST 전자책 저작도구",
+    "doublepage": true,
+    "themes": [
+        {
+            "name": "default",
+            "label": "기본",
+            "default": true
+        },
+        {
+            "name": "black",
+            "label": "블랙",
+            "default": false
+        }
+    ],
+    "transitions": [
+        {
+            "name": "flip",
+            "display": "플립 효과",
+            "doublepage": true,
+            "default": true
+        },
+        {
+            "name": "slide",
+            "display": "슬라이드 효과"
+        },
+        {
+            "name": "fade",
+            "display": "페이드 효과"
+        }
+    ],
+    "name": "toast"
+}

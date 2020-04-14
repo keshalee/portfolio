@@ -1,0 +1,53 @@
+<div class="modal-wrapper modal-wrapper-black share-modal-wrapper">
+  <div class="modal-inner-wrapper">
+    <div class="modal popup-modal modal-dialog-center fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="title">공유하기</h4>
+            <button type="button" class="pull-right close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              <span>복사하기를 하시고 원하시는<br>블로그나 게시판에 붙여넣기 하세요.</span>
+            </div>
+            <div class="container-fluid">
+                <div class="btn-group btn-share-group">
+                  <button type="button" class="btn" command="sendKakaotalk">
+                    <i class="share-icon kakaotalk-icon"></i>
+                    <span>카카오톡</span>
+                  </button>
+                  <button type="button" class="btn" command="sendKakaostory">
+                    <i class="share-icon kakaostory-icon"></i>
+                    <span>카카오스토리</span>
+                  </button>
+                  <button type="button" class="btn" command="sendFacebook">
+                    <i class="share-icon facebook-icon"></i>
+                    <span>페이스북</span>
+                  </button>
+                  <button type="button" class="btn" command="sendTwitter">
+                    <i class="share-icon twitter-icon"></i>
+                    <span>트위터</span>
+                  </button>
+                </div>
+
+                <div class="form-group group-short-url">
+                  <div class="input-group" style="width: 100%">
+                    <input type="text" class="form-control input-short-url" placeholder="짧은이름 주소" readonly>
+                    <span class="input-group-addon copy-short-url-addon">주소복사</span>
+                  </div>
+                </div>
+
+                <div class="btn-group group-short-url-ios">
+                  <a class="btn btn-default btn-short-url" />
+                  <small>※ URL를 길게 누르시면 복사하실 수 있습니다.</small>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

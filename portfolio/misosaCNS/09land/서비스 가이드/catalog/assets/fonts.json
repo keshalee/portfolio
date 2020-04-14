@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Nanum Gothic",
+        "display": "Nanum Gothic, 나눔고딕",
+        "fontFace": "font-family: 'Nanum Gothic Bold';font-style: normal;font-weight: 700;src: url('fonts/NanumGothic-Bold.eot');src: url('fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/NanumGothic-Bold.woff2') format('woff2'), url('fonts/NanumGothic-Bold.woff') format('woff'), url('fonts/NanumGothic-Bold.ttf') format('truetype');"
+    },
+    {
+        "name": "Nanum Gothic Bold",
+        "display": "Nanum Gothic, 나눔고딕 굵게",
+        "fontFace": "font-family: 'Nanum Gothic Bold'; font-style: normal; font-weight: 700; src: url('fonts/NanumGothic-Bold.eot'); src: url('fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/NanumGothic-Bold.woff2') format('woff2'), url('fonts/NanumGothic-Bold.woff') format('woff'), url('fonts/NanumGothic-Bold.ttf') format('truetype');"        
+    }
+]

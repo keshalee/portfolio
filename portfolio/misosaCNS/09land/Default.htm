@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script>
+        //location.href = "/main.html";
+    </script>
+
+    <script type="text/javascript">
+    var params = "";
+    if(document.location.search){params = document.location.search.replace(/^\?/,'');}
+    if(document.referrer){
+        if(params){params += "&";}
+        params += "CPC_REFERER=" + escape(document.referrer);
+    }
+    if(params){
+        document.location.href = "/main.html?" + params;
+    }else{
+        document.location.href = "/main.html"
+    }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

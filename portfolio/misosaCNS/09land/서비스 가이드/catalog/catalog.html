@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]><html class="unsupport" lang="ko"><![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html lang="ko">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>{title}</title>
+
+    <!-- Meta property tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{title}">
+    <meta property="og:image" content="{brand-image}">
+    <meta property="og:description" content="{description}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="styles/elegant-icon-font.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="styles/toast.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/themes/common/common.css">
+
+    <style type="text/css">
+        .runenv {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            margin-top: -90px;
+            display: none;
+            color: #fff;
+            text-align: center;
+        }
+
+            .runenv .title {
+                color: #ce4844;
+            }
+
+            .runenv span {
+                font-size: 16px;
+            }
+
+        html.unsupport .runenv {
+            display: block;
+        }
+
+        html.unsupport .preloader {
+            display: none;
+        }
+    </style>
+
+    <!-- Toast.framework & Toast.libraries -->
+    <script src="framework/toast.framework.min.js"></script>
+    <script src="libraries/toast.libraries.min.js"></script>
+    <!--[if lte IE 9]>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader preloader-md">
+        <span class="fa-spin"></span>
+    </div><!--// preloader -->
+    <!-- require를 통한 모든 모듈을 로드합니다. -->
+    <script src="framework/require.js" data-main="publish"></script>
+
+    <div class="toast">
+        <div class="book-container">
+            <div class="book-bg" data-offset-left="30" data-offset-right="30" data-offset-top="10" data-offset-bottom="10">
+                <div class="book-bg-page"></div>
+                <div class="book-bg-page"></div>
+                <div class="book-bg-page"></div>
+            </div>
+            <div class="book"></div>
+        </div>
+    </div>
+
+    <div class="container runenv">
+        <img src="styles/images/logo2-128x128.png">
+        <h3 class="title">ERROR</h3>
+        <span class="message">크롬, 파이어폭스, 인터넷 익스플로러 9 이상 브라우저에 최적화 되어 있습니다.<br>브라우저를 업데이트 하십시요.</span>
+    </div>
+
+</body>
+</html>
