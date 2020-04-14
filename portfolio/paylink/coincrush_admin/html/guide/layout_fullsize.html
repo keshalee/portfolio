@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSh backoffice - layout</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    
+    <!-- common js -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery.nicescroll.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/common/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <header id="header">
+            <div class="top">
+                <div class="flbox">
+                    <button type="button"><i class="ico_com btn_gnb btn_gnb_open"></i></button>
+                    <h1 class="logo"><a href="javascript:void(0);" title="home"><img src="../../images/common/logo.png" alt="coincrush" /><span>Admin</span></a></h1>
+                </div>
+                <div class="frbox">
+                    <div class="form_group select">
+                        <select id="selectTop" class="form_control">
+                            <option>관리자</option>
+                            <option>testid1</option>
+                            <option>testid2</option>
+                            <option>testid3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <a href="javascript:;" title="home" class="ico_com home"></a>
+                    </div>
+                </div>
+            </div>
+            <nav id="gnb" class="on">
+                <ul class="gnb_ul">
+                    <li class="on">
+                        <a href="javascript:void(0);" title="기본정보"><i class="ico_com gnb_menu01"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">기본정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li class="on"><a href="javascript:void(0);">기본정보1</a></li>
+                                <li><a href="javascript:void(0);">기본정보2</a></li>
+                                <li><a href="javascript:void(0);">기본정보3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="인증정보"><i class="ico_com gnb_menu02"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">인증정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="계좌정보"><i class="ico_com gnb_menu03"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">계좌정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="거래내역"><i class="ico_com gnb_menu04"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">거래내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="KRW입출금"><i class="ico_com gnb_menu05"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">KRW입출금</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="가상화폐입출금"><i class="ico_com gnb_menu06"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">가상화폐입출금</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="결제내역"><i class="ico_com gnb_menu07"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">결제내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="접속이력"><i class="ico_com gnb_menu08"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">접속이력</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="문의내역"><i class="ico_com gnb_menu09"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">문의내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container" class="on">
+            <!-- S:container_title -->
+            <div class="container_title">
+                <h4 class="h4_type inline">기본정보(타이틀)</h4>
+                <div class="location inline">
+                    <a href="javascript:void(0);" class="ico_com home">Home</a>
+                    <span class="lo_line">/</span>
+                    <div class="form_group inline select small">
+                        <select id="location01" class="form_control">
+                            <option selected="selected">1차선택</option>
+                        </select>
+                        <span class="lo_line">/</span>
+                        <select id="location02" class="form_control">
+                            <option selected="selected">2차선택</option>
+                        </select>
+                        <span class="lo_line">/</span>
+                        <select id="location03" class="form_control">
+                            <option selected="selected">3차선택</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- E:container_title -->
+            
+            <!-- S:dragArea -->
+            <div id="dragArea">
+                <!-- S:flbox -->
+                <div id="flbox">
+                    <div class="innerbox">
+                        <div class="sh_wrap">
+                            <h5 class="sh_title">조건검색</h5>
+                            <div class="responsive_table">
+                                <form>
+                                    <fieldset>
+                                        <table class="tb_write type01">
+                                            <caption class="hidden"><span>검색</span></caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                                <col class="col3">
+                                                <col class="col4">
+                                                <col class="col5">
+                                                <col class="col6">
+                                                <col class="col7">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">조회기간</th>
+                                                    <td colspan="5">
+                                                        <div class="form_group inline">
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker1" class="form_control" disabled />
+                                                            </div>
+                                                            <span class="date_line">~</span>
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker2" class="form_control" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_group inline">
+                                                            <button type="button" class="btn type1 xsmall active">당일</button>
+                                                            <button type="button" class="btn type1 xsmall">3일</button>
+                                                            <button type="button" class="btn type1 xsmall">7일</button>
+                                                            <button type="button" class="btn type1 xsmall">30일</button>
+                                                            <button type="button" class="btn type1 xsmall">90일</button>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2" class="sh_btn">
+                                                        <button type="button" class="btn type4 ico"><i class="ico_com search"></i>검색</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">거래구분</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio3" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">입금</label>
+                                                            <input type="radio" name="radio3" id="radio6" class="form_control" />
+                                                            <label for="radio6">출금</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">거래상태</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio4" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">신청중</label>
+                                                            <input type="radio" name="radio4" id="radio6" class="form_control" />
+                                                            <label for="radio6">완료</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">은행명</th>
+                                                    <td>
+                                                        <div class="form_group">
+                                                            <input type="text" class="form_control w_100" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="responsive_table">
+                            <table class="tb_list type04">
+                                <caption class="hidden"><span>회원등급 안내</span></caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:auto">
+                                    <col style="width:20%">
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">등급</th>
+                                        <th scope="col" rowspan="2">항목</th>
+                                        <th scope="col" rowspan="2">출금한도</th>
+                                        <th colspan="2">할인혜택</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bleft">원화</th>
+                                        <th scope="col">가상화폐</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_modal01">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging_wrap">
+                            <div class="tb_sort_wrap">
+                                <span class="sort_tit">총 <em>4</em>건 검색</span>
+                            </div>
+                            <div class="paging">
+                                <a href="javascript:void(0);" title="이전"><i class="ico_com prev01"></i></a>
+                                <a href="javascript:void(0);">1</a>
+                                <a href="javascript:void(0);" class="active">2</a>
+                                <a href="javascript:void(0);">3</a>
+                                <a href="javascript:void(0);">4</a>
+                                <a href="javascript:void(0);">5</a>
+                                <a href="javascript:void(0);" title="다음"><i class="ico_com next01"></i></a>
+                            </div>
+                        </div>
+                        <div class="attention_wrap">
+                            <ul class="dot_list">
+                                <li>추가한 항목은 메인 화면에 공통으로 나타납니다.</li>
+                                <li>추가항목 설정 후 등록할 떄 해당정보를 입력하면 추가항목이 나타납니다.</li>
+                                <li>표시 설정은 각 화면에 맞게 수정할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- E:flbox -->
+                <a href="javscript:void(0);" id="dragbar"></a>
+            </div>
+            <!-- E:dragArea -->
+        </div>
+        <!-- E:container -->
+        
+        <!-- S:topwrap -->
+        <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        <!-- E:topwrap -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>

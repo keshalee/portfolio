@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSh backoffice</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    
+    <!-- common js -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery.nicescroll.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/common/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <script src="../include/header.js"></script>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container" class="on">
+            <!-- S:container_title -->
+            <div class="container_title">
+                <h4 class="h4_type inline">coin 입출금 정산</h4>
+                <div class="location inline">
+                    <a href="javascript:void(0);" class="ico_com home">Home</a>
+                    <span class="lo_line">/</span>
+                    <div class="form_group inline select small">
+                        <select id="location01" class="form_control">
+                            <option selected="selected">정산관리</option>
+                        </select>
+                        <span class="lo_line">/</span>
+                        <select id="location02" class="form_control">
+                            <option selected="selected">coin 입출금 정산</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- E:container_title -->
+            
+            <!-- S:dragArea -->
+            <div id="dragArea">
+                <!-- S:flbox -->
+                <div id="flbox">
+                    <div class="innerbox">
+                        <div class="sh_wrap">
+                            <h5 class="sh_title">조건검색</h5>
+                            <div class="responsive_table">
+                                <form>
+                                    <fieldset>
+                                        <table class="tb_write type01">
+                                            <caption><span class="hidden">검색</span></caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                                <col class="col3">
+                                                <col class="col4">
+                                                <col class="col5">
+                                                <col class="col6">
+                                                <col class="col7">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">조회기간</th>
+                                                    <td colspan="5">
+                                                        <div class="form_group inline">
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker1" class="form_control" disabled />
+                                                            </div>
+                                                            <span class="date_line">~</span>
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker2" class="form_control" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_group inline">
+                                                            <button type="button" class="btn type1 xsmall">1일</button>
+                                                            <button type="button" class="btn type1 xsmall">3일</button>
+                                                            <button type="button" class="btn type1 xsmall">1주</button>
+                                                            <button type="button" class="btn type1 xsmall">1개월</button>
+                                                            <button type="button" class="btn type1 xsmall active">전체</button>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="3" class="sh_btn">
+                                                        <button type="button" class="btn type4 ico"><i class="ico_com search"></i>검색</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">구분</th>
+                                                    <td>
+                                                        <div class="form_group select">
+                                                            <select class="form_control">
+                                                                <option selected>전체</option>
+                                                                <option>입금</option>
+                                                                <option>출금</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">분류</th>
+                                                    <td>
+                                                        <div class="form_group select">
+                                                            <select class="form_control">
+                                                                <option selected>전체</option>
+                                                                <option>BTC/KRW</option>
+                                                                <option>ETH/KRW</option>
+                                                                <option>COT/KRW</option>
+                                                                <option>RTC/KRW</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">상태</th>
+                                                    <td>
+                                                        <div class="form_group select">
+                                                            <select class="form_control">
+                                                                <option selected>전체</option>
+                                                                <option>전송요청대기</option>
+                                                                <option>전송요청완료</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">검색 값</th>
+                                                    <td colspan="5" class="sh_form">
+                                                        <div class="form_group inline select">
+                                                            <select class="form_control">
+                                                                <option selected>이메일</option>
+                                                                <option>이름</option>
+                                                                <option>보낸주소</option>
+                                                                <option>받는주소</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_group inline">
+                                                            <input type="text" class="form_control w_100" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="information type03">
+                            <table>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    <col class="col5">
+                                    <col class="col6">
+                                    <col class="col7">
+                                    <col class="col8">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">입금</td>
+                                        <td>대기</td>
+                                        <td class="tr"><span>0</span> 건</td>
+                                        <td rowspan="2">출금</td>
+                                        <td>대기</td>
+                                        <td class="tr"><span>0</span> 건</td>
+                                        <td rowspan="2">수수료</td>
+                                        <td rowspan="2" class="tr"><span>0</span> KRW<br />(전일 종가 시세)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>완료</td>
+                                        <td class="tr"><span>0</span> KRW</td>
+                                        <td>완료</td>
+                                        <td class="tr"><span>0</span> KRW</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="responsive_table">
+                            <table class="tb_list type01">
+                                <caption><span class="hidden">coin 입출금 정산내역</span></caption>
+                                <colgroup>
+                                    <col class="col_no">
+                                    <col class="col_date">
+                                    <col class="col_dist">
+                                    <col class="col_coin">
+                                    <col class="col_email">
+                                    <col class="col_name">
+                                    <col class="col_address">
+                                    <col class="col_address">
+                                    <col class="col_txID">
+                                    <col class="col_price">
+                                    <col class="col_tax">
+                                    <col class="col_state">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">일 시</th>
+                                        <th scope="col">구 분</th>
+                                        <th scope="col">분 류</th>
+                                        <th scope="col">이메일</th>
+                                        <th scope="col">이 름</th>
+                                        <th scope="col">보낸주소</th>
+                                        <th scope="col">받는주소</th>
+                                        <th scope="col">Transaction ID</th>
+                                        <th scope="col">신청금액</th>
+                                        <th scope="col">수수료</th>
+                                        <th scope="col">상 태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>김장생</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>최구운</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>주팔득</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>최칠득</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>홍유기</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이오식</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>김넉삼</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이석삼</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이두식</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>한노미</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>김장생</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>최구운</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>주팔득</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>최칠득</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>홍유기</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이오식</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>김넉삼</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이석삼</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>이두식</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2019-06-05 10:19:18</td>
+                                        <td>입금</td>
+                                        <td>BTC/KRW</td>
+                                        <td><a href="javascript:void(0);" class="link01 under btn_Modal">whfflqek@naver.com</a></td>
+                                        <td>한노미</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                                        <td>9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                                        <td>12,345.00883292</td>
+                                        <td>0.00000001</td>
+                                        <td>전송요청대기</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging_wrap">
+                            <div class="tb_sort_wrap">
+                                <span class="sort_tit">총 <em>122</em>건 &#91;<em>1</em>/<em>12</em>페이지&#93;</span>
+                            </div>
+                            <div class="paging">
+                                <a href="javascript:void(0);" title="이전"><i class="ico_com prev01"></i></a>
+                                <a href="javascript:void(0);">1</a>
+                                <a href="javascript:void(0);" class="active">2</a>
+                                <a href="javascript:void(0);">3</a>
+                                <a href="javascript:void(0);">4</a>
+                                <a href="javascript:void(0);">5</a>
+                                <a href="javascript:void(0);" title="다음"><i class="ico_com next01"></i></a>
+                            </div>
+                            <div class="form_group inline select">
+                                <select class="form_control">
+                                    <option selected>20줄</option>
+                                    <option>30줄</option>
+                                    <option>40줄</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E:flbox -->
+                <a href="javscript:void(0);" id="dragbar"></a>
+            </div>
+            <!-- E:dragArea -->
+        </div>
+        <!-- E:container -->
+        
+        <!-- S:modal -->
+        <div id="viewModal" class="modal">
+            <div class="modal_wrap" style="max-width:650px;">
+                <div class="modal_header">
+                    <h4 class="h4_type ellipsis">coin 입출금 상세보기</h4>
+                </div>
+                <div class="modal_content">
+                    <table class="tb_list type01">
+                        <colgroup>
+                            <col style="width:120px">
+                            <col style="width:*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>일 시</th>
+                                <td class="tl">2019-06-05 10:19:18</td>
+                            </tr>
+                            <tr>
+                                <th>구 분</th>
+                                <td class="tl">입금</td>
+                            </tr>
+                            <tr>
+                                <th>분 류</th>
+                                <td class="tl">BTC/KRW</td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td class="tl">testId@naver.com</td>
+                            </tr>
+                            <tr>
+                                <th>이 름</th>
+                                <td class="tl">정상수</td>
+                            </tr>
+                            <tr>
+                                <th>보낸주소</th>
+                                <td class="tl">1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                            </tr>
+                            <tr>
+                                <th>받는주소</th>
+                                <td class="tl">1MiWYsmdQhxbSGZkPkWBqzepGPwAW8r8ZE</td>
+                            </tr>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <td class="tl">9221c82cb41a2653ff04deff541d083dc1c7fd77154c4c7ade3060f7bb2059e1</td>
+                            </tr>
+                            <tr>
+                                <th>신청금액</th>
+                                <td class="tl"><span>12,345.00883292</span> BTC</td>
+                            </tr>
+                            <tr>
+                                <th>수수료</th>
+                                <td class="tl"><span>0.00000001</span> BTC</td>
+                            </tr>
+                            <tr>
+                                <th>상태</th>
+                                <td class="tl">전송요청대기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal_footer">
+                    <a href="javascript:void(0);" class="close">확인</a>
+                </div>
+            </div>
+        </div>
+        <!-- E:modal -->
+        
+        <!-- S:topwrap -->
+        <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        <!-- E:topwrap -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>

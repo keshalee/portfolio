@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSh backoffice - layout</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    
+    <!-- common js -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery.nicescroll.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/common/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <header id="header">
+            <div class="top">
+                <div class="flbox">
+                    <button type="button"><i class="ico_com btn_gnb btn_gnb_open"></i></button>
+                    <h1 class="logo"><a href="javascript:void(0);" title="home"><img src="../../images/common/logo.png" alt="coincrush" /><span>Admin</span></a></h1>
+                </div>
+                <div class="frbox">
+                    <div class="form_group select">
+                        <select id="selectTop" class="form_control">
+                            <option>관리자</option>
+                            <option>testid1</option>
+                            <option>testid2</option>
+                            <option>testid3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <a href="javascript:;" title="home" class="ico_com home"></a>
+                    </div>
+                </div>
+            </div>
+            <nav id="gnb" class="on">
+                <ul class="gnb_ul">
+                    <li class="on">
+                        <a href="javascript:void(0);" title="기본정보"><i class="ico_com gnb_menu01"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">기본정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li class="on"><a href="javascript:void(0);">기본정보1</a></li>
+                                <li><a href="javascript:void(0);">기본정보2</a></li>
+                                <li><a href="javascript:void(0);">기본정보3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="인증정보"><i class="ico_com gnb_menu02"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">인증정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="계좌정보"><i class="ico_com gnb_menu03"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">계좌정보</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="거래내역"><i class="ico_com gnb_menu04"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">거래내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="KRW입출금"><i class="ico_com gnb_menu05"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">KRW입출금</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="가상화폐입출금"><i class="ico_com gnb_menu06"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">가상화폐입출금</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="결제내역"><i class="ico_com gnb_menu07"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">결제내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="접속이력"><i class="ico_com gnb_menu08"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">접속이력</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="문의내역"><i class="ico_com gnb_menu09"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">문의내역</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="회원관리"><i class="ico_com gnb_menu10"></i></a>
+                        <div class="gnb_dth_area">
+                            <h5 class="h5_type">회원관리</h5>
+                            <ul class="gnb_dth_ul">
+                                <li><a href="javascript:void(0);">sub1</a></li>
+                                <li><a href="javascript:void(0);">sub2</a></li>
+                                <li><a href="javascript:void(0);">sub3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container" class="on">
+            <!-- S:container_title -->
+            <div class="container_title">
+                <h4 class="h4_type inline">기본정보(타이틀)</h4>
+                <div class="location inline">
+                    <a href="javascript:void(0);" class="ico_com home">Home</a>
+                    <span class="lo_line">/</span>
+                    <div class="form_group inline select small">
+                        <select id="location01" class="form_control">
+                            <option selected="selected">1차선택</option>
+                        </select>
+                        <span class="lo_line">/</span>
+                        <select id="location02" class="form_control">
+                            <option selected="selected">2차선택</option>
+                        </select>
+                        <span class="lo_line">/</span>
+                        <select id="location03" class="form_control">
+                            <option selected="selected">3차선택</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- E:container_title -->
+            
+            <!-- S:dragArea -->
+            <div id="dragArea">
+                <!-- S:flbox -->
+                <div id="flbox">
+                    <div class="innerbox">
+                        <div class="sh_wrap">
+                            <h5 class="sh_title">조건검색</h5>
+                            <div class="responsive_table">
+                                <form>
+                                    <fieldset>
+                                        <table class="tb_write type01">
+                                            <caption class="hidden"><span>검색</span></caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                                <col class="col3">
+                                                <col class="col4">
+                                                <col class="col5">
+                                                <col class="col6">
+                                                <col class="col7">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">조회기간</th>
+                                                    <td colspan="5">
+                                                        <div class="form_group inline">
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker1" class="form_control" disabled />
+                                                            </div>
+                                                            <span class="date_line">~</span>
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker2" class="form_control" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_group inline">
+                                                            <button type="button" class="btn type1 xsmall active">당일</button>
+                                                            <button type="button" class="btn type1 xsmall">3일</button>
+                                                            <button type="button" class="btn type1 xsmall">7일</button>
+                                                            <button type="button" class="btn type1 xsmall">30일</button>
+                                                            <button type="button" class="btn type1 xsmall">90일</button>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2" class="sh_btn">
+                                                        <button type="button" class="btn type4 ico"><i class="ico_com search"></i>검색</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">거래구분</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio3" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">입금</label>
+                                                            <input type="radio" name="radio3" id="radio6" class="form_control" />
+                                                            <label for="radio6">출금</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">거래상태</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio4" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">신청중</label>
+                                                            <input type="radio" name="radio4" id="radio6" class="form_control" />
+                                                            <label for="radio6">완료</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">예금주/은행명</th>
+                                                    <td>
+                                                        <div class="form_group">
+                                                            <input type="text" class="form_control w_100" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="responsive_table">
+                            <table class="tb_list type04">
+                                <caption class="hidden"><span>회원등급 안내</span></caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:auto">
+                                    <col style="width:20%">
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">등급</th>
+                                        <th scope="col" rowspan="2">항목</th>
+                                        <th scope="col" rowspan="2">출금한도</th>
+                                        <th colspan="2">할인혜택</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bleft">원화</th>
+                                        <th scope="col">가상화폐</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under btn_mainModal">신분증(여권)보내기</a></td>
+                                        <td class="tr"><span>50,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr"><span>300,000,000</span> KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging_wrap">
+                            <div class="tb_sort_wrap">
+                                <span class="sort_tit">총 <em>4</em>건 검색</span>
+                            </div>
+                            <div class="paging">
+                                <a href="javascript:void(0);" title="이전"><i class="ico_com prev01"></i></a>
+                                <a href="javascript:void(0);">1</a>
+                                <a href="javascript:void(0);" class="active">2</a>
+                                <a href="javascript:void(0);">3</a>
+                                <a href="javascript:void(0);">4</a>
+                                <a href="javascript:void(0);">5</a>
+                                <a href="javascript:void(0);" title="다음"><i class="ico_com next01"></i></a>
+                            </div>
+                        </div>
+                        <div class="attention_wrap">
+                            <ul class="dot_list">
+                                <li>추가한 항목은 메인 화면에 공통으로 나타납니다.</li>
+                                <li>추가항목 설정 후 등록할 떄 해당정보를 입력하면 추가항목이 나타납니다.</li>
+                                <li>표시 설정은 각 화면에 맞게 수정할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- E:flbox -->
+                
+                <!-- S:frbox -->
+                <div id="frbox">
+                    <div class="innerbox">
+                        <div class="form_btn_group">
+                            <button type="button" class="btn type2 active"><i class="ico_com regist"></i>등록</button>
+                            <button type="button" class="btn type2"><i class="ico_com modify"></i>수정</button>
+                            <button type="button" class="btn type2"><i class="ico_com delete"></i>삭제</button>
+                        </div>
+                        
+                        <div class="accordion margin_t_5">
+                            <div class="acc_header">
+                                <i class="ico_com minus"></i>본인인증
+                            </div>
+                            <div class="acc_content on">
+                                <table class="tb_write type01 tb_form">
+                                    <caption class="hidden"><span>본인인증</span></caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">SMS 인증</th>
+                                            <td>
+                                                <div class="form_group inline time_wrap">
+                                                    <input type="text" placeholder="3분이내 입력" class="form_control w_100" />
+                                                    <div class="timer">3:00</div>
+                                                </div>
+                                                <button type="button" class="btn type3 small">인증번호발송<i class="ico_com arr01"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc_header">
+                                <i class="ico_com minus"></i>실명계좌 등록
+                            </div>
+                            <div class="acc_content on">
+                                <table class="tb_write type01 tb_form">
+                                    <caption class="hidden"><span>실명계좌 등록</span></caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                        <col class="col3">
+                                        <col class="col4">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">은행</th>
+                                            <td colspan="3">
+                                                <div class="form_group select small">
+                                                    <select class="form_control">
+                                                        <option selected="selected">은행선택</option>
+                                                        <option>기업은행</option>
+                                                        <option>신한은행</option>
+                                                        <option>우리은행</option>
+                                                        <option>국민은행</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">계좌번호</th>
+                                            <td>
+                                                <div class="form_group">
+                                                    <input type="text" placeholder="계좌번호" class="form_control" />
+                                                </div>
+                                            </td>
+                                            <th scope="row">상태</th>
+                                            <td>
+                                                <div class="btn_group">
+                                                    <button type="button" class="btn type3 small"><i class="ico_com doc"></i>내역 다운로드<i class="ico_com arr02"></i></button>
+                                                    <button type="button" class="btn type3 small"><i class="ico_com print"></i>인쇄하기<i class="ico_com arr03"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">예금주</th>
+                                            <td colspan="3">
+                                                <div class="form_group">
+                                                    <input type="text" placeholder="홍길동" class="form_control" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc_header">
+                                <i class="ico_com minus"></i>관리자 설정
+                            </div>
+                            <div class="acc_content on">
+                                <table class="tb_write type01 tb_form">
+                                    <caption class="hidden"><span>관리자 설정</span></caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">타이틀</th>
+                                            <td>
+                                                <div class="form_group">
+                                                    <input type="text" placeholder="입력값" class="form_control" />
+                                                    <button type="button" class="btn type3 small">1:1문의 바로가기<i class="ico_com arr01"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">글 작성시 에디터 사용</th>
+                                            <td>
+                                                <div class="form_group select small">
+                                                    <select class="form_control">
+                                                        <option selected="selected">사용함</option>
+                                                        <option>사용안함</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">SMS 알림</th>
+                                            <td>
+                                                <p class="msg">휴대폰 입력을 사용하실 경우 문의글 등록시 등록자가 답변 등록시 SMS 알림 수신을 선택할 수 있도록 합니다.<br />SMS 알림을 사용하기 위해서는 기본환경설정 > SMS 설정을 하셔야 합니다.</p>
+                                                <div class="form_group select small">
+                                                    <select class="form_control">
+                                                        <option selected="selected">사용함</option>
+                                                        <option>사용안함</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">이메일 입력</th>
+                                            <td>
+                                                <div class="form_group checkbox">
+                                                    <input type="checkbox" name="check" id="check5" class="form_control" checked />
+                                                    <label for="check5">보이기</label>
+                                                    <input type="checkbox" name="check" id="check6" class="form_control" />
+                                                    <label for="check6">필수입력</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">에디터</th>
+                                            <td>
+                                                <textarea cols="80" id="contents" name="contents" rows="10"></textarea>
+                                                <script src="../../ckeditor/ckeditor.js"></script>
+                                                <script>
+                                                    CKEDITOR.replace('contents');
+                                                </script>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">파일첨부</th>
+                                            <td>
+                                                <div class="form_group file_box">
+                                                    <input type="text" class="form_control file_name" readonly />
+                                                    <span class="file_input_div">
+                                                        <label for="upload01" class="btn type3 small">파일선택<i class="ico_com arr02"></i></label>
+                                                        <input type="file" id="upload01" class="form_control upload"/>
+                                                    </span>
+                                                </div>
+                                                <p class="info_file"><em>*</em> 최대 5MB /  jpg,gif 파일만 첨부 가능</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2"><button type="button" class="btn type3 small">상세보기</button></th>
+                                            <td>
+                                                <div class="date">2019.03.26 12:50</div>
+                                                <div class="price"><span>2,000,000</span>원</div>
+                                                <div class="condition">입금대기</div>
+                                                <button type="button" class="btn type3 small fl">취소</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bleft">
+                                                <div class="date">2019.03.26 12:50</div>
+                                                <div class="price"><span>2,000,000</span>원</div>
+                                                <div class="condition">입금완료</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="btop">글쓰기</th>
+                                            <td>
+                                                <div class="form_group textarea_wrap">
+                                                    <textarea rows="5" placeholder="메세지를 작성해주세요" class="form_control">
+OO은행 12345-67-89012 예금주명
+OO은행 12345-67-89012 예금주명
+                                                    </textarea>
+                                                    <span class="byte_txt"><em>0</em> / 500 Byte</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E:frbox -->
+                <a href="javscript:void(0);" id="dragbar"></a>
+            </div>
+            <!-- E:dragArea -->
+        </div>
+        <!-- E:container -->
+        
+        <!-- S:modal -->
+        <div id="mainModal" class="modal" style="background-color:transparent;">
+            <div class="modal_wrap" style="max-width:540px;position:absolute;top:20vh;left:200px;">
+                <div class="modal_header">
+                    <h4 class="h4_type ellipsis">(공지)5월 9일 긴급 점검이 있습니다.</h4>
+                </div>
+                <div class="modal_content">
+                    5월 9일 오후 3시 ~ 4시 긴급 점검이 있습니다. <br /><br />
+                    * 점검 사항<br />
+                    1. 서비스 점검<br />
+                    2. 서버 점검<br />
+                    3. 기타 점검<br />
+                </div>
+                <div class="modal_footer">
+                    <a href="javascript:void(0);" class="close">닫기</a>
+                    <a href="javascript:void(0);" class="close">오늘 하루 보지 않기</a>
+                </div>
+            </div>
+        </div>
+        <!-- E:modal -->
+        
+        <!-- S:topwrap -->
+        <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        <!-- E:topwrap -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>

@@ -1,0 +1,158 @@
+@charset "utf-8";
+/**************************************************
+*   common CSS
+**************************************************/
+/* sh_wrap */
+.sh_wrap { margin-bottom:25px; }
+
+/* form_btn_group */
+.form_btn_group { position:absolute; right:8px; top:8px; }
+
+/* paging_wrap */
+.paging_wrap { position:relative; overflow:hidden; margin-top:10px; margin-bottom:20px; }
+.paging_wrap .tb_sort_wrap { position:absolute; left:5px; top:5px; }
+.paging_wrap .select { position:absolute; right:5px; top:5px; }
+.paging_wrap .ui-selectmenu-button.ui-button { min-width:60px; margin-top:-5px; }
+
+/* attention_wrap */
+.attention_wrap { margin-bottom:20px; }
+
+/**************************************************
+*   slickGrid CSS
+**************************************************/
+.slick-viewport { scrollbar-3dLight-Color:#efefef; scrollbar-arrow-color:#dfdfdf; scrollbar-base-color:#efefef; scrollbar-Face-Color:#dfdfdf; scrollbar-Track-Color:#efefef; scrollbar-DarkShadow-Color:#efefef; scrollbar-Highlight-Color:#efefef; scrollbar-Shadow-Color:#efefef; }
+/* Chrome, Safari용 스크롤 바 */
+.slick-viewport::-webkit-scrollbar { width:0; height:4px; border:3px solid #fff; }
+.slick-viewport::-ms-scrollbar { display:none; }
+.slick-viewport::-webkit-scrollbar-button:start:decrement, .slick-viewport::-webkit-scrollbar-button:end:increment { display:block; height:10px; background-color:#efefef; }
+.slick-viewport::-webkit-scrollbar-track { background:#efefef; -webkit-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.2); }
+.slick-viewport::-webkit-scrollbar-thumb { height:50px; width:50px; background:rgba(0,0,0,.2); -webkit-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.1); }
+
+.column-hidden { display: none !important; }
+.column-highlight { color: blue; text-decoration:underline; cursor:pointer; }
+.number-align { text-align: right; }
+#myGrid, .example-grid { border:1px solid #ccc; border-radius:3px; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { border:0 none; border-bottom:1px solid #ccc; }
+.slick-header-columns { border:0 none; background:none; }
+.slick-header-column.ui-state-default, .slick-group-header-column.ui-state-default { height:28px; line-height:28px; padding:0 10px; background:none; background-color:#f4f2f2; border:0 none; border-right:1px solid #ccc; color:#282d33; font-size:13px; vertical-align:middle; box-sizing:border-box !important; text-align:center; }
+.slick-header-column.ui-state-default span, .slick-group-header-column.ui-state-default span { font-weight:700; }
+
+.slick-cell { text-align:center; }
+.slick-cell, .slick-headerrow-column, .slick-footerrow-column { line-height:28px; padding:0 10px; border:0 none; border-right:1px solid #ccc; border-bottom:1px solid #ccc; vertical-align:middle; }
+.slick-cell.active { border-color:#ccc; border-style:solid; }
+
+.slick-row:last-child .slick-cell, .slick-row:last-child .slick-headerrow-column, .slick-row:last-child .slick-footerrow-column { border-bottom:0 none; }
+.slick-row.ui-widget-content .slick-cell:last-child, .slick-row.ui-state-active .slick-cell:last-child, .slick-header-column:last-child { border-right:0 none; }
+
+/* 그리드 버퍼링 */
+.slick-row { line-height:16px; }
+.loading-indicator { display:inline-block; padding:10px; opacity:0.8; z-index:9999; }
+.loading-indicator label { width:20px; height:20px; padding-left:20px; background:url('../js/cmm/slickgrid/images/ajax-loader-small.gif') no-repeat center center; }
+
+/**************************************************
+*   container_title
+**************************************************/
+@media (min-width:0) {
+    .container_title { position:fixed; left:42px; top:44px; width:calc(100% - 42px); height:40px; background-color:#fff; border-bottom:1px solid #ccc; z-index:101; }
+    #container.on .container_title { left:172px; width:calc(100% - 172px); }
+    .container_title h4 { padding:0 15px; line-height:44px; }
+    .container_title .location { float:right; padding:9px 15px; }
+    .container_title .location .ui-selectmenu-button.ui-button { width:auto; max-width:none; }
+
+}
+
+/**************************************************
+*   information
+**************************************************/
+.information { overflow:hidden; margin-bottom:10px; }
+.information dl { float:left; width:32.666%; height:60px; border:1px solid #ccc; margin-left:1%; padding:10px 15px; }
+.information dl:nth-child(1) { margin-left:0; }
+.information dl dt { float:left; width:80px; border-right:1px solid #ccc; line-height:42px; font-size:14px; }
+.information dl dd { float:left; width:calc(100% - 80px); line-height:42px; text-align:right; font-size:14px; }
+
+.information.type03 { }
+.information.type03 table { border:1px solid #ccc; }
+.information.type03 table .col1 { width:7%; }
+.information.type03 table .col2 { width:7%; }
+.information.type03 table .col3 { width:20%; }
+.information.type03 table .col4 { width:7%; }
+.information.type03 table .col5 { width:7%; }
+.information.type03 table .col6 { width:20%; }
+.information.type03 table .col7 { width:7%; }
+.information.type03 table .col8 { width:20%; }
+.information.type03 table tr { height:24px; }
+.information.type03 table tr th { border:1px solid #ccc; vertical-align:middle; text-align:center; }
+.information.type03 table tr td { border:1px solid #ccc; vertical-align:middle; text-align:center; padding:0 10px; }
+
+/**************************************************
+*   table
+**************************************************/
+.col_no { width:60px; } 
+.col_date { width:140px; }
+.col_dist { width:70px; }
+.col_coin { width:90px; }
+.col_email { width:200px; }
+.col_name { width:120px; }
+.col_deposit_name { width:120px; }
+.col_address { width:320px; }
+.col_txID { width:500px; }
+.col_bank_name { width:120px; }
+.col_bank_num { width:140px; }
+.col_tel { width:120px; }
+.col_amount { width:160px; }
+.col_price { width:160px; }
+.col_tax { width:100px; }
+.col_total { width:140px; }
+.col_rate { width:80px; }
+.col_state { width:90px; }
+
+/**************************************************
+*   tb_form
+**************************************************/
+.tb_form { }
+.tb_form .col1 { width:20%; min-width:120px; }
+.tb_form .col2 { width:auto; }
+.tb_form .col3 { width:20%; min-width:120px; }
+.tb_form .col4 { width:auto; }
+
+.respon .tb_form .col1 { display:block; width:100%; }
+.respon .tb_form .col2 { display:block; width:100%; }
+.respon .tb_form .col3 { display:block; width:100%; }
+.respon .tb_form .col4 { display:block; width:100%; }
+
+.respon .tb_form th { display:block; width:100%; border-bottom:1px solid #ccc !important; text-align:left; }
+.respon .tb_form td { display:block; width:100%; overflow:hidden; }
+.respon .tb_form .btop { border-top:1px solid #ccc; }
+.respon .tb_form .bleft { border-left:0 none; border-bottom:0 none; }
+.respon .tb_form td + td { border-left:0 none; }
+.respon .tb_form th + td { border-left:0 none; }
+.respon .tb_form td + th { border-left:0 none; }
+
+/**************************************************
+*   login_wrap
+**************************************************/
+.login_header { padding:50px 0 60px; }
+.login_header .logo { margin-bottom:20px; }
+.login_header .h3_type { font-weight:500; }
+
+.login_contents { background-color:#efefef; padding:40px 30px 50px; }
+.login_contents input[type="text"],
+.login_contents input[type="password"] { width:100%; height:45px; line-height:45px; }
+.login_contents input[type="text"] { margin-bottom:25px; }
+.login_contents input[type="password"] { margin-bottom:20px; }
+.login_contents .save_id { text-align:left; }
+.login_contents .checkbox label { padding-left:5px; }
+.login_contents .checkbox label:before { border:1px solid #ccc; }
+.login_contents .btn { display:block; width:100%; height:45px; line-height:45px; margin-top:30px; background-color:#01b4ce; color:#fff; font-size:20px; }
+
+/**************************************************
+*   otpModal
+**************************************************/
+#otpModal input { height:45px; line-height:40px; }
+
+
+
+
+
+
+

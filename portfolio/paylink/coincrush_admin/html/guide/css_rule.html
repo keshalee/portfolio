@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSH backoffice - CSS rule</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common js -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery.nicescroll.js"></script>
+<!--    <script src="../../js/common.ui.js"></script>-->
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    
+    <style>
+        /* header */
+        #header { position:fixed; left:0; top:0; width:100%; height:60px; background-color:#333; z-index:9995; }
+        #header h1 { float:left; padding:15px 30px 15px 20px; }
+        #header h1 a { color:#fff; font-size:32px; }
+        #header nav { float:left; z-index:9995; }
+        #header nav ul { overflow:hidden; height:60px; line-height:60px; }
+        #header nav li { float:left; margin-left:20px; }
+        #header nav li a { color:#fff; font-weight:400; font-size:16px; }
+        
+        /* container */
+        #container { max-width:1200px; margin:60px auto; }
+        #container .list_box_wrap { width:100%; padding:20px 0; }
+        #container .group_wrap { overflow:hidden; }
+        #container .group_wrap .h2 { margin:0 0 10px; padding-top:20px; font-size:24px; }
+        #container .box_wrap { background-color:#fff; border:1px solid #ccc; padding:0 20px; }
+        #container .box_wrap .h3 { height:30px; line-height:30px; padding:0 20px; font-size:14px; background-color:#808499; color:#fff; margin:0 -20px; margin-bottom:10px; }
+        #container .s_wrap { padding-bottom:20px; }
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //============================================================================
+            //  nicescroll
+            //============================================================================
+            $("body").niceScroll();
+            
+            //============================================================================
+            //  scroll top
+            //============================================================================
+            $('.topwrap').hide();
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 200) {
+                    $('.topwrap').fadeIn();
+                }else {
+                    $('.topwrap').fadeOut();
+                }
+            });
+            $('.topwrap').click(function() {
+                $('html, body').animate({scrollTop:"0"}, 400);
+                return false;
+            });
+            
+            redrawDotNav();
+            /* Scroll event handler */
+            $(window).bind('scroll',function(e){
+                redrawDotNav();
+            });
+
+            /* Next/prev and primary nav btn click handlers */
+            $('.tab_nav a.p01').click(function(){
+                $('html, body').animate({
+                    scrollTop:0
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p02').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group02').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p03').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group03').offset().top
+                }, 300);
+                return false;
+            });
+        });
+        /* Set navigation dots to an active state as the user scrolls */
+        function redrawDotNav(){
+            var section1Top =  0;
+            // The top of each section is offset by half the distance to the previous section.
+            var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+            var section3Top =  $('#group03').offset().top - (($(document).height() - $('#group03').offset().top) / 1);
+            $('.tabs a').removeClass('active');
+            
+            if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+                $('.tabs a.p01').addClass('active');
+            } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+                $('.tabs a.p02').addClass('active');
+            } else if ($(document).scrollTop() >= section3Top){
+                $('.tabs a.p03').addClass('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <header id="header">
+            <h1 class="logo"><a href="javascript:void(0);" title="home"><img src="../../images/common/logo.png" alt="coincrush" /></a></h1>
+            <div class="mobile-only">
+                <div class="nav_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="tabs">
+                <ul class="tab_nav">
+                    <li><a href="#group01" class="p01">HTML</a></li>
+                    <li><a href="#group02" class="p02">CSS</a></li>
+                    <li><a href="#group03" class="p03">Image</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <div class="list_box_wrap">
+                <div id="group01" class="group_wrap">
+                    <h2 class="h2">HTML</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">Syntax</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>indent : 탭(tab)을 사용</li>
+                                <li>중첩된 element는 반드시 indent를 줌</li>
+                                <li>attribute에는 double Quotation("")를 사용</li>
+                                <li>Less Than(&lt;), Greater Than(&gt;), Ampersand(&amp;)와 같은 기호에 html 엔터티를 사용</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">DOCTYPE</h3>
+                        <div class="s_wrap">
+                            <p>DOCTYPE은 html5로 지정<br />&lt;!DOCTYPE html&gt;</p>
+                        </div>
+                        <h3 class="h3">language 속성</h3>
+                        <div class="s_wrap">
+                            <p>&lt;html lang="ko"&gt;</p>
+                        </div>
+                        <h3 class="h3">IE 호환성</h3>
+                        <div class="s_wrap">
+                            <p>IE 최신버전 모드에서 작동하도록 아래 메타 태그를 작성<br />&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</p>
+                        </div>
+                        <h3 class="h3">인코딩</h3>
+                        <div class="s_wrap">
+                            <p>&lt;meta charset="utf-8"&gt;</p>
+                        </div>
+                        <h3 class="h3">layout</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>최상위 레이아웃 : wrapper</li>
+                                <li>상위 레이아웃 : header, container, footer</li>
+                                <li>기타 레이아웃 : dialog, popup 등 </li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">attribute 우선순위</h3>
+                        <div class="s_wrap">
+                            <ol>
+                                <li>1. rel</li>
+                                <li>2. type</li>
+                                <li>3. href, src</li>
+                                <li>4. width, height</li>
+                                <li>5. target</li>
+                                <li>6. id, class, name</li>
+                                <li>7. title, alt</li>
+                                <li>8. style</li>
+                                <li>9. 기타</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div id="group02" class="group_wrap">
+                    <h2 class="h2">CSS</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">Syntax</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>indent : 탭(tab)을 사용</li>
+                                <li>여러 셀렉터를 하나에 쓸 경우, 한 줄에 하나의 셀렉터 사용</li>
+                                <li>가독성을 위해 { 앞뒤에 한칸 }</li>
+                                <li>:앞뒤에 한칸 띄우지 않음</li>
+                                <li>콤마(,) 다음에 한칸 띄우기</li>
+                                <li>rgb(), rgba(), hsl(), hsla(), rect()안의 콤마(,)는 띄어쓰기 하지 않음</li>
+                                <li>속성 값이 '0'이면 단위를 생략</li>
+                                <li>색상값은 단축 표기</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">css 속성 선언순서</h3>
+                        <div class="s_wrap">
+                            <p>선언의 순서는 아래와 같이 그룹핑</p>
+                            <ol>
+                                <li>1. 박스모델 관련(display, float, width, height, margin, padding)</li>
+                                <li>2. 위치관련(position, top, right, bottom, left)</li>
+                                <li>3. 시각효과(background, border)</li>
+                                <li>4. 타이포그래피(font, line-height, color, text-align)</li>
+                                <li>5. 기타</li>
+                            </ol>
+                        </div>
+                        <h3 class="h3">@import 사용 지양</h3>
+                        <div class="s_wrap">
+                            <p>css내에 @import는 성능을 저하시키므로 여러개의 css를 link</p>
+                            <p>external방식에서는 charset 표기</p>
+                        </div>
+                        <h3 class="h3">id/class 사용</h3>
+                        <div class="s_wrap">
+                            <p>레이아웃을 제외하고 가급적 id 사용은 지양</p>
+                        </div>
+                        <h3 class="h3">css 파일 구조</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>reset.css : Elements의 기본요소</li>
+                                <li>common.css : Elements 공통요소</li>
+                                <li>header.css : #header 내용</li>
+                                <li>nav.css : #nav 내용</li>
+                                <li>style.css : #container 내용</li>
+                                <li>footer.css : #footer 내용</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">id/class 명명 규칙</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>-(하이픈)은 가능하면 사용하지 않고 _(언더바)를 사용한다.</li>
+                                <li>id는 camelcase 방식을 사용하고 class는 underscore 방식을 사용한다.<br><span>ex) id="boxWrap" class="small_box"</span></li>
+                                <li>id, class naming 은 가능하면 중복되지 않게 생성한다.</li>
+                                <li>naming은 형태_의미_상태 순서로 조합하며 3단계를 넘어가지 않도록 한다.<br><span>ex) btn_modify_on, box_info, dot_list</span></li>
+                                <li>거의 같은 형태에서 미묘한 변경이 있는 경우 다중 class를 적용한다<br><span>ex) class="bullet_list" class="bullet_list type2"</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="group03" class="group_wrap" style="padding-bottom:100px">
+                    <h2 class="h2">Image</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">image 폴더 구조</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>common: header, footer영역과 같이 공통으로 사용되는 이미지</li>
+                                <li>main: 메인에 사용되는 이미지</li>
+                                <li>member: 회원가입/로그인/마이페이지에 사용되는 이미지</li>
+                                <li>customer: 고객센터에 사용되는 이미지</li>
+                                <li>temp: 실제 반영되지 않을 샘플 이미지</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">image 명명 규칙</h3>
+                        <div class="s_wrap">
+                            <ul>
+                                <li>-(하이픈)은 가능하면 사용하지 않고 _(언더바)를 사용한다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        </div>
+        <!-- e:container -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>

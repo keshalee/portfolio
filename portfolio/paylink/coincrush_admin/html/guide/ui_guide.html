@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSh backoffice - UI guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    
+    <!-- common js -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery.nicescroll.js"></script>
+<!--    <script src="../../js/common.ui.js"></script>-->
+    
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* header */
+        #header { position:fixed; left:0; top:0; width:100%; height:60px; background-color:#333; z-index:9995; }
+        #header h1 { padding:0 20px; height:60px; line-height:60px; float:left;  }
+        #header h1 a { color:#fff; font-size:32px; }
+        #header nav { float:left; z-index:9995; }
+        #header nav ul { overflow:hidden; height:60px; line-height:60px; }
+        #header nav li { float:left; margin-left:20px; }
+        #header nav li a { color:#fff; font-weight:400; font-size:16px; }
+        
+        #container { width:1200px; margin:60px auto; }
+        #container .list_box_wrap { padding:20px 0; }
+        #container .group_wrap { overflow:hidden; }
+        #container .group_wrap .h2 { margin:0 0 10px; padding-top:20px; font-size:24px; }
+        #container .box_wrap { background-color:#fff; border:1px solid #ccc; padding:0 20px; }
+        #container .box_wrap .h3 { height:30px; line-height:30px; padding:0 20px; font-size:14px; background-color:#808499; color:#fff; margin:0 -20px; margin-bottom:10px; }
+        #container .s_wrap { padding-bottom:20px; }
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //============================================================================
+            //  nicescroll
+            //============================================================================
+            $("body").niceScroll();
+            
+            //============================================================================
+            //  scroll top
+            //============================================================================
+            $('.topwrap').hide();
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 200) {
+                    $('.topwrap').fadeIn();
+                }else {
+                    $('.topwrap').fadeOut();
+                }
+            });
+            $('.topwrap').click(function() {
+                $('html, body').animate({scrollTop:"0"}, 400);
+                return false;
+            });
+            
+            /* select */
+            $(".form_group.select select").selectmenu();
+            
+            //============================================================================
+            //  accordion
+            //============================================================================
+            var $accordionList =  $('.accordion .acc_header');
+            $(".acc_content").hide();
+            $(".acc_content.on").show();
+
+            $accordionList.click(function(){
+                $(this).siblings(".acc_content").toggleClass("on").stop().slideToggle(function(){
+                    if($(this).hasClass("on")) {
+                        $(this).siblings(".acc_header").find("i").removeClass("minus").addClass("plus");
+                    }else {
+                        $(this).siblings(".acc_header").find("i").removeClass("plus").addClass("minus");
+                    }
+                    $("body").getNiceScroll().resize();
+                });
+            });
+            
+            //============================================================================
+            //  paging
+            //============================================================================
+            $(".paging a").on("click",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            
+            redrawDotNav();
+            /* Scroll event handler */
+            $(window).bind('scroll',function(e){
+                redrawDotNav();
+            });
+
+            /* Next/prev and primary nav btn click handlers */
+            $('.tab_nav a.p01').click(function(){
+                $('html, body').animate({
+                    scrollTop:0
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p02').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group02').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p03').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group03').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p04').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group04').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p05').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group05').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p06').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group06').offset().top
+                }, 300);
+                return false;
+            });
+            $("#datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/ico_common.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택",
+                beforeShow: function(input) {
+                    var offset = jQuery(input).offset();
+                    setTimeout(function(){
+                       jQuery("#ui-datepicker-div").css({"top": offset.top - 35, "left": offset.left});
+                    })
+                 }
+            });
+            $("#datepicker2").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/ico_common.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택",
+                beforeShow: function(input) {
+                    var offset = jQuery(input).offset();
+                    setTimeout(function(){
+                       jQuery("#ui-datepicker-div").css({"top": offset.top - 35, "left": offset.left});
+                    })
+                 }
+            });
+            $("#datepicker3").datepicker({
+                showOn: "button",
+                buttonImage: "../../images/common/ico_common.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                buttonText: "Select date",
+                changeYear: true,
+                changeMonth: true,
+                showOtherMonths: true,
+                monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+                dayNamesMin: [ "일","월","화","수","목","금","토" ],
+                buttonText: "날짜선택",
+                beforeShow: function(input) {
+                    var offset = jQuery(input).offset();
+                    setTimeout(function(){
+                       jQuery("#ui-datepicker-div").css({"top": offset.top - 35, "left": offset.left});
+                    })
+                 }
+            });
+            
+        });
+        /* Set navigation dots to an active state as the user scrolls */
+        function redrawDotNav(){
+            var section1Top =  0;
+            // The top of each section is offset by half the distance to the previous section.
+            var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+            var section3Top =  $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 4);
+            var section4Top =  $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 4);
+            var section5Top =  $('#group05').offset().top - (($('#group06').offset().top - $('#group05').offset().top) / 4);
+            var section6Top =  $('#group06').offset().top - (($(document).height() - $('#group06').offset().top) / 4);
+            $('.tabs a').removeClass('active');
+            
+            if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+                $('.tabs a.p01').addClass('active');
+            } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+                $('.tabs a.p02').addClass('active');
+            } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+                $('.tabs a.p03').addClass('active');
+            } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+                $('.tabs a.p04').addClass('active');
+            } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+                $('.tabs a.p05').addClass('active');
+            } else if ($(document).scrollTop() >= section6Top){
+                $('.tabs a.p06').addClass('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper">
+        <!-- S:header -->
+        <header id="header">
+            <h1 class="logo"><a href="#">COINCRUSH</a></h1>
+            <div class="mobile-only">
+                <div class="nav_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="tabs">
+                <ul class="tab_nav">
+                    <li><a href="#group01" class="p01">타이포그래피</a></li>
+                    <li><a href="#group02" class="p02">테이블</a></li>
+                    <li><a href="#group03" class="p03">폼</a></li>
+                    <li><a href="#group04" class="p04">버튼</a></li>
+                    <li><a href="#group05" class="p05">아이콘</a></li>
+                    <li><a href="#group06" class="p06">UI</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <div class="list_box_wrap">
+                <div id="group01" class="group_wrap">
+                    <h2 class="h2">타이포그래피</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">H1</h3>
+                        <div class="s_wrap">
+                            <h1 class="h1_type">타이틀</h1>
+                            <h1 class="h1_type line">타이틀 라인 있는 경우</h1>
+                            <h1 class="h1_type line margin">타이틀 라인과 여백이 있는 경우</h1>
+                        </div>
+                        <h3 class="h3">H2</h3>
+                        <div class="s_wrap">
+                            <h2 class="h2_type">타이틀</h2>
+                            <h2 class="h2_type line">타이틀 라인 있는 경우</h2>
+                            <h2 class="h2_type line margin">타이틀 라인과 여백이 있는 경우</h2>
+                        </div>
+                        <h3 class="h3">H3</h3>
+                        <div class="s_wrap">
+                            <h3 class="h3_type">타이틀</h3>
+                            <h3 class="h3_type line">타이틀 라인 있는 경우</h3>
+                            <h3 class="h3_type line margin">타이틀 라인과 여백이 있는 경우</h3>
+                        </div>
+                        <h3 class="h3">H4</h3>
+                        <div class="s_wrap">
+                            <h4 class="h4_type">타이틀</h4>
+                            <h4 class="h4_type line">타이틀 라인 있는 경우</h4>
+                            <h4 class="h4_type line margin">타이틀 라인과 여백이 있는 경우</h4>
+                        </div>
+                        <h3 class="h3">H5</h3>
+                        <div class="s_wrap">
+                            <h5 class="h5_type">타이틀</h5>
+                            <h5 class="h5_type line">타이틀 라인 있는 경우</h5>
+                            <h5 class="h5_type line margin">타이틀 라인과 여백이 있는 경우</h5>
+                        </div>
+                        <h3 class="h3">H6</h3>
+                        <div class="s_wrap">
+                            <h6 class="h6_type">타이틀</h6>
+                            <h6 class="h6_type line">타이틀 라인 있는 경우</h6>
+                            <h6 class="h6_type line margin">타이틀 라인과 여백이 있는 경우</h6>
+                        </div>
+                    </div>
+                    <h2 class="h2">본문</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">정렬</h3>
+                        <div class="s_wrap">
+                            <p class="tl">좌측정렬</p>
+                            <p class="tc">중앙정렬</p>
+                            <p class="tr">우측정렬</p>
+                        </div>
+                    </div>
+                    <h2 class="h2">목록</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">순서 없는 리스트 type01</h3>
+                        <div class="s_wrap">
+                            <ul class="unlist type01">
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">순서 없는 리스트 type02</h3>
+                        <div class="s_wrap">
+                            <ul class="unlist type02">
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                            </ul>
+                        </div>
+                        <h3 class="h3">순서 있는 리스트 type01</h3>
+                        <div class="s_wrap">
+                            <ol class="list type01">
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                            </ol>
+                        </div>
+                        <h3 class="h3">순서 있는 리스트 type02</h3>
+                        <div class="s_wrap">
+                            <ol class="list type02">
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                                <li>리스트 아이템</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div id="group02" class="group_wrap">
+                    <h2 class="h2">테이블</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">리스트 테이블1</h3>
+                        <div class="s_wrap">
+                            <table class="tb_list type01">
+                                <caption class="hidden"><span>비트코인 (24시간 거래기준)</span></caption>
+                                <colgroup>
+                                    <col style="width:50%" />
+                                    <col style="width:50%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">1비트코인 캐시 당 가격</th>
+                                        <th scope="col">비트코인 캐시 수량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tr">1,082,300</td>
+                                        <td class="tr">15.91256814</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">리스트 테이블2</h3>
+                        <div class="s_wrap">
+                            <table class="tb_list type02">
+                                <caption class="hidden"><span>비트코인 (24시간 거래기준)</span></caption>
+                                <colgroup>
+                                    <col style="width:auto">
+                                    <col style="width:33.3%">
+                                    <col style="width:33.3%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">현재가 </th>
+                                        <th scope="col">변동(24시간)기준 </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>비트코인</th>
+                                        <td class="tr">4,351,256</td>
+                                        <td class="tr">10,500원 +10.51%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>비트코인</th>
+                                        <td class="tr">4,351,256</td>
+                                        <td class="tr">10,500원 +10.51%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">리스트 테이블3</h3>
+                        <div class="s_wrap">
+                            <table class="tb_list type03">
+                                <caption class="hidden"><span>공인인증서가 있는 경우 안내</span></caption>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col style="width:50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">은행용 공인인증서를 갖고 계신 경우</th>
+                                        <th scope="col">증권용 공인인증서를 갖고 계신 경우</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="site_link">
+                                        <td><a href="javascript:void(0);" class="icon_coma i_blt"></a></td>
+                                        <td><a href="javascript:void(0);" class="icon_coma i_blt"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">리스트 테이블4</h3>
+                        <div class="s_wrap">
+                            <table class="tb_list type04">
+                                <caption class="hidden"><span>회원등급 안내</span></caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:auto">
+                                    <col style="width:20%">
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">등급</th>
+                                        <th scope="col" rowspan="2">항목</th>
+                                        <th scope="col" rowspan="2">출금한도</th>
+                                        <th colspan="2">할인혜택</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bleft">원화</th>
+                                        <th scope="col">가상화폐</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LEVEL 1</td>
+                                        <td>휴대폰 SNS<br>인증 E-mail</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">0</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 2</td>
+                                        <td>휴대폰 본인 확인<br>
+                                            아이핀 본인확인<br>
+                                            <a href="javascript:void(0);" class="link01 under">신분증(여권)보내기</a></td>
+                                        <td class="tr">50,000,000 KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                      </tr>
+                                      <tr>
+                                        <td>LEVEL 3</td>
+                                        <td>법인서약서 제출<br>
+                                            개인서약서 제출</td>
+                                        <td class="tr">300,000,000 KRW</td>
+                                        <td class="tr">무제한</td>
+                                        <td class="tr">무제한</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">입력 테이블</h3>
+                        <div class="s_wrap">
+                            <table class="tb_write type01">
+                                <caption class="hidden"><span>write table guide</span></caption>
+                                <colgroup>
+                                    <col style="width:152px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">문의유형</th>
+                                        <td>
+                                            <div class="form_group select small">
+                                                <select class="form_control">
+                                                    <option selected="selected">문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                    <option>문의유형</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이름</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" placeholder="홍길동" class="form_control" disabled />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">e-mail</th>
+                                        <td>
+                                            <div class="form_group inline select small">
+                                                <input type="text" placeholder="입력값" class="form_control">
+                                                <span class="gap">@</span>
+                                                <input type="text" placeholder="입력값" class="form_control">
+                                                <select class="form_control">
+                                                    <option selected="selected">선택</option>
+                                                    <option>naver.com</option>
+                                                    <option>gmail.com</option>
+                                                    <option>nate.com</option>
+                                                    <option>yahoo.co.kr</option>
+                                                    <option>hanmail.net</option>
+                                                    <option>daum.net</option>
+                                                    <option>dreamwiz.com</option>
+                                                    <option>lycos.co.kr</option>
+                                                    <option>empas.com</option>
+                                                    <option>korea.com</option>
+                                                    <option>paran.com</option>
+                                                    <option>freechal.com</option>
+                                                    <option>hanmir.com</option>
+                                                    <option>hotmail.com</option>
+                                                    <option>직접입력</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">연락처</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" placeholder="입력값" class="form_control">
+                                                <span class="gap">-</span>
+                                                <input type="text" placeholder="입력값" class="form_control">
+                                                <span class="gap">-</span>
+                                                <input type="text" placeholder="입력값" class="form_control">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">답변알림</th>
+                                        <td>
+                                            <div class="form_group radio small alarm_type">
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio10" class="form_control" checked />
+                                                    <label for="radio10">e-mail</label>
+                                                </span>
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio11" class="form_control" />
+                                                    <label for="radio11">sns</label>
+                                                </span>
+                                                <span class="radio_inline">
+                                                    <input type="radio" name="radio06" id="radio12" class="form_control" />
+                                                    <label for="radio12">전화</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제목</th>
+                                        <td>
+                                            <div class="form_group">
+                                                <input type="text" placeholder="입력값" class="form_control w_60">
+                                            </div>
+                                        </td>                
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">내용</th>
+                                        <td>
+                                            <div class="form_group textarea_wrap">
+                                                <textarea rows="5" placeholder="메세지를 작성해주세요" class="form_control"></textarea>
+                                                <span class="byte_txt"><em>0</em> / 500 Byte</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">파일첨부</th>
+                                        <td>
+                                            <div class="form_group file_box">
+                                                <input type="text" class="form_control file_name" readonly />
+                                                <span class="file_input_div">
+                                                    <label for="upload01" class="btn type3 small">파일선택<i class="ico_com arr02"></i></label>
+                                                    <input type="file" id="upload01" class="form_control upload"/>
+                                                </span>
+                                            </div>
+                                            <p class="info_file"><em>*</em> 최대 5MB /  jpg,gif 파일만 첨부 가능</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">view 테이블1</h3>
+                        <div class="s_wrap">
+                            <table class="tb_view type01">
+                                <caption class="hidden"><span>caption...</span></caption>
+                                <colgroup>
+                                    <col style="width:152px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">무궁화꽃이피었습니다무궁화꽃이피었습니다</th>
+                                        <td>무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">222</th>
+                                        <td>bbbb</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3">view 테이블2</h3>
+                        <div class="s_wrap">
+                            <div class="div_view">
+                                <div class="view_header">
+                                    <p class="title">개인정보를 변경하고 싶어요 </p>
+                                    <p class="day_count"><span class="day">2017.05.11</span><span class="count">조회수 : 18,014</span></p>
+                                </div>
+                                <div class="view_contents">
+                                    <p>[개인정보변경] <br />* 이메일주소, 성명 : 변경불가능 <br />* 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'<br /><br />
+                                    [개인정보변경] <br />* 이메일주소, 성명 : 변경불가능 <br />* 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'<br /><br />
+                                    [개인정보변경] <br />* 이메일주소, 성명 : 변경불가능 <br />* 휴대폰번호변경 일반가입회원 : 홈페이지 우측 상단 [my page] - [휴대폰번호변경] 간편가입회원 : 로그인창 아래 '휴대폰번호가 변경되셨나요?'<br />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="group03" class="group_wrap">
+                    <h2 class="h2">폼</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">input</h3>
+                        <div class="s_wrap">
+                            <div class="form_group">
+                                <label>basic type</label><br />
+                                <input type="text" class="form_control" />
+                            </div>
+                            <div class="form_group">
+                                <label>placeholder type</label><br />
+                                <input type="text" placeholder="입력값" class="form_control" />
+                            </div>
+                            <div class="form_group">
+                                <label>disabled type</label><br />
+                                <input type="text" placeholder="입력값" class="form_control" disabled />
+                            </div>
+                            <div class="form_group">
+                                <label>datepicker</label><br />
+                                <div class="datepicker_wrap">
+                                    <input type="text" placeholder="날짜선택" id="datepicker1" class="form_control" disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">select</h3>
+                        <div class="s_wrap">
+                            <div class="form_group select">
+                                <label>basic type</label><br />
+                                <select class="form_control">
+                                    <option selected="selected">옵션1</option>
+                                    <option>옵션2</option>
+                                    <option>옵션3</option>
+                                    <option>옵션4</option>
+                                    <option>옵션5</option>
+                                </select>
+                            </div>
+                            <div class="form_group select">
+                                <label>disable type</label><br />
+                                <select class="form_control" disabled>
+                                    <option selected="selected">옵션1</option>
+                                    <option>옵션2</option>
+                                    <option>옵션3</option>
+                                    <option>옵션4</option>
+                                    <option>옵션5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3 class="h3">radio</h3>
+                        <div class="s_wrap">
+                            <div class="form_group inline radio">
+                                <input type="radio" name="radio1" id="radio1" class="form_control" checked />
+                                <label for="radio1">선택</label>
+                            </div>
+                            <div class="form_group inline radio">
+                                <input type="radio" name="radio1" id="radio2" class="form_control" />
+                                <label for="radio2">미선택</label>
+                            </div>
+                            <div class="form_group inline radio">
+                                <input type="radio" name="radio2" id="radio3" class="form_control" checked disabled />
+                                <label for="radio3">선택비활성</label>
+                            </div>
+                            <div class="form_group inline radio">
+                                <input type="radio" name="radio2" id="radio3" class="form_control" disabled />
+                                <label for="radio3">비활성</label>
+                            </div>
+                        </div>
+                        <h3 class="h3">checkbox</h3>
+                        <div class="s_wrap">
+                            <h4 class="h4">basic</h4>
+                            <div class="form_group inline checkbox">
+                                <input type="checkbox" name="check" id="check1" class="form_control" checked />
+                                <label for="check1">선택</label>
+                            </div>
+                            <div class="form_group inline checkbox">
+                                <input type="checkbox" name="check" id="check2" class="form_control" />
+                                <label for="check2">미선택</label>
+                            </div>
+                            <div class="form_group inline checkbox">
+                                <input type="checkbox" name="check" id="check3" class="form_control" checked disabled />
+                                <label for="check3">선택비활성</label>
+                            </div>
+                            <div class="form_group inline checkbox">
+                                <input type="checkbox" name="check" id="check4" class="form_control" disabled />
+                                <label for="check4">비활성</label>
+                            </div>
+                            <h4>round</h4>
+                            <div class="form_group inline checkbox round">
+                                <input type="checkbox" name="check2" id="check5" class="form_control" checked />
+                                <label for="check5">선택</label>
+                            </div>
+                            <div class="form_group inline checkbox round">
+                                <input type="checkbox" name="check2" id="check6" class="form_control" />
+                                <label for="check6">미선택</label>
+                            </div>
+                            <div class="form_group inline checkbox round">
+                                <input type="checkbox" name="check2" id="check7" class="form_control" checked disabled />
+                                <label for="check7">선택비활성</label>
+                            </div>
+                            <div class="form_group inline checkbox round">
+                                <input type="checkbox" name="check2" id="check8" class="form_control" disabled />
+                                <label for="check8">비활성</label>
+                            </div>
+                        </div>
+                        <h3 class="h3">color type</h3>
+                        <div class="s_wrap">
+                            <div class="form_group inline checkbox color black">
+                                <input type="checkbox" name="check3" id="check9" class="form_control" />
+                                <label for="check9">black</label>
+                            </div>
+                            <div class="form_group inline checkbox color white">
+                                <input type="checkbox" name="check3" id="check10" class="form_control" />
+                                <label for="check10">white</label>
+                            </div>
+                            <div class="form_group inline checkbox color red">
+                                <input type="checkbox" name="check3" id="check11" class="form_control" />
+                                <label for="check11">red</label>
+                            </div>
+                            <div class="form_group inline checkbox color purple">
+                                <input type="checkbox" name="check3" id="check12" class="form_control" />
+                                <label for="check12">purple</label>
+                            </div>
+                            <div class="form_group inline checkbox color gray">
+                                <input type="checkbox" name="check3" id="check13" class="form_control" />
+                                <label for="check13">gray</label>
+                            </div>
+                            <div class="form_group inline checkbox color gold">
+                                <input type="checkbox" name="check3" id="check14" class="form_control" />
+                                <label for="check14">gold</label>
+                            </div>
+                            <div class="form_group inline checkbox color silver">
+                                <input type="checkbox" name="check3" id="check15" class="form_control" />
+                                <label for="check15">silver</label>
+                            </div>
+                            <div class="form_group inline checkbox color pink">
+                                <input type="checkbox" name="check3" id="check16" class="form_control" />
+                                <label for="check16">pink</label>
+                            </div>
+                            <div class="form_group inline checkbox color navy">
+                                <input type="checkbox" name="check3" id="check17" class="form_control" />
+                                <label for="check17">navy</label>
+                            </div>
+                            <div class="form_group inline checkbox color green">
+                                <input type="checkbox" name="check3" id="check18" class="form_control" />
+                                <label for="check18">green</label>
+                            </div>
+                            <div class="form_group inline checkbox color brown">
+                                <input type="checkbox" name="check3" id="check19" class="form_control" />
+                                <label for="check19">brown</label>
+                            </div>
+                            <div class="form_group inline checkbox color khaki">
+                                <input type="checkbox" name="check3" id="check20" class="form_control" />
+                                <label for="check20">khaki</label>
+                            </div>
+                            <div class="form_group inline checkbox color yellow">
+                                <input type="checkbox" name="check3" id="check21" class="form_control" />
+                                <label for="check21">yellow</label>
+                            </div>
+                            <div class="form_group inline checkbox color multi">
+                                <input type="checkbox" name="check3" id="check22" class="form_control" />
+                                <label for="check22">multi</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="group04" class="group_wrap">
+                    <h2 class="h2">버튼</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">basic</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1">TYPE1</button>
+                            <button type="button" class="btn type1 active">TYPE1 active</button>
+                            <button type="button" class="btn type2">TYPE2</button>
+                            <button type="button" class="btn type2 active">TYPE2 active</button>
+                            <button type="button" class="btn type3">TYPE3</button>
+                            <button type="button" class="btn type4">TYPE4</button>
+                        </div>
+                        <h3 class="h3">big</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 big">TYPE1</button>
+                            <button type="button" class="btn type1 big active">TYPE1 active</button>
+                            <button type="button" class="btn type2 big">TYPE2</button>
+                            <button type="button" class="btn type2 big active">TYPE2 active</button>
+                            <button type="button" class="btn type3 big">TYPE3</button>
+                            <button type="button" class="btn type4 big">TYPE4</button>
+                        </div>
+                        <h3 class="h3">small</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 small">TYPE1</button>
+                            <button type="button" class="btn type1 small active">TYPE1 active</button>
+                            <button type="button" class="btn type2 small">TYPE2</button>
+                            <button type="button" class="btn type2 small active">TYPE2 active</button>
+                            <button type="button" class="btn type3 small">TYPE3</button>
+                            <button type="button" class="btn type4 small">TYPE4</button>
+                        </div>
+                        <h3 class="h3">xsmall</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 xsmall">TYPE1</button>
+                            <button type="button" class="btn type1 xsmall active">TYPE1 active</button>
+                            <button type="button" class="btn type2 xsmall">TYPE2</button>
+                            <button type="button" class="btn type2 xsmall active">TYPE2 active</button>
+                            <button type="button" class="btn type3 xsmall">TYPE3</button>
+                            <button type="button" class="btn type4 xsmall">TYPE4</button>
+                        </div>
+                        <h3 class="h3">disabled</h3>
+                        <div class="s_wrap">
+                            <button type="button" class="btn type1 big" disabled>TYPE1</button>
+                            <button type="button" class="btn type1 big active" disabled>TYPE1 active</button>
+                            <button type="button" class="btn type2 big" disabled>TYPE2</button>
+                            <button type="button" class="btn type2 big active" disabled>TYPE2 active</button>
+                            <button type="button" class="btn type3 big" disabled>TYPE3</button>
+                            <button type="button" class="btn type4 big" disabled>TYPE4</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="group05" class="group_wrap">
+                    <h2 class="h2">아이콘</h2>
+                    <div class="box_wrap" style="background-color:#8f8f8f;">
+                        <h3 class="h3">common</h3>
+                        <div class="s_wrap">
+                            <table class="tb_view type01">
+                                <caption class="hidden"><span>아이콘 리스트</span></caption>
+                                <colgroup>
+                                    <col style="width:152px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">home</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com home">home</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">select scroll</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com scroll01">scroll01</a>
+                                            <a href="javascript:void(0);" class="ico_com scroll02">scroll02</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">calendar</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com cal">calendar</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">search</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com search">search</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">paging</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com prev01">prev</a>
+                                            <a href="javascript:void(0);" class="ico_com next01">next</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">regist</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com regist">regist</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">modify</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com modify">modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">delete</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com delete">delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">plus</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com plus">plus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">minus</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com minus">minus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">check</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com check">check</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">document</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com doc">document</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">print</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com print">print</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">arrow</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com arr01">arr01</a>
+                                            <a href="javascript:void(0);" class="ico_com arr02">arr02</a>
+                                            <a href="javascript:void(0);" class="ico_com arr03">arr03</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">top</th>
+                                        <td>
+                                            <a href="javascript:void(0);" class="ico_com top">top</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="group06" class="group_wrap" style="padding-bottom:100px">
+                    <h2 class="h2">Tab</h2>
+                    <div class="box_wrap" style="background-color:#393a3f;">
+                        <h3 class="h3">Tab1</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">탭명이 길어졌을 경우 양옆 패딩 20</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('tab_menu','tab3');">tab3</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab3">
+                                    tab3 내용입니다.
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <h3 class="h3">Tab2</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu two">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">tab1</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">Tab3</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu three">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">tab1</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('tab_menu','tab3');">tab3</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab3">
+                                    tab3 내용입니다.
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">Tab4</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu four">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">tab1</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('tab_menu','tab3');">tab3</a></li>
+                                    <li class="tab4"><a href="javascript:commonTab('tab_menu','tab4');">tab4</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab3">
+                                    tab3 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab4">
+                                    tab4 내용입니다.
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">Tab5</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu five">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">tab1</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('tab_menu','tab3');">tab3</a></li>
+                                    <li class="tab4"><a href="javascript:commonTab('tab_menu','tab4');">tab4</a></li>
+                                    <li class="tab5"><a href="javascript:commonTab('tab_menu','tab5');">tab5</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab3">
+                                    tab3 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab4">
+                                    tab4 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab5">
+                                    tab5 내용입니다.
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">Tab6</h3>
+                        <div class="s_wrap">
+                            <div class="tab_menu six">
+                                <ul class="tabbox clearfix">
+                                    <li class="tab1 on"><a href="javascript:commonTab('tab_menu','tab1');">tab1</a></li>
+                                    <li class="tab2"><a href="javascript:commonTab('tab_menu','tab2');">tab2</a></li>
+                                    <li class="tab3"><a href="javascript:commonTab('tab_menu','tab3');">tab3</a></li>
+                                    <li class="tab4"><a href="javascript:commonTab('tab_menu','tab4');">tab4</a></li>
+                                    <li class="tab5"><a href="javascript:commonTab('tab_menu','tab5');">tab5</a></li>
+                                    <li class="tab6"><a href="javascript:commonTab('tab_menu','tab6');">tab6</a></li>
+                                </ul>
+                                <div class="hiddencontents tab1 on">
+                                    tab1 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab2">
+                                    tab2 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab3">
+                                    tab3 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab4">
+                                    tab4 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab5">
+                                    tab5 내용입니다.
+                                </div>
+                                <div class="hiddencontents tab6">
+                                    tab6 내용입니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="h2">UI</h2>
+                    <div class="box_wrap">
+                        <h3 class="h3">location</h3>
+                        <div class="s_wrap">
+                            <div class="location">
+                                <a href="javascript:void(0);" class="ico_com home">Home</a>
+                                <span class="lo_line">/</span>
+                                <div class="form_group inline select small">
+                                    <select class="form_control">
+                                        <option selected="selected">1차선택</option>
+                                    </select>
+                                    <span class="lo_line">/</span>
+                                    <select class="form_control">
+                                        <option selected="selected">2차선택</option>
+                                    </select>
+                                    <span class="lo_line">/</span>
+                                    <select class="form_control">
+                                        <option selected="selected">3차선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">Table sort</h3>
+                        <div class="s_wrap">
+                            <div class="tb_sort_wrap">
+                                <span class="sort_tit">총 <em>4</em>건 검색</span>
+<!--
+                                <div class="tb_sort">
+                                    <div class="form_group inline select small">
+                                        <select class="form_control">
+                                            <option value="">최근 등록일순</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn type2 small">전체보기</button>
+                                    <button type="button" class="btn type2 small">글쓰기</button>
+                                </div>
+-->
+                            </div>
+                        </div>
+                        <h3 class="h3">검색</h3>
+                        <div class="s_wrap">
+                            <div class="sh_wrap">
+                                <form>
+                                    <fieldset>
+                                        <table class="tb_write type01">
+                                            <caption class="hidden"><span>검색</span></caption>
+                                            <colgroup>
+                                                <col style="width:152px;">
+                                                <col style="width:auto;">
+                                                <col style="width:152px;">
+                                                <col style="width:auto;">
+                                                <col style="width:152px;">
+                                                <col style="width:auto;">
+                                                <col style="width:112px;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">조회기간</th>
+                                                    <td colspan="5">
+                                                        <div class="form_group inline">
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker2" class="form_control" disabled />
+                                                            </div>
+                                                            <span class="date_line">~</span>
+                                                            <div class="datepicker_wrap">
+                                                                <input type="text" placeholder="날짜선택" id="datepicker3" class="form_control" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_group inline">
+                                                            <button type="button" class="btn type1 xsmall active">당일</button>
+                                                            <button type="button" class="btn type1 xsmall">3일</button>
+                                                            <button type="button" class="btn type1 xsmall">7일</button>
+                                                            <button type="button" class="btn type1 xsmall">30일</button>
+                                                            <button type="button" class="btn type1 xsmall">90일</button>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2" class="sh_btn">
+                                                        <button type="button" class="btn type4 ico"><i class="ico_com search"></i>검색</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">거래구분</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio3" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">입금</label>
+                                                            <input type="radio" name="radio3" id="radio6" class="form_control" />
+                                                            <label for="radio6">출금</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">거래상태</th>
+                                                    <td>
+                                                        <div class="form_group inline radio">
+                                                            <input type="radio" name="radio4" id="radio5" class="form_control" checked />
+                                                            <label for="radio5">신청중</label>
+                                                            <input type="radio" name="radio4" id="radio6" class="form_control" />
+                                                            <label for="radio6">완료</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">은행명</th>
+                                                    <td>
+                                                        <div class="form_group">
+                                                            <input type="text" class="form_control w_100" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <h3 class="h3">accordion</h3>
+                        <div class="s_wrap">
+                            <div class="accordion">
+                                <div class="acc_header">
+                                    <i class="ico_com plus"></i>본인인증
+                                </div>
+                                <div class="acc_content on">
+                                    <table class="tb_write type01">
+                                        <caption class="hidden"><span>본인인증</span></caption>
+                                        <colgroup>
+                                            <col style="width:152px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">SMS 인증</th>
+                                                <td>
+                                                    <div class="form_group inline time_wrap">
+                                                        <input type="text" placeholder="3분이내 입력" class="form_control w_100" />
+                                                        <div class="timer">3:00</div>
+                                                    </div>
+                                                    <button type="button" class="btn type3 small">인증번호발송<i class="ico_com arr01"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="acc_header">
+                                    <i class="ico_com minus"></i>실명계좌 등록
+                                </div>
+                                <div class="acc_content">
+                                    <table class="tb_write type01">
+                                        <caption class="hidden"><span>실명계좌 등록</span></caption>
+                                        <colgroup>
+                                            <col style="width:152px">
+                                            <col style="width:auto">
+                                            <col style="width:152px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">은행</th>
+                                                <td colspan="3">
+                                                    <div class="form_group select small">
+                                                        <select class="form_control">
+                                                            <option selected="selected">은행선택</option>
+                                                            <option>기업은행</option>
+                                                            <option>신한은행</option>
+                                                            <option>우리은행</option>
+                                                            <option>국민은행</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">계좌번호</th>
+                                                <td>
+                                                    <div class="form_group">
+                                                        <input type="text" placeholder="계좌번호" class="form_control" />
+                                                    </div>
+                                                </td>
+                                                <th scope="row">상태</th>
+                                                <td>
+                                                    <div class="btn_group">
+                                                        <button type="button" class="btn type3 small"><i class="ico_com doc"></i>내역 다운로드<i class="ico_com arr02"></i></button>
+                                                        <button type="button" class="btn type3 small"><i class="ico_com print"></i>인쇄하기<i class="ico_com arr03"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">예금주</th>
+                                                <td colspan="3">
+                                                    <div class="form_group">
+                                                        <input type="text" placeholder="홍길동" class="form_control" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="acc_header">
+                                    <i class="ico_com minus"></i>관리자 설정
+                                </div>
+                                <div class="acc_content">
+                                    <table class="tb_write type01">
+                                        <caption class="hidden"><span>관리자 설정</span></caption>
+                                        <colgroup>
+                                            <col style="width:152px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">타이틀</th>
+                                                <td>
+                                                    <div class="form_group">
+                                                        <input type="text" placeholder="입력값" class="form_control" />
+                                                        <button type="button" class="btn type3 small">1:1문의 바로가기<i class="ico_com arr01"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">글 작성시 에디터 사용</th>
+                                                <td>
+                                                    <div class="form_group select small">
+                                                        <select class="form_control">
+                                                            <option selected="selected">사용함</option>
+                                                            <option>사용안함</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">SMS 알림</th>
+                                                <td>
+                                                    <p class="msg">휴대폰 입력을 사용하실 경우 문의글 등록시 등록자가 답변 등록시 SMS 알림 수신을 선택할 수 있도록 합니다.<br />SMS 알림을 사용하기 위해서는 기본환경설정 > SMS 설정을 하셔야 합니다.</p>
+                                                    <div class="form_group select small">
+                                                        <select class="form_control">
+                                                            <option selected="selected">사용함</option>
+                                                            <option>사용안함</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이메일 입력</th>
+                                                <td>
+                                                    <div class="form_group checkbox">
+                                                        <input type="checkbox" name="check" id="check5" class="form_control" checked />
+                                                        <label for="check5">보이기</label>
+                                                        <input type="checkbox" name="check" id="check6" class="form_control" />
+                                                        <label for="check6">필수입력</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">에디터</th>
+                                                <td>
+                                                    <textarea cols="80" id="contents" name="contents" rows="10"></textarea>
+                                                    <script src="../../ckeditor/ckeditor.js"></script>
+                                                    <script>
+                                                        CKEDITOR.replace('contents');
+                                                    </script>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">파일첨부</th>
+                                                <td>
+                                                    <div class="form_group file_box">
+                                                        <input type="text" class="form_control file_name" readonly />
+                                                        <span class="file_input_div">
+                                                            <label for="upload01" class="btn type3 small">파일선택<i class="ico_com arr02"></i></label>
+                                                            <input type="file" id="upload01" class="form_control upload"/>
+                                                        </span>
+                                                    </div>
+                                                    <p class="info_file"><em>*</em> 최대 5MB /  jpg,gif 파일만 첨부 가능</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" rowspan="2"><button type="button" class="btn type3 small">상세보기</button></th>
+                                                <td>
+                                                    <div class="date">2019.03.26 12:50</div>
+                                                    <div class="price"><span>2,000,000</span>원</div>
+                                                    <div class="condition">입금대기</div>
+                                                    <button type="button" class="btn type3 small fl">취소</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bleft">
+                                                    <div class="date">2019.03.26 12:50</div>
+                                                    <div class="price"><span>2,000,000</span>원</div>
+                                                    <div class="condition">입금완료</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">글쓰기</th>
+                                                <td>
+                                                    <div class="form_group textarea_wrap">
+                                                        <textarea rows="5" placeholder="메세지를 작성해주세요" class="form_control">
+OO은행 12345-67-89012 예금주명
+OO은행 12345-67-89012 예금주명
+                                                        </textarea>
+                                                        <span class="byte_txt"><em>0</em> / 500 Byte</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3">paging</h3>
+                        <div class="s_wrap">
+                            <div class="paging">
+                                <a href="javascript:void(0);" title="이전"><i class="ico_com prev01"></i></a>
+                                <a href="javascript:void(0);">1</a>
+                                <a href="javascript:void(0);" class="active">2</a>
+                                <a href="javascript:void(0);">3</a>
+                                <a href="javascript:void(0);">4</a>
+                                <a href="javascript:void(0);">5</a>
+                                <a href="javascript:void(0);" title="다음"><i class="ico_com next01"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="h3">유의사항</h3>
+                        <div class="s_wrap">
+                            <div class="attention_wrap">
+                                <ul class="dot_list">
+                                    <li>추가한 항목은 메인 홤년에 공통으로 나타납니다.</li>
+                                    <li>추가항목 설정 후 등록할 떄 해당정보를 입력하면 추가항목이 나타납니다.</li>
+                                    <li>표시 설정은 각 화면에 맞게 수정할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        </div>
+        <!-- e:container -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>

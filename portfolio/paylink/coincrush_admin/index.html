@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common js -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+<!--    <script src="js/common.ui.js"></script>-->
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+        /* header */
+        #header { position:fixed; left:0; top:0; width:100%; height:33px; z-index:9995; background-color:#070d12; }
+        #header h1 { float:left; padding:5px 10px; }
+        #header nav { float:left; }
+        #header nav ul { overflow:hidden; height:33px; line-height:33px; }
+        #header nav li { float:left; margin-left:40px; }
+        #header nav li a { font-size:15px; color:#fff; }
+        
+        /* container */
+        #container { max-width:90%; margin:60px auto 0; }
+        
+        .information { position:absolute; right:5%; top:20px; margin-left:100px; color:#666; font-size:14px; font-weight:bold; }
+        .information strong { margin-right:3px; color:#000; }
+        .information > span { margin: 0 4px; color:#ddd; font-weight:normal; }
+        
+        table { width:100%; border-collapse:collapse; border-spacing:0; background-color: #fff; border-bottom:1px solid #415a6d; table-layout:fixed; }
+        caption { display: none; }
+        th { padding:5px 0; background:#f1f1f1; border-top:1px solid #ccc; border-left:1px solid #ccc; vertical-align:middle; }
+        td { padding:7px 5px; border-top:1px solid #e1e1e1; border-left:1px solid #ccc; line-height:16px; vertical-align:middle; }
+        .guide tr th, .guide tr td { background-color:#e8f6f9; }
+        tr:first-child td { border-top:1px solid #e1e1e1; }
+        th:first-child, td:first-child { border-left:0; }
+        td:first-child { font-weight:bold; }
+        td > ul { margin:0; padding-left:20px; }
+        td a { color:#333; text-decoration:underline; }
+        table tbody tr.on td a { color:#e60012; }
+        table tbody tr.on th,
+        table tbody tr.on td { background-color:#f1f1f1 !important; }
+        table tbody.guide tr.on th,
+        table tbody.guide tr.on td { background-color:#c2ebf4 !important; }
+
+        .guide tr:last-child td { border-bottom:3px double #d1d1d1; }
+        .sec td { border-top:3px double #d1d1d1; }
+        .del td { background-color:#bbb; text-decoration:line-through; }
+        .skip td { background-color:#f4f4f4; }
+        .hold td, .hold { background-color:#fef3fd; }
+        .ing td, .ing { background-color:#FC6; }
+        .alignC { text-align:center; }
+        .red { color:#e60012 !important; font-weight:bold; }
+    </style>
+    
+    <script type="text/javascript">
+        $(function(){
+            //============================================================================
+            //  nicescroll
+            //============================================================================
+            $("body").niceScroll();
+
+            //============================================================================
+            //  scroll top
+            //============================================================================
+            $('.topwrap').hide();
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 200) {
+                    $('.topwrap').fadeIn();
+                }else {
+                    $('.topwrap').fadeOut();
+                }
+            });
+            $('.topwrap').click(function() {
+                $('html, body').animate({scrollTop:"0"}, 400);
+                return false;
+            });
+            
+        });
+        
+        //<!--
+        function popOpen(url, name, width, height){
+              var toolbar_str = 'no';
+              var menubar_str = 'no';
+              var statusbar_str = 'no';
+              var scrollbar_str = 'yes';
+              var resizable_str = 'no';
+              window.open(url, name, 'width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+        }
+        $(function(){
+            var total = $('.sum tr').size();
+            var ok = $('.sum td a').size();
+            var persent = parseInt((ok/total)*100);
+            $('#total-page').text(total);
+            $('#ok-page').text(ok);
+            $('#persent').text(persent+'%');
+        });
+        $(function(){
+            var total = $('.sum2 tr').size();
+            var ok = $('.sum2 td a').size();
+            var persent = parseInt((ok/total)*100);
+            $('#total-page2').text(total);
+            $('#ok-page2').text(ok);
+            $('#persent2').text(persent+'%');
+        });
+        //-->
+        
+        // commonTab
+        function commonTab(tabParent, tabName){
+            $("."+tabParent+" ul.tabbox li").removeClass("on");
+            $("."+tabParent+" ul.tabbox li."+tabName).addClass("on");
+            $("."+tabParent+" .hiddencontents").removeClass("on");
+            $("."+tabParent+" .hiddencontents."+tabName).addClass("on");
+        }
+    </script>
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper" class="tabwrap">
+        <!-- S:header -->
+        <header id="header">
+            <h1 class="logo"><a href="javascript:void(0);" title="home"><img src="images/common/logo.png" alt="coincrush" /></a></h1>
+            <div class="mobile-only">
+                <div class="nav_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="tabs">
+                <ul class="tabbox">
+                    <li class="tab1 on"><a href="javascript:commonTab('tabwrap','tab1');">국문</a></li>
+                    <li class="tab2"><a href="javascript:commonTab('tabwrap','tab2');">중문</a></li>
+                    <li class="tab3"><a href="javascript:commonTab('tabwrap','tab3');">영문</a></li>
+                    <li class="tab4"><a href="javascript:commonTab('tabwrap','tab4');">일문</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <div class="list_box_wrap">
+                <div class="group_wrap hiddencontents tab1 on">
+                    <div class="information">
+                        총 <strong id="total-page"></strong>페이지 <span>|</span>
+                        완료 : <strong id="ok-page"></strong>페이지 <span>|</span>
+                        진행률 : <strong id="persent" class="red"></strong>
+                    </div>
+                    <table>
+                        <caption>발렌타 PC List</caption>
+                        <colgroup>
+                            <col style="width:100px">
+                            <col style="width:200px">
+                            <col style="width:140px">
+                            <col style="width:180px">
+                            <col style="width:130px">
+                            <col style="width:200px">
+                            <col style="width:150px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="5">메뉴</th>
+                                <th rowspan="2" class="co01">URL(파일명)</th>
+                                <th rowspan="2" class="co02">화면 ID</th>
+                                <th rowspan="2">비고</th>
+                            </tr>
+                            <tr>
+                                <th>1Depth</th>
+                                <th>2Depth</th>
+                                <th>3Depth</th>
+                                <th>4Depth</th>
+                                <th>5Depth</th>
+                            </tr>
+                        </thead>
+                        <tbody class="guide">
+                            <tr>
+                                <td>대카테고리</td>
+                                <td>중카테고리</td>
+                                <td>소카테고리</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>Guide</td>
+                                <td>CSS Rule</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/css_rule.html" target="_blank">css_rule.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>UI Guide</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                               <td><a href="./html/guide/ui_guide.html" target="_blank">ui_guide.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>layout</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout.html" target="_blank">layout.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>layout_fullsize</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout_fullsize.html" target="_blank">layout_fullsize.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="sum">
+                            <tr class="sec">
+                                <td>로그인</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/login.html" target="_blank">login.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>회원관리</td>
+                                <td>회원조회</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/userList.html" target="_blank">userList.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>내역관리</td>
+                                <td>주문내역</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/history/orderList.html" target="_blank">orderList.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>체결내역</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/history/tradeList.html" target="_blank">tradeList.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>정산관리</td>
+                                <td>KRW 입출금 정산</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/calculate/deposit_withdraw_krw.html" target="_blank">deposit_withdraw_krw.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>coin 입출금 정산</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/calculate/deposit_withdraw_coin.html" target="_blank">deposit_withdraw_coin.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="group_wrap hiddencontents tab2">
+                    중문
+                </div>
+                <div class="group_wrap hiddencontents tab3">
+                    영문
+                </div>
+                <div class="group_wrap hiddencontents tab4">
+                    일문
+                </div>
+            </div>
+            <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        </div>
+        <!-- e:container -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>
