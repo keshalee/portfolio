@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/customer.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <section>
+                <div class="lnb_content">
+                    <!-- S : lnb -->
+                    <script src="../include/lnb.js"></script>
+                    <!-- E : lnb -->
+                    <div class="content_wrap">
+                        <h3 class="h3_type">회원안내</h3>
+                        <!-- S : tab -->
+                        <div class="tab_type01 two">
+                            <ul>
+                                <li><a href="#;" class="active" title="online_member">회원탈퇴</a></li>
+                                <li><a href="#;" title="offline_member">회원등급안내</a></li>
+                            </ul>
+                        </div>
+                        <!-- E : tab -->
+                        <!-- S : 온라인 멤버쉽안내 -->
+                        <div class="tab_view_box block" id="online_member">
+                            <form action="">
+                                <div class="type_view">
+                                    <div>
+                                        <h3>아래의 사항 중 하나 이상 해당할 경우 회원탈퇴가 불가능합니다.</h3><br> - KRW 잔고가 남아있을 경우, 암호 화폐 잔고가 남아있을 경우, 진행중인 거래가 있을경우<br> - 회원탈퇴와 함께 등록된 회원님의 개인정보는 모두 삭제처리되며 복구되지 않습니다. <br> 단, 상법, 전자상거래등에서의 소비자 보호에 관한 법률 등 관련법령의 규정에 의거 보존할 필요가 있는 경우, 일정한
+                                        기간동안 회원정보를 보관합니다.<br><br>
+                                        <h3>회원탈퇴 요청방법</h3><br>
+                                    </div>
+                                    <table class="tb_write01">
+                                        <caption>write table guide</caption>
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">아이디(이메일주소)</th>
+                                                <td>
+                                                    <input type="text" value="" placeholder="이메일주소를 입력하세요" style="width:300px">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이름</th>
+                                                <td><input type="text" value="" placeholder="" style="width:160px"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">휴대폰</th>
+                                                <td>
+                                                    <input type="text" value="" placeholder="010" class="w_s">
+                                                    <span class="gap">-</span>
+                                                    <input type="text" value="" placeholder="" class="w_s">
+                                                    <span class="gap">-</span>
+                                                    <input type="text" value="" placeholder="" class="w_s">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">파일첨부</th>
+                                                <td>
+                                                    <div class="file_sh">
+                                                        <span class="file_name"></span>
+                                                        <input type="file" name="" class="real_file">
+                                                        <button type="button" class="btn_basic type4 small fake_file">파일선택</button>
+                                                    </div>
+                                                    <p class="info_file">* 하단이미지 참고 &nbsp; /&nbsp; 1.신분증사진 &nbsp; 2.신분증을 들고있는 본인사진</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="sh_btn_box">
+                                        <button type="button" class="btn_basic type5">탈퇴요청</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="leave">
+                                <dl>
+                                    <dt class="img"><img src="../../images/customer/leave_img01.jpg" alt=""></dt>
+                                    <dt>1. 신분증 사진</dt>
+                                    <dd class="con">
+                                        예시와 같이 신분증에 코인크러쉬 인증요청이란 문구와 <span>인증 목적, 가입 이메일,</span>
+                                        <span>날짜</span>를 메모해서 붙이고,신분증이 잘 보이게 사진 촬영 또는 스캔합니다.<br>
+                                        <span>주민등록번호 뒤 7자리,운전면허 번호,여권번호</span>는 가려주세요.<br><br> *인증가능 신분증 : 주민등록증, 운전면허증, 여권
+                                    </dd>
+                                </dl>
+                                <dl class="line">
+                                    <dt class="img"><img src="../../images/customer/leave_img02.jpg" alt=""></dt>
+                                    <dt>2. 신분증을 들고 있는 본인 사진(비대면 실명확인)</dt>
+                                    <dd class="con">
+                                        아래 설명을 따라 [신분증을 들고 있는 본인 사진(비대면 실명확인)]을 첨부해주세요.<br>
+                                        <span>신분증에 인증 목적, 이메일, 날짜를 기입한 메모를 부착해서 촬영하세요.</span><br> 사진 촬영 시간을 기준으로 제출일 이전에 찍은 사진은 인정하지 않습니다.<br> 신분증 글자(메모 포함)를 읽을 수 있을 정도로 해상도가 높아야합니다.<br><br> - 신분증의 본인과 실제로 요청중인 사람이 일치하는지 담당자가 확인합니다<br> - 비대면 실명확인을 위한 절차이오니
+                                        불편하시더라도 따라주시기 바랍니다.<br> - 받은 사진은 해당 요청에 대한 비대면 실명확인 용도로만 사용합니다.<br>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- E : 온라인 멤버쉽안내 -->
+                        <!-- S : 오프라인 멤버쉽안내 -->
+                        <div class="tab_view_box" id="offline_member">
+                            <table class="tb_list02 type4 online_type">
+                                <caption>회원등급 안내</caption>
+                                <colgroup>
+                                    <col style="width:18.5%">
+                                    <col style="width:auto">
+                                    <col style="width:21%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">등급</th>
+                                        <th scope="col" rowspan="2">등급 유지 조건</th>
+                                        <th scope="col" rowspan="2">자격요건</th>
+                                        <th colspan="2">할인혜택</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="bleft">적립금</th>
+                                        <th scope="col" class="bleft">쿠폰</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="ico_comb online_level05">회원등급 5</span></td>
+                                        <td>최근 1년간<br>$2,500 이상 구매시</td>
+                                        <td>본 등급에서 최근 2년간<br>$2,000 이상 구매자</td>
+                                        <td><span class="ico_comb online_point05">적립금 10,000원</span></td>
+                                        <td><span class="ico_comb online_coupon06">전용쿠폰 외 6종</span><a href="#;" class="btn_basic type4 small">쿠폰 다운로드</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ico_comb online_level04">회원등급 4</span></td>
+                                        <td>최근 1년간<br>$2,000 이상 구매시</td>
+                                        <td>본 등급에서 최근 2년간<br>$1,000 이상 구매자</td>
+                                        <td><span class="ico_comb online_point04">적립금 7,000원</span></td>
+                                        <td><span class="ico_comb online_coupon05">전용쿠폰 외 5종</span><a href="#;" class="btn_basic type4 small">쿠폰 다운로드</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ico_comb online_level03">회원등급 3</span></td>
+                                        <td>최근 1년간<br>$1,000 이상 구매시</td>
+                                        <td>본 등급에서 최근 2년간<br>$500 이상 구매자</td>
+                                        <td><span class="ico_comb online_point03">적립금 5,000원</span></td>
+                                        <td><span class="ico_comb online_coupon04">전용쿠폰 외 4종</span><a href="#;" class="btn_basic type4 small">쿠폰 다운로드</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ico_comb online_level02">회원등급 2</span></td>
+                                        <td>최근 1년간<br>$500 이상 구매시</td>
+                                        <td>본 등급에서 최근 2년간<br>구매내역 존재 시</td>
+                                        <td><span class="ico_comb online_point02">적립금 3,000원</span></td>
+                                        <td><span class="ico_comb online_coupon03">전용쿠폰 외 3종</span><a href="#;" class="btn_basic type4 small">쿠폰 다운로드</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="ico_comb online_level01">회원등급 1</span></td>
+                                        <td>인터넷 면세점<br>신규가입 시</td>
+                                        <td>없음</td>
+                                        <td><span class="ico_comb online_point01">적립금 1,000원</span></td>
+                                        <td><span class="ico_comb online_coupon02">전용쿠폰 외 2종</span><a href="#;" class="btn_basic type4 small">쿠폰 다운로드</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- E : 오프라인 멤버쉽안내 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

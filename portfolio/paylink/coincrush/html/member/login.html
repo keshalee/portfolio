@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/member.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+    <div class="login_wrap">
+        <h1 class="h1_type">로그인</h1>
+        <div class="pop_content">
+            <div class=" " id="login01" >
+                <form action="">
+                    <div class="join_form">
+                        <div class="join_row">
+                            <input type="text" id="" name="" placeholder="이메일주소">
+                        </div>
+                        <div class="join_row placeholder_wrap">
+                            <input type="password" id="" name="" placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <div class="dang_type">
+                       <p class="d_txt">아이디 또는 비밀번호를 잘못 입력 하셨습니다. (5회 이상 입력 오류 시 로그인 제한됩니다.)</p>
+                    </div>
+                    <div class="id_save">
+                        <span class="checkbox small">
+								<input type="checkbox" 	id="save"><label for="save">아이디 저장</label>
+							</span>
+                        <span class="find_idpw">
+<!--                            <a href="#;">아이디찾기</a>-->
+                            <a href="#;">비밀번호찾기</a>
+                        </span>
+                    </div>
+                    <div class="btn_login"><button class="btn_basic big type5">로그인</button></div>
+                </form>
+            </div>
+            <div class="tab_view_box" id="login02">
+                <form action="">
+                    <div class="join_form">
+                        <div class="join_row">
+                            <input type="text" id="" name="" placeholder="이메일 주소">
+                        </div>
+                        <div class="join_row placeholder_wrap">
+                            <input type="password" id="" name="" placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <div class="dang_type">
+                        <p class="d_txt">아이디 또는 비밀번호를 잘못 입력 하셨습니다.<br> (5회 이상 입력 오류 시 로그인 제한됩니다.)
+                        <!--
+                        아이디를 입력해주세요.
+                        비밀번호를 입력해주세요.
+                        시스템 오류입니다. 이용에 불편을 드려서 죄송합니다.
+                        -->
+                        </p>
+                    </div>
+                    <div class="id_save">
+                        <span class="checkbox small">
+                            <input type="checkbox" name="" id="save">
+                            <label for="save">아이디 저장</label>
+                        </span>
+                        <span class="find_idpw">
+<!--                            <a href="#;">아이디찾기</a>-->
+                            <a href="#;">비밀번호찾기</a>
+                        </span>
+                    </div>
+                    <div class="btn_login"><button class="btn_basic big type2">로그인</button></div>
+                </form>
+            </div>    
+            <div class="robot"><img src="../../images/member/robot.jpg" style="width:100%"></div>               
+            <div class="txt_btn">
+                <p>회원가입을 하시면 더많은 혜택이 제공됩니다.<a href="#;" class="btn_basic type2">회원가입</a></p>
+            </div>
+        </div>
+   </div>
+   </div>
+    <!-- E : contents -->
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+    
+    <!-- S : modal -->
+    <div id="otpModal" class="modal">
+		<div class="modal-content">
+			<span class="otpClose" id="otpClose">&times;</span>
+			<div class="join_form">
+				<input type="text" id="userInOtpNum" maxlength="6"
+					cssClass="ime_disabled" placeholder="OTP 번호를 입력해주세요." onkeyup="onlyNumber(userInOtpNum)"/>
+				<button class="btn_basic big type5" id="sendOtpChk" onclick="sendOtpCheck()">입력</button>
+			</div>
+		</div>
+	</div>
+    <!-- E : modal -->
+    
+</body>
+</html>

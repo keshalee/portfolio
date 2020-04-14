@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/wallet.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+   <!-- S : contents -->
+   <div class="sub_container">
+	    <div class="container">
+	    	<div class="wallet">
+		    	<div class="asset_wrap">
+                    <div class="tb_sort">
+                        <h1>총보유자산 <small>KRW + Coin</small>
+                            <div class="add">
+                                <strong>5,000,561,594</strong><span> KRW</span>
+                            </div>
+                        </h1>
+                    </div>
+                    <div class="form_group">
+                        <span class="checkbox small">
+                            <input type="checkbox" name="" id="termType">
+                            <label for="termType">보유 자산만 보기</label>
+                        </span>
+                    </div>
+                    <div class="responsive_table">
+                        <table>
+                            <caption>총보유자산</caption>
+                            <colgruop>
+                                <col class="col1">
+                                <col class="col2">
+                                <col class="col3">
+                                <col class="col4">
+                                <col class="col5">
+                                <col class="col6">
+                            </colgruop>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구 분</th>
+                                    <th scope="col" colspan="2" class="blue">거래가능</th>
+                                    <th scope="col">사용중</th>
+                                    <th scope="col">자산현황</th>
+                                    <th scope="col">입출금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ta_l"><em class="thum"><img src="../../images/common/c_krw.png" alt="" /><span>KRW</span><em>원화</em></em></td>
+                                    <td class="graph_wrap">
+                                        <ul>
+                                            <li class="graph">
+                                                <div class="bar" style="width:80%">
+                                                    <p class="percent">80 %</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="txt03 blue">940,500,467</span></td>
+                                    <td><span class="txt03">3,640,480</span></td>
+                                    <td><span class="txt03">944,140,947.00</span><span class="txt01"> KRW</span></td>
+                                    <td class="c_c">
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_krw.html'">입금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='withdraw_krw.html'">출금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_krw.html'">내역</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <div class="clearfix"></div>
+                        
+                        <table>
+                            <caption>총보유자산</caption>
+                            <colgruop>
+                                <col class="col1">
+                                <col class="col2">
+                                <col class="col3">
+                                <col class="col4">
+                                <col class="col5">
+                                <col class="col6">
+                            </colgruop>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" class="c_c">보유 중인 자산이 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td class="ta_l"><em class="thum"><img src="../../images/common/c_btc.png"><span>BTC</span><em>비트코인</em></em></td>
+                                    <td class="graph_wrap">
+                                        <ul>
+                                            <li class="graph">
+                                                <div class="bar" style="width:100%">
+                                                    <p class="percent">100 %</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="txt01 blue"><em>1.</em>0356<span class="fc_g">0000</span></span></td>
+                                    <td><span class="txt02"><em>2.</em>0356<span class="fc_g">0000</span></span></td>
+                                    <td><span class="txt01"><em>3.</em>0356<span class="fc_g">0000</span></span><span class="txt01"> BTC</span><br>
+                                    <span class="txt02">12,546,000</span><span class="txt02"> KRW</span>
+                                    </td>
+                                    <td class="c_c">
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_coin.html'">입금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='withdraw_coin.html'">출금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_coin.html'">내역</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ta_l"><em class="thum"><img src="../../images/common/c_eth.png"><span>ETH</span><em>이더리움</em></em></td>
+                                    <td class="graph_wrap">
+                                        <ul>
+                                            <li class="graph">
+                                                <div class="bar" style="width:100%">
+                                                    <p class="percent">100 %</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="txt01 blue"><em>1.</em>0356<span class="fc_g">0000</span></span></td>
+                                    <td><span class="txt02"><em>2.</em>0356<span class="fc_g">0000</span></span></td>
+                                    <td><span class="txt01"><em>3.</em>0356<span class="fc_g">0000</span></span><span class="txt01"> ETH</span><br>
+                                    <span class="txt02">12,546,000</span><span class="txt02"> KRW</span>
+                                    </td>
+                                    <td class="c_c">
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_coin.html'">입금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='withdraw_coin.html'">출금</button>
+                                        <button type="button" class="btn_basic type3" onclick="location.href='deposit_coin.html'">내역</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+		    	</div>
+	    	</div>
+	    </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

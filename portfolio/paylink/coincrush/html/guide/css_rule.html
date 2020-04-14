@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>COINCRUSH CSS_Rule</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="../../css/common.css">
+<style>
+body{background:linear-gradient(to top right, #f8f8f8 0%, #f8f8f8 100%);
+    background:#f8f8f8; /* Old browsers */
+    background:-moz-linear-gradient(45deg, #f8f8f8 1%, #f8f8f8 100%); /* FF3.6-15 */
+    background:-webkit-linear-gradient(45deg, #f8f8f8 1%,#f8f8f8 100%); /* Chrome10-25,Safari5.1-6 */
+    background:linear-gradient(45deg, #f8f8f8 1%,#f8f8f8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#f8f8f8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:10px}
+.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+.btnTop a:hover {opacity:1}
+.list_box_wrap {padding:0 20px 20px 20px;min-width:1000px}
+.tabs {background-color:#499ee0;position:fixed;top:0;right:0;left:0;z-index:49}
+.tabs .logo {position:absolute;width:150px;top:0;left:0;height:50px;line-height:50px;color:#fff;text-align:center;background-color:#000;font-size:16px}
+.tabs ul {overflow:hidden;margin-left:150px}
+.tabs ul li {float:left;width:200px}
+.tabs ul li a {display:block;text-align:center;height:50px;line-height:50px;color:#fff;font-size:13px;position:relative}
+.tabs ul li a.active {background-color:#3484d2}
+.tabs ul li a:after {content:'';position:absolute;top:0;right:0;bottom:0;width:1px;background-color:rgba(255,255,255,.3)}
+
+.h1_type {font-size:18px;color:#000;margin:0 0 10px 0;padding-top:60px;font-family:'notokr-bold'}
+.h2 {background-color:#e8f6f9;margin:0 -20px;height:30px;line-height:30px;padding:0 20px;margin-bottom:10px}
+.box_wrap {border:1px solid #ddd;padding:0 20px 20px 20px;background-color:#fff}
+.s_wrap + .h2_type {margin-top:15px}
+.s_wrap ul li {padding-left:10px;position:relative}
+.s_wrap ul li:before {content:'';display:block;width:3px;height:3px;border-radius:50%;background-color:#555;position:absolute;top:10px;left:0}
+.s_wrap ul li strong {display:inline-block;width:100px;color:#000;}
+.s_wrap ul li span {color:#f34a00}
+.s_wrap ul li + li, .s_wrap ol li + li {margin-top:5px}
+.s_wrap p + ol {margin-top:10px}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.btnTop').click(function(){
+        $('html, body').animate({scrollTop : 0},300);
+    });
+
+    redrawDotNav();
+    /* Scroll event handler */
+    $(window).bind('scroll',function(e){
+        redrawDotNav();
+    });
+    
+    /* Next/prev and primary nav btn click handlers */
+    $('.tab_nav a.p01').click(function(){
+        $('html, body').animate({
+            scrollTop:0
+        }, 300);
+        return false;
+    });
+    $('.tab_nav a.p02').click(function(){
+        $('html, body').animate({
+            scrollTop:$('#group02').offset().top
+        }, 300);
+        return false;
+    });
+    $('.tab_nav a.p03').click(function(){
+        $('html, body').animate({
+            scrollTop:$('#group03').offset().top
+        }, 300);
+        return false;
+    });
+});
+
+/* Set navigation dots to an active state as the user scrolls */
+function redrawDotNav(){
+    var section1Top =  0;
+    // The top of each section is offset by half the distance to the previous section.
+    var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+    var section3Top =  $('#group03').offset().top - (($(document).height() - $('#group03').offset().top) / 1);;
+    $('.tab_nav a').removeClass('active');
+    $('.product_section').removeClass('onbg');
+    if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+        $('.tab_nav a.p01').addClass('active');
+    } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+        $('.tab_nav a.p02').addClass('active');
+    } else if ($(document).scrollTop() >= section3Top){
+        $('.tab_nav a.p03').addClass('active');
+    }
+}
+</script>
+</head>
+<body>
+<div class="tabs">
+    <p class="logo">COINCRUSH</p>
+    <ul class="tab_nav">
+        <li><a href="#group01" class="p01">HTML</a></li>
+        <li><a href="#group02" class="p02">CSS</a></li>
+        <li><a href="#group03" class="p03">Image</a></li>
+    </ul>
+</div>
+<div class="list_box_wrap">
+    <div id="group01" class="group_wrap">
+        <p class="h1_type">HTML</p>
+        <div class="box_wrap">
+            <p class="h2">Syntax</p>
+            <div class="s_wrap">
+                <ul>
+                    <li>indent : 탭(tab)을 사용</li>
+                    <li>nested 된 element는 반드시 indent를 줌</li>
+                    <li>attribute에는 double Quotation("")를 사용</li>
+                    <li>Less Than(&lt;), Greater Than(&gt;), Ampersand(&amp;) 기호에 html 엔터티를 사용</li>
+                </ul>
+            </div>
+            <p class="h2">doctype</p>
+            <div class="s_wrap">
+                <p>doctype은 html5로 지정 &lt;!DOCTYPE html&gt;</p>
+            </div>
+            <p class="h2">language 속성</p>
+            <div class="s_wrap">
+                <p>&lt;html lang="ko"&gt;</p>
+            </div>
+            <p class="h2">IE 호환성</p>
+            <div class="s_wrap">
+                <p>IE 최신버전 모드에서 작동하도록 아래 메타 태그를 작성<br>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</p>
+            </div>
+            <p class="h2">인코딩</p>
+            <div class="s_wrap">
+                <p>&lt;meta charset="utf-8"&gt;</p>
+            </div>
+        </div>
+    </div>
+    <div id="group02" class="group_wrap">
+        <p class="h1_type">CSS</p>
+        <div class="box_wrap">
+            <p class="h2">Syntax</p>
+            <div class="s_wrap">
+                <ul>
+                    <li>indent : 탭(tab)을 사용</li>
+                    <li>여러 셀렉터를 하나에 쓸 경우, 한 중에 하나의 셀렉터 사용</li>
+                    <li>{앞뒤에 한칸 띄우지 않음}</li>
+                    <li>:뒤에 한칸 띄우지 않음</li>
+                    <li>콤마(,) 다음에 한칸 띄우기</li>
+                    <li>rgb(), rgba(), hsl(), hsla(), rect()안의 콤마(,)는 띄어쓰기 하지 않음</li>
+                    <li>소수점 0으로 시작하는 value는 0을 생략 0.5대신 .5사용</li>
+                    <li>속성 값이 '0'이면 단위를 생략</li>
+                    <li>색상값은 단축 표기하지 않음. (IE의 Gradation을 적용할 경우 색상값이 적용되지 않는 경우가 있음)</li>
+                </ul>
+            </div>
+            <p class="h2">선언순서</p>
+            <div class="s_wrap">
+                <p>선언의 순서는 아래와 같이 그룹핑</p>
+                <ol>
+                    <li>1. 위치관련(position, top, right, bottom, left, z-index)</li>
+                    <li>2. 박스모델 관련(display, float, width, height, margin, padding)</li>
+                    <li>3. 타이포그래피(font, line-height, color, text-align)</li>
+                    <li>4. 시각효과(background, border)</li>
+                    <li>5. 기타(opacity)</li>
+                </ol>
+            </div>
+            <p class="h2">@import 사용 지양</p>
+            <div class="s_wrap">
+                <p>css내에 @import는 성능을 저하시키므로 여러개의 css를 link</p>
+            </div>
+            <p class="h2">id/class 사용</p>
+            <div class="s_wrap">
+                <p>레이아웃을 제외하고 가급적 id 사용은 지양</p>
+            </div>
+            <p class="h2">css 파일 구조</p>
+            <div class="s_wrap">
+                <ul>
+                    <li><strong>common.css</strong>: html 기본 속성값 초기화/공통 설정값(H tag, Button, Form, table, ul list)</li>
+                    <li><strong>layout.css</strong>: 사이트 레이아웃 요소</li>
+                    <li><strong>main.css</strong>: 메인 전용</li>
+                    <li><strong>product.css</strong>: 상품목록 및 상세</li>
+                    <li><strong>order.css</strong>: 주문/결제 관련</li>
+                    <li><strong>member.css</strong>: 회원가입/로그인/마이페이지</li>
+                    <li><strong>customer.css</strong>: 고객센터</li>
+                    <li><strong>popup.css</strong>: 팝업관련</li>
+                </ul>
+            </div>
+            <p class="h2">id/class 명명 규칙</p>
+            <div class="s_wrap">
+                <ul>
+                    <li>-(하이픈)은 가능하면 사용하지 않고 _(언더바)를 사용한다.</li>
+                    <li>id는 camelcase 방식을 사용하고 class는 underscore 방식을 사용한다.<br><span>ex) id="boxWrap" class="small_box"</span></li>
+                    <li>id, class naming 은 가능하면 중복되지 않게 생성한다.</li>
+                    <li>naming은 형태_의미_상태 순서로 조합하며 3단계를 넘어가지 않도록 한다.<br><span>ex) btn_modify_on, box_info, dot_list</span></li>
+                    <li>거의 같은 형태에서 미묘한 변경이 있는 경우 다중 class를 적용한다<br><span>ex) class="bullet_list" class="bullet_list type2"</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="group03" class="group_wrap" style="padding-bottom:100px">
+        <p class="h1_type">Image</p>
+        <div class="box_wrap">
+            <p class="h2">image 폴더 구조</p>
+            <div class="s_wrap">
+                <ul>
+                    <li><strong>common</strong>: header, footer영역과 같이 공통으로 사용되는 이미지</li>
+                    <li><strong>main</strong>: 메인에 사용되는 이미지</li>
+                    <li><strong>product</strong>: 상품목록 및 상세에 사용되는 이미지</li>
+                    <li><strong>order</strong>: 주문/결제 관련에 사용되는 이미지</li>
+                    <li><strong>member</strong>: 회원가입/로그인/마이페이지에 사용되는 이미지</li>
+                    <li><strong>customer</strong>: 고객센터에 사용되는 이미지</li>
+                    <li><strong>temp</strong>: 실제 반영되지 않을 샘플 이미지</li>
+                </ul>
+            </div>
+            <p class="h2">image 명명 규칙</p>
+            <div class="s_wrap">
+                <ul>
+                    <li>-(하이픈)은 가능하면 사용하지 않고 _(언더바)를 사용한다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btnTop"><a href="#;">top</a></div>
+</body>
+</html>

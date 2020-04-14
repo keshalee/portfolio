@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/* ico */
+.ico_mem {font-size:0;line-height:0}
+.ico_mem, .ico_mema:after, .ico_memb:before {content:'';display:inline-block;overflow:hidden;background-image:url('../images/common/ico_member.png');background-repeat:no-repeat}
+.ico_memb.join_type_to:before {width:50px;height:50px;background-position:0 0} /* 회원가입(통합) */
+.ico_memb.join_type_lo:before {width:50px;height:50px;background-position:-60px 0} /* 회원가입(내국인) */
+.ico_memb.join_type_fo:before {width:50px;height:50px;background-position:-120px 0} /* 회원가입(외국인) */
+.ico_memb.join_login_na:before {width:20px;height:20px;background-position:0 -60px} /* 회원가입 > 간편로그인(naver) */
+.ico_memb.join_login_fa:before {width:13px;height:24px;background-position:-30px -60px} /* 회원가입 > 간편로그인(facebook) */
+.ico_memb.join_login_ka:before {width:27px;height:27px;background-position:-50px -60px} /* 회원가입 > 간편로그인(kakaotalk) */
+.ico_memb.join_bene_01:before {width:34px;height:34px;background-position:0 -90px} /* 회원가입 > 회원혜택안내 */
+.ico_memb.join_bene_02:before {width:34px;height:34px;background-position:-50px -90px} /* 회원가입 > 회원혜택안내 */
+.ico_memb.join_bene_03:before {width:34px;height:34px;background-position:-100px -90px} /* 회원가입 > 회원혜택안내 */
+.ico_memb.join_bene_04:before {width:34px;height:34px;background-position:-150px -90px} /* 회원가입 > 회원혜택안내 */
+.ico_memb.join_bene_05:before {width:34px;height:34px;background-position:-200px -90px} /* 회원가입 > 회원혜택안내 */
+.ico_memb.step01:before {background-position:0 -130px} /* stet01 */
+.ico_memb.step02:before {background-position:-40px -130px} /* stet02 */
+.ico_memb.step03:before {background-position:-80px -130px} /* stet03 */
+.ico_memb.step04:before {background-position:-120px -130px} /* stet04 */
+.ico_mema.check:after {width:22px;height:22px;"html/popup/login.html"background-position:-80px -60px} /* 회원가입 체크표시 */
+.ico_memb.certi01:before {width:50px;height:50px;background-position:-50px -170px} /* 본인인증(휴대폰인증) */
+.ico_memb.certi02:before {width:50px;height:50px;background-position:-100px -170px} /* 본인인증(아이핀인증) */
+.ico_memb.certi03:before {width:50px;height:50px;background-position:0 -170px} /* 본인인증(회원정보인증) */
+.ico_memb.certi04:before {width:50px;height:50px;background-position:-50px -170px} /* 본인인증(sns인증) */
+.ico_memb.certi05:before {width:50px;height:50px;background-position:0 -170px} /* 본인인증(email인증) */
+.ico_memb.s_na:before {background-position:-120px -60px} /* 로그인버튼 (naver) */
+.ico_memb.s_fa:before {background-position:-150px -60px} /* 로그인버튼 (facebook) */
+.ico_memb.s_ka:before {background-position:-180px -60px} /* 로그인버튼 (kakaotalk) */
+.ico_memb.join_end:before {width:90px;height:90px;background-position:0 -230px} /* 가입완료 */
+/* 로그인 */
+.login_wrap{width:100%; max-width:450px;margin:0 auto;padding:30px 20px; background:#fff;box-shadow:2px 2px 4px rgba(136,136,136,.1);border:1px solid #e5e5e5}
+.login_wrap .h1_type{text-align:center;padding:0 0 10px 0;font-size:32px;color:#333}
+.id_save {position:relative;margin-top:10px}
+.id_save .checkbox label {color:#666666;font-size:14px}
+.id_save .find_idpw {position:absolute;top:0;right:0}
+.id_save .find_idpw a {display:inline-block;margin-left:10px;font-size:14px;text-decoration:underline}
+.dang_type {margin:8px 12px 14px 12px;line-height:16px}
+.d_txt {color:#ff5959}
+.btn_login {margin-top:22px}
+.btn_login button {width:100%}
+.txt_btn {padding-top:20px;margin-top:20px;border-top:1px solid #e5e5e5}
+.txt_btn p {position:relative;font-size:14px;line-height:40px}
+.txt_btn p + p {margin-top:10px}
+.txt_btn .btn_basic {min-width:80px;text-align:center; display:block; }
+.robot {margin:30px 0 30px 0;width:100%; max-width:380px;text-align:center}
+
+@media (min-width:640px) {
+    .login_wrap { padding:30px; }
+    .sub_container > .margin { margin:125px auto; }
+    .txt_btn .btn_basic {position:absolute;top:0;right:0;min-width:120px;text-align:center; display:inline-block; }
+}
+
+/* 회원가입 */
+
+@media (min-width:0) {
+    .container01 {width:100%; max-width:900px;margin:0 auto;background:#fff;box-shadow:2px 2px 4px rgba(136,136,136,.1);border:1px solid #e5e5e5}
+    .con_stit{padding:40px 10px 30px;text-align:center;width:100%; max-width:850px;margin:0 auto;border-bottom:1px solid #e5e5e5;}
+    .join_wrap {width:100%; max-width:840px;margin:0 auto;padding:0 10px 50px}
+    .join_wrap table{background:#fff;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5}
+    .join_wrap table .col1 { width:120px; }
+    .join_wrap table .col2 { width:auto; }
+    .tb_write01 th { font-size:14px; }
+    .tb_join tr:nth-child(1) td input { width:100%; max-width:145px; }
+    .join_wrap .h2_type {margin-top:30px;text-align:center}
+    .join_wrap h3{text-align:center}
+    .join_wrap .h3_type {font-size: 20px; color: #333333; padding:20px 0 5px;
+     font-family: 'NotoSansKR-Medium';letter-spacing: -.1em;text-align:left}
+    .join_wrap .h2{text-align:center}
+    .join_wrap .h4_type + .f_size01 {margin-top:50px}
+    .join_wrap .message_box {background:#f8f8f8;width:100%;max-width:650px;margin:0 auto;padding:30px 0 30px 0}
+    .join_wrap .mg_t{margin-top:30px}
+    .t_error {padding:0 0 0px 10px;color:#ff5959;font-size:12px}
+    .join_row {position:relative;min-height:58px;border:1px solid #e1e1e1;line-height:58px}
+    .join_row.active,
+    .join_row .join_col.active {z-index:2;border-color:#499ee0}
+    .join_row:after,
+    .join_col:after {content:'';display:block;clear:both}
+    .join_row.with_btn {padding-right:120px}
+    .join_row.with_btn2 {padding-right:160px}
+    .join_row.with_btn a,
+    .join_row.with_btn2 a {position:absolute;right:19px;top:19px}
+    .join_row input[type="text"], 
+    .join_row input[type="email"],
+    .join_row input[type="password"] {height:40px;border:none;width:98%;padding-left:20px;line-height:40px;font-size:16px}
+    .join_row.placeholder_wrap label {position:absolute;top:5px;left:20px;line-height:40px;font-size:16px;color:#999999}
+    .join_row.placeholder_wrap label span {padding-left:10px;font-size:13px}
+    .join_form .join_row ~ .join_row {margin-top:-1px}
+    .join_form .select {border:none !important}
+    .join_row .ui-selectmenu-button.ui-button {height:60px;width:100%;padding:0 10px 0 10px}
+    .join_row .ui-selectmenu-icon.ui-icon {margin-top:26px;width:13px;height:8px;background-position:-270px -260px}
+    .join_row .ui-selectmenu-button.ui-button {line-height:58px}
+    .join_row .ui-selectmenu-text {font-size:16px}
+    .join_row.blocks {margin-right:-2px;border:none}
+    .join_row.blocks2 .join_col {border:none;margin:0}
+    .join_row.blocks2.dis {background-color:#f2f2f2}
+    .join_row.blocks.select {margin-right:-1px}
+    .join_row .join_col {position:relative;float:left;margin-right:-1px;min-height:60px;border:1px solid #e1e1e1}
+    .join_row .join_col .join_cols {position:relative;float:left}
+    .join_row .join_col:last-child {margin-right:0}
+    .join_row .join_col.select {margin-left:0}
+    .join_row.blocks_tb {display:table;width:100%;border:none}
+    .join_row.blocks_tb .join_col {display:table-cell;float:none;vertical-align:top}
+    .join_row.blocks_tb .join_col ~ .join_col {border-left-color:transparent}
+    .join_row.blocks_tb .join_col.active {border-color:#f91955}
+    .join_row .w01 {width:67%}
+    .join_row .w02 {width:33%}
+    .join_row .w03 {width:50%}
+    .join_row .w04 {width:35%}
+    .join_row .w05 {width:30%}
+    .join_row .w06 {width:55%}
+    .join_row .w07 {width:45%}
+    .join_row .w08 {width:25%}
+    .join_row .w09 {width:75%}
+    .join_row .w10 {width:40%}
+    .join_row .w11 {width:100%}
+    .join_row .with_txt {padding-right:40px}
+    .join_row .with_txt2 {padding-right:60px}
+    .join_row .posi_right {position:absolute;top:0;right:0;width:40px;text-align:center;line-height:58px;color:#333333;font-size:16px}
+    .join_row.with_txt2 .posi_right {width:60px}
+    .join_row .ui-button:hover {position:relative;z-index:2}
+    .join_row .ui-datepicker-trigger {position:absolute;top:19px;right:26px;margin-top:0}
+    .join_row .checkbox {display:inline-block;margin:5px 0 5px 20px}
+    .join_row .checkbox ~ .checkbox {margin-left:25px}
+    .join_row .checkbox label {font-size:16px}
+    .ie9 .join_row .join_col.select {margin-left:-1px}
+    .join_end {position:relative;margin-top:0px;text-align:center;}
+    .join_end:before {position:absolute;top:0;left:63px}
+    .join_end .welcome {font-size:18px;color:#333333;padding:0 0 20px 0}
+    .join_end .join_etxt {margin-top:15px;font-size:14px;line-height:24px}
+    .join_end .email {color:#f91955}
+    .basic_btn_box {margin-top:20px}
+    
+    .join_wrap .tb_join button { min-width:80px; }
+    .join_wrap button.mgtss { margin-top:5px; }
+    
+}
+@media (min-width:640px) {
+	.join_wrap .tb_join tr td input { width:100%; max-width:200px; }
+	.join_wrap .type_view:nth-child(4) tr td input { width:100%; max-width:200px; }
+	.join_wrap .type_view:nth-child(6) tr:nth-child(2) td input { width:100%; max-width:200px; }
+	.join_wrap .tb_join:nth-child(1) tr:nth-child(1) td input { max-width:145px; }
+    .join_wrap .mgtss { display:inline-block; margin-top:0; margin-left:5px; }
+}
+@media (min-width:768px) {
+    .join_wrap table .col1 { width:140px; }
+    
+    .join_row .ui-selectmenu-button.ui-button {padding:0 30px 0 20px}
+}
+@media (min-width:992px) {
+    .join_wrap table .col1 { width:160px; }
+}
+
+@media (max-width:640px) {
+    .tb_write01 td { padding:5px 10px; }
+    
+    .join_wrap .tb_join tr:nth-child(1) input { width:calc(50% - 6.5px); float:left; margin-bottom:5px; }
+    .join_wrap .tb_join tr:nth-child(1) .gap { width:11px; text-align:center; height:40px; line-height:40px; display:inline-block; float:left; }
+    .join_wrap .tb_join tr:nth-child(1) .ui-selectmenu-button.ui-button { margin-left:0; width:calc(100% - 95px); float:left; }
+    
+    .t_error { display:block; padding:0; font-size:12px; }
+    
+    .join_row .checkbox { margin:5px 0 5px 10px; }
+    .join_row.with_btn { padding-right:40px; }
+    .join_row .checkbox label { font-size:14px; }
+    .join_row.with_btn a, .join_row.with_btn2 a { right:10px; top:22px; padding:0 10px; }
+    
+    .w_s { width:63px; }
+    .tb_write01 .gap {  margin:0 1px; }
+}
+
+/* 선택 박스 공통 */
+.choice_box:after {content:'';display:block;clear:both}
+.choice_box {margin-left:-7px}
+.choice_box li {position:relative;float:left;width:211px;margin-left:7px;text-align:center}
+.choice_box li > a {position:relative;display:block;height:160px;font-size:16px;color:#333333;border:1px solid #ddd}
+.choice_box li > a:after {position:absolute;display:none;top:15px;right:15px}
+.choice_box li > a:hover {border-color:#499ee0;box-shadow:none}
+.choice_box li > a:hover:after {display:block}
+.choice_box.two {margin-right:-10px;margin-left:-10px}
+
+
+@media (min-width:0) {
+    .choice_box.two li { width:calc(50% - 7px); }
+}
+
+/* 회원가입 메인 */
+.join_wrap .simple_group {margin-top:50px}
+.join_wrap .simple_group .h2_type {margin-top:50px;margin-bottom:17px;font-size:24px;text-align:left;}
+.join_wrap .simple_group .simple_login:after {content:'';display:block;clear:both}
+.join_wrap .simple_group .simple_login {margin:17px -7px 0 0 }
+.join_wrap .simple_group .simple_login li {position:relative;float:left;width:202px;margin-right:7px;text-align:center;border:1px solid #b2b2b2;}
+.join_wrap .simple_group .simple_login li a {display:block;height:48px;line-height:48px;font-size:16px;}
+.join_wrap .simple_group .simple_login li a:before {position:absolute}
+.join_wrap .simple_group .simple_login .ico_memb.join_login_na:before {top:16px;left:14px;}
+.join_wrap .simple_group .simple_login .ico_memb.join_login_fa:before {top:12px;left:17px;}
+.join_wrap .simple_group .simple_login .ico_memb.join_login_ka:before {top:11px;left:10px;}
+
+.join_wrap .benefit_group {margin-top:60px;padding-top:55px;border-top:1px solid #e6e6e6}
+.join_wrap .benefit_group {padding-bottom:60px}
+.join_wrap .benefit_group .benefit_info:after {content:'';display:block;clear:both}
+.join_wrap .benefit_group .benefit_info {margin:32px -15px 0 -15px}
+.join_wrap .benefit_group .benefit_info li {position:relative;float:left;width:100px;height:100px;margin:0 15px;text-align:center;line-height:18px;font-size:14px}
+.join_wrap .benefit_group .benefit_info li:before {display:block;margin:0 auto 15px auto}
+
+/* 회원가입 STEP */
+.join_step {margin-top:60px}
+.join_step ol:after {content:'';display:block;clear:both}
+.join_step ol li {position:relative;float:left;width:25%;height:65px;padding-left:63px;color:#999999;font-size:12px;border-bottom:2px solid #e1e1e1}
+.join_step ol li em {display:block;font-size:18px}
+.join_step ol li:before {position:absolute;left:20px;top:3px;width:34px;height:34px;opacity:.5}
+.join_step ol li.pass {border-color:#f91955}
+.join_step ol li.active {border-color:#f91955}
+.join_step ol li.active em {color:#333333}
+.join_step ol li.active:before {opacity:1;}
+.join_step ol li.active:after {content:'';position:absolute;right:0;bottom:0;display:block;width:17px;height:15px;overflow:hidden;background:url('../images/common/ico_member.png') no-repeat -160px -130px}
+
+.all_agree {margin-top:30px}
+.step_agree {padding-bottom:12px;margin-top:18px}
+.step_agree_box {height:170px;overflow-x:hidden;overflow-y:auto;border:1px solid #e6e6e6}
+.step_agree_box + .step_agree {margin-top:60px}
+
+/* 본인인증 */
+.certi .choice_box {margin-top:17px}
+.certi .choice_box li a {line-height:158px}
+.certi .choice_box li .ico_memb:before {width:50px;height:50px;margin:0 6px -15px 5px}
+
+/* 회원가입 언어선택 */
+.lang_group .choice_box {margin-top:45px}
+.lang_group .choice_box li > a {height:220px}
+.lang_group .choice_box li > a .big {margin-top:60px;font-size:40px;letter-spacing:0}
+.lang_group .choice_box li > a .big.fcn {line-height:58px}
+.lang_group .choice_box li > a .big.fcn span {line-height:26px}
+.lang_group .choice_box li > a .big span {display:block;color:#f91955;font-size:16px}
+
+/* 로그인 아이디찾기 */
+.join_wrap .tp_ct{padding:20px 0 0 0}
+.join_wrap .find_id {margin:35px 0 0 0}
+.find_id .choice_box {margin-top:17px}
+.find_id .choice_box li .ico_memb:before {display:block;width:50px;height:50px;margin:36px auto 16px auto}
+.join_txt {font-size:18px;color:#333333;letter-spacing:-.1em;text-align:center}
+.join_txt .btn_basic {margin-left:20px}
+.join_wrap .cert_gap {text-decoration:underline;margin-left:30px;}
+
+.gray_box01 {background:#f7f7f7;font-size:16px;color:#333333;text-align:center;padding:40px 0;margin:15px 0 0 0}
+.gray_box01 .g_txt {color:#f91955;}
+
+.join_wrap .find_two_type {margin:40px 0 0 0;position:relative;border:1px solid #e5e5e5;border-top:2px solid #565b5f;padding:26px 0 28px;}
+.join_wrap .find_two_type:after {content:'';display:block;clear:both;position:absolute;top:50%;left:50%;margin-top:-34px;background:#e5e5e5;width:1px;height:73px;}
+.join_wrap .find_two_type ul:after {content:'';display:block;clear:both;}
+.join_wrap .find_two_type ul li {float:left;width:50%;text-align:center;font-size:14px;}
+.join_wrap .find_two_type .t_gap01 {margin-bottom:17px;}
+
+@media (min-width:0) {
+    .find_id .choice_box li { width:100%; margin-bottom:5px; }
+/*    .find_id .choice_box.two li { width:calc(50% - 7px); margin-bottom:0; }*/
+}
+@media (min-width:640px) {
+    .find_id .choice_box li { width:calc(33.33% - 7px); margin-bottom:0; }
+    
+}
+
+/* 테이블 모바일 */
+@media (max-width:640px) {
+    .tb_write01.type01 .col1 { width:100%; display:block; }
+    .tb_write01.type01 .col2 { width:100%; display:block; }
+    .tb_write01.type01 th { width:100%; display:block; border-right:0 none; border-top:0 none; }
+    .tb_write01.type01 tr:nth-child(1) th { border-top:1px solid #e5e5e5; }
+    .tb_write01.type01 td { width:100%; display:block; border:0 none; border-bottom:1px solid #e5e5e5; }
+    .tb_write01.type01 td input { width:60%; max-width:200px; }
+    .tb_write01.type01 td .w_s { width:25%; max-width:70px; }
+    .tb_write01.type01 td input.btn_basic { max-width:100px; min-width:auto; padding:0; text-align:center; }
+}
+@media (max-width:640px) {
+    .tb_write01.type02 .col1 { width:100%; display:block; }
+    .tb_write01.type02 .col2 { width:100%; display:block; }
+    .tb_write01.type02 { border:0 none; }
+    .tb_write01.type02 tr { border:0 none; }
+    .tb_write01.type02 th { width:100%; display:block; border:0 none; background-color:transparent; padding:5px 8px; color:#666; }
+
+    .tb_write01.type02 td { width:100%; display:block; border:0 none; padding:0 5px; }
+    .tb_write01.type02 td input { width:60%; max-width:200px; }
+    .tb_write01.type02 td .w_s { width:25%; max-width:90px; }
+}
+
+/**************************************************
+*   browser css
+**************************************************/
+@media (min-width:0) {
+	.safari .tb_write01.type01 td { overflow:hidden; }
+	.chrome .tb_write01.type01 td { overflow:hidden; }
+}

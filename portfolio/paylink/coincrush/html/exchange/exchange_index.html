@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- JS -->
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/exchange.css">
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="../../images/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/common/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="contents_wrap"> 
+	    <div class="container">
+            <div class="c_b coin_wrap">
+                <div class="flbox">
+                    <!-- S : ticker_box -->
+                    <article class="ticker_box">
+                        <div class="list_wrap">
+                            <h2><a href="javascript:void(0);" class="btn_list_pop">ETH / KRW <i class="ico_com ar05"></i></a></h2>
+                            <div class="layer_market_list">
+                                <div class="market_tab tab_type01">
+                                    <ul>
+                                        <li><a href="javascript:void(0);" title="market_tab1"><i class="ico_com star"></i></a></li>
+                                        <li><a href="javascript:void(0);" title="market_tab2" class="active">KRW</a></li>
+                                        <li><a href="javascript:void(0);" title="market_tab3">ETH</a></li>
+                                        <li><a href="javascript:void(0);" title="market_tab4">CoinCrush</a></li>
+                                    </ul>
+                                    <div class="sh_wrap small">
+                                        <form action="">
+                                            <fieldset>
+                                                <legend>코인 검색</legend>
+                                                <input type="text" value="" placeholder="검색어를 입력해주세요." />
+                                                <button type="button" class="ico_com btn_sh">검색</button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div id="market_tab1" class="tab_view_box">
+                                        <div class="inner_box">
+                                            <table class="ticker_table">
+                                                <colgroup>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                    <col class="col3">
+                                                    <col class="col4">
+                                                    <col class="col5">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">&nbsp;</th>
+                                                        <th scope="col">
+                                                            <p>코인</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>전일종가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>체결가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>등락률</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="responsive_table">
+                                                                <table class="ticker_list_table">
+                                                                    <colgroup>
+                                                                        <col class="col1">
+                                                                        <col class="col2">
+                                                                        <col class="col3">
+                                                                        <col class="col4">
+                                                                        <col class="col5">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td colspan="5" class="c_c">즐겨찾기 없음</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>EDEL/KRW</td>
+                                                                            <td>828</td>
+                                                                            <td>821</td>
+                                                                            <td class="tf_r">0.2&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>FIC/KRW</td>
+                                                                            <td>306</td>
+                                                                            <td>375</td>
+                                                                            <td class="tf_b">1.9&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_coin.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>BTC/ETH</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td>100.0&#37;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="market_tab2" class="tab_view_box block">
+                                        <div class="inner_box">
+                                            <table class="ticker_table">
+                                                <colgroup>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                    <col class="col3">
+                                                    <col class="col4">
+                                                    <col class="col5">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">&nbsp;</th>
+                                                        <th scope="col">
+                                                            <p>코인</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>전일종가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>체결가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>등락률</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="responsive_table">
+                                                                <table class="ticker_list_table">
+                                                                    <colgroup>
+                                                                        <col class="col1">
+                                                                        <col class="col2">
+                                                                        <col class="col3">
+                                                                        <col class="col4">
+                                                                        <col class="col5">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>BTC/KRW</td>
+                                                                            <td>1,000,000,000</td>
+                                                                            <td>1,000,000,000</td>
+                                                                            <td class="tf_r">100.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>XRP/KRW</td>
+                                                                            <td>357</td>
+                                                                            <td>326</td>
+                                                                            <td class="tf_b">0.7&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>QTUM/KRW</td>
+                                                                            <td>1,850</td>
+                                                                            <td>1,620</td>
+                                                                            <td class="tf_r">0.9&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>EDEL/KRW</td>
+                                                                            <td>828</td>
+                                                                            <td>821</td>
+                                                                            <td class="tf_b">0.2&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>EOSC/KRW</td>
+                                                                            <td>518</td>
+                                                                            <td>518</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>FIC/KRW</td>
+                                                                            <td>306</td>
+                                                                            <td>375</td>
+                                                                            <td class="tf_b">1.9&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>GPU/KRW</td>
+                                                                            <td>825</td>
+                                                                            <td>825</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>NADO/KRW</td>
+                                                                            <td>102</td>
+                                                                            <td>165</td>
+                                                                            <td class="tf_r">0.8&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>JBT/KRW</td>
+                                                                            <td>88</td>
+                                                                            <td>88</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>XRP/KRW</td>
+                                                                            <td>357</td>
+                                                                            <td>326</td>
+                                                                            <td class="tf_b">0.7&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>QTUM/KRW</td>
+                                                                            <td>1,850</td>
+                                                                            <td>1,620</td>
+                                                                            <td class="tf_r">0.9&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>EDEL/KRW</td>
+                                                                            <td>828</td>
+                                                                            <td>821</td>
+                                                                            <td class="tf_r">0.2&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>EOSC/KRW</td>
+                                                                            <td>518</td>
+                                                                            <td>518</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>FIC/KRW</td>
+                                                                            <td>306</td>
+                                                                            <td>375</td>
+                                                                            <td class="tf_b">1.9&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>GPU/KRW</td>
+                                                                            <td>825</td>
+                                                                            <td>825</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>NADO/KRW</td>
+                                                                            <td>102</td>
+                                                                            <td>165</td>
+                                                                            <td class="tf_b">0.8&#37;</td>
+                                                                        </tr>
+                                                                        <tr data-href="./exchange_index.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com star"></i></button></td>
+                                                                            <td>JBT/KRW</td>
+                                                                            <td>88</td>
+                                                                            <td>88</td>
+                                                                            <td>0.0&#37;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="market_tab3" class="tab_view_box">
+                                        <div class="inner_box">
+                                            <table class="ticker_table">
+                                                <colgroup>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                    <col class="col3">
+                                                    <col class="col4">
+                                                    <col class="col5">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">&nbsp;</th>
+                                                        <th scope="col">
+                                                            <p>코인</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>전일종가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>체결가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>등락률</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="responsive_table">
+                                                                <table class="ticker_list_table">
+                                                                    <colgroup>
+                                                                        <col class="col1">
+                                                                        <col class="col2">
+                                                                        <col class="col3">
+                                                                        <col class="col4">
+                                                                        <col class="col5">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr data-href="./exchange_coin.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>BTC/ETH</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td class="tf_b">100.0&#37;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="market_tab4" class="tab_view_box">
+                                        <div class="inner_box">
+                                            <table class="ticker_table">
+                                                <colgroup>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                    <col class="col3">
+                                                    <col class="col4">
+                                                    <col class="col5">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">&nbsp;</th>
+                                                        <th scope="col">
+                                                            <p>코인</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>전일종가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>체결가</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <p>등락률</p><span><a href="javascript:void(0);" class="ico_com up on">up</a><a href="javascript:void(0);" class="ico_com down">down</a></span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="responsive_table">
+                                                                <table class="ticker_list_table">
+                                                                    <colgroup>
+                                                                        <col class="col1">
+                                                                        <col class="col2">
+                                                                        <col class="col3">
+                                                                        <col class="col4">
+                                                                        <col class="col5">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr data-href="./exchange_coin.html">
+                                                                            <td><button type="button" onclick="event.stopPropagation();"><i class="ico_com staron"></i></button></td>
+                                                                            <td>COT/ETH</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td>12,345.11981478</td>
+                                                                            <td class="tf_b">100.0&#37;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner_box">
+                            <table>
+                                <caption>선택 코인</caption>
+                                <colgroup>
+                                    <col style="width:25%;">
+                                    <col style="width:36%;">
+                                    <col style="width:39%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="3"><img src="../../images/common/c_eth.png" alt="" /></th>
+                                        <td colspan="2" class="c_l">
+                                            <div class="amount">
+                                                <p>241.0368 ETH &#8776; &#8361;</p>
+                                                <p class="tf_b"> 156,000</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dl>
+                                                <dt>최고가</dt>
+                                                <dd>159,900</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>전일대비(&#37;)</dt>
+                                                <dd class="tf_r"><em>-3,600</em>&nbsp;&nbsp;(<span>-2.31</span>&#37;)</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dl>
+                                                <dt>최저가</dt>
+                                                <dd>155,000</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>거래량(24h)</dt>
+                                                <dd>242.1481</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- E : ticker_box -->
+                    
+                    <!-- S : order_book_box -->
+                    <article class="order_book_box">
+                        <h2>호가정보</h2>
+                        <div class="inner_box">
+                            <table class="depth_table hundred">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">수&nbsp;&nbsp;량</th>
+                                        <th scope="col">가&nbsp;&nbsp;격</th>
+                                        <th scope="col">%</th>
+                                        <th scope="col">누적량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div class="responsive_table">
+                                                <table class="sell_table">
+                                                    <colgroup>
+                                                        <col class="col1">
+                                                        <col class="col2">
+                                                        <col class="col3">
+                                                        <col class="col4">
+                                                    </colgroup>
+<!--
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>12,345.11981478</td>
+                                                            <td>5,000,000,000</td>
+                                                            <td class="sell_color"><em>100.1</em>&#37;</td>
+                                                            <td>12,345.15624852</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.45026512</td>
+                                                            <td>156,400</td>
+                                                            <td class="sell_color">2.1&#37;</td>
+                                                            <td>
+                                                                <p>0.28207010</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.38181532</td>
+                                                            <td>156,300</td>
+                                                            <td class="sell_color"><em>2.2</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.12028731</td>
+                                                            <td>156,200</td>
+                                                            <td class="sell_color"><em>2.3</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.42891976</td>
+                                                            <td>156,100</td>
+                                                            <td class="sell_color"><em>2.3</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.15346521</td>
+                                                            <td>156,000</td>
+                                                            <td class="sell_color"><em>2.4</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0.60531283</td>
+                                                            <td>155,900</td>
+                                                            <td class="sell_color"><em>2.5</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0.13665498</td>
+                                                            <td>155,800</td>
+                                                            <td class="sell_color"><em>2.7</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.33023147</td>
+                                                            <td>155,700</td>
+                                                            <td class="sell_color"><em>2.8</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.16255498</td>
+                                                            <td>155,600</td>
+                                                            <td class="sell_color"><em>2.9</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.81083256</td>
+                                                            <td>155,500</td>
+                                                            <td class="sell_color"><em>3.0</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.43852472</td>
+                                                            <td>155,400</td>
+                                                            <td class="sell_color"><em>3.1</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1.62382221</td>
+                                                            <td>155,300</td>
+                                                            <td class="sell_color"><em>3.2</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0.52162131</td>
+                                                            <td>155,200</td>
+                                                            <td class="sell_color"><em>3.3</em>&#37;</td>
+                                                            <td>0.03624522</td>
+                                                        </tr>
+                                                    </tbody>
+-->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>123,456,789.11981478</td>
+                                                            <td>9,999</td>
+                                                            <td class="sell_color"><em>100.1</em>&#37;</td>
+                                                            <td>123,456,789.15624852</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>38,853.19960717</td>
+                                                            <td>36</td>
+                                                            <td class="sell_color">2.1&#37;</td>
+                                                            <td>38,853.19960717</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>32,369.38181532</td>
+                                                            <td>34</td>
+                                                            <td class="sell_color"><em>2.2</em>&#37;</td>
+                                                            <td>32,695.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>45,695.12028731</td>
+                                                            <td>32</td>
+                                                            <td class="sell_color"><em>2.3</em>&#37;</td>
+                                                            <td>32,695.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>51,326.42891976</td>
+                                                            <td>30</td>
+                                                            <td class="sell_color"><em>2.3</em>&#37;</td>
+                                                            <td>12,658.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24,367.15346521</td>
+                                                            <td>28</td>
+                                                            <td class="sell_color"><em>2.4</em>&#37;</td>
+                                                            <td>13,652.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>26,859.60531283</td>
+                                                            <td>26</td>
+                                                            <td class="sell_color"><em>2.5</em>&#37;</td>
+                                                            <td>42,635.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16,365.13665498</td>
+                                                            <td>24</td>
+                                                            <td class="sell_color"><em>2.7</em>&#37;</td>
+                                                            <td>75,366.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>49,632.33023147</td>
+                                                            <td>22</td>
+                                                            <td class="sell_color"><em>2.8</em>&#37;</td>
+                                                            <td>43,629.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16,857.16255498</td>
+                                                            <td>20</td>
+                                                            <td class="sell_color"><em>2.9</em>&#37;</td>
+                                                            <td>75,698.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>49,635.81083256</td>
+                                                            <td>18</td>
+                                                            <td class="sell_color"><em>3.0</em>&#37;</td>
+                                                            <td>12,658.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24,365.43852472</td>
+                                                            <td>16</td>
+                                                            <td class="sell_color"><em>3.1</em>&#37;</td>
+                                                            <td>34,695.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>30,695.62382221</td>
+                                                            <td>14</td>
+                                                            <td class="sell_color"><em>3.2</em>&#37;</td>
+                                                            <td>42,695.03624522</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>45,635.52162131</td>
+                                                            <td>12</td>
+                                                            <td class="sell_color"><em>3.3</em>&#37;</td>
+                                                            <td>45,632.03624522</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="exchage_table">
+                                <tbody>
+                                    <tr>
+                                        <td class="sell_color"><em>30</em> KRW<span> (<i class="ico_com plus"></i>3.3&#37;)</span></td>
+                                    </tr>
+<!--
+                                    <tr>
+                                        <td><em>155,100</em> KRW<span> (<i class="ico_com blank"></i>3.3&#37;)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="buy_color"><em>155,100</em> KRW<span> (<i class="ico_com minus"></i>3.3&#37;)</span></td>
+                                    </tr>
+-->
+                                </tbody>
+                            </table>
+
+                            <div class="responsive_table margin_t_45">
+                                <table class="buy_table depth_table hundred">
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                        <col class="col3">
+                                        <col class="col4">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>26,598.28422477</td>
+                                            <td>10</td>
+                                            <td class="buy_color"><em>3.4</em>&#37;</td>
+                                            <td>65,935.03624522</td>
+                                        </tr>
+                                        <tr>
+                                            <td>42,365.19461331</td>
+                                            <td>8</td>
+                                            <td class="buy_color"><em>3.5</em>&#37;</td>
+                                            <td>63,524.03624522</td>
+                                        </tr>
+                                        <tr>
+                                            <td>35,695.37722111</td>
+                                            <td>6</td>
+                                            <td class="buy_color"><em>3.5</em>&#37;</td>
+                                            <td>73,625.03624522</td>
+                                        </tr>
+                                        <tr>
+                                            <td>42,369.09114522</td>
+                                            <td>4</td>
+                                            <td class="buy_color"><em>3.6</em>&#37;</td>
+                                            <td>46,956.03624522</td>
+                                        </tr>
+                                        <tr>
+                                            <td>85,215.11981651</td>
+                                            <td>2</td>
+                                            <td class="buy_color"><em>3.7</em>&#37;</td>
+                                            <td>12,635.03624522</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="buy_color">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- E : order_book_box -->
+                </div>
+                <div class="frbox">
+                    <!-- S:trade_chart_box -->
+                    <article class="trade_chart_box">
+                        <h2><span>ETH / KRW</span>
+<!--
+                            <span class="mode_change">
+                                <a href="javascript:void(0);" class="light_mode"><img src="../../images/exchange/icon_light.png" alt="" /></a>
+                                <a href="javascript:void(0);" class="dark_mode"><img src="../../images/exchange/icon_dark.png" alt="" /></a>
+                            </span>
+                            <span class="chart_change">
+                                <a href="javascript:void(0);" class="candle_mode"><span class="active">candle</span></a>
+                                <a href="javascript:void(0);" class="depth_mode"><span>depth</span></a>
+                            </span>
+-->
+                        </h2>
+                        <div class="candle_chart_box active">
+                            <div class="tradingview-widget-container" style="width:100%; height:437px;">
+                                <div id="tradingview_5e34b"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	<!--                              <script type="text/javascript" src="<c:url value='/js/charting_library/charting_library.min.js' />"></script> -->
+	<!--                              <script type="text/javascript" src="<c:url value='/js/datafeeds/udf/dist/polyfills.js' />"></script> -->
+	<!--                              <script type="text/javascript" src="<c:url value='/js/datafeeds/udf/dist/bundle.js' />"></script> -->
+	<!--                              <script type="text/javascript" src="<c:url value='/js/datafeeds/udf/dist/datafeed.js' />"></script> -->
+	<!--                              <script type="text/javascript" src="<c:url value='/V2/js/ballantine-0.1.js'/>"></script> -->
+	                            <script type="text/javascript">
+                                    function getParameterByName(name) {
+                                        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                                        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+                                        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                                    }
+                                    TradingView.onready(function() {
+                                        window.widget = new TradingView.widget({
+                                            "symbol": "ETHKRW",
+    //	                                    "symbol": "EXRATES:ANY/ETH",
+                                            "interval": "10",
+                                            "timezone": "Asia/Seoul",
+                                            "theme": "light",
+                                            "style": "1",
+                                            "locale": "ko",
+    //	                                    "toolbar_bg": "#1b262d",
+                                            "withdateranges": true,
+                                            "hide_side_toolbar": false,
+                                            "allow_symbol_change": true,
+                                            "details": false,
+                                            "enable_publishing": ["study_templates", "Create_volume_indicator_by_default", "Create_volume_indicator_by_default_once", "control_bar", "Volume_force_overlay"],
+                                            "disabled_features": ["header_saveload", "header_symbol_search", "header_screenshot", "timeframes_toolbar", "display_market_status", "cl_feed_return_all_data", "use_localstorage_for_settings"],
+                                            "container_id": "tradingview_5e34b",
+                                            //"datafeedUrl": 'https://demo_feed.tradingview.com',
+                                            //"libraryPath": '/charting_library/',
+                                            //"chartsStorageUrl": 'https://saveload.tradingview.com',
+                                            //"chartsStorageApiVersion": '1.1',
+                                            //"clientId": 'tradingview.com',
+                                            //"userId": 'public_user_id',
+                                            "overrides": {
+                                                // 참고 : https://b.aitrade.ga/books/tradingview/
+                                                // volume ?
+                                                /* "volumePaneSize": "large", // 적용되는 값: large, medium, small, tiny */
+
+                                                // 텍스트 편집기에서 사용할 수있는 글꼴 (예 :`Text` Drawing Tools Properties 대화 상자) 
+                                                /* "editorFontsList": ['Verdana', 'Courier New', 'Times New Roman', 'Arial'], */
+
+                                                /*
+                                                LINESTYLE_SOLID = 0 // 선 
+                                                LINESTYLE_DOTTED = 1 // 도트 
+                                                LINESTYLE_DASHED = 2 // 대시 
+                                                LINESTYLE_LARGE_DASHED = 3 // 큰 대시 
+                                                */
+                                                "paneProperties.background": "#000000", // 그리드 배경 ?
+                                                "paneProperties.vertGridProperties.color": "#e6e6e6", // 세로 그리드선 색상 (적용안됨) 
+                                                "paneProperties.vertGridProperties.style": 0, // 세로 그리드선 스타일 
+                                                "paneProperties.horzGridProperties.color": "#e6e6e6", // 가로 그리드선 색상 (적용안됨) 
+                                                "paneProperties.horzGridProperties.style": 0, // 가로 그리드선 스타일 
+                                                "paneProperties.crossHairProperties.color": "#989898", // 마우스 오버 크로스 선 색상  
+                                                "paneProperties.crossHairProperties.width": 1, // 마우스 오버 크로스 선 넓이 
+                                                "paneProperties.crossHairProperties.style": 2, // 마우스 오버 크로스 선 스타일 
+
+                                                /* "paneProperties.topMargin": 5, // top margin
+                                                "paneProperties.bottomMargin": 5, // bottom margin */
+
+                                                // 우측 하단 퍼센트, log, auto 부분...?
+                                                /* "paneProperties.axisProperties.autoScale": true, 
+                                                "paneProperties.axisProperties.lockScale": false, 
+                                                "paneProperties.axisProperties.percentage": true,
+                                                "paneProperties.axisProperties.indexedTo100": false,
+                                                "paneProperties.axisProperties.log": false,
+                                                "paneProperties.axisProperties.alignLabels": true,
+                                                "paneProperties.axisProperties.isInverted": false, */
+
+                                                // 차트 title 부분 
+                                                /* "paneProperties.legendProperties.showStudyArguments": true,
+                                                "paneProperties.legendProperties.showStudyTitles": true,
+                                                "paneProperties.legendProperties.showStudyValues": true,
+                                                "paneProperties.legendProperties.showSeriesTitle": true, // 차트 코인 종류, 지역, 데이터 지원사이트 노출여부 
+                                                "paneProperties.legendProperties.showSeriesOHLC": true, // 고가,저가, 종가 등 정보 노출여부 
+                                                "paneProperties.legendProperties.showLegend": true, // volume 타이틀 노출 여부 
+                                                "paneProperties.legendProperties.showBarChange": true,
+                                                "paneProperties.legendProperties.showOnlyPriceSource": true, */
+
+                                                // 가로 세로 범위라인 
+                                                "scalesProperties.backgroundColor": "#000", // 배경 (적용안됨)
+                                                "scalesProperties.fontSize": 11, // 가로, 세로 폰트 사이즈 
+                                                "scalesProperties.lineColor": "#ff0000", // 라인 색상 (적용안됨)
+                                                "scalesProperties.textColor": "#ff0000", // 글자 색상 (적용안됨)
+                                                "scalesProperties.scaleSeriesOnly": false,
+                                                "scalesProperties.showSeriesLastValue": true, // 마지막 거래가 표시여부 
+                                                "scalesProperties.showSeriesPrevCloseValue": false, 
+                                                "scalesProperties.showStudyLastValue": false,
+                                                "scalesProperties.showStudyPlotLabels": false,
+                                                "scalesProperties.showSymbolLabels": false,
+
+                                                // 시간대 ? 
+                                                /* "timeScale.rightOffset": 5,
+                                                "timezone": "Asia/Seoul",  //지원되는 표준 시간대 목록 (Symology 페이지의 표준 시간대)에 사용할 수있는 값보기 */
+
+                                                /*  
+                                                지원되는 값 
+                                                Bars = 0            
+                                                Candles = 1         
+                                                Line = 2            
+                                                Area = 3            
+                                                Heiken Ashi = 8     
+                                                Hollow Candles = 9  
+                                                Renko = 4           
+                                                Kagi = 5            
+                                                Point&Figure = 6    
+                                                Line Break = 7    
+                                                */
+                                                "mainSeriesProperties.style": 3,
+                                                "mainSeriesProperties.showCountdown": true,
+                                                "mainSeriesProperties.visible": true, // candle chart 노출여부 
+                                                "mainSeriesProperties.showPriceLine": true, // candle chart price line 가로 점선 
+                                                "mainSeriesProperties.priceLineWidth": 1, // price line 넓이 
+                                                "mainSeriesProperties.priceLineColor": '', // null값 - 매수, 매도 색상으로 적용 
+                                                "mainSeriesProperties.showPrevClosePriceLine": true,
+                                                "mainSeriesProperties.prevClosePriceLineWidth": 1,
+                                                "mainSeriesProperties.prevClosePriceLineColor": 'rgba( 85, 85, 85, 1)',
+
+                                                // ??
+                                                /* "mainSeriesProperties.lockScale": false,
+                                                "mainSeriesProperties.minTick": "default", */
+
+                                                // ??
+                                                /* "mainSeriesProperties.priceAxisProperties.autoScale": false, // (see #749)
+                                                "mainSeriesProperties.priceAxisProperties.autoScaleDisabled": false, // (see #749)
+                                                "mainSeriesProperties.priceAxisProperties.percentage": false,
+                                                "mainSeriesProperties.priceAxisProperties.percentageDisabled": false,
+                                                "mainSeriesProperties.priceAxisProperties.log": false,
+                                                "mainSeriesProperties.priceAxisProperties.logDisabled": false, */
+
+                                                // 다른 차트 유형 기본값
+                                                // candles
+                                                "mainSeriesProperties.candleStyle.upColor": "#116fd3", // 매도 색상 
+                                                "mainSeriesProperties.candleStyle.downColor": "#e33939", // 매수 색상 
+                                                "mainSeriesProperties.candleStyle.drawWick": true, // 위 아래 나온 선 노출여부 
+                                                "mainSeriesProperties.candleStyle.drawBorder": true, // 테두리 여부 
+                                                "mainSeriesProperties.candleStyle.borderColor": "#0e62bb", // 기본 테두리 색상  
+                                                "mainSeriesProperties.candleStyle.borderUpColor": "#0b56a5", // 매도 어두운 색상 
+                                                "mainSeriesProperties.candleStyle.borderDownColor": "#ac2f2f", // 매수 어두운 색상 
+                                                "mainSeriesProperties.candleStyle.wickUpColor": 'rgba( 115, 115, 117, 1)', // 위 나온 선 색상 
+                                                "mainSeriesProperties.candleStyle.wickDownColor": 'rgba( 115, 115, 117, 1)', // 아래 나온 선 색상
+                                                "mainSeriesProperties.candleStyle.barColorsOnPrevClose": false,
+
+                                                // hollow candles
+                                                /* "mainSeriesProperties.hollowCandleStyle.upColor": "#116fd3", // 매도 색상 
+                                                "mainSeriesProperties.hollowCandleStyle.downColor": "#e33939", // 매수 색상 
+                                                "mainSeriesProperties.hollowCandleStyle.drawWick": true, // 위 아래 나온 선 노출여부 
+                                                "mainSeriesProperties.hollowCandleStyle.drawBorder": true, // 테두리 여부 
+                                                "mainSeriesProperties.hollowCandleStyle.borderColor": "#0e62bb", // 기본 테두리 색상 
+                                                "mainSeriesProperties.hollowCandleStyle.borderUpColor": "#0b56a5", // 매도 어두운 색상 
+                                                "mainSeriesProperties.hollowCandleStyle.borderDownColor": "#ac2f2f", // 매수 어두운 색상 
+                                                "mainSeriesProperties.hollowCandleStyle.wickColor": "#737375", // 위 아래 나온 선 색상  */
+
+                                                // heikin ashi
+                                                /* "mainSeriesProperties.haStyle.upColor": "#116fd3", // 매도 색상 
+                                                "mainSeriesProperties.haStyle.downColor": "#e33939", // 매수 색상 
+                                                "mainSeriesProperties.haStyle.drawWick": true, // 위 아래 나온 선 노출여부 
+                                                "mainSeriesProperties.haStyle.drawBorder": true, // 테두리 여부 
+                                                "mainSeriesProperties.haStyle.borderColor": "#0e62bb", // 기본 테두리 색상 
+                                                "mainSeriesProperties.haStyle.borderUpColor": "#0b56a5", // 매도 어두운 색상 
+                                                "mainSeriesProperties.haStyle.borderDownColor": "#ac2f2f", // 매수 어두운 색상 
+                                                "mainSeriesProperties.haStyle.wickColor": "#737375", // 위 아래 나온 선 색상 
+                                                "mainSeriesProperties.haStyle.barColorsOnPrevClose": false, */
+
+                                                // bar
+                                                /* "mainSeriesProperties.barStyle.upColor": "#116fd3", // 매도 색상 
+                                                "mainSeriesProperties.barStyle.downColor": "#e33939", // 매수 색상 
+                                                "mainSeriesProperties.barStyle.barColorsOnPrevClose": false,
+                                                "mainSeriesProperties.barStyle.dontDrawOpen": false, */
+
+                                                // line 
+                                                /* "mainSeriesProperties.lineStyle.color": "#009e8f", // 라인 색상 
+                                                "mainSeriesProperties.lineStyle.linestyle": 0, // linestyle_solid 
+                                                "mainSeriesProperties.lineStyle.linewidth": 2, // line 넓이 
+                                                "mainSeriesProperties.lineStyle.priceSource": "close",  */
+
+                                                // area
+                                                /* "mainSeriesProperties.areaStyle.color1": "#009e8f", // 그라데이션 1 
+                                                "mainSeriesProperties.areaStyle.color2": "#01F6F5", // 그라데이션 2 
+                                                "mainSeriesProperties.areaStyle.linecolor": "#009e8f", // 라인 색상 
+                                                "mainSeriesProperties.areaStyle.linestyle": 0, // linestyle_solid 
+                                                "mainSeriesProperties.areaStyle.linewidth": 2, // line 넓이
+                                                "mainSeriesProperties.areaStyle.priceSource": "close", */
+
+                                                // baseline 
+                                                /* "mainSeriesProperties.baselineStyle.baselineColor": "rgba( 117, 134, 150, 1)", 
+                                                "mainSeriesProperties.baselineStyle.topFillColor1": "rgba( 83, 185, 135, 0.1)",
+                                                "mainSeriesProperties.baselineStyle.topFillColor2": "rgba( 83, 185, 135, 0.1)",
+                                                "mainSeriesProperties.baselineStyle.bottomFillColor1": "rgba( 235, 77, 92, 0.1)",
+                                                "mainSeriesProperties.baselineStyle.bottomFillColor2": "rgba( 235, 77, 92, 0.1)",
+                                                "mainSeriesProperties.baselineStyle.topLineColor": "rgba( 83, 185, 135, 1)",
+                                                "mainSeriesProperties.baselineStyle.bottomLineColor": "rgba( 235, 77, 92, 1)",
+                                                "mainSeriesProperties.baselineStyle.topLineWidth": 1,
+                                                "mainSeriesProperties.baselineStyle.bottomLineWidth": 1,
+                                                "mainSeriesProperties.baselineStyle.priceSource": "close",
+                                                "mainSeriesProperties.baselineStyle.transparency": 50,
+                                                "mainSeriesProperties.baselineStyle.baseLevelPercentage": 50,  */
+
+                                                // ??
+                                                "mainSeriesProperties.hiloStyle.color": "#ff0000",
+                                                "mainSeriesProperties.hiloStyle.showBorders": true,
+                                                "mainSeriesProperties.hiloStyle.borderColor": "#116fd3",
+                                                "mainSeriesProperties.hiloStyle.showLabels": true,
+                                                "mainSeriesProperties.hiloStyle.labelColor": "#116fd3",
+                                                "mainSeriesProperties.hiloStyle.fontFamily": 'Trebuchet MS',
+                                                "mainSeriesProperties.hiloStyle.fontSize": 7, 
+                                            },
+                                            "studies_overrides" : {
+                                                "volume.volume.color.0" : "#116fd3",
+                                                "volume.volume.color.1" : "#e43839",
+                                                "volume.volume.transparency" : 100,
+                                                "volume.volume ma.color" : "#e43839",
+                                                "volume.volume ma.transparency" : 100,
+                                                "volume.volume ma.linewidth" : 5,
+                                                "bollinger bands.median.color" : "#33FF88",
+                                                "bollinger bands.upper.linewidth" : 7
+                                            }
+                                        });
+
+                                        window.widget.onChartReady(function() {
+                                            window.widget.activeChart().removeAllStudies();
+                                            window.widget.activeChart().createStudy('Volume');
+                                            window.widget.activeChart().createStudy('Moving Average', false, false, [15, "close", 0], null, {"Plot.color" : "#3E68B8"});
+                                            window.widget.activeChart().createStudy('Moving Average', false, false, [60, "close", 0], null, {"Plot.color" : "#B8AD4A"});
+                                        });
+                                    });
+								</script>
+							</div>
+                        </div>
+                        <div class="depth_chart_box">
+                            <div class="chart_box" style="height:437px;">
+                                <iframe src="/ballantine/rchart/depthChart.do?coinType=ANY&unitCoin=ETH" width="100%" height="290px" scrolling="no" frameborder="0" id="depth"></iframe>
+                                <!-- height:290px -->
+                            </div>
+                        </div>
+                    </article>
+                    <!-- E:trade_chart_box -->
+                    
+                    <!-- S : balance_box -->
+<!--
+                    <article class="balance_box">
+                        <div class="inner_box">
+                            <div class="event_bn_slider">
+                                <ul class="bxslider">
+                                    <li><div class="event_bn event_bn_01"></div></li>
+                                    <li><div class="event_bn event_bn_02"></div></li>
+                                    <li><div class="event_bn event_bn_03"></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+-->
+                    <article class="balance_box">
+<!--                        <h2>보유잔액</h2>-->
+                        <div class="inner_box">
+                            <table class="balance_table">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">보유코인</th>
+                                        <th scope="col">거래가능</th>
+                                        <th scope="col">사용중</th>
+                                        <th scope="col">합계</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td colspan="4">
+                                        <div class="responsive_table">
+                                            <table class="balance_table">
+                                                <colgroup>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                    <col class="col3">
+                                                    <col class="col4">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="thumb"><img src="../../images/common/c_krw.png" alt="" /></span>KRW</td>
+                                                        <td>400,000,000</td>
+                                                        <td>100,000,000</td>
+                                                        <td>500,000,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- E : balance_box -->
+                    
+                    <!-- S : orderform_box -->
+                    <article class="order_form_box pc-only laptop-only">
+                        <div class="flbox">
+                            <h2>매&nbsp;&nbsp;수<button type="reset"><img src="../../images/exchange/refresh.png" alt="" /></button></h2>
+                            <div class="inner_box">
+                                <form>
+                                    <fieldset>
+                                        <dl>
+                                            <dt>주문형태</dt>
+                                            <dd>
+                                                <select id="orderSel" class="sel_type">
+                                                    <option selected="selected">지정가</option>
+                                                    <option>시장가</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>매수가</dt>
+                                            <dd>
+                                                <input type="text" name="unitRate" placeholder="0" required="required" autocomplete="off" />
+                                                <span>KRW</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>매수량</dt>
+                                            <dd>
+                                                <input type="text" name="coinAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                <span>ETH</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="price_bar_wrap">
+                                            <div class="price_data price_data1">
+                                                <div id="priceBar1"></div>
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>예상매수</dt>
+                                            <dd>
+                                                <input type="text" name="reqAmt" placeholder="0" required="required" readonly="true" autocomplete="off" />
+                                                <span>KRW</span>
+                                            </dd>
+                                            <dd style="float:right;font-size:12px;text-align:right;color:#777;margin-top:3px;">(수수료 포함)</dd>
+                                        </dl>
+                                        <div>
+                                            <button type="button" class="btn_basic btn_buy">매 수<!--로그인--></button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+<!--
+                            <div id="comptePop01" class="dialog" style="display:none;" title="주문완료">
+                                <div class="dialog_content">
+                                    <p class="txt01"><span class="sell_color">매수</span>거래가 요청되었습니다.</p>
+                                </div>
+                            </div>
+-->
+                        </div>
+                        <div class="frbox">
+                            <h2>매&nbsp;&nbsp;도<button type="reset"><img src="../../images/exchange/refresh.png" alt="" /></button></h2>
+                            <div class="inner_box">
+                                <form>
+                                    <fieldset>
+                                        <dl>
+                                            <dt>주문형태</dt>
+                                            <dd>
+                                                <select id="orderSel" class="sel_type">
+                                                    <option selected="selected">지정가</option>
+                                                    <option>시장가</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>매도가</dt>
+                                            <dd>
+                                                <input type="text" name="unitRate" placeholder="0" required="required" autocomplete="off" />
+                                                <span>KRW</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>매도량</dt>
+                                            <dd>
+                                                <input type="text" name="coinAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                <span>ETH</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="price_bar_wrap">
+                                            <div class="price_data price_data2">
+                                                <div id="priceBar2"></div>
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>예상매도</dt>
+                                            <dd>
+                                                <input type="text" name="reqAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                <span>KRW</span>
+                                            </dd>
+                                            <dd style="float:right;font-size:12px;text-align:right;color:#777;margin-top:3px;">(수수료 포함)</dd>
+                                        </dl>
+                                        <div>
+                                            <button type="button" class="btn_basic btn_sell">매 도<!-- 로그인 --></button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+<!--
+                            <div id="comptePop02" class="dialog" style="display:none;" title="주문완료">
+                                <div class="dialog_content">
+                                    <p class="txt01"><span class="buy_color">매도</span>거래가 요청되었습니다.</p>
+                                </div>
+                            </div>
+-->
+                        </div>
+                    </article>
+                    
+                    <article class="order_form_box mobile-only tablet-only">
+                        <div class="tab_type01 two">
+                            <ul>
+                                <li><a href="javascript:void(0);" class="active" title="tabBuy">매&nbsp;&nbsp;수</a><button type="reset"><img src="../../images/exchange/refresh.png" alt="" /></button></li>
+                                <li><a href="javascript:void(0);" title="tabSell">매&nbsp;&nbsp;도</a><button type="reset"><img src="../../images/exchange/refresh.png" alt="" /></button></li>
+                            </ul>
+                            <div id="tabBuy" class="tab_view_box block">
+                                <div class="inner_box">
+                                    <form>
+                                        <fieldset>
+                                            <dl>
+                                                <dt>주문형태</dt>
+                                                <dd>
+                                                    <select id="orderSel" class="sel_type">
+                                                        <option selected="selected">지정가</option>
+                                                        <option>시장가</option>
+                                                    </select>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>매수가</dt>
+                                                <dd>
+                                                    <input type="text" name="unitRate" placeholder="0" required="required" autocomplete="off" />
+                                                    <span>KRW</span>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>매수량</dt>
+                                                <dd>
+                                                    <input type="text" name="coinAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                    <span>ETH</span>
+                                                </dd>
+                                            </dl>
+                                            <div class="price_bar_wrap">
+                                                <div class="price_data price_data3">
+                                                    <div id="priceBar3"></div>
+                                                </div>
+                                            </div>
+                                            <dl>
+                                                <dt>예상매수</dt>
+                                                <dd>
+                                                    <input type="text" name="reqAmt" placeholder="0" required="required" autocomplete="off" />
+                                                    <span>KRW</span>
+                                                </dd>
+                                                <dd style="float:right;font-size:12px;text-align:right;color:#777;margin-top:3px;">(수수료 포함)</dd>
+                                            </dl>
+                                            <div>
+                                                <button type="button" class="btn_basic btn_buy">매 수<!--로그인--></button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="tabSell" class="tab_view_box">
+                                <div class="inner_box">
+                                    <form>
+                                        <fieldset>
+                                            <dl>
+                                                <dt>주문형태</dt>
+                                                <dd>
+                                                    <select id="orderSel" class="sel_type">
+                                                        <option selected="selected">지정가</option>
+                                                        <option>시장가</option>
+                                                    </select>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>매도가</dt>
+                                                <dd>
+                                                    <input type="text" name="unitRate" placeholder="0" required="required" autocomplete="off" />
+                                                    <span>KRW</span>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>매도량</dt>
+                                                <dd>
+                                                    <input type="text" name="coinAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                    <span>ETH</span>
+                                                </dd>
+                                            </dl>
+                                            <div class="price_bar_wrap">
+                                                <div class="price_data price_data4">
+                                                    <div id="priceBar4"></div>
+                                                </div>
+                                            </div>
+                                            <dl>
+                                                <dt>예상매도</dt>
+                                                <dd>
+                                                    <input type="text" name="reqAmt" placeholder="0.0" required="required" autocomplete="off" />
+                                                    <span>KRW</span>
+                                                </dd>
+                                                <dd style="float:right;font-size:12px;text-align:right;color:#777;margin-top:3px;">(수수료 포함)</dd>
+                                            </dl>
+                                            <div>
+                                                <button type="button" class="btn_basic btn_sell">매 도<!-- 로그인 --></button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- E : orderform_box -->
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <!-- S:trade_history_box -->
+                <article class="trade_history_box">
+                    <div class="trade_history_tab tab_type01">
+                        <ul>
+                            <li><a href="javascript:void(0);" title="trade_tab1" class="active">전체 체결내역</a></li>
+                            <li><a href="javascript:void(0);" title="trade_tab2">내 체결내역</a></li>
+                            <li><a href="javascript:void(0);" title="trade_tab3">내 주문내역</a></li>
+                        </ul>
+                        <div id="trade_tab1" class="tab_view_box block">
+                            <div class="inner_box">
+                                <div class="thead">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                            <col class="col8">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">일&nbsp;&nbsp;시</th>
+                                                <th scope="col">구&nbsp;&nbsp;분</th>
+                                                <th scope="col">분&nbsp;&nbsp;류</th>
+                                                <th scope="col">체결가</th>
+                                                <th scope="col">전일대비</th>
+                                                <th scope="col">등락률</th>
+                                                <th scope="col">체결량</th>
+                                                <th scope="col">누적량</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="tbody responsive_xy_table">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                            <col class="col8">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>1,000,000,000</td>
+                                                <td class="buy_color">1,000,000,000</td>
+                                                <td class="buy_color"><em>100.1</em>&#37;</td>
+                                                <td>12,345.<span>00000000</span></td>
+                                                <td>1,000,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,034</td>
+                                                <td class="buy_color"><em>0.6</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,056</td>
+                                                <td class="buy_color"><em>0.5</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,400</td>
+                                                <td class="buy_color">1,044</td>
+                                                <td class="buy_color"><em>0.5</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,400</td>
+                                                <td class="buy_color">1,032</td>
+                                                <td class="buy_color"><em>0.6</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,300</td>
+                                                <td class="buy_color">1,023</td>
+                                                <td class="buy_color"><em>0.7</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,300</td>
+                                                <td class="buy_color">1,020</td>
+                                                <td class="buy_color"><em>0.4</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,011</td>
+                                                <td class="buy_color"><em>0.5</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,038</td>
+                                                <td class="buy_color"><em>0.4</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,600</td>
+                                                <td class="buy_color">1,067</td>
+                                                <td class="buy_color"><em>0.4</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,600</td>
+                                                <td class="buy_color">1,064</td>
+                                                <td class="buy_color"><em>0.5</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,600</td>
+                                                <td class="buy_color">1,059</td>
+                                                <td class="buy_color"><em>0.6</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,650</td>
+                                                <td class="buy_color">1,019</td>
+                                                <td class="buy_color"><em>0.7</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,550</td>
+                                                <td class="buy_color">1,020</td>
+                                                <td class="buy_color"><em>0.7</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,550</td>
+                                                <td class="buy_color">1,060</td>
+                                                <td class="buy_color"><em>0.8</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,074</td>
+                                                <td class="buy_color"><em>0.6</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,450</td>
+                                                <td class="buy_color">1,059</td>
+                                                <td class="buy_color"><em>0.6</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,450</td>
+                                                <td class="buy_color">1,082</td>
+                                                <td class="buy_color"><em>0.4</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,043</td>
+                                                <td class="buy_color"><em>0.3</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,500</td>
+                                                <td class="buy_color">1,029</td>
+                                                <td class="buy_color"><em>0.3</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매수</td>
+                                                <td>ETH / KRW</td>
+                                                <td>160,600</td>
+                                                <td class="buy_color">1,035</td>
+                                                <td class="buy_color"><em>0.2</em>&#37;</td>
+                                                <td>0.00452355</td>
+                                                <td>14,034,200</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="trade_tab2" class="tab_view_box">
+                            <div class="datepicker_wrap">
+                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span> ~ 
+                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span>
+                                <button type="button" class="btn_basic type2 small">조회</button>
+                            </div>
+                            <div class="inner_box">
+                                <div class="thead">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">일&nbsp;&nbsp;시</th>
+                                                <th scope="col">구&nbsp;&nbsp;분</th>
+                                                <th scope="col">분&nbsp;&nbsp;류</th>
+                                                <th scope="col">주문량</th>
+                                                <th scope="col">체결량</th>
+                                                <th scope="col">체결가</th>
+                                                <th scope="col">거래금액</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="tbody responsive_xy_table">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="7" class="c_c">체결 내역이 없습니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매도</td>
+                                                <td>ETH / KRW</td>
+                                                <td>12,345.0045<span>0000</span></td>
+                                                <td class="buy_color">12,345.0045<span>0000</span></td>
+                                                <td>1,000,000,000</td>
+                                                <td>1,000,000,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="trade_tab3" class="tab_view_box">
+                            <div class="datepicker_wrap">
+                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span> ~ 
+                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span>
+                                <button type="button" class="btn_basic type2 small">조회</button>
+                            </div>
+                            <div class="inner_box">
+                                <div class="thead">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                            <col class="col8">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">일&nbsp;&nbsp;시</th>
+                                                <th scope="col">구&nbsp;&nbsp;분</th>
+                                                <th scope="col">주문량</th>
+                                                <th scope="col">주문가</th>
+                                                <th scope="col">체결량</th>
+                                                <th scope="col">미체결량</th>
+                                                <th scope="col">미체결률</th>
+                                                <th scope="col">상태</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="tbody responsive_xy_table">
+                                    <table>
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                            <col class="col7">
+                                            <col class="col8">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="8" class="c_c">주문 내역이 없습니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매도</td>
+                                                <td>12,345.0045<span>0000</span></td>
+                                                <td class="buy_color">1,000,000,000</td>
+                                                <td>12,345.0045<span>0000</span></td>
+                                                <td>12,345.0045<span>0000</span></td>
+                                                <td><em>100</em>&#37;</td>
+                                                <td class="c_c">
+                                                    <button type="button" class="btn_basic small type4">취소</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>12.13&nbsp;10:54:14</td>
+                                                <td class="buy_color">매도</td>
+                                                <td>12,345.00452355</td>
+                                                <td class="buy_color">1,000,000,000</td>
+                                                <td>12,345.00452355</td>
+                                                <td>12,345.00452355</td>
+                                                <td><em>100</em>&#37;</td>
+                                                <td class="c_c">
+                                                    <button type="button" class="btn_basic small type5">YES</button>
+                                                    <button type="button" class="btn_basic small type2">NO</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- E:trade_history_box -->
+            </div>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+    
+    <!-- S : modal -->
+    <div id="dialog-message" title="Login" style="display: none;">
+        <p>
+            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:2px 7px 30px 10px;"></span>
+            로그인이 필요합니다.<br/>
+            로그인 페이지로 이동하시겠습니까?
+        </p>
+	</div>
+    <!-- E : modal -->
+    
+    <!-- S : modal -->
+    <div id="eventModal01" class="modal">
+        <div class="modal_wrap">
+            <div class="modal_header">
+                <h4 class="h4_type ellipsis"><img src="../../images/common/event_logo_title.png" alt="" style="max-width:110px"> 서비스 오픈 공지</h4>
+<!--                <a href="javascript:void(0);" class="ico_com x02 close">닫기</a>-->
+            </div>
+            <div class="modal_content">
+                <div class="message_box">
+                    <h1 style="text-align:center"><img src="../../images/common/event_logo.png" alt=""></h1>
+                    <p style="text-align:left;">
+                        안녕하세요. coincrush입니다. 거래소 오픈을 기념하여 다음과 같이 공지를 해드립니다. <br/>
+                        앞으로도 편리하고 안정적인 서비스 제공을 위해 최선을 다하는 거래소가 되도록 노력하겠습니다.
+                    </p>
+                    <table class="con02">
+                        <tr>
+                            <td class="tit">· 기간 </td>
+                            <td class="con">2019.05.28 - 06.28</td>
+                        </tr>
+                        <tr>
+                            <td class="tit">· 내용 </td>
+                            <td class="con">
+                                위 기간 동안 coincrush 거래소에서 거래되는 모든 코인의 거래 수수료는 무료입니다.
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="margin">
+                        본 공지는 초기 거래소를 이용하는 회원들에게 혜택을 드리고자
+                        마련하였으며 회원 여러분들의 많은 거래 이용을 부탁드립니다. <br>
+                    </p>
+                </div>
+                <div class="basic_btn_box">
+                    <a href="javascript:void(0);" id="dontOpen" class="btn_event_day_close01">하루 열지 않음</a>
+                    <a href="javascript:void(0);" class="btn_event_close01 close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : modal -->
+    
+    <!-- S : Modal02 -->
+    <div id="modal02" class="modal">
+        <div class="modal_wrap">
+            <div class="modal_header">
+                <h4 class="h4_type ellipsis">암호화폐 거래 유의사항</h4>
+            </div>
+            <div class="modal_content">
+                <div class="message_box">
+                    <p>
+                        안녕하세요. 암호화폐 거래소 coincrush입니다. <br /><br />
+                        암호화폐를 거래하는 coincrush 회원님의 안전하고 건전한 투자를 위하여 아래 유의사항을 충분히 숙지하신 후 이용 부탁드립니다. <br /><br />
+                    </p>
+                    <ul class="order_list">
+                    	<li>암호화폐는 법정화폐가 아니며, 특정 주체가 가치를 보장하지 않습니다.</li>
+                    	<li>암호화폐는 365일 24시간 전 세계에서 거래가 이루어지고 있으며, 투기적 이슈 및 국내외 규제환경변화 등에 따라 급격한 시세변동에 노출될 수 있습니다.</li>
+                    	<li>암호화폐에 대한 투자의 책임은 본인에게 있으므로 투자를 결정하시기 전에 각 암호화폐의 특징과 성격을 꼼꼼히 확인하고 투자하시는 것을 권유 드립니다.</li>
+                    </ul>
+                    <p>
+                        <br />
+                        &#8251; 암호화폐의 특성을 충분히 인지하고 신중하게 거래해 주시기를 당부드립니다.
+                    </p>
+                </div>
+                <div class="basic_btn_box">
+                    <a href="javascript:void(0);" id="dontOpen02" class="btn_event_day_close02">하루 열지 않음</a>
+                    <a href="javascript:void(0);" class="btn_event_close02 close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : Modal02 -->
+    
+</body>
+</html>

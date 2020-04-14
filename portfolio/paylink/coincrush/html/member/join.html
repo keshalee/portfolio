@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/member.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container01">
+            <div class="con_stit">
+                <h2 class="h2_type">회원가입</h2>
+            </div>
+            <section>
+                <div class="join_wrap">
+                    <form action="">
+                        <h3 class="h3_type">아이디 및 비밀번호<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01 tb_join type01">
+                                <caption>아이디 및 비밀번호</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">이메일주소</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="이메일">
+                                            <span class="gap">@</span>
+                                            <input type="text" value="" placeholder="">
+                                            <select class="sel_type">
+                                                <option selected="selected">선택</option>
+                                                <option>naver.com</option>
+                                                <option>gmail.com</option>
+                                                <option>nate.com</option>
+                                                <option>yahoo.co.kr</option>
+                                                <option>hanmail.net</option>
+                                                <option>daum.net</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>lycos.co.kr</option>
+                                                <option>empas.com</option>
+                                                <option>korea.com</option>
+                                                <option>paran.com</option>
+                                                <option>freechal.com</option>
+                                                <option>hanmir.com</option>
+                                                <option>hotmail.com</option>
+                                                <option>직접입력</option>
+                                            </select>
+                                            <button type="button" class="btn_basic type2">중복확인</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">비밀번호</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="비밀번호"> <span class="t_error">비밀번호는 영문(대/소문자), 숫자, 특수문자(!@#$%^&*)를 조합으로 8 ~ 16자리 이내로 작성해주세요.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">비밀번호 확인</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="비밀번호 확인">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">회원정보 입력<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01 type01">
+                                <caption>회원정보 입력</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">이름</th>
+                                        <td><input type="text" placeholder="이름" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">휴대폰인증<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01 type01">
+                                <caption>휴대폰 번호 입력</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">연락처</th>
+                                        <td>
+                                            <input type="text" id='firstNum' required="required" maxlength="3" placeholder="" class="w_s number" onkeyup="onlyNumber(firstNum)">
+											<span class="gap">-</span>
+											<input type="text" id='middleNum' required="required" maxlength="4" placeholder="" class="w_s number" onkeyup="onlyNumber(middleNum)">
+											<span class="gap">-</span>
+											<input type="text" id='lastNum' required="required" maxlength="4" placeholder="" class="w_s number" onkeyup="onlyNumber(lastNum)">
+											<input id="call" name="call" type="button" value="인증번호발송" class="btn_basic type2 mgtss" onClick="javascript:setMinute()" />
+                        					<input type="hidden" id="recall" name="recall" type="button" value="인증번호발송" class="btn_basic type2 mgtss" onClick="javascript:setMinuteRe()" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">인증번호</th>
+                                        <td>
+                                            <input type="text" id="userInputNum" name="userInputNum" placeholder="3분 이내 입력" maxlength="6">
+											<span class="timer"><input id="minVal" size="1" value="0" style="border:0;width:10px;color:#888;">:<input id="secVal" size="2" value="00" style="border:0;width:20px;color:#888;"><input type="hidden" id="misVal" size="4" value="00"> </span>
+											<button type="button" id="chkCertifySMSBtn" class="btn_basic type5" onclick="javascript:conFirm();">확인</button>
+											<div class="rebtn_warp">
+                        						<input id="timeOutTxt" name="timeOutTxt" type="hidden" size="63" value="" style="border:0">
+                                                <span class="txt t_error">인증번호 입력 시간이 초과 했습니다. 인증번호를 재발송 해주세요.</span>
+											</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">약관동의</h3>
+                        <div class="join_form">
+                            <div class="join_row with_btn">
+                                <span class="checkbox color blue">
+                                    <input type="checkbox" name="" id="agree01">
+                                    <label for="agree01">이용약관을 확인하고 동의(필수)</label>
+                                </span>
+                                <a href="<c:url value='/supportV2/termsUse'/>" target="_blank" class="btn_basic small type4">약관보기</a>
+                            </div>
+                            <div class="join_row with_btn">
+                                <span class="checkbox color blue">
+                                    <input type="checkbox" name="" id="agree01">
+                                    <label for="agree01">개인정보 취급방침을 확인하고 동의(필수)</label>
+                                </span>
+                                <a href="<c:url value='/supportV2/termsUse'/>" target="_blank" class="btn_basic small type4">약관보기</a>
+                            </div>
+                            <div class="join_row with_btn">
+                                <span class="checkbox color blue">
+                                    <input type="checkbox" name="" id="agree01">
+                                    <label for="agree01">마케팅 활용 안내 수신 동의(선택)</label>
+                                </span>
+                                <a href="<c:url value='/supportV2/termsUse'/>" target="_blank" class="btn_basic small type4">약관보기</a>
+                            </div>
+                        </div>
+                        <div class="sh_btn_box clearfix">
+                            <button type="button" class="btn_basic type2">취소</button>
+                            <button type="button" class="btn_basic type5">가입</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

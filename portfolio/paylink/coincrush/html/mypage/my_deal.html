@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/mypage.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <div class="lnb_content">
+                <div class="lnb_content">
+                    <!-- S : lnb-->
+                    <script src="../include/lnb_mypage.js"></script>
+                    <!-- E : lnb -->
+                    <div class="content_wrap">
+                        <h3 class="h3_type">거래내역</h3>
+                        <!-- S : 내 거래내역 -->
+                        <div class="sh_wrap type2">
+                            <form action="">
+                                <fieldset>
+                                    <legend>기간별 조회</legend>
+                                    <dl>
+                                        <dt>조회기간</dt>
+                                        <dd>
+                                            <div class="datepicker_wrap">
+                                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span> ~ 
+                                                <span class="datepicker_box"><input type="text" id="" name="" class="datepicker"></span>
+                                            </div>
+                                        </dd>
+                                        <dd>
+                                            <button type="button" class="btn_basic type4 small active">당일</button>
+                                            <button type="button" class="btn_basic type4 small">3일</button>
+                                            <button type="button" class="btn_basic type4 small">1주</button>
+                                            <button type="button" class="btn_basic type4 small">1개월</button>
+                                            <button type="button" class="btn_basic type4 small">전체</button>
+                                        </dd>
+                                    </dl>
+                                    <div class="coin_search">
+                                        <dl>
+                                            <dt>코인종류</dt>
+                                            <dd>
+                                                <span class="sel_small">
+                                                <select class="sel_type">
+                                                    <option selected="selected">전체 KRW</option>
+                                                    <option>ETH</option>
+                                                    <option>COT</option>
+                                                </select>
+                                            </span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>거래종류</dt>
+                                            <dd>
+                                                <span class="sel_small">
+                                                <select class="sel_type">
+                                                    <option selected="selected">전체</option>
+                                                    <option>매도</option>
+                                                    <option>매수</option>
+                                                </select>
+                                            </span>
+                                            </dd>
+                                        </dl>
+                                        <button type="button" class="btn_basic type2 small">검색</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- E : 기간별 조회 -->
+                        <div class="tb_sort_wrap mgtmm">
+                            <p class="sort_tit small">총 <span>4</span> 건이 검색되었습니다.</p>
+                            <div class="tb_sort sel_small">
+                                <select name="" id="" class="sel_type">
+                                    <option value="">10줄</option>
+                                    <option value="">30줄</option>
+                                    <option value="">50줄</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- S : 코인 거래 목록 -->
+                        <div class="responsive_table tb_deal">
+                            <div class="tb_list">
+                                <table>
+                                    <caption>코인 거래내역</caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                        <col class="col3">
+                                        <col class="col4">
+                                        <col class="col5">
+                                        <col class="col6">
+                                        <col class="col7">
+                                        <col class="col8">
+                                        <col class="col9">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">거래일시</th>
+                                            <th scope="col">거래종류</th>
+                                            <th scope="col">코인종류</th>
+                                            <th scope="col">주문가</th>
+                                            <th scope="col">주문량</th>
+                                            <th scope="col">체결가</th>
+                                            <th scope="col">체결량</th>
+                                            <th scope="col">총 거래금액</th>
+                                            <th scope="col">수수료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2017-05-11 09:31</td>
+                                            <td class="link02">매수</td>
+                                            <td>ETH/KRW</td>
+                                            <td>1,000,000,000</td>
+                                            <td>12,345.02496300</td>
+                                            <td>1,000,000,000</td>
+                                            <td>12,345.03652945</td>
+                                            <td>1,000,000,000</td>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017-05-11 09:31</td>
+                                            <td class="link01">매수</td>
+                                            <td>ETH/KRW</td>
+                                            <td>1,000,000,000</td>
+                                            <td>12,345.02496300</td>
+                                            <td>1,000,000,000</td>
+                                            <td>12,345.03652945</td>
+                                            <td>1,000,000,000</td>
+                                            <td>10,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- E : 코인 거래 목록 -->
+                        <div class="paging">
+                            <a href="#" title="처음" class="ico_comb pprev"></a>
+                            <a href="#" title="이전" class="ico_comb prev"></a>
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" title="다음" class="ico_comb next"></a>
+                            <a href="#" title="마지막" class="ico_comb nnext"></a>
+                        </div>
+                        
+                        <!-- E : 내 거래내역 -->
+<!--
+                        <div class="attention_wrap mgtml">
+                            <p class="ico_comb attention">유의사항</p>
+                            <ul class="dot_list">
+                                <li>쿠폰 구매 시 즉시 적용 되므로, 거래금액 및 사용기한을 꼭 확인하세요.</li>
+                                <li>쿠폰은 구매 후 30일간 유효합니다.(30일 경과 시 자동 만료)</li>
+                                <li>신용거래 이용 시 별도의 수수료를 부과하지 않습니다.</li>
+                                <li>출금수수료는 출금 1건당 정액으로 부과됩니다.</li>
+                                <li>추가 궁금하신 내용은 고객센터(1600-8000)통해서 문의바랍니다.</li>
+                            </ul>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

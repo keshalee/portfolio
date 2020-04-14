@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/wallet.css">
+    
+    <script>
+        $(document).ready(function(){
+            close_address();
+            $('#address_layer').on('click',close_address);
+	
+            $("#addressBookBtn").on("click", open_address);
+        });
+        
+        function close_address(){
+            $('.address_wrap').hide();
+        }
+
+        function open_address() {
+            $('.address_wrap').show();
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <section>
+                <div class="depositwithdraw">
+                    <div class="flbox">
+                        <h3 class="h5_type">ETH 입출금</h3>
+                        <div class="passbook_wrap">
+                            <div class="tab_type01 two">
+                                <ul>
+                                    <li><a href="javascript:void(0);" title="tems01">입금전송</a></li>
+                                    <li><a href="javascript:void(0);" title="tems02" class="active">출금전송</a></li>
+                                </ul>
+                                <div id="tems01" class="tab_view_box">
+                                    <form>
+                                        <div class="form_group">
+                                            <button type="button" class="btn_basic type5" style="height:40px;line-height:40px;width:90%;border-radius:3px;margin:0 0 0 5%">입금주소 생성하기</button>
+                                            <div class="qr_code01"><img src="../../images/wallet/qr_code.jpg"></div>
+                                            <div class="box">
+                                                <span class="txt_code">1EcpUnDcDCJqH3qP5Xo5529YEQHofFbuSq</span><button type="button" class="btn_basic type4 xsmall" style="float:right;">복사</button>
+                                            </div>
+                                            <div class="attention_wrap">
+                                                <h3 class="ico_comb attention red">입금 전 꼭 알아두세요!</h3>
+                                                <ul class="dot_list">
+                                                    <li>회원님의 <span>ETH</span> 주소로 <span>ETH</span>를 입금하거나 외부 지갑으로 출금할 수 있습니다.</li>
+                                                    <li><span>ETH</span> 주소를 정확히 확인하세요.</li>
+                                                    <li><span>ETH</span> 주소와 <span>ETH</span> 주소를 혼동하여 잘못 보내는 경우 오류가 발생할 수 있으며, 코인크러쉬에서는 책임지지 않습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="tems02" class="tab_view_box block">
+                                    
+                                    <!--S: 주소록 레이어 팝업-->
+									<div class="address_wrap">
+										<h1 class="h1_type">최근사용주소</h1>
+										<div class="address_content">
+											<div class="t_list">
+												<table id='addressbook_table'>
+													<caption>주소록</caption>
+													<colgroup>
+														<col style="width:80px">
+														<col style="width:270px">
+														<col style="width:100px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th>일시</th>
+															<th>주소</th>
+															<th>거래량</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr style="cursor: pointer;">
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="basic_btn_box">
+											<button type="button" id='address_layer' class="btn_basic type2">닫기</button>
+										</div>
+									</div>
+									<!--E: 주소록 레이어 팝업-->
+                                        
+                                    <form>
+                                        <div class="form_group">
+                                            <div class="txt1"><span style="float:left;"> 거래가능</span> &nbsp; <span style="float:right; "><em>1.25640000</em> &nbsp; <em style="font-size:12px; color:#777;">ETH</em></span></div>
+                                            <div class="withdraw">
+                                                <ul class='tb_sort_wrap'>
+                                                    <li class="tit">출금주소</li>
+                                                    <li class="con"> 
+                                                        <button type="button" id="addressBookBtn" style="width:60px" class="btn_all">주소록</button>
+                                                    	<label>
+                                                        	<input type="text" style="font-size:12px;font-family:'notokr-medium';">
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li class="tit">신청금액</li>
+                                                    <li class="con"> 
+                                                        <!-- <button style="width:60px" class="btn_all" type="button" onclick="maxPrice()">최대 </button> -->
+                                                        <label>
+	                                                        <input type="text" placeholder="0.0" style="text-align:right;padding-right:42px;">
+	                                                        <em style="font-size:12px; color:#777;">ETH</em>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <p class="check01">출금 수수료(은행수수료) <span style="float:right;font-size:12px;"><span style="font-size:16px;color:#000;padding-right:6px;"> 1,000 </span> KRW </span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="attention_wrap">
+                                                <h3 class="ico_comb attention red">출금 전 꼭 알아두세요!</h3>
+                                                <ul class="dot_list">
+                                                    <li>회원님의 <span>ETH</span> 주소로 <span>ETH</span>를 입금하거나 외부 지갑으로 출금할 수 있습니다.</li>
+                                                    <li><span>ETH</span> 주소를 정확히 확인하세요.</li>
+                                                    <li><span>ETH</span> 주소와 <span>ETH</span> 주소를 혼동하여 잘못 보내는 경우 오류가 발생할 수 있으며, 코인크러쉬에서는 책임지지 않습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <button type="button" class="btn_basic type3 btn_with">출금신청</button>
+                                    </div>
+                                    <div id="comptePop04" class="dialog" style="display:none;" title="출금신청">
+                                        <div class="dialog_content">
+                                            <p class="txt01"><span class="sell_color">출금신청</span>이 되었습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frbox">
+                        <h3 class="h5_type">입출금 내역</h3>
+                        <div class="tb_sort_wrap">
+                            <div class="tb_sort">
+                                <div class="sel_small">
+                                    <select name="" id="" class="sel_type">
+                                        <option value="">전체</option>
+                                        <option value="">1주일</option>
+                                        <option value="">1개월</option>
+                                        <option value="">3개월</option>
+                                        <option value="">6개월</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="responsive_table">
+                            <table class="tb_list02">
+                                <caption>입출금 내역</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    <!-- <col class="col5"> -->
+                                    <col class="col6">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">일시</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">신청금액</th>
+                                        <th scope="col">수수료</th>
+                                        <!-- <th scope="col">합계(수수료포함)</th> -->
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5" class="c_c">입출금 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2019.02.09 12:33:30</td>
+                                        <td>입금</td>
+                                        <td>150,000,000 <span>ETH</span></td>
+                                        <td>0 <span>KRW</span></td>
+                                        <td>신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2019.02.05 12:33:30</td>
+                                        <td>출금</td>
+                                        <td>542,000 <span>ETH</span></td>
+                                        <td>1,000 <span>KRW</span></td>
+                                        <td>완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging">
+                            <a href="#" title="처음" class="ico_comb pprev"></a>
+                            <a href="#" title="이전" class="ico_comb prev"></a>
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" title="다음" class="ico_comb next"></a>
+                            <a href="#" title="마지막" class="ico_comb nnext"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

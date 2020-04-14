@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/mypage.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <div class="lnb_content">
+                <!-- S : lnb-->
+                <script src="../include/lnb_mypage.js"></script>
+                <!-- E : lnb -->
+                <div class="content_wrap">
+                    <h3 class="h3_type margin line">계좌 등록</h3>
+                    <p>KRW 입출금을 위해 계좌를 등록합니다.<br />인증한 계좌로만 출금할 수 있고, 인증 계좌에서 입금해야 합니다.</p>
+                    
+                    <p class="sub_tit01">본인인증</p>
+                    <p>계좌 인증을 하려면 SMS 문자인증이 필요합니다.<br><br> </p>
+                    
+                    <!-- S : SMS 인증 -->
+                    <table class="tb_write01 tb_account type01" style="border-top:2px solid #b1b1b1">
+                        <caption>SMS 인증</caption>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">SMS인증</th>
+                                <td>
+                                    <input type="text" placeholder="3분이내 입력" style="vertical-align:bottom">
+                                    <span class="timer">
+                                        <input id="minVal" size="1" value="3" style="border:0;width:10px;color:#888;">:
+                                        <input id="secVal" size="2" value="00" style="border:0;width:20px;color:#888;">
+                                        <input type="hidden" id="misVal" size="4" value="00">
+                                    </span>
+                                    <button style="margin:0 0 0 10px" type="button" class="btn_basic type4">인증번호 발송</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sh_btn_box">
+                        <button type="button" class="btn_basic type5">확인</button>
+                    </div>
+                    <!-- E : SMS 인증 -->
+                    <p class="sub_tit01">실명계좌 등록</p>
+                    <p>본인 명의 계좌 정보를 입력하고 '인증하기'버튼을 클릭하세요.<br><br> </p>
+
+                    <!-- S : 실명계좌 등록 -->
+                    <table class="tb_write01 tb_account type01" style="border-top:2px solid #b1b1b1">
+                        <caption>SMS 인증</caption>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">은행</th>
+                                <td>
+                                    <select class="sel_type">
+                                        <option selected="selected">은행선택</option>
+                                        <option>기업은행</option>
+                                        <option>신한은행</option>
+                                        <option>우리은행</option>
+                                        <option>국민은행</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">계좌번호</th>
+                                <td>
+                                    <input type="text" placeholder="계좌번호" style="width:100%; max-width:300px; ">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">예금주</th>
+                                <td><input type="text" placeholder="예금주" ></td>
+                            </tr>
+                        </tbody>
+                    </table>
+<!--
+                    <p><em>*</em>계좌 인증번호 전송은 1일 최대 3회로 제한됩니다.</p>
+                    <div class="sh_btn_box mgbsm">
+                        <button type="button" class="btn_basic type5">인증하기</button>
+                    </div>
+-->
+                    <!-- E : 실명계좌 등록 -->
+
+<!--                    <p>본인 명의 계좌 확인을 위해, 입력하신 계좌로 1원을 입금하였습니다.<br />계좌 거래내역의 입금자명 앞 인증번호를 입력해주세요.<br><br> </p>-->
+
+                    <!-- S : 인증번호입력 -->
+<!--
+                    <table class="tb_write01 tb_account type01" style="border-top:2px solid #b1b1b1">
+                        <caption>인증번호</caption>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">인증번호</th>
+                                <td>
+                                    <input type="text" placeholder="3분이내 입력"><span class="timer"><input id="minVal" size="1" value="3" style="border:0;width:10px;color:#888;">:<input id="secVal" size="2" value="00" style="border:0;width:20px;color:#888;"><input type="hidden" id="misVal" size="4" value="00"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+-->
+
+                    <div class="sh_btn_box mgbsm">
+                        <button type="button" class="btn_basic type5">확인</button>
+                    </div>
+                    <!-- E : 인증번호입력 -->
+
+                    <!-- S : 등록된 계좌 -->
+                    <p class="sub_tit01">계좌 정보</p>
+                    <p>본인의 계좌변경을 위해서는 초기화해야 합니다.<br><br> </p>
+                    
+                    <table class="tb_view01 tb_account type01" style="border-top:2px solid #b1b1b1">
+                        <caption>등록된 계좌</caption>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">등록일</th>
+                                <td>2017.01.02</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">은행명</th>
+                                <td>국민은행</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">계좌번호 (예금주)</th>
+                                <td>123456-01-123 (홍길동)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sh_btn_box">
+                        <button type="button" class="btn_basic type5">초기화</button>
+                    </div>
+                    <!-- E : 등록된 계좌 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

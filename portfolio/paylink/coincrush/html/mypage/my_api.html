@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/mypage.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <div class="lnb_content">
+                <div class="lnb_content">
+                    <!-- S : lnb-->
+                    <script src="../include/lnb_mypage.js"></script>
+                    <!-- E : lnb -->
+                    
+                    <div class="content_wrap">
+                        <h3 class="h3_type margin line">API ACCESS</h3>
+                        <!-- S : API 항목 -->
+                        <p class="sub_tit01">API 활성화 항목 접근(접근 허용)</p>
+                        <p>API 설정을 추가하시면 API Key와 Secret Key를 확인 하실 수 있습니다.<br> 회원님 이메일에서 인증 확인을 해주셔야 API 이용가능합니다. <br><br> 체크하지 않은 항목은 데이터 접근이 불가하며, 추후 수정이 불가능하오니 신중히 선택하여주세요!<br><br></p>
+                        <table class="tb_view01 tb_api2" style="border-top:2px solid #b1b1b1">
+                            <caption>caption...</caption>
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                                <col class="col3">
+                                <col class="col4">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">회원지갑정보</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType1">
+                                            <label for="termType1">활성화</label>
+                                        </span>
+                                    </td>
+                                    <th scope="row">거래취소</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType2">
+                                            <label for="termType2">활성화</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주문내역</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType3">
+                                            <label for="termType3">활성화</label>
+                                        </span>
+                                    </td>
+                                    <th scope="row">회원거래내역</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType4">
+                                            <label for="termType4">활성화</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">매수주문</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType5">
+                                            <label for="termType5">활성화</label>
+                                        </span>
+                                    </td>
+                                    <th scope="row">코인출금</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType6">
+                                            <label for="termType6">활성화</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">매도주문</th>
+                                    <td>
+                                        <span class="checkbox small">
+                                            <input type="checkbox" name="termType" id="termType7">
+                                            <label for="termType7">활성화</label>
+                                        </span>
+                                    </td>
+                                    <th scope="row" class="last"></th>
+                                    <td class="last">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- E : API 항목 -->
+                        
+                        <!-- S : ip 설정 -->
+                        <p class="sub_tit01">API 활성화 항목 접근(접근 허용)</p>
+                        <p>API를 사용하실 경우 접근 가능한 IP와 출금 주소를 미리 설정하시는 것이 안전합니다.<br><br></p>
+
+                        <table class="tb_view01 tb_api" style="border-top:2px solid #b1b1b1">
+                            <caption>caption...</caption>
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">접근가능 IP 설정</th>
+                                    <td>
+                                        <input type="text" value="" placeholder="예)125.156.548.621" style="width:100%;max-width:400px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">출금가능 주소설정</th>
+                                    <td>
+                                        <input type="text" value="" placeholder="출금 지갑주소를 입력해주세요." style="width:100%;max-width:400px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- E : IP 설정 -->
+                        
+                        <!-- S : 보안인증 -->
+                        <p class="sub_tit01">보안인증</p>
+                        <p>안전한 API KEY 생성을 위해 보안인증을 완료해주세요..<br><br></p>
+
+                        <table class="tb_view01 tb_api" style="border-top:2px solid #b1b1b1">
+                            <caption>caption...</caption>
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">휴대폰 인증</th>
+                                    <td>
+                                        <input type="text" value="" placeholder="인증번호를 입력해주세요" style="width:100%;max-width:400px;vertical-align:bottom">
+                                        <button type="button" class="btn_basic type4">인증요청</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">보안 비밀번호</th>
+                                    <td>
+                                        <input type="text" value="" placeholder="보안 비밀번호를 입력해주세요." style="width:100%;max-width:400px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- E : 보안인증 -->
+                        <div class="sh_btn_box">
+                            <button type="button" class="btn_basic type5">API KEY 생성 </button>
+                        </div>
+                        
+                        <!-- S : API 리스트 -->
+                        <p class="sub_tit01">사용중 API 리스트</p>
+                        <p>사용하지 않는 API는 비활성 또는 삭제해주세요.<br><br></p>
+
+                        <div class="responsive_table">
+                            <table class="tb_view01 api_list" style="border-top:2px solid #b1b1b1">
+                                <caption>caption...</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    <col class="col5">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Connect Key</th>
+                                        <th scope="row">Secret Key</th>
+                                        <th scope="row">권한</th>
+                                        <th scope="row">활성화/비활성화</th>
+                                        <th scope="row">삭제</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button type="button" class="btn_basic type4 small">활성화</button></td>
+                                        <td><button type="button" class="btn_basic type4 small">삭제</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- E : API 리스트 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/mypage.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <div class="lnb_content">
+                <div class="lnb_content">
+                    <!-- S : lnb-->
+                    <script src="../include/lnb_mypage.js"></script>
+                    <!-- E : lnb -->
+                    <div class="content_wrap">
+                        <h3 class="h3_type margin line">OTP 인증 사용중단</h3>
+                        <p class="sub_tit01">OTP 인증 사용 중단하기</p>
+                        <p>OTP 인증 사용을 중단하시겠습니까?<br />OTP 사용을 중단하면, 입출금 시 휴대폰 인증번호를 사용하게 됩니다.<br><br> </p>
+                        
+                        <!-- S : 비밀번호 변경 -->
+                        <table class="tb_view01 tb_otp" style="border-top:2px solid #b1b1b1">
+                            <caption>OTP 인증 비활성화</caption>
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">SMS인증</th>
+                                    <td>
+                                        <input type="text" style="vertical-align:bottom;">
+                                        <span class="timer">
+                                            <input id="minVal" size="1" value="3" style="border:0;width:10px;color:#888;">:
+                                            <input id="secVal" size="2" value="00" style="border:0;width:20px;color:#888;">
+                                            <input type="hidden" id="misVal" size="4" value="00">
+                                        </span>
+                                        <button type="button" class="btn_basic type4">인증번호 발송</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">OTP Code Number</th>
+                                    <td>
+                                        <input type="text" placeholder="구글 OTP의 숫자">
+                                    </td>
+                                </tr>
+<!--
+                                <tr>
+                                    <th scope="row">보안 비밀번호</th>
+                                    <td><input type="text" placeholder="사이트 비밀번호"></td>
+                                </tr>
+-->
+                            </tbody>
+                        </table>
+                        <p>Otp code number와 sms 인증, 보안비밀번호 모두 승인이 되어야 합니다.<br><br> </p>
+                        
+                        <div class="sh_btn_box">
+                            <button type="button" class="btn_basic type2">취소</button>
+                            <button type="button" class="btn_basic type5">완료</button>
+                        </div>
+                        <!-- E : 비밀번호 변경 -->
+                        
+                        <p class="blue mgtsm"><a href="my_otp2_2.html">복구코드로 OTP 사용중단 또는 OTP인증 초기화</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

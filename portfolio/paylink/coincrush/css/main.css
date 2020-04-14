@@ -1,0 +1,115 @@
+@charset "utf-8";
+/**************************************************
+* main_slider
+**************************************************/
+@media (min-width:0) {
+    .main_slider { padding-top:55px; }
+    .main_slider ul { position:relative; }
+    .main_slider li { position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:calc(100vh - 55px); background:url("../images/main/slider01.jpg") no-repeat center center; background-size:cover; }
+    .main_slider li .container { height:100%; text-align:center; }
+    .main_slider li .sd_txt { position:absolute; left:0; right:0; top:150px;  }
+    .main_slider li .sd_txt .txt01 { font-size:36px; font-family:"NotoSansKR-Bold"; color:#333; transition:all 0.5s; }
+    .main_slider li .sd_txt .txt02 { margin-top:40px; padding:0 15px; font-size:14px; word-break:keep-all; font-family:"NotoSansKR-Medium"; color:#000; transition:all 0.5s; }
+    .main_slider li .btn_group { margin-top:60px; }
+    .main_slider li .btn_group button { min-width:150px; height:50px; padding:0 10px; line-height:50px; margin-left:10px; border-color:#fff; background-color:rgba(0,0,0,0.6); color:#fff; font-size:16px; font-family:"NotoSansKR-Light"; font-weight:300; transition:all 0.5s; }
+    .main_slider li .btn_group button:first-child { margin-left:0; }
+    .main_slider li .btn_group button:hover { background-color:#333; color:#fff; border-color:#fff; }
+}
+@media (min-width:640px) {
+    .main_slider li { height:700px; }
+    .main_slider li .sd_txt .txt01 { font-size:48px; }
+    .main_slider li .sd_txt .txt02 { font-size:16px; }
+    .main_slider li .btn_group button { min-width:180px; height:55px; line-height:55px; margin-left:20px; font-size:17px; }
+}
+@media (min-width:992px) {
+    .main_slider li .sd_txt .txt01 { font-size:58px; }
+    .main_slider li .sd_txt .txt02 { font-size:18px; }
+    .main_slider li .btn_group button { min-width:220px; font-size:18px; }
+}
+
+/**************************************************
+* coinbar
+**************************************************/
+.sell_color { color:#e33939 !important; }
+.buy_color { color:#116fd3 !important; }
+@media (min-width:0) {
+    .coinbar { padding:25px 0; background-color:#efefef; }
+    .coinbar ul { position:relative; padding:0 15px; }
+    .coinbar li { margin:0 7px; }
+    .coinbar li dl { overflow:hidden; }
+    .coinbar .slick-track { margin-left:0; margin-right:0; }
+    .coinbar dl .title { color:#686f86; float:left; font-size:15px; }
+    .coinbar dl .per { float:right; margin-right:5px; font-size:15px; color:#686f86;; }
+    .coinbar dl .price { clear:both; float:none; padding-top:5px; font-family:"NotoSansKR-Bold"; color:#34394b; font-size:22px; }
+}
+@media (min-width:992px) {
+    .coinbar ul { padding:0; }
+}
+
+/**************************************************
+* webtrading
+**************************************************/
+@media (min-width:0) {
+    .webtrading { position:relative; height:1260px; }
+    .webtrading .bg { position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%; background:url("../images/main/webtrading_bg.jpg") no-repeat center center; background-size:cover; }
+    .webtrading .container { height:100%; }
+    .webtrading .ani_img01 { position:absolute; left:-20%; top:260px; margin-left:-600px; }
+    .webtrading .ani_img02 { position:absolute; left:-20%; top:230px; margin-left:-480px; }
+    .webtrading .ani_img03 { position:absolute; left:-20%; top:180px; margin-left:-450px; }
+
+    .webtrading .txt_wrap { position:absolute; right:300px; top:300px; width:380px; word-break:keep-all; }
+    .webtrading .txt_wrap .txt1 { font-size:27px; font-family:"NotoSansKR-Light"; font-weight:400; }
+    .webtrading .txt_wrap .txt2 { font-size:48px; font-family:"NotoSansKR-Bold"; margin-top:10px; }
+    .webtrading .txt_wrap .line { display:block; width:70px; height:1px; margin-top:15px; background-color:#191919; }
+    .webtrading .txt_wrap .txt3 { margin-top:20px; font-size:16px; line-height:30px; color:#333; }
+    .webtrading .txt_wrap button { width:210px; height:55px; line-height:53px; margin-top:30px; background-color:#333; border-color:#fff; color:#fff; font-size:18px; }
+    .webtrading .txt_wrap button:hover { background-color:#333; color:#fff; border-color:#fff; }
+}
+
+/**************************************************
+* serviceInfo
+**************************************************/
+.serviceInfo { background-color:#333; text-align:center; }
+.serviceInfo .container { padding:100px 0; }
+.serviceInfo h2 { font-family:"NotoSansKR-Bold"; font-size:50px; color:#fff; }
+.serviceInfo .line { display:block; width:70px; height:1px; margin:20px auto 25px; background-color:#fff; }
+.serviceInfo .small_title { line-height:26px; font-size:16px; color:#fff; }
+
+.serviceInfo ul { overflow:hidden; margin-top:50px; }
+.serviceInfo li { float:left; width:calc(25% - 11.25px); margin-left:15px; padding:70px 30px; background-color:#fff; border-radius:10px; }
+.serviceInfo li:first-child { margin-left:0; }
+.serviceInfo li .thumb img { position:relative; /*animation:ani01 0.5s 0.5s infinite alternate;*/ }
+.serviceInfo li .txt_wrap { }
+.serviceInfo li .txt_wrap .txt1 { margin-top:15px; margin-bottom:10px; font-size:22px; font-family:"NotoSansKR-Medium"; color:#333; }
+.serviceInfo li .txt_wrap .txt2 { line-height:24px; font-size:14px; word-break:keep-all; text-align:left; color:#666; }
+@-webkit-keyframes ani01 {
+    0% { top:0; }
+    100% { top:10px; }
+}
+@keyframes ani01 {
+    0% { top:0; }
+    100% { top:10px; }
+}
+
+/**************************************************
+* information
+**************************************************/
+.information { background-color:#efefef; }
+.information .container { padding:100px 0; }
+.information h2 { font-size:46px; color:#34394b; text-align:center; }
+.information .line { display:block; width:70px; height:1px; margin:15px auto 70px; background-color:#34394b; }
+.information .small_title { padding:0 60px; line-height:26px; font-size:18px; color:#34394b; }
+
+.information .center_info { position:relative; margin-top:50px; padding:0 60px; }
+.information .center_info a { display:inline-block; margin-bottom:10px; font-family:"NotoSansKR-Light"; font-size:36px; color:#34394b; }
+.information .center_info p { line-height:44px; font-size:24px; color:#34394b; }
+.information .center_info a.btn_basic { position:absolute; right:60px; top:0; width:200px; height:55px; line-height:55px; border-color:#999; font-size:18px; color:#34394b; }
+.information .center_info a.btn_basic:hover { background-color:#fff; border-color:#999; color:#34394b; }
+
+
+
+
+
+
+
+

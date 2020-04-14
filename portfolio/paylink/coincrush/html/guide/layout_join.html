@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>COINCRUSH</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/jquery.bxslider.js"></script>
+<script src="../../js/common.ui.js"></script>
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/swiper.min.css">
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/member.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container01">
+            <div class="con_stit">
+            <h2 class="h2_type">회원가입</h2>
+            <h3>이메일이 확인되면 거래를 시작하기 전에 프로필을 작성하고 신원을 확인해야합니다.</h3>
+            </div>
+            <section>
+                <div class="join_wrap" >
+                    <form action="">
+                        <h3 class="h3_type">아이디 및 비밀번호<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01">
+                                <caption>write table guide</caption>                    
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">아이디(이메일주소)</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="입력값" style="width:140px">
+                                            <span class="gap">@</span>
+                                            <input type="text" value="" placeholder="입력값" style="width:160px">
+                                            <select class="sel_type" style="width:170px">
+                                                <option selected="selected">선택</option>
+                                                <option>naver.com</option>
+                                                <option>gmail.com</option>
+                                                <option>nate.com</option>
+                                                <option>yahoo.co.kr</option>
+                                                <option>hanmail.net</option>
+                                                <option>daum.net</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>lycos.co.kr</option>
+                                                <option>empas.com</option>
+                                                <option>korea.com</option>
+                                                <option>paran.com</option>
+                                                <option>freechal.com</option>
+                                                <option>hanmir.com</option>
+                                                <option>hotmail.com</option>
+                                                <option>직접입력</option>
+                                            </select>
+                                            <button type="button" class="btn_basic small type2" style="float:right;margin:4px 0 0 0">중복확인</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">비밀번호</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="비밀번호" style="width:200px;margin-right:20px"> <span class="t_error">영문, 숫자, 특수 기호 조합으로 8~16자 이내로 입력해주세요.</span>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <th scope="row">비밀번호 확인</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="비밀번호 확인" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">회원정보 입력<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01">
+                                <caption>write table guide</caption>                    
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">이름</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">국가</th>
+                                        <td>
+                                            <select class="sel_type" multiple>
+                                                <option selected="selected">Repubic OF Korea(대한민국)</option>
+                                                <option selected="selected">Repubic OF Korea(대한민국)</option>
+                                                <option selected="selected">Repubic OF Korea(대한민국)</option>
+                                                <option selected="selected">Repubic OF Korea(대한민국)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">연락처</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                            <span class="gap">-</span>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                            <span class="gap">-</span>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">답변알림</th>
+                                        <td>
+                                            <div class="alarm_type">
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType1" checked="">
+                                                    <label for="alarmType1">e-mail</label>
+                                                </span>
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType2">
+                                                    <label for="alarmType2">sns</label>
+                                                </span>
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType3">
+                                                    <label for="alarmType3">전화</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">파일첨부</th>
+                                        <td>
+                                            <div class="file_sh">
+                                                <span class="file_name"></span>
+                                                <input type="file" name="" class="real_file">
+                                                <button type="button" class="btn_basic type2 small fake_file">파일선택</button>
+                                            </div>
+                                            <p class="info_file">* 최대 5MB /  jpg,gif 파일만 첨부 가능</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">보안 비밀번호<span class="small_txt">(필수)</span></h3>
+                        <div class="type_view">
+                            <table class="tb_write01">
+                                <caption>write table guide</caption>                    
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">보안 비밀번호</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="보안 비밀번호" style="width:200px;margin-right:20px"> <span class="t_error">숫자 4자리 이내로 입력해주세요.</span>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <th scope="row">보안 비밀번호 확인</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="보안 비밀번호 확인" style="width:200px">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h3_type">약관동의</h3>
+                        <div class="join_form">
+                            <div class="join_row with_btn" style="background:#fff;">
+                                <span class="checkbox round">
+                                    <input type="checkbox" name="" id="agree01">
+                                    <label for="agree01">이용약관을 확인하고 동의합니다.</label>
+                                </span>
+                                <button type="button" class="btn_basic small type4">약관보기</button>
+                            </div>
+                            <div class="join_row with_btn" style="background:#fff;">
+                                <span class="checkbox round">
+                                    <input type="checkbox" name="" id="agree02">
+                                    <label for="agree02">개인정보 취급방침을 확인하고 동의합니다.</label>
+                                </span>
+                                <button type="button" class="btn_basic small type4">약관보기</button>
+                            </div>
+                        </div>
+                        <div class="sh_btn_box">
+                            <button type="button" class="btn_basic type2">취소</button>
+                            <button type="button" class="btn_basic type5">가입</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>

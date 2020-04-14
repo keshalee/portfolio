@@ -1,0 +1,1 @@
+document.write("<div class='top_banner'><div class='bn_wrap'><ul><li><a href='#;'><img src='../../images/temp/top_bn01.jpg' alt=''></a></li><li><a href='#;'><img src='../../images/temp/top_bn02.jpg' alt=''></a></li><li><a href='#;'><img src='../../images/temp/top_bn03.jpg' alt=''></a></li></ul><button type='button' class='ico_com btn_x'>닫기</button></div></div>")

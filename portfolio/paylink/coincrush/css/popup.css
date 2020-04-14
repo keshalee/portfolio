@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.pop_wrap {padding:40px 30px 0 30px;border-top:4px solid #4094dc}
+
+/* heading */
+h1.h1_type {margin-top:-8px;color:#333333;font-size:24px;text-align:center;font-family:'NotoSansKR-Medium'}
+.pop_wrap .total_count {font-size:14px;font-family:'NotoSansKR-Medium';color:#333333}
+
+/* layout */
+.pop_listwrap {margin-top:25px}
+.join_col input{line-height:40px;height:40px}
+
+/* 검색 */
+.pop_wrap h1.h1_type + .sh_wrap {margin-top:25px}
+.pop_wrap .sh_wrap input[type="text"] {width:280px}
+.pop_wrap .sh_wrap label {font-size:16px}
+.pop_wrap .sh_wrap .tooltip_wrap {top:-5px}
+
+/* 나의 주문내역 */
+.tb_list .p_info .p_price {margin-top:0}
+
+/* 로그인 */
+.id_save {position:relative;margin-top:10px}
+.id_save .checkbox label {color:#666666;font-size:14px}
+.id_save .find_idpw {position:absolute;top:0;right:0}
+.id_save .find_idpw a {display:inline-block;margin-left:28px;font-size:14px;border-bottom:1px solid #999999}
+.dang_type {margin:8px 12px 14px 12px;line-height:16px}
+.d_txt {color:#ff5959}
+.btn_login {margin-top:22px}
+.btn_login button {width:100%}
+.txt_btn {padding-top:20px;margin-top:20px;border-top:1px solid #e5e5e5}
+.txt_btn p {position:relative;font-size:14px;line-height:40px}
+.txt_btn p + p {margin-top:10px}
+.txt_btn .btn_basic {position:absolute;top:0;right:0;min-width:120px;text-align:center}
+.fix_btn {display:none;position:fixed;left:0;right:0;bottom:0}
+.fix_btn ul:after {content:'';display:block;clear:both}
+.fix_btn ul li {float:left}
+.fix_btn ul li a {display:block;height:50px;line-height:50px;font-size:14px;text-align:center;background-color:#f1f1f1}
+.fix_btn ul li a:after {position:relative;top:-1px;margin-left:6px}
+.fix_btn ul li + li a {border-left:1px solid #e1e1e1}
+.fix_btn.two ul li {width:50%}
+.fix_btn.three ul li {width:33.3%}
+.fix_btn.three ul li:first-child {width:33.4%}
+
+#login02.block ~ .fix_btn {display:block}
+.pop_content .join_row .btn_basic {min-width:10px}
+
+.pop_infot {padding:0 20px;margin-top:17px;font-size:14px;line-height:22px}
+
+.gray_box + .txt_btn {margin-top:30px}
+.certify_type {margin-top:20px}
+.certify_type ul:after {content:'';display:block;clear:both}
+.certify_type ul {margin:0 -5px}
+.certify_type ul li {float:left;width:50%}
+.certify_type ul li .radio,
+.certify_type ul li .radio label {position:relative;display:block;font-size:16px;font-family:'NotoSansKR-Medium'}
+.certify_type ul li .radio label {margin:0 5px;padding-top:95px;height:180px;text-align:center;border:1px solid #e1e1e1}
+.certify_type ul li .radio input[type='radio'] {position:absolute;top:132px;left:50%}
+.certify_type ul li .radio label:before {top:132px;left:50%;margin-left:-11px}
+.certify_type ul li .radio label:after {top:138px;left:50%;margin-left:-5px}
+.certify_type ul li span:before {position:absolute;top:30px;left:50%;margin-left:-25px;width:50px;height:50px}
+.txt01 {font-size:14px;line-height:24px}
+.auto_logout {text-align:center}
+.auto_logout .ico_comb {font-size:14px;line-height:24px}
+.auto_logout .ico_comb:before {display:block;margin:0 auto 25px auto}
+.pop_content .attention_wrap .attention {margin-right:0}
+.pop_content .attention_wrap {padding-right:0}
+.sns_type {margin:0 -5px}
+.sns_type ul {display:table;min-width:100%;border-spacing:5px}
+.sns_type ul li {display:table-cell;width:33.3%;background:#ffffff}
+.sns_type ul li.naver {background:#25cc08}
+.sns_type ul li.facebook {background:#5278cc}
+.sns_type ul li.kakaotalk {background:#ffe812}
+.sns_type ul li.kakaotalk a {color:#333333}
+.sns_type ul li a {display:block;color:#ffffff;text-align:center;padding:5px 0 10px}
+.sns_type .ico_memb:before {position:relative;width:20px;height:20px;top:5px;left:-2px}
+.rebtn_warp {display:table;table-layout:fixed;width:100%;margin-top:10px;font-size:14px}
+.rebtn_warp span {display:table-cell}
+.rebtn_warp .txt {width:auto;padding-left:20px;color:#ff5959;vertical-align:middle}
+.rebtn_warp .rebtn {width:100px;text-align:right}
+.rebtn_warp .btn_basic {min-width:10px}
+.member_lvup {text-align:center}
+.member_lvup .ico_com {display:block;font-size:0;line-height:0;margin:0 auto 25px auto}

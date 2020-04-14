@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/wallet.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <section>
+                <div class="depositwithdraw">
+                    <div class="flbox">
+                        <h3 class="h5_type">KRW 입출금</h3>
+                        <div class="passbook_wrap">
+                            <div class="tab_type01 two">
+                                <ul>
+                                    <li><a href="javascript:void(0);" title="tems01">입금</a></li>
+                                    <li><a href="javascript:void(0);" title="tems02" class="active">출금</a></li>
+                                </ul>
+                                <div id="tems01" class="tab_view_box">
+                                    <form>
+                                        <div class="form_group">
+                                            <div class="withdraw">
+                                                <ul class='tb_sort_wrap'>
+                                                    <li class="tit">입금계좌</li>
+                                                    <li class="con"> 
+                                                        <input type="text" id="companyAccount01" value="국민은행 451237-01-012424" disabled="disabled" />
+                                                        <input type="text" id="companyAccount02" value="(주)페이링크인터내셔널" disabled="disabled" />
+                                                    </li>
+                                                </ul>
+                                                <p class="check01">계좌정보 <span style="float:right"><span style="font-size:13px;color:#000" id="depositAccount">농협 (홍길동 : 123456-01-123)</span></span></p>
+                                                <ul>
+                                                    <li class="tit">이름</li>
+                                                    <li class="con"> 
+                                                        <input type="text" value="홍길동7890" disabled="disabled">
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li class="tit">신청금액</li>
+                                                    <li class="con"> 
+                                                        <label for="depAppAmount">
+                                                        	<input type="text" value="" placeholder="0" style="text-align:right;padding-right:42px;" />
+                                                        	<em style="font-size:12px; color:#777;">KRW</em>
+                                                        </label>
+                                                        <p class="txt_p">최소 입금 금액은 10,000원입니다.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="attention_wrap">
+	                                    <h3 class="ico_comb attention red">입금 전 꼭 알아두세요!</h3>
+	                                    <ul class="dot_list">
+	                                        <li>입금할 계좌를 발급받으시려면 가입자 본인 명의의 입, 출금 계좌를 등록하셔야 합니다.</li>
+	                                        <li>원화 입금 가능 시간은 10:00~19:00까지입니다. (해당 시간 전후 입금 신청 시 입금 확인이 다소 늦어질 수 있습니다.)</li>
+	                                        <li>실명인증의 강화를 위해서 입금 시 입금자면은 거래소에서 발급되는 이름으로 정확히 입력해야 처리할 수 있습니다.</li>
+	                                        <li>처음 입금한 금액은 72시간 동안 출금 제한이 있습니다. (이후 입금 금액은 48시간입니다.)</li>
+	                                        <li>입금 금액과 입금 신청금액이 동일해야 입금처리가 가능합니다.</li>
+	                                    </ul>
+	                                </div>
+                                    <div>
+                                        <button type="button" class="btn_basic type3">입금신청</button>
+                                    </div>
+                                    <div id="comptePop03" class="dialog" style="display:none;" title="입금신청">
+                                        <div class="dialog_content">
+                                            <p class="txt01"><span class="buy_color">입금신청</span>이 되었습니다.<br />예금주명을 정확히 입력하여 입금해주세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tems02" class="tab_view_box block">
+                                    <form>
+                                        <div class="form_group">
+                                            <div class="txt1" style="height:50px; line-height:50px; ">
+                                                <span style="float:left;">홍길동 님</span> &nbsp; 
+                                                <span style="float:right; text-align:right;line-height:25px;"><em>Level.1 / SILVER</em><em style="display:block;font-size:12px;color:#777;">(일 : 5,000,000원 / 월 : 50,000,000원)</em></span>
+                                            </div>
+                                            <div class="txt1">
+                                                <span style="float:left;">자산현황</span> &nbsp; 
+                                            	<span style="float:right;"><em style="font-size:13px;">1,782,000</em> &nbsp; <em style="font-size:12px; color:#777;"> KRW</em></span>
+                                            </div>
+                                            <div class="txt1">
+                                            	<span style="float:left;">사용중</span> &nbsp; 
+                                            	<span style="float:right;"><em style="font-size:13px;">1,782,000</em> &nbsp; <em style="font-size:12px; color:#777;">KRW</em></span>
+                                           	</div>
+                                            <div class="txt1">
+                                            	<span style="float:left;">거래가능</span> &nbsp; 
+                                            	<span style="float:right;"><em>1,782,000</em> &nbsp; <em style="font-size:12px; color:#777;">KRW</em></span>
+                                           	</div>
+                                            <div class="withdraw">
+                                                <ul class='tb_sort_wrap'>
+                                                    <li class="tit">신청금액</li>
+                                                    <li class="con"> 
+                                                    	<!-- <button type="button" style="width:60px" class="btn_all">최대</button> -->
+                                                    	<label for="withAppAmount">
+                                                        	<input type="text" value="" placeholder="0" style="text-align:right;padding-right:42px;" />
+                                                        	<em style="font-size:12px; color:#777;">KRW</em>
+                                                        </label>
+                                                        <p class="txt_p">최소 출금 금액은 10,000원입니다.</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="check01">합계 <span style="float:right"><span style="font-size:16px;color:#000">0</span> KRW<em>(수수료 : 1,000원/건)</em></span></p>
+                                                <p class="check01">계좌정보 <span style="float:right"><span style="font-size:16px;color:#000">농협 (홍길동 : 123456-01-123)</span></span></p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="attention_wrap">
+	                                	<h3 class="ico_comb attention red">출금 전 꼭 알아두세요!</h3>
+	                                    <ul class="dot_list">
+	                                        <li>본인 명의 실명인증이 완료된 계좌로만 출금할 수 있습니다.</li>
+	                                        <li>원화 출금 가능 시간은  10:00~19:00까지입니다. (해당시간 전후 출금신청 시 출금 확인이 다소 늦어질 수 있습니다.)</li>
+	                                        <li>처음 출금한 금액은 72시간 동안 출금 제한이 있습니다.</li>
+	                                        <li>72시간 출금 제한 이후 출금이 진행되지 않을 경우 고객센터로 문의 바랍니다.</li>
+	                                    </ul>
+	                                </div>
+                                    <div>
+                                        <button type="button" class="btn_basic type3">출금신청</button>
+                                    </div>
+                                    <div id="comptePop04" class="dialog" style="display:none;" title="출금신청">
+                                        <div class="dialog_content">
+                                            <p class="txt01"><span class="sell_color">출금신청</span>이 되었습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frbox">
+                        <h3 class="h5_type">입출금 내역</h3>
+<!--
+                        <div class="tb_sort_wrap">
+                            <div class="tb_sort">
+                                <div class="sel_small">
+                                    <select name="" id="" class="sel_type">
+                                        <option value="">전체</option>
+                                        <option value="">1주일</option>
+                                        <option value="">1개월</option>
+                                        <option value="">3개월</option>
+                                        <option value="">6개월</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+-->
+                        <div class="clearfix"></div>
+                        <div class="sh_wrap type2">
+                            <form action="">
+                                <fieldset>
+                                    <legend>기간별 조회</legend>
+                                    <dl>
+                                        <dt>조회기간</dt>
+                                        <dd>
+                                            <div class="datepicker_wrap">
+                                                <span class="datepicker_box"><input type="text" name="sDate" id="sDate" readonly></span> ~ 
+                                                <span class="datepicker_box"><input type="text" name="eDate" id="eDate" readonly></span>
+                                            </div>
+                                        </dd>
+                                        <dd>
+                                            <button type="button" class="btn_basic type4 small">당일</button>
+                                            <button type="button" class="btn_basic type4 small">3일</button>
+                                            <button type="button" class="btn_basic type4 small">1주</button>
+                                            <button type="button" class="btn_basic type4 small">1개월</button>
+                                            <button type="button" class="btn_basic type4 small active">전체</button>
+                                        </dd>
+                                    </dl>
+                                    <div class="coin_search">
+                                        <dl>
+                                            <dt>거래구분</dt>
+                                            <dd>
+                                                <span class="sel_small">
+                                                    <select class="sel_type" id="appRequestType">
+                                                        <option selected="selected" value="">전체</option>
+                                                        <option value="I">입금</option>
+                                                        <option value="S">출금</option>
+                                                    </select>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>거래상태</dt>
+                                            <dd>
+                                                <span class="sel_small">
+                                                    <select class="sel_type">
+                                                        <option value="" selected="selected">전체</option>
+                                                        <option value="1">신청중</option>
+                                                        <option value="0">완료</option>
+                                                    </select>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <button type="button" class="btn_basic type2 small">검색</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        
+                        <div class="responsive_table mgtsl">
+                            <table class="tb_list02">
+                                <caption>입출금 내역</caption>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    <col class="col5">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">일시</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">신청금액</th>
+                                        <th scope="col">수수료</th>
+                                        <th scope="col">합계(수수료포함)</th>
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6" class="c_c">입출금 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2019.02.09 12:33:30</td>
+                                        <td>입금</td>
+                                        <td><span>150,000,000</span> KRW</td>
+                                        <td><span>0</span> KRW</td>
+                                        <td><span>0</span> KRW</td>
+                                        <td>신청중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2019.02.05 12:33:30</td>
+                                        <td>출금</td>
+                                        <td><span>542,000</span> KRW</td>
+                                        <td><span>1,000</span> KRW</td>
+                                        <td><span>543,000</span> KRW</td>
+                                        <td>완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging">
+                            <a href="#" title="처음" class="ico_comb pprev"></a>
+                            <a href="#" title="이전" class="ico_comb prev"></a>
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" title="다음" class="ico_comb next"></a>
+                            <a href="#" title="마지막" class="ico_comb nnext"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+    
+    <!-- S : modal -->
+    <div id="otpModal" class="modal">
+	    <div class="modal_wrap">
+	    	<div class="modal_header">
+	            <h4 class="h4_type ellipsis">OTP 인증 <span class="close" id="otpClose">&times;</span></h4>
+	        </div>
+			<div class="modal_content">
+				<div class="join_form">
+					<input type="text" id="userInOtpNum" maxlength="6"
+						cssClass="ime_disabled" placeholder="OTP 번호를 입력해주세요."/>
+					<button class="btn_basic type5" id="sendOtpChk">입력</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- E : modal -->
+</body>
+</html>
+							

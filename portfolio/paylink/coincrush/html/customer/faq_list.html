@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>COINCRUSH</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.bxslider.js"></script>
+    <script src="../../js/common.ui.js"></script>
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/customer.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../include/header.js"></script>
+    <!-- E : header -->
+    
+    <!-- S : coinBar-->
+    <script src="../include/coinbar.js"></script>
+    <!-- E : coinBar-->
+    
+    <!-- S : contents -->
+    <div class="sub_container">
+        <div class="container">
+            <section>
+                <div class="lnb_content">
+                    <!-- S : lnb -->
+                    <script src="../include/lnb.js"></script>
+                    <!-- E : lnb -->
+                    <div class="content_wrap">
+                        <h3 class="h3_type">자주하는 질문</h3>
+                        <div class="gd_btn">
+                            <button type="button" class="btn_basic big type3">거래소 이용가이드</button>
+                            <button type="button" class="btn_basic big type3" onclick="location.href='certify_index.html'">인증 자료 제출안내</button>
+                        </div>
+                        
+                        <!-- S : FAQ search -->
+                        <div class="sh_wrap" style="margin-top:10px;">
+                            <form action="">
+                                <fieldset>
+                                    <legend>FAQ 검색</legend>
+                                    <label for="faqsh">항목명</label>
+                                    <select class="sel_type">
+                                        <option selected="selected">전체</option>
+                                        <option>회원문의</option>
+                                        <option>이용문의</option>
+                                        <option>입출금문의</option>
+                                    </select>
+                                    <input type="text" id="faqsh" name="" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" class="btn_basic type2">검색</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- E : FAQ search -->
+                        <br><br>
+                        <!-- S : FAQ list -->
+                        <div class="faq_list">
+                            <div class="tb_sort_wrap">
+                                <p class="sort_tit">총 <span>4건</span>이 검색되었습니다.</p>
+                            </div>
+                            <dl class="faq type2">
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>인증메일이 오지 않아요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>이메일이 수신되지 않는 경우는 다음과 같습니다. <br />1. 스팸메일로 분류된 경우 - 스팸메일함에서 확인 부탁드립니다. <br />2. 특정 도메인의 메일서버일 경우 다른 이메일 주소 이용 부탁드립니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>개인정보(이름)를 변경하고 싶어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>본인 확인을 위한 서류 요청드립니다. <br />
+아래의 서류를 고객센터 메일로 전달부탁드립니다.<br /><br />
+
+1. 본인확인을 위하여 신분증 / 메모 사진 첨부 <br />
+- 주민등록번호 뒷자리 비공개/ 얼굴, 실명, 생년월일, 발급일자, 발급처 공개<br />
+- 메모 내용 작성 시 기본요청 사항 3가지(인증목적/ 이메일 주소 혹은 전화번호/ 날짜) 작성<br />
+2. 작성자 본인실물사진 / 신분증 / 요청메모 첨부<br />
+(반명함식: 얼굴부터 어께 노출 / 신분증, 메모는 1번과 동일)<br />
+3. 개명 신청서, 주민등록 초본(3개월 이내 발급한 원본)</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>OTP인증은 어떻게 하나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>휴대폰의 시간 설정이 자동인지 확인 부탁드립니다.<br />
+수동으로 설정되어 있으면 서버 시간과 차이가 나서 안되는 경우가 있으며, OTP 인증 번호는 서버 시간과 몇 초라도 차이가 나면 다르게 표시될 수 있습니다.<br /><br />
+
+안드로이드 : 설정 > 일반 > 날짜 및 시간 > 날짜 및 시간 자동 설정 켜짐으로 변경<br />
+아이폰 : 설정 > 일반 > 날짜 및 시간 >자동으로 설정<br /><br />
+
+위 사항을 체크하였음에도 불구하고, 지속적인 오류가 발생할 경우 번거로우시겠지만 자세한 현상을 기재하여 메일로 접수해주시거나 고객센터로 문의주시면 확인하는대로 빠른 도움 드리겠습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>휴대폰 번호를 바꾸고 싶어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>본인 확인을 위한 서류 요청드립니다.<br />
+아래의 서류를 고객센터 메일로 전달부탁드립니다.<br /><br />
+
+1. 본인확인을 위하여 신분증 / 메모 사진 첨부 <br />
+- 주민등록번호 뒷자리 비공개/ 얼굴, 실명, 생년월일, 발급일자, 발급처 공개<br />
+- 메모 내용 작성 시 기본요청 사항 3가지(인증목적/ 이메일 주소 혹은 전화번호/ 날짜) 작성<br />
+2. 작성자 본인실물사진 / 신분증 / 요청메모 첨부<br />
+(반명함식: 얼굴부터 어께 노출 / 신분증, 메모는 1번과 동일)<br />
+3. 통신사 이용계약 증명서 원본 사진 (캡쳐 이미지 사용불가)</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>계좌번호를 바꾸고 싶어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>마이페이지 - 내정보 - 인증관리 - 인증센터 - 출금계좌 등록 - 초기화 버튼 클릭 후 재 설정하실 수 있습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>회원 등급은 어떻게 알 수 있나요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>마이페이지 - 인증센터에서 현재 회원님의 회원등급을 볼 수 있습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>회원가입이 안되요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>1. 회원 가입 정보를 정확하게 입력하셨는지 확인 부탁드립니다.<br />
+아울러, 이메일 인증을 완료 하셔야 가입이 완료되기 때문에 인증메일을 받으셨는지 해당 메일계정에서 확인 부탁드립니다.<br /><br />
+
+2. 일전에 안내드렸던 방법으로도 가입이 되지 않는다면 이메일 입력 시 공백이 있는지 확인 부탁드립니다.<br />
+아울러 회원가입을 짧은 시간동안 여러 번 시도할 경우, 디도스 공격 방지를 하기 위해 일정 시간동안 회원 가입이 제한 될 수 있습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">회원문의</span><span class="ico_cu q">질문</span>법인으로 가입하고 싶어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>고객센터로 문의바랍니다. </p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">이용문의</span><span class="ico_cu q">질문</span>OTP로그인을 그만하고싶어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>마이페이지 - 인증관리 - OTP인증 - OTP 인증 사용중단 에서 중단 가능합니다. </p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">이용문의</span><span class="ico_cu q">질문</span>거래 수수료는 어떻게 되나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>회원등급 산정기준 및 거래수수료 계산방식 등 자세한 내용은 [수수료 안내] 페이지를 참고해주세요.</p>
+                                </dd>
+<!--
+                                <dt><a href="#;" class="ico_cua open"><span class="type">이용문의</span><span class="ico_cu q">질문</span>거래 레벨은 언제 바뀌나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>당일 오전 4시를 기준으로 바뀝니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">이용문의</span><span class="ico_cu q">질문</span>인터넷이 자꾸 멈춰요 .(브라우저최적화)</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>모든 브라우저에서 이용이 가능하지만, 크롬에 최적화되어 있으므로 다른 브러우저에서 일부 기능이 정상적으로 작동하지 않을 수 있습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">이용문의</span><span class="ico_cu q">질문</span>인증 계좌를 변경하고 싶어요</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>마이페이지 - 내정보 - 인증관리 - 인증센터 - 출금계좌 등록 - 초기화 버튼 클릭 후 재 설정하실 수 있습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>KRW 출금 수수료는 어떻게 되나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>건당 출금 수수료 1,000원입니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>암호화폐 출금 수수료는 어떻게 되나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>암호화폐 출금 수수료는 회원등급 별로 다릅니다.<br />
+회원등급 산정기준 및 거래수수료 계산방식 등 자세한 내용은 [수수료 안내] 페이지를 참고해주세요.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>KRW 입금 확인이 안되요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>계좌이체 후 입금까지 약 10분 이내에 고객님의 원화(KRW)지갑에 반영됩니다.<br /><br />
+
+만약 시간이 지남에도 불구하고 입금처리가 되지않거나 확인이 불가한 경우는 다음과 같습니다.<br /><br />
+
+①거래소에 등록된 계좌로 입금하지 않으신 경우<br />
+②입금신청하신 금액과 실제입금금액이 다른 경우<br />
+③타인 명의의 계좌에서 입금한 경우<br />
+④본인명의 계좌에서 예금주명을 변경한 후 입금한 경우<br />
+⑤계좌인증이 완료되지 않은 계좌로 입금을 시도한 경우<br />
+⑥본인명의 계좌와 연결된 카드 또는 통장으로 타은행 ATM에서 입금한 경우<br />
+⑦계좌사고 등의 이유로 계정이 정지된 경우<br />
+⑧입금명+핸드폰번호뒷자리를 기입하지 않은 경우 또는 불일치 할 경우<br /><br />
+
+이밖에 원화(KRW) 입금 처리가 되지 않은 경우. [고객센터]로 연락주시기 바랍니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>암호화폐 입출금은 어떻게 하나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>거래소 접속 후 주문거래 또는 지갑에서 원하시는 암호화폐를 선택합니다.<br /><br />
+
+'입금하기' 선택 시 입금주소를 발급해 드리며, 해당 주소를 이용하여 입출금을 진행하는 타 거래소 또는 지갑 사이트에서 진행하시면 됩니다.<br />
+입출금 시 반드시 지갑주소를 올바르게 입력했는지 확인하시고 진행해주시기 바랍니다.<br />
+주소를 잘못 입력한 경우, 코인크러쉬에서는 책임지지 않습니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>암호화폐 주소를 잘못 입력했어요.</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>주소 오입력 시 송금이 정상적으로 이루어지지 않아 회원님의 소중한 자산을 잃을 수 있습니다. <br />
+암호화폐 특성상 송금 신청이 완료되면 취소할 수 없으며, 
+주소 오입력시 발생하는 문제는 복구 처리가 불가하오니 송금 전 지갑 주소를 꼭 확인해 주시기 바랍니다.</p>
+                                </dd>
+                                <dt><a href="#;" class="ico_cua open"><span class="type">입출금문의</span><span class="ico_cu q">질문</span>KRW 전액출금은 안되나요?</a></dt>
+                                <dd>
+                                    <p class="ico_cub re"><span class="ico_cu a">답변</span>건당 출금 수수료 1,000원을 제외한 모든 금액 출금이 가능합니다.</p>
+                                </dd>
+-->
+                            </dl>
+                            <div class="paging">
+                                <a href="#" title="처음" class="ico_comb pprev"></a>
+                                <a href="#" title="이전" class="ico_comb prev"></a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#" title="다음" class="ico_comb next"></a>
+                                <a href="#" title="마지막" class="ico_comb nnext"></a>
+                            </div>
+                        </div>
+                        <!-- E : FAQ list -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- E : contents -->
+    
+    <!-- S : footer -->
+    <script src="../include/footer.js"></script>
+    <!-- E : footer -->
+</body>
+</html>
