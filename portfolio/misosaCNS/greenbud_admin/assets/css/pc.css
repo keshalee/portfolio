@@ -1,0 +1,18 @@
+﻿@media (min-width: 992px) {
+.topmenu{     width: 50%; float: left; position: fixed; top: 16px; z-index: 9999; left: 296px; }
+.logzon{width:50%;float:left;padding:10px;  position: fixed; top: 12px;  z-index: 10000;left: 50%; }
+
+.categorydd select{height:200px;}
+.categorydd{width:24%;margin-right:1.333%}
+.tbody{width:30%}
+.tabmenu{margin-bottom:20px;}
+.tabmenu .items{width:10%}
+.mit input{margin-bottom:10px;}
+.topmenu .nav-today{padding-top:5px;}
+.inimg{width:50%}
+.imgupload{width:400px;}
+.pcvnoti{width:700px}
+.pcvnoti input{width:100px !important}
+.harftwo{width:100px !important}
+
+}

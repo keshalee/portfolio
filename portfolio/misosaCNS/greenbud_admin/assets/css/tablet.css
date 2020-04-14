@@ -1,0 +1,22 @@
+﻿@media (min-width: 768px) {
+.tb{width:49%;float:left;}
+.intbr{margin-top:0px;}
+.ctb.right{margin-left:2%}
+.inputtable tr th{width:200px;}
+.inputtable tr td input{width:200px;}
+.inputtable tr a{    padding: 2px 10px;}
+.inputtable tr .noti{display: inline-block; color: #ff6a00; font-size: 12px; margin-left: 10px;}
+.tda{padding-top:4px !important}
+.inputtable tr .full-input{width:80% !important; }
+.inputtable tr .harf-input{width:60%;}
+.agreetab a{width:auto;margin-right:15px;font-size:18px;letter-spacing:-1px;}
+td .stepinputtitle{margin-right:10px;}
+
+.mainimg img{width:310px; height:310px;}
+.subimg img{width:60px; height:60px;}
+.orderlist .orderlistitem{width:16%}
+.orderlist .orderlistitem .col-xs-12{padding:5px;}
+.bbse{text-align:right;}
+
+
+}
