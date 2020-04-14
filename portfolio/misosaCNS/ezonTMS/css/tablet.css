@@ -1,0 +1,246 @@
+﻿@media (min-width: 768px) {
+.maintopcon{margin-bottom:150px}
+.center .centerbg{height:150px;} 
+.center .centerbody {margin-top:60px}
+.center .centerbody .left{width:220px;margin-right:30px;}
+.center .centerbody .right{width:484px;}
+.center .centerbody .right .bottom{margin-top:0;}
+.center .centerbody .right .rightmenu{}
+.center .centerbody .right .rightmenu .top{width:210px; position:relative;top:3px;}
+.center .centerbody .right .rightmenu .bottom{margin-left:54px; width: 220px;}
+
+
+.center .centerbody .right .bottom input{margin-left:5px;width:100px;}
+.center .centerbody .right .bottom a{margin-left:5px;}
+.center .centerbody .right .bottom input,
+.center .centerbody .right .bottom a,
+.center .centerbody .right .bottom select{}
+.center .centerbody .left .ltop .ltoptitle{font-size:16px;color:#111;margin-top:15px;padding:0 5px;width:215px; display:block;margin-bottom:35px;line-height:24px;}
+
+.center .centerbody .right .rtable table th{text-align:center;background:#f8f8f8;color:#2d2d2d;height:38px;vertical-align:middle;}
+.center .centerbody .right .rtable table th.col1{width:10%}
+.center .centerbody .right .rtable table th.col2{width:50%}
+.center .centerbody .right .rtable table th.col3{width:10%}
+.center .centerbody .right .rtable table th.col4{width:20%}
+.center .centerbody .right .rtable table th.col5{width:10%}
+.center .centerbody .right .rtable table td{text-align:center;height:60px;vertical-align:middle;padding-top:5px;padding-bottom:5px;}
+.center .centerbody .right .rtable table td.col1{width:10%}
+.center .centerbody .right .rtable table td.col2{width:50%}
+.center .centerbody .right .rtable table td.col3{width:10%}
+.center .centerbody .right .rtable table td.col4{width:20%}
+.center .centerbody .right .rtable table td.col5{width:10%}
+.center .centerbody .right .rightsubmenu {margin-top:25px;}
+.center .centerbody .right .rightsubmenu a{font-size:13px;  padding: 9px 17px;}
+.qna th{padding-top:15px; padding-bottom:10px;height:45px;padding-left:20px;width:110px;}
+.qna td{padding-top:10px; padding-bottom:10px;height:45px;}
+.qna .ttbody td{padding-bottom :10px; }
+.qnabtn{margin-top:50px;}
+.qnabtn a{padding: 8px 31px;}
+
+
+.cal .ui-datepicker td a{height:69px;}
+.cal .ui-state-default.ui-state-active{height:69px;}
+.cal .ui-widget-header{height:69px;}
+.cal .ui-widget-header a{height:69px;}
+.ui-datepicker .ui-datepicker-title {    position: relative; top: 3px; font-size: 32px;}
+.cal .ui-datepicker-inline{    width: 85%; margin: 0 auto;}
+.cal .ui-datepicker th{height:32px;}
+.cal .ui-datepicker td{height:70px;}
+.cal .ui-state-default{height:69px;padding-left:10px;}
+.cal .caldiv{position: absolute; left: 16%;width: 69%; padding: 5px; border-radius: 10px;z-index:1}
+.cal .callog{display:table}
+.cal .callogtr{display:table-row !important;padding:0px !important;text-align:left !important; }
+.cal .callogtitle{width:25%;display:table-cell !important;padding:0px 5px !important;text-align:left !important;font-size:13px; }
+.cal .callogbody{width:auto;display:table-cell !important;padding:0px  5px !important;text-align:left !important; color:#FFF !important;font-size:13px;}
+
+
+.snsbody1{width:50%}
+.snsbody2{width:50%}
+.snsbody3{width:50%}
+.snsbody4{width:50%}
+.snsbody .tw .item.type2 .desc{    padding-top: 51px;}
+.snsbody .snsbody4  .item.type2 .desc {padding-top:22px }
+
+
+
+.mypagecount{margin-top:20px;position:absolute;bottom:70px;    right: 0px; width: 500px;}
+.mypagecount ul{}
+.mypagecount ul li{float:left;text-align:center;width:13%;margin-top:10px;margin-left:5px;position:relative;left:75px;padding:0px}
+.mypagecount ul li dl{border:solid 1px #a5bdc6;background:rgba(255,255,255,0.2);border-radius:9990px;    padding: 10px 0px;}
+.mypagecount ul li dt{color:#323943;font-size:13px;letter-spacing:-1px;}
+.mypagecount ul li dd{color:#FFF;font-size:18px;font-weight:bold;border:none}
+.mypagecount ul li dd span{color:#323943;font-size:13px;font-weight:lighter;margin-left:2px;}
+
+
+.center .centerbody .right .rtable.design table th.col1{width:10%;}
+.center .centerbody .right .rtable.design table th.col2{width:50%;}
+.center .centerbody .right .rtable.design table th.col4{width:20%;}
+.center .centerbody .right .rtable.design table th.col5{width:20%}
+
+.center .centerbody .right .rtable.design table td.col1{width:10%;font-size:14px;}
+.center .centerbody .right .rtable.design table td.col2{width:50% !important; }
+.center .centerbody .right .rtable.design table td.col4{width:20%;}
+.center .centerbody .right .rtable.design table td.col5{width:20%}
+.mypagebottom{width:274px}
+
+.center .centerbody .right .rtable.hosting table th.col1{width:10%}
+.center .centerbody .right .rtable.hosting table th.col2{width:30%}
+.center .centerbody .right .rtable.hosting table th.col3{width:15%}
+.center .centerbody .right .rtable.hosting table th.col4{width:15%}
+.center .centerbody .right .rtable.hosting table th.col5{width:20%}
+.center .centerbody .right .rtable.hosting table td.col1{width:10%;font-size:14px;}
+.center .centerbody .right .rtable.hosting table td.col2{width:30% !important;}
+.center .centerbody .right .rtable.hosting table td.col3{width:15%}
+.center .centerbody .right .rtable.hosting table td.col4{width:15%}
+.center .centerbody .right .rtable.hosting table td.col5{width:20%}
+
+
+
+.center .centerbody .right .rtable.tax table th.col1{width:10%}
+.center .centerbody .right .rtable.tax table th.col2{width:15% !important}
+.center .centerbody .right .rtable.tax table th.col3{width:35% !important}
+.center .centerbody .right .rtable.tax table th.col4{width:15% !important}
+.center .centerbody .right .rtable.tax table th.col5{width:10% !important}
+.center .centerbody .right .rtable.tax table th.col6{width:15% !important}
+
+.center .centerbody .right .rtable.tax table td.col1{width:10%;vertical-align:middle;font-size:14px;}
+.center .centerbody .right .rtable.tax table td.col2{width:15% !important}
+.center .centerbody .right .rtable.tax table td.col3{width:35% !important}
+.center .centerbody .right .rtable.tax table td.col4{width:15% !important}
+.center .centerbody .right .rtable.tax table td.col5{width:10% !important}
+.center .centerbody .right .rtable.tax table td.col6{width:15% !important}
+
+.maintenancetoplist{    margin-top: 0px; position: absolute; bottom: 20px; right: 19px; width: 328px; background: rgba(255,255,255,0.2); padding: 5px !important; border-radius: 5px;font-size:12px}
+ .maintenancetoplist table td{letter-spacing:-1px;}
+
+
+.maintenanceimg{margin-top:30px;margin-bottom:30px} 
+.maintenanceimgbg{background:#e6f6ff}
+.maintenancelinebb{width:330px;}
+.maintenancetap{margin-top:70px;}
+.maintenancetap .linebb{width: 100%; border-bottom: 1px solid #CCC; position: relative; bottom: -61px;}
+.maintenancetap .items{font-size:20px;}
+
+
+.maintenancetype .owl-item{width:350px !important;margin-right:20px;}
+
+.cctable th{font-size:14px;padding-left:35px;}
+.cctable td{font-size:14px;padding-left:35px;padding-bottom:15px;}
+.cctable td input[type=text], .cctable td input[type=password]{height:30px;}
+.cctable td select{height:30px;}
+.cctable .tttel select{width:68px}
+.cctable .tttel input{width:70px}
+.cctable .oneintput input{width:390px;}
+.cctable .point:before{margin-right:5px;position:relative;top:1px;}
+.cctable th:before{margin-right:5px;}
+.cctable .ttemail select{width:90px}
+.cctable .ttemail input{width:130px}
+.cctable .gugun select{width:100px; margin-right:10px;}
+.cctable td span{font-size:14px;}
+.cctable .buildtype input{position:relative;top:1px; margin-right:5px;}
+.cctable .oneintputtext input{width:270px}
+.cctable .refsite input{width:340px}
+.cctable .textareatr textarea{width:390px;padding:10px;}
+.cctable .last th{padding-bottom:30px;}
+.tabletitle{padding: 13px 20px;font-size:14px}
+.tabletitle span font{position:relative;top:1px;margin-right:2px;}
+.cctableagreebtn a{    padding: 10px 20px;}
+
+
+
+
+.cunsultingwarpright .rightsubmenu {margin-top:25px;}
+.cunsultingwarpright .rightsubmenu a{font-size:13px;  padding: 9px 17px;}
+
+.interviewslide{margin-top:25px;}
+.cunsultingwarpright .title span{margin-top:17px;margin-left:20px;}
+.cunsultingwarpright .title.interview{text-align:right;}
+.cunsultingwarpright .title.interview span{margin-top:12px;margin-left:0px;}
+.cunsultingwarpright font{float:left;    margin-top: 10px; }
+.cunsultingwarpright .title{font-size:21px;}
+
+.cunsultingwarp .title{font-size:21px;margin-top:50px;}
+
+.interviewslide li span{font-size:15px; font-weight:bold;padding-top: 15px; padding-bottom: 15px;}
+.interview a{padding: 4px 12px;}
+.interview select{height:24px;width:90px;}
+.faqtable{margin-top:25px;}
+.faqtable .faqtabledate{}
+.faqtable .faqtabletitle{}
+.faqtable .faqtablename{}
+.faqtable .faqtabletype{}
+.faqtable .faqtabledone{padding:6px 5px;}
+
+
+.col1{width:120px;text-align:center;padding-bottom:10px;padding-top:10px;color:#333333}
+.col2{width:270px;color:#333333}
+.col3{width:130px;text-align:center;color:#333333}
+.col4{width:130px;text-align:center;}
+.col5{width:80px;text-align:center;}
+
+
+.hidden-xs{}
+ .cunsultingbox{margin-top:60px}
+.cunsultingbox .card_title{text-align:left;padding:10px;height:inherit;}
+
+.cunsultingbox .card_wrapper .table{width:33%;float:left;}
+.cunsultingbox .card_padding1{width:56%;float:left;    padding-top: 0px; margin-top: 0px;position:relative;bottom:7px;}
+.cunsultingbox .btn_type1{width:10%;float:left;padding-top: 0px; margin-top: 0px;position:relative;bottom:2px;}
+.cunsultingbox .btn_type1 a{margin-top:0px;}
+
+.centertitledl{color:#FFF;position:absolute;top:20px;left:40px;}
+.centertitledl dt{font-size:24px;}
+.centertitledl dd{opacity:0.8}
+.centertitledl dd.middle{margin-top:10px;font-size:18px;font-weight:bold;opacity:1}
+
+.ssrequestwrap{}
+.ssrequestwrap .sumprice{margin-top:-1px}
+.ssrequestwrap .sumprice table {text-align:center;}
+.ssrequestwrap .sumprice table td{padding-left:0;vertical-align:middle;padding-top:30px;padding-bottom:30px;}
+.ssrequestwrap .sumprice table .price{padding-top:0;margin-right:10px;} 
+.ssrequestwrap .sumprice table .price span{font-size:15px;}
+.ssrequestwrap .sumprice table .pricecheck{padding-top:0;margin-right:10px}
+.ssrequestwrap .sumprice table .pricecheck span{margin-left:3px;}
+.ssrequestwrap .sumprice table .pricecheckno{padding-top:0;padding-bottom:0;padding-left:0}
+
+.ssrequestwrap .sumpriceleft{margin-top:30px;}
+.ssrequestwrap .sumpriceleft .left-top{padding:20px 25px;}
+.ssrequestwrap .sumpriceleft .left-top .title{}
+.ssrequestwrap .sumpriceleft .left-top .title span{margin-left:35px;position:relative;bottom:2px;}
+.ssrequestwrap .sumpriceleft .left-topin{padding:20px 25px 18px}
+.ssrequestwrap .sumpriceleft .left-topin .leftspan{margin-bottom:10px;font-weight:bold;}
+.ssrequestwrap .sumpriceleft .left-topin .rightspan{margin-left :15px;}
+.ssrequestwrap .sumpriceleft .left-topin select{margin-top:0;padding-left:10px;height:32px;border-radius:5px;}
+
+.ssrequestwrap .sumpriceleft .left-toptable{padding:25px;}
+.ssrequestwrap .sumpriceleft .left-toptable .left{font-size:14px;padding-bottom: 20px;}
+.ssrequestwrap .sumpriceleft .left-toptable .right{font-size:14px;}
+.ssrequestwrap .sumpriceleft .left-toptable .hasbb .left{padding-bottom:10px}
+.ssrequestwrap .sumpriceleft .left-toptable .hasbb .right{padding-bottom:10px}
+.ssrequestwrap .sumpriceleft .left-toptable .hasbb .right.bb{padding-bottom:20px;}
+
+.ssrequestwrap .sumpriceleft .left-toptable select{margin-bottom:20px;height:32px;}
+.ssrequestwrap .sumpriceleft .left-toptable input[type=text]{margin-left:10px;height:32px;width:83%;padding-left:20px;}
+
+.ssrequestwrap .sumpriceright .right-top{padding:25px 30px}
+.ssrequestwrap .sumpriceright .right-top .topraido{margin-top:35px;}
+.ssrequestwrap .sumpriceright .right-top .topraido input{margin-right:5px;top:2px;}
+.ssrequestwrap .sumpriceright .right-top .topraido .radioitem.left{margin-right:30px;}
+.ssrequestwrap .sumpriceright .right-top .righttable{overflow:hidden}
+.ssrequestwrap .sumpriceright .right-top .righttable table{width:100%;}
+.ssrequestwrap .sumpriceright .right-top .righttableoption{margin-bottom:55px;}
+.ssrequestwrap .sumpriceright .right-top .righttableoption .righttableoptiontitle{margin-bottom:0;display:inline-block;margin-right:20px;}
+.ssrequestwrap .sumpriceright .right-top .righttableoption .optionitem{display:inline-block;margin-right:10px;}
+.ssrequestwrap .sumpriceright .right-top .optionetc{padding:11px 0}
+.ssrequestwrap .sumpriceright .right-top .optionetc th{width:80px;}
+.ssrequestwrap .sumpricelast table .col1{width:20%}
+.ssrequestwrap .sumpricelast table .col2{width:20%}
+.ssrequestwrap .sumpricelast table .col3{width:30%}
+.ssrequestwrap .sumpricelast table .col4{width:30%} 
+.ssrequestwrap .sumpricelast .title{padding-left:20px;}
+.ssrequestwrap .sumpircepayment .title{padding-left:20px;}
+.ssrequestwrap .sumpircepaymentwarp .payitem{width:25%}
+.ssrequestwrap .sumpircepaymentwarp .paysele{width:33.33%}
+ .sumpircepaymentbtn {text-align:center;margin-bottom:120px; }
+.sumpircepaymentbtn a{padding: 11px 27px;margin-top:40px;}
+}

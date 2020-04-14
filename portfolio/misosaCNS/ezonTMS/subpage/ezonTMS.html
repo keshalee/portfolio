@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />-->
+    <title>ezonTMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/jquery.multilevelpushmenu_red.css" />
+    <link rel="stylesheet" href="../css/fullexpandcollapse.css" />
+    <!--slide-->
+    <link rel="stylesheet" href="../css/responsiveslides.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/owl.theme.css" />
+    <link rel="stylesheet" href="../css/flexslider.css"/>
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="pushobj">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+            <a id="baseexpand" class="btn btn-lg btn-primary" href="#" role="button"><span class="glyphicon glyphicon-align-justify"></span></a>
+        </li>
+    </ul>
+</div>
+    <!--slide menu-->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times fa-2x" style="position: relative;top: -10px;"></i>ezonTMS</h2>
+            <ul>
+                <li>
+                    <a href="#">ezonTMS</a>
+                    <ul>
+                        <li>
+                            <a href="ezonTMS.html"><i class="fa fa-question"></i>이존 TMS란?</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><i class="fa fa-folder-open-o"></i>포트폴리오</a>
+                        </li>
+                        <li>
+                            <a href="responsive_web.html"><i class="fa fa-mobile"></i>반응형웹제작</a>
+                        </li>
+                        <li>
+                            <a href="../정기유지보수.html"><i class="fa fa-cogs"></i>유지보수서비스</a>
+                        </li>
+                        <li>
+                            <a href="additional_service1.html"><i class="fa fa-cogs"></i>부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../견적상담.html"><i class="fa fa-usd"></i>견적/상담</a>
+                        </li>
+                        <li>
+                            <a href="../공지사항.html"><i class="fa fa-phone"></i>고객센터</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-in"></i>로그인</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-plus"></i>회원가입</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-folder-open-o"></i>마이페이지</a>
+                </li>
+                <li>
+                    <a href="blog_list.html"><i class="fa fa-rss"></i>블로그</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--//slide menu-->
+
+    <div class="container-fluid top_bg">
+        <div class="container">
+            <div class="top_wrapper no-col col-md-12">
+                <div class="top_sitemap_wrapper">
+                    <ul class="top_sitemap1">
+                        <li><a href="#">창업지원센터</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업전문가상담</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업카페</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">스마트러닝</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">후원창업</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업프로그램</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">무료홈페이지제작</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">이존타운</a></li>
+                    </ul>
+                    <!--화면이 축소될 시에-->
+                    <div class="btn-group top_sitemap2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            사이트맵 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">창업지원센터</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업전문가상담</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">스마트러닝</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">후원창업</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업프로그램</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">무료홈페이지제작</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">이존타운</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top_language_wrapper">
+                    <div class="top_language">
+                        <select name="" id="" class="form-control">
+                            <option value="">언어선택</option>
+                            <option value="">한국어</option>
+                            <option value="">양어</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul class="top_social">
+                    <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                </ul>
+
+                <div class="btn-group top_sns">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        SNS 아이콘 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu top_social" role="menu">
+                        <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//top_wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//container-fluid-->
+    <!--login-->
+    <div class="container">
+        <div class="login_menu col-md-12">
+            <ul>
+                <li><a href="#">고객센터<span class="top_phone">1544-8571</span></a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                  <li><a href="디자인신청현황.html">마이페이지</a></li>
+                <li><a href="blog_list.html">블로그</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top_menu_2">
+        <div class="container">
+            <div class="navbar col-lg-12">
+                <a href="../index.html" class=""><img src="../images/header/logo.png" alt="ezonTMS" class="brand_img" /></a>
+                <div class="main_menu1">
+                    <ul>
+                        <li><a href="ezonTMS.html">이존 TMS란?</a></li>
+                        <li><a href="portfolio.html#">포트폴리오</a></li>
+                        <li><a href="responsive_web.html">반응형웹제작</a></li>
+                        <li><a href="../정기유지보수.html">유지보수서비스</a></li>
+                        <li><a href="additional_service1.html">부가서비스</a></li>
+                        <li><a href="../견적상담.html">견적/상담</a></li>
+                        <li><a href="../공지사항.html">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--contents start-->
+<div class="container sub_container portfolio_wrap">
+    <div class="sub">
+        <div class="topBanner">
+            <img src="../images/sub/topBanner_img2.png" alt="" class="topbanner_bg"/>
+            <p class="title"><span class="hidden-xs">온라인/오프라인/모바일을 통합한</span>통합마케팅솔루션 EZON TMS</p>
+        </div><!-- /.topBanner -->
+
+        <div class="my_tab">
+            <ul>
+                <li class="active first"><a href="#" class="searchAnchor">중소자영업계의 현실</a></li>
+                <li><a href="#" class="searchAnchor">이존TMS탄생배경</a></li>
+                <li><a href="#" class="searchAnchor">기대효과</a></li>
+                <li><a href="#" class="searchAnchor">활용사례</a></li>
+            </ul>
+        </div>
+
+        <div class="my_tab_content">
+            <div class="ezon1">
+                <p class="title">전국 자영업자 수 5,452천명시대의 자화상!</p>
+                <div class="table_layout3">
+                    <div class="card">
+                        <div class="card_inner"><img src="../images/sub/ezon1_img1.png" alt=""/></div>
+                    </div><!--card-->
+                    <div class="card">
+                        <div class="card_inner">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <span class="br">경기는 좋지 않고, 같은 동네 같은 업종은 날로 늘고!</span>
+                                        주기적으로 광고지라도 안돌이면 <span class="color">매출은 곤두박질!</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <span class="br">고위험 저수익!</span>
+                                        절반이 3년 內 망하는데... <span class="color">50대 자영업 급증!</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <span class="br">소매나 요식업은 이미 <span class="color">시장포화 상태!</span></span>
+                                        프렌차이즈는 자재비로 다 나가고!
+                                    </p>
+                                </li>
+                                <li class="last">
+                                    <p>
+                                        <span class="br">홈페이지, 모바일, 소셜커머스, 쇼핑몰은 비용 탓에</span>
+                                        꿈도 못꾸고...
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--card-->
+                </div><!--table_layout3-->
+            </div><!--ezon1-->
+        </div><!--my_tab_content-->
+        <div class="my_tab_content">
+            <div class="ezon2">
+                <div class="title">
+                    <p class="txt1">비단 어제 오늘일 만이 아닌 중소상공인 및 지역업소의 <span>오랜 불황과 겁쳐 대형 프랜차이즈업계의 고급화</span></p>
+                    <p class="txt2">저가형 물량 공세속에 지역업소 운영이 어려운 상태라고 중.소상공인들은 입을 모으고 있다.</p>
+                </div>
+                <div class="table_layout4">
+                    <div class="card_l">
+                        <div class="card_inner">
+                            <p class="head">이존비즈NTMS는 온라인/오프라인/모바일을 통합하여 시간과 장소, 공간의 제약을 극복하고 고객와 지역 업소간의 특화된
+                                연결고리를 생성하여 보다 다양하고 풍부한 컨텐츠 및 서비스를 공유하는 확장성이 풍부한 신개념 멀티미디어솔루션이다.</p>
+                            <div class="card_list">
+                                <span class="nun">1.</span>
+                                <p>
+                                    지역업소 및 중소상공인을 위한 홈페이지와 쇼핑몰, 소셜할인쿠폰, 모바일웹 기능까지 통합된 최첨단 멀티미디어 솔루
+                                    션을 통해 <span>매장홍보 및 고객실시간예약서비스, 실물상품판매, 할인티켓 및 무료쿠폰발행,SNS 실시간토크는 물론 매출
+                                    관리, 고객관리, 코리아캐시백적립시스템 등이 가능</span>하며. 지역업소간의 연계마케팅이 가능하도록 WIN-WIN시스템을
+                                    지원하며, MISOSA포탈사이트 및 글로벌지역 포탈을 통한 광고마케팅까지 지원한다. <span>그동안 대형마트나 대기업에서만
+                                    사용해왔던 시스템을 넘어선 최첨단 시스템이다.</span>
+                                </p>
+                            </div><!--card_list-->
+                            <div class="card_list">
+                                <span class="nun">2.</span>
+                                <p>
+                                    <span>중소상공인의 사업역역의 확장성을 고려</span>해 온라인사업 뿐만아니라 오프라인 매장으로 확대될 경우 추가제작비용 없이
+                                    신용카드단말기 또는 포스,모바일까지 연동이 가능하도록 구축되었으며, 그동안 별도로 관리해 왔던 매출관리 및 고객
+                                    관리 등 통합마케팅이 가능하다.
+                                </p>
+                            </div><!--card_list-->
+                            <div class="card_list">
+                                <span class="nun">3.</span>
+                                <p>
+                                    요즈음 대세는 스마트폰을 이용한 모바일서비스이며 이존NTMS솔루션은 <span>지역업소 모바일웹을 통해 지도검색을 통한
+                                    지역업소찾기,실시간예약 쿠폰다운로드, 결제등의 기능이 탑재되어 온라인/오프라인/모바일 지역업소의 3가지 매장을
+                                    운영하는 효과</span>를 누릴 수 있다.
+                                </p>
+                            </div><!--card_list-->
+                            <div class="card_list">
+                                <span class="nun">4.</span>
+                                <p>
+                                    <span>코리아캐시백 멤버쉽서비스개념을 쿠폰마케팅에 접목</span>하여 업체간 제휴 및 코리아캐시백가맹점을 통한 지역네트워크
+                                    상권형성으로 불황속에서도 고객유치는 물론 매출증대효과가 탁월하며, 다국적기업인 마이크로소프트사도 시행한다는
+                                    불황을 이길수 있는 파워마케팅, 쿠폰마케팅까지 다양한 마케팅을 할 수 있으며 한번 방문한 고객을 평생 고객으로
+                                    지역업소의 매출증대를 꾀할 수 있다.
+                                </p>
+                            </div><!--card_list-->
+                            <div class="card_list">
+                                <span class="nun">5.</span>
+                                <p>
+                                    코리아캐시백가맹점이 될 경우 지역업소의 쇼핑몰, 모바일웹, 오프라인매장을 통해 고객이 서비스 구매시 회원 구매
+                                    적립금의 일정적립을 캐시로 실시간으로 적립해주는 윈윈시스템을 구축할 수 있으며, 이 외에도 MISOSA가 운영중인
+                                    종합포탈 및 전문포탈, 글로벌지역포탈, 오픈마켓, 할인티켓몰 등에서 구매시에도 동일한 캐시백을 적립해준다.<br /><br />
+                                    또한 중소상공인 및 지역업소는 이존NTMS솔루션을 통해 언제든지 MISOSA가 운영중은 종합포탈 사이트에 입점 및 판
+                                    매를 원할 시 <span>전문지식이나 복잡한 절차없이 승인요청 한번만으로 판매 및 배송, 결제에 이르기까지 원스탑으로 할 수
+                                    있어 인건비 절감 및 매출증대</span>를 할 수 있다.
+                                </p>
+                            </div><!--card_list-->
+                            <div class="card_list">
+                                <span class="nun">6.</span>
+                                <p>
+                                    코리아캐시백가맹점은 해당지역의 창업지원센터를 통해 지역업소에 필요한 모든 서비스를 원스탑으로 지원받으실 수
+                                    있으며, 요청시 전문컨설턴트가 필요시 방문하여 모든 상담을 해결해 드립니다.
+                                </p>
+                            </div><!--card_list-->
+                        </div><!--card_inner-->
+                    </div><!--card_l-->
+                    <div class="card_r">
+                        <div class="card_inner type1">
+                            <p class="h_title">홍보동영상</p>
+                            <div class="flexslider myflexslider1">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="videoWrapper">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/v/f8PnRyRKJHA" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="videoWrapper">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/v/QbhmTM1cRro" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="videoWrapper">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/v/PA2PitSuaL4" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="videoWrapper">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/v/ZUEh2THzQcQ" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="txt4">1등 학습법-학습방법</p>
+                            <p class="txt5">
+                                우리나는 공부는 매우 강조를 하면서 공부 방법을 알려주는 체계적인 안내나 교육은 없습니다.
+                                다른 나라의 예로 들면 선진국의 경우 개개인의 학습법에 따라 공부방법을 알려주고 교육하
+                            </p>
+                        </div><!--card_inner-->
+                        <div class="card_inner type2">
+                            <p class="h_title">보도자료/언론</p>
+                            <div class="flexslider myflexslider2">
+                                <ul class="slides">
+                                    <li>
+                                        <p class="flex_txt1"><span>이존TMS</span></p>
+                                        <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                        <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                        <div class="tx_im">
+                                            <div class="flex_im"><img src="../images/sub/ezon2_img2.png" alt=""/></div>
+                                            <div class="flex_tx">
+                                                <p>
+                                                    [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                    주지 않는 진실들 보험사가 알려 주지 않는진
+                                                    실들 보험사가 알려 주지 않는 진실들 보험사
+                                                    가 알려 주지 않는 진실들 보험사가 알려주지
+                                                    않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                </p>
+                                                <span><a href="#">전체보기</a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="flex_txt1"><span>이존TMS</span></p>
+                                        <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                        <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                        <div class="tx_im">
+                                            <div class="flex_im"><img src="../images/sub/ezon2_img2.png" alt=""/></div>
+                                            <div class="flex_tx">
+                                                <p>
+                                                    [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                    주지 않는 진실들 보험사가 알려 주지 않는진
+                                                    실들 보험사가 알려 주지 않는 진실들 보험사
+                                                    가 알려 주지 않는 진실들 보험사가 알려주지
+                                                    않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                </p>
+                                                <span><a href="#">전체보기</a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="flex_txt1"><span>이존TMS</span></p>
+                                        <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                        <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                        <div class="tx_im">
+                                            <div class="flex_im"><img src="../images/sub/ezon2_img2.png" alt=""/></div>
+                                            <div class="flex_tx">
+                                                <p>
+                                                    [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                    주지 않는 진실들 보험사가 알려 주지 않는진
+                                                    실들 보험사가 알려 주지 않는 진실들 보험사
+                                                    가 알려 주지 않는 진실들 보험사가 알려주지
+                                                    않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                </p>
+                                                <span><a href="#">전체보기</a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="flex_txt1"><span>이존TMS</span></p>
+                                        <p class="flex_txt2">기자 홍길동 <span>게시일 : 2016-02-24</span></p>
+                                        <p class="flex_txt3">[헬스투어 세션2] 보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들보험사가 알려주지 않는 진실들</p>
+                                        <div class="tx_im">
+                                            <div class="flex_im"><img src="../images/sub/ezon2_img2.png" alt=""/></div>
+                                            <div class="flex_tx">
+                                                <p>
+                                                    [서울-이존TMS 홍길동기자] 보험사가 알려
+                                                    주지 않는 진실들 보험사가 알려 주지 않는진
+                                                    실들 보험사가 알려 주지 않는 진실들 보험사
+                                                    가 알려 주지 않는 진실들 보험사가 알려주지
+                                                    않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                    보험사가 알려 주지 않는 진실들보험사가 알려 주지 않는 진실들
+                                                </p>
+                                                <span><a href="#">전체보기</a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul><!--slides-->
+                            </div>
+                        </div>
+                    </div><!--card_r-->
+                </div><!--table_layout4-->
+            </div><!--ezon2-->
+        </div><!--my_tab_content-->
+        <div class="my_tab_content">
+            <div class="ezon3">
+                <div class="head_bg_wrap">
+                    <div class="head_bg_l"><img src="../images/sub/ezon3_l_img.png" alt=""/></div><!--head_bg_l-->
+                    <div class="head_bg_r"><img src="../images/sub/ezon3_r_img.png" alt=""/></div><!--head_bg_r-->
+                    <div class="head_bg_com"><img src="../images/sub/computer_img.png" alt=""/></div><!--head_bg_com-->
+                    <p class="txt1 textCen">이존NTMS 솔루션</p>
+                    <p class="txt2 textCen">(온라인/오프라인/모바일을 연동한 소셜네트워크 통합지원시스템)</p>
+                    <div class="solution_listText">
+                        <ul>
+                            <li class="textCen type1"><span>지역업소</span> 무료등록</li>
+                            <li class="textCen type2"><span>할인</span>쿠폰북</li>
+                            <li class="textCen type3"><span>온/오프라인/</span>모바일판매</li>
+                            <li class="textCen type4"><span>통합</span>마케팅웹</li>
+                        </ul>
+                    </div>
+                    <p class="txt3 textCen">지역업소 및 중소상공인을 위한 통합 최첨단 멀티미디어 솔루션!</p>
+                </div><!--head_bg_wrap-->
+                <div class="center_wrap">
+                    <div class="center_left">
+                        <ul>
+                            <li>▷ 중소상공인들을 위한 임대형 통합시스템 개발/공급/운영</li>
+                            <li>▷ 다양한 지역포털서비스 정보체계 구축</li>
+                            <li>▷ 사업자 위주의 SNS서비스 제공 (찾아오는 서비스)</li>
+                            <li>▷ 중소상공인들을 위한 원스탑 창업지원서비스 제공</li>
+                            <li>▷ 국내 최초 최대 오픈마켓 소셜커머스, 무료할인쿠폰 제공</li>
+                            <li>▷ 국내외 글로벌 지역종합포털 운영(98개국, 국내 3500개 지역)</li>
+                        </ul>
+                    </div><!--center_left-->
+                    <div class="center_logo"><img src="../images/sub/ezonTMS_logo.png" alt=""/></div><!--center_logo-->
+                    <div class="center_right">
+                        <ul>
+                            <li>▷ 캐시백 멤버쉽카드를 탑재한 오프라인 매장(포스연동) 및 온<span class="txt_line">라인 쇼핑몰 연동 : 통합시스템 자체 보유</span></li>
+                            <li>▷ 동별 온라인/오프라인/모바일 연동 할인쿠폰북 발급</li>
+                            <li>▷ 실질적인 지역중소상인 지원 시스템 구축</li>
+                            <li>▷ 지역중소상공인들을 위한 온라인/모바일 매장홍보 무료등록</li>
+                            <li>▷ 스마크폰 소액결제 시스템 구축</li>
+                            <li>▷ 기존 중소상공인들이 꿈꿔왔던 스스템이 저가로 제공!</li>
+                        </ul>
+                    </div><!--center_right-->
+                </div><!--center_wrap-->
+                <div class="bot_wrap">
+                    <div class="bot_left">
+                        <div class="bot_list">
+                            <div class="bot_im"><img src="../images/sub/ezon3_bot_img1.png" alt=""/></div>
+                            <div class="bot_tx">
+                                <p class="tlt">다각적 마케팅 지원</p>
+                                <p class="cont">이존코리아 글로벌정보화 포털과 우리지역 포털을 연계한 통합광고마케팅 지원</p>
+                            </div>
+                        </div>
+                        <div class="bot_list">
+                            <div class="bot_im"><img src="../images/sub/ezon3_bot_img2.png" alt=""/></div>
+                            <div class="bot_tx">
+                                <p class="tlt">지역도 업소도 모바일 시대!</p>
+                                <p class="cont">
+                                    온라인은 기본, 모바일을 통한 지도검색(업소찾기), 매장홍보/
+                                    모바일무료쿠폰/할인쿠폰북, 예약, 결제 등 온라인/오프라인/
+                                    모바일 3가지를 운영하는 효과
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--bot_left-->
+                    <div class="bot_right">
+                        <div class="bot_list">
+                            <div class="bot_im"><img src="../images/sub/ezon3_bot_img3.png" alt=""/></div>
+                            <div class="bot_tx">
+                                <p class="tlt">캐시백을 통한 고객 유입 확대!</p>
+                                <p class="cont">
+                                    코리아캐시백 멤버쉽 서비스 개념을 쿠폰마케팅에 접목, 업체간 제휴,
+                                    코라아캐시백 가맹점을 통해 지역고객 및 업주 네트워크 형성으로
+                                    매출 상승의 견인차 역할
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bot_list">
+                            <div class="bot_im"><img src="../images/sub/ezon3_bot_img4.png" alt=""/></div>
+                            <div class="bot_tx">
+                                <p class="tlt">캐시백을 통한 매장 활성화!</p>
+                                <p class="cont">
+                                    특히 코리아캐시백 가맹점이 될 경우 지역업소의 쇼핑몰 모바일웹,
+                                    오프라인 매장 이용시 실시간 적립(캐시)과 이존코리아종합포털,
+                                    10여개의 전문포털, 오픈마켓, 할인티켓몰 이용과 우리지역 포털
+                                    이용시에도 동일한 캐시백 적립!
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--bot_right-->
+                </div><!--bot_wrap-->
+            </div><!--ezon3-->
+        </div><!--my_tab_content-->
+        <div class="my_tab_content">
+            <div class="ezon4">
+                <div class="table_layout5">
+                    <div class="card_l">
+                        <div class="card_wrap">
+                            <div class="card_img1"><img src="../images/sub/ezon4_img1.png" alt=""/></div>
+                            <div class="card_inner">
+                                <p>창업 부럽지않습니다.</p>
+                                <p>서울시/강남구 ㅣ 홍길동 컨설턴트</p>
+                                <p>
+                                    상호협력적인 관계속에서 자유로운 시간과 보람있는 업
+                                    무로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상
+                                    호협력적인 관계속에서 자유로운 시간과 보람있는 업무
+                                    로 1인 창업 부럽지 않은 수입을 누리고 있습니다.상호
+                                    협력적인 관계속에서 자유로운 시간과 보람있는 업무로
+                                    1인 창업 부럽지 않은 수입을 누리고 있습니다.상호협력
+                                    적인 관계속에서 자유로운 시간과 보람있는 업무로 1인
+                                    창업 부럽지 않은 수입을 누리고 있습니다.
+                                </p>
+                            </div><!--card_inner-->
+                            <div class="solution_content">
+                                <ul class="solution_func">
+                                    <li>
+                                        <a href="#" class="func_list">
+                                            <div class="list_wrap">
+                                                <p class="head">
+                                                    <span>Q</span>자기소개 부탁드립니다.
+                                                </p>
+                                                <p class="content">
+                                                    <span class="answer">Q</span>
+                                                    저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                    컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="func_list">
+                                            <div class="list_wrap">
+                                                <p class="head">
+                                                    <span>Q</span>자기소개 부탁드립니다.
+                                                </p>
+                                                <p class="content">
+                                                    <span class="answer">Q</span>
+                                                    저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                    컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="func_list">
+                                            <div class="list_wrap">
+                                                <p class="head">
+                                                    <span>Q</span>자기소개 부탁드립니다.
+                                                </p>
+                                                <p class="content">
+                                                    <span class="answer">Q</span>
+                                                    저는 이존컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                    컨설턴트에 지원하여 현재 서울 강남구 지역의 중소상공인의 창업지원 업무를 지원하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!--solution_content-->
+                            <div class="blog_pagination">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="prev">
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">◀</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li class="active"><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li class="next">
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">▶</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div><!--card_wrap-->
+                    </div><!--card_l-->
+                    <div class="card_r">
+                        <div class="card">
+                            <div class="card_inner2">
+                                <a href="#">
+                                    <img src="../images/sub/ezon4_img2.png" alt=""/>
+                                    <div>
+                                        <p>홍길동 컨설턴트</p>
+                                        <p>서울시/강남구</p>
+                                    </div>
+                                </a>
+                            </div><!--card_inner2-->
+                        </div><!--card-->
+                        <div class="card">
+                            <div class="card_inner2">
+                                <a href="#">
+                                    <img src="../images/sub/ezon4_img3.png" alt=""/>
+                                    <div>
+                                        <p>홍길동 컨설턴트</p>
+                                        <p>서울시/강남구</p>
+                                    </div>
+                                </a>
+                            </div><!--card_inner2-->
+                        </div><!--card-->
+                        <div class="card">
+                            <div class="card_inner2">
+                                <a href="#">
+                                    <img src="../images/sub/ezon4_img3.png" alt=""/>
+                                    <div>
+                                        <p>홍길동 컨설턴트</p>
+                                        <p>서울시/강남구</p>
+                                    </div>
+                                </a>
+                            </div><!--card_inner2-->
+                        </div><!--card-->
+                        <div class="card">
+                            <div class="card_inner2">
+                                <a href="#">
+                                    <img src="../images/sub/ezon4_img2.png" alt=""/>
+                                    <div>
+                                        <p>홍길동 컨설턴트</p>
+                                        <p>서울시/강남구</p>
+                                    </div>
+                                </a>
+                            </div><!--card_inner2-->
+                        </div><!--card-->
+                    </div><!--card_r-->
+                </div><!--table_layout4-->
+
+
+            </div><!--ezon4-->
+        </div><!--my_tab_content-->
+    </div>
+</div>
+
+<!--footer-->
+<!--수상이력-->
+<div class="container">
+    <ul class="awards_list" id="owl_slide2">
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 최우수상</p>
+                <span>한국주택금융공사</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 우수상</p>
+                <span>OCN</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>서울창조전문인력</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>유네스코아태교육원</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>신원엔지니어링</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 우수상</p>
+                <span>영실업</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--footer-->
+<div class="footer1_bg">
+    <div class="footer container">
+        <!--bottom menu-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>BOTTOM MENU</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회원이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>솔루션이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>개인정보취급방침</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>1:1문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>미확인입금자</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>세금계산서신청하기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>기능개선의견접수</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--contact us-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>CONTACT US</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker"></i>
+                        <span>서울시 구로구 디지털로 33길 48 901호<br /><span style="margin-left: 24px"></span>대륭포스트타워 7치</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-phone"></i>
+                        <span>02.838.0085 / 010-8855-9256</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span>JEH9500@EMPAS.COM<br /><span style="margin-left: 24px"></span>사업자등록번호 113-86-68125</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-male"></i>
+                        <span>대표 정은환</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--창업교육-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>창업교육</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--공지사항-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>공지사항</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer2_bg">
+    <div class="container footer_bottom">
+        <div class="col-sm-5 col-sm-12">
+            <p class="footer_title padding_left_15">Copyright © MISOSA. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-sm-7 col-sm-12">
+            <div class="footer_right_menu padding_left_15">
+                <ul class="top_social2">
+                    <li><a href="#"><img src="../images/footer/social_img1.png" alt="카카오톡"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img2.png" alt="이존"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img3.png" alt="네이버밴드"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img4.png" alt="페이스북"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img5.png" alt="트위터"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img6.png" alt="구글"/></a></li>
+                </ul>
+                <div class="footer_select padding_right_15">
+                    <select name="" id="">
+                        <option value="">관계사</option>
+                        <option value="">관계사1</option>
+                        <option value="">관계사1</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트1</option>
+                        <option value="">관련사이트2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.multilevelpushmenu.min.js"></script>
+<script type="text/javascript" src="../js/fullexpandcollapse.js"></script>
+<script type="text/javascript" src="../js/responsiveslides.js"></script>
+<script type="text/javascript" src="../js/owl.carousel.js"></script>
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+
+        $(".my_tab li a").eq(1).click(function(){
+
+            $(".flexslider")
+                    .flexslider({
+                        animation: "slide",
+                        animationLoop: false,
+                        directionNav: false
+                    });
+        });
+
+        //기능설명
+        $(".solution_func li").eq(0).find('.content').css('display', 'block');
+        $(".solution_faq .solution_func li").eq(0).find('.content').css('display', 'block');
+
+        $(".func_list"). click(function(){
+            $(this).find('.content').slideDown();   //duration 400
+            $(this).parent().siblings().find('.content').slideUp();
+
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

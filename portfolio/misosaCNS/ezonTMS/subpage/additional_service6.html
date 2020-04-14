@@ -1,0 +1,1392 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title>ezonTMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/jquery.multilevelpushmenu_red.css" />
+    <link rel="stylesheet" href="../css/fullexpandcollapse.css" />
+    <!--slide-->
+    <link rel="stylesheet" href="../css/responsiveslides.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/owl.theme.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="pushobj">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+            <a id="baseexpand" class="btn btn-lg btn-primary" href="#" role="button"><span class="glyphicon glyphicon-align-justify"></span></a>
+        </li>
+    </ul>
+</div>
+    <!--slide menu-->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times fa-2x" style="position: relative;top: -10px;"></i>ezonTMS</h2>
+            <ul>
+                <li>
+                    <a href="#">ezonTMS</a>
+                    <ul>
+                        <li>
+                            <a href="ezonTMS.html"><i class="fa fa-question"></i>이존 TMS란?</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><i class="fa fa-folder-open-o"></i>포트폴리오</a>
+                        </li>
+                        <li>
+                            <a href="responsive_web.html"><i class="fa fa-mobile"></i>반응형웹제작</a>
+                        </li>
+                        <li>
+                            <a href="../정기유지보수.html"><i class="fa fa-cogs"></i>유지보수서비스</a>
+                        </li>
+                        <li>
+                            <a href="additional_service1.html"><i class="fa fa-cogs"></i>부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../견적상담.html"><i class="fa fa-usd"></i>견적/상담</a>
+                        </li>
+                        <li>
+                            <a href="../공지사항.html"><i class="fa fa-phone"></i>고객센터</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-in"></i>로그인</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-plus"></i>회원가입</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-folder-open-o"></i>마이페이지</a>
+                </li>
+                <li>
+                    <a href="blog_list.html"><i class="fa fa-rss"></i>블로그</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--//slide menu-->
+
+    <div class="container-fluid top_bg">
+        <div class="container">
+            <div class="top_wrapper no-col col-md-12">
+                <div class="top_sitemap_wrapper">
+                    <ul class="top_sitemap1">
+                        <li><a href="#">창업지원센터</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업전문가상담</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업카페</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">스마트러닝</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">후원창업</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업프로그램</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">무료홈페이지제작</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">이존타운</a></li>
+                    </ul>
+                    <!--화면이 축소될 시에-->
+                    <div class="btn-group top_sitemap2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            사이트맵 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">창업지원센터</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업전문가상담</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">스마트러닝</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">후원창업</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업프로그램</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">무료홈페이지제작</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">이존타운</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top_language_wrapper">
+                    <div class="top_language">
+                        <select name="" id="" class="form-control">
+                            <option value="">언어선택</option>
+                            <option value="">한국어</option>
+                            <option value="">양어</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul class="top_social">
+                    <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                </ul>
+
+                <div class="btn-group top_sns">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        SNS 아이콘 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu top_social" role="menu">
+                        <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//top_wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//container-fluid-->
+    <!--login-->
+    <div class="container">
+        <div class="login_menu col-md-12">
+            <ul>
+                <li><a href="#">고객센터<span class="top_phone">1544-8571</span></a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                  <li><a href="디자인신청현황.html">마이페이지</a></li>
+                <li><a href="blog_list.html">블로그</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top_menu_2">
+        <div class="container">
+            <div class="navbar col-lg-12">
+                <a href="../index.html" class=""><img src="../images/header/logo.png" alt="ezonTMS" class="brand_img" /></a>
+                <div class="main_menu1">
+                    <ul>
+                        <li><a href="ezonTMS.html">이존 TMS란?</a></li>
+                        <li><a href="portfolio.html#">포트폴리오</a></li>
+                        <li><a href="responsive_web.html">반응형웹제작</a></li>
+                        <li><a href="../정기유지보수.html">유지보수서비스</a></li>
+                        <li><a href="additional_service1.html">부가서비스</a></li>
+                        <li><a href="../견적상담.html">견적/상담</a></li>
+                        <li><a href="../공지사항.html">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container sub_container portfolio_wrap">
+    <div class="sub">
+        <div class="topBanner">
+            <img src="../images/sub/topBanner_img3.png" alt="" class="topbanner_bg"/>
+            <p class="title2">
+                <span class="txt1">부가서비스</span>
+                <span class="txt2 hidden-xs">
+                    회원가입 및 쇼핑몰을 운영하기 위해서는 반드시 <span>실명인증서비스와 카드결제서비스가<br>
+                    필요하며 기타 마케팅활성화를 위한 부가서비스</span>를 신청하실 수 있습니다.
+                </span>
+            </p>
+        </div><!-- /.topBanner -->
+
+        <div class="section">
+            <div class="additional_service_wrap">
+                <nav class="navbar navbar-default service_menu">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#service_menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">부가서비스 카테고리</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="service_menu">
+                        <ul class="nav navbar-nav">
+                            <li class="first"><a href="additional_service1.html">실명인증서비스 <span class="service_menu_arr"><img src="../images/sub/service_menu_arr.png" alt=""/></span></a></li>
+                            <li><a href="additional_service2.html">카드결제서비스</a></li>
+                            <li><a href="additional_service3.html">sms서비스</a></li>
+                            <li><a href="additional_service4.html">홍보동영상제작</a></li>
+                            <li><a href="additional_service5.html">상품상세페이지제작</a></li>
+                            <li class="active last"><a href="additional_service6.html">웹호스팅신청</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav><!-- /.navbar navbar-default service_menu -->
+            </div><!-- /.additional_service_wrap -->
+
+            <div class="section_content">
+                <div class="section_inner">
+                    <div class="section1">
+                        <div class="step">
+                            <img src="../images/sub/step_bg1.png" alt=""/>
+                            <span class="txt1">STEP <span>01</span></span>
+                        <span class="txt2">
+                            이존통합지원시스템<br>
+                            서비스신청
+                        </span>
+                        </div>
+                        <div class="step_arr"><img src="../images/sub/step_arr1.png" alt=""/></div>
+                        <div class="step">
+                            <img src="../images/sub/step_bg1.png" alt=""/>
+                            <span class="txt1">STEP <span>02</span></span>
+                        <span class="txt2">
+                            서비스<br>
+                            요금결제
+                        </span>
+                        </div>
+                        <div class="step_arr"><img src="../images/sub/step_arr1.png" alt=""/></div>
+                        <div class="step">
+                            <img src="../images/sub/step_bg1.png" alt=""/>
+                            <span class="txt1">STEP <span>03</span></span>
+                        <span class="txt2">
+                            이존통합지원<br>
+                            시스템셋팅
+                        </span>
+                        </div>
+                        <div class="step_arr"><img src="../images/sub/step_arr1.png" alt=""/></div>
+                        <div class="step">
+                            <img src="../images/sub/step_bg1.png" alt=""/>
+                            <span class="txt1">STEP <span>04</span></span>
+                        <span class="txt2">
+                            제작
+                        </span>
+                        </div>
+                        <div class="step_arr"><img src="../images/sub/step_arr1.png" alt=""/></div>
+                        <div class="step">
+                            <img src="../images/sub/step_bg1.png" alt=""/>
+                            <span class="txt1">STEP <span>05</span></span>
+                        <span class="txt2">
+                            사이트<br>
+                            운영
+                        </span>
+                        </div>
+                    </div><!-- /.section1 -->
+
+                    <div class="section2">
+                        <p class="txt1">웹호스팅 WEB HOSTING</p>
+                        <p class="txt2">빠른지원이 가능한 A/S센터 운영으로 고객의 만족도를 높이며, 보안을 강화하여 철저하게 서버를 보호합니다.</p>
+                    </div><!-- /.section2 -->
+
+                    <div class="bor_bg"></div><!-- /.bor_bg -->
+
+                    <div class="section4">
+                        <div class="section_table1 table-responsive table_type2">
+                            <table class="table">
+                                <tr>
+                                    <td class="td_head h_type1 first"><p>서비스명</p></td>
+                                    <td class="h_type2 first"><p>일반형</p></td>
+                                    <td class="h_type3 first"><p>중급형</p></td>
+                                    <td class="h_type4 first"><p>고급형</p></td>
+                                    <td class="h_type5 first"><p>최고급형</p></td>
+                                    <td class="h_type1 first"><p>비고</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p>트래픽</p></td>
+                                    <td><p>1G</p></td>
+                                    <td><p>3G</p></td>
+                                    <td><p>5G</p></td>
+                                    <td><p>10G</p></td>
+                                    <td><p>1일 기준</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p><span>하드용량</span></p></td>
+                                    <td><p><span>1G</span></p></td>
+                                    <td><p><span>3G</span></p></td>
+                                    <td><p><span>5G</span></p></td>
+                                    <td><p><span>10G</span></p></td>
+                                    <td><p><span>SATA HDD</span></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p>데이터베이스용량</p></td>
+                                    <td><p>50M</p></td>
+                                    <td><p>100M</p></td>
+                                    <td><p>150M</p></td>
+                                    <td><p>300M</p></td>
+                                    <td><p>MYSQL DB 1개</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p>POP메일</p></td>
+                                    <td><p>100M * 5개</p></td>
+                                    <td><p>100M * 10개</p></td>
+                                    <td><p>100M * 15개</p></td>
+                                    <td><p>100M * 20개</p></td>
+                                    <td><p></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p>도메인 추가연결</p></td>
+                                    <td><p>2개</p></td>
+                                    <td><p>3개</p></td>
+                                    <td><p>4개</p></td>
+                                    <td><p>5개</p></td>
+                                    <td><p></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p>서버환경</p></td>
+                                    <td colspan="5"><p>Linux PHP 5.X, MYSQL 5.X (EUC-KR or UTF-8)</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_head"><p><span>웹사용료</span></p></td>
+                                    <td><p><span>11,000원</span></p></td>
+                                    <td><p><span>22,000원</span></p></td>
+                                    <td><p><span>33,000원</span></p></td>
+                                    <td><p><span>55,000원</span></p></td>
+                                    <td><p><span>부가세포함</span></p></td>
+                                </tr>
+                            </table>
+                        </div><!-- /.section_table1 table-responsive -->
+                        <p class="text2">* 홈페이지/쇼핑몰 제작시 부가서비스로 신청 가능하며 타업체로부터의 이관신청은 신청받지 않습니다.</p>
+                    </div><!-- /.section4 -->
+
+                    <div class="btn_submit"><a href="additional_service_request.html">신청하기</a></div>
+                </div><!-- /.section_inner -->
+            </div><!-- /.section_content -->
+        </div><!-- /.section -->
+
+        <div class="card_section">
+            <p class="title">도메인 등록 / 로고 / 인쇄 / 홍보물제작 등 창업에 필요하신 부분은 협력파트너를 활용하세요!!</p>
+            <div class="select_box">
+                <div class="list1">
+                    <span>업종별</span>
+                    <select name="" id="">
+                        <option value="">1차</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">2차</option>
+                    </select>
+                </div><!-- /.list1 -->
+                <div class="list2">
+                    <span>지역별</span>
+                    <select name="" id="">
+                        <option value="">서울</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">강남구</option>
+                    </select>
+                </div><!-- /.list2 -->
+                <div class="list3"><a href="#">검색하기</a></div>
+            </div><!-- /.select_box -->
+
+            <div class="card_list" id="card_list">
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="head">
+                        <p class="head_logo"><img src="../images/contents/naver_logo.png" alt=""/></p>
+                        <p class="txt1">기업형태:법인 / 소재지:서울</p>
+                        <p class="txt2">심플피링 스마트미러,심플피팅갤러리,패션/ 유통 쇼핑 플랫폼, O2O플랫폼</p>
+                        <p class="txt3">&lt;판매중인 서비스&gt;</p>
+                    </div><!-- /.head -->
+                    <div class="item_inner">
+                        <div class="myItems">
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                            <div class="myItem">
+                                <a href="#">
+                                    <p class="txt1">프로그래밍 > 홈페이지제작</p>
+                                    <p class="txt2">[SALE]최고퀄리티 홈페이지 쉽고/빠르고/저렴하게 만들어 드립니다.</p>
+                                    <p class="txt3">35,000원</p>
+                                    <div class="table1">
+                                        <table>
+                                            <tr>
+                                                <td class="padr">
+                                                    <img src="../images/contents/power_img.png" alt=""/>
+                                                    <p class="profile">프로필인증</p>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>주문만족도</td>
+                                                            <td class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>작업기간</td>
+                                                            <td>7일(평균일)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>현재작업개수</td>
+                                                            <td>2/5개</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>주문성공률</td>
+                                                            <td>높음</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.table1 -->
+                                </a>
+                            </div><!-- /.myItem -->
+                        </div><!-- /.myItems -->
+                        <p class="myItem_num"><span>1</span>/2</p><!-- /.myItem_num -->
+                    </div><!-- /.item_inner -->
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev"></a>
+                        <a href="#" class="flex-next"></a>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.card_list -->
+        </div><!-- /.card_section -->
+    </div>
+</div>
+
+<!--수상이력-->
+<div class="container">
+    <ul class="awards_list" id="owl_slide2">
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 최우수상</p>
+                <span>한국주택금융공사</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 우수상</p>
+                <span>OCN</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>서울창조전문인력</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>유네스코아태교육원</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>신원엔지니어링</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 우수상</p>
+                <span>영실업</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="footer1_bg">
+    <div class="footer container">
+        <!--bottom menu-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>BOTTOM MENU</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회원이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>솔루션이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>개인정보취급방침</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>1:1문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>미확인입금자</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>세금계산서신청하기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>기능개선의견접수</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--contact us-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>CONTACT US</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker"></i>
+                        <span>서울시 구로구 디지털로 33길 48 901호<br /><span style="margin-left: 24px"></span>대륭포스트타워 7치</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-phone"></i>
+                        <span>02.838.0085 / 010-8855-9256</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span>JEH9500@EMPAS.COM<br /><span style="margin-left: 24px"></span>사업자등록번호 113-86-68125</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-male"></i>
+                        <span>대표 정은환</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--창업교육-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>창업교육</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--공지사항-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>공지사항</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer2_bg">
+    <div class="container footer_bottom">
+        <div class="col-sm-5 col-sm-12">
+            <p class="footer_title padding_left_15">Copyright © MISOSA. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-sm-7 col-sm-12">
+            <div class="footer_right_menu padding_left_15">
+                <ul class="top_social2">
+                    <li><a href="#"><img src="../images/footer/social_img1.png" alt="카카오톡"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img2.png" alt="이존"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img3.png" alt="네이버밴드"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img4.png" alt="페이스북"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img5.png" alt="트위터"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img6.png" alt="구글"/></a></li>
+                </ul>
+                <div class="footer_select padding_right_15">
+                    <select name="" id="">
+                        <option value="">관계사</option>
+                        <option value="">관계사1</option>
+                        <option value="">관계사1</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트1</option>
+                        <option value="">관련사이트2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.multilevelpushmenu.min.js"></script>
+<script type="text/javascript" src="../js/fullexpandcollapse.js"></script>
+<script type="text/javascript" src="../js/placeholders.min.js"></script>
+<script type="text/javascript" src="../js/owl.carousel.js"></script>
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/sub.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>

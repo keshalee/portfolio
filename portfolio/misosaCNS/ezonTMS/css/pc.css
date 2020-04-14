@@ -1,0 +1,300 @@
+﻿@media (min-width: 992px) {
+    /*w 1280*/
+
+.maintopcon{margin-top:0px;margin-bottom:50px}
+.ep{padding-left:15px !important; padding-right:15px !important;}
+
+.center .centerbg{height:250px;}
+.center .centermenu a {width:213px;}
+.center .centerbody .left{width:255px;margin-right:90px;}
+.center .centerbody .right{width:935px;}
+.center .centerbody .right .rightmenu .bottom{width:360px;margin-left:365px}
+.center .centerbody .right .bottom input{margin-left:5px;width:200px;}
+.center .centerbody .right .bottom a{margin-left:5px;width:50px;}
+.center .centerbody .right .bottom select{width:100px;}
+.center .centerbody .left .ltop .ltoptitle{font-size:18px;}
+.center .centerbody .right .rtable table th{text-align:center;background:#f8f8f8;color:#2d2d2d;height:38px;vertical-align:middle;}
+.center .centerbody .right .rtable table th.col1{width:7%}
+.center .centerbody .right .rtable table th.col2{width:63%}
+.center .centerbody .right .rtable table th.col3{width:10%}
+.center .centerbody .right .rtable table th.col4{width:10%}
+.center .centerbody .right .rtable table th.col5{width:10%}
+.center .centerbody .right .rtable table td{text-align:center;height:60px;vertical-align:middle;padding-top:5px;padding-bottom:5px;}
+.center .centerbody .right .rtable table td.col1{width:7%}
+.center .centerbody .right .rtable table td.col2{width:63%}
+.center .centerbody .right .rtable table td.col3{width:10%}
+.center .centerbody .right .rtable table td.col4{width:10%}
+.center .centerbody .right .rtable table td.col5{width:10%}
+
+.center .centerbody .right .read th{width:1000px ;padding-left:30px;padding-right:30px; text-align:left !important;line-height:15px;}
+.center .centerbody .right .read td{width:1000px ;padding-left:30px;padding-right:30px; text-align:left !important;}
+
+.center .centerbody .right .readprne th{height:36px;}
+.center .centerbody .right .readprne td{width:1000px;}
+.center .centerbody .right .readprne td span{float:right;}
+.center .centerbody .right .rightsubmenu a{  padding: 9px 21px;}
+.center .centerbody .right .rtable.faq table td.col2{width:1000px !important;padding-right:40px;}
+.center .centerbody .right .rtable table tr.item td.col2{background:url(../images/more/bottomaa.png) no-repeat right center;background-position-x:875px}
+.center .centerbody .right .rtable table tr.item.open .col2{background:url(../images/more/topaa.png)no-repeat right center;background-position-x:875px}
+.center .centerbody .right .rtable.faq table td.col1{width:40px;}
+.center .centerbody .right .rtable.faq table td.col2{}
+
+.qna td input.itemone{width:300px;}
+.qna .tttel select{width:75px;}
+.qna .tttel input{width:85px;}
+.qna .ttemail input{width:140px;}
+.qna .ttemail select{width:130px;}
+.qna td textarea{width:780px;height:165px;}
+.qna .ttfile input{width:380px;}
+                                   
+.cal {width:648px}
+.cal .ui-widget-header{height:69px;}
+.cal .ui-widget-header a{height:69px;}
+.cal .ui-state-default.ui-state-active{position:relative;}
+.ui-datepicker .ui-datepicker-title {    position: relative; top: 3px; font-size: 32px;}
+.cal .ui-datepicker-inline{    width: 100%; margin: 0 auto;}
+.cal .ui-datepicker th{height:32px;}
+.cal .ui-datepicker td{height:70px;}
+.cal .ui-state-default{height:69px !important;padding-left:10px;}
+.cal .topar{ display:block;   position: absolute; top: -5px; left: 15px;}
+.cal .caldiv{  top:40px;  position: absolute; left: 10px;  width: inherit;  padding: 5px; border-radius: 10px; z-index: 1; right: -140px;}
+.cal .callog{display:table;}   
+.cal .callogtr{display:table-row !important;padding:0px !important;text-align:left !important; }
+.cal .callogtitle{width:25%;display:table-cell !important;padding:0px 5px !important;text-align:left !important; }
+.cal .callogbody{width:auto;display:table-cell !important;padding:0px  5px !important;text-align:left !important; color:#FFF !important}
+.ui-datepicker-next{right:200px !important; top:0px !important;cursor:pointer}
+.ui-datepicker-prev{left:200px !important; top:0px !important;cursor:pointer}
+.calright{width:600px;margin-left:32px;}         
+.calmap{height:252px;}
+.mapdesc th{width:100px;}
+.snsbody1{width:25%}
+.snsbody2{width:25%}
+.snsbody3{width:25%}
+.snsbody4{width:25%}
+.snsbody{padding:10px !important;}
+.snsbody .item.type2 .desc{padding-top:20px;}    
+.snsbody .tw .item.type2 .desc{padding-bottom:20px;padding-top:44px;}     
+
+.mypagecount{margin-top:20px;position:absolute;bottom:90px;    right: 0px; width: 800px;}
+.mypagecount ul{}
+.mypagecount ul li{float:left;text-align:center;width:110px;margin-left:10px;position:relative;left:10px;}
+.mypagecount ul li dl{padding: 29px 0px;}
+.mypagecount ul li dt{font-size:18px;letter-spacing:-1px;}
+.mypagecount ul li dd{font-size:18px;}
+
+
+.center .centerbody .right .rtable.design table th.col1{width:7%;}
+.center .centerbody .right .rtable.design table th.col2{width:1000px;}
+.center .centerbody .right .rtable.design table th.col4{width:12%;}
+.center .centerbody .right .rtable.design table th.col5{width:12%}
+
+.center .centerbody .right .rtable.design table td.col1{width:7%;}
+.center .centerbody .right .rtable.design table td.col2{width:1000px !important; }
+.center .centerbody .right .rtable.design table td.col4{width:12%;}
+.center .centerbody .right .rtable.design table td.col5{width:12%}
+
+.mypagebottom{width:725px }
+.center .centerbody .right .rtable.hosting table th.col1{width:7%}
+.center .centerbody .right .rtable.hosting table th.col2{width:1000px}
+.center .centerbody .right .rtable.hosting table th.col3{width:12%}
+.center .centerbody .right .rtable.hosting table th.col4{width:20%}
+.center .centerbody .right .rtable.hosting table th.col5{width:12%}
+.center .centerbody .right .rtable.hosting table td.col1{width:7%;}
+.center .centerbody .right .rtable.hosting table td.col2{width:1000px !important;}
+.center .centerbody .right .rtable.hosting table td.col3{width:12%}
+.center .centerbody .right .rtable.hosting table td.col4{width:20%}
+.center .centerbody .right .rtable.hosting table td.col5{width:12%}
+.morehostingarea{padding-left:25px;}
+.morehostingarea .year {width:375px;}
+.morehostingarea .year select{width:65px;}
+.morehostingarea .year input{width:100px;}
+.morehostingarea .cap{width:175px;}
+.morehostingarea .cap select{width:65px;}
+.morehostingarea .price{width:200px;}
+.morehostingarea .price input{width:100px;}
+.morehostingarea .doit{margin-top:0px;width:150px;text-align:right}
+.morehostingarea .morehostingareatt{margin-top:0px; margin-bottom:0px;margin-right:10px;}
+.morehostingarea .doit .doitok{font-size:12px; }
+
+
+.center .centerbody .right .rtable.tax table th.col1{width:7%}
+.center .centerbody .right .rtable.tax table th.col2{width:10% !important}
+.center .centerbody .right .rtable.tax table th.col3{width:1000px !important}
+.center .centerbody .right .rtable.tax table th.col4{width:15% !important}
+.center .centerbody .right .rtable.tax table th.col5{width:10% !important}
+.center .centerbody .right .rtable.tax table th.col6{width:15% !important}
+
+.center .centerbody .right .rtable.tax table td.col1{width:7%;vertical-align:middle;font-size:14px;}
+.center .centerbody .right .rtable.tax table td.col2{width:10% !important}
+.center .centerbody .right .rtable.tax table td.col3{width:1000px !important}
+.center .centerbody .right .rtable.tax table td.col4{width:15% !important}
+.center .centerbody .right .rtable.tax table td.col5{width:10% !important}
+.center .centerbody .right .rtable.tax table td.col6{width:15% !important}
+
+.maintenancetoplist{margin-top: 0px; position: absolute;bottom: 65px; right: 60px; width: 500px; background: rgba(255,255,255,0.2); padding: 15px  30px!important; border-radius: 5px;font-size:13px}
+.maintenancetoplist table th{padding-bottom:11px;}
+.maintenancetoplist table td{letter-spacing:0px;}
+.maintenanceimg{width:750px !important;   margin: 0 auto; display: block; margin-top:50px;margin-bottom:50px; z-index:9} 
+.maintenanceimgbg{height:190px;position:absolute;top:58px;z-index:-1;}
+
+
+.maintenancetap .item1{width:320px;color:#454545;}
+.maintenancetap .item2{width:320px;color:#454545;}
+.maintenancetap .item1 a{color:inherit}
+.maintenancetap .item2 a{color:inherit}
+
+.maintenancetable{margin-top:65px;width:990px;}
+
+
+.maintenanceresult{width:990px}
+
+.maintenancenotice{width:260px;margin-left:50px;margin-top:70px;padding-right:0px}
+.maintenancenoticetitle{font-size:18px; font-weight:bold}
+.maintenancenoticemore{float:right;font-size:24px;}
+.maintenancenoticemore:active{color:inherit;}
+.maintenancenoticeul{margin-top:30px;}
+.maintenancenoticeul li{border-bottom:solid 1px #dddddd;padding:10px 1px;}
+.maintenancenoticeul li .left{color:#606060;letter-spacing:-1px;margin-right:10px;}
+.maintenancenoticeul li .right{color:#005397;font-weight:bold;letter-spacing:-1px;}
+.maintenancenoticeul li .right span{color:#606060;font-weight:normal;margin-left:10px;}
+.maintenancenoticeul li.last{border-bottom:0px solid #CCC}
+
+.maintenancenotice .ltopbody { border: solid 1px #c8c8c8; padding: 25px 15px;margin-top:30px; }
+.maintenancenotice .ltopbodytt { font-size: 15px; color: #111; border-bottom: solid 1px #c8c8c8; letter-spacing: -1px; display: block; padding-bottom: 10px; }
+.maintenancenotice .ltopbody ul { display: block; width: 100%; }
+.maintenancenotice .ltopbody ul li { margin-top: 15px; }
+.maintenancenotice .ltopbody ul li span.top { color: #66a33a; font-weight: bold; }
+.maintenancenotice .ltopbody ul li span.bottom { color: #737373; margin-top: 5px; }
+.maintenancenotice .ltopbody ul li span.bottom a { color: inherit; line-height: 15px; }
+
+
+.empty{}
+.maintenancetable table .empty{display:table-row;}
+.maintenancetable table .empty td{height:37px;border-top:none;border-bottom:none; }
+.maintenancetable table .empty.last td{border-bottom:solid 1px #ababab}
+
+.testmodal{}
+.testmodal .modal-dialog{text-align:center;}
+.testmodal .modal-content {
+    position: relative;
+ background:none;
+    border:none;
+    border-radius: 0px;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: 0;
+}
+.testmodal iframe{width:392px;height:800px;border:solid 3px #464646}
+.testmodalnav a{font-size:30px; color:#FFF;margin-right:20px;}
+.testmodalnav .mclosebtn{margin-right:0px; position:relative;top:1px;}
+
+.writemaintenancewarp{width:800px;padding-left:25px !important}
+.writemaintenancelast{width:485px;padding-right:25px;margin-top:45px}
+.writemaintenance{padding-left: 35px !important; padding-right: 35px !important;}
+
+.writemaintenancetable{padding-left:10px !important;padding-right:0px;margin-top:40px;}
+
+.writemaintenancetablein table th{width:230px;padding-left:70px;font-size:14px;}
+.writemaintenancetablein table td{font-size:14px;width:480px;}
+.writemaintenancetablein table td font{margin-left:10px;}
+.writemaintenancelast table th{padding-left:20px;padding-right:20px;vertical-align:middle}
+.writemaintenancelast table td{padding-left:35px;padding-right:10px;padding-top:50px;padding-bottom:30px;}
+.writemaintenancelast .writemaintenancelastfinal .bottom{    padding-top: 8px; padding-bottom: 8px;font-size:20px;}
+.writemaintenancelast .writemaintenancelastfinal .top{margin-top:38px;}
+.maintenancetable{overflow:hidden}
+.writemaintenancetable .writemaintenancetablein .title{padding-left:20px;}
+
+.oninput input{width:390px;}
+.writemaintenancetablein table .tttel select{width:70px}
+.writemaintenancetablein table .tttel input{width:70px}
+.ttemail input{width:130px;}
+.ttemail select{width:90px;margin-left:10px;}
+.bboninput  input{width:340px;margin-left:10px;}
+.idpw input{width:110px;}
+.bbdate    input{width:260px;}
+.maintenancetype .owl-item{width:380px !important;margin-right:20px;margin-left:20px;}
+.maintenancetypediv{margin-top:60px;}
+.maintenancetypediv table.maintenancetypett th{width:110px;padding-left:10px;}
+.maintenancetypediv table.maintenancetypett td{width:260px;}
+.maintenancetypediv table.maintenancetypett td span.spanbottom{font-size:18px;line-height:22px;letter-spacing:-1px;}
+.maintenancetypebb th{width:110px;padding-left:10px;}
+
+.cunsultingwarp{width:625px;margin-top:55px;}
+.cunsultingwarp .title{font-size:21px;margin-top:0px;}
+
+.cunsultingwarpright .rtable.faq table td.col2{width:1000px !important;padding-right:40px;}
+.cunsultingwarpright .rtable table tr.item td.col2{background:url(../images/more/bottomaa.png) no-repeat right center;background-position-x:535px}
+.cunsultingwarpright .rtable table tr.item.open .col2{background:url(../images/more/topaa.png)no-repeat right center;background-position-x:535px}
+.cunsultingwarpright .rtable.faq table td.col1{width:40px;}
+.cunsultingwarpright .rtable.faq table td.col2{}
+
+.cunsultingwarpright{width:625px;margin-top:40px;}
+.cunsultingwarpright .title.interview span{margin-top:17px;}
+.rtable{margin-bottom:35px;}
+.interviewslide{margin-bottom:35px;}
+
+.cunsultingbox .card_wrapper .table{width:202px;float:left;}
+
+.cunsultingbox .card_wrapper .table .input_type1{width:100%}
+.cunsultingbox .card_wrapper .table .input_type2{width:38px}
+.cunsultingbox .card_wrapper .table  .select_type1 {width:100%;}
+
+.cunsultingbox .card_padding1{width:295px;float:left;    padding-top: 0px; margin-top: 0px;position:relative;bottom:7px;}
+.cunsultingbox .btn_type1{width:74px;float:left;padding-top: 0px; margin-top: 0px;position:relative;bottom:2px;}
+.cunsultingbox .btn_type1 a{margin-top:0px;margin-right:0px; margin-left:10px}
+
+.centertitledl{top:40px;left:65px;}
+.centertitledl dt{font-size:40px;margin-bottom:20px;}
+.centertitledl dd{font-size:18px;}
+.centertitledl dd.middle{margin-top:10px;font-size:25px;font-weight:bold;margin-bottom:10px;}
+
+.ssrequestwrap{}
+.ssrequestwrap img{width:1130px !important;    margin: 0 auto; text-align: center; display: block;}
+.ssrequestwrap .sumprice{margin-top:-1px;}
+.ssrequestwrap .sumprice table {text-align:center;}
+.ssrequestwrap .sumprice table td{padding-left:0;vertical-align:middle;padding-top:30px;padding-bottom:30px;}
+.ssrequestwrap .sumprice table .price{padding-top:0;margin-right:75px;} 
+.ssrequestwrap .sumprice table .price span{font-size:15px;}
+.ssrequestwrap .sumprice table .pricecheck{padding-top:0;margin-right:10px}
+.ssrequestwrap .sumprice table .pricecheck input{margin-left:5px; margin-right:5px;}
+.ssrequestwrap .sumprice table .pricecheck span{margin-left:3px;}
+.ssrequestwrap .sumprice table .pricecheckno{padding-top:0;padding-bottom:0;padding-left:0}
+.ssrequestwrap .sumprice table .pricecheckno input{margin-left:5px; margin-right:5px;}
+
+
+.ssrequestwrap .sumpriceleft{width:100%;margin-right:24px;margin-top:30px}
+.ssrequestwrap .sumpriceright{width:628px;margin-top:30px}
+.ssrequestwrap .sumpriceright .right-top .righttable td{padding-bottom:21px;}
+.ssrequestwrap .sumpricelast table td{text-align:left;padding:30px; padding-left:45px;padding-right:0}
+.ssrequestwrap .sumpricelast table .col1{width:310px;}
+.ssrequestwrap .sumpricelast table .col2{width:300px;}
+.ssrequestwrap .sumpricelast table .col3{width:320px;}
+.ssrequestwrap .sumpricelast table .col4{width:350px;}
+
+.ssrequestwrap .sumpricelast table td.col1{background:url(../images/more/redplus.png) no-repeat right center;}
+.ssrequestwrap .sumpricelast table td.col2{background:url(../images/more/redplus.png) no-repeat right center;}
+.ssrequestwrap .sumpricelast table td.col3{background:url(../images/more/redplay.png) no-repeat right center;}
+.ssrequestwrap .sumpricelast table td.col4{}
+.ssrequestwrap .sumpricelast .title{padding-left:35px;}
+.ssrequestwrap .sumpricelast .title span{margin-left:25px;}
+.ssrequestwrap .sumpricelast table th{font-size:14px;}
+.ssrequestwrap .sumpricelast table td .big{font-size:16px;}
+.ssrequestwrap .sumpricelast table td .small{font-size:14px;}
+.ssrequestwrap .sumpricelast table td .small.last{margin-bottom:20px;}
+.ssrequestwrap .sumpricelast table .finalprice{width:160px; font-size:20px;padding:5px 20px;}
+
+.ssrequestwrap .sumpircepayment .title{padding-left:35px;}
+.ssrequestwrap .sumpircepayment .title span{margin-left:25px;}
+.ssrequestwrap .sumpircepaymentwarp .paysele select{width:255px; height:32px;margin-top:5px;}
+.ssrequestwrap .sumpircepaymentwarp .payitem{width:284px;padding-top:25px;}
+.ssrequestwrap .sumpircepaymentwarp .payitem.last{width:420px;padding-top:10px;}
+.ssrequestwrap .sumpircepaymentwarp .payitemttbig.yspan span{display:inline-block;    font-size: 20px;
+    padding: 5px 20px;width:auto;margin-left:20px;vertical-align:sub}
+
+
+#taxmodal .taxtable td input[type=radio]{margin-left:10px;}
+#taxmodal .taxtable td input[type=radio]:first-child{margin-left:0}
+}
+

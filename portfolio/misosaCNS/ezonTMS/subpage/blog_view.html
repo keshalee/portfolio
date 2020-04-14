@@ -1,0 +1,966 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />-->
+    <title>ezonTMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/jquery.multilevelpushmenu_red.css" />
+    <link rel="stylesheet" href="../css/fullexpandcollapse.css" />
+    <!--slide-->
+    <link rel="stylesheet" href="../css/responsiveslides.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/owl.theme.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="pushobj">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+            <a id="baseexpand" class="btn btn-lg btn-primary" href="#" role="button"><span class="glyphicon glyphicon-align-justify"></span></a>
+        </li>
+    </ul>
+</div>
+    <!--slide menu-->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times fa-2x" style="position: relative;top: -10px;"></i>ezonTMS</h2>
+            <ul>
+                <li>
+                    <a href="#">ezonTMS</a>
+                    <ul>
+                        <li>
+                            <a href="ezonTMS.html"><i class="fa fa-question"></i>이존 TMS란?</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><i class="fa fa-folder-open-o"></i>포트폴리오</a>
+                        </li>
+                        <li>
+                            <a href="responsive_web.html"><i class="fa fa-mobile"></i>반응형웹제작</a>
+                        </li>
+                        <li>
+                            <a href="../정기유지보수.html"><i class="fa fa-cogs"></i>유지보수서비스</a>
+                        </li>
+                        <li>
+                            <a href="additional_service1.html"><i class="fa fa-cogs"></i>부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../견적상담.html"><i class="fa fa-usd"></i>견적/상담</a>
+                        </li>
+                        <li>
+                            <a href="../공지사항.html"><i class="fa fa-phone"></i>고객센터</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-in"></i>로그인</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-plus"></i>회원가입</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-folder-open-o"></i>마이페이지</a>
+                </li>
+                <li>
+                    <a href="blog_list.html"><i class="fa fa-rss"></i>블로그</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--//slide menu-->
+
+    <div class="container-fluid top_bg">
+        <div class="container">
+            <div class="top_wrapper no-col col-md-12">
+                <div class="top_sitemap_wrapper">
+                    <ul class="top_sitemap1">
+                        <li><a href="#">창업지원센터</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업전문가상담</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업카페</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">스마트러닝</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">후원창업</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업프로그램</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">무료홈페이지제작</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">이존타운</a></li>
+                    </ul>
+                    <!--화면이 축소될 시에-->
+                    <div class="btn-group top_sitemap2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            사이트맵 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">창업지원센터</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업전문가상담</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">스마트러닝</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">후원창업</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업프로그램</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">무료홈페이지제작</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">이존타운</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top_language_wrapper">
+                    <div class="top_language">
+                        <select name="" id="" class="form-control">
+                            <option value="">언어선택</option>
+                            <option value="">한국어</option>
+                            <option value="">양어</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul class="top_social">
+                    <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                </ul>
+
+                <div class="btn-group top_sns">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        SNS 아이콘 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu top_social" role="menu">
+                        <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//top_wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//container-fluid-->
+    <!--login-->
+    <div class="container">
+        <div class="login_menu col-md-12">
+            <ul>
+                <li><a href="#">고객센터<span class="top_phone">1544-8571</span></a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                  <li><a href="디자인신청현황.html">마이페이지</a></li>
+                <li><a href="blog_list.html">블로그</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top_menu_2">
+        <div class="container">
+            <div class="navbar col-lg-12">
+                <a href="../index.html" class=""><img src="../images/header/logo.png" alt="ezonTMS" class="brand_img" /></a>
+                <div class="main_menu1">
+                    <ul>
+                        <li><a href="ezonTMS.html">이존 TMS란?</a></li>
+                        <li><a href="portfolio.html#">포트폴리오</a></li>
+                        <li><a href="responsive_web.html">반응형웹제작</a></li>
+                        <li><a href="../정기유지보수.html">유지보수서비스</a></li>
+                        <li><a href="additional_service1.html">부가서비스</a></li>
+                        <li><a href="../견적상담.html">견적/상담</a></li>
+                        <li><a href="../공지사항.html">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="sub_list_head">
+        <span class="title">Blog-Latest News</span>
+        <p class="category"><a href="../index.html">home</a> < <a href="blog_list.html">Blog</a> < <span>검색엔진최적화에 적합한 워드프레스 홈페이지</span></p>
+    </div>
+
+    <div class="sub_list cont_section">
+        <div class="responsive_column_left">
+            <div class="blog_content_wrap">
+                <div class="blog_content_container">
+                    <p class="blog_content_title">웹문서 노출과 검색유입을 증가시키는 검색엔진최적화 방법</p>
+                    <p class="blog_content_sub">2016-01-22 / in 마케팅, 빅키워드, 워드프레스 플러그인, 전체블로그 / by admin</p>
+                    <div class="blog_content">
+                        <span style="font-size: 14px"> WEB EDITOR </span>
+                    </div>
+                </div>
+                <div class="blog_share">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="blogshare_img"><img src="../images/sub/blog_share_img1.png" alt=""/></span>
+                                <span class="blog_share_num">3125</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="blogshare_img"><img src="../images/sub/blog_share_img2.png" alt=""/></span>
+                                <span class="blog_share_num">25</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="blogshare_img"><img src="../images/sub/blog_share_img3.png" alt=""/></span>
+                                <span class="blog_share_num">312</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog_tag">
+                    <span>Tages :</span> SEO, 검색등록, 검색엔진최적화, 사이트상위등록, 웹문서, 웹수집, 홈페이지등록
+                </div>
+                <div class="blog_sub">
+                    <div class="title">관련페이지</div>
+                    <ul>
+                        <li class="blog_related_list">
+                            <a href="#">
+                                <img src="../images/sub/blog_related_img1.png" alt=""/>
+                                <span>워드프레스 한글 폰트 플러그인 배포</span>
+                            </a>
+                        </li>
+                        <li class="blog_related_list">
+                            <a href="#">
+                                <img src="../images/sub/blog_related_img2.png" alt=""/>
+                            </a>
+                        </li>
+                        <li class="blog_related_list">
+                            <a href="#">
+                                <img src="../images/sub/blog_related_img3.png" alt=""/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blog_sub">
+                    <div class="title">네티즌의견<span>총 <b>2</b>개</span></div>
+                    <div class="blog_reply">
+                        <span class="social_login">
+                            <a href="#"><img src="../images/sub/social_login1.png" alt=""/></a>
+                        </span>
+                        <span class="social_login">
+                            <a href="#"><img src="../images/sub/social_login2.png" alt=""/></a>
+                        </span>
+                        <span  class="social_login">계정을 선택하여 로그인 하세요.</span>
+                        <span class="social_login byteslimit"><b>0</b>/600 bytes</span>
+                        <div class="blog_reply_input">
+                            <div class="input_box">
+                                <textarea name="" id="" placeholder="저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하는 게시물은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다. 건전한 토론문화와 양질의 댓글 문화를 위해, 타인에게 불쾌감을 주는 욕설 또는 특정 계층/민족, 종교 등을 비하하는 단어들은 삼가해주세요."></textarea>
+                            </div>
+                            <input type="submit" value="등록" />
+                        </div>
+                    </div><!--blog_reply-->
+                </div>
+
+                <div role="tabpanel" class="subTab blogList">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs blogList" role="tablist">
+                        <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">최신순</a></li>
+                        <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">등록순</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content blogReplyWrap">
+                        <div role="tabpanel" class="tab-pane active myTab blogList" id="latest">
+                            <div class="blog_reply_list">
+                                <div class="blog_reply_text">
+                                    <p class="head user_id">design***</p>
+                                    <p class="head date">2015-11-03 10:16 ㅣ 신고</p>
+                                    <p class="blog_content_text">
+                                        좋은 플러그인을 공개해주셔서 감사드립니다. 한가지 호환성 문제가 보여서 글을 남깁니다.<br />
+                                        나눔고딕 플러그인을 설치하고 활성화 시킬 경우, elegant-icons가 작동을 안하는 문제가 있네요.
+                                    </p>
+                                    <div class="blog_reply_btn">
+                                        <a href="#">답글 <span>(2) &#9650;</span></a>
+                                    </div>
+                                </div>
+                                <div class="blog_re_reply">
+                                    <div class="blog_reply_text">
+                                        <p class="head user_id">design***</p>
+                                        <p class="head date">2015-11-03 10:16 ㅣ 신고</p>
+                                        <p class="blog_content_text">
+                                            좋은 플러그인을 공개해주셔서 감사드립니다. 한가지 호환성 문제가 보여서 글을 남깁니다.<br />
+                                            나눔고딕 플러그인을 설치하고 활성화 시킬 경우, elegant-icons가 작동을 안하는 문제가 있네요.
+                                        </p>
+                                    </div>
+
+                                    <div class="blog_reply">
+                                        <span  class="social_login">리플 내용을 입력해 주세요.</span>
+                                        <span class="social_login byteslimit"><b>0</b>/600 bytes</span>
+                                        <div class="blog_reply_input">
+                                            <div class="input_box">
+                                                <textarea name="" id="" placeholder="저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하는 게시물은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다. 건전한 토론문화와 양질의 댓글 문화를 위해, 타인에게 불쾌감을 주는 욕설 또는 특정 계층/민족, 종교 등을 비하하는 단어들은 삼가해주세요."></textarea>
+                                            </div>
+                                            <input type="submit" value="등록" />
+                                        </div>
+                                    </div><!--blog_reply-->
+                                </div>
+                            </div><!--blog_reply_list-->
+                            <div class="blog_reply_list">
+                                <div class="blog_reply_text">
+                                    <p class="head user_id">design***</p>
+                                    <p class="head date">2015-11-03 10:16 ㅣ 신고</p>
+                                    <p class="blog_content_text">
+                                        좋은 플러그인을 공개해주셔서 감사드립니다. 한가지 호환성 문제가 보여서 글을 남깁니다.<br />
+                                        나눔고딕 플러그인을 설치하고 활성화 시킬 경우, elegant-icons가 작동을 안하는 문제가 있네요.
+                                    </p>
+                                    <div class="blog_reply_btn">
+                                        <a href="#">답글 <span>(2) &#9650;</span></a>
+                                    </div>
+                                </div>
+                            </div><!--blog_reply_list-->
+                        </div>
+                        <div role="tabpanel" class="tab-pane myTab blogList" id="register">
+                            <div class="blog_reply_list">
+                                <div class="blog_reply_text">
+                                    <p class="head user_id">design***</p>
+                                    <p class="head date">2015-11-03 10:16 ㅣ 신고</p>
+                                    <p class="blog_content_text">
+                                        좋은 플러그인을 공개해주셔서 감사드립니다. 한가지 호환성 문제가 보여서 글을 남깁니다.<br />
+                                        나눔고딕 플러그인을 설치하고 활성화 시킬 경우, elegant-icons가 작동을 안하는 문제가 있네요.
+                                    </p>
+                                    <div class="blog_reply_btn">
+                                        <a href="#">답글</a>
+                                    </div>
+                                </div>
+                            </div><!--blog_reply_list-->
+                        </div>
+                    </div><!--tab-content-->
+                </div><!--subTab-->
+            </div>
+        </div>
+
+        <div class="responsive_column_right">
+            <div class="col-sm-4 col-lg-12">
+                <div class="side_menu">
+                    <p class="side_title">SEARCH</p>
+                    <div class="search_input">
+                        <input type="text" class="inpuType1" placeholder="Search"/>
+                        <input type="submit" class="inputype1_btn">
+                    </div>
+                    <ul class="share_btn_wrap">
+                        <li><a href="#"><img src="../images/sub/btn_share_img1.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../images/sub/btn_share_img2.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../images/sub/btn_share_img3.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../images/sub/btn_share_img4.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../images/sub/btn_share_img5.png" alt=""/></a></li>
+                        <li class="share_num"><span>18</span></li>
+                    </ul>
+                </div>
+                <div class="side_menu">
+                    <p class="side_title">CATEGORIES</p>
+                    <div class="search_select">
+                        <select name="" id="">
+                            <option value="">카테고리 선택</option>
+                            <option value="">카테고리1</option>
+                            <option value="">카테고리2</option>
+                            <option value="">카테고리3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="myBlog">
+                    <div class="myBlog_head">
+                        <img src="../images/sub/myBlog_mainImg.png" alt=""/>
+                        <span class="blogImg"><img src="../images/sub/myBlog_text_Img.png" alt=""/></span>
+                        <span class="blogTitle">
+                            <strong>블로그차트</strong><br />
+                            <b>5,405개 좋아요</b>
+                        </span>
+                        <span class="blogShare"><a href="#">페이지 좋아요</a></span>
+                        <div class="boxBg"><img src="../images/sub/boxBg1.png" alt=""/></div>
+                    </div>
+                    <div class="myBlog_sub">
+                        <div class="blogFriend">
+                            <p>친구 중 제일 먼저 좋아요을 클릭하세요!</p>
+                            <div class="flexslider carousel myFlexslider1">
+                                <ul class="slides">
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-lg-12">
+                <div role="tabpanel" class="subTab">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab">Popular</a></li>
+                        <li role="presentation"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">Recent</a></li>
+                        <li role="presentation"><a href="#tags" aria-controls="tags" role="tab" data-toggle="tab">Tags</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active myTab" id="popular">
+                            <ul>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg1.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육 하반기 시행 투명한 연구비SW교육 하반기 시행 투명한 연구비SW교육 하반기 시행 투명한 연구비SW교육 하반기 시행 투명한 연구비</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg2.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육 하반기 시행 투명한 연구비</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg1.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육 하반기 시행 투명한 연구비</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg2.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육 하반기 시행 투명한 연구비</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane myTab" id="recent">
+                            <ul>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg2.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg1.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg2.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg1.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane myTab" id="tags">
+                            <ul>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg2.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="news_drw">
+                                        <div class="news_im"><img src="../images/sub/tabListImg1.png" alt=""></div>
+                                        <div class="news_tx">
+                                            <span class="news_tit">SW교육</span>
+                                            <p>
+                                                <span class="news_modify">2016-01-21 16:53</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--subTab-->
+            </div>
+
+            <div class="col-sm-4 col-lg-12">
+                <div class="subTab">
+                    <div class="keyword">
+                        <div class="keyword_head">
+                            <img src="../images/sub/keywordImg.png" alt=""/>
+                            <span class="blogImg"><img src="../images/sub/keyword_text_img.png" alt=""/></span>
+                            <span class="blogTitle">
+                                <strong>블로그차트</strong><br />
+                                <b>5,405개 좋아요</b>
+                            </span>
+                            <span class="blogShare"><a href="#">페이지 좋아요</a></span>
+                            <div class="boxBg"><img src="../images/sub/boxBg1.png" alt=""/></div>
+                        </div>
+                        <div class="keyword_sub">
+                            <div class="blogFriend">
+                                <p class="shareFriendText">친구 중 제일 먼저 좋아요을 클릭하세요!</p>
+                                <div class="flexslider carousel myFlexslider1">
+                                    <ul class="slides">
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blogFriend">
+                                <div class="share_head">
+                                    <div class="title1"><img src="../images/sub/shareFriend_img1.png" alt=""/></div>
+                                    <div class="title2">
+                                        <p>빅키워드</p>
+                                        <span>2016-01-21 16:53</span>
+                                    </div>
+                                </div>
+                                <div class="share_sub">
+                                    <p class="share_content">
+                                        안녕하세요 빅키워드입니다.
+                                        즐거운 황금휴일을 보내고 계신가요?
+                                        샌드위치 데이라고 해서 쉬는 곳도 있고,
+                                        저희처럼 출근을 하는 곳도 있지만 각자
+                                        위치에서
+                                    </p>
+                                    <p class="share_reply">
+                                        <span>좋아요 1개</span>
+                                        <span>&middot;</span>
+                                        <span>댓글 1개</span>
+                                    </p>
+                                    <div class="btn_share_wrap">
+                                        <div class="btn_share">
+                                            <div class="shareBtn padd">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img1.png" alt=""/>
+                                                    <span>좋아요</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn_share">
+                                            <div class="shareBtn padd">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img2.png" alt=""/>
+                                                    <span>댓글달기</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn_share">
+                                            <div class="shareBtn">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img3.png" alt=""/>
+                                                    <span>공유하기</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--blogFriend-->
+                            <div class="blogFriend">
+                                <p class="shareFriendText">친구 중 제일 먼저 좋아요을 클릭하세요!</p>
+                                <div class="flexslider carousel myFlexslider1">
+                                    <ul class="slides">
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                        <li><a href="#"><img src="../images/sub/friendImg1.png" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blogFriend">
+                                <div class="share_head">
+                                    <div class="title1"><img src="../images/sub/shareFriend_img1.png" alt=""/></div>
+                                    <div class="title2">
+                                        <p>빅키워드</p>
+                                        <span>2016-01-21 16:53</span>
+                                    </div>
+                                </div>
+                                <div class="share_sub">
+                                    <p class="share_content">
+                                        안녕하세요 빅키워드입니다.
+                                        즐거운 황금휴일을 보내고 계신가요?
+                                        샌드위치 데이라고 해서 쉬는 곳도 있고,
+                                        저희처럼 출근을 하는 곳도 있지만 각자
+                                        위치에서
+                                    </p>
+                                    <p class="share_reply">
+                                        <span>좋아요 1개</span>
+                                        <span>&middot;</span>
+                                        <span>댓글 1개</span>
+                                    </p>
+                                    <div class="btn_share_wrap">
+                                        <div class="btn_share">
+                                            <div class="shareBtn padd">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img1.png" alt=""/>
+                                                    <span>좋아요</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn_share">
+                                            <div class="shareBtn padd">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img2.png" alt=""/>
+                                                    <span>댓글달기</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn_share">
+                                            <div class="shareBtn">
+                                                <a href="#">
+                                                    <img src="../images/sub/shareBtn_img3.png" alt=""/>
+                                                    <span>공유하기</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--blogFriend-->
+                        </div><!--keyword_sub-->
+                    </div>
+                </div><!--subTab-->
+            </div>
+        </div>
+    </div><!--sub_list-->
+</div><!--container-->
+
+<!--수상이력-->
+<div class="container">
+    <ul class="awards_list" id="owl_slide2">
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 최우수상</p>
+                <span>한국주택금융공사</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 우수상</p>
+                <span>OCN</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>서울창조전문인력</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>유네스코아태교육원</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>신원엔지니어링</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 우수상</p>
+                <span>영실업</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="footer1_bg">
+    <div class="footer container">
+        <!--bottom menu-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>BOTTOM MENU</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회원이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>솔루션이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>개인정보취급방침</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>1:1문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>미확인입금자</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>세금계산서신청하기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>기능개선의견접수</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--contact us-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>CONTACT US</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker"></i>
+                        <span>서울시 구로구 디지털로 33길 48 901호<br /><span style="margin-left: 24px"></span>대륭포스트타워 7치</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-phone"></i>
+                        <span>02.838.0085 / 010-8855-9256</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span>JEH9500@EMPAS.COM<br /><span style="margin-left: 24px"></span>사업자등록번호 113-86-68125</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-male"></i>
+                        <span>대표 정은환</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--창업교육-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>창업교육</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--공지사항-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>공지사항</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer2_bg">
+    <div class="container footer_bottom">
+        <div class="col-sm-5 col-sm-12">
+            <p class="footer_title padding_left_15">Copyright © MISOSA. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-sm-7 col-sm-12">
+            <div class="footer_right_menu padding_left_15">
+                <ul class="top_social2">
+                    <li><a href="#"><img src="../images/footer/social_img1.png" alt="카카오톡"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img2.png" alt="이존"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img3.png" alt="네이버밴드"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img4.png" alt="페이스북"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img5.png" alt="트위터"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img6.png" alt="구글"/></a></li>
+                </ul>
+                <div class="footer_select padding_right_15">
+                    <select name="" id="">
+                        <option value="">관계사</option>
+                        <option value="">관계사1</option>
+                        <option value="">관계사1</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트1</option>
+                        <option value="">관련사이트2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.multilevelpushmenu.min.js"></script>
+<script type="text/javascript" src="../js/fullexpandcollapse.js"></script>
+<script type="text/javascript" src="../js/placeholders.min.js"></script>
+<script type="text/javascript" src="../js/owl.carousel.js"></script>
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/sub.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />-->
+    <title>ezonTMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/jquery.multilevelpushmenu_red.css" />
+    <link rel="stylesheet" href="../css/fullexpandcollapse.css" />
+    <!--slide-->
+    <link rel="stylesheet" href="../css/responsiveslides.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/owl.theme.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="pushobj">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+            <a id="baseexpand" class="btn btn-lg btn-primary" href="#" role="button"><span class="glyphicon glyphicon-align-justify"></span></a>
+        </li>
+    </ul>
+</div>
+    <!--slide menu-->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times fa-2x" style="position: relative;top: -10px;"></i>ezonTMS</h2>
+            <ul>
+                <li>
+                    <a href="#">ezonTMS</a>
+                    <ul>
+                        <li>
+                            <a href="ezonTMS.html"><i class="fa fa-question"></i>이존 TMS란?</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><i class="fa fa-folder-open-o"></i>포트폴리오</a>
+                        </li>
+                        <li>
+                            <a href="responsive_web.html"><i class="fa fa-mobile"></i>반응형웹제작</a>
+                        </li>
+                        <li>
+                            <a href="../정기유지보수.html"><i class="fa fa-cogs"></i>유지보수서비스</a>
+                        </li>
+                        <li>
+                            <a href="additional_service1.html"><i class="fa fa-cogs"></i>부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../견적상담.html"><i class="fa fa-usd"></i>견적/상담</a>
+                        </li>
+                        <li>
+                            <a href="../공지사항.html"><i class="fa fa-phone"></i>고객센터</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-in"></i>로그인</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-plus"></i>회원가입</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-folder-open-o"></i>마이페이지</a>
+                </li>
+                <li>
+                    <a href="blog_list.html"><i class="fa fa-rss"></i>블로그</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--//slide menu-->
+
+    <div class="container-fluid top_bg">
+        <div class="container">
+            <div class="top_wrapper no-col col-md-12">
+                <div class="top_sitemap_wrapper">
+                    <ul class="top_sitemap1">
+                        <li><a href="#">창업지원센터</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업전문가상담</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업카페</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">스마트러닝</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">후원창업</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">창업프로그램</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">무료홈페이지제작</a><span class="txt_bar">|</span></li>
+                        <li><a href="#">이존타운</a></li>
+                    </ul>
+                    <!--화면이 축소될 시에-->
+                    <div class="btn-group top_sitemap2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            사이트맵 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">창업지원센터</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업전문가상담</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">스마트러닝</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">후원창업</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업프로그램</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">무료홈페이지제작</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">창업카페</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">이존타운</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top_language_wrapper">
+                    <div class="top_language">
+                        <select name="" id="" class="form-control">
+                            <option value="">언어선택</option>
+                            <option value="">한국어</option>
+                            <option value="">양어</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul class="top_social">
+                    <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                </ul>
+
+                <div class="btn-group top_sns">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        SNS 아이콘 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu top_social" role="menu">
+                        <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img2.png" alt="이존" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터" /></a></li>
+                        <li><a href="#"><img src="../images/header/social_img6.png" alt="구글" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//top_wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//container-fluid-->
+    <!--login-->
+    <div class="container">
+        <div class="login_menu col-md-12">
+            <ul>
+                <li><a href="#">고객센터<span class="top_phone">1544-8571</span></a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                  <li><a href="디자인신청현황.html">마이페이지</a></li>
+                <li><a href="blog_list.html">블로그</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top_menu_2">
+        <div class="container">
+            <div class="navbar col-lg-12">
+                <a href="../index.html" class=""><img src="../images/header/logo.png" alt="ezonTMS" class="brand_img" /></a>
+                <div class="main_menu1">
+                    <ul>
+                        <li><a href="ezonTMS.html">이존 TMS란?</a></li>
+                        <li><a href="portfolio.html#">포트폴리오</a></li>
+                        <li><a href="responsive_web.html">반응형웹제작</a></li>
+                        <li><a href="../정기유지보수.html">유지보수서비스</a></li>
+                        <li><a href="additional_service1.html">부가서비스</a></li>
+                        <li><a href="../견적상담.html">견적/상담</a></li>
+                        <li><a href="../공지사항.html">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--contents start-->
+<div class="container sub_container portfolio_wrap">
+    <div class="sub">
+        <div class="topBanner">
+            <img src="../images/sub/topBanner_img1.png" alt="" class="topbanner_bg"/>
+            <div class="table_title">
+                <table>
+                    <tr>
+                        <td class="text1">
+                            <p class="hidden-xs txt1">EZON TMS</p>
+                            <p class="txt2">제작사례</p>
+                        </td>
+                        <td>
+                            <p class="hidden-xs txt3">지난 10여년간 축적된 최고의 기술력과 노하우</p>
+                            <p class="hidden-xs txt4">고객의 요구사항과 최신트랜드를 반영한 사용자중심의 인터페이스,<br>
+                                합리적인 가격과 최고의 퀄리티로 최고의 산출물만을 제작하는데 최선을 다하겠습니다.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div><!-- /.topBanner -->
+        <div class="portfolio_view_title">
+            <span>자기주도 학습프로그램 마음에 쓴 편지</span>
+            <ul>
+                <li><a href="#"><img src="../images/header/social_img1.png" alt="카카오톡"></a></li>
+                <li><a href="#"><img src="../images/header/social_img2.png" alt="이존"></a></li>
+                <li><a href="#"><img src="../images/header/social_img3.png" alt="네이버밴드"></a></li>
+                <li><a href="#"><img src="../images/header/social_img4.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="../images/header/social_img5.png" alt="트위터"></a></li>
+                <li><a href="#"><img src="../images/header/social_img6.png" alt="구글"></a></li>
+            </ul>
+        </div>
+        <div class="product_view_wrap">
+            <div class="product_view1 type2">
+                <div id="owl_slide3" class="owl-carousel product_viewer">
+                    <div class="item">
+                        <div class="view_img">
+                            <img src="../images/sub/portfolio_view_img1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="view_img">
+                            <img src="../images/sub/portfolio_view_img1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div><!--product_view1-->
+            <div class="product_view2">
+                <div class="product_text">
+                    <p class="product_head">프로젝트 세부사항</p>
+
+                    <div class="product_table type2">
+                        <div class="table_tr">
+                            <div class="title">클라이언트</div>
+                            <div class="content">
+                                <p class="">: 생명사랑운동본부</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">년도 </div>
+                            <div class="content">
+                                <p>: 2015-3</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">지역 </div>
+                            <div class="content">
+                                <p>: 대한민국</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">사이트명  </div>
+                            <div class="content">
+                                <p>: www.misosalife.co.kr</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">제작타입</div>
+                            <div class="content">
+                                <p>: 이존TMS기본솔루션 + 맛집 디자인스킨 112번 적용</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">부가사항 </div>
+                            <div class="content">
+                                <p>: 예약프로그램적용 / 일부 커스트마이징</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">코팅유형</div>
+                            <div class="content">
+                                <p>: 스마트코딩(웹표준/웹접근성준수/j-query사용)</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">구동환경</div>
+                            <div class="content">
+                                <p>: 인터넷 익스플러워 8버젼이상 기타(크롬, 사파리폭스 등) 100%</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">대표색상</div>
+                            <div class="content">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">설치환경</div>
+                            <div class="content">
+                                <p>: window server</p>
+                            </div>
+                        </div>
+                        <div class="table_tr">
+                            <div class="title">개발언어</div>
+                            <div class="content">
+                                <p>: ASP</p>
+                            </div>
+                        </div>
+                    </div><!--product_table-->
+                    <div class="table_layout1">
+                        <table>
+                            <tr>
+                                <td class="txt"><span><a href="#">상세보기</a></span></td>
+                                <td class="im"><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/mobile_img2.png" alt=""/></a></span></td>
+                                <td class="im"><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/tablet_img2.png" alt=""/></a></span></td>
+                                <td class="im"><span><a href="#"><img src="../images/sub/desktop_img2.png" alt=""/></a></span></td>
+                                <td class="txt"><span><a href="#">제작상담하기</a></span></td>
+                            </tr>
+                        </table>
+                    </div><!--table_layout1-->
+                </div>
+            </div><!--product_view2-->
+        </div>
+
+        <div class="textbox_wrap">
+            <p class="title">개요</p>
+            <div class="textbox">
+                인간은 모두 위대한 존재임을 인식하고 생명과 삶을 귀하게 여기는 생명사랑 운동본부가 함께 운영하는 인성교육 프로그램이다.<br /><br />
+                학생들이 매일 앱(APP)에서 몇가지 덕목을 실천하고, 알의 힘으로 스스로 꿈을 찾고, 위대한 인간본성을 깨닫게 한다.(자아발견)<br /><br />
+                교사,부모,전문 상담사들이 앱(APP)과 웹을 이용하여 아이들의 활동 현황을 실시간 확인 가능하고 쌍방향 소통하므로 공동체 의식을 함양한다.
+            </div>
+        </div><!--textbox-->
+        <div class="textbox_wrap">
+            <p class="title">기획의도 및 제작방안</p>
+            <div class="textbox">
+                포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.<br />
+                포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.<br />
+                포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.<br />
+                포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.포트폴리오 기획의도 및 제작방안입니다.<br />
+            </div>
+        </div>
+
+        <div class="solution_title">
+            <p>관련 포트폴리오</p>
+            <div class="solution_category">
+                <span><a href="#">전체보기 <img src="../images/sub/plus_img.png" alt=""/></a></span>
+            </div>
+        </div>
+
+        <div class="solution_portfolio_wrap padd_reset">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="solution_portfolio">
+                        <div class="portfolio_img">
+                            <img src="../images/sub/portfolio2_img1.png" alt="" class="port_im"/>
+                            <div class="portfolio_more">
+                                <p>
+                                    <a href="#" class="link"></a>
+                                    <a href="#" class="size_up"></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="title"><a href="#">생명사랑운동본부 반응형 웹구축</a></p>
+                            <p class="txt">
+                                클라이언트 : 생명사랑운동본부<br />
+                                년도 : 2015-3<br />
+                                지역 : 대한민국<br />
+                                사이트명 : www.misosalife.co.kr
+                            </p>
+                        </div>
+                        <div class="table_layout2">
+                            <table>
+                                <tr>
+                                    <td class="first"><span><a href="#">상세보기</a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/mobile_img.png" alt=""/></a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/tablet_img.png" alt=""/></a></span></td>
+                                    <td class="last"><span><a href="#"><img src="../images/sub/desktop_img.png" alt=""/></a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="solution_portfolio">
+                        <div class="portfolio_img">
+                            <img src="../images/sub/portfolio2_img2.png" alt="" class="port_im"/>
+                            <div class="portfolio_more">
+                                <p>
+                                    <a href="#" class="link"></a>
+                                    <a href="#" class="size_up"></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="title"><a href="#">생명사랑운동본부 반응형 웹구축</a></p>
+                            <p class="txt">
+                                클라이언트 : 생명사랑운동본부<br />
+                                년도 : 2015-3<br />
+                                지역 : 대한민국<br />
+                                사이트명 : www.misosalife.co.kr
+                            </p>
+                        </div>
+                        <div class="table_layout2">
+                            <table>
+                                <tr>
+                                    <td class="first"><span><a href="#">상세보기</a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/mobile_img.png" alt=""/></a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/tablet_img.png" alt=""/></a></span></td>
+                                    <td class="last"><span><a href="#"><img src="../images/sub/desktop_img.png" alt=""/></a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="solution_portfolio">
+                        <div class="portfolio_img">
+                            <img src="../images/sub/portfolio2_img3.png" alt="" class="port_im"/>
+                            <div class="portfolio_more">
+                                <p>
+                                    <a href="#" class="link"></a>
+                                    <a href="#" class="size_up"></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="title"><a href="#">생명사랑운동본부 반응형 웹구축</a></p>
+                            <p class="txt">
+                                클라이언트 : 생명사랑운동본부<br />
+                                년도 : 2015-3<br />
+                                지역 : 대한민국<br />
+                                사이트명 : www.misosalife.co.kr
+                            </p>
+                        </div>
+                        <div class="table_layout2">
+                            <table>
+                                <tr>
+                                    <td class="first"><span><a href="#">상세보기</a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/mobile_img.png" alt=""/></a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/tablet_img.png" alt=""/></a></span></td>
+                                    <td class="last"><span><a href="#"><img src="../images/sub/desktop_img.png" alt=""/></a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="solution_portfolio">
+                        <div class="portfolio_img">
+                            <img src="../images/sub/portfolio2_img4.png" alt="" class="port_im"/>
+                            <div class="portfolio_more">
+                                <p>
+                                    <a href="#" class="link"></a>
+                                    <a href="#" class="size_up"></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="title"><a href="#">생명사랑운동본부 반응형 웹구축</a></p>
+                            <p class="txt">
+                                클라이언트 : 생명사랑운동본부<br />
+                                년도 : 2015-3<br />
+                                지역 : 대한민국<br />
+                                사이트명 : www.misosalife.co.kr
+                            </p>
+                        </div>
+                        <div class="table_layout2">
+                            <table>
+                                <tr>
+                                    <td class="first"><span><a href="#">상세보기</a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal1" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/mobile_img.png" alt=""/></a></span></td>
+                                    <td><span><a href="#" class="modal_active" data-toggle="modal" data-target="#exampleModal2" target="http://coding.test.ezonland.com/ezontms/%EA%B1%B4%EB%B3%84%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98.html"><img src="../images/sub/tablet_img.png" alt=""/></a></span></td>
+                                    <td class="last"><span><a href="#"><img src="../images/sub/desktop_img.png" alt=""/></a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="more_btn more_padd">
+                <a href="#">더보기</a>
+            </p>
+        </div><!--관련 포트폴리오-->
+    </div><!--sub-->
+</div>
+<div class="portfolio_img_view"></div><!--img viewer-->
+
+<!--footer-->
+<!--수상이력-->
+<div class="container">
+    <ul class="awards_list" id="owl_slide2">
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 최우수상</p>
+                <span>한국주택금융공사</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img1.png" alt="" />
+            <div class="awards_title">
+                <p>2009년 우수상</p>
+                <span>OCN</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>서울창조전문인력</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>유네스코아태교육원</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 최우수상</p>
+                <span>신원엔지니어링</span>
+            </div>
+        </li>
+        <li>
+            <img src="../images/footer/award_img2.png" alt="" />
+            <div class="awards_title">
+                <p>2014년 우수상</p>
+                <span>영실업</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--footer-->
+<div class="footer1_bg">
+    <div class="footer container">
+        <!--bottom menu-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>BOTTOM MENU</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회사소개</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>회원이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>솔루션이용약관</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>개인정보취급방침</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>1:1문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>미확인입금자</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>세금계산서신청하기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span>기능개선의견접수</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--contact us-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>CONTACT US</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker"></i>
+                        <span>서울시 구로구 디지털로 33길 48 901호<br /><span style="margin-left: 24px"></span>대륭포스트타워 7치</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-phone"></i>
+                        <span>02.838.0085 / 010-8855-9256</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span>JEH9500@EMPAS.COM<br /><span style="margin-left: 24px"></span>사업자등록번호 113-86-68125</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-male"></i>
+                        <span>대표 정은환</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--창업교육-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>창업교육</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다홈페이지제작 문의 드립니다.</span>
+                        <i class="fa fa-lock"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="txt_ellipsis">홈페이지제작 문의 드립니다. </span>
+                        <i class="fa fa-unlock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--공지사항-->
+        <div class="col-md-3 col-sm-6">
+            <div class="bottom_menu_title">
+                <span>공지사항</span>
+            </div>
+            <ul class="bottom_menu_content">
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="txt_ellipsis2">가상서버호스팅 Ubuntu 14.04 LTS cnftl</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer2_bg">
+    <div class="container footer_bottom">
+        <div class="col-sm-5 col-sm-12">
+            <p class="footer_title padding_left_15">Copyright © MISOSA. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-sm-7 col-sm-12">
+            <div class="footer_right_menu padding_left_15">
+                <ul class="top_social2">
+                    <li><a href="#"><img src="../images/footer/social_img1.png" alt="카카오톡"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img2.png" alt="이존"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img3.png" alt="네이버밴드"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img4.png" alt="페이스북"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img5.png" alt="트위터"/></a></li>
+                    <li><a href="#"><img src="../images/footer/social_img6.png" alt="구글"/></a></li>
+                </ul>
+                <div class="footer_select padding_right_15">
+                    <select name="" id="">
+                        <option value="">관계사</option>
+                        <option value="">관계사1</option>
+                        <option value="">관계사1</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">관련사이트</option>
+                        <option value="">관련사이트1</option>
+                        <option value="">관련사이트2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- mobile device -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm mobileModal">
+        <div class="modal-content">
+            <iframe class="mobile_wrap" src=""></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- tablet device -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg tabletModal">
+        <div class="modal-content">
+            <iframe class="tablet_wrap" src=""></iframe>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.multilevelpushmenu.min.js"></script>
+<script type="text/javascript" src="../js/fullexpandcollapse.js"></script>
+<script type="text/javascript" src="../js/responsiveslides.js"></script>
+<script type="text/javascript" src="../js/owl.carousel.js"></script>
+<script type="text/javascript" src="../js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+    $(window).load(function(){
+        window.setTimeout(function() {
+            owl.reinit();
+        }, 250);
+
+        $("#owl_slide3").owlCarousel({
+            navigation : true,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem : true,
+            pagination: false,
+            mouseDrag: false,
+            navigationText: false
+        });
+
+        $("#owl_slide5").owlCarousel({
+            //Autoplay
+            autoPlay : true,
+            stopOnHover : true,
+            // Navigation
+            navigation : true,
+            pagination : false,
+            lazyLoad : true,
+            slideSpeed: 700,
+            itemsScaleUp: true,
+            items: 4,
+            itemsCustom : [
+                [0, 1],
+                [450, 2],
+                [650, 4],
+                [992, 2],
+                [1310, 4]
+            ]
+        });
+
+
+        var owl = $("#owl_slide3").data('owlCarousel');
+
+//        var owl2 = $("#owl_slide4").data('owlCarousel');
+
+        resize_product_text();      //요소 위치 변경
+
+
+        //기능설명
+        $(".solution_func li").eq(0).find('.content').css('display', 'block');
+        $(".solution_faq .solution_func li").eq(0).find('.content').css('display', 'block');
+
+        $(".func_list"). click(function(){
+            $(this).find('.content').slideDown();   //duration 400
+            $(this).parent().siblings().find('.content').slideUp();
+
+            return false;
+        });
+
+        //관련포트폴리오
+        $(".my_tab_content").eq(1).hide();
+        $(".my_tab_content").eq(2).hide();
+
+        $(".my_tab li a").click(function(){
+            var index = $(this).parent().index();
+            var tab_content = $(".my_tab_content");
+
+            $(this).parent().addClass('active').siblings().removeClass('active');
+
+
+            for(var i = 0; i < tab_content.length; i++){
+                if(i == index){
+                    tab_content.eq(index).fadeIn();
+                }
+                else{
+                    tab_content.eq(i).fadeOut(200);
+                }
+            }
+            return false;
+        });
+
+        $(".size_up").click(function(){
+
+            //if window size is '992px' more...
+            if(parseInt($(window).width()) >= 992){
+                var $cloneImg = $(this).parent().parent().prev('.port_im').clone();
+
+                $cloneImg.addClass('cloneImg').css({
+                    position: 'relative',
+                    top: '15%',
+                    width: '900px'
+                });
+
+                $(".portfolio_img_view").addClass('portfolio_img_active').append($cloneImg);
+
+            }
+            else{
+                alert('윈도우 사이즈가 992px 이상일 때만 동작합니다.');
+            }
+
+            return false;
+        });
+
+        $('body').click(function(){
+            $(".portfolio_img_view").removeClass('portfolio_img_active');
+            $(".cloneImg").remove();
+        });
+
+
+    });
+
+    $(window).resize(function(){
+        window.setTimeout(function() {
+            resize_product_text();
+        }, 250);
+    });
+
+    function resize_product_text(){
+        var window_w = parseInt($(window).width());
+
+        //화면의 사이즈가 맞지 않을시에...
+        if((window_w > 992) && (window_w < 1310)){
+            var $temp_div = $(".proceed_list").detach();
+            $(".product_view_wrap").after($temp_div);
+        }
+        else{
+            var $temp_div = $(".proceed_list").detach();
+            $(".product_table").after($temp_div);
+        }
+    }
+
+</script>
+</body>
+</html>
