@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-users-o"></i> 회원/커뮤니티 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">평가 관리</header>
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-3 mb-3">
+                                    <div class="form-group">
+                                        <label>검색</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <select class="form-control">
+                                                    <option>전체</option>
+                                                    <option>닉네임</option>
+                                                    <option>병원명</option>
+                                                    <option>의사명</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-secondary" type="button">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블  -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </th>
+                                        <th class="num">번호</th>
+                                        <th>노출/비노출</th>
+                                        <th>닉네임</th>
+                                        <th>병원명/의사명</th>
+                                        <th>평가내용</th>
+                                        <th>신고수</th>
+                                        <th><a href="">등록일<i class="xi-caret-down-min"></i></a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">3</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td>aaa111</td>
+                                        <td class="tit"><a href="hospital_view.html">나무성형외과</a></td>
+                                        <td class="con_wid text-left">
+                                            <span class="star-group">
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                            </span>
+                                            <p>
+                                                전화로 문의 드렸는데 친절 했음! 방문해야 상세한 상담 가능하다 해서 가보려고요. 작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음
+                                            </p>
+                                        </td>
+                                        <td class="tit"><a href="#modalEval" data-toggle="modal">1</a></td>
+                                        <td class="date">2019.11.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check" rowspan="2">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num" rowspan="2">2</td>
+                                        <td rowspan="2">
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td>aaa111</td>
+                                        <td class="tit"><a href="doctor_view.html">의사명</a></td>
+                                        <td class="con_wid text-left">
+                                            <span class="star-group">
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star"></i>
+                                                <i class="xi-star"></i>
+                                            </span>
+                                            <p>
+                                                전화로 문의 드렸는데 친절 했음!
+                                            </p>
+                                        </td>
+                                        <td class="tit"><a href="#modalEval" data-toggle="modal">4</a></td>
+                                        <td class="date">2019.11.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon_sub_line2"></i> 병원관리자</td>
+                                        <td class="tit"><a href="hospital_view.html">병원 명</a></td>
+                                        <td class="text-left" colspan="2">내용내용</td>
+                                        <td class="date">2019.11.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td>aaa111</td>
+                                        <td class="tit"><a href="doctor_view.html">의사명</a></td>
+                                        <td class="con_wid text-left">
+                                            <span class="star-group">
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                                <i class="xi-star-o"></i>
+                                            </span>
+                                            <p>
+                                                작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음작성한 한줄 평가 내용이 전부 노출됩니다. 상세 페이지 이동 없음
+                                            </p>
+                                        </td>
+                                        <td class="tit"><a href="#modalEval" data-toggle="modal">17</a></td>
+                                        <td class="date">2019.11.11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+    
+    <!-- 모달 -->
+    <div id="modalEval" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">신고 항목 보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col style="width:240px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">게시글과 관련 없는 광고성 내용</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">음란성/선정적 내용</th>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">욕설, 인신공격 등의 내용</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">같은 내용 반복 게시(도배)</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기타</th>
+                                    <td>
+                                        <ul class="list-group list-dotted">
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                            <li>사용자가 직접 입력한 신고사유가 노출됩니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

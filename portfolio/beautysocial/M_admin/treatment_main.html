@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-sitemap-o"></i> 사이트/콘텐츠 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">시술모아보기 관리</header>
+                    <div class="card-body">
+                        <!-- 언어탭 -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="">한국어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">영어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">일본어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">중국어(간체)</a>
+                            </li>
+                        </ul>
+
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table id="orderModify" class="table table-striped hidden">
+                                <thead>	
+                                    <tr>
+                                        <th>노출순서</th>
+                                        <th>이미지</th>
+                                        <th><a href="">등록일<i class="xi-caret-down-min"></i></a></th>
+                                        <th>노출/비노출</th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">
+                                            1
+                                            <!-- 노출 순서 편집 클릭시 -->
+                                            <input type="number" class="form-control col-sm-12" value="2">
+                                        </td>
+                                        <td>
+                                            <a href="treatment_main_view.html">
+                                                <img src="https://about.canva.com/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png" alt="" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="date">2019.11.11 <span>14:24</span></td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm active">노출</button>
+                                        </td>
+                                        <td class="adm">
+                                            <a href="#modalDelete" data-toggle="modal" class="btn btn-outline-danger btn-sm">삭제</a>
+                                            <a class="btn btn-outline-primary btn-sm" href="treatment_main_view.html">수정</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">
+                                            2
+                                            <!-- 노출 순서 편집 클릭시 -->
+                                            <input type="number" class="form-control col-sm-12" value="4"> 
+                                        </td>
+                                        <td>
+                                            <a href="treatment_main_view.html">
+                                                <img src="https://about.canva.com/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png" alt="" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="date">2019.11.11 <span>14:24</span></td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm active">노출</button>
+                                        </td>
+                                        <td class="adm">
+                                            <a href="#modalDelete" data-toggle="modal" class="btn btn-outline-danger btn-sm">삭제</a>
+                                            <a class="btn btn-outline-primary btn-sm" href="treatment_main_view.html">수정</a>
+                                        </td>
+                                    </tr>
+                                    <!-- 비노출시 테이블 리스트 하단으로 변경 -->
+                                    <tr>
+                                        <td class="num">
+                                            -
+                                            <!-- 노출 순서 편집 클릭시 -->
+                                            <input type="number" class="form-control col-sm-12" value="0"> 
+                                        </td>
+                                        <td>
+                                            <a href="treatment_main_view.html">
+                                                <img src="https://about.canva.com/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png" alt="" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="date">2019.11.11 <span>14:24</span></td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td class="adm">
+                                            <a href="#modalDelete" data-toggle="modal" class="btn btn-outline-danger btn-sm">삭제</a>
+                                            <a class="btn btn-outline-primary btn-sm" href="treatment_main_view.html">수정</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                        <!-- 하단 고정 영역 -->
+                        <div class="ft-fixed">
+                            <div class="pull-left">
+                                <a class="btn btn-outline-danger btn-lg" href="">삭제</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="javascript:void(0);" class="btn btn-lg btn-outline-muted">노출순서편집</a>
+                                <!-- 노출 순서 편집 클릭 시 취소, 저장 버튼 노출/ 등록버튼 비노출 -->
+                                <a href="javascript:void(0);" class="btn btn-secondary btn-lg">취소</a>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-lg">저장</a>
+                                <a href="" class="btn btn-lg btn-primary">등록</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+    
+    <!-- 모달 -->
+    <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">삭제여부</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">삭제하시겠습니까?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

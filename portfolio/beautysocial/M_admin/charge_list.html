@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-sitemap-o"></i> 결제 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">충전/소진 관리</header>
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-3 mb-3">
+                                    <div class="form-group">
+                                        <label>검색</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <select class="form-control">
+                                                    <option>전체</option>
+                                                    <option>병원명</option>
+                                                    <option>사업자번호</option>
+                                                    <option>담당자 이메일</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-secondary" type="button">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th class="num">번호</th>
+                                        <th>병원명</th>
+                                        <th>사업자번호</th>
+                                        <th>담당자 이메일</th>
+                                        <th>충전금</th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="tit"><a href="hospital_view.html">라이안성형외과</a></td>
+                                        <td>110-11-11111</td>
+                                        <td>담당자이메일@naver.com</td>
+                                        <td>22,000</td>
+                                        <td class="adm">
+                                            <a class="btn btn-outline-success btn-sm" href="#modalCharge" data-toggle="modal">충전/소진</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="tit"><a href="hospital_view.html">뷰티콘성형외과</a></td>
+                                        <td>110-11-11111</td>
+                                        <td>담당자이메일@naver.com</td>
+                                        <td>22,000</td>
+                                        <td class="adm">
+                                            <a class="btn btn-outline-success btn-sm" href="#modalCharge" data-toggle="modal">충전/소진</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+    
+    <!-- 모달 -->
+    <div id="modalCharge" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">충전금 충전/소진</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                            <select class="form-control" required>
+                                <option>충전/소진 선택</option>
+                                <option>충전금 충전</option>
+                                <option>번역</option>
+                                <option>통역</option>
+                                <option>CS 대응</option>
+                                <option>환불</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-7">
+                            <input type="number" class="form-control" placeholder="금액 입력" required>
+<!--
+                            <select class="form-control" required>
+                                <option>금액 선택</option>
+                                <option>100만원</option>
+                                <option>300만원</option>
+                                <option>500만원</option>
+                                <option>700만원</option>
+                            </select>
+-->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="5">상세 내용을 입력하세요.</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

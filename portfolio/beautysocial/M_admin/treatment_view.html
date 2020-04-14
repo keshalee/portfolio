@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-sitemap-o"></i> 사이트/콘텐츠 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">시술 관리 <i class="xi-angle-right-thin"></i> 등록/수정</header>
+                    <div class="card-body">
+                        <!-- 언어탭 -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="">한국어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">영어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">일본어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">중국어(간체)</a>
+                            </li>
+                        </ul>
+                        <!-- 쓰기폼 -->
+                        <form class="wrt">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 부위/목적</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">눈</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">코</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">입술</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">피부</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">필러/보톡스/리프팅</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">안면윤곽/양악/턱</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">치아</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">이마/헤어라인</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">귀</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방이식</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방흡입</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">가슴</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">생식기</label>
+                                    </div>
+                                    <!-- [D] 셀렉트가 해당 항목에 맞게 변함 -->
+                                    <div class="input-group mt-3 mb-3">
+                                        <select id="" class="form-control">
+                                            <option>목적1</option>
+                                            <option>목적2</option>
+                                            <option>목적3</option>
+                                        </select>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">코 &gt; 콧볼축소수술 <span class="pull-right ml-2">&times;</span></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">머리 &gt; 두발이식수술 <span class="pull-right ml-2">&times;</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">시술 명</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">수술/비수술</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="" id="" value="">
+                                        <label class="form-check-label" for="">수술</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="" id="" value="">
+                                        <label class="form-check-label" for="">비수술</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">시술 비용</label>
+                                <div class="col-sm-5">
+                                    <input type="text" id="" class="form-control" placeholder="최저 비용 (KRW)">
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="text" id="" class="form-control" placeholder="최고 비용 (KRW)">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">시술 설명 및 방법</label>
+                                <div class="col-sm-10">
+                                    <p class="p-5 bg-light text-center">*이미지 업로드와 편집이 가능한 에디터</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">작성자</label>
+                                <div class="input-group col-sm-5">
+                                    <select class="form-control">
+                                        <option>병원을 선택해 주세요.</option>
+                                    </select>
+                                </div>
+                                <div class="input-group col-sm-5">
+                                    <select class="form-control">
+                                        <option>의사를 선택해 주세요.</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">부작용 안내</label>
+                                <div class="col-sm-10">
+                                    <p class="p-5 bg-light text-center">*이미지 업로드와 편집이 가능한 에디터</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">시술 전 주의사항</label>
+                                <div class="col-sm-10">
+                                    <p class="p-5 bg-light text-center">*이미지 업로드와 편집이 가능한 에디터</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">시술 후 주의사항</label>
+                                <div class="col-sm-10">
+                                    <p class="p-5 bg-light text-center">*이미지 업로드와 편집이 가능한 에디터</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">마취 여부</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-6">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">마취 종류 선택(
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">부분</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">수면</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">전신</label>
+                                            </div>
+                                            )
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">소요 시간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일, 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">입원 기간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">실밥 제거</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일, 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">회복 기간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">다른 시술과 병행</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">가능</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">불가능</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 하단 고정 영역 -->
+                            <div class="ft-fixed">
+                                <div class="pull-left">
+                                </div>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-lg btn-secondary">취소</button>
+                                    <button type="submit" class="btn btn-lg btn-primary">등록</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

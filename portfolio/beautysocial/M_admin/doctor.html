@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-hospital"></i> 클라이언트 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">의사 관리</header>
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-3 mb-3">
+                                    <div class="form-group">
+                                        <label>검색</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <select class="form-control">
+                                                    <option>전체</option>
+                                                    <option>의사명</option>
+                                                    <option>병원명</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-secondary" type="button">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 필터 -->
+                                <div class="col-sm-9 mb-3">
+                                    <div class="form-group">
+                                        <label for="">시술 부위</label>
+                                        <div>
+                                            <div class="btn-group" role="group">
+                                                <a class="btn btn-outline-secondary active" href="">전체</a>
+                                                <a class="btn btn-outline-secondary" href="">눈</a>
+                                                <a class="btn btn-outline-secondary" href="">코</a>
+                                                <a class="btn btn-outline-secondary" href="">입술</a>
+                                                <a class="btn btn-outline-secondary" href="">피부</a>
+                                                <a class="btn btn-outline-secondary" href="">필러/보톡스/리프팅</a>
+                                                <a class="btn btn-outline-secondary" href="">안면윤곽/양악/턱</a>
+                                                <a class="btn btn-outline-secondary" href="">치아</a>
+                                                <a class="btn btn-outline-secondary" href="">이마/헤어라인</a>
+                                                <a class="btn btn-outline-secondary" href="">귀</a>
+                                                <a class="btn btn-outline-secondary" href="">지방이식</a>
+                                                <a class="btn btn-outline-secondary" href="">지방흡입</a>
+                                                <a class="btn btn-outline-secondary" href="">가슴</a>
+                                                <a class="btn btn-outline-secondary" href="">생식기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블 
+                            항목은 변경될 수 있음. 개발하지 말것. 계좌번호도 정산이후에
+                        -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </th>
+                                        <th class="num">번호</th>
+                                        <th>노출/비노출</th>
+                                        <th>이름</th>
+                                        <th>전문의</th>
+                                        <th>사진</th>
+                                        <th>소속 병원</th>
+                                        <th>시술 부위</th>
+                                        <th>리뷰</th>
+                                        <th>좋아요</th>
+                                        <th><a href="">등록일<i class="xi-caret-down-min"></i></a></th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td class="tit">
+                                            <a href="doctor_view.html">홍길동</a>
+                                        </td>
+                                        <td>성형외과 전문의</td>
+                                        <td>
+                                            <img src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" height="60">
+                                        </td>
+                                        <td class="tit">
+                                            <a href="hospital_view.html">나무성형외과</a>
+                                        </td>
+                                        <td>눈, 코, 입, 팔</td>
+                                        <td>4,123</td>
+                                        <td>4,123</td>
+                                        <td class="date">2019.11.11</td>
+                                        <td>
+                                            <a class="btn btn-outline-danger btn-sm" href="">삭제</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td class="tit">
+                                            <a href="doctor_view.html">홍길동</a>
+                                        </td>
+                                        <td>성형외과 전문의</td>
+                                        <td>
+                                            <img src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" height="60">
+                                        </td>
+                                        <td class="tit">
+                                            <a href="hospital_view.html">나무성형외과</a>
+                                        </td>
+                                        <td>눈, 코, 입, 팔</td>
+                                        <td>4,123</td>
+                                        <td>4,123</td>
+                                        <td class="date">2019.11.11</td>
+                                        <td>
+                                            <a class="btn btn-outline-danger btn-sm" href="">삭제</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                        <!-- 하단 고정 영역 -->
+                        <div class="ft-fixed">
+                            <div class="pull-left">
+                                <a class="btn btn-outline-danger btn-lg" href="">삭제</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="doctor_view.html" class="btn btn-lg btn-primary">등록</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

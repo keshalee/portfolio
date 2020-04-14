@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-hospital"></i> 클라이언트 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">공지 관리</header>
+                    <div class="card-body">
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <colgroup>
+                                    <col style="width:70px">
+                                    <col style="width:70px">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:auto">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>	
+                                    <tr>
+                                        <th class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </th>
+                                        <th class="num">번호</th>
+                                        <th>노출/비노출</th>
+                                        <th>공지 팝업</th>
+                                        <th class="con_wid">공지 제목</th>
+                                        <th><a href="">등록일<i class="xi-caret-down-min"></i></a></th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td class="text-danger">노출 중</td>
+                                        <td class="tit con_wid">
+                                            <a href="client_notice_view.html">제목입니다</a>
+                                        </td>
+                                        <td class="date">2019.11.11 <span>14:24</span></td>
+                                        <td class="adm">
+                                            <a class="btn btn-outline-danger btn-sm" href="">삭제</a>
+                                            <a class="btn btn-outline-primary btn-sm" href="client_notice_view.html">수정</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-danger btn-sm">비노출</button>
+                                        </td>
+                                        <td class="text-muted">-</td>
+                                        <td class="tit con_wid">
+                                            <a href="client_notice_view.html">제목입니다</a>
+                                        </td>
+                                        <td class="date">2019.11.11 <span>14:24</span></td>
+                                        <td class="adm">
+                                            <a class="btn btn-outline-danger btn-sm" href="">삭제</a>
+                                            <a class="btn btn-outline-primary btn-sm" href="client_notice_view.html">수정</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                        <!-- 하단 고정 영역 -->
+                        <div class="ft-fixed">
+                            <div class="pull-left">
+                                <a class="btn btn-outline-danger btn-lg" href="">삭제</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="client_notice_view.html" class="btn btn-lg btn-primary">등록</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

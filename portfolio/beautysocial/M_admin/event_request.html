@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2><i class="xi-message-o"></i> 신청 관리</h2>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <header class="card-header">이벤트 신청</header>
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-4 mb-3">
+                                    <div class="form-group">
+                                        <label>검색</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <select class="form-control">
+                                                    <option>전체</option>
+                                                    <option>병원명</option>
+                                                    <option>이벤트 제목</option>
+                                                    <option>이름</option>
+                                                    <option>연락처</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-secondary" type="button">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th class="num">번호</th>
+                                        <th><a href="">신청일<i class="xi-caret-down-min"></i></a></th>
+                                        <th>병원명</th>
+                                        <th>이벤트 제목</th>
+                                        <th>이름/출생년도</th>
+                                        <th>연락처</th>
+                                        <th>메신저/ID</th>
+                                        <th>선호 연락 방법<br />/시간대</th>
+                                        <th>소진 금액</th>
+                                        <th>환불요청</th>
+                                        <th>병원메모</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">4</td>
+                                        <td class="date">2019.11.11 15:15</td>
+                                        <td>나무 성형외과</td>
+                                        <td>자연 유착! 눈매교정</td>
+                                        <td>
+                                            <span>윤희정</span>/<span>1997년</span><br />
+                                            <a href="#modalMemo" data-toggle="modal" class="btn btn-outline-muted btn-xs">문의보기</a>
+                                        </td>
+                                        <td>(+82)01011112222</td>
+                                        <td><span>kakao</span>/<span>hee</span></td>
+                                        <td><span>전화</span>/<span>12:00 ~ 15:00</span></td>
+                                        <td>
+                                            <span class="badge badge-success badge-xs">소진</span> <span>17,000</span>
+                                        </td>
+                                        <td>
+                                            <span>잘못된 번호로 전화 안받음</span><br />
+                                            <a href="javascript:void(0);" class="btn btn-outline-primary btn-sm">승인</a>
+                                            <a href="#modalReject" data-toggle="modal" class="btn btn-outline-danger btn-sm">반려</a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">3</td>
+                                        <td class="date">2019.11.11 15:15</td>
+                                        <td>나무 성형외과</td>
+                                        <td>자연 유착! 눈매교정</td>
+                                        <td>
+                                            <span>윤희정</span>/<span>1997년</span>
+                                        </td>
+                                        <td>(+82)01011112222</td>
+                                        <td><span>kakao</span>/<span>hee</span></td>
+                                        <td><span>전화</span>/<span>12:00 ~ 15:00</span></td>
+                                        <td>
+                                            <span class="badge badge-danger badge-xs">환불</span> <span>17,000</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-primary">환불완료</span>
+                                        </td>
+                                        <td>연락안받음</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="date">2019.11.11 15:15</td>
+                                        <td>나무 성형외과</td>
+                                        <td>자연 유착! 눈매교정</td>
+                                        <td>
+                                            <span>윤희정</span>/<span>1997년</span><br />
+                                            <a href="#modalMemo" data-toggle="modal" class="btn btn-outline-muted btn-xs">문의보기</a>
+                                        </td>
+                                        <td>(+82)01011112222</td>
+                                        <td><span>kakao</span>/<span>hee</span></td>
+                                        <td><span>전화</span>/<span>12:00 ~ 15:00</span></td>
+                                        <td>
+                                            <span class="badge badge-warning badge-xs">중복</span> <span>0</span>
+                                        </td>
+                                        <td>
+                                            <span class="text-danger">환불불가</span>
+                                        </td>
+                                        <td>내원 예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="date">2019.11.11 15:15</td>
+                                        <td>나무 성형외과</td>
+                                        <td>자연 유착! 눈매교정</td>
+                                        <td>
+                                            <span>윤희정</span>/<span>1997년</span>
+                                        </td>
+                                        <td>(+82)01011112222</td>
+                                        <td><span>kakao</span>/<span>hee</span></td>
+                                        <td><span>전화</span>/<span>12:00 ~ 15:00</span></td>
+                                        <td>
+                                            <span class="badge badge-success badge-xs">소진</span> <span>17,000</span>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="btn btn-outline-primary btn-sm">승인</a>
+                                            <a href="#modalReject" data-toggle="modal" class="btn btn-outline-danger btn-sm">반려</a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+    
+    <!-- 모달 -->
+    <div id="modalMemo" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">문의내용</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="5">한국에 10월 8일에 가는데 그때 바로 시술 가능한가요? 제가 한국에 머무는 시간이 1주 정도인데 괜찮을까요?</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 모달 -->
+    <div id="modalReject" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">반려 사유 등록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="5" placeholder="반려 사유를 입력하세요. 병원 관리자 페이지에도 노출됩니다."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
