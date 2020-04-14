@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>의사 정보</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">병원 정보 관리</li>
+                    <li class="breadcrumb-item">의사 정보</li>
+                </ol>
+            </header>
+
+            <div id="content">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <!-- 3차 탭 -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="">전체 의사 4</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">확인 중 의사 2</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-3 mb-3">
+                                    <div class="form-group">
+                                        <label>검색</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <select class="form-control">
+                                                    <option>전체</option>
+                                                    <option>의사명</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-muted" type="button"><i class="xi-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+                        <!-- 테이블 
+                            항목은 변경될 수 있음. 개발하지 말것. 계좌번호도 정산이후에
+                        -->
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-2 mb-2">
+                                <thead>	
+                                    <tr>
+                                        <th class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </th>
+                                        <th class="num">번호</th>
+                                        <th>노출/비노출</th>
+                                        <th><a href="">이름<i class="xi-caret-down-min"></i></a></th>
+                                        <th>전문의</th>
+                                        <th>사진</th>
+                                        <th>시술 부위</th>
+                                        <th><a href="">등록일<i class="xi-caret-down-min"></i></a></th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-outline-success btn-sm rounded-pill">비노출</button>
+                                        </td>
+                                        <td class="tit">
+                                            <a href="doctor_view.html">홍길동</a>
+                                        </td>
+                                        <td>성형외과 전문의</td>
+                                        <td>
+                                            <img src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" height="60">
+                                        </td>
+                                        <td>눈 - 쌍거풀, 코 - 보톡스</td>
+                                        <td class="date">2019.11.11</td>
+                                        <td>
+                                            <a class="btn btn-circle bg-muted" href=""><i class="xi-trash-o mt-2"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택">
+                                            </div>
+                                        </td>
+                                        <td class="num">1</td>
+                                        <td>
+                                            <!--[D] 노출 버튼 누르면 비노출 상태로 변경 active -->
+                                            <button type="button" class="btn btn-success btn-sm rounded-pill">노출중</button>
+                                        </td>
+                                        <td class="tit">
+                                            <a href="doctor_view.html">홍길동</a>
+                                        </td>
+                                        <td>성형외과 전문의</td>
+                                        <td>
+                                            <img src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" height="60">
+                                        </td>
+                                        <td>눈 - 쌍거풀, 코 - 보톡스</td>
+                                        <td class="date">2019.11.11</td>
+                                        <td>
+                                            <a class="btn btn-circle bg-muted" href=""><i class="xi-trash-o mt-2"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span class="xi-angle-left" aria-hidden="true"></span> </a> </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span class="xi-angle-right" aria-hidden="true"></span> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 하단 고정 영역 -->
+                <div class="ft-fixed">
+                    <div class="pull-left">
+                        <a class="btn btn-outline-primary btn-lg mr-3" href="">삭제</a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="doctor_view.html" class="btn btn-lg btn-primary">신규 의료진 등록</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달 -->
+    <div id="modalReject" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">반려 사유 보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>반려 사유를 출력합니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

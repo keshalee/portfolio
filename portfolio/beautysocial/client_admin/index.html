@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>대쉬보드</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">대쉬보드</li>
+                </ol>
+            </header>
+            <div id="content">
+                <div class="card inboard">
+                	<header class="card-header">일간 현황 <small>방문자 = 병원, 의사 페이지 클릭 수 / 홈페이지 방문, 전화문의 = 병원, 의사 상세페이지 하단 버튼 클릭 수 / 상담신청 = 상담신청 완료 건수</small></header>
+                	<div class="innerbox">
+                		<div class="card-body">
+	                        <section class="row">
+	                            <div class="col-sm-3 left_bd">
+	                                <div class="section_title">방문수</div>
+	                                <div class="total">52,234</div>
+	                                <div class="text-primary">이번달 <span class="total_mon">3,251</span></div>
+	                            </div>
+	                            <div class="col-sm-8">
+	                            	<div class="col-sm-3 pull-left">
+		                                <div class="section_title">홈페이지방문</div>
+		                                <div class="total">2,234</div>
+		                                <div class="text-danger">이번달 <span class="total_mon">51</span></div>
+		                            </div>
+		                            <div class="col-sm-3 pull-left">
+		                                <div class="section_title">전화문의</div>
+		                                <div class="total">1,234</div>
+		                                <div class="text-danger">이번달 <span class="total_mon">1,251</span></div>
+		                            </div>
+		                            <div class="col-sm-3 pull-left">
+		                                <div class="section_title">상담신청</div>
+		                                <div class="total">6,234</div>
+		                                <div class="text-danger">이번달 <span class="month_total">3,251</span></div>
+		                            </div>
+	                            </div>
+	                        </section>
+	                        <a href="statistics.html" class="btn-more">더보기</a>
+	                    </div>
+                	</div>
+                </div>
+
+                <!-- S : highChart -->
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <div class="chart_wrap inboard">
+                    <!-- S : 기간별 현황 -->
+                    <div class="card col-sm-8">
+                        <header class="card-header">기간별 현황 
+                            <div class="date-group">
+                                <input type="text" name="dateS" id="dateS" size="12" placeholder="2019/08/21" class="form-control" /> <span>~</span> <input type="text" name="dateE" id="dateE" size="12" placeholder="2019/08/28" class="form-control" />
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-outline-secondary active" href="">주간</a>
+                                    <a class="btn btn-outline-secondary" href="">월간</a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="card-body">
+                            <div id="chartDate"></div>
+                        </div>
+                    </div>
+                    <script>
+                        var yyyy = 2019;
+                        var mm = 7;
+                        var dd = 26;
+                        var options = {
+                            title: {
+                                text: null
+                            },
+                            subtitle: {
+                                text: null
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Number of Employees'
+                                }
+                            },
+                            xAxis: {
+                                type: 'datetime',
+                                labels: {
+                                    format: '{value:%Y.%m.%e}'
+                                }
+                        <!--        dateTimeLabelFormats: {-->
+                        <!--            day: '%b %e',-->
+                        <!--            week: '%b %e'-->
+                        <!--        }-->
+                            },
+                            legend: {
+                                layout: 'vertical',
+                                align: 'right',
+                                verticalAlign: 'middle'
+                            },
+                            plotOptions: {
+                                series: {
+                                    label: {
+                                        connectorAllowed: false
+                                    },
+                                    pointStart: Date.UTC(yyyy, mm, dd),   // yyyy, month -1, day
+                                    pointInterval: 24 * 3600 * 1000 // one day
+                                }
+                            },
+                            series: [{
+                                name: 'Installation',
+                                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 11111]
+                            }, {
+                                name: 'Manufacturing',
+                                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434,22222]
+                            }, {
+                                name: 'Sales & Distribution',
+                                data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387,33333]
+                            }, {
+                                name: 'Project Development',
+                                data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227,44444]
+                            }, {
+                                name: 'Other',
+                                data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111,55555]
+                            }],
+                            responsive: {
+                                rules: [{
+                                    condition: {
+                                        maxWidth: 500
+                                    },
+                                    chartOptions: {
+                                        legend: {
+                                            layout: 'horizontal',
+                                            align: 'center',
+                                            verticalAlign: 'bottom'
+                                        }
+                                    }
+                                }]
+                            }
+                        };
+                        var chart = Highcharts.chart('chartDate', options);
+                        // Data
+                        function getData() {
+                            $rsea.api('/api/dashboard/chart', { searchDate : '2019-08-28' }).done(function(body){
+                                console.log(body);
+                                console.log(body.length);
+                                if (body.length > 0) {
+                                    var hcntSeries = [];
+                                    var mcntSeries = [];
+                                    var ahCntSeries = [];
+                                    var apCntSeries = [];
+                                    var acCntSeries = [];
+                                    $(body).each(function(idx, data) {
+                                        console.log('idx :: ', idx);
+                                        hcntSeries.push(data.hcnt);
+                                        mcntSeries.push(data.mcnt);
+                                        ahCntSeries.push(data.ahCnt);
+                                        apCntSeries.push(data.apCnt);
+                                        acCntSeries.push(data.acCnt);
+                                        console.log(data.cdate);
+                                        console.log(data.hcnt);
+                                        console.log(data.mcnt);
+                                        console.log(data.ahCnt);
+                                        console.log(data.apCnt);
+                                        console.log(data.acCnt);
+                                    });
+                        //chart.series[0].addPoint({ name: 'test' y: Number(data.ticker.price) })
+                        console.log(hcntSeries);
+                        <!--chart.addSeries(-->
+                        <!--	data:hcntSeries,-->
+                        <!--	name:'방문자수'-->
+                        <!--);-->
+                                } else {
+
+                                }
+                            });
+                            return false;
+                        }
+                        getData();
+                    </script>
+                    <!-- E : 기간별 현황 -->
+
+                    <!-- S : 관심 시술부위 -->
+                    <div class="card col-sm-4">
+                        <header class="card-header">관심 시술부위 <small>상담신청 시 회원이 선택한 관심 시술부위</small></header>
+                        <div class="card-body">
+                            <div id="chartLikeTreat"></div>
+                        </div>
+                    </div>
+                    <script>
+                        // Make monochrome colors
+                        var pieColors = (function () {
+                            var colors = [],
+                                base = Highcharts.getOptions().colors[0],
+                                i;
+                            for (i = 0; i < 10; i += 1) {
+                                // Start out with a darkened base color (negative brighten), and end
+                                // up with a much brighter color
+                                colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+                            }
+                            return colors;
+                        }());
+                        // Build the chart
+                        Highcharts.chart('chartLikeTreat', {
+                            chart: {
+                                plotBackgroundColor: null,
+                                plotBorderWidth: null,
+                                plotShadow: false,
+                                type: 'pie'
+                            },
+                            title: {
+                                text: null
+                            },
+                            tooltip: {
+                                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                            },
+                            plotOptions: {
+                                pie: {
+                                    allowPointSelect: true,
+                                    cursor: 'pointer',
+                                    colors: pieColors,
+                                    dataLabels: {
+                                        enabled: true,
+                                        format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                                        distance: -50,
+                                        filter: {
+                                            property: 'percentage',
+                                            operator: '>',
+                                            value: 4
+                                        }
+                                    }
+                                }
+                            },
+                            series: [{
+                                name: 'Share',
+                                data: [
+                                    { name: 'Chrome', y: 61.41 },
+                                    { name: 'Internet Explorer', y: 11.84 },
+                                    { name: 'Firefox', y: 10.85 },
+                                    { name: 'Edge', y: 4.67 },
+                                    { name: 'Safari', y: 4.18 },
+                                    { name: 'Other', y: 7.05 }
+                                ]
+                            }]
+                        });
+                    </script>
+                    <!-- E : 관심 시술부위 -->
+                </div>
+                <!-- E : highChart -->
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $("#dateS").datepicker();
+            $("#dateE").datepicker();
+        });
+    </script>
+</body>
+</html>

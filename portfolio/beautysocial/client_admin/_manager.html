@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>담당자 정보</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">병원 정보 관리</li>
+                    <li class="breadcrumb-item">담당자 정보</li>
+                </ol>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th class="num">번호</th>
+                                        <th>담당자 연락처</th>
+                                        <th>알림</th>
+                                        <th>관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="tit">
+                                            <input type="text" class="form-control" value="010-1231-1235" placeholder="전화번호">
+                                        </td>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택"> 알림 받기 <small>(회원이 상담 신청 시 알림 문자 발송 / 문자 비용 무료)</small>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-danger btn-sm">수정</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="tit">
+                                            <input type="text" class="form-control" value="010-1231-1235" placeholder="전화번호">
+                                        </td>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택"> 알림 받기 <small>(회원이 상담 신청 시 알림 문자 발송 / 문자 비용 무료)</small>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-danger btn-sm">수정</button>
+                                        </td>
+                                    </tr>
+                                    <!-- 등록 -->
+                                    <tr>
+                                        <td class="num"></td>
+                                        <td class="tit">
+                                            <input type="text" class="form-control" value="" placeholder="전화번호">
+                                        </td>
+                                        <td class="check">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" title="선택"> 알림 받기 <small>(회원이 상담 신청 시 알림 문자 발송 / 문자 비용 무료)</small>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-primary btn-sm">등록</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

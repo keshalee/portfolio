@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>신규 이벤트 등록</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">이벤트 관리</li>
+                    <li class="breadcrumb-item">신규 이벤트 등록</li>
+                </ol>
+            </header>
+            
+            <div id="content">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <!-- 3차 탭 -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="">한국어</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">영어</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">일본어</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">중국어(간체)</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 쓰기폼 -->
+                        <form class="wrt preview">
+                            <div class="rejectarea">
+                                <p class="text-danger">반려 사유 : 동일한 이벤트가 게시되고 있습니다. 중복 게시 불가합니다.</p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 선택<em class="text-danger">*</em><br /><strong class="text-danger">(최대 3개)</strong></label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">눈</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">코</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">입술</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">피부</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">필러/보톡스/리프팅</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">안면윤곽/양악/턱</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">치아</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">이마/헤어라인</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">귀</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방이식</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방흡입</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">가슴</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">생식기</label>
+                                    </div>
+                                    <!-- [D] 셀렉트가 해당 항목에 맞게 변함 -->
+                                    <div class="input-group mt-3 mb-3">
+                                        <select class="form-control">
+                                            <option>목적1</option>
+                                            <option>목적2</option>
+                                            <option>목적3</option>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">추가하기</button>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">코 &gt; 콧볼축소수술 <span class="pull-right ml-2">×</span></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">머리 &gt; 두발이식수술 <span class="pull-right ml-2">×</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 파일 선택 전 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 상단 배너<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">파일 선택</label>
+                                    </div>
+                                    <p class="form-text text-muted mt-3">※ 1MB 이하 이미지 파일로 올려주세요. </p>
+                                </div>
+                            </div>
+                            <!-- 파일 선택 후 보여지는 input 내용 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 상단 배너<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <div class="input-group margin_b_5">
+                                        <input type="text" class="form-control" value="sun.png" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 리스트 썸네일 (정사각형)<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">파일 선택</label>
+                                    </div>
+                                    <!-- 목록타입 -->
+                                    <ul class="upload-preview row">
+                                        <li class="col-sm-4">
+                                            <a class="del ht" href="#" title="삭제"><img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                    <!-- 미리보기 이미지 밑으로 위치 변경 -->
+                                    <p class="form-text text-muted mt-3">※ 이미지는 500x500(px) 사이즈로 올려주세요. (1MB 이하 이미지 파일)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 리스트 썸네일 (가로형)</label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">파일 선택</label>
+                                    </div>
+                                    <!-- 목록타입 -->
+                                    <ul class="upload-preview row">
+                                        <li class="col-sm-4">
+                                            <a class="del" href="#" title="삭제"><img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                    <!-- 미리보기 이미지 밑으로 위치 변경 -->
+                                    <p class="form-text text-muted mt-3">※ 이미지는 500x225(px) 사이즈로 올려주세요. (1MB 이하 이미지 파일)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 제목<em class="text-danger">*</em></label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" placeholder="20자 이내로 작성해주세요.">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 부제목<em class="text-danger">*</em></label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" placeholder="20자 이내로 작성해주세요.">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 기간<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <div class="date-group input-group margin_b_5">
+                                        <input type="text" name="dateS" id="dateS" size="12" placeholder="2019/08/21" class="form-control bdrd" /> <span>~</span> <input type="text" name="dateE" id="dateE" size="12" placeholder="2019/08/28" class="form-control bdrd" />
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" checked>30일 자동 기간 연장 (이벤트 종료 시 자동연장 됩니다.)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">정상 가격<em class="text-danger">*</em></label>
+                                <div class="col-sm-5">
+                                    <!-- &#8361; &#36; -->
+                                    <span class="monetary_unit">&#165;</span><input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이벤트 가격<em class="text-danger">*</em></label>
+                                <div class="col-sm-5">
+                                    <span class="monetary_unit">&#8361;</span><input type="number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">할인율</label>
+                                <div class="col-sm-5">
+                                    <span class="form-text text-primary"><em>0</em>&#37;</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">DB단가</label>
+                                <div class="col-sm-5">
+                                    <span class="form-text"><em>-</em>원</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">이벤트 대상<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" placeholder="최대 500자 이내로 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">이벤트 및 시술 설명<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" placeholder="최대 1000자 이내로 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">병원 특징 및 차별점</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" placeholder="최대 1000자 이내로 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">의료진 특징 및 차별점</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" placeholder="최대 1000자 이내로 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">부작용 안내<em class="text-danger">*</em></label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="5" placeholder="최대 500자 이내로 입력해 주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">마취 여부</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-8">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">마취 종류 선택(
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">부분</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">수면</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">전신</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">연고</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label"><input class="form-check-input" type="checkbox">쿨링</label>
+                                            </div>)
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 소요시간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일, 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">입원기간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">실밥 제거 시기</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-5">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">내원 횟수</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-4">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">횟수 선택</label>
+                                        <div class="input-group col-sm-6">
+                                            <input type="number" class="form-control bdrd" placeholder="회">
+                                            <div class="form-control-plaintext">회</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 미입력, 없음 선택 시 주, 일, 시간, 분 영역 비 노출(내부관리자 시술등록 참고) -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">회복 기간</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">시간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">구간 선택</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">없음</label>
+                                    </div>
+                                </div>
+                                <!-- 시간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                                <!-- 구간선택 시 -->
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="input-group col-sm-10">
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <input type="text" class="form-control-plaintext text-center" value="~">
+                                    </div>
+                                    <div class="input-group col-sm-9">
+                                        <input type="number" class="form-control bdrd" min="0" max="54" placeholder="주">
+                                        <div class="form-control-plaintext">주</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="180" placeholder="일">
+                                        <div class="form-control-plaintext">일</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="24" placeholder="시">
+                                        <div class="form-control-plaintext">시간</div>
+                                        <input type="number" class="form-control bdrd" min="0" max="210" placeholder="분">
+                                        <div class="form-control-plaintext">분</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">다른 시술과 병행</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" checked>미 입력</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">가능</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm-2">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio">불가능</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 의료 장비 등록 전 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">의료 장비<br /><strong class="text-danger">(최대 4개)</strong></label>
+                                <div class="col-sm-10 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">장비이름</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="15자 이내로 작성해주세요." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">설명</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="20자 이내로 작성해주세요." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">이미지</label>
+                                        <div class="custom-file col-sm-8">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label bdrd-l" for="customFile">파일 선택</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 의료 장비 등록 후에는 삭제 버튼이 나옵니다. -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">의료 장비<br /><strong class="text-danger">(최대 4개)</strong></label>
+                                <div class="col-sm-10 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">장비이름</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="15자 이내로 작성해주세요." value="등록 후에는 오른쪽에 삭제버튼이 나와요" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">설명</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="20자 이내로 작성해주세요." value="아래 버튼으로 추가 할 거예여 " />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">이미지</label>
+                                        <div class="custom-file col-sm-8">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label bdrd-l" for="customFile">파일 선택</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">장비이름</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="15자 이내로 작성해주세요." value="mj에게 - 주석 좀 읽어주세요." />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">설명</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="20자 이내로 작성해주세요." value="퍼블과 동일하게 작성해주세요..." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">이미지</label>
+                                        <div class="custom-file col-sm-8">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label bdrd-l" for="customFile">파일 선택</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">장비이름</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="15자 이내로 작성해주세요." value="최대 4개까지 이렇게 나오겠쮸?" />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">설명</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="20자 이내로 작성해주세요." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">이미지</label>
+                                        <div class="custom-file col-sm-8">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label bdrd-l" for="customFile">파일 선택</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 시술 전후 사진 등록 전 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 전후 사진<br /><strong class="text-danger">(최대 5개)</strong></label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file2">
+                                        <input type="file" class="custom-file-input2" id="customFile">
+                                        <label class="custom-file-label2" for="customFile"><span>시술 전<br />사진 첨부</span></label>
+                                        <div class="form-control-plaintext text-center">전</div>
+                                        <a href="#" class="del ht" title="삭제"></a>
+                                    </div>
+                                    <div class="custom-file2">
+                                        <input type="file" class="custom-file-input2" id="customFile">
+                                        <label class="custom-file-label2" for="customFile"><span>시술 후<br />사진 첨부</span></label>
+                                        <div class="form-control-plaintext text-center"><input type="text" class="form-control" placeholder="예_3개월" /> 후</div>
+                                        <a href="#" class="del ht" title="삭제"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 시술 전후 사진 등록 후 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 전후 사진<br /><strong class="text-danger">(최대 5개)</strong></label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file2">
+                                        <input type="file" class="custom-file-input2" id="customFile">
+                                        <label class="custom-file-label2" for="customFile"><span>시술 전<br />사진 첨부</span></label>
+                                        <div class="form-control-plaintext text-center">전</div>
+                                        <a href="#" class="del ht" title="삭제"></a>
+                                    </div>
+                                    <div class="custom-file2">
+                                        <input type="file" class="custom-file-input2" id="customFile">
+                                        <label class="custom-file-label2" for="customFile"><span>시술 후<br />사진 첨부</span></label>
+                                        <div class="form-control-plaintext text-center"><input type="text" class="form-control" placeholder="예_3개월" /> 후</div>
+                                        <a href="#" class="del ht" title="삭제"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                                <!-- 목록타입 -->
+                                <div class="col-sm-12">
+                                    <div class="col-sm-10 mb-3">
+                                        <ul class="upload-preview row">
+                                            <li class="col-sm-3">
+                                                <figure class="badge">전</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="col-sm-3">
+                                                <figure class="badge">3개월 후</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="col-sm-3">
+                                                <figure class="badge">전</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="col-sm-3">
+                                                <figure class="badge">3개월 후</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="col-sm-3">
+                                                <figure class="badge">전</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="col-sm-3">
+                                                <figure class="badge">3개월 후</figure>
+                                                <a class="del ht" href="#" title="삭제">
+                                                    <img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ 등록 전 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">FAQ<br /><strong class="text-danger">(최대 5개)</strong></label>
+                                <div class="col-sm-9 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">질문</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="50자 이내로 작성해주세요." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">답변</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="150자 이내로 작성해주세요." />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ 등록 후 -->
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">FAQ<br /><strong class="text-danger">(최대 5개)</strong></label>
+                                <div class="col-sm-9 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">질문</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="50자 이내로 작성해주세요." value="질문이 써지겠죠?" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">답변</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="150자 이내로 작성해주세요." value="답변이 달립니다." />
+                                    </div>
+                                </div>
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-9 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">질문</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="50자 이내로 작성해주세요." value="삭제는 어떻게 할까요?" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">답변</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="150자 이내로 작성해주세요." value="오른쪽 버튼을 누르면 되지요!" />
+                                    </div>
+                                </div>
+                                <label for="" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-9 mb-3">
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">질문</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="50자 이내로 작성해주세요." />
+                                    </div>
+                                    <div class="input-group margin_b_5">
+                                        <label for="" class="col-sm-2 col-form-label">답변</label>
+                                        <input type="text" class="col-sm-8 form-control bdrd-l" placeholder="150자 이내로 작성해주세요." />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center pt-3 pb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary">추가하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 하단 고정 영역 -->
+                            <div class="ft-fixed">
+                                <div class="pull-left">
+                                </div>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-lg btn-outline-primary mr-3">취소</button>
+                                    <button type="submit" class="btn btn-lg btn-primary">저장 및 검수요청</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- 미리보기 -->
+                        <div class="preview">
+                            <article class="view view-event">
+                                <div>
+                                    <ul>
+                                        <li><img src="https://files.BeautySocial.ai/data.dev/prov_main/51ea73b4b15c438690d5c448edff0a83.jpg" alt=""></li>
+                                    </ul>
+                                </div>
+                                <header class="view-hd">
+                                    <h2>프리미어 콧대X코끝 코성형</h2>
+                                    <div class="sub-tit">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    <div class="date">2019.08.14~2019.09.30</div>
+                                </header>
+                                <div class="view-meta">
+                                    <s class="price">&#8361;1,468,000</s><br />
+                                    <strong class="text-primary">40&#37; </strong><strong class="text-dark">&#8361;800,000</strong>
+                                </div>
+
+                                <div class="position-relative">
+                                    <!-- 이벤트소개 -->
+                                    <div class="view-body">
+                                        <div class="view-sect-full">
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">이벤트 대상</h3>
+                                                <div class="view-cnt">
+                                                    GraduatedfromSeoulNationalUniversity
+                                    Collegeof Medicine -TraineratSeoulNational
+                                    University MajoredatDepartmentofPlastic
+                                    Surgery,AsanMedical Center,Seoul -Majoredat
+                                    DepartmentofPlasticSurgery,AsanMedical
+                                    Center,Seoul
+                                                </div>
+                                            </section>
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">이벤트 및 시술 설명</h3>
+                                                <div class="view-cnt">
+                                                    GraduatedfromSeoulNationalUniversity
+                                    Collegeof Medicine -TraineratSeoulNational
+                                    University MajoredatDepartmentofPlastic
+                                    Surgery,AsanMedical Center,Seoul -Majoredat
+                                    DepartmentofPlasticSurgery,AsanMedical
+                                    Center,Seoul
+                                                </div>
+                                            </section>
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">병원 특징 및 차별점</h3>
+                                                <div class="view-cnt">
+                                                    GraduatedfromSeoulNationalUniversity
+                                    Collegeof Medicine -TraineratSeoulNational
+                                    University MajoredatDepartmentofPlastic
+                                    Surgery,AsanMedical Center,Seoul -Majoredat
+                                    DepartmentofPlasticSurgery,AsanMedical
+                                    Center,Seoul
+                                                </div>
+                                            </section>
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">의료진 특징 및 차별점</h3>
+                                                <div class="view-cnt">
+                                                    GraduatedfromSeoulNationalUniversity
+                                    Collegeof Medicine -TraineratSeoulNational
+                                    University MajoredatDepartmentofPlastic
+                                    Surgery,AsanMedical Center,Seoul -Majoredat
+                                    DepartmentofPlasticSurgery,AsanMedical
+                                    Center,Seoul
+                                                </div>
+                                            </section>
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">부작용 안내</h3>
+                                                <div class="view-cnt">
+                                                    GraduatedfromSeoulNationalUniversity
+                                    Collegeof Medicine -TraineratSeoulNational
+                                    University MajoredatDepartmentofPlastic
+                                    Surgery,AsanMedical Center,Seoul -Majoredat
+                                    DepartmentofPlasticSurgery,AsanMedical
+                                    Center,Seoul
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+
+                                    <!-- 이벤트 특징-->
+                                    <div class="view-body">
+                                        <div class="view-sect-full">
+                                            <div class="view-sect">
+                                                <ul class="lst-feature lst-feature2">
+                                                    <li><i class="icon-anesthesia"></i>마취여부<br><b>수면</b></li>
+                                                    <li><i class="icon-requiredtime"></i>소요시간<br><b>2시간</b></li>
+                                                    <li><i class="icon-inpatientperiod"></i>입원기간<br><b>2일</b></li>
+                                                    <li><i class="icon-removesill"></i>실밥제거<br><b>5일 후</b></li>
+                                                    <li><i class="icon-domesticvisits"></i>내원횟수<br><b>5회</b></li>
+                                                    <li><i class="icon-recoveryperiod"></i>회복기간<br>(멍,붓기 등)<br><b>12일</b></li>
+                                                    <li><i class="icon-parallel"></i>다른 시술과 <br />병행<br><b>가능</b></li>
+                                                </ul>
+                                                <div class="information">
+                                                    <p>&#8251; 시술 선택은 회원님에게 있고, 시술 결과는 개인에 따라 달라 질 수 있습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 의료장비 -->
+                                    <div class="view-body">
+                                        <div class="view-sect-full">
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">의료 장비</h3> <small class="view-sect-tit-sub">병원에서 구비한 의료 장비</small>
+                                                <div class="view-cnt">
+                                                    <ul class="row margin">
+                                                        <li class="col-6 mb-5">
+                                                            <div class="tit">고압 산소테라피</div>
+                                                            <figure class="rect"><img src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" class="img" /></figure>
+                                                            <div class="caption">지방 감소, 셀룰라이트 치료를 한다 지방 감소, 셀룰라이트</div>
+                                                        </li>
+                                                        <li class="col-6 mb-5">
+                                                            <div class="tit">고압 산소테라피</div>
+                                                            <figure class="rect"><img src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" class="img" /></figure>
+                                                            <div class="caption">지방 감소, 셀룰라이트 치료를 한다 지방 감소, 셀룰라이트</div>
+                                                        </li>
+                                                        <li class="col-6 mb-5">
+                                                            <div class="tit">고압 산소테라피</div>
+                                                            <figure class="rect"><img src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" class="img" /></figure>
+                                                            <div class="caption">지방 감소, 셀룰라이트 치료를 한다 지방 감소, 셀룰라이트</div>
+                                                        </li>
+                                                        <li class="col-6 mb-5">
+                                                            <div class="tit">고압 산소테라피</div>
+                                                            <figure class="rect"><img src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" class="img" /></figure>
+                                                            <div class="caption">지방 감소, 셀룰라이트 치료를 한다 지방 감소, 셀룰라이트</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+
+                                    <!-- 전후 사진 -->
+                                    <div class="view-body">
+                                        <div class="view-sect-full">
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">전후 사진</h3> <small class="view-sect-tit-sub">병원에서 등록한 시술 전후 사진</small>
+                                                <div class="view-cnt">
+                                                    <ul class="lst-tmb2">
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <img class="img-fluid" src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" data-title="전">
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">1주일 후</figure>
+                                                            <img class="img-fluid" src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" data-title="1주일 후">
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <img class="img-fluid" src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" data-title="전">
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">1개월 후</figure>
+                                                            <img class="img-fluid" src="https://files.BeautySocial.ai/data.dev/prov/6546d944b15b469293e31480f542f772.jpg" alt="" data-title="1개월 후">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+
+                                    <!-- faq -->
+                                    <div class="view-body">
+                                        <div class="view-sect-full">
+                                            <section class="view-sect">
+                                                <h3 class="view-sect-hd">FAQ</h3>
+                                                <div class="view-cnt">
+                                                    <ul class="lst-faq">
+                                                        <li class="f">
+                                                            여기는 환자가 자주하는 질문을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="q">
+                                                            여기는 답변을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="line"></li>
+                                                        <li class="f">
+                                                            여기는 환자가 자주하는 질문을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="q">
+                                                            여기는 답변을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="line"></li>
+                                                        <li class="f">
+                                                            여기는 환자가 자주하는 질문을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="q">
+                                                            여기는 답변을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="line"></li>
+                                                        <li class="f">
+                                                            여기는 환자가 자주하는 질문을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="q">
+                                                            여기는 답변을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="line"></li>
+                                                        <li class="f">
+                                                            여기는 환자가 자주하는 질문을 적는 곳입니다.
+                                                        </li>
+                                                        <li class="q">
+                                                            여기는 답변을 적는 곳입니다.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달 -->
+    <div id="modalReject" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">반려 사유 보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>반려 사유를 출력합니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

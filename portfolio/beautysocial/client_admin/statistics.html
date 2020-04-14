@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>통계관리</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">통계관리</li>
+                </ol>
+            </header>
+
+            <div id="content">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 조회기간 -->
+                                <div class="col-sm-3 mb-3">
+                                    <label>조회 기간</label>
+                                    <div class="input-daterange input-group" id="m_datepicker_5">
+                                        <input type="text" class="form-control" name="start" placeholder="시작일">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="xi-ellipsis-h"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="end" placeholder="종료일">
+                                    </div>
+                                </div>
+                                <div class="col-sm-5" style="margin-top:28px;">
+                                    <div class="btn-group" role="group">
+                                        <a class="btn btn-outline-secondary active" href="">일별</a>
+                                        <a class="btn btn-outline-secondary" href="">주별</a>
+                                        <a class="btn btn-outline-secondary" href="">월별</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>	
+                                    <tr>
+                                        <th><a href="">일자<i class="xi-caret-down-min"></i></a></th>
+                                        <th>총 발문횟수(PV)</th>
+                                        <th>총 방문자수(UV)</th>
+                                        <th>홈페이지 방문</th>
+                                        <th>전화문의</th>
+                                        <th>상담 신청</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date">2019.08.29</td>
+                                        <td>29</td>
+                                        <td>20</td>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date">2019.08.28</td>
+                                        <td>29</td>
+                                        <td>20</td>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date">2019.08.27</td>
+                                        <td>29</td>
+                                        <td>20</td>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

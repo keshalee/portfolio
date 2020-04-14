@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>의사 정보 등록</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">병원 정보 관리</li>
+                    <li class="breadcrumb-item">의사 정보</li>
+                </ol>
+            </header>
+            
+            <div id="content">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 쓰기폼 -->
+                        <form class="wrt">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">이름</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" value="홍길동" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">프로필 사진</label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">파일 선택</label>
+                                    </div>
+                                    <!-- 목록타입 -->
+                                    <ul class="upload-preview row">
+                                        <li class="col-sm-4">
+                                            <a class="del ht" href="#" title="삭제"><img class="img-fluid" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                    <p class="form-text text-muted mt-3">※ 이미지는 300x300(px) 사이즈로 올려주세요.</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">전문의</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="SURGERY_DOC">성형외과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DI00FM">가정의학과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DI0DER">피부과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DIPROS">치과보철과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DIORTH">치과교정과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DI0ENT">이비인후과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DI0ANE">마취과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DIOBGY">산부인과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DI0GSS">외과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DIOPHT">안과 전문의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" name="doctorTag" type="radio" value="DIBRST">유방외과 전문의</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">시술 가능 분야</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">눈</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">코</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">입술</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">피부</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">필러/보톡스/리프팅</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">안면윤곽/양악/턱</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">치아</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">이마/헤어라인</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">귀</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방이식</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">지방흡입</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">가슴</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="radio" name="1" id="" value="">생식기</label>
+                                    </div>
+                                    <div class="input-group mt-3 mb-3">
+                                        <select id="tx" class="form-control">
+                                            <option value="">시술분야를 선택해주세요.</option>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="btn-add-tx">추가하기</button>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline" id="txInfo">
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">코 &gt; 콧볼축소수술 <span class="pull-right ml-2">×</span></a></li>
+                                        <li class="list-inline-item"><a class="btn btn-primary" href="#" title="삭제">머리 &gt; 두발이식수술 <span class="pull-right ml-2">×</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">약력</label>
+                                <div class="col-sm-10">
+                                    <textarea id="" class="form-control" placeholder="약력 예)" rows="10" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label pt-0">가능 외국어</label>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">영어</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">일본어</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">중국어</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">태국어</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">베트남어</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox" value="">러시아어</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 하단 고정 영역 -->
+                            <div class="ft-fixed">
+                                <div class="pull-left">
+                                </div>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-lg btn-outline-primary mr-3">취소</button>
+                                    <button type="submit" class="btn btn-lg btn-primary">등록</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달 -->
+    <div id="modalReject" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">반려 사유 보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>반려 사유를 출력합니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

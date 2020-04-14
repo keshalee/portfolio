@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BeautySocial</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="wrap">
+        <!-- header -->
+        <script src="include/header.js"></script>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="ct">
+            <!-- 페이지 시작 -->
+            <header id="subHd">
+                <h2>견적 관리</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">견적 관리</li>
+                </ol>
+            </header>
+
+            <div id="content">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <!-- 3차 탭 -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="">모든 연락처 4</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">확인한 연락처 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">미확인 연락처 2</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 검색/필터 -->
+                        <div class="row srch-bx">
+                            <div class="col-sm-12 form-group row">
+                                <!-- 검색창 -->
+                                <div class="col-sm-3 mb-3">
+                                    <div class="form-group">
+                                        <label for="">언어</label>
+                                        <div>
+                                            <div class="btn-group" role="group">
+                                                <a class="btn btn-outline-secondary active" href="">전체</a>
+                                                <a class="btn btn-outline-secondary" href="">한국어</a>
+                                                <a class="btn btn-outline-secondary" href="">영어</a>
+                                                <a class="btn btn-outline-secondary" href="">일본어</a>
+                                                <a class="btn btn-outline-secondary" href="">중국어(간체)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 필터 -->
+                                <div class="col-sm-9 mb-3">
+                                    <div class="form-group">
+                                        <label for="">시술 부위</label>
+                                        <div>
+                                            <div class="btn-group" role="group">
+                                                <a class="btn btn-outline-secondary active" href="">전체</a>
+                                                <a class="btn btn-outline-secondary" href="">눈</a>
+                                                <a class="btn btn-outline-secondary" href="">코</a>
+                                                <a class="btn btn-outline-secondary" href="">입술</a>
+                                                <a class="btn btn-outline-secondary" href="">피부</a>
+                                                <a class="btn btn-outline-secondary" href="">필러/보톡스/리프팅</a>
+                                                <a class="btn btn-outline-secondary" href="">안면윤곽/양악/턱</a>
+                                                <a class="btn btn-outline-secondary" href="">치아</a>
+                                                <a class="btn btn-outline-secondary" href="">이마/헤어라인</a>
+                                                <a class="btn btn-outline-secondary" href="">귀</a>
+                                                <a class="btn btn-outline-secondary" href="">지방이식</a>
+                                                <a class="btn btn-outline-secondary" href="">지방흡입</a>
+                                                <a class="btn btn-outline-secondary" href="">가슴</a>
+                                                <a class="btn btn-outline-secondary" href="">생식기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="col-sm-2 text-right">
+                            </div>-->
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-estimate">
+                                <thead>	
+                                    <tr>
+                                        <th>이름/출생연도</th>
+                                        <th>사용언어</th>
+                                        <th class="con_wid2">견적신청서</th>
+                                        <th>등록일</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="form-disabled">
+                                        <td>
+                                            <span class="text-bold">홍길동</span><br />
+                                            <span>1997년</span>
+                                        </td>
+                                        <td class="text-bold">한국어</td>
+                                        <td class="con_wid2 text-left">
+                                            <a href="estimate_view.html">
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">관심부위</div>
+                                                    <div class="col-sm-9 text-bold text-primary">눈</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">미리보기</div>
+                                                    <div class="col-sm-9">전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">국가번호</div>
+                                                    <div class="col-sm-9">대한민국(+82)</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="lst-tmb2">
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="date text-left">
+                                            <span class="text-bold">1일 전 등록됨</span><br />
+                                            <span>수정일 2019.11.11 15:11</span>
+                                        </td>
+                                        <td class="text-left">
+                                            <a href="#modalCheck" class="btn btn-secondary btn-sm mb-1" data-toggle="modal">연락처 확인</a>
+                                            <p class="text-dark">남은 확인가능 기간 29일</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text-bold">홍길동</span><br />
+                                            <span>1997년</span>
+                                        </td>
+                                        <td class="text-bold">한국어</td>
+                                        <td class="con_wid2 text-left">
+                                            <a href="estimate_view.html">
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">관심부위</div>
+                                                    <div class="col-sm-9 text-bold text-primary">눈</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">미리보기</div>
+                                                    <div class="col-sm-9">전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">국가번호</div>
+                                                    <div class="col-sm-9">대한민국(+82)</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="lst-tmb2">
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="date text-left">
+                                            <span class="text-bold">1일 전 등록됨</span><br />
+                                            <span>수정일 2019.11.11 15:11</span>
+                                        </td>
+                                        <td class="text-left">
+                                            <dl class="txtbox mb-1">
+                                                <dt>연락처</dt>
+                                                <dd>(+82) 010-4953-5586</dd>
+                                                <dt>메신저</dt>
+                                                <dd>(kakaoTalk) silvermoon09</dd>
+                                            </dl>
+                                            <a href="#modalRefund" data-toggle="modal" class="btn btn-outline-primary btn-sm">환불요청</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text-bold">홍길동</span><br />
+                                            <span>1997년</span>
+                                        </td>
+                                        <td class="text-bold">한국어</td>
+                                        <td class="con_wid2 text-left">
+                                            <a href="estimate_view.html">
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">관심부위</div>
+                                                    <div class="col-sm-9 text-bold text-primary">눈</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">미리보기</div>
+                                                    <div class="col-sm-9">전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">국가번호</div>
+                                                    <div class="col-sm-9">대한민국(+82)</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="lst-tmb2">
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="date text-left">
+                                            <span class="text-bold">1일 전 등록됨</span><br />
+                                            <span>수정일 2019.11.11 15:11</span>
+                                        </td>
+                                        <td class="text-left">
+                                            <dl class="txtbox mb-1">
+                                                <dt>연락처</dt>
+                                                <dd>(+82) 010-4953-5586</dd>
+                                                <dt>메신저</dt>
+                                                <dd>(kakaoTalk) silvermoon09</dd>
+                                            </dl>
+                                            <span class="text-success">환불대기</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text-bold">홍길동</span><br />
+                                            <span>1997년</span>
+                                        </td>
+                                        <td class="text-bold">한국어</td>
+                                        <td class="con_wid2 text-left">
+                                            <a href="estimate_view.html">
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">관심부위</div>
+                                                    <div class="col-sm-9 text-bold text-primary">눈</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">미리보기</div>
+                                                    <div class="col-sm-9">전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">국가번호</div>
+                                                    <div class="col-sm-9">대한민국(+82)</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="lst-tmb2">
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="date text-left">
+                                            <span class="text-bold">1일 전 등록됨</span><br />
+                                            <span></span>
+                                        </td>
+                                        <td class="text-left">
+                                            <dl class="txtbox mb-1">
+                                                <dt>연락처</dt>
+                                                <dd>(+82) 010-4953-5586</dd>
+                                                <dt>메신저</dt>
+                                                <dd>(kakaoTalk) silvermoon09</dd>
+                                            </dl>
+                                            <span class="text-danger">환불불가</span><br />
+                                            <span class="txt-sm">회원 연락 확인됨</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="text-bold">홍길동</span><br />
+                                            <span>1997년</span>
+                                        </td>
+                                        <td class="text-bold">한국어</td>
+                                        <td class="con_wid2 text-left">
+                                            <a href="estimate_view.html">
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">관심부위</div>
+                                                    <div class="col-sm-9 text-bold text-primary">눈</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">미리보기</div>
+                                                    <div class="col-sm-9">전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!전체적으로 코가 작은편이고 콧대가 낮아요. 웃으면 콧볼이 그 호이호이 아기공룡 둘리 머리모양 같아요 예뻐지고 싶어요 !!</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 text-bold">국가번호</div>
+                                                    <div class="col-sm-9">대한민국(+82)</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="lst-tmb2">
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                            <li>
+                                                                <img class="img" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://cdn.image.buzzni.com/2018/10/10/4tqVcivzA8.jpg" alt="" style="height:60px">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="date text-left">
+                                            <span class="text-bold">1일 전 등록됨</span><br />
+                                            <span></span>
+                                        </td>
+                                        <td class="text-left">
+                                            <dl class="txtbox mb-1">
+                                                <dt>연락처</dt>
+                                                <dd>(+82) 010-4953-5586</dd>
+                                                <dt>메신저</dt>
+                                                <dd>(kakaoTalk) silvermoon09</dd>
+                                            </dl>
+                                            <span class="text-dark">환불완료</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+                            </ul>
+                        </nav>
+                        <!-- 하단 고정 영역 -->
+                        <div class="ft-fixed">
+                            <div class="pull-left">
+                            </div>
+                            <div class="pull-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //페이지 시작 -->
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달 -->
+    <div id="modalMemo" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">메모 입력</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="5" placeholder="입력한 메모는 사용자에게는 노출되지 않습니다."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalRefund" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">환불 요청</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="5" placeholder="환불 요청 사유를 입력해주세요.&#13;&#10;내부 담당자가 요청 건 확인 후 처리됩니다."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">환불요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 모달 -->
+    <div id="modalQna" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">문의사항</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="5" disabled>한국에 12월 8일에 가는데 그때 가능한가요?한국에 12월 8일에 가는데 그때 가능한가요?</textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 모달 -->
+    <div id="modalCheck" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">연락처 확인</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>해당 견적의 연락처를 확인하시겠습니까?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
