@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header.js"></script>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <div class="container">
+                <!-- S : 수술 선택 -->
+                <div class="position-relative">
+                    <!-- 상세 탭 -->
+                    <ul class="view-tab nav">
+                        <li><a href="#viewTab" class="active" data-toggle="tab">전체</a></li>
+                        <li><a href="#viewTab2" data-toggle="tab">시술</a></li>
+                        <li><a href="#viewTab3" data-toggle="tab">성형</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- S : 전체 -->
+                        <div id="viewTab" class="tab-pane active">
+                            <div class="view-sect-full">
+                                <!-- 시술부위 [D] 활성화 active -->
+                                <nav class="nav-category2 swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <!-- [D] 활성화 class="active" 시술목적x class="no-puopose" -->
+                                        <li class="swiper-slide no-puopose"><a href="javascript:void(0);">전체</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">눈</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">코</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">입술</a></li>
+                                        <li class="swiper-slide active"><a href="javascript:void(0);">피부</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">필러/보톡스/리프팅</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">안면윤곽/양악/턱</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">치아</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">이마/헤어라인</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">귀</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">지방이식</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">지방흡입</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">가슴</a></li>
+                                        <li class="swiper-slide"><a href="javascript:void(0);">생식기</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="view-sect pt-0">
+                                    <!-- 소트, 필터 -->
+                                    <div class="sort-filter clearfix">
+                                        <div class="float-left sh-label">
+                                            <span>보형물</span><i class="icon-close3"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="float-left">
+                                            <span>전체 </span><span class="text-primary">3,280</span><span>개</span>
+                                        </div>
+                                        <div class="float-right">
+                                            <!-- FIXME 오더링 정의되면 열기 - 추후 진행 -->
+                                            <div class="sort-wrp dropdown">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-sort"></i>인기순</a>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">인기순</a>
+                                                    <a class="dropdown-item" href="#">최신순</a>
+                                                    <a class="dropdown-item" href="#">낮은 가격순</a>
+                                                    <a class="dropdown-item" href="#">높은 가격순</a>
+                                                </div>
+                                            </div>
+                                            <div class="sort-wrp off">
+                                                <a href="#mdFiter" data-toggle="modal"><i class="ico_search"></i> <span>지역</span></a>
+                                            </div>
+                                            <div class="sort-wrp on">
+                                                <a href="#mdFiter" data-toggle="modal"><i class="ico_search"></i> <span>지역</span><span class="text-secondary">1</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 시술 목록 -->
+                                    <ul class="lst-default lst-event">
+                                        <li>
+                                            <a class="media" href="event_view.html">
+                                                <div class="profile rect">
+                                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                                    <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                                    <div class="naming-tag">나무 바른 성형외과</div>
+                                                    <div class="station">신논현역</div>
+                                                    <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원<s class="price">146.8만원</s></strong>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="event_view.html">
+                                                <div class="profile rect">
+                                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                                    <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                                    <div class="naming-tag">나무 바른 성형외과</div>
+                                                    <div class="station">신논현역</div>
+                                                    <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원<s class="price">146.8만원</s></strong>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="event_view.html">
+                                                <div class="profile rect">
+                                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                                    <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                                    <div class="naming-tag">나무 바른 성형외과</div>
+                                                    <div class="station">신논현역</div>
+                                                    <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원<s class="price">146.8만원</s></strong>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E : 전체 -->
+                        
+                        <!-- S : 시술 -->
+                        <div id="viewTab2" class="tab-pane">
+                            
+                        </div>
+                        <!-- E : 시술 -->
+
+                        <!-- S : 성형 -->
+                        <div id="viewTab3" class="tab-pane">
+                            
+                        </div>
+                        <!-- E : 성형 -->
+                    </div>
+                </div>
+                <!-- E : 수술선택 -->
+            </div>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <script src="include/footer.js"></script>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- 하단 고정 버튼-->
+    <div class="ft-fixed">
+        <div class="btn-float">
+            <a href="event2.html" class="btn-circle img" style="background-image: url('img/profile-hospital.png')">최근 본 상품</a>
+        </div>
+    </div>
+    
+    <!-- 필터 -->
+    <div id="mdFiter" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">지역선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <strong class="control-label">지역선택</strong>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only" checked>
+                                    <span class="btn btn-rounded">전체</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">강남/서초</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">기타 서울</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">경기/인천</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">수도권 이외</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-4"><button type="button" class="btn btn-lg btn-block btn-light">초기화</button></div>
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">필터 적용</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!-- 개별 페이지 실행 -->
+    <script>
+        jQuery(function($){
+            "use strict";
+            
+            $(window).scroll(function(){
+                var $body = $('body');
+                var pos = $(this).scrollTop();
+                pos > $(".tab-content").offset().top ? $body.addClass('nav-fix') : $body.removeClass('nav-fix');
+            }).trigger('scroll');
+        });
+        
+        var navSwiper = new Swiper('.nav-category2', {
+            slidesPerView: 'auto',
+            spaceBetween: 24,
+            freeMode: true
+        });
+    </script>
+</body>
+</html>

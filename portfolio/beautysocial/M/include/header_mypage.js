@@ -1,0 +1,1 @@
+document.write("<header id='hd'><div class='hd-lt'><a class='icon-hd-back' href='javascript:history.go(-1);'>뒤로 가기</a></div><h2 class='text-dark'>타이틀</h2></header>");

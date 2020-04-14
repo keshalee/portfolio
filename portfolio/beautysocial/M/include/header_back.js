@@ -1,0 +1,1 @@
+document.write("<header id='hd'><div class='hd-lt'><a class='icon-hd-back' href='javascript:history.go(-1);'>뒤로 가기</a></div><h2>타이틀</h2><div class='hd-rt'><a class='icon-hd-srch' href='search.html'>검색</a><a class='icon-hd-user' href='mypage.html'>마이페이지</a></div></header>");

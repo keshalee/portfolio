@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/mypage.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <header id='hd'>
+            <div class='hd-lt'>
+                <a class='icon-hd-back' href='javascript:history.go(-1);'>뒤로 가기</a>
+            </div>
+            <h2 class='text-dark'>타이틀</h2>
+            <div class="hd-rt">
+                <a class="icon-hd-home" href="index.html">홈</a>
+            </div>
+        </header>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents" class="mypage">
+            <header class="view-hd view-profile-hd">
+                <div class="profile">
+                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                    <label class="btn-edit">
+                        <input type="file" class="sr-only"><i class="icon-camera">편집</i>
+                    </label>
+                </div>
+                <div class="info">
+                    <a href="#nameChange" data-toggle="modal">
+                        <p class="name">닉네임</p>
+                        <p>닉네임편집</p>
+                    </a>
+                </div>
+            </header>
+            <div class="container">
+                <ul class="lst-default home-box">
+                    <li>
+                        <a href="mypage_review.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-review-write"></i>내가 쓴 리뷰</strong>
+                            <div><span class="num">1000<i class="xi-plus"></i></span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mypage_scrap_review.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-review"></i>관심 리뷰</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lst-default home-box">
+                    <li>
+                        <a href="mypage_event.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-event-write"></i>이벤트 신청내역</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mypage_scrap_event.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-event-like"></i>관심 이벤트</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lst-default home-box">
+                    <li>
+                        <a href="mypage_estimate.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-consult"></i>나의 상담 신청서</strong>
+                            <div><span class="num">0</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mypage_counsel.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-consult-list"></i>상담 신청내역</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mypage_scrap.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-like"></i>좋아요</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lst-default home-box">
+                    <li>
+                        <a href="mypage_setting.html" class="d-flex justify-content-between align-items-center">
+                            <strong><i class="icon-my-info"></i>서비스 안내</strong>
+                            <div><span class="num">24</span><i class="icon-my-arrow"></i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- nameChange -->
+    <div id="nameChange" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="">
+                        <div class="form-group-wrap">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="" class="col-form-label">닉네임</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="닉네임" value="김피노님">
+                                        <button type="reset" class="icon-srch-clear"></button>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <p class="help-block">*5~18자의 영문 소문자, 숫자와 특수문자(_), (.)만 사용 가능합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <p class="help-block text-error">중복된 닉네임입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="" class="col-form-label">기존 비밀번호</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="password" class="form-control" placeholder="기존 비밀번호 입력">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <p class="help-block text-error">비밀번호가 일치하지 않습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="" class="col-form-label">변경 비밀번호</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="password" class="form-control" placeholder="변경 비밀번호 입력">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <p class="help-block text-error">4~8자 영문 소문자와 숫자 조합</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <label for="" class="col-form-label">변경 비밀번호 확인</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="password" class="form-control" placeholder="변경 비밀번호 재입력">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <p class="help-block text-error">비밀번호가 일치하지 않습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">변경 저장</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

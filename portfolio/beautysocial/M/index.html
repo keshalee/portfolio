@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/BeerSlider.css">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <header id="hd">
+            <h1><a href="index.html"><img src="img/logo.svg" alt="BeautySocial"></a></h1>
+            <div class="hd-rt">
+                <a class="icon-hd-srch" href="search.html" data-toggle="srch">검색</a>
+                <a class="icon-hd-user" href="#mdLogin" data-toggle="modal">마이페이지</a>
+            </div>
+        </header>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <div class="main-visual-swiper swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href=""><img src="img/_temp/slide1.jpg" class="img-fluid" alt=""></a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href=""><img src="img/_temp/slide1.jpg" class="img-fluid" alt=""></a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href=""><img src="img/_temp/slide1.jpg" class="img-fluid" alt=""></a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- 시술 부위 카테고리 -->
+            <section class="main-sect-nav hr">
+                <nav class="nav-category swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-eyes"></i>눈</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-nose"></i>코</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-lips"></i>입술</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-skin"></i>피부</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-fillers"></i>필러/보톡스/리프팅</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-jaw"></i>안면윤곽/양악/턱</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-teeth"></i>치아</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-hair"></i>이마/헤어라인</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-ears"></i>귀</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-fat"></i>지방이식</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-liposuction"></i>지방흡입</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-breasts"></i>가슴</a></li>
+                        <li class="swiper-slide"><a href="search_result.html"><i class="icon-genitals"></i>생식기</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <!-- 리뷰 -->
+            <section class="main-sect-review">
+                <h3 class="sect-title">이번 주 가장 많이 본 리뷰 <a href="review.html" class="float-right text-success more">더보기</a></h3>
+                <div id="reviewTab">
+                    <div class="gallery-top">
+                        <div class="hiddencontents tab1 active">
+                            <div class="beer-slider" data-beer-label="After">
+                                <img src="img/empty.png" class="review-after" style="background:url('img/_temp/after.png') no-repeat right center;" />
+                                <div class="beer-reveal" data-beer-label="Before">
+                                    <img src="img/empty.png" class="review-before" style="background:url('img/_temp/before.png') no-repeat left center;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hiddencontents tab2">
+                            <div class="beer-slider" data-beer-label="After">
+                                <img src="img/empty.png" class="review-after" style="background:url('img/_temp/after.png') no-repeat right center;" />
+                                <div class="beer-reveal" data-beer-label="Before">
+                                    <img src="img/empty.png" class="review-before" style="background:url('img/_temp/before.png') no-repeat left center;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hiddencontents tab3">
+                            <div class="beer-slider" data-beer-label="After">
+                                <img src="img/empty.png" class="review-after" style="background:url('img/_temp/after.png') no-repeat right center;" />
+                                <div class="beer-reveal" data-beer-label="Before">
+                                    <img src="img/empty.png" class="review-before" style="background:url('img/_temp/before.png') no-repeat left center;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hiddencontents tab4">
+                            <div class="beer-slider" data-beer-label="After">
+                                <img src="img/empty.png" class="review-after" style="background:url('img/_temp/after.png') no-repeat right center;" />
+                                <div class="beer-reveal" data-beer-label="Before">
+                                    <img src="img/empty.png" class="review-before" style="background:url('img/_temp/before.png') no-repeat left center;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hiddencontents tab5">
+                            <div class="beer-slider" data-beer-label="After">
+                                <img src="img/empty.png" class="review-after" style="background:url('img/_temp/after.png') no-repeat right center;" />
+                                <div class="beer-reveal" data-beer-label="Before">
+                                    <img src="img/empty.png" class="review-before" style="background:url('img/_temp/before.png') no-repeat left center;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <ul class="tabbox">
+                            <li class="tab1 active">
+                                <a href="javascript:commonTab('reviewTab','tab1');">
+                                    <div class="thumb" style="background-image:url('img/_temp/before.png');"></div>
+                                </a>
+                            </li>
+                            <li class="tab2">
+                                <a href="javascript:commonTab('reviewTab','tab2');">
+                                    <div class="thumb" style="background-image:url('img/_temp/before.png');"></div>
+                                </a>
+                            </li>
+                            <li class="tab3">
+                                <a href="javascript:commonTab('reviewTab','tab3');">
+                                    <div class="thumb" style="background-image:url('img/_temp/after.png');"></div>
+                                </a>
+                            </li>
+                            <li class="tab4">
+                                <a href="javascript:commonTab('reviewTab','tab4');">
+                                    <div class="thumb" style="background-image:url('img/_temp/after.png');"></div>
+                                </a>
+                            </li>
+                            <li class="tab5">
+                                <a href="javascript:commonTab('reviewTab','tab5');">
+                                    <div class="thumb" style="background-image:url('img/_temp/slide1.jpg');"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hiddencontents tab1 active">
+                        <ul class="lst-site">
+                            <li>#눈</li>
+                            <li>#코</li>
+                            <li>#입</li>
+                        </ul>
+                    </div>
+                    <div class="hiddencontents tab2">
+                        <ul class="lst-site">
+                            <li>#얼굴</li>
+                            <li>#바디</li>
+                            <li>#다리</li>
+                        </ul>
+                    </div>
+                    <div class="hiddencontents tab3">
+                        <ul class="lst-site">
+                            <li>#콧대</li>
+                            <li>#필러</li>
+                            <li>#보톡스</li>
+                        </ul>
+                    </div>
+                    <div class="hiddencontents tab4">
+                        <ul class="lst-site">
+                            <li>#얼굴</li>
+                            <li>#바디</li>
+                            <li>#다리</li>
+                        </ul>
+                    </div>
+                    <div class="hiddencontents tab5">
+                        <ul class="lst-site">
+                            <li>#얼굴</li>
+                            <li>#바디</li>
+                            <li>#다리</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 정보 -->
+            <div class="container">
+                <nav class="main-srch-link">
+                    <a href="hospital.html" class="srch-link">
+                        <span><strong>1,859개</strong>병원정보 보기</span>
+                    </a>
+                    <a href="doctor.html" class="srch-link">
+                        <span><strong>4,348명</strong>의사정보 보기</span>
+                    </a>
+                    <a href="treatment_main.html" class="srch-link">
+                        <span><strong>293개</strong>시술정보 보기</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- 정보 -->
+            
+            <!-- 랭킹 -->
+            <section class="main-sect-ranking hr">
+                <h3 class="sect-title">의사 랭킹 - 눈 <a href="ranking.html" class="float-right text-success more">더보기</a></h3>
+                <div class="main-ranking-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="doctor_view.html">
+                                <div class="profile">
+                                    <i class="img" style="background-image: url('img/profile.png')"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="doctor_view.html">
+                                <div class="profile">
+                                    <i class="img" style="background-image: url('img/profile.png')"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="doctor_view.html">
+                                <div class="profile">
+                                    <i class="img" style="background-image: url('img/profile.png')"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="doctor_view.html">
+                                <div class="profile">
+                                    <i class="img" style="background-image: url('img/profile.png')"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="tit">김피노키오</h4>
+                        <ul class="lst-site">
+                            <li>#얼굴</li>
+                            <li>#바디</li>
+                            <li>#다리</li>
+                        </ul>
+                    </div>
+                    <i class="icon-ranking-badge"></i>
+                </div>
+            </section>
+            
+            <!-- 이벤트 -->
+            <section class="main-sect-event hr">
+                <h3 class="sect-title">#눈 <a href="review.html" class="float-right text-success more">더보기</a></h3>
+                    <ul class="lst-default lst-event">
+                        <li>
+                            <a class="media" href="event_view.html">
+                                <div class="media-head profile rect">
+                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                </div>
+                                <div class="media-body">
+                                    <div class="box">
+                                        <h4 class="tit txt-line">프리미어 콧대X코끝 코성형 프리미어 콧대X코끝 코성형 프리미어 콧대X코끝 코성형</h4>
+                                        <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    </div>
+                                    <div class="box">
+                                        <s class="price">146만원</s>
+                                        <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="event_view.html">
+                                <div class="media-head profile rect">
+                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                </div>
+                                <div class="media-body">
+                                    <div class="box">
+                                        <h4 class="tit txt-line">프리미어 콧대X코끝 코성형</h4>
+                                        <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    </div>
+                                    <div class="box">
+                                        <s class="price">146만원</s>
+                                        <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="event_view.html">
+                                <div class="media-head profile rect">
+                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                </div>
+                                <div class="media-body">
+                                    <div class="box">
+                                        <h4 class="tit txt-line">프리미어 콧대X코끝 코성형</h4>
+                                        <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    </div>
+                                    <div class="box">
+                                        <s class="price">146만원</s>
+                                        <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="event_view.html">
+                                <div class="media-head profile rect">
+                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                </div>
+                                <div class="media-body">
+                                    <div class="box">
+                                        <h4 class="tit txt-line">프리미어 콧대X코끝 코성형</h4>
+                                        <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    </div>
+                                    <div class="box">
+                                        <s class="price">146만원</s>
+                                        <strong class="text-secondary">40&#37;</strong><strong class="text-dark">80만원</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="event_view.html">
+                                <div class="media-head profile rect">
+                                    <i class="img" style="background-image: url('img/profile-hospital.png')"></i>
+                                </div>
+                                <div class="media-body">
+                                    <div class="box">
+                                        <h4 class="tit txt-line">프리미어 콧대X코끝 코성형</h4>
+                                        <div class="sub-tit text-truncate">콧대X코끝 라인이 독보적 코 성형 잘하는 곳 뷰티소셜 성형외과</div>
+                                    </div>
+                                    <div class="box">
+                                        <s class="price">146만원</s>
+                                        <strong class="text-dark">80만원</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            </section>
+            
+            <!-- 인기 이벤트 -->
+            <section class="main-sect-event">
+                <h3 class="sect-title">인기 쁘띠 이벤트!</h3>
+                <div class="swiper-container scroll-swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="event_view.html">
+                                <div class="media-head">
+                                    <img src="img/bn_estimate_ko.png" class="img-fluid" />
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                    <div class="sub-tit text-truncate">뷰티소셜 성형외과</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="event_view.html">
+                                <div class="media-head">
+                                    <img src="img/bn_estimate_ko.png" class="img-fluid" />
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                    <div class="sub-tit text-truncate">뷰티소셜 성형외과</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="event_view.html">
+                                <div class="media-head">
+                                    <img src="img/bn_estimate_ko.png" class="img-fluid" />
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                    <div class="sub-tit text-truncate">뷰티소셜 성형외과</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="event_view.html">
+                                <div class="media-head">
+                                    <img src="img/bn_estimate_ko.png" class="img-fluid" />
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="tit text-truncate">프리미어 콧대X코끝 코성형</h4>
+                                    <div class="sub-tit text-truncate">뷰티소셜 성형외과</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <script src="include/footer.js"></script>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- 하단 고정 버튼-->
+    <div class="ft-fixed">
+        <div class="btn-float">
+            <a href="estimate.html" class="btn-circle btn-secondary">견적<br>신청</a>
+        </div>
+    </div>
+    
+    <!-- 로그인 -->
+    <div id="mdLogin" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="center-block">
+                        <h2>환영합니다.</h2>
+                        <h3>성형은 신중하게 뷰티소셜에서</h3>
+                    </div>
+                    <ul class="social-login">
+                        <li class="col">
+                            <a href="" class="mdlogin-facebook">
+                                <div class="sr-only">페이스북으로 로그인</div>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="" class="mdlogin-kakao">
+                                <div class="sr-only">카카오톡으로 로그인</div>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="" class="mdlogin-line">
+                                <div class="sr-only">라인으로 로그인</div>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="" class="mdlogin-google">
+                                <div class="sr-only">구글로 로그인</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="center-block">또는</div>
+                    <div class="buttons-group">
+                        <a href="join_write1.html" class="btn btn-block btn-outline-muted">이메일로 회원가입</a>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>이미 회원이신가요?</span>
+                        <a href="email_login.html">이메일로 로그인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 이벤트 팝업 -->
+    <div id="mdEvent" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="center-block">
+                        <img src="img/main-reward-en.jpg" alt="Free plastic surgery event" class="img-fluid"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6"><button type="button" class="btn btn-lg btn-block btn-primary" data-dismiss="modal">Stop seeing today</button></div>
+                    <div class="col-6"><button type="button" class="btn btn-lg btn-block btn-secondary" onclick="location.href='promotion.html'">See details</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="appdownload" style="display:none">
+        <div class="bg-shadow">
+            <div class="position-relative">
+                <button type="button" class="icon-close" onclick="$('#appdownload').css({'display':'none'});">닫기</button>
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <object type="image/svg+xml" data="img/appdownload-logo.svg"></object>
+                        </div>
+                        <div class="text-wrap">
+                            <span>너가 지금 보는 리뷰<br />진짜 리뷰 맞아?</span>
+                        </div>
+                    </div>
+                    <div class="buttons-group">
+                        <a href="https://www.BeautySocial.ai/app" class="btn btn-block btn-download">앱 다운로드</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/BeerSlider.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!-- 개별 페이지 실행 -->
+    <script>
+        var mainSwiper = new Swiper('.main-visual-swiper', {
+            loop: false,
+            autoplay: {
+                delay:3000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        });
+        
+        var navSwiper = new Swiper('.nav-category', {
+            slidesPerView: 'auto',
+            freeMode: true,
+        });
+        
+        $.fn.BeerSlider = function ( options ) {
+            options = options || {};
+            return this.each(function() {
+                new BeerSlider(this, options);
+            });
+        };
+        
+        $('.beer-slider').BeerSlider({start:30});
+        
+        var rankingSwiper = new Swiper('.main-ranking-swiper', {
+            slidesPerView: 3,
+            loop: true,
+            autoplay: {
+                delay:3000,
+            },
+            centeredSlides: true,
+        });
+        
+        var scrollSwiper = new Swiper('.scroll-swiper', {
+            slidesPerView: 1.1,
+            spaceBetween: 16,
+        });
+        
+//        $("#mdEvent").modal("show");
+        
+    </script>
+</body>
+</html>

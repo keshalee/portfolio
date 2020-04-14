@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header_back.js"></script>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <div class="container">
+                <!-- 카테고리 선택 [D] 활성화 active -->
+                <nav class="category">
+                    <div class="category-item">
+                        <a href="#mdChoice" data-toggle="modal">
+                            <span>의사 검색을 위해 시술을 선택하세요.</span>
+                            <i class="icon-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- 선택 시 
+                    <div class="category-item active">
+                        <a href="#mdChoice" data-toggle="modal">
+                            <span>시술명 시술명 시술명 시술명 시술명 시술명 시술명 시술명 </span>
+                            <i class="icon-arrow-right"></i>
+                        </a>
+                    </div>-->
+                </nav>
+                
+                <!-- 소트, 필터 -->
+                <div class="sort-filter clearfix">
+                    <div class="float-left sh-label">
+                        <span>보형물</span><i class="icon-close3"></i>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="float-left">
+                        <span>전체 </span><span class="text-primary">3,280</span><span>개</span>
+                    </div>
+                    <div class="float-right">
+                        <!-- FIXME 오더링 정의되면 열기 - 추후 진행 -->
+                        <div class="sort-wrp dropdown">
+                            <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-sort"></i>인기순</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">인기순</a>
+                                <a class="dropdown-item" href="#">최신순</a>
+                                <a class="dropdown-item" href="#">낮은 가격순</a>
+                                <a class="dropdown-item" href="#">높은 가격순</a>
+                            </div>
+                        </div>
+                        <div class="sort-wrp off">
+                            <a href="#mdFiter" data-toggle="modal"><i class="ico_search"></i> <span>지역</span></a>
+                        </div>
+                        <div class="sort-wrp on">
+                            <a href="#mdFiter" data-toggle="modal"><i class="ico_search"></i> <span>지역</span><span class="text-secondary">1</span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- S : 의사목록 -->
+                <ul class="lst-default lst-people">
+                    <li>
+                        <a class="media" href="doctor_view.html">
+                            <div class="profile">
+                                <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                            </div>
+                            <div class="media-body">
+                                <span class="surgery-mark">마취과 전문의</span>
+                                <h4 class="tit">김피노</h4>
+                                <div class="sub-tit">코디성형외과</div>
+                                <ul class="lst-site">
+                                    <li>Filler/Botox/Lifting</li>
+                                    <li>Facial Contouring/Orthognathic/Jaw</li>
+                                    <li>Regeneration/Elasticity/Moisture</li>
+                                    <li><i class="icon-dots"></i></li>
+                                </ul>
+                                <dl class="dl-meta">
+                                    <dt><i class="icon-star3">리뷰별점</i></dt>
+                                    <dd><em>4.5</em>(25)</dd>
+                                    <dt><i class="icon-like">좋아요</i></dt>
+                                    <dd>34</dd>
+                                </dl>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media" href="doctor_view.html">
+                            <div class="profile">
+                                <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                            </div>
+                            <div class="media-body">
+                                <span class="surgery-mark">마취과 전문의</span>
+                                <h4 class="tit">김피노</h4>
+                                <div class="sub-tit">코디성형외과</div>
+                                <ul class="lst-site">
+                                    <li>얼굴</li>
+                                    <li>바디</li>
+                                    <li>다리</li>
+                                </ul>
+                                <dl class="dl-meta">
+                                    <dt><i class="icon-star3">리뷰별점</i></dt>
+                                    <dd><em>4.5</em>(25)</dd>
+                                    <dt><i class="icon-like">좋아요</i></dt>
+                                    <dd>34</dd>
+                                </dl>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media" href="doctor_view.html">
+                            <div class="profile">
+                                <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                            </div>
+                            <div class="media-body">
+                                <span class="surgery-mark">마취과 전문의</span>
+                                <h4 class="tit">김피노</h4>
+                                <div class="sub-tit">코디성형외과</div>
+                                <ul class="lst-site">
+                                    <li>얼굴</li>
+                                    <li>바디</li>
+                                    <li>다리</li>
+                                </ul>
+                                <dl class="dl-meta">
+                                    <dt><i class="icon-star3">리뷰별점</i></dt>
+                                    <dd><em>4.5</em>(25)</dd>
+                                    <dt><i class="icon-like">좋아요</i></dt>
+                                    <dd>34</dd>
+                                </dl>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- E : 의사목록 -->
+                
+                <div id="loadingView" class="loading loading-sm">
+                    <div class="txt">LOADING</div>
+                </div>
+            </div>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <script src="include/footer.js"></script>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- image viewer -->
+    <div id="pswp" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SNS 공유 -->
+    <div id="mdShare" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">공유하기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="lst-share">
+                        <li>
+                            <a class="bg-kakao" href="#">
+                                <span><i class="xi-kakaotalk"></i> <strong>카카오톡으로 보내기</strong></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-line" href="#">
+                                <span><i class="xi-line-messenger"></i> <strong>라인으로 보내기</strong></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 필터 -->
+    <div id="mdFiter" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">상세필터</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <strong class="control-label">지역 선택</strong>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only" checked>
+                                    <span class="btn btn-rounded">강남/서초</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">기타 서울</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">경기/인천</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">수도권 이외</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <strong class="control-label">병원 안전 시스템</strong>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only" checked>
+                                    <span class="btn btn-rounded">수술실 CCTV</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">수술 실명제</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">마취전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">입원실</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">전담 회복실</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">응급 시스템</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <strong class="control-label">의사 전공 분야</strong>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only" checked>
+                                    <span class="btn btn-rounded">피부과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">마취과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">성형외과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">가정의학과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">치아보철과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">치과 교정과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">이비인후과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">유방외과 전문의</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">외과 전문의</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <strong class="control-label">가능 외국어</strong>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only" checked>
+                                    <span class="btn btn-rounded">영어</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">일본어</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">중국어</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">태국어</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">베트남어</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="radio" class="sr-only">
+                                    <span class="btn btn-rounded">러시아어</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-4"><button type="button" class="btn btn-lg btn-block btn-light">초기화</button></div>
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">필터 적용</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 시술선택 -->
+    <div id="mdChoice" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시술선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap-srch">
+                        <form class="frm-srch">
+                            <input type="text" class="input-srch" placeholder="원하는 시술정보 검색">
+                            <button type="submit" class="icon-md-srch">검색</button>
+                            <button type="reset" class="icon-srch-clear"></button>
+                        </form>
+                    </div>
+                    <ul class="lst-default lst-treatment" style="display:none;">
+                        <li><a href="javascript:void(0);">전체</a></li>
+                        <li><a href="javascript:void(0);"><mark>눈</mark></a></li>
+                        <li><a href="javascript:void(0);"><mark>눈</mark>가 보톡스</a></li>
+                        <li><a href="javascript:void(0);"><mark>눈</mark>두덩이 지방이식</a></li>
+                    </ul>
+                    <div class="choice-area">
+                        <!-- 시술 부위 -->
+                        <div class="area site-area">
+                            <div class="title">부위</div>
+                            <div class="area-container">
+                                <ul class="lst-area">
+                                    <li><label><input type="checkbox" class="sr-only" /><span>전체</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>코</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>입술</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>치아</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>헤어</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>이마</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>얼굴</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>귀</span></label></li>
+                                    <li class="active"><label><input type="checkbox" class="sr-only" /><span>턱</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>목</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>가슴</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>바디</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>생식기</span></label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 시술 목적 -->
+                        <div class="area purpose-area">
+                            <div class="title">목적</div>
+                            <div class="area-container">
+                                <ul class="lst-area">
+                                    <li class="active"><label><input type="checkbox" class="sr-only" /><span>전체</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈재수술</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>다크서클</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈모양</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈주름</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>시력개선</span></label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 시술 방법 -->
+                        <div class="area method-area">
+                            <div class="title">시술명</div>
+                            <div class="area-container">
+                                <ul class="lst-area">
+                                    <li class="active"><label><input type="checkbox" class="sr-only" /><span>전체</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>리쥬란아이</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈밑지방재배치</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈밑지방이식술</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈밑지방제거술</span></label></li>
+                                    <li><label><input type="checkbox" class="sr-only" /><span>눈밑성형</span></label></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <script>
+        //$('#mdFiter').modal();
+        jQuery(function($){
+            "use strict";
+            var $body = $('body');
+            // 카테고리 샘플
+            $body
+            .on("click","[href='#mdFiter']", function(){
+                $("#mdFiter").modal("show");
+            });
+
+            // 무한스크롤
+//            $(window).scroll(function(){
+//                var t = $('#loadingView').offset().top,
+//                    tH = $(this).height(),
+//                    sT = $(this).scrollTop();
+//                if(t-tH<sT){
+//                    // 여기에 동작 샘플
+//                    console.log('도달');
+//                    $('#loadingView').prev().append('<li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li><li><a class="media" href="#layer" data-toggle="layer" data-target="treatment"><div class="profile"><i class="img" style="background-image: url('img/profile-hospital.png')"></i></div><div class="media-body"><h4 class="tit">김성민 <span class="badge text-secondary">마취과 전문의</span></h4><div class="sub-tit">코디성형외과</div><ul class="lst-site"><li>얼굴</li><li>바디</li><li>다리</li></ul><dl class="dl-meta"><dt><i class="icon-review">리뷰</i></dt><dd>354</dd><dt><i class="icon-star">만족도</i></dt><dd>4.5</dd><dt><i class="icon-like">좋아요</i></dt><dd>34</dd></dl></div></a></li>');
+//                } else {
+//
+//                }
+//            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header_detail.js"></script>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <section class="view view-review">
+                <header class="view-hd view-profile-hd">
+                    <div class="profile">
+                        <a href="javascript:void(0);"><i class="img" style="background-image: url('img/profile.png')"></i></a>
+                    </div>
+                    <div class="info">
+                        <h2><a href="javascript:void(0);">jack99880</a></h2>
+                        <div class="date">2019.12.12</div>
+                        <div class="meta">
+                            <dt><i class="icon-star active">만족도</i></dt>
+                            <dd class="text-dark">4.5</dd>
+                            <dd>/5</dd>
+                        </div>
+                    </div>
+                </header>
+                <div class="review-detail container">
+                    <div class="lst-review">
+                        <ul class="lst-site">
+                            <li class="tit">얼굴</li>
+                            <li>이마 보톡스</li>
+                            <li>이마 필러</li>
+                            <li>얼굴 윤곽</li>
+                        </ul>
+                    </div>
+                    <ul class="lst-tmb overflow-auto">
+                        <li>
+                            <figure class="badge">전</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                        <li>
+                            <figure class="badge">후</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                        <li>
+                            <figure class="badge">후</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                        <li>
+                            <figure class="badge">후</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                        <li>
+                            <figure class="badge">전</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                        <li>
+                            <figure class="badge">후</figure>
+                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                        </li>
+                    </ul>
+                    <dl class="proscons">
+                        <dt class="text-primary">좋은 점</dt>
+                        <dd>
+                            좋은 점을 적어봅니다. <br>작성된 내용은 모두 노출됩니다. 줄 바꿈 처리되어 나옵니다.
+                        </dd>
+                        <dt>아쉬운 점</dt>
+                        <dd>
+                            아쉬운 점을 적어봅니다. <br>작성된 내용은 모두 노출됩니다. 줄 바꿈 처리되어 나옵니다.
+                        </dd>
+                    </dl>
+                    <button type="button" class="btn btn-sm btn-outline-primary btn-translate">원본보기</button>
+                    
+                    <!-- 리뷰정보 -->
+                    <div class="detail-box">
+                        <table>
+                            <caption class="sr-only">시술 만족도</caption>
+                            <colgroup>
+                                <col style="width:40%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">시술 날짜</th>
+                                    <td>2019.11.20</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">시술 비용</th>
+                                    <td>500 만원 <span class="badge badge-outline-primary">총 비용</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">시술 만족도</th>
+                                    <td class="star_wrap">
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="detail-box">
+                        <table>
+                            <caption class="sr-only">병원 만족도</caption>
+                            <colgroup>
+                                <col style="width:40%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">병원 명</th>
+                                    <td><span>코디 성형외과</span> <a class="btn btn-sm btn-outline-primary ml-1" href="hospital_view.html">병원정보 보기</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">병원 만족도</th>
+                                    <td class="star_wrap">
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div id="viewSatisfaction">
+                                            <div class="satisfaction">
+                                                <dl>
+                                                    <dt>병원 청결도</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">3</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>대기시간</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">1</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>직원의 상담 태도</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">5</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>전문적인 상담</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">3</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>시술/부작용에 대한<br />충분한 설명</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">5</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>안정성에 대한 인식</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">3</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>적절한 비용</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">1</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>사후관리 서비스</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">1</span>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="detail-box">
+                        <table>
+                            <caption class="sr-only">의사 만족도</caption>
+                            <colgroup>
+                                <col style="width:40%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">의사 명</th>
+                                    <td>윤샐리 <a class="btn btn-sm btn-outline-primary ml-1" href="doctor_view.html">의사정보 보기</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="font-weight-bold">의사 만족도</th>
+                                    <td class="star_wrap">
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                        <i class="xi-star"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div id="viewSatisfaction">
+                                            <div class="satisfaction">
+                                                <dl>
+                                                    <dt>의사 친절도</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">3</span>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>결과 만족도</dt>
+                                                    <dd class="range-content">
+                                                        <i class="xi-star"></i> <span class="grade">1</span>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="review-state d-flex justify-content-between align-items-center">
+                        <dl class="dl-meta">
+                            <dt><i class="icon-like">좋아요</i></dt>
+                            <dd>34</dd>
+                        </dl>
+                        <div class="side">
+                            <a href="#mdReport" data-toggle="modal">신고하기</a>
+                        </div>
+                    </div>
+                    <!-- 소트, 필터 -->
+                    <div class="sort-filter clearfix">
+                        <div class="float-left">
+                            <span>전체 </span><span class="text-primary">3,280</span><span>개</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 댓글목록 -->
+                    <ul class="lst-default lst-comment">
+                        <li>
+                            <div class="media">
+                                <div class="media-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="tit">
+                                            <span class="badge badge-outline-secondary">병원</span>jack99880 
+                                            <span class="date">2019.11.21</span>
+                                        </span>
+                                        <div class="side">
+                                            <a href="#mdReport" data-toggle="modal">신고하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        how much was it approximately?
+                                    </div>
+                                    <div class="btn-group">
+                                        <a href="javascript:void(0);"><span><i class="icon-cmt"></i> 0</span></a>
+                                        <a href="javascript:void(0);" class="text-primary font-weight-bold">댓글 쓰기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-body cmt-wrap">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="tit">
+                                            jack99880 
+                                            <span class="date">2시간전</span>
+                                        </span>
+                                        <div class="side">
+                                            <a href="#mdReport" data-toggle="modal">신고하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt">
+                                        how much was it approximately?
+                                    </div>
+                                    <div class="btn-group">
+                                        <a href="javascript:void(0);"><span><i class="icon-cmt active"></i> 2</span></a>
+                                        <a href="javascript:void(0);" class="text-primary font-weight-bold">댓글 쓰기</a>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="tit">
+                                                jack99880 
+                                                <span class="date">2시간전</span>
+                                            </span>
+                                            <div class="side">
+                                                <a href="#mdReport" data-toggle="modal">신고하기</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt">
+                                            how much was it approximately?
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="tit">
+                                                jack99880 
+                                                <span class="date">2시간전</span>
+                                            </span>
+                                            <div class="side">
+                                                <a href="#mdReport" data-toggle="modal">신고하기</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt">
+                                            how much was it approximately?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- 하단 고정 버튼-->
+    <div class="ft-fixed">
+        <form class="frm-cmt no-gutters">
+            <div class="col">
+                <input type="text" class="input-cmt" placeholder="댓글 쓰기">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-secondary btn-rounded btn-sm">등록</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- image viewer -->
+    <div id="pswp" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

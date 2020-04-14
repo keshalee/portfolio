@@ -1,0 +1,61 @@
+@charset "utf-8"; 
+/* typo */
+.text-underline { text-decoration:underline !important; }
+.text-error { color:#ff0000; }
+
+/* help class */
+hr { height:1px; background-color:#eee; margin-bottom:23px; }
+[style^="display:none"] + hr { display:none; }
+
+/* icon */
+.icon-change { width:20px; height:20px; margin-bottom:1px; background-image:url("../img/icon-change.png"); vertical-align:bottom; }
+.xi-close { color:#fff; background-color:#999; width:16px; height:16px; line-height:16px;  position:absolute; right:11px; top:50%; margin-top:-8px; border:0; font-size:10px; border-radius:50%; font-weight:900; }
+
+/* btn */
+.btn.btn-change { padding:0 0 0 2px; margin-bottom:24px; font-size:14px; color:#131313; line-height:1.71; }
+
+/* form */
+.form-bordered .form-group { margin-bottom:23px; }
+.form-bordered .form-control { height:4rem; border:1px solid #bbb; border-radius:.333rem; padding:16px; font-size:1.333rem; }
+.form-bordered .form-control::-webkit-input-placeholder, .form-bordered .textarea-wrap > textarea::-webkit-input-placeholder, .form-bordered .input-cmt::-webkit-input-placeholder { opacity:1; font-size:1.333rem; color:#d9d9d9; }
+.form-bordered .col-form-label { margin-bottom:.333rem; line-height:1.71; font-size:1.166rem; color:#424242; font-weight:600; }
+.join-form .custom-label > span:before { width:20px; height:20px; border-color:#ddd; background-color:#fff; }
+.join-form .custom-label input:checked + span:after { width:20px; height:20px; background:url("../img/icon-my-check.png") no-repeat center/ auto 20px; }
+.join-form .custom-label > span:before, .login-form .custom-label > span:after { width:20px; height:20px; }
+.help-block { display:block; margin-top:8px; line-height:1.33; font-size:1rem; }
+
+/* Member */
+.login-form { padding:8px 16px; font-size:1.083rem }
+
+#login { position:fixed; left:0; right:0; top:0; bottom:0; overflow-y:auto; padding:10vh 37px 0; text-align:center; }
+
+#login .center-block h2 { padding-top:3rem; line-height:1.33; font-size:2rem; color:#070707; }
+#login .center-block h3 { line-height:1.71; font-size:1.166rem; color:#adadad; font-weight:400; }
+#login .social-login { display:flex; padding:24px 7px 0; justify-content:space-between; }
+#login .social-login > [class*=col] { padding:0; width:55px; }
+#login .social-login [class*=mdlogin-] { display:block; width:55px; height:55px; margin:0 auto; padding-left:0; border-radius:100%; font-size:.916rem; }
+#login .social-login .mdlogin-facebook { background:#39589a url('../img/mdlogin-facebook.png') no-repeat center/ 55px auto; color:#fff; }
+#login .social-login .mdlogin-kakao { background:#fce005 url('../img/mdlogin-kakaotalk.png') no-repeat center/ 55px auto; color:#3c1e1c; }
+#login .social-login .mdlogin-line { background:#00b900 url('../img/mdlogin-line.png') no-repeat center/ 55px auto; color:#fff; }
+#login .social-login .mdlogin-google { background:#fff url('../img/mdlogin-google.png') no-repeat center/ 55px auto; color:#424242; }
+#login .center-block { position:relative; padding:8px 0; font-size:1.166rem; line-height:1.71; color:#e1e1e1; text-align:center; }
+#login .social-login + .center-block { padding:24px 0; line-height:1.71; }
+#login .social-login + .center-block:before { content:""; position:absolute; left:0; top:calc(50% - 1px); width:calc(50% - 20px); height:1px; background-color:#979797; opacity:0.18; }
+#login .social-login + .center-block:after { content:""; position:absolute; right:0; top:calc(50% - 1px); width:calc(50% - 20px); height:1px; background-color:#979797; opacity:0.18; }
+#login .buttons-group .btn { padding:16px; margin:0 0 8px; line-height:1; font-size:1.333rem; font-weight:400; color:#424242 !important; border-color:#dddddd !important; }
+
+#login .d-flex { padding:2rem 0; line-height:1.71; font-size:1.166rem; }
+#login .d-flex span { color:#999; }
+#login .d-flex a { color:#424242; font-weight:600; }
+
+/* join */
+.join-form { padding:8px 16px; font-size:1.083rem }
+.check-all-title { line-height:1.71; font-size:1.166rem; }
+.join-form .custom-label-list { padding:16px 0 16px; }
+.join-form .custom-label-list > li { line-height:1.71; border-radius:0.666rem; font-size:1.166rem; color:#656565; }
+.join-form .custom-label-list > li:first-child { padding:16px; line-height:1.5; background-color:#f3f3f3; color:#424242; font-size:1.333rem; }
+.join-form .custom-label-list > li + li { margin-top:16px; padding:0 16px;  }
+
+/* leave */
+.memeber-leave { padding:30px 35px }
+.memeber-leave li { margin-top:1em }

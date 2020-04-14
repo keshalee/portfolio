@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header_mypage.js"></script>
+        <!-- E : header -->
+
+        <!-- S : contents -->
+        <div id="contents" class="frm-review border-top">
+            <form action="" method="post">
+                <div class="common-review">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="procedureSite" class="col-form-label">시술 부위 <em class="text-primary">*</em></label>
+                            <div class="col">
+                                <a href="#siteChoice" data-toggle="modal">
+                                    <input type="text" class="input-review-right form-control" title="시술부위 선택" placeholder="시술 부위를 선택해 주세요">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="procedureMethod" class="col-form-label">시술 방법 <em class="text-primary">*</em></label>
+                            <div class="col">
+                                <a href="#methodChoice" data-toggle="modal">
+                                    <input type="text" class="input-review-plus form-control" title="시술방법 선택" placeholder="시술 방법을 선택해 주세요">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div id="procedureSatisfaction" class="col">
+                                <div class="stars_wrap">
+                                    <h4 class="tit"><span class="text-primary">시술 만족도</span>를 입력해주세요.</h4>
+                                    <span class="stars-grade step5 star"><input type="hidden" name="rating" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="procedureDate" class="col-form-label">시술날짜</label>
+                            <div class="col">
+                                <input id="procedureDate" class="input-date form-control" title="시술날짜 입력" placeholder="시술 날짜를 선택해 주세요" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <strong class="col-form-label pt-0">시술 비용</strong>
+                            <div class="col">
+                                <label class="custom-label custom-label-radio">
+                                    <input type="radio" name="cost" class="sr-only" checked><span>시술 비용</span>
+                                </label>
+                                <label class="custom-label custom-label-radio">
+                                    <input type="radio" name="cost" class="sr-only"><span>총 비용</span>
+                                </label>
+                                <label class="custom-label custom-label-radio">
+                                    <input type="radio" name="cost" class="sr-only"><span>비용 모름</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <strong class="col-form-label"></strong>
+                            <div class="col">
+                                <div class="form-row">
+                                    <div class="col-4">
+                                        <select class="form-control">
+                                            <option value="">단위 선택</option>
+                                            <option value="">KRW</option>
+                                            <option value="">USD</option>
+                                            <option value="">JPY</option>
+                                            <option value="">CNY</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="금액 입력" title="금액 입력">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="common-review">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="clinicName" class="col-form-label">병원 명 <em class="text-primary">*</em></label>
+                            <div class="col">
+                                <a href="#clinicChoice" data-toggle="modal">
+                                    <input type="text" class="input-review-plus form-control" title="병원 선택" placeholder="병원을 선택해주세요">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <button type="button" data-toggle="modal" data-target="#clinicSatisfaction" class="stars_wrap">
+                                    <h4 class="tit"><span class="text-primary">병원 만족도</span>를 입력해주세요.</h4>
+                                    <span class="stars-grade star">
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <span class="star">
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star"></i>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="stars_wrap mt-0">
+                                    <div class="satisfaction">
+                                        <dl>
+                                            <dt>병원 청결도</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">3</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>대기시간</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">1</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>직원의 상담 태도</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">5</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>전문적인 상담</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">3</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>시술/부작용에 대한<br />충분한 설명</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">5</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>안정성에 대한 인식</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">3</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>적절한 비용</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">1</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>사후관리 서비스</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">1</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="common-review">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="doctorsName" class="col-form-label">의사 명</label>
+                            <div class="col">
+                                <a href="#doctorChoice" data-toggle="modal">
+                                    <input type="text" id="doctorsName" class="input-review-plus form-control" title="의사 선택" placeholder="의사를 선택해주세요">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <button type="button" data-toggle="modal" data-target="#doctorSatisfaction" class="stars_wrap">
+                                    <h4 class="tit"><span class="text-primary">의사 만족도</span>를 입력해주세요.</h4>
+                                    <span class="stars-grade star">
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <i class="icon-eval-star"></i>
+                                        <span class="star">
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star active"></i>
+                                            <i class="icon-eval-star"></i>
+                                            <i class="icon-eval-star"></i>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="stars_wrap mt-0">
+                                    <div class="satisfaction">
+                                        <dl>
+                                            <dt>의사 친절도</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">3</span>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>결과 만족도</dt>
+                                            <dd class="range-content">
+                                                <i class="xi-star"></i> <span class="grade">1</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="common-review">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="" class="col-form-label center-block">좋은 점 <em class="text-primary">*</em></label>
+                            <div class="col">
+                                <div class="textarea-wrap">
+                                    <textarea placeholder="다른 분들에게 도움이 될 수 있도록 자세히 적어주세요&#13;&#10;(최소 20자)" rows="3" class="form-control"></textarea>
+                                    <div class="text-right text-muted"><span class="text-dark">0</span> / 1000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="" class="col-form-label center-block">아쉬운 점 <em class="text-primary">*</em></label>
+                            <div class="col">
+                                <div class="textarea-wrap">
+                                    <textarea placeholder="다른 분들에게 도움이 될 수 있도록 자세히 적어주세요&#13;&#10;(최소 20자)" rows="3" class="form-control"></textarea>
+                                    <div class="text-right text-muted"><span class="text-dark">0</span> / 1000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="" class="col-form-label center-block">수술 전 <em class="text-basic">(<span class="text-primary">1</span>/5)</em></label>
+                            <div class="col-12">
+                                <ul class="list-inline upload-list">
+                                    <li class="list-inline-item">
+                                        <a class="view-img" href="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" style="background-image:url(http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg)"><img src="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" alt=""></a>
+                                        <button type="button" class="btn-del"><i class="xi-close"></i></button>
+                                    </li>
+                                    <!-- 첨부버튼 -->
+                                    <li class="list-inline-item">
+                                        <div class="btn-upload">
+                                            <label for="customFile" class="custom-file-label">
+                                                <input type="file" id="customFile" class="custom-file-input" />
+                                                <span><i class="xi-plus"></i><span>사진첨부</span></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="" class="col-form-label center-block">수술 후 <em class="text-primary">*</em> <em class="text-basic">(<span class="text-primary">4</span>/5)</em></label>
+                            <div class="col-12">
+                                <ul class="list-inline upload-list">
+                                    <li class="list-inline-item">
+                                        <a class="view-img" href="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" style="background-image:url(http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg)"><img src="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" alt=""></a>
+                                        <button type="button" class="btn-del"><i class="xi-close"></i></button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="view-img" href="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" style="background-image:url(http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg)"><img src="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" alt=""></a>
+                                        <button type="button" class="btn-del"><i class="xi-close"></i></button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="view-img" href="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" style="background-image:url(http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg)"><img src="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" alt=""></a>
+                                        <button type="button" class="btn-del"><i class="xi-close"></i></button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="view-img" href="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" style="background-image:url(http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg)"><img src="http://www.smilebone.com/img_up/shop_pds/smileh/bbs/board12/add_img/2017/byeong-won-nae-bu41494840769.jpg" alt=""></a>
+                                        <button type="button" class="btn-del"><i class="xi-close"></i></button>
+                                    </li>
+                                    <!-- 첨부버튼 -->
+                                    <li class="list-inline-item">
+                                        <div class="btn-upload">
+                                            <label for="customFile" class="custom-file-label">
+                                                <input type="file" id="customFile" class="custom-file-input" />
+                                                <span><i class="xi-plus"></i><span>사진첨부</span></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- 하단 고정 버튼-->
+    <div class="ft-fixed">
+        <button type="button" class="btn btn-lg btn-block btn-primary" disabled>리뷰 작성 완료</button>
+    </div>
+
+    <!-- image viewer -->
+    <div id="pswp" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 시술 부위 선택 -->
+    <div id="siteChoice" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시술 부위 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="lst-tmb3">
+                        <li>
+                            <a href="javascript:void(0);" class="active">
+                                <img class="img" src="img/icon-bk-eyes.png" alt="">
+                                <span>눈</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-nose.png" alt="">
+                                <span>코</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-lips.png" alt="">
+                                <span>입술</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-hair.png" alt="">
+                                <span>헤어</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-forehead.png" alt="">
+                                <span>이마</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-face.png" alt="">
+                                <span>얼굴</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-ears.png" alt="">
+                                <span>귀</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-chin.png" alt="">
+                                <span>턱</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-neck.png" alt="">
+                                <span>목</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-breasts.png" alt="">
+                                <span>가슴</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-body.png" alt="">
+                                <span>바디</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img class="img" src="img/icon-bk-teeth.png" alt="">
+                                <span>치아</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 시술 방법 선택 -->
+    <div id="methodChoice" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">시술 방법 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-primary btn-rounded" href="#" title="삭제">눈앞트임<span class="ml-1">×</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-primary btn-rounded" href="#" title="삭제">눈뒷트임<span class="ml-1">×</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-primary btn-rounded" href="#" title="삭제">눈밑지방제거술<span class="ml-1">×</span></a>
+                        </li>
+                    </ul>
+                    <div class="wrap-srch">
+                        <form class="frm-srch">
+                            <input type="text" class="input-srch" placeholder="시술 방법 검색">
+                            <button type="reset" class="icon-srch-clear"></button>
+                        </form>
+                    </div>
+                    <ul class="lst-default lst-method">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <label class="custom-label">
+                                    <input type="checkbox" class="sr-only" name="leave"><span>시술 방법</span>
+                                </label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <label class="custom-label">
+                                    <input type="checkbox" class="sr-only" name="leave"><span>시술 방법</span>
+                                </label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 병원 선택 -->
+    <div id="clinicChoice" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">병원 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap-srch">
+                        <form class="frm-srch">
+                            <input type="text" class="input-srch" placeholder="병원명 검색">
+                            <button type="reset" class="icon-srch-clear"></button>
+                        </form>
+                    </div>
+                    <ul class="lst-default lst-method">
+                        <li>
+                            <a href="javascript:void(0);">병원 명</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">병원 명</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 의사 선택 -->
+    <div id="doctorChoice" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">의사 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap-srch">
+                        <form class="frm-srch">
+                            <input type="text" class="input-srch" placeholder="의사명 검색">
+                            <button type="reset" class="icon-srch-clear"></button>
+                        </form>
+                    </div>
+                    <ul class="lst-default lst-method">
+                        <li>
+                            <a href="javascript:void(0);">의사 명</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">의사 명</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 병원 만족도 -->
+    <div id="clinicSatisfaction" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                    <h5 class="modal-title text-primary">만족도 평가</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="stars_wrap">
+                                        <h4 class="tit"><span class="text-primary">병원 만족도</span>를 입력해주세요.</h4>
+                                        <span class="stars-grade step5 star"><input type="hidden" name="rating" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <h6 class="col text-center text-dark mt-3">병원에 대한 상세한 평가를 해주세요.</h6>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">병원 청결도</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">대기시간</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">직원의 상담 태도</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">전문적인 상담</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">시술/부작용에 대한<br />충분한 설명</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">안정성에 대한 인식</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">적절한 비용</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">사후관리 서비스</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 의사 만족도 -->
+    <div id="doctorSatisfaction" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                    <h5 class="modal-title text-primary">만족도 평가</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="stars_wrap">
+                                        <h4 class="tit"><span class="text-primary">의사 만족도</span>를 입력해주세요.</h4>
+                                        <span class="stars-grade step5 star"><input type="hidden" name="rating" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <h6 class="col text-center text-dark mt-3">의사에 대한 상세한 평가를 해주세요.</h6>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">의사 친절도</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                    <div class="stars_wrap">
+                                        <label for="" class="col-form-label">결과 만족도</label>
+                                        <span class="stars-grade step3 star"><input type="hidden" name="rating" /></span>
+                                        <span class="grade"><span>0</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col"><button type="button" class="btn btn-lg btn-block btn-primary">선택완료</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 작성 취소 -->
+    <div id="mdCancel" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="estimate-txtbox">
+                        <p class="txt2">작성을 취소하시겠습니까?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6"><button type="button" class="btn btn-lg btn-block btn-light" data-dismiss="modal">취소</button></div>
+                    <div class="col-6"><button type="button" class="btn btn-lg btn-block btn-primary" onclick="history.go(-1);">확인</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/i18n/datepicker.kr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!-- 개별 페이지 실행 -->
+    <script>
+        $(function(){
+            $('.input-date').datepicker({
+                language: 'kr',
+                dateFormat: 'yyyy/mm/dd'
+            });
+        });
+    </script>
+</body>
+</html>

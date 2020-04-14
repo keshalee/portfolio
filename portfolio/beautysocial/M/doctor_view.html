@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header_detail.js"></script>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <div class="container">
+                <!-- S : 의사 상세 -->
+                <section class="view view-doctor">
+                    <header class="view-hd">
+                        <div class="profile">
+                            <div class="img" style="background-image: url('img/profile-doctor.png')"></div>
+                        </div>
+                        <div class="d-inline">
+                            <span class="surgery-mark">마취과 전문의</span>
+                            <h2>김성범 원장</h2>
+                            <p>TJ 성형외과</p>
+                            <div class="view-meta">
+                                <div class="star-wrap">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <span class="star" style="width:70%;">
+                                        <i class="icon-star active"></i>
+                                        <i class="icon-star active"></i>
+                                        <i class="icon-star active"></i>
+                                        <i class="icon-star active"></i>
+                                        <i class="icon-star active"></i>
+                                    </span>
+                                </div>
+                                <span class="star-grade"><b>3.5</b>(25)</span>
+                                <div class="like-wrap">
+                                    <i class="icon-like"></i>
+                                    <span class="like-grade">18</span>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="position-relative">
+                        <!-- 상세 탭 -->
+                        <ul class="view-tab nav">
+                            <li><a class="active" href="#viewTab" data-toggle="tab">의사소개</a></li>
+                            <li><a href="#viewTab2" data-toggle="tab">리뷰 <em>12</em></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- S : 병원소개 -->
+                            <div id="viewTab" class="tab-pane active">
+                                <div class="view-body">
+                                    <div class="view-sect-full">
+                                        <!-- S : 평가하기 -->
+                                        <section class="view-sect">
+                                            <h3 class="view-sect-hd"><a href="evaluation.html">평가하기 <em>5</em>개<i class="icon-arrow-right pull-right"></i></a></h3>
+                                            <div class="view-cnt">
+                                                <ul class="lst-default lst-evaluation">
+                                                    <li class="no-data">
+                                                        <div class="media justify-content-between">
+                                                            등록된 평가가 없습니다. <a href="#mdEval" class="text-link text-success" data-toggle="modal">평가작성하기</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="lst-wrap">
+                                                    <ul class="lst-default lst-evaluation">
+                                                        <li>
+                                                            <div class="media">
+                                                                <div class="media-body">
+                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                        <div class="profile">
+                                                                            <i class="img" style="background-image:url('img/profile.png');"></i>
+                                                                            <span class="tit">jack99880</span>
+                                                                            <span class="badge badge-secondary"><em>4.5</em>/5</span>
+                                                                        </div>
+                                                                        <div class="date">2019.11.21</div>
+                                                                    </div>
+                                                                    <a href="#" class="txt folding-cnt txt-line" data-toggle="folding" data-line="2">
+                                                                        전화로 문의 드렸는데 친절 했음! 방문해야 상세한 상담 가능하다 해서 가보려고요. 나머지는 병원 친절 했음! 나머지는 병원 친절 했음! 
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media cmt-wrap">
+                                                                <div class="media-body">
+                                                                    <div class="d-flex">
+                                                                        <div class="profile">
+                                                                            <span class="tit">병원 관리자</span>
+                                                                        </div>
+                                                                        <div class="date">2019.11.21</div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        전화로 문의 드렸는데 친절 했음! 방문해야 상세한 상담 가능하다 해서 가보려고요. 나머지는 병원 친절 했음! 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="media">
+                                                                <div class="media-body">
+                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                        <div class="profile">
+                                                                            <i class="img" style="background-image:url('img/profile.png');"></i>
+                                                                            <span class="tit">jack99880</span>
+                                                                            <span class="badge badge-secondary"><em>4.5</em>/5</span>
+                                                                        </div>
+                                                                        <div class="date">2019.11.21</div>
+                                                                    </div>
+                                                                    <a href="#" class="txt folding-cnt txt-line" data-toggle="folding" data-line="2">
+                                                                        전화로 문의 드렸는데 친절 했음! 방문해야 상세한 상담 가능하다 해서 가보려고요.
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- E : 평가하기 -->
+
+                                        <!-- S : 시술가능 분야 -->
+                                        <section class="view-sect">
+                                            <h3 class="view-sect-hd">시술가능 분야</h3>
+                                            <div class="view-cnt">
+                                                <a href="#" class="folding-cnt" data-toggle="folding" data-line="10">
+                                                    <dl class="view-lst-tr">
+                                                        <dt>forwhead</dt>
+                                                        <dd>얼굴 윤곽술</dd>
+                                                        <dt>face</dt>
+                                                        <dd>얼굴 윤곽술, 얼굴 절개술, 얼굴 손상술, 얼굴 파괴술, 얼굴 곰보술</dd>
+                                                        <dt>face</dt>
+                                                        <dd>얼굴 윤곽술, 얼굴 절개술, 얼굴 손상술, 얼굴 파괴술, 얼굴 곰보술</dd>
+                                                        <dt>forwhead</dt>
+                                                        <dd>얼굴 윤곽술</dd>
+                                                        <dt>face</dt>
+                                                        <dd>얼굴 윤곽술, 얼굴 절개술, 얼굴 손상술, 얼굴 파괴술, 얼굴 곰보술</dd>
+                                                        <dt>face</dt>
+                                                        <dd>얼굴 윤곽술, 얼굴 절개술, 얼굴 손상술, 얼굴 파괴술, 얼굴 곰보술</dd>
+                                                    </dl>
+                                                </a>
+                                            </div>
+                                        </section>
+                                        <!-- E : 시술가능 분야 -->
+
+                                        <!-- S : 약력 -->
+                                        <section class="view-sect">
+                                            <h3 class="view-sect-hd">약력</h3>
+                                            <div class="view-cnt">
+                                                <a href="#" class="folding-cnt" data-toggle="folding" data-line="5">
+                                GraduatedfromSeoulNationalUniversity
+                                Collegeof Medicine -TraineratSeoulNational
+                                University MajoredatDepartmentofPlastic
+                                Surgery,AsanMedical Center,Seoul -Majoredat
+                                DepartmentofPlasticSurgery,AsanMedical
+                                Center,Seoul
+                                                    GraduatedfromSeoulNationalUniversity
+                                Collegeof Medicine -TraineratSeoulNational
+                                University MajoredatDepartmentofPlastic
+                                Surgery,AsanMedical Center,Seoul -Majoredat
+                                DepartmentofPlasticSurgery,AsanMedical
+                                Center,Seoul
+                                                </a>
+                                            </div>
+                                        </section>
+                                        <!-- E : 약력 -->
+
+                                        <!-- S : 가능 외국어 -->
+                                        <section class="view-sect">
+                                            <h3 class="view-sect-hd">가능 외국어</h3>
+                                            <div class="view-cnt">
+                                                영어, 외국어
+                                            </div>
+                                        </section>
+                                        <!-- E : 가능 외국어 -->
+
+                                        <!-- S : 소속 병원 및 위치 -->
+                                        <section class="view-sect">
+                                            <h3 class="view-sect-hd">소속 병원 및 위치</h3>
+                                            <div class="view-cnt">
+                                                <h4 class="view-sect-tit-sub">TJ 성형외과</h4>
+                                                <a class="text-link text-light" href="hospital_view.html">병원정보 보기</a>
+                                                <div class="maparea">
+                                                    <p style="padding:30px;background:#eee;">구글지도가 출력됩니다.</p>
+                                                    <p><i class="xi-maker text-primary"></i> 1F Hanil Building, 612, Seolleung-ro, Gangnam-gu, Seoul Seonjeongneung Exit 2 100M <a href="javascript:void(0);" class="text-link text-success float-right">복사</a></p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- E : 소속 병원 및 위치 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- E : 병원소개 -->
+
+                            <!-- S : 리뷰 -->
+                            <div id="viewTab2" class="tab-pane">
+                                <h3 class="sr-only">리뷰</h3>
+                                <div class="view-body">
+                                    <div class="view-sect-full">
+                                        <div class="view-sect pt-0">
+                                            <!-- S : 리뷰목록 -->
+                                            <ul class="lst-default lst-review">
+                                                <li>
+                                                    <a href="user_profile_other.html" class="media">
+                                                        <div class="profile">
+                                                            <i class="img" style="background-image:url('img/tmb-face01.png')"></i>
+                                                        </div>
+                                                        <h4 class="tit">jack15한글 굵기<br /><span class="date">2019.12.12</span></h4>
+                                                        <div class="meta">
+                                                            <dt><i class="icon-star active">만족도</i></dt>
+                                                            <dd class="text-dark">4.5</dd>
+                                                            <dd>/ 5</dd>
+                                                        </div>
+                                                    </a>
+                                                    <a href="review_view.html" class="position-relative">
+                                                        <ul class="lst-site">
+                                                            <li class="tit">얼굴</li>
+                                                            <li>이마 보톡스</li>
+                                                            <li>이마 필러</li>
+                                                            <li>얼굴 윤곽</li>
+                                                        </ul>
+                                                        <dl class="proscons">
+                                                            <dt></dt>
+                                                            <dd class="text-truncate">직원도 친절하고 병원도 깨끗해서 좋았어요.</dd>
+                                                            <dt></dt>
+                                                            <dd class="text-truncate">예약했는데도 대기시간 너무 너무 길었어요. 너무 힘들어서 힘이 다 빠지네요. </dd>
+                                                        </dl>
+                                                    </a>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary btn-translate">번역보기</button>
+
+                                                    <ul class="lst-tmb">
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <a href="https://t1.daumcdn.net/cfile/tistory/994582425D4C177308"><img class="img-fluid" src="https://t1.daumcdn.net/cfile/tistory/994582425D4C177308" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">후</figure>
+                                                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">후</figure>
+                                                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <a href="img/profile-hospital.png">
+                                                                <img class="img-fluid" src="img/profile.png" alt="">
+                                                                <span class="plus">+3</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="d-flex">
+                                                        <dl class="dl-meta">
+                                                            <dt><i class="icon-like">좋아요</i></dt>
+                                                            <dd>34</dd>
+                                                        </dl>
+                                                        <dl class="dl-meta" onclick="location.href='review_view.html'">
+                                                            <dt class="text-primary"><i class="icon-cmt">댓글</i></dt>
+                                                            <dd>5</dd>
+                                                        </dl>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="user_profile_other.html" class="media">
+                                                        <div class="profile">
+                                                            <i class="img" style="background-image:url('img/tmb-face01.png')"></i>
+                                                        </div>
+                                                        <h4 class="tit">jack15한글 굵기<br /><span class="date">2019.12.12</span></h4>
+                                                        <div class="meta">
+                                                            <dt><i class="icon-star active">만족도</i></dt>
+                                                            <dd class="text-dark">4.5</dd>
+                                                            <dd>/ 5</dd>
+                                                        </div>
+                                                    </a>
+                                                    <a href="review_view.html" class="position-relative">
+                                                        <ul class="lst-site">
+                                                            <li class="tit">얼굴</li>
+                                                            <li>이마 보톡스</li>
+                                                            <li>이마 필러</li>
+                                                            <li>얼굴 윤곽</li>
+                                                        </ul>
+                                                        <dl class="proscons">
+                                                            <dt></dt>
+                                                            <dd class="text-truncate">직원도 친절하고 병원도 깨끗해서 좋았어요.</dd>
+                                                            <dt></dt>
+                                                            <dd class="text-truncate">예약했는데도 대기시간 너무 너무 길었어요. 너무 힘들어서 힘이 다 빠지네요. </dd>
+                                                        </dl>
+                                                    </a>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary btn-translate">번역보기</button>
+
+                                                    <ul class="lst-tmb">
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <a href="https://t1.daumcdn.net/cfile/tistory/994582425D4C177308"><img class="img-fluid" src="https://t1.daumcdn.net/cfile/tistory/994582425D4C177308" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">후</figure>
+                                                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">후</figure>
+                                                            <a href="img/profile-hospital.png"><img class="img-fluid" src="img/profile.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <figure class="badge">전</figure>
+                                                            <a href="img/profile-hospital.png">
+                                                                <img class="img-fluid" src="img/profile.png" alt="">
+                                                                <span class="plus">+3</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="d-flex">
+                                                        <dl class="dl-meta">
+                                                            <dt><i class="icon-like">좋아요</i></dt>
+                                                            <dd>34</dd>
+                                                        </dl>
+                                                        <dl class="dl-meta" onclick="location.href='review_view.html'">
+                                                            <dt class="text-primary"><i class="icon-cmt">댓글</i></dt>
+                                                            <dd>5</dd>
+                                                        </dl>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- E : 리뷰목록 -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn-float">
+                                    <a href="review_write.html" class="btn-circle btn-secondary">리뷰<br>작성</a>
+                                </div>
+                            </div>
+                            <!-- E : 리뷰 -->
+                        </div>
+                    </div>
+                </section>
+                <!-- E : 의사 상세 -->
+            </div>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <!-- 하단 고정 버튼-->
+    <div class="ft-fixed">
+        <div class="row no-gutters view-btn">
+<!--
+            <div class="col">
+                <a href="" class="btn btn-lg bg-muted">병원 홈페이지</a>
+            </div>
+            <div class="col">
+                <a href="" class="btn btn-lg bg-muted">전화 문의</a>
+            </div>
+-->
+            <div class="col">
+                <a href="#counselingRequest" class="btn btn-lg btn-block btn-primary btn-rounded" data-toggle="modal">상담 신청</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 상담신청 -->
+    <div id="counselingRequest" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">상담 신청하기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="counseling-customer form-group-wrap">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label for="customerName" class="col-form-label">이름</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" id="customerName" class="form-control" placeholder="이름 입력">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label for="customerPhone" class="col-form-label">휴대폰</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-row">
+                                        <div class="col-4">
+                                            <div class="form-control select" data-toggle="modal" data-target="#countrySelect">
+                                                <span>+82</span>
+                                            </div>
+                                        </div>
+                                        <div class="col"><input type="text" class="form-control" title="휴대폰번호 입력"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label for="customerSns" class="col-form-label">메신저</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-row">
+                                        <div class="col-4">
+                                            <select id="customerSns" class="form-control">
+                                                <option value="">카카오톡</option>
+                                            </select>
+                                        </div>
+                                        <div class="col"><input type="text" class="form-control" title="메신저 아이디 입력"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label class="col-form-label">시술 부위 선택 <span class="text-basic">(최소 1개 선택)</span></label>
+                        </div>
+                        <ul class="form-row buttons-group type2">
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only" checked="">
+                                    <span class="btn btn-rounded">Eyes</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Nose</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Lips</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Hair</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Face</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Jaw</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Breasts</span>
+                                </label>
+                            </li>
+                            <li class="col-6 col-md-4">
+                                <label class="custorm-label-button">
+                                    <input type="checkbox" class="sr-only">
+                                    <span class="btn btn-rounded">Body</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col">
+                        <button type="button" class="btn btn-lg btn-block btn-primary">신청하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 국가코드선택 -->
+    <div id="countrySelect" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">국가코드선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-back"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap-srch">
+                        <form class="frm-srch">
+                            <input type="text" class="input-srch" placeholder="국가명 검색">
+                            <button type="submit" class="icon-md-srch">검색</button>
+                            <button type="reset" class="icon-srch-clear"></button>
+                        </form>
+                    </div>
+                    <ul class="lst-default lst-country">
+                        <li><a href="javascript:void(0);">대한민국 +82</a></li>
+                        <li><a href="javascript:void(0);">국가 +코드</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 공유하기 -->
+    <div id="mdShare" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">공유하기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="lst-share">
+                        <li>
+                            <a class="bg-kakao" href="#">
+                                <span><i class="xi-kakaotalk"></i> <strong>카카오톡으로 보내기</strong></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-line" href="#">
+                                <span><i class="xi-line-messenger"></i> <strong>라인으로 보내기</strong></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 평가 작성하기 -->
+    <div id="mdEval" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-hd-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="center-block">
+                        <h2>평가 작성하기</h2>
+                    </div>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="stars_wrap">
+                                        <span class="stars-grade step5 star"><input type="hidden" name="rating" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="textarea-wrap">
+                                        <textarea placeholder="병원에 대한 평가를 남겨주세요.(최대 500자)" rows="3" class="form-control"></textarea>
+                                        <div class="text-right text-muted"><span class="text-dark">0</span> / 500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="buttons-group">
+                        <a href="" class="btn btn-block btn-rounded btn-lg btn-primary">작성 완료</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- 개별 페이지 실행 -->
+    <script>
+        jQuery(function($){
+            "use strict";
+            
+            // folding
+            $('[data-toggle=folding]').each(function(){
+                var t = $(this);
+                var line = t.data("line");
+                
+                if(line == 2) {
+                    if(t.height()/line>parseInt(t.css('line-height'))){
+                        t[0].dataset.toggle = 'folding';
+                    }
+                }else {
+                    if(t.height()/line>parseInt(t.css('line-height'))){
+                        t.after('<a href="#" data-toggle="folding" data-line="'+line+'"><p class="box-shadow"></p><span data-text-folding="접기" data-text-more="더보기">더보기</span></a>');
+                        t[0].dataset.toggle = 'folding';
+                    }
+                }
+            });
+            
+            $(window).scroll(function(){
+                var $body = $('body');
+                var pos = $(this).scrollTop();
+                pos > $(".tab-content").offset().top ? $body.addClass('nav-fix') : $body.removeClass('nav-fix');
+            }).trigger('scroll');
+        });
+        //좋아요 샘플
+        function like() {
+            var title;
+            $(".icon-hd-like").toggleClass("active");
+            if($(".icon-hd-like").hasClass("active")) {
+                title = $(".icon-hd-like").attr("data-original-title","좋아요");
+                var tooltips = $(".icon-hd-like[title]").tooltip({
+                    content: "좋아요",
+                    position: {
+                        my: "center bottom",
+                        at: "center bottom",
+                        collision: "none"
+                    }
+                });
+                tooltips.tooltip("show");
+                setTimeout(function(){
+                    $(".tooltip").tooltip("hide");
+                }, 1500);
+            }else {
+                title = $(".icon-hd-like").attr("data-original-title","좋아요 취소");
+                var tooltips = $(".icon-hd-like[title]").tooltip({
+                    content: "좋아요 취소",
+                    position: {
+                        my: "center bottom",
+                        at: "center bottom",
+                        collision: "none"
+                    }
+                });
+                tooltips.tooltip("show");
+                setTimeout(function(){
+                    $(".tooltip").tooltip("hide");
+                }, 1500);
+            }
+        }
+    </script>
+</body>
+</html>

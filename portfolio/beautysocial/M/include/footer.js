@@ -1,0 +1,1 @@
+document.write("<footer><nav id='gnb'><ul><li class='active'><a href='index.html'>홈</a></li><li><a href='event.html'>이벤트</a></li><li><a href='review.html'>리뷰</a></li><li><a href='treatment_main.html'>시술정보</a></li></ul></nav><div class='sr-only'>Copyright &copy; BeautySocial.</div></footer>");

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeautySocial</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</head>
+<body>
+    <!-- S : wrap -->
+    <div id="wrap">
+        <!-- S : header -->
+        <script src="include/header_back.js"></script>
+        <!-- E : header -->
+        
+        <!-- S : contents -->
+        <div id="contents">
+            <div class="container">
+                <!-- S : 수술 선택 -->
+                <div class="position-relative ranking-tab">
+                    <ul class="view-tab nav">
+                        <li><a href="#viewTab" class="active" data-toggle="tab">병원</a></li>
+                        <li><a href="#viewTab2" data-toggle="tab">의사</a></li>
+                    </ul>
+                    <div class="view-body tab-content">
+                        <!-- S : 병원 -->
+                        <div id="viewTab" class="tab-pane active">
+                            <div class="view-body">
+                                <div class="view-sect-full">
+                                    <!-- 시술부위 [D] 활성화 active -->
+                                    <nav class="nav-category2 swiper-container">
+                                        <ul class="swiper-wrapper">
+                                            <!-- [D] 활성화 class="active" 시술목적x class="no-puopose" -->
+                                            <li class="swiper-slide no-puopose"><a href="javascript:void(0);">전체</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">눈</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">코</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">입술</a></li>
+                                            <li class="swiper-slide active"><a href="javascript:void(0);">피부</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">필러/보톡스/리프팅</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">안면윤곽/양악/턱</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">치아</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">이마/헤어라인</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">귀</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">지방이식</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">지방흡입</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">가슴</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">생식기</a></li>
+                                        </ul>
+                                    </nav>
+
+                                    <!-- 병원 목록 -->
+                                    <ul class="lst-default lst-rank">
+                                        <li>
+                                            <a class="media" href="hospital_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">1</p>
+                                                    <p class="ranking_num">
+                                                        <i class="icon-rank"></i>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image:url(img/profile-hospital.png)"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit">청담 오라클 피부과</h4>
+                                                    <div class="sub-tit"><span>서울특별시 강남구</span> <span>압구정역</span></div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="hospital_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">2</p>
+                                                    <p class="ranking_num up">
+                                                        <i class="icon-rank"></i><span>2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image:url(img/profile-hospital.png)"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit">청담 오라클 피부과</h4>
+                                                    <div class="sub-tit"><span>서울특별시 강남구</span> <span>압구정역</span></div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="hospital_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">3</p>
+                                                    <p class="ranking_num down">
+                                                        <i class="icon-rank"></i><span>2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image:url(img/profile-hospital.png)"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="tit">청담 오라클 피부과</h4>
+                                                    <div class="sub-tit"><span>서울특별시 강남구</span> <span>압구정역</span></div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="ranking_info">
+                                            <a href="mypage_setting_notice.html">
+                                                <span>뷰티소셜 랭킹, 어떻게 선정되나요?</span> <i class="xi-angle-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E : 병원 -->
+
+                        <!-- S : 의사 -->
+                        <div id="viewTab2" class="tab-pane">
+                            <div class="view-body">
+                                <div class="view-sect-full">
+                                    <!-- 시술부위 [D] 활성화 active -->
+                                    <nav class="nav-category2 swiper-container">
+                                        <ul class="swiper-wrapper">
+                                            <!-- [D] 활성화 class="active" 시술목적x class="no-puopose" -->
+                                            <li class="swiper-slide no-puopose"><a href="javascript:void(0);">전체</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">눈</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">코</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">입술</a></li>
+                                            <li class="swiper-slide active"><a href="javascript:void(0);">피부</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">필러/보톡스/리프팅</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">안면윤곽/양악/턱</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">치아</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">이마/헤어라인</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">귀</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">지방이식</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">지방흡입</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">가슴</a></li>
+                                            <li class="swiper-slide"><a href="javascript:void(0);">생식기</a></li>
+                                        </ul>
+                                    </nav>
+
+                                    <!-- 병원 목록 -->
+                                    <ul class="lst-default lst-rank">
+                                        <li>
+                                            <a class="media" href="doctor_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">1</p>
+                                                    <p class="ranking_num up">
+                                                        <i class="icon-rank"></i><span>2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="surgery-mark">마취과 전문의</span>
+                                                    <h4 class="tit">김피노</h4>
+                                                    <div class="sub-tit">코디성형외과</div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                        <li><i class="icon-dots"></i></li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="doctor_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">1</p>
+                                                    <p class="ranking_num up">
+                                                        <i class="icon-rank"></i><span>2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="surgery-mark">마취과 전문의</span>
+                                                    <h4 class="tit">김피노</h4>
+                                                    <div class="sub-tit">코디성형외과</div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                        <li><i class="icon-dots"></i></li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="media" href="doctor_view.html">
+                                                <div class="rank_wrap">
+                                                    <p class="rank">1</p>
+                                                    <p class="ranking_num up">
+                                                        <i class="icon-rank"></i><span>2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="profile">
+                                                    <i class="img" style="background-image: url('img/profile-doctor.png')"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="surgery-mark">마취과 전문의</span>
+                                                    <h4 class="tit">김피노</h4>
+                                                    <div class="sub-tit">코디성형외과</div>
+                                                    <ul class="lst-site">
+                                                        <li>얼굴</li>
+                                                        <li>바디</li>
+                                                        <li>다리</li>
+                                                        <li><i class="icon-dots"></i></li>
+                                                    </ul>
+                                                    <dl class="dl-meta">
+                                                        <dt><i class="icon-star3">리뷰별점</i></dt>
+                                                        <dd><em>4.5</em>(25)</dd>
+                                                        <dt><i class="icon-like">좋아요</i></dt>
+                                                        <dd>34</dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="ranking_info">
+                                            <a href="mypage_setting_notice.html">
+                                                <span>뷰티소셜 랭킹, 어떻게 선정되나요?</span> <i class="xi-angle-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E : 의사 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E : contents -->
+        
+        <!-- S : footer -->
+        <footer class="sr-only">
+            <div>Copyright &copy; BeautySocial.</div>
+        </footer>
+        <!-- E : footer -->
+    </div>
+    <!-- E : wrap -->
+    
+    <script src="js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <!-- 개별 페이지 실행 -->
+    <script>
+        jQuery(function($){
+            "use strict";
+            
+            $(window).scroll(function(){
+                var $body = $('body');
+                var pos = $(this).scrollTop();
+                pos > $(".tab-content").offset().top ? $body.addClass('nav-fix') : $body.removeClass('nav-fix');
+            }).trigger('scroll');
+            
+            var navSwiper = new Swiper('.nav-category2', {
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+                freeMode: true
+            });
+            
+        });
+        
+    </script>
+</body>
+</html>
