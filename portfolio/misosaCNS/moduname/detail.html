@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko">
+<head>
+    <title>명앤명</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta content="모두네임,명앤명" name="keywords" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.selectBox.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+    <div class="body_wrap">
+        <i class="fa fa-spinner fa-spin fa-3x fa-spin"></i>
+    </div>
+    
+    <nav id="navbar" style="display:none;">
+        <div class="inner">
+            <h1><a href="index.html"><img src="images/common/header_logo.png" alt="" /></a></h1>
+            <p class="mobile-only mobile-bars"><a href="javascript:;"><img src="images/contents/mobile_bars.png" alt="" /></a></p>
+            <p class="mobile-only mobile-login"><a href="login/login.html"><img src="images/contents/icon_15.png" alt="" /></a></p>
+            <div id="seach_wrap">
+                <div class="seach_box">
+                    <p class="txt"><input type="text" placeholder="어떤 상담이 필요하세요?" /><a href="editVideo_seach.html" class="seach">검색</a></p>
+                </div>
+            </div>
+            <div class="frbox">
+                <ul>
+                    <li><a href="login/login.html">로그인</a></li>
+                    <li><a href="login/join.html">회원가입</a></li>
+                    <li><a href="javascript:;">앱다운로드</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="slideinfo slideinfo2">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">사주/운세</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">궁합</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">타로</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">진로/적성</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">입시상담</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">작명</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">상호명</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">풍수인테리어</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">강좌안내</p></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl onclick="location.href='expert_seach.html'">
+                            <dd class="txtbox"><p class="txt1">상담컨설팅</p></dd>
+                        </dl>
+                    </li>
+                    <li class="last last1">
+                        <dl onclick="location.href='order_main.html'">
+                            <dd class="txtbox"><p class="txt1">상담경매</p></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="header" class="sub sub2">
+        <div id="gnb" class="pc-only">
+            <div class="inner">
+                <h1><a href="index.html"><img src="images/common/header_logo.png" alt="" /></a></h1>
+                <div id="seach_wrap">
+                    <div class="inner">
+                        <div class="seach_box">
+                            <p class="txt"><input type="text" placeholder="어떤 상담이 필요하세요?" /><a href="editVideo_seach.html" class="seach">검색</a></p>
+                        </div>
+                    </div>
+                    <!-- /.inner -->
+                </div>
+                <!-- /#seach -->
+                <div class="frbox">
+                    <ul>
+                        <li><a href="login/login.html">로그인</a></li>
+                        <li><a href="login/join.html">회원가입</a></li>
+                        <li><a href="javascript:;">앱다운로드</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /#gnb -->
+        <div id="seach_wrap">
+            <div class="inner">
+                <div class="seach_box">
+                    <h1 class="mobile-only"><a href="index.html"><img src="images/common/header_logo.png" alt="" /></a></h1>
+                    <p class="mobile-only mobile-bars"><a href="javascript:;"><img src="images/contents/mobile_bars.png" alt="" /></a></p>
+                    <p class="mobile-only mobile-login"><a href="login/login.html"><img src="images/contents/icon_15.png" alt="" /></a></p>
+                    <p class="txt"><input type="text" placeholder="어떤 상담이 필요하세요?" /><a href="editVideo_seach.html" class="seach">검색</a></p>
+                </div>
+            </div>
+            <!-- /.inner -->
+        </div>
+        <!-- /#seach -->
+    </div>
+    <!-- /#header -->
+    
+    <div class="header-mobile">
+        <div class="inner">
+            <a href="javascript:;" class="close"><img src="images/contents/btn_close_02.png" alt="" /></a>
+            <div class="topArea">
+                <div class="title txc">
+                    <p class="txt1">로그인하고 혜택 받으세요</p>
+                </div>
+                <div class="btnbox txc">
+                    <div class="button1"><a href="login/join.html">회원가입</a></div>
+                    <div class="button2"><a href="login/login.html">로그인</a></div>
+                    <div class="button3"><a href="mypage/mypage.html">마이페이지</a></div>
+                    <div class="button4"><a href="mypage/notice.html">고객센터</a></div>
+                </div>
+            </div>
+            <div class="bottomArea">
+                <div class="notice">
+                    <p class="title">공지사항</p>
+                    <p class="cont ell1">이름짓는 작명앱이 오픈됩니다.</p>
+                    <p class="date ell1">2018.02.02</p>
+                    <p class="more-btn"><a href="javascript:;"><i class="fa fa-chevron-right"></i></a></p>
+                </div>
+                <div class="slideinfo slideinfo1 mobile-only">
+                    <ul>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_01.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">사주/운세</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_02.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">궁합</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_03.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">타로</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_06.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">작명</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_07.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">상호명</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_08.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">풍수인테리어</p></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl onclick="location.href='expert_seach.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_09.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">강좌안내</p></dd>
+                            </dl>
+                        </li>
+                        <li class="last last1">
+                            <dl onclick="location.href='order_main.html'">
+                                <dt class="imgbox"><img src="images/contents/icon_11.png" alt="" /></dt>
+                                <dd class="txtbox"><p class="txt1">상담경매</p></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-down">
+                    <dl class="app app1">
+                        <dt class="imgbox"><img src="images/common/modu_logo1.png" alt="" /></dt>
+                        <dd class="txtbox">
+                            <p class="txt1"><a href="javascript:;">모두네임 앱 다운받기</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="app app1">
+                        <dt class="imgbox"><img src="images/common/modu_logo2.png" alt="" /></dt>
+                        <dd class="txtbox">
+                            <p class="txt1"><a href="javascript:;">모두맘 앱 다운받기</a></p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="csArea">
+                    <p class="tel">고객센터 1661-2749 (평일 09:00 ~ 18:00)</p>
+                </div>
+                <div class="menu-banner">
+                    <p class="txt1">배너광고부분</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slideinfo slideinfo2">
+        <div class="inner">
+            <ul>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">사주/운세</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">궁합</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">타로</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">진로/적성</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">입시상담</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">작명</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">상호명</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">풍수인테리어</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">강좌안내</p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl onclick="location.href='expert_seach.html'">
+                        <dd class="txtbox"><p class="txt1">상담컨설팅</p></dd>
+                    </dl>
+                </li>
+                <li class="last last1">
+                    <dl onclick="location.href='order_main.html'">
+                        <dd class="txtbox"><p class="txt1">상담경매</p></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="sitemap_wrap">
+        <div class="inner">
+            <div class="sitemap">
+                <img src="images/contents/home.png" alt="" /><a href="index.html">홈 </a><small>></small> <a href="javascript:;">궁합 </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.sitemap_wrap -->
+    
+    <!-- #section8 -->
+    <div id="section8">
+        <div class="inner section txc">
+            <div class="detail_wrap">
+                <div class="flbox">
+                    <div class="imgbox"><img src="images/contents/img_temp_04.jpg" alt="" /></div>
+                    <div class="profile">
+                        <dl>
+                            <dt class="profile-img">
+                                <img src="images/contents/pic_01.jpg" alt="" />
+                                
+                            </dt>
+                            <dd class="rank modal_profile"><img src="images/contents/certification_img1.png" alt="" /></dd>
+                            <dd class="name">steveplus</dd>
+                            <dd class="bar"></dd>
+                        </dl>
+                        <div class="txtbox">
+                            <p class="title ell1">[24시간 타로상담] richplus의 해답을 찾는곳! 부문 1위</p>
+                            <dl class="star-rating">
+                                <dt class="imgbox"><img src="images/contents/slide_grade_05.png" alt="" /></dt>
+                                <dd class="rate">(382)</dd>
+                            </dl>
+                            <p class="tel_num"><a href="javascript:;">결제전 연락처 비공개</a></p>
+                            <div class="btn_dal"><a href="javascript:;">판매자스케줄</a></div>
+                            <div class="cal" id="cal"></div>
+                            <div class="clearfix"></div>
+                            <div class="number">
+                                <div class="share">
+                                    <p class="txt1">공유</p>
+                                    <p class="txt2 imgbox modal_share"><img src="images/contents/icon_share.png" alt="" /></p>
+                                </div>
+                                <div class="report">
+                                    <p class="txt1">신고하기</p>
+                                    <p class="txt2 imgbox modal_report"><img src="images/contents/icon_siren.png" alt="" /></p>
+                                </div>
+                                <div class="like_num">
+                                    <p class="txt1">찜하기</p>
+                                    <p class="txt2 imgbox like_btn"><i class="fa fa-heart"></i></p>
+                                </div>
+                                <div class="eval_num">
+                                    <p class="txt1">만족도</p>
+                                    <p class="txt2">4.5</p>
+                                </div>
+                                <div class="consult_num">
+                                    <p class="txt1">상담건수</p>
+                                    <p class="txt2">2,501</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txtbox2">
+                        <p class="txt1">전문가 소개 <a href="mypage/profile.html">+ 더보기</a></p>
+                        <p class="txt2 ell3">회사를 접고 일찍이 동양철학을 접하게 되어 공부한지도 어언 30년이 되었네요. 스승님으로부터 모든 사람들에게 희망을 주어야 한다는 사명감으로 임하고 있습니다. 선천적인 운명이 있지만은 후천적인 노력으로 얼마든지 개운이 가능합니다. 회사를 접고 일찍이 동양철학을 접하게 되어 공부한지도 어언 30년이 되었네요. 스승님으로부터 모든 사람들에게 희망을 주어야 한다는 사명감으로 임하고 있습니다. 선천적인 운명이 있지만은 후천적인 노력으로 얼마든지 개운이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="frbox">
+                    <div class="detail_box">
+                        <div class="detail detail1 open">
+                            <div class="txtbox">
+                                <p class="txt1">전화상담 <span class="img"></span><span class="price">￦20,000</span></p>
+                                <p class="txt2 ell2">사주/운세 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 질의응답합니다.</p>
+                            </div>
+                            <div class="txtbox2">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_01.png" alt="" /></dt>
+                                    <dd class="txt3">상담횟수 1회</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_02.png" alt="" /></dt>
+                                    <dd class="txt3">1회당 상담시간(분) : 30분</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_03.png" alt="" /></dt>
+                                    <dd class="txt3">무료A/S상담 : 상담 후 1일 이내</dd>
+                                </dl>
+                                <form class="detail_sub">
+                                    <fieldset>
+                                        <select name="" id="" class="detail_selectType1">
+                                            <option value="">옵션선택</option>
+                                            <option value="">옵션1</option>
+                                            <option value="">옵션2</option>
+                                        </select>
+
+                                        <ul class="detail_cart">
+                                            <li class="first">
+                                                <h3>옵션1</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                            <li>
+                                                <h3>옵션2</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option2" name="cart_option2" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <p class="detail_price">
+                                    최종 상담금액
+                                    <strong>￦273,900</strong>
+                                </p>
+                                <p class="txt4"><a href="mypage/order_form.html">상담 신청하기<i class="fa fa-play"></i></a><a href="javascript:;" class="modal_price">협의된 가격주문</a></p>
+                            </div>
+                        </div>
+                        <div class="detail detail2">
+                            <div class="txtbox">
+                                <p class="txt1">방문상담 <span class="img"></span><span class="price">￦100,000</span></p>
+                                <p class="txt2 ell2">작명 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 해결하고 질의응답합니다.</p>
+                            </div>
+                            <div class="txtbox2">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_01.png" alt="" /></dt>
+                                    <dd class="txt3">상담횟수 1회</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_02.png" alt="" /></dt>
+                                    <dd class="txt3">1회당 상담시간(분) : 30분</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_03.png" alt="" /></dt>
+                                    <dd class="txt3">무료A/S상담 : 상담 후 1일 이내</dd>
+                                </dl>
+                                <form class="detail_sub">
+                                    <fieldset>
+                                        <select name="" id="" class="detail_selectType1">
+                                            <option value="">옵션선택</option>
+                                            <option value="">옵션1</option>
+                                            <option value="">옵션2</option>
+                                        </select>
+
+                                        <ul class="detail_cart">
+                                            <li class="first">
+                                                <h3>옵션1</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                            <li>
+                                                <h3>옵션2</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option2" name="cart_option2" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <p class="detail_price">
+                                    최종 상담금액
+                                    <strong>￦273,900</strong>
+                                </p>
+                                <p class="txt4"><a href="mypage/order_form.html">상담 신청하기<i class="fa fa-play"></i></a><a href="javascript:;" class="modal_price">협의된 가격주문</a></p>
+                            </div>
+                        </div>
+                        <div class="detail detail3">
+                            <div class="txtbox">
+                                <p class="txt1">카톡상담 <span class="img"></span><span class="price">￦100,000</span></p>
+                                <p class="txt2 ell2">사주/운세 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 해결하고 질의응답합니다.</p>
+                            </div>
+                            <div class="txtbox2">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_01.png" alt="" /></dt>
+                                    <dd class="txt3">상담횟수 1회</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_02.png" alt="" /></dt>
+                                    <dd class="txt3">1회당 상담시간(분) : 30분</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_03.png" alt="" /></dt>
+                                    <dd class="txt3">무료A/S상담 : 상담 후 1일 이내</dd>
+                                </dl>
+                                <form class="detail_sub">
+                                    <fieldset>
+                                        <select name="" id="" class="detail_selectType1">
+                                            <option value="">옵션선택</option>
+                                            <option value="">옵션1</option>
+                                            <option value="">옵션2</option>
+                                        </select>
+
+                                        <ul class="detail_cart">
+                                            <li class="first">
+                                                <h3>옵션1</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                            <li>
+                                                <h3>옵션2</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option2" name="cart_option2" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <p class="detail_price">
+                                    최종 상담금액
+                                    <strong>￦273,900</strong>
+                                </p>
+                                <p class="txt4"><a href="mypage/order_form.html">상담 신청하기<i class="fa fa-play"></i></a><a href="javascript:;" class="modal_price">협의된 가격주문</a></p>
+                            </div>
+                        </div>
+                        <div class="detail detail4">
+                            <div class="txtbox">
+                                <p class="txt1">메일상담 <span class="img"></span><span class="price">￦100,000</span></p>
+                                <p class="txt2 ell2">사주/운세 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 해결하고 질의응답합니다.</p>
+                            </div>
+                            <div class="txtbox2">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_01.png" alt="" /></dt>
+                                    <dd class="txt3">상담횟수 1회</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_02.png" alt="" /></dt>
+                                    <dd class="txt3">1회당 상담시간(분) : 30분</dd>
+                                </dl>
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_check_03.png" alt="" /></dt>
+                                    <dd class="txt3">무료A/S상담 : 상담 후 1일 이내</dd>
+                                </dl>
+                                <form class="detail_sub">
+                                    <fieldset>
+                                        <select name="" id="" class="detail_selectType1">
+                                            <option value="">옵션선택</option>
+                                            <option value="">옵션1</option>
+                                            <option value="">옵션2</option>
+                                        </select>
+
+                                        <ul class="detail_cart">
+                                            <li class="first">
+                                                <h3>옵션1</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                            <li>
+                                                <h3>옵션2</h3>
+                                                <p>
+                                                    <button>-</button><input type="text" id="cart_option2" name="cart_option2" value="1" /><button>+</button>
+                                                </p>
+                                                <strong>￦18,600<img src="images/contents/btn_close_03.png" alt="" /></strong>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <p class="detail_price">
+                                    최종 상담금액
+                                    <strong>￦273,900</strong>
+                                </p>
+                                <p class="txt4"><a href="mypage/order_form.html">상담 신청하기<i class="fa fa-play"></i></a><a href="javascript:;" class="modal_price">협의된 가격주문</a></p>
+                            </div>
+                        </div>
+                        <div class="detail_btn">
+                            <a href="javascript:;" class="modal_qna">1:1 상담하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.inner section txc -->
+        
+        <div class="detail_view">
+            <!-- tab_contents -->
+            <div class="tab_contents type02">
+                <div class="tabbox_wrap tabbox_wrap2">
+                    <div class="inner">
+                        <ul class="tabbox">
+                            <li><a href="javascript:;" class="detail_info on">상세정보</a></li>
+                            <li><a href="javascript:;" class="price_info">가격정보 </a></li>
+                            <li><a href="javascript:;" class="reveiw">상담후기</a></li>
+                            <li><a href="javascript:;" class="ASnRF">A/S 및 환불</a></li>
+                            <li><a href="javascript:;" class="guide">이용가이드</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner section">
+                    <div id="detail_info">
+                        <div class="tit_wrap">
+                            <h3 class="tit">상세정보</h3>
+                        </div>
+                        <div class="cont_text">
+                            <p class="imgbox">
+                                <img src="images/contents/img_temp_04.jpg" alt="" />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="price_info">
+                        <div class="tit_wrap">
+                            <h3 class="tit">가격정보</h3>
+                        </div>
+
+                        <div class="table_row txc price_table">
+                            <table style="margin-bottom:0; ">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="20%">
+                                    <col width="20%">
+                                    <col width="20%">
+                                    <col width="20%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>분류</th>
+                                        <td class="txtbox1">
+                                            <p class="title">전화상담</p>
+                                            <p class="price">￦ 10,000</p>
+                                            <p class="VAT">(VAT포함)</p>
+                                        </td>
+                                        <td class="txtbox1">
+                                            <p class="title">방문상담</p>
+                                            <p class="price">￦ 20,000</p>
+                                            <p class="VAT">(VAT포함)</p>
+                                        </td>
+                                        <td class="txtbox1">
+                                            <p class="title">카톡상담</p>
+                                            <p class="price">￦ 30,000</p>
+                                            <p class="VAT">(VAT포함)</p>
+                                        </td>
+                                        <td class="txtbox1">
+                                            <p class="title">메일상담</p>
+                                            <p class="price">￦ 30,000</p>
+                                            <p class="VAT">(VAT포함)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>패키지설명</th>
+                                        <td class="txtbox2">
+                                            <p class="txt1 ell2">사주/운세 풀이를 통해 궁금한 내용을 질의응답합니다.</p>
+                                            <p class="txt2 ell5">1질문으로 진행됩니다.[최소 10 ~ 15분, 추가시간 비용없음] - 질문은 관련 질문에 한해서만 받습니다. 횟수 제한은 없음</p>
+                                        </td>
+                                        <td class="txtbox2">
+                                            <p class="txt1 ell2">작명 풀이를 통해 궁금한 내용을 해결하고 질의응답합니다.</p>
+                                            <p class="txt2 ell5">2번에 나눠서 모두 알아보실때 [최소 20분 ~, 추가시간 비용없음] - 관련 질문에 한해서는 횟수 제한없이 받습니다.</p>
+                                        </td>
+                                        <td class="txtbox2">
+                                            <p class="txt1 ell2">사주/운세 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 해결하고 질의응답합니다.</p>
+                                            <p class="txt2 ell5">30분 동안 관련된 모든 질문을 하실 수 있습니다. [최소 30분, 추가시간 비용없음] - 질문횟수 제한없음/30분 이내 </p>
+                                        </td>
+                                        <td class="txtbox2">
+                                            <p class="txt1 ell2">작명 풀이를 통해 답답하고 불안한 문제와 궁금한 내용을 해결하고 질의응답합니다.</p>
+                                            <p class="txt2 ell5">30분 동안 관련된 모든 질문을 하실 수 있습니다. [최소 30분, 추가시간 비용없음] - 질문횟수 제한없음/30분 이내 </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>상담횟수</th>
+                                        <td class="txtbox3">
+                                            <p class="txt1">1</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">1</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">1</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>1회당 상담시간(분)</th>
+                                        <td class="txtbox3">
+                                            <p class="txt1">30분</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">30분</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">30분</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">30분</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>무료 A/S상담</th>
+                                        <td class="txtbox3">
+                                            <p class="txt1">상담 후 1일 이내</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">상담 후 1일 이내</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">상담 후 1일 이내</p>
+                                        </td>
+                                        <td class="txtbox3">
+                                            <p class="txt1">상담 후 1일 이내</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="reveiw">
+                        <div class="tit_wrap">
+                            <h3 class="tit">상담후기</h3>
+                        </div>
+
+                        <form action="" name="" class="d_txt">
+                            <fieldset>
+                                <div class="review_title">
+                                    <h2><em>4.5</em><span>320명 참여</span></h2>
+                                    <div class="rating-container">
+                                        <a class="star-imgbox"><img src="images/contents/slide_grade_04.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="write_review review">
+                                    <textarea name="detail_contents" placeholder="로그인 하신 후 리뷰 쓰기가 가능합니다. 로그인 하시겠습니까?"></textarea>
+                                    <button>등록</button>
+                                </div>
+
+                                <ol>
+                                    <li>
+                                        <dl>
+                                            <dt class="imgbox"><a href="javascript:;"><img src="images/common/user_icon.png" alt="" /></a></dt>
+                                            <dd class="txtbox">
+                                                <a class="star-imgbox"><img src="images/contents/slide_grade_02.png" alt="" /></a>
+                                                <span class="id">pompe****</span>
+                                                <span class="date">17.07.19 01:12</span>
+                                                <a href="javascript:;" class="modal_report">신고하기</a>
+                                            </dd>
+                                            <dd class="txtbox">
+                                                <p class="txt1">급하게 당일 요청드렸는데 3시간만에 금방 처리해주시네요~ ^^<br /> 빠른처리 정말 감사드립니다.<br />앞으로 번창하세요.</p>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt class="imgbox"><a href="javascript:;"><img src="images/common/user_icon.png" alt="" /></a></dt>
+                                            <dd class="txtbox">
+                                                <a class="star-imgbox"><img src="images/contents/slide_grade_02.png" alt="" /></a>
+                                                <span class="id">pompe****</span>
+                                                <span class="date">17.07.19 01:12</span>
+                                                <a href="javascript:;" class="modal_report">신고하기</a>
+                                            </dd>
+                                            <dd class="txtbox">
+                                                <p class="txt1">급하게 당일 요청드렸는데 3시간만에 금방 처리해주시네요~ ^^<br /> 빠른처리 정말 감사드립니다.<br />앞으로 번창하세요.</p>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt class="imgbox"><a href="javascript:;"><img src="images/common/user_icon.png" alt="" /></a></dt>
+                                            <dd class="txtbox">
+                                                <a class="star-imgbox"><img src="images/contents/slide_grade_02.png" alt="" /></a>
+                                                <span class="id">pompe****</span>
+                                                <span class="date">17.07.19 01:12</span>
+                                                <a href="javascript:;" class="modal_report">신고하기</a>
+                                            </dd>
+                                            <dd class="txtbox">
+                                                <p class="txt1">급하게 당일 요청드렸는데 3시간만에 금방 처리해주시네요~ ^^<br /> 빠른처리 정말 감사드립니다.<br />앞으로 번창하세요.</p>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ol>
+
+                                <div class="table_num" style="margin-bottom:0;">
+                                    <div class="txc"><p class="btn_more btn_more3">더보기</p></div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div id="ASnRF">
+                        <div class="tit_wrap">
+                            <h3 class="tit">A/S 및 환불</h3>
+                        </div>
+
+                        <div class="table_row">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col width="150px">
+                                    <col width="*">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>AS규정/환불규정</th>
+                                        <td>
+                                            구매 후 12시간 이내에는  언제든지 재상담해 드립니다. 아직 상담을 시작하지 않은  경우 100% 환불해 드립니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>구매자요청사항</th>
+                                        <td>
+                                            구매자요청사항
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="guide">
+                        <div class="tit_wrap">
+                            <h3 class="tit">명앤명 이용방법</h3>
+                        </div>
+                        <ol class="guide_moduname">
+                            <li class="step01">
+                                <dl>
+                                    <dt class="imgbox"><img src="images/contents/icon_step_01.png" alt="" /></dt>
+                                    <dd class="txtbox">
+                                        <p class="txt1 ell1">상담신청</p>
+                                        <p class="txt2 ell4">원하는 상담전문가를 선택하신 후 구매하기 버튼을 누르세요.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="step02">
+                                <dl>
+                                    <dt class="imgbox"><img src="images/contents/icon_step_02.png" alt="" /></dt>
+                                    <dd class="txtbox">
+                                        <p class="txt1 ell1">1:1상담페이지 생성</p>
+                                        <p class="txt2 ell4">결제 후 1:1 상담페이지에서 전문가 선생님과 상담을 시작하세요.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="step03">
+                                <dl>
+                                    <dt class="imgbox"><img src="images/contents/icon_step_03.png" alt="" /></dt>
+                                    <dd class="txtbox">
+                                        <p class="txt1 ell1">상담완료요청</p>
+                                        <p class="txt2 ell4">상담완료 시 판매자가 상담 완료요청을 하게됩니다.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="step04">
+                                <dl>
+                                    <dt class="imgbox"><img src="images/contents/icon_step_04.png" alt="" /></dt>
+                                    <dd class="txtbox">
+                                        <p class="txt1 ell1">상담완료</p>
+                                        <p class="txt2 ell4">상담가 평가를 위해 상담후기를 작성해주세요.</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ol>
+
+                        <div class="table_row">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col width="">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>증빙서류 발급</th>
+                                        <td>현금영수증 발급가능 / 카드전표 발급가능</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주의사항</th>
+                                        <td>
+                                            <ul class="list_type01">
+                                                <li>명앤명은 안전한 거래를 위한 시스템을 제공하며, 주문에 문제가 발생할 경우 환불을 보장합니다. </li>
+                                                <li>명앤명에서 제공하지 않는 결제방법(무통장입금)을 통한 직거래로 인한 피해가 발생한 경우 명앤명은 일체의 책임을 지지않습니다. </li>
+                                                <li>판매자가 직거래를 요구할 경우 판매페이지에서 즉시 <font class="color1">[신고]</font>해주세요.</li>
+                                                <li>명앤명에 등록된 전문가상담은 개인이 등록한 것이며, 명앤명은 회원간의 중개 시스템만 제공하며, 그 내용에 대한 책임을 지지 않습니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.inner section txc -->
+    </div>
+    <!-- /#section8 -->
+    
+    <script>
+        $(document).ready(function(){
+            // 상세페이지
+            $("#section8 .frbox .detail_box .detail").click(function(){
+                $(this).addClass("open").siblings().removeClass("open");
+                if($(this).hasClass("detail1")){
+                    $('html, body').stop().animate({'scrollTop':$(".detail1").offset().top - 130}, 900, 'swing');
+                }else if($(this).hasClass("detail2")){
+                    $('html, body').stop().animate({'scrollTop':$(".detail1").offset().top - 60}, 900, 'swing');
+                }else if($(this).hasClass("detail3")){
+                    $('html, body').stop().animate({'scrollTop':$(".detail2").offset().top - 60}, 900, 'swing');
+                }else if($(this).hasClass("detail4")){
+                    $('html, body').stop().animate({'scrollTop':$(".detail3").offset().top - 60}, 900, 'swing');
+                }
+            });
+            
+            // 상세페이지
+            var headerHeight = $('#header').height() + 40;
+            var detailHeight = $(".detail_wrap").height() + headerHeight;
+            var infoHeight = $("#detail_info").offset().top - 180;
+            var priceHeight = $("#price_info").offset().top - 180;
+            var reveiwHeight = $("#reveiw").offset().top - 180;
+            var ASnRFHeight = $("#ASnRF").offset().top - 180;
+            var guideHeight = $("#guide").offset().top - 180;
+            var sectionHeight = $("#section6").offset().top - 180;
+            console.log(detailHeight);
+
+            if($(window).scrollTop() > detailHeight) {
+                $(".tabbox_wrap2").addClass("fixed");
+            }else {
+                $(".tabbox_wrap2").removeClass("fixed");
+            }
+
+            $(window).scroll(function(){
+                var scrollTop = $(this).scrollTop();
+                if(scrollTop < detailHeight) {
+                    $(".tabbox_wrap2").removeClass("fixed");
+                }else if(scrollTop >= detailHeight && scrollTop < priceHeight){
+                    $(".tabbox_wrap2").addClass("fixed");
+                    $('.detail_info').addClass("on").parent().siblings().children("a").removeClass("on");
+                }else if(scrollTop >= priceHeight && scrollTop < reveiwHeight){
+                    $('.price_info').addClass("on").parent().siblings().children("a").removeClass("on");
+                }else if(scrollTop >= reveiwHeight && scrollTop < ASnRFHeight){
+                    $('.reveiw').addClass("on").parent().siblings().children("a").removeClass("on");
+                }else if(scrollTop >= ASnRFHeight && scrollTop < guideHeight){
+                    $('.ASnRF').addClass("on").parent().siblings().children("a").removeClass("on");
+                }else if(scrollTop >= guideHeight && scrollTop < sectionHeight){
+                    $(".tabbox_wrap2").addClass("fixed");
+                    $('.guide').addClass("on").parent().siblings().children("a").removeClass("on");
+                }else if(scrollTop > sectionHeight) {
+                    $(".tabbox_wrap2").removeClass("fixed");
+                    $(".tabbox_wrap2").children("a").removeClass("on");
+                }
+
+            });
+
+            $('.detail_info').on('click', function(e) {
+                e.preventDefault();
+                $(this).addClass("on").parent().siblings().children("a").removeClass("on");
+                var target = $("#detail_info")
+                var target2 = $(target);
+                var offset = $(target).offset().top - 160;
+
+                $('html, body').stop().animate({'scrollTop':offset}, 900, 'swing', function() {window.location.hash = target;});
+
+            });
+
+            $('.price_info').on('click', function(e) {
+                e.preventDefault();
+                $(this).addClass("on").parent().siblings().children("a").removeClass("on");
+                var target = $("#price_info")
+                var target2 = $(target);
+                var offset = $(target).offset().top - 120;
+
+                $('html, body').stop().animate({'scrollTop':offset}, 900, 'swing', function() {window.location.hash = target;});
+
+            });
+
+            $('.reveiw').on('click', function(e) {
+                e.preventDefault();
+                $(this).addClass("on").parent().siblings().children("a").removeClass("on");
+                var target = $("#reveiw")
+                var target2 = $(target);
+                var offset = $(target).offset().top - 120;
+
+                $('html, body').stop().animate({'scrollTop':offset}, 900, 'swing', function() {window.location.hash = target;});
+
+            });
+
+            $('.ASnRF').on('click', function(e) {
+                e.preventDefault();
+                $(this).addClass("on").parent().siblings().children("a").removeClass("on");
+                var target = $("#ASnRF")
+                var target2 = $(target);
+                var offset = $(target).offset().top - 120;
+
+                $('html, body').stop().animate({'scrollTop':offset}, 900, 'swing', function() {window.location.hash = target;});
+
+            });
+
+            $('.guide').on('click', function(e) {
+                e.preventDefault();
+                $(this).addClass("on").parent().siblings().children("a").removeClass("on");
+                var target = $("#guide")
+                var target2 = $(target);
+                var offset = $(target).offset().top - 120;
+
+                $('html, body').stop().animate({'scrollTop':offset}, 900, 'swing', function() {window.location.hash = target;});
+
+            });
+        });
+    </script>
+    
+    <!-- #section6 -->
+    <div id="section6" class="detail_page">
+        <div class="inner section txc">
+            <p class="section_title">다른 구매자들도 함께 본 서비스</p>
+            <div class="section_board section_board1">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><a href="detail.html"><img src="images/contents/img_temp_01.jpg" alt="" /></a></dt>
+                            <dd class="txtbox">
+                                <a href="detail.html">
+                                    <p class="txt1 ell1">모두바리 </p>
+                                    <p class="txt2 ell2">앞에 보이지 않는 안갯속에서 있는 당신에게 눈앞이 환해지는 경험을 느끼게 해드립니다.</p>
+                                    <p class="txt3">￦ 50,000</p>
+                                </a>
+                            </dd>
+                            <dd class="star-rating">
+                                <p class="txt1"><img src="images/contents/slide_grade_05.png" alt="" /><span>321</span></p>
+                            </dd>
+                        </dl> 
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><a href="detail.html"><img src="images/contents/img_temp_01.jpg" alt="" /></a></dt>
+                            <dd class="txtbox">
+                                <a href="detail.html">
+                                    <p class="txt1 ell1">모두바리 </p>
+                                    <p class="txt2 ell2">앞에 보이지 않는 안갯속에서 있는 당신에게 눈앞이 환해지는 경험을 느끼게 해드립니다.</p>
+                                    <p class="txt3">￦ 50,000</p>
+                                </a>
+                            </dd>
+                            <dd class="star-rating">
+                                <p class="txt1"><img src="images/contents/slide_grade_05.png" alt="" /><span>321</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><a href="detail.html"><img src="images/contents/img_temp_01.jpg" alt="" /></a></dt>
+                            <dd class="txtbox">
+                                <a href="detail.html">
+                                    <p class="txt1 ell1">모두바리 </p>
+                                    <p class="txt2 ell2">앞에 보이지 않는 안갯속에서 있는 당신에게 눈앞이 환해지는 경험을 느끼게 해드립니다.</p>
+                                    <p class="txt3">￦ 50,000</p>
+                                </a>
+                            </dd>
+                            <dd class="star-rating">
+                                <p class="txt1"><img src="images/contents/slide_grade_05.png" alt="" /><span>321</span></p>
+                            </dd>
+                        </dl>    
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><a href="detail.html"><img src="images/contents/img_temp_01.jpg" alt="" /></a></dt>
+                            <dd class="txtbox">
+                                <a href="detail.html">
+                                    <p class="txt1 ell1">모두바리 </p>
+                                    <p class="txt2 ell2">앞에 보이지 않는 안갯속에서 있는 당신에게 눈앞이 환해지는 경험을 느끼게 해드립니다.</p>
+                                    <p class="txt3">￦ 50,000</p>
+                                </a>
+                            </dd>
+                            <dd class="star-rating">
+                                <p class="txt1"><img src="images/contents/slide_grade_05.png" alt="" /><span>321</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $(".section_board1 > ul").slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    speed: 400,
+                    arrows: false,
+                    dots: false,
+                    autoplay: false,
+                    autoplaySpeed: 3000,
+                    touchMove: false,
+                    responsive: [{
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                            }
+                        },{
+                            breakpoint: 768,
+                            settings: {
+                                centerMode: true,
+                                centerPadding: '30px',
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },{
+                            breakpoint: 640,
+                            settings: {
+                                centerMode: true,
+                                centerPadding: '30px',
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            }
+                        }
+                    ]
+                });
+            </script>
+        </div>
+        <!-- /.inner section txc -->
+    </div>
+    <!-- /#section6 -->
+    
+    <!-- The Modal -->
+    <div id="modal_qna" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">1:1 상담하기
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <div class="margin_b_10" style="position: relative">
+                        <span class="font_weight">판매자</span><span>member_id</span>
+                        <span class="margin_l_5 margin_r_5">|</span>
+                        <span class="font_weight">상담회원</span><span>member_id</span>
+                    </div>
+
+                    <div class="chatting_box margin_b_10">
+                        <p class="start margin_t_10 margin_b_10">상담이 시작되었습니다.</p>
+                        <div class="chat_box_left margin_l_15 margin_b_15">
+                            <div class="chat_box_container">
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt2 margin_t_10">12-28 18:25</p>
+                            </div>
+                            <img src="images/contents/chatbox_left.png" alt="" class="chat_img_l"/>
+                        </div>
+                        <div class="chat_box_right margin_r_15 margin_b_15">
+                            <div class="chat_box_container">
+                                <p class="txt1 mar margin_b_5">발신자의 대화내용입니다.</p>
+                                <p class="txt_file margin_b_5"><a href="javascript:;">첨부파일.text</a></p>
+                                <p class="txt2 margin_t_10">12-28 18:25</p>
+                            </div>
+                            <img src="images/contents/chatbox_right.png" alt="" class="chat_img_r"/>
+                        </div>
+                        <div class="chat_box_left margin_l_15 margin_b_15">
+                            <div class="chat_box_container">
+                                <p class="txt1 mar margin_b_5">수신자의 대화내용입니다.</p>
+                                <p class="txt2 margin_t_10">12-28 18:25</p>
+                            </div>
+                            <img src="images/contents/chatbox_left.png" alt="" class="chat_img_l"/>
+                        </div>
+                        <div class="chat_box_right margin_r_15 margin_b_15">
+                            <div class="chat_box_container">
+                                <p class="txt1 mar margin_b_5">발신자의 대화내용입니다.</p>
+                                <p class="txt2 margin_t_10">12-28 18:25</p>
+                            </div>
+                            <img src="images/contents/chatbox_right.png" alt="" class="chat_img_r"/>
+                        </div>
+                        <p class="start margin_t_10 margin_b_10">상대방이 대화방을 나갔습니다.</p>
+                    </div>
+
+                    <div class="chatting margin_b_10">
+                        <textarea name="" id="" class="textarea1"></textarea>
+                        <input type="submit" class="btn_submit3" value="전송"/>
+                    </div>
+
+                    <div class="clearfix">
+                        <input type="text" id="fileName1" class="pop_input_t width245" readonly="readonly">
+                        <div class="file_input_div">
+                            <span class="file_input_img_btn">찾아보기</span>
+                            <input type="file" name="file_1" class="file_input_hidden" onchange="javascript: document.getElementById('fileName1').value = this.value">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- The Modal -->
+    <div id="modal_price" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">협의된 가격주문
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <div>
+                        <div class="request_price_wrapper">
+                            <div class="price_div2">
+                                <p class="txt1">가격입력</p>
+                                <p class="txt2"><input type="text" /></p>
+                                <p class="txt3">원</p>
+                            </div>
+                        </div>
+
+                        <div class="btn_pop_wrapper">
+                            <a href="javascript:;" class="btn_pop_close">합의된 가격주문</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- The Modal -->
+    <div id="modal_share" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">공유하기
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <div class="social_iconbox">
+                        <ul>
+                            <li><a href="">페이스북</a></li>
+                            <li><a href="">인스타그램</a></li>
+                            <li><a href="">트위터</a></li>
+                            <li><a href="">카카오톡</a></li>
+                            <li><a href="">네이버</a></li>
+                            <li><a href="">구글플러스</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="clearfix">
+                            <input type="text" class="pop_input_t width245" readonly="readonly" value="www.modumom.com">
+                            <div class="file_input_div">
+                                <span class="file_input_img_btn">URL 복사</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- The Modal -->
+    <div id="modal_profile" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">프로필인증내역
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <p class="title1 margin_b_10">주요경력</p>
+                    <div class="sub_content1">
+                        <p class="type1">1.마케팅 대행사 운영</p>
+                        <p class="type1">2.각종 바이럴 마케팅을 통한 24개 업각종 바이럴 마케팅을 통한 24개 업 </p>
+                        <a href="mypage/profile.html" class="emphasis btn_more1">[더보기]</a>
+                    </div>
+
+                    <p class="title1 margin_b_10">자기소개</p>
+                    <div class="sub_content1">
+                        <p class="intro">현재 수익을 내고 있는 실천 마케팅 전략들은 수
+                            많은 기업의 매출을 통해 증명해 보이</p>
+                        <a href="mypage/profile.html" class="emphasis btn_more1">[더보기]</a>
+                    </div>
+
+                    <p class="title1 margin_b_10">포트폴리오</p>
+                    <div class="sub_content1">
+                        <p class="margin_b_5">바이럴 마케팅 운영계획 및 제안서.pptx</p>
+                        <p class="margin_b_5">운영중인 블로그, 카페 내역.xlsx</p>
+                        <a href="mypage/profile.html" class="emphasis btn_more1">[더보기]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- The Modal -->
+    <div id="modal_report" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">신고하기
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <div>
+                        <select name="" id="" class="select_t3 margin_b_10" style="width:100%;">
+                            <option value="">신고사유선택</option>
+                            <option value="">신고사유선택1</option>
+                        </select>
+
+                        <textarea name="" id="" class="textarea_type6 margin_b_20" style="width:100%;height: 168px"></textarea>
+
+                        <div class="btn_pop_wrapper">
+                            <a href="javascript:;" class="btn_pop_close">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <div id="footer">
+        <div id="lnb">
+            <div class="inner">
+                <ul class="lnbmenu">
+                    <li><a href="company.html">회사소개</a></li>
+                    <li class="pc-only"><a href="mypage/conditions.html">이용약관</a></li>
+                    <li class="pc-only"><a href="mypage/privacy.html"><em>개인정보</em><em>처리방침</em></a></li>
+                    <li class="pc-only"><a href="mypage/protection.html"><em>청소년</em><em>보호정책</em></a></li>
+                    <li class="pc-only"><a href="javascript:;" onclick="javascript:window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=6028700146','공정거래위원회','width=750, height=700;');"><em>사업자</em><em>정보확인</em></a></li>
+                    <li class="pc-only"><a href="mypage/email.html"><em>이메일무단</em><em>수집거부</em></a></li>
+                    <li><a href="mypage/ad_request.html">광고문의</a></li>
+                    <li><a href="mypage/notice.html">고객센터</a></li>
+                </ul>
+                <ul class="sns pc-only">
+                    <li><a href="javascript:;"><img src="images/contents/icon_sns_01.png" alt="" /></a></li>
+                    <li><a href="javascript:;"><img src="images/contents/icon_sns_02.png" alt="" /></a></li>
+                    <li><a href="javascript:;"><img src="images/contents/icon_sns_03.png" alt="" /></a></li>
+                    <li><a href="javascript:;"><img src="images/contents/icon_sns_04.png" alt="" /></a></li>
+                </ul>
+                <ul class="lnbmenu lnbmenu2 mobile-only">
+                    <li><a href="mypage/conditions.html">이용약관</a></li>
+                    <li><a href="mypage/privacy.html"><em>개인정보</em><em>처리방침</em></a></li>
+                    <li><a href="mypage/protection.html"><em>청소년</em><em>보호정책</em></a></li>
+                    <li><a href="mypage/email.html"><em>이메일무단</em><em>수집거부</em></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="inner">
+            <div class="dashboardbox pc-only">
+                <div class="board1">
+                    <p class="title">공지사항</p>
+                    <ul class="clearfix">
+                        <li><a href="mypage/notice.html">홈페이지가 곧 오픈중입니다.</a></li>
+                        <li><a href="mypage/notice.html">홈페이지가 곧 오픈중입니다.</a></li>
+                        <li><a href="mypage/notice.html">홈페이지가 곧 오픈중입니다.</a></li>
+                    </ul>
+                </div>
+                <div class="board2">
+                    <p class="title">상담서비스</p>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_dash_01.png" alt="" /></dt>
+                                    <dd class="txtbox"><p class="txt1">Talk상담</p></dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_dash_02.png" alt="" /></dt>
+                                    <dd class="txtbox"><p class="txt1">이메일상담</p></dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mypage/personal_qna_list.html">
+                                <dl>
+                                    <dt class="iconbox"><img src="images/contents/icon_dash_03.png" alt="" /></dt>
+                                    <dd class="txtbox"><p class="txt1">사이트개선요청</p></dd>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board3">
+                    <p class="title">고객센터<a href="javascript:;" class="modal_report">직거래/불법홍보신고</a></p>
+                    <div class="txtbox clearfix">
+                        <p class="txt1">1661-2749</p>
+                        <p class="txt2">평일 09:00~18:00(점심시간 12:00 ~13:00)</p>
+                        <p class="txt3">토,일요일, 공휴일 휴무</p>
+                    </div>
+                </div>
+            </div>
+            <div class="company mobile-only">
+                <p class="cstel">고객센터 : 평일 09:00 ~ 18:00<br class="mobile-only" />(토요일 및 공휴일 휴무)<br />전화번호 : 1661-2749</p>
+                <div class="company_txt">
+                    <p>
+                        (주)모두커뮤니케이션 <span class="bar">|</span> 경기도 성남시 분당구 황새울로 200번길 36 (동부루트빌딩), 1017호 <span class="bar">|</span> 대표 : 이효진 <span class="bar">|</span> 개인정보 관리책임자 : 황영오  <br/> 사업자등록번호 : 602-87-00146 <span class="bar">|</span> 통신판매업신고 : 2015-경기성남-04171호<br />
+                    </p>
+                    <div class="appicon">
+                        <span class="iconbox"><a href="javascript;"><img src="images/contents/icon_16.png" alt="" /></a><a href="javascript;"><img src="images/contents/icon_17.png" alt="" /></a></span>
+                    </div>
+                </div>
+                <p class="txc">Copyright © ModuCommunication. All rights Reserved.</p>
+            </div>
+            <!-- /.company -->
+        </div>
+        <!-- /.inner -->
+        <div class="company pc-only">
+            <div class="company_txt">
+                <div class="inner">
+                
+                    <h1><img src="images/footer/f_logo.png" alt="" /></h1>
+                    <p>
+                        (주)모두커뮤니케이션 <span class="bar">|</span> 경기도 성남시 분당구 황새울로 200번길 36 (동부루트빌딩), 1017호 <span class="bar">|</span> 대표 : 이효진 <span class="bar">|</span> 개인정보 관리책임자 : 황영오  <br/> 사업자등록번호 : 602-87-00146 <span class="bar">|</span> 통신판매업신고 : 2015-경기성남-04171호<br />
+                    </p>
+                    <p class="pc-only">
+                        주식회사 모두커뮤니케이션은 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.<br />본사이트의 콘텐츠는 저작권법의 보호를 받는 바, 무단 전제, 복사, 배포 등을 금합니다.<br />
+                        Copyright © ModuCommunication. All rights Reserved.
+                    </p>
+                    
+                    <div class="appicon">
+                        <span class="iconbox"><a href="javascript;"><img src="images/contents/icon_16.png" alt="" /></a><a href="javascript;"><img src="images/contents/icon_17.png" alt="" /></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#footer -->
+    
+    <span id="top_scroll">
+        <a href="#header"><img src="images/contents/go_top.png" alt="" /></a>
+    </span>
+    
+    <span id="top_scroll2">
+        <a href="javascript:;"><img src="images/contents/icon_chat.png" alt="" /></a>
+    </span>
+    
+</body>
+</html>

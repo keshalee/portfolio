@@ -1,0 +1,152 @@
+/**************************************************
+* reset&common.css
+*
+* 1 - reset
+**************************************************/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { border:0; font-size:100%; margin:0; padding:0; vertical-align:baseline; outline:none; }
+/* HTML5 display-role reset for older browsers */
+a { color:#666; }
+a, a:hover, a:focus { outline:none; text-decoration:none; }
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section { display:block; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:none; }
+body { background-color:white; font-family: 'Noto Sans KR', sans-serif !important; font-size:14px; letter-spacing:0px !important; line-height:1 !important; -webkit-text-size-adjust:none !important; color:#666; font-weight:300 !important; }
+em { font-style:normal; }
+ol, ul { list-style:none; }
+img { width:100%; height:100%; outline:0; border:0; }
+table { border-collapse:collapse; border-spacing:0; }
+
+/* ----------------------------------------------------------------------------------------------------
+Super Form Reset
+A couple of things to watch out for:
+- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
+- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
+- You NEED to set the font-size and family on all form elements
+- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
+- You can style the upload button in webkit using ::-webkit-file-upload-button
+- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
+- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
+- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
+----------------------------------------------------------------------------------------------------*/
+
+input, label, select, button { background:none; border:0; display:inline-block; font-size:14px; line-height:1; margin:0; outline:none; padding:0; vertical-align:middle; white-space:normal; }
+textarea { background:none; border:0; display:inline-block; font-size:14px; line-height:1; margin:0; outline:none; padding:0; vertical-align:middle; font-family: 'Noto Sans KR', sans-serif !important; }
+label { vertical-align:unset; }
+
+/* Remove the stupid outer glow in Webkit */
+input:focus { outline:0; }
+
+/* Box Sizing Reset -----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input, textarea { -webkit-box-sizing:content-box; -moz-box-sizing:content-box; box-sizing:content-box; -webkit-border-radius:0; margin: 8px 0; color: #666; }
+
+/* These elements are usually rendered a certain way by the browser */
+button, input[type=reset], input[type=button], input[type=submit], input[type=checkbox], input[type=radio], select { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+
+/* Text Inputs -----------------------------------------------*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    border:1px solid #eee;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=range], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week] { }
+
+/* Button Controls -----------------------------------------------*/
+input[type=checkbox], input[type=radio] { width:13px; height:13px; vertical-align:inherit; }
+input[type=radio] { border-radius:100%; }
+
+/* File Uploads -----------------------------------------------*/
+input[type=file] { border:1px solid #eee; }
+
+/* Search Input -----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] { -webkit-appearance:textfield; -webkit-box-sizing:content-box; } 
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration { display:none; }
+
+/* Buttons -----------------------------------------------*/
+button, input[type="reset"], input[type="button"], input[type="submit"] { overflow:visible; /* Fix IE7 display bug */ width:auto; }
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button { padding:0; border:0; background:none; }
+
+/* Textarea -----------------------------------------------*/
+textarea { width:100%; resize:none; vertical-align:top; /* Move the label to the top */ overflow:auto; /* Turn off scroll bars in IE unless needed */ padding: 12px 10px; background-color: #ffffff; border:1px solid #eee; box-sizing: border-box; }
+
+/* Selects -----------------------------------------------*/
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius:0;margin: 8px 0; color: #666; }
+select::-ms-expand { display: none; /* 화살표 없애기 for IE10, 11*/ }
+select[multiple] { vertical-align:top; /* Move the label to the top */ }
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: #666;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+}
+
+input::placeholder { color:#666; }
+textarea::placeholder { color:#666; }
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: #666;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #eee;
+    border-image: initial;
+}
+/**************************************************
+* slick slide *
+**************************************************/
+.slick-slider { position:relative; display:block; box-sizing:border-box; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; -webkit-touch-callout:none; -khtml-user-select:none; -ms-touch-action:pan-y; touch-action:pan-y; -webkit-tap-highlight-color:transparent; }
+.slick-list { position:relative; display:block; overflow:hidden; margin:0; padding:0; }
+.slick-list:focus { outline:none; }
+.slick-list.dragging { cursor:pointer; cursor:hand; }
+.slick-slider .slick-track, .slick-slider .slick-list { -webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform:translate3d(0, 0, 0); -o-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); }
+.slick-track { position:relative; top:0; left:0; display:block; margin-left:auto; margin-right:auto; }
+.slick-track:before, .slick-track:after { display:table; content:''; }
+.slick-track:after { clear:both; }
+.slick-loading .slick-track { visibility:hidden; }
+.slick-slide { display:none; float:left; height:100%; min-height:1px; }
+[dir='rtl'] .slick-slide { float:right; }
+.slick-slide img { display:block; }
+.slick-slide.slick-loading img { display:none; }
+.slick-slide.dragging img { pointer-events:none; }
+.slick-initialized .slick-slide { display:block; }
+.slick-loading .slick-slide { visibility:hidden; }
+.slick-vertical .slick-slide { display:block; height:auto; border:1px solid transparent; }
+.slick-arrow.slick-hidden { display:none; }
+
+

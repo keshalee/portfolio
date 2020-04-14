@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko">
+<head>
+    <title>명앤명</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta content="모두네임,명앤명" name="keywords" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.selectBox.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+    <div class="body_wrap">
+        <i class="fa fa-spinner fa-spin fa-3x fa-spin"></i>
+    </div>
+
+    <div id="header" class="sub sub3">
+        <div id="gnb">
+            <div class="inner">
+                <h1><a href="index.html"><strong>MODU Communication</strong></a></h1>
+                <div class="frbox">
+                    <ul>
+                        <li><a href="#section9">WE DO</a></li>
+                        <li><a href="#section10">SERVICE</a></li>
+                        <li><a href="#section11">CHANNEL</a></li>
+                        <li><a href="#section12">CONTACT</a></li>
+                        <li><a href="javascript:;">KOR&nbsp;&nbsp;ENG</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /#gnb -->
+    </div>
+    <!-- /#header -->
+    
+    <div id="section9">
+        <div class="company_slide">
+            <ul>
+                <li>
+                    <dl>
+                        <dt class="imgbox"><img src="images/contents/company_banner_01.jpg" alt="" data-animation="fadeInUp" data-duration="9s" /></dt>
+                        <dd class="txtbox" data-animation="fadeIn" data-duration="9s">
+                            <p class="txt2">For our babies, the future of Korea, <br />We put our heart to the name which is called forever.</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="imgbox"><img src="images/contents/company_banner_05.jpg" alt="" data-animation="fadeInUp" data-duration="9s" /></dt>
+                        <dd class="txtbox" data-animation="fadeIn" data-duration="9s">
+                            <p class="txt2" style="color:#000;">You can meet the story about entrepreneurship, <br />women's work and life, at Start-UP, single parenting.</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="imgbox"><img src="images/contents/company_banner_06.jpg" alt="" data-animation="fadeInUp" data-duration="9s" /></dt>
+                        <dd class="txtbox" data-animation="fadeIn" data-duration="9s">
+                            <p class="txt2" style="color:#000;">A Real-time chatbot expert consulting platform <br />that solves everything you are wondering is walting for you</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="imgbox"><img src="images/contents/company_banner_07.jpg" alt="" data-animation="fadeInUp" data-duration="9s" /></dt>
+                        <dd class="txtbox" data-animation="fadeIn" data-duration="9s">
+                            <p class="txt2">Do not worry anymore, <br />get a consult from the 
+experts in each anytime and anywhere.</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="imgbox"><img src="images/contents/company_banner_08.jpg" alt="" data-animation="fadeInUp" data-duration="9s" /></dt>
+                        <dd class="txtbox" data-animation="fadeIn" data-duration="9s">
+                            <p class="txt2">'MODU Communication' is with you <br />so that you  can dream a hopeful world through new connections.</p>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.company_slide > ul').on('init', function(e, slick) {
+                    var $firstAnimatingElements = $('.company_slide > ul li:first-child').find('[data-animation]');
+                    doAnimations($firstAnimatingElements);    
+                });
+                $('.company_slide > ul').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+                    var $animatingElements = $('.company_slide > ul li[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+                    doAnimations($animatingElements);    
+                });
+                $('.company_slide > ul').slick({
+                    autoplay: true,
+                    autoplaySpeed: 7000,
+                    dots: false,
+                    arrows: false,
+                    fade: true,
+                    infinite: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                });
+                function doAnimations(elements) {
+                    var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                        elements.each(function() {
+                            var $this = $(this);
+                            var $animationDuration = $this.data('duration');
+                            var $animationDelay = $this.data('delay');
+                            var $animationType = 'animated ' + $this.data('animation');
+                        $this.css({
+                            'animation-delay': $animationDelay,
+                            '-webkit-animation-delay': $animationDelay,
+                            'animation-duration': $animationDuration,
+                            '-webkit-animation-duration': $animationDuration,
+                        });
+                        $this.addClass($animationType).one(animationEndEvents, function() {
+                            $this.removeClass($animationType);
+                        });
+                    });
+                }
+            });
+        </script>
+    </div>
+    <!-- /#section9 -->
+
+    <div id="section10">
+        <div class="inner section txc service_wrap">
+            <div class="service_tab">
+                <p class="section_title">Get apps that provide a wealth of useful information about pregnancy, childbirth, and parenting.</p>
+                <ul class="tabbox">
+                    <li class="tab1 on"><a href="javascript:commonTab('service_wrap','tab1');">modumom</a></li>
+                    <li class="tab2"><a href="javascript:commonTab('service_wrap','tab2');">moduname</a></li>
+                </ul>
+            </div>
+            <div class="service_slide service_slide1 hiddencontents tab1 on">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">Impressive national maternal classroom</p>
+                                    <p class="txt2 ell2">Through the best experts in the field, we provide you with the necessary information to prepare and know in advance for safe birth pregnancy and healthy birth.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">Mam tv</p>
+                                    <p class="txt2 ell2">Meet the secrets of communication that will overcome the problems of ultra-low birth rate and single parenting through professional childcare broadcasts and specialist videos of mothers who make mothers of single-minded, single-minded, and tired mother-to-child wars.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">Parenting & Families</p>
+                                    <p class="txt2 ell2">Begin with preliminary moments, parenting moments, and useful information on pregnancy, childbirth and childcare that are essential for newborn fathers.
+Healthy pregnancy / childbirth, happy parenting, couple clinics, life, pregnancy / childbirth Q & A, parenting Q & A.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">Popular Courses</p>
+                                    <p class="txt2 ell2">We will introduce necessary courses for women who are preparing for start-up and employment.
+In partnership with 'Hoonet' and 'Donga Social Education Center', we provide courses in various fields such as self-developed lectures, humanities, arts, fashion, distribution, provision of food and beverage / dessert certificates, online shopping establishment / promotion marketing.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동이 있는 전국 산모교실</p>
+                                    <p class="txt2 ell2">해당 분야의 최고 전문가를 통해 건강한 우리 아기를 만들기 위한 태교 방법, 안전한 임신과 건강한 출산을 위해 미리 준비하고 알아두어야 할 꼭 필요한 정보들을 제공해 드려요. </p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">맘tv</p>
+                                    <p class="txt2 ell2">독박육아, 워킹맘, 싱글맘들의 지치고 힘든 육아전쟁을 엄마들이 만드는 육아전문 방송과 각 분야의 전문가 영상을 통해 초저출산 및 독박육아문제를 함께 극복해 나가는 소통의 장을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">맘앤키즈</p>
+                                    <p class="txt2 ell2">출산을 앞둔 예비맘, 육아맘, 그리고 초보 아빠들에게 꼭 필요한 임신, 출산, 육아에 관한 유익한 정보와 분야별 트랜디한 새로운 소식들을 먼저 만나보세요. 
+건강한 임신/출산, 행복한 육아, 부부클리닉, 라이프, 임신/출산 Q&A, 육아 Q&A 등 6개 섹션에서 다양하고 유익한 정보를 얻어가세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">인기강좌</p>
+                                    <p class="txt2 ell2">창업과 취업을 준비하는 여성들에게 꼭 필요한 강좌를 소개해 드립니다. 
+‘휴넷’ 및 ‘동아사회교육원’과 제휴하여 자기개발 강좌를 비롯하여 인문, 예술, 패션, 유통, 식음료/디저트 자격증대비, 온라인 쇼핑 창업/홍보마케팅 등 다양한 분야의 강좌를 제공하고 있습니다.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging2">1/4</span>
+            </div>
+            <div class="service_slide service_slide2 hiddencontents tab2">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">First gift to our baby, name!</p>
+                                    <p class="txt2 ell2">If you enter the name of the baby you are thinking, it automatically recommends the appropriate kanji for the four weeks, and you can easily name all of the 15 expert names and naming names.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">100,000 downloads or more after word of mouth</p>
+                                    <p class="txt2 ell2">Satisfactory naming service with user rating 4.5
+Try it yourself and use all of the proven names.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">It's not hard to name it in your app.</p>
+                                    <p class="txt2 ell2">Meet all names that are systematically analyzed and reviewed based on orthodox statement theories to make it easy for you to name your child and make it easy to name.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">Differentiated services of naming expert 'All Names'</p>
+                                    <p class="txt2 ell2">Offer more than 8,000 Kanji characters for Supreme Court name, provide high quality naming certificate e-mail, popular name rankings, and 1: 1 free consultation through professional counselors.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">우리아기에게 주는 첫 번째 선물, 이름!</p>
+                                    <p class="txt2 ell2">생각하고 있는 아기 이름을 입력하면 자동으로 사주에 적합한 한자를 추천해주고 전문가 추천 이름 15개, 돌림자 작명 등을 모두네임으로 손쉽게 작명해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">출시 후 입소문 만으로 100,000 다운로드 이상돌파</p>
+                                    <p class="txt2 ell2">사용자 평점 4.5에 달하는 만족도 높은 작명 서비스
+직접 사용하고, 후기로 증명된 모두네임을 사용해 보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">어플에서 이름 짓는 거 어렵지 않아요.</p>
+                                    <p class="txt2 ell2">정통 성명학 이론서들을 바탕으로 체계적으로 분석 및 검토하여 자녀에게 적합하고 예쁜 이름을 쉽게 작명할 수 있는 모두네임을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">네이밍 전문 ‘모두네임’만의 차별화된 서비스</p>
+                                    <p class="txt2 ell2">대법원 인명용 한자 8,000자 이상 제공, 고품질 작명 인증서 이메일 제공, 인기이름 순위, 그리고 전문 상담가를 통한 1:1 무료 상담을 이용해보세요. </p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging3">1/4</span>
+            </div>
+            <script>
+                $(".service_slide1 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".service_slide1 > .btnset"),
+                });
+
+                var $status2 = $('.custom_paging2');
+                var $slickElement2 = $('.service_slide1');
+
+                $slickElement2.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status2.text(i + '/' + slick.slideCount);
+                });
+                
+                $(".service_slide2 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".service_slide2 > .btnset"),
+                });
+
+                var $status3 = $('.custom_paging3');
+                var $slickElement3 = $('.service_slide2');
+
+                $slickElement3.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status3.text(i + '/' + slick.slideCount);
+                });
+            </script>
+        </div>
+        <!-- /.inner section txc -->
+    </div>
+    <!-- /#section10 -->
+    
+    <div id="section11">
+        <div class="inner section txc channel_wrap">
+            <div class="channel_tab">
+                <ul class="tabbox">
+                    <li class="tab1 on"><a href="javascript:commonTab('channel_wrap','tab1');">브랜드 네이밍</a></li>
+                    <li class="tab2"><a href="javascript:commonTab('channel_wrap','tab2');">웹/앱 개발 기획</a></li>
+                    <li class="tab3"><a href="javascript:commonTab('channel_wrap','tab3');">앱 매니저먼트</a></li>
+                    <li class="tab4"><a href="javascript:commonTab('channel_wrap','tab4');">마케팅</a></li>
+                    <li class="tab5"><a href="javascript:commonTab('channel_wrap','tab5');">창업컨설팅</a></li>
+                </ul>
+            </div>
+            <div class="channel_slide channel_slide1 hiddencontents tab1 on">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging4">1/4</span>
+            </div>
+            <div class="channel_slide channel_slide2 hiddencontents tab2">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging5">1/4</span>
+            </div>
+            <div class="channel_slide channel_slide3 hiddencontents tab3">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging6">1/4</span>
+            </div>
+            <div class="channel_slide channel_slide4 hiddencontents tab4">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging7">1/4</span>
+            </div>
+            <div class="channel_slide channel_slide5 hiddencontents tab5">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="imgbox"><img src="images/contents/company_banner_02.jpg" alt="" /></dt>
+                            <dd class="txtbox_wrap">
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 쉽게, 카카오톡으로 전하는 초간단 선물전달</p>
+                                    <p class="txt2 ell2">쉽게 전하지 못했던 마음을 카카오톡으로 쉽고 간편하게 전해보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 간편하게, 다양한 상황별 맞춤 선물 큐레이팅</p>
+                                    <p class="txt2 ell2">선물을 고르는 고민없이 간편하게 고를수 있는 상황별 맞춤 선물 큐레이션을 만나보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">선물을 특별하게, 선물하기에만 전할 수 있는 단독 선물</p>
+                                    <p class="txt2 ell2">특별한 선물을 보내고 싶은 당신을 위해 카카오 선물 큐레이터가 기획안 정성스러운 단독 선물을 보내보세요.</p>
+                                </div>
+                                <div class="txtbox">
+                                    <p class="txt1 ell1">감동은 격렬하게, 감동카드로 전하는 다양한 선물 리액션</p>
+                                    <p class="txt2 ell2">쑥스러워서 표현 못한 감동의 크기를 다양한 감동카드로 전달해보세요.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <span class="btnset"></span>
+                <span class="custom_paging8">1/4</span>
+            </div>
+            <script>
+                $(".channel_slide1 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".channel_slide1 > .btnset"),
+                });
+
+                var $status4 = $('.custom_paging4');
+                var $slickElement4 = $('.channel_slide1');
+
+                $slickElement4.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status4.text(i + '/' + slick.slideCount);
+                });
+                
+                $(".channel_slide2 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".channel_slide2 > .btnset"),
+                });
+
+                var $status5 = $('.custom_paging5');
+                var $slickElement5 = $('.channel_slide2');
+
+                $slickElement5.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status5.text(i + '/' + slick.slideCount);
+                });
+                
+                $(".channel_slide3 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".channel_slide3 > .btnset"),
+                });
+
+                var $status6 = $('.custom_paging6');
+                var $slickElement6 = $('.channel_slide3');
+
+                $slickElement6.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status6.text(i + '/' + slick.slideCount);
+                });
+                
+                $(".channel_slide4 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".channel_slide4 > .btnset"),
+                });
+
+                var $status7 = $('.custom_paging7');
+                var $slickElement7 = $('.channel_slide4');
+
+                $slickElement7.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status7.text(i + '/' + slick.slideCount);
+                });
+                
+                $(".channel_slide5 > ul").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    touchMove: false,
+                    speed: 400,
+                    arrows: true,
+                    dots: false,
+                    appendArrows: $(".channel_slide5 > .btnset"),
+                });
+
+                var $status8 = $('.custom_paging8');
+                var $slickElement8 = $('.channel_slide5');
+
+                $slickElement8.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $status8.text(i + '/' + slick.slideCount);
+                });
+            </script>
+        </div>
+        <!-- /.inner section txc -->
+    </div>
+    <!-- /#section11 -->
+    
+    <div id="section12">
+        <div class="inner section txc">
+            <div class="flbox">
+                <p class="section_title">CONTACT</p>
+            </div>
+            <div class="frbox">
+                <div class="maps">
+                    <div class="video-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12682.11765105518!2d127.11410049999999!3d37.377310400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc3a0750488e1d42b!2z64-Z67aA66Oo7Yq467mM65Sp!5e0!3m2!1sko!2skr!4v1523407388788" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="table_wrap">
+                    <table class="inputtable">
+                        <tr>
+                            <td><input type="text" placeholder="YOUR NAME" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="YOUR EMAIL ADDRESS" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="MOBILE PHONE" /></td>
+                        </tr>
+                        <tr>
+                            <td><textarea placeholder="YOUR MESSAGE FOR US"></textarea></td>
+                        </tr>
+                    </table>
+                    <div class="agreediv">
+                        <p class="title">Privacy Statement</p>
+                        <textarea disabled>
+The above company will notify and guide the following matters according to the related laws and regulations in the process of collecting and using personal information.
+
+1. Purpose of use of information collection: Usage of site and customer service related companies
+2. Collection / use items: Name, contact, email, counseling contents
+3. Period of possession and use: 6 months after the endign of the consultation, immediately upon request for deletion of the information provider
+4. Personal information manage  Officer: See the bottom of the homepage
+                        </textarea>
+                        <span>
+                            <input type="checkbox" id="agree" /><label for="agree">Agree on collection of personal information</label>
+                        </span>
+                        <div class="table_num">
+                            <a href="javascript:;" class="btn_submit">SEND IT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#section12 -->
+    
+    <!-- The Modal -->
+    <div id="modal_report" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="max-width:370px">
+            <div class="pop">
+                <div class="popup_header">
+                    <p class="header_title">신고하기
+                        <span class="btn_close"><a href="javascript:;" class="close"><img src="images/contents/btn_close_04.png" alt=""/></a></span>
+                    </p>
+                </div>
+
+                <div class="popup_contents">
+                    <div>
+                        <select name="" id="" class="select_t3 margin_b_10" style="width:100%;">
+                            <option value="">신고사유선택</option>
+                            <option value="">신고사유선택1</option>
+                        </select>
+
+                        <textarea name="" id="" class="textarea_type6 margin_b_20" style="width:100%;height: 168px"></textarea>
+
+                        <div class="btn_pop_wrapper">
+                            <a href="javascript:;" class="btn_pop_close">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal content -->
+    </div>
+    <!-- /.modal -->
+    
+    <div id="footer" class="sub2">
+        <div id="lnb">
+            <div class="inner">
+                <ul class="lnbmenu">
+                    <li><a href="mypage/conditions.html">이용약관</a></li>
+                    <li><a href="mypage/privacy.html"><em>개인정보</em><em>처리방침</em></a></li>
+                    <li><a href="mypage/protection.html"><em>청소년</em><em>보호정책</em></a></li>
+                    <li><a href="mypage/email.html"><em>이메일무단</em><em>수집거부</em></a></li>
+                    <li><a href="mypage/notice.html">공지사항</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="company">
+            <div class="inner">
+                <div class="company_txt">
+                    <p>
+                        Modu Communication Co.,Ltd. <span class="bar">|</span> 10F(1015), 36, Hwangsaeul-ro 200beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, 13595, Republic of Korea <span class="bar">|</span> CEO: Lee, Hyo Jin <span class="bar">|</span> CSO: Hwang, Young Oh  <br/> Business Registration Number: 602-87-00146 <span class="bar">|</span> Registration of online marketing business: 2015-GyeonggiSeoungnam-04171 <br />
+                    </p>
+                    <p class="pc-only">
+                        Modu Communication Co.,Ltd. is an intermediary of online marketing business and is not responsible for the transaction information and transactions registered by individual sellers.<br />The contents of this site are protected by copyright law, and copying, distribution, etc. are prohibited without permission<br />
+                        Copyright © Modu Communication Co.,Ltd. All rights Reserved.
+                    </p>
+                </div>
+                <div class="section_cs">
+                    <div class="icon_tel"><a href="tel:1661-2749"><span class="iconbox"><img src="images/contents/icon_tel.png" alt="" /></span>1661-2749</a></div>
+                    <div class="txtbox"><p class="txt1">평일 09:00 ~ 18:00</p></div>
+                    <ul class="sns">
+                        <li><a href="javascript:;"><img src="images/contents/icon_sns_01.png" alt="" /></a></li>
+                        <li><a href="javascript:;"><img src="images/contents/icon_sns_02.png" alt="" /></a></li>
+                        <li><a href="javascript:;"><img src="images/contents/icon_sns_03.png" alt="" /></a></li>
+                        <li><a href="javascript:;"><img src="images/contents/icon_sns_04.png" alt="" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#footer -->
+    
+    <span id="top_scroll">
+        <a href="#header"><img src="images/contents/go_top.png" alt="" /></a>
+    </span>
+    
+    <span id="top_scroll2">
+        <a href="javascript:;"><img src="images/contents/icon_chat.png" alt="" /></a>
+    </span>
+
+</body>
+</html>
