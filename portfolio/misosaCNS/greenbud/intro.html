@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <title>그린버드</title>
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dotdotdot.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <style type="text/css">
+        * { margin:0; padding:0; box-sizing:border-box; outline:none; }
+		#contents.intro{ position:fixed; width:100%; height:100%; background-image:url(images/contents/intro_bg.jpg); background-size:cover; background-position:center center; left:0; top:0; }
+		#contents.intro .intro_cover{ position:absolute; width:100%; height:100%; background:rgba(0,0,0,.5); z-index:1; text-align:center; padding:15% 0; } 
+        #contents.intro .intro_cover .logo { margin-bottom:20px; }
+        #contents.intro .intro_cover .logo a { font-size:48px; vertical-align:middle; color:#fff; font-weight:500; }
+		#contents.intro .intro_cover .logo img{ width:auto; height:80px; padding-bottom:20px; vertical-align:middle; margin-right:5px; }
+		#contents.intro .intro_cover .timebox ul { text-align:center; padding:0; }
+		#contents.intro .intro_cover .timebox ul li{ display:inline-block; vertical-align:middle; color:#fff;  }
+		#contents.intro .intro_cover .timebox ul li.col{ padding: 0 10px; font-size:30px; vertical-align:top; line-height:65px; }
+		#contents.intro .intro_cover .timebox ul li span { display:block; font-size:65px; font-weight:bold; padding-bottom:8px; }
+        
+		
+		#contents.intro .intro_cover .textbox { color:#fff; padding-top:50px; }
+		#contents.intro .intro_cover .textbox span { display:block; font-size:25px; margin-bottom:20px; line-height:1.4; }
+        #contents.intro .intro_cover .textbox span em { font-weight:400; font-size:24px; line-height:1.4; }
+		#contents.intro .intro_cover .textbox b { display:block; font-size:18px; line-height:1.4; font-weight:400; }
+		
+        @media (min-width:768px) {
+            #contents.intro .intro_cover .textbox span .mobile-only { display:none; }
+        }
+		@media (max-width: 992px) {
+			#contents.intro .intro_cover .timebox ul li.col{ font-size:25px; line-height:55px; }
+			#contents.intro .intro_cover .timebox ul li span{ font-size:55px; }
+			#contents.intro .intro_cover .textbox span{ display:block; font-size:18px; }
+			#contents.intro .intro_cover .textbox b{ display:block; font-size:16px; }
+		}
+		
+		@media (max-width: 640px) {
+			#contents.intro .intro_cover .timebox ul li span { font-size:40px;  }
+			#contents.intro .intro_cover .timebox ul li { padding-bottom:20px;}
+			#contents.intro .intro_cover .textbox span { padding: 0 20px; }
+		}
+	</style>
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="contents" class="intro">
+		<div class="intro_cover">
+			<div class="logo"><a href="index2.html">그린버드</a></div>
+			<div class="timebox">
+				<ul>
+					<li><span id="time-day" class="days"></span>Days</li>
+					<li class="col">:</li>
+					<li><span id="time-hour" class="hours">12</span>Hours</li>
+					<li class="col">:</li>
+					<li><span id="time-minute" class="minutes">55</span>Minutes</li>
+					<li class="col">:</li>
+					<li><span id="time-second" class="seconds">35</span>Seconds</li>
+				</ul>
+			</div>
+			<div class="textbox">
+                <span><em>그린버드 홈페이지가 새롭게 단장중입니다. <br /> 웹표준코딩이 적용된 최신형 반응형홈페이지/쇼핑몰로 만나뵙겠습니다.<br />감사합니다</em></span>
+				<b>제작문의 : 010-7660-8571 </b>
+				<b>이메일 : jeh92500@empas.com</b>
+			</div>
+		</div>
+    </div>
+    <!-- /#contents -->
+    
+    <script language="javascript">
+        var ddaytimer = setInterval (dayGap, 1000)
+        function dayGap () {
+            var dday = new Date("august 25, 2018 00:00:00");//디데이
+            var ddayChange = dday.getTime();
+            var nowday = new Date();//현재
+            nowday = nowday.getTime();//밀리세컨드 단위변환
+            var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
+
+            var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
+
+            var h = Math.floor((distance / (1000*60*60)) % 24);//시간
+            var m = Math.floor((distance / (1000*60)) % 60);//분
+            var s = Math.floor((distance / 1000) % 60);//초
+            
+            if(d < 10) {
+                d = "0" + d;
+            }
+            if(h < 10) {
+                h = "0" + h;
+            }
+            if(m < 10) {
+                m = "0" + m;
+            }
+            if(s < 10) {
+                s = "0" + s;
+            }
+            
+            if (distance <= 0) {//당일넘어섰을때, dday로 변경
+                document.getElementById("dday-timer").innerHTML = "D-day";
+            } else {
+//                document.getElementById("target-day").innerHTML = dday;
+                document.getElementById("time-day").innerHTML = d;
+                document.getElementById("time-hour").innerHTML = h;
+                document.getElementById("time-minute").innerHTML = m;
+                document.getElementById("time-second").innerHTML = s;
+            
+//                if(d <= 0) {
+//                    document.getElementById("time-day").innerHTML = "00";
+//                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <title>그린버드</title>
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="../css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dotdotdot.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../js/respond.min.js"></script>
+        <script type="text/javascript" src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+    <div class="body_wrap">
+        <i class="fa fa-spinner fa-spin fa-3x fa-spin"></i>
+    </div>
+    
+    <div id="header">
+        <div id="gnb">
+			<div class="inner">
+				<ul class="ulright">
+					<li>
+						<div class="socialList">
+							<select>
+								<option value="javascript:;">SNS</option>
+								<option value="javascript:;">KAKAOTALK</option>
+								<option value="javascript:;">KAKAOSTORY</option>
+								<option value="javascript:;">BAND</option>
+								<option value="javascript:;">FACEBOOK</option>
+								<option value="javascript:;">TWITTER</option>
+								<option value="javascript:;">GOOGLE+</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="lang">
+							<!-- 구글번역 -->
+							<div class="subheader-gtrans">
+								<div class="google-translator">
+									<div id="google_translate_element"></div>
+									<script type="text/javascript">
+									function googleTranslateElementInit() {
+									  new google.translate.TranslateElement({ pageLanguage: 'ko', includedLanguages: 'en,hi,ja,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+									}
+									</script>
+									<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+								</div>
+							</div>
+							<!-- //구글번역 -->
+						</div>
+					</li>
+				</ul>
+				<ul class="list">
+					<li>
+						<a href="../login/login.html"><p><img src="../images/contents/user.png" alt="javascript:;" /></p><em>로그인</em></a>
+					</li>
+					<li>
+						<a href="../login/join.html"><p><img src="../images/contents/join.png" alt="javascript:;" /></p><em>회원가입</em></a>
+					</li>
+					<li>
+						<a href="../mypage2/mypage.html"><p><img src="../images/contents/mypage.png" alt="javascript:;" /></p><em>마이페이지</em></a>
+					</li>
+					<li>
+						<a href="../mypage2/cart.html"><p><img src="../images/contents/basket.png" alt="javascript:;" /></p><em>장바구니</em></a>
+					</li>
+				</ul>
+			</div>
+            
+        </div>
+        <!-- /#gnb -->
+        
+        <div id="mainMenu">
+			<div class="inner">
+				<ul class="topnav ani i8">
+					<li class="first"><a href="../index2.html"><img src="../images/common/logo.png" alt="" /></a></li>
+					<li class="menu_w"><a href="subpage2-1.html" class="menu">회사소개</a>
+						<ul>
+							<li><a href="subpage2-1.html">회사개요</a></li>
+							<li><a href="subpage2-2.html">CEO인사말</a></li>
+							<li><a href="subpage2-3.html">경영철학과 이념</a></li>
+							<li><a href="subpage2-4.html">스텝소개</a></li>
+							<li><a href="subpage2-5.html">연혁</a></li>
+							<li><a href="subpage2-6.html">조직도</a></li>
+							<li><a href="subpage2-7.html">CI/BI</a></li>
+							<li><a href="subpage2-8.html">제휴문의</a></li>
+							<li><a href="subpage2-9.html">협력업체</a></li>
+							<li><a href="subpage2-10.html">지사안내</a></li>
+							<li><a href="subpage2-11.html">찾아오시는길</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="subpage2-12.html" class="menu">사업소개</a>
+						<ul>
+							<li><a href="subpage2-12.html">사업분야</a></li>
+							<li><a href="subpage2-13.html">납품실적</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="subpage2-14.html" class="menu">제품소개</a>
+						<ul>
+							<li><a href="subpage2-14.html">A제품</a></li>
+							<li><a href="subpage2-15.html">B제품</a></li>
+							<li><a href="subpage2-16.html">C제품</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="subpage2-17.html" class="menu">인재채용</a>
+						<ul>
+							<li><a href="subpage2-17.html">채용안내</a></li>
+							<li><a href="subpage2-18.html">채용부분</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="subpage2-19.html" class="menu">홍보센터</a>
+						<ul>
+							<li><a href="subpage2-19.html">공지사항</a></li>
+							<li><a href="subpage2-20.html">보도자료</a></li>
+							<li><a href="subpage2-21.html">홍보동영상</a></li>
+							<li><a href="subpage2-22.html">사회공헌</a></li>
+							<li><a href="subpage2-23.html">인증서</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="subpage2-24.html" class="menu">고객센터</a>
+						<ul>
+							<li><a href="subpage2-24.html">자주하는 질문</a></li>
+							<li><a href="subpage2-25.html">묻고답하기</a></li>
+							<li><a href="subpage2-26.html">자료실</a></li>
+							<li><a href="subpage2-27.html">이용후기</a></li>
+							<li><a href="subpage2-28.html">이벤트</a></li>
+							<li><a href="subpage2-29.html">행사일정표</a></li>
+							<li><a href="subpage2-30.html">사이트맵</a></li>
+						</ul>
+					</li> 
+					<li class="menu_w"><a href="subpage2-31.html" class="menu">상담신청</a>
+						<ul>
+							<li><a href="subpage2-31.html">상담안내</a></li>
+							<li><a href="subpage2-32.html">신청하기</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="shopping2.html" class="menu">쇼핑</a></li>
+					<li class="icon">
+						<a href="javascript:void(0);"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+				
+            <div id="mobile_menu">
+                <div class="bottom">
+                    <div class="hide">
+                        <div class="w50 left">
+                            <div class="wrap">
+                                <ul class="">
+                                    <li class="on">회사소개</li>
+                                    <li>사업소개</li>
+                                    <li>제품소개</li>
+                                    <li>인재채용</li>
+                                    <li>홍보센터</li>
+                                    <li>고객센터</li>
+                                    <li>예약하기</li>
+                                    <li>쇼핑</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w50 right">
+                        <div class="wrap">
+                            <div class="inner">
+                                <ul style="margin-top:0;">
+                                    <li class="title">회사소개</li>
+                                    <li><a href="subpage2-1.html">회사개요</a></li>
+                                    <li><a href="subpage2-2.html">CEO인사말</a></li>
+                                    <li><a href="subpage2-3.html">경영철학과 이념</a></li>
+                                    <li><a href="subpage2-4.html">스텝소개</a></li>
+                                    <li><a href="subpage2-5.html">연혁</a></li>
+                                    <li><a href="subpage2-6.html">조직도</a></li>
+                                    <li><a href="subpage2-7.html">CI/BI</a></li>
+                                    <li><a href="subpage2-8.html">제휴문의</a></li>
+                                    <li><a href="subpage2-9.html">협력업체</a></li>
+                                    <li><a href="subpage2-10.html">지사안내</a></li>
+                                    <li><a href="subpage2-11.html">찾아오시는길</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">사업소개</li>
+                                    <li><a href="subpage2-12.html">사업분야</a></li>
+                                    <li><a href="subpage2-13.html">납품실적</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">제품소개</li>
+                                    <li><a href="subpage2-14.html">A제품</a></li>
+                                    <li><a href="subpage2-15.html">B제품</a></li>
+                                    <li><a href="subpage2-16.html">C제품</a></li>
+                                </ul>	
+                                <ul>
+                                    <li class="title">인재채용</li>
+                                    <li><a href="subpage2-17.html">채용안내</a></li>
+                                    <li><a href="subpage2-18.html">채용부분</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">홍보센터</li>
+                                    <li><a href="subpage2-19.html">공지사항</a></li>
+                                    <li><a href="subpage2-20.html">보도자료</a></li>
+                                    <li><a href="subpage2-21.html">홍보동영상</a></li>
+                                    <li><a href="subpage2-22.html">사회공헌</a></li>
+                                    <li><a href="subpage2-23.html">인증서</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">고객센터</li>
+                                    <li><a href="subpage2-24.html">자주하는 질문</a></li>
+                                    <li><a href="subpage2-25.html">묻고답하기</a></li>
+                                    <li><a href="subpage2-26.html">자료실</a></li>
+                                    <li><a href="subpage2-27.html">이용후기</a></li>
+                                    <li><a href="subpage2-28.html">이벤트</a></li>
+                                    <li><a href="subpage2-29.html">행사일정표</a></li>
+                                    <li><a href="subpage2-30.html">사이트맵</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">예약하기</li>
+                                    <li><a href="subpage2-31.html">예약안내</a></li>
+                                    <li><a href="subpage2-32.html">신청하기</a></li>
+                                </ul>
+                                <ul style="padding-bottom:58px;">
+                                    <li class="title">쇼핑</li>
+                                    <li><a href="shopping2.html">쇼핑</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#mainMenu -->
+    </div>
+    <!-- /#header -->
+
+    <!--  contents  -->
+    <div id="contents">
+		<div id="section34">
+			<div class="inner section">
+				<div id="detail1">
+					<div class="detail_img">
+						<div class="detail_img_wrap">
+							<div class="btn_video">
+								<a href="javascript:;">동영상</a>
+								<iframe src="https://www.youtube.com/embed/mkny5jbNDrM?showinfo=0&controls=2&modestbranding=1&rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<a href="javascript:;" class="btn_video_close"><img src="../images/contents/btn_close_02.png" alt="" /></a>
+							<div class="hiddencontents tab1 on">
+								<div class="large_thumb">
+									<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+								</div>
+							</div>
+							<div class="hiddencontents tab2">
+								<div class="large_thumb">
+									<div class="imgbox" style="background-image:url('../images/contents/img_temp_02.jpg');"></div>
+								</div>
+							</div>
+							<div class="hiddencontents tab3">
+								<div class="large_thumb">
+									<div class="imgbox" style="background-image:url('../images/contents/img_temp_03.jpg');"></div>
+								</div>
+							</div>
+							<div class="hiddencontents tab4">
+								<div class="large_thumb">
+									<div class="imgbox" style="background-image:url('../images/contents/img_temp_04.jpg');"></div>
+								</div>
+							</div>
+							<ul class="tabbox">
+								<li class="tab1 on">
+									<a href="javascript:commonTab('detail_img','tab1');" class="small_thumb">
+										<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+									</a>
+								</li>
+								<li class="tab2">
+									<a href="javascript:commonTab('detail_img','tab2');" class="small_thumb">
+										<div class="imgbox" style="background-image:url('../images/contents/img_temp_02.jpg');"></div>
+									</a>
+								</li>
+								<li class="tab3">
+									<a href="javascript:commonTab('detail_img','tab3');" class="small_thumb">
+										<div class="imgbox" style="background-image:url('../images/contents/img_temp_03.jpg');"></div>
+									</a>
+								</li>
+								<li class="tab4">
+									<a href="javascript:commonTab('detail_img','tab4');" class="small_thumb">
+										<div class="imgbox" style="background-image:url('../images/contents/img_temp_04.jpg');"></div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="review_point">
+							<ul>
+								<li>
+									<div class="iconbox">
+										<img src="../images/contents/icon_15.png" alt="" />
+										<div class="point">9.2</div>
+									</div>
+								</li>
+								<li>
+									<div class="title">고객만족도</div>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</li>
+								<li>
+									<div class="title">상품평</div>
+									<div class="txt1"><em>12</em>건</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.detail_img -->
+					
+					<div class="detaile_pay">
+						<div class="title">
+							<div class="flbox">
+								<p>상품번호 : 12345678912345</p>
+							</div>
+							<div class="frbox">
+								<ul class="sns_button">
+									<li>
+										<a href="javascript:;" class="btn-like"><img src="../images/contents/icon_heart_off.png" alt="" /></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="btn-share"><img src="../images/contents/icon_share.png" alt="" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h2>[그린버드]브로콜리 새싹분말100% [100g]</h2>
+						<ul class="clearfix">
+							<li>
+								<dl>
+									<dt>시중가 : </dt>
+									<dd class="line_thr">160,000원</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>판매가 : </dt>
+									<dd>60,000원</dd>
+								</dl>
+							</li>
+						</ul>
+						<ul class="clearfix">
+							<li>
+								<dl>
+									<dt>사은품 : </dt>
+									<dd>일회용 가방</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>판매수량 : </dt>
+									<dd>∞</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>배송방법 : </dt>
+									<dd>택배</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>상품상태 : </dt>
+									<dd>신상품/새상품</dd>
+								</dl>
+							</li>
+						</ul>
+						<ul class="clearfix">
+							<li>
+								<dl>
+									<dt>제조사 : </dt>
+									<dd>브랜드</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>원산지 : </dt>
+									<dd>국내</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>배송비 : </dt>
+									<dd>선불/2,500원(단, 100,000원 이상 구매시 무료)</dd>
+								</dl>
+							</li>
+						</ul>
+						<form>
+							<fieldset>
+								<legend>옵션</legend>
+								<select class="margin_b_10">
+									<option value="">상품을 선택하세요.</option>
+									<option value="상품1">상품1</option>
+									<option value="상품2">상품2</option>
+								</select>
+								<select class="margin_b_10">
+									<option value="">옵션을 선택하세요.</option>
+									<option value="옵션1">옵션1</option>
+									<option value="옵션2">옵션2</option>
+								</select>
+								<ul class="detail_cart2">
+									<li>
+										<h3 class="ell3">01. [그린버드]브로콜리 새싹분말100% [100g]</h3>
+										<div class="position-a">
+											<p>
+												<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+											</p>
+											<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+										</div>
+									</li>
+									<li>
+										<h3 class="ell3">02. [그린버드]브로콜리 새싹분말100% [200g]</h3>
+										<div class="position-a">
+											<p>
+												<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+											</p>
+											<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+										</div>
+									</li>
+									<li>
+										<h3 class="ell3">03. [그린버드]브로콜리 새싹분말100% [300g]</h3>
+										<div class="position-a">
+											<p>
+												<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+											</p>
+											<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+						<div class="price_table">
+							<p class="sub_price">총 상품금액 <strong>273,900</strong>원</p>
+						</div>
+
+						<ul class="price clearfix">
+							<li><a href="javascript:;">관심상품등록</a></li>
+							<li class="btn-cart"><a href="javascript:;">장바구니</a></li>
+							<li class="buy"><a href="javascript:;">구매하기</a></li>
+						</ul>
+					</div>
+					<!-- /.detaile_pay -->
+				</div>
+				
+				<div id="detail2">
+					<div class="tab_wrap">
+						<ul class="tabbox">
+							<li class="on"><a href="javascript:scrollLink('detail_tab1','-1');">상품정보</a></li>
+							<li><a href="javascript:scrollLink('detail_tab2','-1');">이용후기</a></li>
+							<li><a href="javascript:scrollLink('detail_tab3','-1');">상품문의</a></li>
+							<li><a href="javascript:scrollLink('detail_tab4','-1');">교환/반품</a></li>
+						</ul>
+					</div>
+					<div class="detail_wrap">
+						
+						<div id="detail_tab1">
+							<div class="section_title">상품정보 제공고시</div>
+							<table>
+								<tr>
+									<th>부가세/면세상품</th>
+									<td>과세상품</td>
+									<th>배송비 부담</th>
+									<td>무료</td>
+								</tr>
+								<tr>
+									<th>배송가능지역</th>
+									<td>전국</td>
+									<th>배송방법</th>
+									<td>택배</td>
+								</tr>
+								<tr>
+									<th>제조사 / 원산지</th>
+									<td>국외</td>
+									<th>상품의 상태</th>
+									<td>신상품/새상품</td>
+									
+								</tr>
+								<tr>
+									<th>제조일자</th>
+									<td>2017년 6월</td>							
+									<th>유효기간</th>
+									<td>2018년 6월</td>
+								</tr>
+								<tr>
+									<th>A/S 여부</th>
+									<td colspan="3">&nbsp;</td>
+								</tr>
+							</table>
+							<img src="../images/contents/detail_page_01.jpg" alt="" />
+						</div>
+						<!-- /#detail_tab1 -->
+
+						<div id="detail_tab2">
+							<div class="section_title">이용후기</div>
+							<form action="" name="">
+								<fieldset>
+									<div class="review_title">
+										<h2>구매만족도</h2>
+										<div class="myrating">
+											<span class="stars-default star"><input type="hidden" name="rating"/></span>
+										</div>
+									</div>
+									<div class="write_review">
+										<textarea name="detail_contents" placeholder="개인정보 입력시 도용될 수 있으니, 입력 시 주의해 주시기 바랍니다."></textarea>
+										<button type="button" class="login_alert">등록</button>
+									</div>
+
+									<ol>
+										<li>
+											<table>
+												<thead>
+													<tr>
+														<th class="title">
+															<div class="myrating">
+																<span class="stars-default star"><input type="hidden" name="rating"/></span>
+															</div>
+														</th>
+														<th class="id">hon***</th>
+														<th class="day none">2017.01.01</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="3">
+<!--															<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>-->
+															<div class="txtbox">
+																<div class="title ell1">[제품명]옵션_01, 옵션_02</div>
+																<div class="txt1">
+																	다른 데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다.
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<table>
+												<thead>
+													<tr>
+														<th class="title">
+															<div class="myrating">
+																<span class="stars-default star"><input type="hidden" name="rating"/></span>
+															</div>
+														</th>
+														<th class="id">hon***</th>
+														<th class="day none">2017.01.01</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="3">
+															<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+															<div class="txtbox">
+																<div class="title ell1">[제품명]옵션_01, 옵션_02</div>
+																<div class="txt1">
+																	다른 데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다.
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<table>
+												<thead>
+													<tr>
+														<th class="title">
+															<div class="myrating">
+																<span class="stars-default star"><input type="hidden" name="rating"/></span>
+															</div>
+														</th>
+														<th class="id">hon***</th>
+														<th class="day none">2017.01.01</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="3">
+															<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+															<div class="txtbox">
+																<div class="title ell1">[제품명]옵션_01, 옵션_02</div>
+																<div class="txt1">
+																	다른 데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다.
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<table>
+												<thead>
+													<tr>
+														<th class="title">
+															<div class="myrating">
+																<span class="stars-default star"><input type="hidden" name="rating"/></span>
+															</div>
+														</th>
+														<th class="id">hon***</th>
+														<th class="day none">2017.01.01</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td colspan="3">
+															<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+															<div class="txtbox">
+																<div class="title ell1">[제품명]옵션_01, 옵션_02</div>
+																<div class="txt1">
+																	다른 데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다.
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+									</ol>
+
+									<div class="table_num clearfix">
+										<ul>
+											<li>
+												<a href="javascript:;" class="PrevPrev">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" class="Prev">
+												</a>
+											</li>
+											<li><a href="javascript:;">1</a></li>
+											<li class="on"><a href="javascript:;">2</a></li>
+											<li><a href="javascript:;">3</a></li>
+											<li><a href="javascript:;">4</a></li>
+											<li><a href="javascript:;">5</a></li>
+											<li>
+												<a href="javascript:;" class="Next">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" class="NextNext">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<!-- /#detail_tab2 -->
+
+						<div id="detail_tab3">
+							<div class="section_title">상품문의</div>
+							<form action="" name="">
+								<fieldset>
+									<div class="write_review">
+										<textarea name="detail_contents" placeholder="개인정보 입력시 도용될 수 있으니, 입력 시 주의해 주시기 바랍니다."></textarea>
+										<button type="button" class="login_alert">등록</button>
+									</div>
+
+									<table>
+										<thead>
+											<tr>
+												<th class="hit">번호</th>
+												<th class="title">내용</th>
+												<th class="id">작성자</th>
+												<th class="day">작성일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="bd_none">
+												<td>3</td>
+												<td class="edit_table">
+													<span>
+														다른데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다. 
+														<a href="javascript:;"><img src="../images/contents/edit.png" alt="edit" /></a>
+													</span>
+												</td>
+												<td>hon*****</td>
+												<td>2017.01.01</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td class="write_tb" colspan="3">
+													<img src="../images/contents/comment.png" alt="edit" />
+													<textarea name="detail_contents" placeholder="로그인 하신 후 답변쓰기가 가능합니다."></textarea>
+													<button type="button" class="login_alert">등록</button>
+												</td>
+											</tr>
+											<tr class="bd_none">
+												<td>2</td>
+												<td class="edit_table">
+													<span>
+														다른데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다. 
+														<a href="javascript:;"><img src="../images/contents/edit.png" alt="edit" /></a>
+													</span>
+												</td>
+												<td>hon*****</td>
+												<td>2017.01.01</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td class="write_tb" colspan="3">
+													<img src="../images/contents/comment.png" alt="edit" />
+													<textarea name="detail_contents" placeholder="로그인 하신 후 답변쓰기가 가능합니다."></textarea>
+													<button type="button" class="login_alert">등록</button>
+												</td>
+											</tr>
+											<tr class="bd_none">
+												<td>1</td>
+												<td class="edit_table">
+													<span>
+														다른데에 비하면 가격은 비싸지만, 맛이 있어서 만족합니다. 
+														<a href="javascript:;"><img src="../images/contents/edit.png" alt="edit" /></a>
+													</span>
+												</td>
+												<td>hon*****</td>
+												<td>2017.01.01</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td class="write_tb" colspan="3">
+													<img src="../images/contents/comment.png" alt="edit" />
+													<textarea name="detail_contents" placeholder="로그인 하신 후 답변쓰기가 가능합니다."></textarea>
+													<button type="button" class="login_alert">등록</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="table_num clearfix">
+										<ul>
+											<li>
+												<a href="javascript:;" class="PrevPrev">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" class="Prev">
+												</a>
+											</li>
+											<li><a href="javascript:;">1</a></li>
+											<li class="on"><a href="javascript:;">2</a></li>
+											<li><a href="javascript:;">3</a></li>
+											<li><a href="javascript:;">4</a></li>
+											<li><a href="javascript:;">5</a></li>
+											<li>
+												<a href="javascript:;" class="Next">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" class="NextNext">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</fieldset>
+							</form>	
+						</div>
+						<!-- /#detail_tab3 -->
+
+						<div id="detail_tab4">
+							<div class="section_title">교환/반품</div>
+							<ul class="d_txt4">
+								<li>
+									<h3>[반품안내]</h3>
+									<p>반품정보 내용이 들어가는 자리입니다.</p>
+								</li>
+								<li>
+									<h3>[교환안내]</h3>
+									<p>교환정보 내용이 들어가는 자리입니다.</p>
+								</li>
+								<li>
+									<h3>[환불안내]</h3>
+									<p>환불정보 내용이 들어가는 자리입니다.</p>
+								</li>
+							</ul>
+						</div>
+						<!-- /#detail_tab4 -->
+					</div>
+					
+					<div class="detail_menu clearfix">
+						<div class="detail_sub">
+							<h2>상품옵션</h2>
+							<form>
+								<fieldset>
+									<select>
+										<option value="">상품선택</option>
+										<option value="상품1">상품1</option>
+										<option value="상품2">상품2</option>
+									</select>
+									<select>
+										<option value="">옵션선택</option>
+										<option value="옵션1">옵션1</option>
+										<option value="옵션2">옵션2</option>
+									</select>
+
+									<ul class="detail_cart">
+										<li>
+											<h3 class="ell3">01. [그린버드]브로콜리 새싹분말100% [100g]</h3>
+											<div class="position-a">
+												<p>
+													<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+												</p>
+												<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+											</div>
+										</li>
+										<li>
+											<h3 class="ell3">02. [그린버드]브로콜리 새싹분말100% [200g]</h3>
+											<div class="position-a">
+												<p>
+													<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+												</p>
+												<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+											</div>
+										</li>
+										<li>
+											<h3 class="ell3">03. [그린버드]브로콜리 새싹분말100% [300g]</h3>
+											<div class="position-a">
+												<p>
+													<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+												</p>
+												<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+							</form>
+							<div class="price_table">
+								<p class="sub_price">총 상품금액 <strong>273,900</strong>원</p>
+							</div>
+
+							<ul class="price clearfix">
+								<li><a href="javascript:;">관심상품등록</a></li>
+								<li class="btn-cart"><a href="javascript:;">장바구니</a></li>
+								<li class="buy"><a href="javascript:;">구매하기</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- /.detail_menu -->
+					
+					<div class="detail_mobile clearfix">
+						<div class="inner clearfix">
+							<a href="javascript:;" class="btn_option">옵션선택</a>
+							<div class="flbox">
+								<form action="" name="">
+									<fieldset>
+										<select>
+											<option value="">상품선택</option>
+											<option value="상품1">상품1</option>
+											<option value="상품2">상품2</option>
+										</select>
+										<select>
+											<option value="">옵션선택</option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+										</select>
+
+										<ul class="detail_cart2">
+											<li>
+												<h3 class="ell3">01. [그린버드]브로콜리 새싹분말100% [100g]</h3>
+												<div class="position-a">
+													<p>
+														<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+													</p>
+													<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+												</div>
+											</li>
+											<li>
+												<h3 class="ell3">02. [그린버드]브로콜리 새싹분말100% [200g]</h3>
+												<div class="position-a">
+													<p>
+														<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+													</p>
+													<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+												</div>
+											</li>
+											<li>
+												<h3 class="ell3">03. [그린버드]브로콜리 새싹분말100% [300g]</h3>
+												<div class="position-a">
+													<p>
+														<button>-</button><input type="text" id="cart_option" name="cart_option" value="1" /><button>+</button>
+													</p>
+													<strong>18,600원<img src="../images/contents/icon_close_01.png" alt="" /></strong>
+												</div>
+											</li>
+										</ul>
+									</fieldset>
+								</form>
+							</div>
+							<div class="frbox">
+								<div class="pro_ea">총 수량 <em>1</em>개</div>
+								<div class="pro_price">총 금액 <em>30,000</em>원</div>
+							</div>
+							<div class="btn-group clearfix">
+								<ul>
+									<li class="btn-cart"><a href="javascript:;">장바구니담기</a></li>
+									<li class="buy"><a href="javascript:;">구매하기</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /.detail_mobile -->
+				</div>
+				
+				<!-- The Modal -->
+				<div id="cart" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="max-width:370px;">
+						<span class="btn_close"><a href="javascript:;" class="close"><img src="../images/contents/icon_close_01.png" alt=""/></a></span>
+						<h4>장바구니 담기</h4>
+						<div class="txtbox clearfix">
+							<p class="txt1">선택하신 상품을 장바구니에 담았습니다.</p>
+						</div>
+						<div class="btn_group">
+							<button type="button" onclick="$('#cart').css('display', 'none');" class="btn1">계속쇼핑</button>
+							<button type="button" onclick="location.href='../mypage2/cart.html'" class="btn2">장바구니</button>
+						</div>
+					</div>
+					<!-- /.Modal content -->
+				</div>
+				<!-- /.modal -->
+				
+				<!-- The Modal -->
+				<div id="share" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="max-width:370px;">
+						<span class="btn_close"><a href="javascript:;" class="close"><img src="../images/contents/icon_close_01.png" alt=""/></a></span>
+						<h4>공유하기</h4>
+						<ul class="sns">
+							<li>
+								<a href="javascript:;">
+									<img src="../images/footer/snsImg1.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<img src="../images/footer/snsImg2.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<img src="../images/footer/snsImg3.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<img src="../images/footer/snsImg4.png" alt="">
+								</a>
+							</li>
+						</ul>
+						<div class="url_wrap">
+							<input type="text" value="http://www.ezonm.com" />
+							<a href="javascript:;">URL복사</a>
+						</div>
+					</div>
+					<!-- /.Modal content -->
+				</div>
+				<!-- /.modal -->
+			</div>	
+			<!-- /.inner section -->
+		</div>
+		<!-- /#section34 -->
+    </div>
+	<!-- /#contents -->
+
+    <div id="footer">
+        <div class="utilMenu">
+			<div class="inner">
+				<ul>
+					<li class="bd"><a href="subpage2-1.html">회사소개</a></li>
+					<li class="userule bd"><a href="agree2.html">이용약관</a></li>
+					<li class="privacy bd"><a href="agree2.html"><i>개인정보</i><i>취급방침</i></a></li>
+					<li class="emailreject"><a href="agree2.html"><i>이메일무단</i><i>수집거부</i></a></li>
+					<li class="youngsafe"><a href="agree2.html"><i>청소년</i><i>보호정책</i></a></li>
+                    <li><a href="subpage2-24.html">고객센터</a></li> 
+				</ul>
+                <div class="btngp">
+                    <button type="button" onclick="location='../hopage_admin/login.html'">관리자 로그인</button>
+                    <div class="sns">
+                        <a href="javascript:;"><img src="../images/footer/snsImg1.png" alt="javascript:;"/></a>
+                        <a href="javascript:;"><img src="../images/footer/snsImg2.png" alt="javascript:;"/></a>
+                        <a href="javascript:;"><img src="../images/footer/snsImg3.png" alt="javascript:;"/></a>
+                        <a href="javascript:;" class="last"><img src="../images/footer/snsImg4.png" alt="javascript:;"/></a>
+                    </div>
+                </div>
+			</div>
+		</div>
+        <div class="inner">
+            <div class="company">
+                <h1><img src="../images/footer/f_logo.png" alt="" /></h1>
+                <div class="company_txt">
+                    <p class="javascript:;">
+                        상호명 : 농업회사법인 (주)명소 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" /> 
+                        경북 성주군 벽진면 봉흥로140 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" /> 
+                        사업자등록번호 510-81-34684
+                    </p>
+                    <p>
+                        T. 054-714-1218 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        FAX. 054-714-1219 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        대표 : 김순옥 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        EMAIL. webmaster@misosalife.com
+                    </p>
+                    <p class="tx1">ⓒ2015 MISOSA ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="caution">
+                    <p>
+                        고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    </p>
+                    <button>가입사실확인</button>
+                    <button>사업자정보확인</button>
+                </div>
+            </div><!-- /.company -->
+        </div><!-- /.inner -->
+    </div><!-- /#footer -->
+
+    <span id="top_scroll">
+        <a href="javascript:;"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    </span>
+    
+</body>
+</html>

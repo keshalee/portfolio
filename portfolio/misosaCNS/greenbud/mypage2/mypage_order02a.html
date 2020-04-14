@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <title>그린버드</title>
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="../css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dotdotdot.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../js/respond.min.js"></script>
+        <script type="text/javascript" src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+    <div class="body_wrap">
+        <i class="fa fa-spinner fa-spin fa-3x fa-spin"></i>
+    </div>
+    
+    <div id="header">
+        <div id="gnb">
+			<div class="inner">
+				<ul class="ulright">
+					<li>
+						<div class="socialList">
+							<select>
+								<option value="javascript:;">SNS</option>
+								<option value="javascript:;">KAKAOTALK</option>
+								<option value="javascript:;">KAKAOSTORY</option>
+								<option value="javascript:;">BAND</option>
+								<option value="javascript:;">FACEBOOK</option>
+								<option value="javascript:;">TWITTER</option>
+								<option value="javascript:;">GOOGLE+</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="lang">
+							<!-- 구글번역 -->
+							<div class="subheader-gtrans">
+								<div class="google-translator">
+									<div id="google_translate_element"></div>
+									<script type="text/javascript">
+									function googleTranslateElementInit() {
+									  new google.translate.TranslateElement({ pageLanguage: 'ko', includedLanguages: 'en,hi,ja,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+									}
+									</script>
+									<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+								</div>
+							</div>
+							<!-- //구글번역 -->
+						</div>
+					</li>
+				</ul>
+				<ul class="list">
+					<li>
+						<a href="../login/login.html"><p><img src="../images/contents/user.png" alt="javascript:;" /></p><em>로그인</em></a>
+					</li>
+					<li>
+						<a href="../login/join.html"><p><img src="../images/contents/join.png" alt="javascript:;" /></p><em>회원가입</em></a>
+					</li>
+					<li>
+						<a href="mypage.html"><p><img src="../images/contents/mypage.png" alt="javascript:;" /></p><em>마이페이지</em></a>
+					</li>
+					<li>
+						<a href="cart.html"><p><img src="../images/contents/basket.png" alt="javascript:;" /></p><em>장바구니</em></a>
+					</li>
+				</ul>
+			</div>
+            
+        </div>
+        <!-- /#gnb -->
+        
+        <div id="mainMenu">
+			<div class="inner">
+				<ul class="topnav ani i8">
+					<li class="first"><a href="../index2.html"><img src="../images/common/logo.png" alt="" /></a></li>
+					<li class="menu_w"><a href="../subpage/subpage2-1.html" class="menu">회사소개</a>
+						<ul>
+							<li><a href="../subpage/subpage2-1.html">회사개요</a></li>
+							<li><a href="../subpage/subpage2-2.html">CEO인사말</a></li>
+							<li><a href="../subpage/subpage2-3.html">경영철학과 이념</a></li>
+							<li><a href="../subpage/subpage2-4.html">스텝소개</a></li>
+							<li><a href="../subpage/subpage2-5.html">연혁</a></li>
+							<li><a href="../subpage/subpage2-6.html">조직도</a></li>
+							<li><a href="../subpage/subpage2-7.html">CI/BI</a></li>
+							<li><a href="../subpage/subpage2-8.html">제휴문의</a></li>
+							<li><a href="../subpage/subpage2-9.html">협력업체</a></li>
+							<li><a href="../subpage/subpage2-10.html">지사안내</a></li>
+							<li><a href="../subpage/subpage2-11.html">찾아오시는길</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/subpage2-12.html" class="menu">사업소개</a>
+						<ul>
+							<li><a href="../subpage/subpage2-12.html">사업분야</a></li>
+							<li><a href="../subpage/subpage2-13.html">납품실적</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/subpage2-14.html" class="menu">제품소개</a>
+						<ul>
+							<li><a href="../subpage/subpage2-14.html">A제품</a></li>
+							<li><a href="../subpage/subpage2-15.html">B제품</a></li>
+							<li><a href="../subpage/subpage2-16.html">C제품</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/subpage2-17.html" class="menu">인재채용</a>
+						<ul>
+							<li><a href="../subpage/subpage2-17.html">채용안내</a></li>
+							<li><a href="../subpage/subpage2-18.html">채용부분</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/subpage2-19.html" class="menu">홍보센터</a>
+						<ul>
+							<li><a href="../subpage/subpage2-19.html">공지사항</a></li>
+							<li><a href="../subpage/subpage2-20.html">보도자료</a></li>
+							<li><a href="../subpage/subpage2-21.html">홍보동영상</a></li>
+							<li><a href="../subpage/subpage2-22.html">사회공헌</a></li>
+							<li><a href="../subpage/subpage2-23.html">인증서</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/subpage2-24.html" class="menu">고객센터</a>
+						<ul>
+							<li><a href="../subpage/subpage2-24.html">자주하는 질문</a></li>
+							<li><a href="../subpage/subpage2-25.html">묻고답하기</a></li>
+							<li><a href="../subpage/subpage2-26.html">자료실</a></li>
+							<li><a href="../subpage/subpage2-27.html">이용후기</a></li>
+							<li><a href="../subpage/subpage2-28.html">이벤트</a></li>
+							<li><a href="../subpage/subpage2-29.html">행사일정표</a></li>
+							<li><a href="../subpage/subpage2-30.html">사이트맵</a></li>
+						</ul>
+					</li> 
+					<li class="menu_w"><a href="../subpage/subpage2-31.html" class="menu">상담신청</a>
+						<ul>
+							<li><a href="../subpage/subpage2-31.html">상담안내</a></li>
+							<li><a href="../subpage/subpage2-32.html">신청하기</a></li>
+						</ul>
+					</li>
+					<li class="menu_w"><a href="../subpage/shopping2.html" class="menu">쇼핑</a></li>
+					<li class="icon">
+						<a href="javascript:void(0);"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+				
+            <div id="mobile_menu">
+                <div class="bottom">
+                    <div class="hide">
+                        <div class="w50 left">
+                            <div class="wrap">
+                                <ul class="">
+                                    <li class="on">회사소개</li>
+                                    <li>사업소개</li>
+                                    <li>제품소개</li>
+                                    <li>인재채용</li>
+                                    <li>홍보센터</li>
+                                    <li>고객센터</li>
+                                    <li>예약하기</li>
+                                    <li>쇼핑</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w50 right">
+                        <div class="wrap">
+                            <div class="inner">
+                                <ul style="margin-top:0;">
+                                    <li class="title">회사소개</li>
+                                    <li><a href="../subpage/subpage2-1.html">회사개요</a></li>
+                                    <li><a href="../subpage/subpage2-2.html">CEO인사말</a></li>
+                                    <li><a href="../subpage/subpage2-3.html">경영철학과 이념</a></li>
+                                    <li><a href="../subpage/subpage2-4.html">스텝소개</a></li>
+                                    <li><a href="../subpage/subpage2-5.html">연혁</a></li>
+                                    <li><a href="../subpage/subpage2-6.html">조직도</a></li>
+                                    <li><a href="../subpage/subpage2-7.html">CI/BI</a></li>
+                                    <li><a href="../subpage/subpage2-8.html">제휴문의</a></li>
+                                    <li><a href="../subpage/subpage2-9.html">협력업체</a></li>
+                                    <li><a href="../subpage/subpage2-10.html">지사안내</a></li>
+                                    <li><a href="../subpage/subpage2-11.html">찾아오시는길</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">사업소개</li>
+                                    <li><a href="../subpage/subpage2-12.html">사업분야</a></li>
+                                    <li><a href="../subpage/subpage2-13.html">포트폴리오</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">제품소개</li>
+                                    <li><a href="../subpage/subpage2-14.html">A제품</a></li>
+                                    <li><a href="../subpage/subpage2-15.html">B제품</a></li>
+                                    <li><a href="../subpage/subpage2-16.html">C제품</a></li>
+                                </ul>	
+                                <ul>
+                                    <li class="title">인재채용</li>
+                                    <li><a href="../subpage/subpage2-17.html">채용안내</a></li>
+                                    <li><a href="../subpage/subpage2-18.html">채용부분</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">홍보센터</li>
+                                    <li><a href="../subpage/subpage2-19.html">공지사항</a></li>
+                                    <li><a href="../subpage/subpage2-20.html">보도자료</a></li>
+                                    <li><a href="../subpage/subpage2-21.html">홍보동영상</a></li>
+                                    <li><a href="../subpage/subpage2-22.html">사회공헌</a></li>
+                                    <li><a href="../subpage/subpage2-23.html">인증서</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">고객센터</li>
+                                    <li><a href="../subpage/subpage2-24.html">자주하는 질문</a></li>
+                                    <li><a href="../subpage/subpage2-25.html">묻고답하기</a></li>
+                                    <li><a href="../subpage/subpage2-26.html">자료실</a></li>
+                                    <li><a href="../subpage/subpage2-27.html">이용후기</a></li>
+                                    <li><a href="../subpage/subpage2-28.html">이벤트</a></li>
+                                    <li><a href="../subpage/subpage2-29.html">행사일정표</a></li>
+                                    <li><a href="../subpage/subpage2-30.html">사이트맵</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title">예약하기</li>
+                                    <li><a href="../subpage/subpage2-31.html">예약안내</a></li>
+                                    <li><a href="../subpage/subpage2-32.html">신청하기</a></li>
+                                </ul>
+                                <ul style="padding-bottom:58px;">
+                                    <li class="title">쇼핑</li>
+                                    <li><a href="../subpage/shopping2.html">쇼핑</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#mainMenu -->
+    </div>
+    <!-- /#header -->
+
+    <!--  contents  -->
+    <div id="contents">
+		<div class="inner">
+			<!-- right contents side begin -->
+			<div class="side">
+				<div class="htitle">
+					<h1>마이페이지</h1>
+				</div>
+				<div class="menu">
+					<h2>거래내역</h2>
+					<ul>
+						<li><a href="mypage_order01a.html">주문/배송조회</a></li>
+						<li class="on"><a href="mypage_order02a.html">반품/교환/취소</a></li>
+						<li><a href="mypage_order03a.html">환불현황</a></li>
+						<li><a href="mypage_order04a.html">구매후기</a></li>
+					</ul>
+					<h2>관심내역</h2>
+					<ul>
+						<li><a href="mypage_wish01a.html">찜해둔 상품</a></li>
+						<li><a href="mypage_wish02a.html">오늘 본 상품</a></li>
+					</ul>
+					<h2>상담내역</h2>
+					<ul>
+						<li><a href="mypage_consult01a.html">질문한 상품내역</a></li>
+						<li><a href="mypage_consult02a.html">쪽지관리</a></li>
+					</ul>
+					<h2>통장내역</h2>
+					<ul>
+						<li><a href="mypage_bank01a.html">포인트</a></li>
+						<li><a href="mypage_bank02a.html">쇼핑할인쿠폰</a></li>
+						<li><a href="mypage_bank03a.html">캐시</a></li>
+					</ul>
+					<h2>개인정보관리</h2>
+					<ul>
+						<li><a href="mypage_pinfo01a.html">구매신용도</a></li>
+						<li><a href="mypage_pinfo02a.html">비밀번호변경</a></li>
+						<li><a href="mypage_pinfo03a.html">회원정보수정</a></li>
+						<li><a href="mypage_pinfo04a.html">회원탈퇴</a></li>
+					</ul>
+					<h2>부가서비스</h2>
+					<ul class="opt">
+						<li><a href="mypage_opt01a.html">고객계좌</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- right contents side end -->
+
+			<div class="container_mp">
+				<div class="mypage_top">
+					<p><img src="../images/contents/icon01a.png" alt="" /><span>일반회원</span></p>
+					<ul>
+						<li><strong>홍길동</strong>님, 안녕하세요?</li>
+						<li>회원등급은 <strong>일반회원</strong>입니다.</li>
+						<li>[사업자딜러] : 등록상품 <strong>0개</strong></li>
+					</ul>
+					<div>
+						<dl>
+							<dt>쇼핑할인쿠폰 : </dt>
+							<dd>0장</dd>
+						</dl>
+						<dl>
+							<dt>포인트 : </dt>
+							<dd>누적 : 98,980P / 가용 : 98,980P</dd>
+						</dl>
+						<dl>
+							<dt>캐시 : </dt>
+							<dd>누적 : 98,980P / 가용 : 98,980P</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="mypage_contents">
+					<div class="mypage_title">반품/교환/취소</div>
+					<div class="tap_menu">
+						<ul>
+							<li class="on"><a href="mypage_order02a.html">반품중</a></li>
+							<li><a href="mypage_order02b.html">교환중</a></li>
+							<li><a href="mypage_order02c.html">구매취소</a></li>
+						</ul>
+					</div>
+					
+					<ul class="guide">
+						<li>반품을 요청하신 물품입니다.</li>
+						<li>판매자님께서 반품된 물품을 수령하신 후 반품승인을 해 주시면 3일 이내에 구매자님께 물품대금을 환불해 드립니다.</li>
+						<li>반품승인이 확인되면, <strong>"환불현황"</strong>메뉴로 옮겨집니다.</li>
+						<li>반품등록 후 판매자와 적절한 조치를 통해 다시 구매하고자 할 경우 "구매승인"을 하여 주십시오.</li>
+					</ul>
+					
+					<div class="mypage_table_wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th class="mob_hide" style="width:100px;">반품일</th>
+									<th style="width:200px;"><span class="mob_hide">[주문번호]</span> 상품명</th>
+									<th style="width:80px;">가격</th>
+									<th style="width:50px;">수량</th>
+									<th class="mob_hide" style="width:80px;">배송비</th>
+									<th class="tot" style="width:100px;">합계 <span>[진행상황]</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="mob_hide">2016-03-14</td>
+									<td class="prd">
+										<div class="thumb_wrap">
+											<div class="thumb">
+												<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+											</div>
+											<div class="txtbox">
+												<div class="prd_num">[160203160032rDRZV]</div>
+												<div class="prd_name">[그린버드]브로콜리 새싹분말100% [100g]</div>
+											</div>
+										</div>
+									</td>
+									<td><span class="price">34,000원</span></td>
+									<td>1개</td>
+									<td class="mob_hide">무료</td>
+									<td>
+										<span class="price">44,000원</span><br />
+										<span class="order_inf">[입금확인중]</span><br />
+										<span class="btns">
+											<a href="javascript:;">구매승인</a>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="mob_hide">2016-03-14</td>
+									<td class="prd">
+										<div class="thumb_wrap">
+											<div class="thumb">
+												<div class="imgbox" style="background-image:url('../images/contents/img_temp_01.jpg');"></div>
+											</div>
+											<div class="txtbox">
+												<div class="prd_num">[160203160032rDRZV]</div>
+												<div class="prd_name">[그린버드]브로콜리 새싹분말100% [100g]</div>
+											</div>
+										</div>
+									</td>
+									<td><span class="price">34,000원</span></td>
+									<td>1개</td>
+									<td class="mob_hide">무료</td>
+									<td>
+										<span class="price">44,000원</span><br />
+										<span class="order_inf">[입금확인중]</span><br />
+										<span class="btns">
+											<a href="javascript:;">구매승인</a>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="table_num clearfix">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="PrevPrev">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="Prev">
+                                </a>
+                            </li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li class="on"><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li>
+                                <a href="javascript:;" class="Next">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="NextNext">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- /#contents -->
+
+    <div id="footer">
+        <div class="utilMenu">
+			<div class="inner">
+				<ul>
+					<li class="bd"><a href="../subpage/subpage2-1.html">회사소개</a></li>
+					<li class="userule bd"><a href="../subpage/agree2.html">이용약관</a></li>
+					<li class="privacy bd"><a href="../subpage/agree2.html"><i>개인정보</i><i>취급방침</i></a></li>
+					<li class="emailreject"><a href="../subpage/agree2.html"><i>이메일무단</i><i>수집거부</i></a></li>
+					<li class="youngsafe"><a href="../subpage/agree2.html"><i>청소년</i><i>보호정책</i></a></li>
+                    <li><a href="../subpage/subpage2-24.html">고객센터</a></li> 
+				</ul>
+                <div class="btngp">
+                    <button type="button" onclick="location='../hopage_admin/login.html'">관리자 로그인</button>
+                    <div class="sns">
+                        <a href="javascript:;"><img src="../images/footer/snsImg1.png" alt="javascript:;"/></a>
+                        <a href="javascript:;"><img src="../images/footer/snsImg2.png" alt="javascript:;"/></a>
+                        <a href="javascript:;"><img src="../images/footer/snsImg3.png" alt="javascript:;"/></a>
+                        <a href="javascript:;" class="last"><img src="../images/footer/snsImg4.png" alt="javascript:;"/></a>
+                    </div>
+                </div>
+			</div>
+		</div>
+        <div class="inner">
+            <div class="company">
+                <h1><img src="../images/footer/f_logo.png" alt="" /></h1>
+                <div class="company_txt">
+                    <p class="javascript:;">
+                        상호명 : 농업회사법인 (주)명소 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" /> 
+                        경북 성주군 벽진면 봉흥로140 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" /> 
+                        사업자등록번호 510-81-34684
+                    </p>
+                    <p>
+                        T. 054-714-1218 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        FAX. 054-714-1219 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        대표 : 김순옥 
+                        <img src="../images/contents/bg_bar_01.png" alt="" class="bar" />
+                        EMAIL. webmaster@misosalife.com
+                    </p>
+                    <p class="tx1">ⓒ2015 MISOSA ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="caution">
+                    <p>
+                        고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    </p>
+                    <button>가입사실확인</button>
+                    <button>사업자정보확인</button>
+                </div>
+            </div><!-- /.company -->
+        </div><!-- /.inner -->
+    </div><!-- /#footer -->
+
+    <span id="top_scroll">
+        <a href="javascript:;"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    </span>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    
+    <title>그린버드</title>
+
+    <!--common css-->
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="../css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dotdotdot.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../js/respond.min.js"></script>
+        <script type="text/javascript" src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+    <div class="login_wrap">
+        <div class="join">
+            <h1 class="margin_b_15 txc"><a href="../index2.html"><img src="../images/common/logo.png" alt="" /></a></h1>
+            <small>안녕하세요 그린버드입니다.</small>
+            <div class="join_form">
+                <ul>
+                    <li><input type="email" name="email" id="email" placeholder="이메일을 입력하세요"/></li>
+                    <li><input type="password" name="psw" id="psw" placeholder="비밀번호를 입력하세요"/></li>
+                </ul>
+                <div class="save_wrap">
+                    <div class="box_check_01"><input type="checkbox" id="saveId" class="save_id" /><label for="saveId"><img src="../images/contents/saveid_off.png" alt="" class="saveimg" /><span class="ckspan">자동로그인</span></label></div>
+                    <div class="login_find"><a href="find_main.html">아이디/비밀번호 찾기</a><span class="bar">|</span><a href="join.html">회원가입</a></div>
+                </div>
+                <button type="button" class="login_btn txc">로그인</button>
+            </div>
+            <script>
+                $("#saveId").click(function(){
+                    var imgattr = $(".saveimg").attr("src");
+                    if(imgattr == "../images/contents/saveid_off.png"){
+                        $(".saveimg").attr("src","../images/contents/saveid_on.png");
+                    }else {
+                        $(".saveimg").attr("src","../images/contents/saveid_off.png");
+                    }
+                });
+            </script>
+            <div class="line txc">or</div>
+            <div class="join_sns join_sns2">
+                <ul>
+                    <li><a href="javascript:;"><span class="imgbox"><img src="../images/contents/login_sns_01.png" alt="" /></span>페이스북으로 로그인하기</a></li>
+                    <li><a href="javascript:;"><span class="imgbox"><img src="../images/contents/login_sns_02.png" alt="" /></span>카카오톡으로 로그인하기</a></li>
+                    <li><a href="javascript:;"><span class="imgbox"><img src="../images/contents/login_sns_03.png" alt="" /></span>네이버로 로그인하기</a></li>
+                    <li><a href="javascript:;"><span class="imgbox"><img src="../images/contents/login_sns_04.png" alt="" /></span>구글로 로그인하기</a></li>
+                </ul>
+            </div>
+            <div class="copy">Copyright © ModuCommunication. All rights Reserved.</div>
+        </div>
+    </div>
+</body>
+</html>
+
