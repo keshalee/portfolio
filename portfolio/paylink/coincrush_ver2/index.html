@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>Coding List</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <!-- common js -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/slick.min.js"></script>
+<!--    <script src="js/common.ui.js"></script>-->
+    
+    <!-- common css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+<!--    <link rel="stylesheet" href="css/reset.css" />-->
+    <link rel="stylesheet" href="css/common.css" />
+<!--    <link rel="stylesheet" href="css/header.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+        /* header */
+        #header { position:fixed; left:0; top:0; width:100%; height:33px; z-index:9995; background-color:#070d12; }
+        #header h1 { float:left; padding:5px 10px; }
+        #header nav { float:left; }
+        #header nav ul { overflow:hidden; height:33px; line-height:33px; }
+        #header nav li { float:left; margin-left:40px; }
+        #header nav li a { font-size:15px; color:#fff; }
+        
+        /* container */
+        #container { max-width:90%; margin:60px auto 0; background-color:#091a26; }
+        
+        .information { position:absolute; right:5%; top:20px; margin-left:100px; color:#666; font-size:14px; font-weight:bold; }
+        .information strong { margin-right:3px; color:#000; }
+        .information > span { margin: 0 4px; color:#ddd; font-weight:normal; }
+        
+        caption { display: none; }
+        th { padding:5px 0; background-color:#273641; vertical-align:middle; }
+        td { padding:7px 5px; line-height:16px; vertical-align:middle; }
+        td:first-child { font-weight:bold; }
+        td > ul { margin:0; padding-left:20px; }
+        td a { color:#fff; text-decoration:underline; }
+        table tbody tr.on td a { color:#e60012; }
+
+        .guide tr:last-child td { border-bottom:3px double #d1d1d1; }
+        .sec td { border-top:3px double #d1d1d1; }
+        .del td { background-color:#bbb; text-decoration:line-through; }
+        .skip td { background-color:#f4f4f4; }
+        .hold td, .hold { background-color:#fef3fd; }
+        .ing td, .ing { background-color:#FC6; }
+        .alignC { text-align:center; }
+        .red { color:#e60012 !important; font-weight:bold; }
+    </style>
+    
+    <script>
+        $(function(){
+            //============================================================================
+            //  nicescroll
+            //============================================================================
+            $("body").niceScroll();
+
+            //============================================================================
+            //  scroll top
+            //============================================================================
+            $('.topwrap').hide();
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 200) {
+                    $('.topwrap').fadeIn();
+                }else {
+                    $('.topwrap').fadeOut();
+                }
+            });
+            $('.topwrap').click(function() {
+                $('html, body').animate({scrollTop:"0"}, 400);
+                return false;
+            });
+            
+        });
+        
+        //<!--
+        function popOpen(url, name, width, height){
+              var toolbar_str = 'no';
+              var menubar_str = 'no';
+              var statusbar_str = 'no';
+              var scrollbar_str = 'yes';
+              var resizable_str = 'no';
+              window.open(url, name, 'width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+        }
+        $(function(){
+            var total = $('.sum tr').size();
+            var ok = $('.sum td a').size();
+            var persent = parseInt((ok/total)*100);
+            $('#total-page').text(total);
+            $('#ok-page').text(ok);
+            $('#persent').text(persent+'%');
+        });
+        $(function(){
+            var total = $('.sum2 tr').size();
+            var ok = $('.sum2 td a').size();
+            var persent = parseInt((ok/total)*100);
+            $('#total-page2').text(total);
+            $('#ok-page2').text(ok);
+            $('#persent2').text(persent+'%');
+        });
+        //-->
+        
+        // commonTab
+        function commonTab(tabParent, tabName){
+            $("."+tabParent+" ul.tabbox li").removeClass("active");
+            $("."+tabParent+" ul.tabbox li."+tabName).addClass("active");
+            $("."+tabParent+" .hiddencontents").removeClass("active");
+            $("."+tabParent+" .hiddencontents."+tabName).addClass("active");
+        }
+    </script>
+</head>
+<body>
+    <!-- S:wrapper -->
+    <div id="wrapper" class="guideTab">
+        <!-- S:header -->
+        <header id="header">
+            <h1 class="logo"><a href="javascript:void(0);" title="home"><img src="images/common/logo.png" alt="coincrush" /></a></h1>
+            <div class="mobile-only">
+                <div class="nav_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="tabs">
+                <ul class="tabbox">
+                    <li class="tab1 on"><a href="javascript:commonTab('guideTab','tab1');">국문</a></li>
+                    <li class="tab2"><a href="javascript:commonTab('guideTab','tab2');">영문</a></li>
+                    <li class="tab3"><a href="javascript:commonTab('guideTab','tab3');">중문</a></li>
+                    <li class="tab4"><a href="javascript:commonTab('guideTab','tab4');">일문</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- E:header -->
+        
+        <!-- S:container -->
+        <div id="container">
+            <div class="list_box_wrap">
+                <div class="group_wrap hiddencontents tab1 on">
+                    <div class="information">
+                        총 <strong id="total-page"></strong>페이지 <span>|</span>
+                        완료 : <strong id="ok-page"></strong>페이지 <span>|</span>
+                        진행률 : <strong id="persent" class="red"></strong>
+                    </div>
+                    <table>
+                        <caption>Coding List</caption>
+                        <colgroup>
+                            <col style="width:100px">
+                            <col style="width:200px">
+                            <col style="width:140px">
+                            <col style="width:180px">
+                            <col style="width:130px">
+                            <col style="width:200px">
+                            <col style="width:150px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="5">메뉴</th>
+                                <th rowspan="2" class="co01">URL(파일명)</th>
+                                <th rowspan="2" class="co02">화면 ID</th>
+                                <th rowspan="2">비고</th>
+                            </tr>
+                            <tr>
+                                <th>1Depth</th>
+                                <th>2Depth</th>
+                                <th>3Depth</th>
+                                <th>4Depth</th>
+                                <th>5Depth</th>
+                            </tr>
+                        </thead>
+                        <tbody class="guide">
+                            <tr>
+                                <td>대카테고리</td>
+                                <td>중카테고리</td>
+                                <td>소카테고리</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>Guide</td>
+                                <td>CSS Rule</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/css_rule.html" target="_blank">css_rule.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>UI Guide</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                               <td><a href="./html/guide/ui_guide.html" target="_blank">ui_guide.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>layout</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout.html" target="_blank">layout.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>layout_left</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout_left.html" target="_blank">layout_left.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>고객센터</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout_cutomer.html" target="_blank">layout_cutomer.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>MY page</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/guide/layout_mypage.html" target="_blank">layout_mypage.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="sum">
+                            <tr class="sec">
+                                <td>거래소</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/exchange/exchange_index.html" target="_blank">exchange_index.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>거래소</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/exchange/exchange_index.html" target="_blank">exchange_index.html</a></td>
+                                <td></td>
+                                <td></td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td>내 거래현황 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/exchange/exchange_list.html" target="_blank">exchange_list.html</a></td>
+                                <td></td>
+                                <td></td>
+                             </tr>
+                             <tr class="sec">
+                                <td>지갑관리</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/wallet/wallet_index.html" target="_blank">wallet_index.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>입금-원화(기존)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/wallet/deposit_krw.html" target="_blank">deposit_krw.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>입금-가상화폐(기존)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/wallet/deposit_coin.html" target="_blank">deposit_coin.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>출금-원화(기존)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/wallet/withdraw_krw.html" target="_blank">withdraw_krw.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>출금-가상화폐(기존)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/wallet/withdraw_coin.html" target="_blank">withdraw_coin.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>송금대행 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Krw송금하기</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>진행여부 미확실</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>비트코인 송금하기</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>진행여부 미확실</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>내 송금내역</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>진행여부 미확실</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>로그인</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/login.html" target="_blank">login.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>비밀번호 5회 오류(레이어팝업)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/layer/pw_error.html" target="_blank">pw_error.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>아이디 찾기</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/find_id.html" target="_blank">find_id.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>아이디 전체 찾기 본인인증</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/find_id_certify.html" target="_blank">find_id_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>내국인</td>
+                                <td>회원정보입증(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/myinfo_certify.html" target="_blank" onclick="popOpen(this.href, 'popWin', 460, 570);return false;">myinfo_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>아이디 찾기 완료</td>
+                                <td></td>
+                                 <td><a href="./html/member/find_id_end.html" target="_blank">find_id_end.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>아이디 찾기 오류</td>
+                                <td></td>
+                                <td><a href="./html/member/find_id_end2.html" target="_blank">find_id_end2.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>비밀번호 찾기</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/find_pw.html" target="_blank">find_pw.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>내국인</td>
+                                <td>회원정보에 등록된 휴대폰번호로 인증(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/sms_certify.html" target="_blank" onclick="popOpen(this.href, 'popWin', 540, 390);return false;">sms_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>비밀번호 재설정</td>
+                                <td></td>
+                                <td><a href="./html/member/find_pw_change.html" target="_blank">find_pw_change.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>비밀번호 찾기 완료</td>
+                                <td></td>
+                                <td><a href="./html/member/find_pw_end.html" target="_blank">find_pw_end.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>외국인</td>
+                                <td>e-mail 인증(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/email_certify.html" target="_blank" onclick="popOpen(this.href, 'popWin', 540, 300);return false;">email_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>자동로그아웃(팝업)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>회원가입</td>
+                                <td>회원분류 선택</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>내국인</td>
+                                <td>약관동의</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>본인인증</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>회원정보 입력</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/join.html" target="_blank">join.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>가입완료</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/member/join_step4_local.html" target="_blank">join_step4_local.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>외국인</td>
+                                <td>언어선택</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>약관동의</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>본인인증</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>공통사용(인증겸용) </td>
+                                <td>이메일 인증(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/email_certify.html" target="_blank" onclick="popOpen(this.href, 'popWin', 540, 300);return false;">email_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>공통사용(인증겸용)</td>
+                                <td>SNS 인증(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/sms_certify.html" target="_blank" onclick="popOpen(this.href, 'popWin', 540, 390);return false;">sms_certify.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td>인증센터-출금관련</td>
+                                <td>출금계좌 등록(팝업)</td>
+                                <td></td>
+                                <td><a href="./html/popup/compte_ins.html" target="_blank" onclick="popOpen(this.href, 'popWin', 540, 390);return false;">compte_ins.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>마이페이지 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>나의 정보관리</td>
+                                <td>기본정보관리</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_info.html" target="_blank">my_info.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>비밀번호변경</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_pw.html" target="_blank">my_pw.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>접속정보</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_access.html" target="_blank">my_access.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>나의 인증관리</td>
+                                <td>인증센터</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_access.html" target="_blank">my_access.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>otp인증</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_otp.html" target="_blank">my_otp.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>거래소api관리</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/mypage/my_api.html" target="_blank">my_api.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>고객센터</td>
+                                <td>메인</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/customer_index.html" target="_blank">customer_index.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>공지사항</td>
+                                <td>목록</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/notice_list.html" target="_blank">notice_list.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>보기</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/notice_view.html" target="_blank">notice_view.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>쓰기</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/notice_write.html" target="_blank">notice_write.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>ICO 관련뉴스</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/faq_list.html" target="_blank">ico_list.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>FAQ</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/faq_list.html" target="_blank">faq_list.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>1:1 문의하기</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/counsel_write.html" target="_blank">counsel_write.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>멤버십 안내</td>
+                                <td>회원등급안내</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>약관 및 관리방침</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/customer/terms_list.html" target="_blank">terms_list.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>서비스 안내</td>
+                                <td>입/출금 서비스</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>수수료 안내</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sec">
+                                <td>Footer</td>
+                                <td>이메일무단수집거부(팝업)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="./html/popup/email_reject.html" target="_blank" onclick="popOpen(this.href, 'popWin', 460, 400);return false;">email_reject.html</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="hiddencontents tab2">
+                    영문
+                </div>
+                <div class="hiddencontents tab3">
+                    중문
+                </div>
+                <div class="hiddencontents tab4">
+                    일문
+                </div>
+            </div>
+            <div class="topwrap"><a href="javascript:void(0);" class="ico_com top">top</a></div>
+        </div>
+        <!-- e:container -->
+    </div>
+    <!-- E:wrapper -->
+</body>
+</html>
